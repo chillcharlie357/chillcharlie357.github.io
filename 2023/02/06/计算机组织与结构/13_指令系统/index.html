@@ -11,15 +11,15 @@
   <meta charset="utf-8">
   
   
-  <title>13_指令系统 | Hexo</title>
+  <title>13_指令系统 | Charlie&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="1. 指令 指令是计算机处理的最基本单位 操作码（指令执行的内容）+操作数（要操作的对象）   多周期实现方案 可以将一条指令的执行分解为一系列步骤 取指令，译码&#x2F;取寄存器，执行&#x2F;有效地址&#x2F;完成分支，访问内存， 存储结果      1.1. 指令要素 操作码：指定将要完成的操作 源操作数引用：操作会涉及一个或多个源操作数，这是操作所需的输入 结果操作数引用：操作可能会">
 <meta property="og:type" content="article">
 <meta property="og:title" content="13_指令系统">
 <meta property="og:url" content="http://example.com/2023/02/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/13_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Charlie&#39;s Blog">
 <meta property="og:description" content="1. 指令 指令是计算机处理的最基本单位 操作码（指令执行的内容）+操作数（要操作的对象）   多周期实现方案 可以将一条指令的执行分解为一系列步骤 取指令，译码&#x2F;取寄存器，执行&#x2F;有效地址&#x2F;完成分支，访问内存， 存储结果      1.1. 指令要素 操作码：指定将要完成的操作 源操作数引用：操作会涉及一个或多个源操作数，这是操作所需的输入 结果操作数引用：操作可能会">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale">
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2a15cab202986a5ab027a9aac98a0c39_75_VoIPSCreencastCoverWnd%20-2-.png">
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/db887dc847dcc585483bda5dc27bfe95_76_VoIPSCreencastCoverWnd%20-2-.png">
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/37ae91510128c6f70b6a852e6abf7bd2_77_VoIPSCreencastCoverWnd%20-2-.png">
@@ -42,12 +42,12 @@
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/680e3421f0573a57da21053dbdeba042_88_VoIPSCreencastCoverWnd.png">
 <meta property="article:published_time" content="2023-02-06T03:23:00.000Z">
 <meta property="article:modified_time" content="2023-07-11T12:46:13.954Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="charlie">
 <meta property="article:tag" content="2022Fall_计算机组织与结构 课程">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2a15cab202986a5ab027a9aac98a0c39_75_VoIPSCreencastCoverWnd%20-2-.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Charlie's Blog" type="application/atom+xml">
   
   
     <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
@@ -84,7 +84,7 @@
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <div>Hexo </div>
+      <div>Charlie's Blog </div>
     </a>
   </nav>
   <nav id="main-nav">
@@ -102,11 +102,11 @@
       <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>
     </a>
     
-      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS 订阅">
         <span class="material-symbols-rounded rss">rss_feed</span>
       </a>
     
-    <a id="nav-search-btn" class="nav-icon" title="Search" style="display: none;">
+    <a id="nav-search-btn" class="nav-icon" title="搜索" style="display: none;">
       <span class="material-symbols-rounded">search</span>
     </a>
     <div id="nav-menu-btn" class="nav-icon">
@@ -124,7 +124,7 @@
       <a class="nav-dropdown-link" href="/about">About</a>
     
     
-      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
      
     </div>
 </div>
@@ -170,11 +170,11 @@
 
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Categories</h3>
+      <h3 class="widget-title">分类</h3>
       <div class="category-box">
             <a class="category-link" href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">
                 2022Fall_计算机组织与结构
-                <div class="category-count">2</div>
+                <div class="category-count">17</div>
             </a>
         </div>
     </div>
@@ -185,7 +185,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Tags</h3>
+      <h3 class="widget-title">标签</h3>
       <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/" rel="tag">2022Fall_计算机组织与结构 课程</a></li></ul>
     </div>
   </div>
@@ -195,7 +195,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Archives</h3>
+      <h3 class="widget-title">归档</h3>
       
       
         <a class="archive-link" href="/archives/2023/07 ">
@@ -221,7 +221,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Recent Posts</h3>
+      <h3 class="widget-title">最新文章</h3>
       <ul>
         
           <li>
@@ -287,7 +287,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            3.3k words 
+            3.3k 词 
           </div>
         </div>
         

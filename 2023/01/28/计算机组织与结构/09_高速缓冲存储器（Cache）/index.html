@@ -11,15 +11,15 @@
   <meta charset="utf-8">
   
   
-  <title>09_高速缓冲存储器（Cache） | Hexo</title>
+  <title>09_高速缓冲存储器（Cache） | Charlie&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="1.Cache的基本思路 Cache存放主存的“副本” 解决内存墙  2.Cache的工作流程 2.1 是否命中判断 CPU通过位置对主存中的内容进行寻址，不关心存储在其中的内容 Cache通过标记（tags） 来标识其内容在主存中的对应位置  2.2 平均访问时间  hit的情况要远远多于miss的情况 不考虑数据回传时间  2.3 cache访存过程 3.Cache设计要素3.1 容量扩大ca">
 <meta property="og:type" content="article">
 <meta property="og:title" content="09_高速缓冲存储器（Cache）">
 <meta property="og:url" content="http://example.com/2023/01/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/09_%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Cache%EF%BC%89/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Charlie&#39;s Blog">
 <meta property="og:description" content="1.Cache的基本思路 Cache存放主存的“副本” 解决内存墙  2.Cache的工作流程 2.1 是否命中判断 CPU通过位置对主存中的内容进行寻址，不关心存储在其中的内容 Cache通过标记（tags） 来标识其内容在主存中的对应位置  2.2 平均访问时间  hit的情况要远远多于miss的情况 不考虑数据回传时间  2.3 cache访存过程 3.Cache设计要素3.1 容量扩大ca">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale">
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/75f4ce2335d68f77c1a16c28ea2458a4_49_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png">
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/27712c3415ed48dfe2a922524c0e1736_4a_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png">
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/3ad27bad2d1a52721bca99303e86df26_4b_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png">
@@ -41,12 +41,12 @@
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/09af25ea8612f5e082133b10c6320199_59_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png">
 <meta property="article:published_time" content="2023-01-28T09:03:00.000Z">
 <meta property="article:modified_time" content="2023-07-11T12:46:13.950Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="charlie">
 <meta property="article:tag" content="2022Fall_计算机组织与结构 课程">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/75f4ce2335d68f77c1a16c28ea2458a4_49_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Charlie's Blog" type="application/atom+xml">
   
   
     <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
@@ -83,7 +83,7 @@
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <div>Hexo </div>
+      <div>Charlie's Blog </div>
     </a>
   </nav>
   <nav id="main-nav">
@@ -101,11 +101,11 @@
       <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>
     </a>
     
-      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS 订阅">
         <span class="material-symbols-rounded rss">rss_feed</span>
       </a>
     
-    <a id="nav-search-btn" class="nav-icon" title="Search" style="display: none;">
+    <a id="nav-search-btn" class="nav-icon" title="搜索" style="display: none;">
       <span class="material-symbols-rounded">search</span>
     </a>
     <div id="nav-menu-btn" class="nav-icon">
@@ -123,7 +123,7 @@
       <a class="nav-dropdown-link" href="/about">About</a>
     
     
-      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
      
     </div>
 </div>
@@ -169,11 +169,11 @@
 
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Categories</h3>
+      <h3 class="widget-title">分类</h3>
       <div class="category-box">
             <a class="category-link" href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">
                 2022Fall_计算机组织与结构
-                <div class="category-count">2</div>
+                <div class="category-count">17</div>
             </a>
         </div>
     </div>
@@ -184,7 +184,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Tags</h3>
+      <h3 class="widget-title">标签</h3>
       <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/" rel="tag">2022Fall_计算机组织与结构 课程</a></li></ul>
     </div>
   </div>
@@ -194,7 +194,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Archives</h3>
+      <h3 class="widget-title">归档</h3>
       
       
         <a class="archive-link" href="/archives/2023/07 ">
@@ -220,7 +220,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Recent Posts</h3>
+      <h3 class="widget-title">最新文章</h3>
       <ul>
         
           <li>
@@ -286,7 +286,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.3k words 
+            1.3k 词 
           </div>
         </div>
         

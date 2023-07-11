@@ -11,15 +11,15 @@
   <meta charset="utf-8">
   
   
-  <title>11_冗余磁盘阵列(RAID) | Hexo</title>
+  <title>11_冗余磁盘阵列(RAID) | Charlie&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="冗余磁盘阵列 &#x2F; 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID) 基本思想 将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量 将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率 采用数据冗余来进行错误恢复以提高系统可靠性   特性 由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器 数据是分布在多个物理磁盘上 冗">
 <meta property="og:type" content="article">
 <meta property="og:title" content="11_冗余磁盘阵列(RAID)">
 <meta property="og:url" content="http://example.com/2023/02/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/11_%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97(RAID)/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Charlie&#39;s Blog">
 <meta property="og:description" content="冗余磁盘阵列 &#x2F; 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID) 基本思想 将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量 将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率 采用数据冗余来进行错误恢复以提高系统可靠性   特性 由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器 数据是分布在多个物理磁盘上 冗">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale">
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png">
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png">
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png">
@@ -36,12 +36,12 @@
 <meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png">
 <meta property="article:published_time" content="2023-02-03T13:57:00.000Z">
 <meta property="article:modified_time" content="2023-07-11T12:46:13.950Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="charlie">
 <meta property="article:tag" content="2022Fall_计算机组织与结构 课程">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Charlie's Blog" type="application/atom+xml">
   
   
     <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
@@ -78,7 +78,7 @@
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <div>Hexo </div>
+      <div>Charlie's Blog </div>
     </a>
   </nav>
   <nav id="main-nav">
@@ -96,11 +96,11 @@
       <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>
     </a>
     
-      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS 订阅">
         <span class="material-symbols-rounded rss">rss_feed</span>
       </a>
     
-    <a id="nav-search-btn" class="nav-icon" title="Search" style="display: none;">
+    <a id="nav-search-btn" class="nav-icon" title="搜索" style="display: none;">
       <span class="material-symbols-rounded">search</span>
     </a>
     <div id="nav-menu-btn" class="nav-icon">
@@ -118,7 +118,7 @@
       <a class="nav-dropdown-link" href="/about">About</a>
     
     
-      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
      
     </div>
 </div>
@@ -164,11 +164,11 @@
 
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Categories</h3>
+      <h3 class="widget-title">分类</h3>
       <div class="category-box">
             <a class="category-link" href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">
                 2022Fall_计算机组织与结构
-                <div class="category-count">2</div>
+                <div class="category-count">17</div>
             </a>
         </div>
     </div>
@@ -179,7 +179,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Tags</h3>
+      <h3 class="widget-title">标签</h3>
       <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/" rel="tag">2022Fall_计算机组织与结构 课程</a></li></ul>
     </div>
   </div>
@@ -189,7 +189,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Archives</h3>
+      <h3 class="widget-title">归档</h3>
       
       
         <a class="archive-link" href="/archives/2023/07 ">
@@ -215,7 +215,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">Recent Posts</h3>
+      <h3 class="widget-title">最新文章</h3>
       <ul>
         
           <li>
@@ -281,7 +281,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.5k words 
+            1.5k 词 
           </div>
         </div>
         
