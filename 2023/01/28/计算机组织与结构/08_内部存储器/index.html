@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+<link href="/fontawesome/css/brands.css" rel="stylesheet">
+<link href="/fontawesome/css/solid.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>08_内部存储器 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="地址：单元的唯一标识符（采用二进制） 地址空间：可唯一标识的单元总数 寻址能力：存储在每个单元中的信息的位数  1.存储器类型  只有ROM使用掩膜写入，其它都是电写入 只有RAM是易失，其它都是非易失  2.读写存储器2.1 随机存取存储器（RAM） Random-Access Memory（RAM） 特性 简单快速地进行读&#x2F;写操作 易失的（Volatile）   类型 动态RAM（">
+<meta property="og:type" content="article">
+<meta property="og:title" content="08_内部存储器">
+<meta property="og:url" content="http://example.com/2023/01/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/08_%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="地址：单元的唯一标识符（采用二进制） 地址空间：可唯一标识的单元总数 寻址能力：存储在每个单元中的信息的位数  1.存储器类型  只有ROM使用掩膜写入，其它都是电写入 只有RAM是易失，其它都是非易失  2.读写存储器2.1 随机存取存储器（RAM） Random-Access Memory（RAM） 特性 简单快速地进行读&#x2F;写操作 易失的（Volatile）   类型 动态RAM（">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/64805d816680fb1ccfda32bf8d5c9557_3b_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/15f0600b20ae33c4fc121cb8d127205a_3c_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/25e62935cb43ff1960f5f2ee522c5cf4_3d_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/c85ecc262d18b4cb1da9a8de35283b36_3e_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/1e60b9ad9348f2ca21021d587ac2fe62_3f_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/22a43cc2e4fa8b8370932cd902e304e9_40_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/db6464d530ffc04675de7e5d9af9031b_41_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/bd56d9edf184b428bbc1f8bb78ccb7ac_42_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/69240f49f268cff8506d096560a5ded8_43_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/594f54d93ec2b202b95eeb01887b955b_44_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/332a0402bae3be4d944c64c675c6c9b5_NVIDIA_Share_1102_552.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/1853e79359a1742aaf2abfc086b24d59_45_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="article:published_time" content="2023-01-28T08:01:00.000Z">
+<meta property="article:modified_time" content="2023-07-11T12:46:13.950Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="2022Fall_计算机组织与结构 课程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/64805d816680fb1ccfda32bf8d5c9557_3b_NVIDIA_GeForce_Overlay_DT.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="shadow   ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>Hexo </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="material-symbols-rounded light-mode-icon">wb_sunny</span>
+      <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <span class="material-symbols-rounded rss">rss_feed</span>
+      </a>
+    
+    <a id="nav-search-btn" class="nav-icon" title="Search" style="display: none;">
+      <span class="material-symbols-rounded">search</span>
+    </a>
+    <div id="nav-menu-btn" class="nav-icon">
+      <span class="material-symbols-rounded">menu</span>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">Your Name </div>
+      <div class="dot"></div>
+      <div class="subtitle">This is the subtitle </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://twitter.com" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://store.steampowered.com" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Categories</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">
+                2022Fall_计算机组织与结构
+                <div class="category-count">2</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Tags</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/" rel="tag">2022Fall_计算机组织与结构 课程</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Archives</h3>
+      
+      
+        <a class="archive-link" href="/archives/2023/07 ">
+          July 2023 
+          <div class="archive-count">3 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2023/02 ">
+          February 2023 
+          <div class="archive-count">5 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2023/01 ">
+          January 2023 
+          <div class="archive-count">10 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        
+          <li>
+            <a href="/2023/07/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/17_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">17_输入输出</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/">12_虚拟存储器</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/16_%E6%80%BB%E7%BA%BF/">16_总线</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/15_%E6%8E%A7%E5%88%B6%E5%99%A8/">15_控制器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+<article id="post-计算机组织与结构/08_内部存储器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        08_内部存储器
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-01-28T08:01:00.000Z" itemprop="datePublished">2023-01-28</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">2022Fall_计算机组织与结构</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/" rel="tag">2022Fall_计算机组织与结构 课程</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <ul>
+<li>地址：单元的唯一标识符（采用二进制）</li>
+<li>地址空间：可唯一标识的单元总数</li>
+<li>寻址能力：存储在每个单元中的信息的位数</li>
+</ul>
+<h1 id="1-存储器类型"><a href="#1-存储器类型" class="headerlink" title="1.存储器类型"></a>1.存储器类型</h1><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/64805d816680fb1ccfda32bf8d5c9557_3b_NVIDIA_GeForce_Overlay_DT.png" alt="3b_NVIDIA_GeForce_Overlay_DT.png"></p>
+<ul>
+<li>只有ROM使用掩膜写入，其它都是电写入</li>
+<li>只有RAM是易失，其它都是非易失</li>
+</ul>
+<h1 id="2-读写存储器"><a href="#2-读写存储器" class="headerlink" title="2.读写存储器"></a>2.读写存储器</h1><h2 id="2-1-随机存取存储器（RAM）"><a href="#2-1-随机存取存储器（RAM）" class="headerlink" title="2.1 随机存取存储器（RAM）"></a>2.1 随机存取存储器（RAM）</h2><ul>
+<li>Random-Access Memory（RAM）</li>
+<li>特性<ul>
+<li>简单快速地进行读&#x2F;写操作</li>
+<li><strong>易失的</strong>（Volatile）</li>
+</ul>
+</li>
+<li>类型<ul>
+<li>动态RAM（DRAM）：Dynamic RAM</li>
+<li>静态RAM（SRAM）：Static RAM</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-DRAM"><a href="#2-2-DRAM" class="headerlink" title="2.2 DRAM"></a>2.2 DRAM</h2><ol>
+<li>电容充电的方式存储数据</li>
+<li>需要<strong>周期性充电刷新</strong>（电容器会漏电）</li>
+<li>更简单、更小的位元</li>
+<li>密度更高，价格更低</li>
+<li><strong>容量更大，用于主存</strong><br><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/15f0600b20ae33c4fc121cb8d127205a_3c_NVIDIA_GeForce_Overlay_DT.png" alt="3c_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ol>
+<h2 id="2-3-SRAM"><a href="#2-3-SRAM" class="headerlink" title="2.3 SRAM"></a>2.3 SRAM</h2><ol>
+<li>传统触发器、逻辑门配置来存储二进制值</li>
+<li>只要有电源，就可以一直维持数据</li>
+<li><strong>速度快</strong></li>
+<li>一般用于<strong>高速缓存</strong><br><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/25e62935cb43ff1960f5f2ee522c5cf4_3d_NVIDIA_GeForce_Overlay_DT.png" alt="3d_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ol>
+<h2 id="2-4-更高级的DRAM架构"><a href="#2-4-更高级的DRAM架构" class="headerlink" title="2.4 更高级的DRAM架构"></a>2.4 更高级的DRAM架构</h2><p>传统的DRAM芯片受到其内部架构和与处理器内存总线接口的限制</p>
+<h3 id="2-3-1-同步DRAM-Synchronous-DRAM-SDRAM"><a href="#2-3-1-同步DRAM-Synchronous-DRAM-SDRAM" class="headerlink" title="2.3.1 同步DRAM(Synchronous DRAM, SDRAM)"></a>2.3.1 同步DRAM(Synchronous DRAM, SDRAM)</h3><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/c85ecc262d18b4cb1da9a8de35283b36_3e_NVIDIA_GeForce_Overlay_DT.png" alt="3e_NVIDIA_GeForce_Overlay_DT.png"><br><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/1e60b9ad9348f2ca21021d587ac2fe62_3f_NVIDIA_GeForce_Overlay_DT.png" alt="3f_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h3 id="2-3-2-双速率SDRAM"><a href="#2-3-2-双速率SDRAM" class="headerlink" title="2.3.2 双速率SDRAM"></a>2.3.2 双速率SDRAM</h3><ul>
+<li><strong>Double-Data-Rate SDRAM，DDR SDRAM&#x2F;DDR</strong></li>
+<li>每个时钟周期发送两次数据，一次在时钟脉冲的上升沿，一次在下降沿</li>
+<li><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/22a43cc2e4fa8b8370932cd902e304e9_40_NVIDIA_GeForce_Overlay_DT.png" alt="40_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ul>
+<h1 id="3-只读存储器"><a href="#3-只读存储器" class="headerlink" title="3.只读存储器"></a>3.只读存储器</h1><h2 id="3-1-只读存储器（ROM）"><a href="#3-1-只读存储器（ROM）" class="headerlink" title="3.1 只读存储器（ROM）"></a>3.1 只读存储器（ROM）</h2><ul>
+<li><strong>Read-only memory（ROM）</strong></li>
+<li>特性<ul>
+<li>非易失</li>
+<li>可读</li>
+<li>不能写入新数据，只能用<strong>掩膜</strong>写入一次</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>微程序设计，库子程序，系统程序，函数表</li>
+</ul>
+</li>
+<li>问题<ul>
+<li>无出错处理机会：如果有一位出错，整批的ROM芯片只能报废</li>
+<li>用户无法写入数据：唯一的数据写入机会在出厂时完成</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-可编程ROM-PROM"><a href="#3-2-可编程ROM-PROM" class="headerlink" title="3.2 可编程ROM(PROM)"></a>3.2 可编程ROM(PROM)</h2><ul>
+<li>Programmable ROM（PROM）</li>
+<li>特性<ul>
+<li>非易失</li>
+<li>只能写入一次<ul>
+<li>写过程是用电信号执行</li>
+<li>特殊设备来完成写或“编程”过程</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>与ROM的对比<ul>
+<li>PROM提供了灵活性和方便性</li>
+<li>ROM在大批量生产领域仍具有吸引力</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-主要进行读操作的存储器"><a href="#4-主要进行读操作的存储器" class="headerlink" title="4.主要进行读操作的存储器"></a>4.主要进行读操作的存储器</h1><ul>
+<li>Read-Mostly Memory（<strong>但这类存储器不叫RMM</strong>）</li>
+<li>特性<ul>
+<li>非易失的</li>
+<li>写操作与读操作相比，<strong>较为困难</strong></li>
+</ul>
+</li>
+<li>应用<ul>
+<li>读操作比写操作频繁得多的场景</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-1-光可擦除-x2F-可编程只读存储器（EPROM）"><a href="#4-1-光可擦除-x2F-可编程只读存储器（EPROM）" class="headerlink" title="4.1 光可擦除&#x2F;可编程只读存储器（EPROM）"></a>4.1 光可擦除&#x2F;可编程只读存储器（EPROM）</h2><ul>
+<li>Erasable programmable read-only memory（EPROM）<ul>
+<li>事实上并不是read-only</li>
+</ul>
+</li>
+<li>特性<ul>
+<li>光擦除<ul>
+<li>每次擦除需要约20分钟</li>
+<li>只能整块<strong>芯片</strong>擦除</li>
+</ul>
+</li>
+<li>电写入</li>
+</ul>
+</li>
+<li>与PROM对比<ul>
+<li>更贵</li>
+<li>具有可多次改写的优点</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-电可擦除-x2F-可编程只读存储器（EEPROM）"><a href="#4-2-电可擦除-x2F-可编程只读存储器（EEPROM）" class="headerlink" title="4.2 电可擦除&#x2F;可编程只读存储器（EEPROM）"></a>4.2 电可擦除&#x2F;可编程只读存储器（EEPROM）</h2><ul>
+<li>Electrically erasable programmable read-only memory（EEPROM）</li>
+<li>特性<ul>
+<li>随时写入而不删除之前的内容</li>
+<li>只更新寻址到的一个或多个<strong>字节</strong></li>
+<li>写操作每字节需要几百微秒（写很困难，无法取代内存）、</li>
+</ul>
+</li>
+<li>与EPROM对比<ul>
+<li>EEPROM更贵，且密度低，支持小容量芯片</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3-快闪存储器"><a href="#4-3-快闪存储器" class="headerlink" title="4.3 快闪存储器"></a>4.3 快闪存储器</h2><ul>
+<li>Flash Memory </li>
+<li>特性<ul>
+<li>电可擦除：与EEPROM相同，优于EPROM</li>
+<li>擦除时间为几秒：优于EPROM，不如EEPROM</li>
+<li>块级擦除：优于EPROM，不如 EEPROM</li>
+<li>达到与EPROM相同的密度：优于EEPROM</li>
+</ul>
+</li>
+<li>与EPROM、EEPROM对比<ul>
+<li>价格和功能介于EPROM和EEPROM之间</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-从位元到主存"><a href="#5-从位元到主存" class="headerlink" title="5.从位元到主存"></a>5.从位元到主存</h1><ol>
+<li>位元</li>
+<li>寻址单元</li>
+<li>存储阵列</li>
+<li>芯片</li>
+<li>组织模块</li>
+<li>主存</li>
+</ol>
+<h2 id="5-1-寻址单元"><a href="#5-1-寻址单元" class="headerlink" title="5.1 寻址单元"></a>5.1 寻址单元</h2><ul>
+<li>寻址单元（Addressable unit）：由若干相同地址的位元组成</li>
+<li>寻址模式：<ul>
+<li>字节（Byte）</li>
+<li>字（Word）</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/db6464d530ffc04675de7e5d9af9031b_41_NVIDIA_GeForce_Overlay_DT.png" alt="41_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h2 id="5-2-存储阵列"><a href="#5-2-存储阵列" class="headerlink" title="5.2 存储阵列"></a>5.2 存储阵列</h2><ul>
+<li>存储阵列（Memory Array）：由大量寻址单元组成<br><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/bd56d9edf184b428bbc1f8bb78ccb7ac_42_NVIDIA_GeForce_Overlay_DT.png" alt="42_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ul>
+<h3 id="5-2-1-如何寻址"><a href="#5-2-1-如何寻址" class="headerlink" title="5.2.1 如何寻址"></a>5.2.1 如何寻址</h3><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/69240f49f268cff8506d096560a5ded8_43_NVIDIA_GeForce_Overlay_DT.png" alt="43_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h3 id="5-2-2-如何刷新"><a href="#5-2-2-如何刷新" class="headerlink" title="5.2.2 如何刷新"></a>5.2.2 如何刷新</h3><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/594f54d93ec2b202b95eeb01887b955b_44_NVIDIA_GeForce_Overlay_DT.png" alt="44_NVIDIA_GeForce_Overlay_DT.png"><br><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/332a0402bae3be4d944c64c675c6c9b5_NVIDIA_Share_1102_552.png" alt="NVIDIA_Share_1102_552.png"></p>
+<h2 id="5-3-组织模块"><a href="#5-3-组织模块" class="headerlink" title="5.3 组织模块"></a>5.3 组织模块</h2><ul>
+<li>位扩展<ul>
+<li><strong>寻址单元的位数</strong>增加</li>
+<li>地址线不变，<strong>数据线</strong>增加</li>
+<li>使用 8 块 4K*1bit 的芯片组成 4K*8bit 的存储器</li>
+</ul>
+</li>
+<li>字扩展<ul>
+<li><strong>地址线</strong>增加，数据线不变</li>
+<li><strong>寻址单元个数</strong>增加</li>
+<li>地址线的首几位用于选片。两个10位芯片组合，地址线11位，第一位用于选片</li>
+<li>使用 4 个 16K*8bit 的芯片组成 64K*8bit 的存储器</li>
+</ul>
+</li>
+<li>字、位同时扩展：地址线增加，数据线增加<ul>
+<li>使用 8 个 16K*4bit 的芯片组成 64K*8bit 的存储器<img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/1853e79359a1742aaf2abfc086b24d59_45_NVIDIA_GeForce_Overlay_DT.png" alt="45_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/2023/01/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/09_%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Cache%EF%BC%89/"
+      title="09_高速缓冲存储器（Cache）"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        09_高速缓冲存储器（Cache）
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2023/01/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/07_%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E7%9A%84%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BF%90%E7%AE%97/"
+      title="07_二进制编码的十进制数运算"
+     >
+
+    <p class="title-text">
+      
+        07_二进制编码的十进制数运算
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+ 
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2023 Your Name<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn" onclick="topFunction()">
+        <span class="material-symbols-rounded">keyboard_arrow_up</span>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.style.opacity = 1;
+        } else {
+            btn.style.opacity = 0;
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>

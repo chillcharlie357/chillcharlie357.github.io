@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+<link href="/fontawesome/css/brands.css" rel="stylesheet">
+<link href="/fontawesome/css/solid.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>10_外部存储器 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="特性  用于存储不经常使用的、数据量较大的信息 非易失  1. 硬磁盘存储器 磁盘是由涂有可磁化材料的非磁性材料（基材） 构成的圆形盘片 玻璃基材优势： 改善磁膜表面的均匀性，提高磁盘的可靠性 显著减少整体表面瑕疵，以帮助减少读写错误 能够支持（磁头）较低的飞行高度 更高的硬度，使磁盘转动时更加稳定 更强的抗冲击和抗损伤能力      1.1. 磁盘结构  每个盘片（双面）表面都有一个磁头，同时移">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10_外部存储器">
+<meta property="og:url" content="http://example.com/2023/01/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/10_%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="特性  用于存储不经常使用的、数据量较大的信息 非易失  1. 硬磁盘存储器 磁盘是由涂有可磁化材料的非磁性材料（基材） 构成的圆形盘片 玻璃基材优势： 改善磁膜表面的均匀性，提高磁盘的可靠性 显著减少整体表面瑕疵，以帮助减少读写错误 能够支持（磁头）较低的飞行高度 更高的硬度，使磁盘转动时更加稳定 更强的抗冲击和抗损伤能力      1.1. 磁盘结构  每个盘片（双面）表面都有一个磁头，同时移">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b361e14a8763c60f535f3b8eb2d40619_68_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/abe3863939a32d0705ed63d203426a0a_69_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3cf48711e3c8ff2c54cba02d10827906_6a_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/26/1bbeccaa84633cc12e62d23ad3ccd672_1bbeccaa84633cc12e62d23ad3ccd672_6b_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b761a7f6308f9bfac36b52eb0209f81b_6c_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/4fffcd557ca29b44513a77feab1f2226_6d_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3ca95dd57710a6659d48612d2beb60bd_6e_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/47b02f2b72538d533d4986e42a790d32_47b02f2b72538d533d4986e42a790d32_6f_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/85444d477fe5b1a94b5eadd2e0142107_70_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/304b388ba8be80e4f73319ecc78ab288_71_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/118fe4711116becaa87b0e49f111f2f9_72_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/11598b06df10bd304745a30c205e4d4f_73_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/5d22fa9bd87f3ba26df28cd7cce7a52b_74_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/ad5af7f0a16b3af62fb8696e42ef6807_75_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b347e2608d763c1694f53b63fe73dfb3_76_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f330d060f9a4f72cb6e2130c30da1555_77_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f0993670675b245e097d424221b7de0d_78_VoIPSCreencastCoverWnd.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/cbdc83c8b51a717766c9e33c2661456d_cbdc83c8b51a717766c9e33c2661456d_79_VoIPSCreencastCoverWnd.png">
+<meta property="article:published_time" content="2023-01-30T13:49:00.000Z">
+<meta property="article:modified_time" content="2023-07-11T12:46:13.950Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="2022Fall_计算机组织与结构 课程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b361e14a8763c60f535f3b8eb2d40619_68_VoIPSCreencastCoverWnd.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="shadow   ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>Hexo </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="material-symbols-rounded light-mode-icon">wb_sunny</span>
+      <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <span class="material-symbols-rounded rss">rss_feed</span>
+      </a>
+    
+    <a id="nav-search-btn" class="nav-icon" title="Search" style="display: none;">
+      <span class="material-symbols-rounded">search</span>
+    </a>
+    <div id="nav-menu-btn" class="nav-icon">
+      <span class="material-symbols-rounded">menu</span>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">Your Name </div>
+      <div class="dot"></div>
+      <div class="subtitle">This is the subtitle </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://twitter.com" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://store.steampowered.com" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Categories</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">
+                2022Fall_计算机组织与结构
+                <div class="category-count">2</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Tags</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/" rel="tag">2022Fall_计算机组织与结构 课程</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Archives</h3>
+      
+      
+        <a class="archive-link" href="/archives/2023/07 ">
+          July 2023 
+          <div class="archive-count">3 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2023/02 ">
+          February 2023 
+          <div class="archive-count">5 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2023/01 ">
+          January 2023 
+          <div class="archive-count">10 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        
+          <li>
+            <a href="/2023/07/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/17_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">17_输入输出</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/">12_虚拟存储器</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/16_%E6%80%BB%E7%BA%BF/">16_总线</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/15_%E6%8E%A7%E5%88%B6%E5%99%A8/">15_控制器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+<article id="post-计算机组织与结构/10_外部存储器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        10_外部存储器
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-01-30T13:49:00.000Z" itemprop="datePublished">2023-01-30</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">2022Fall_计算机组织与结构</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.7k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/" rel="tag">2022Fall_计算机组织与结构 课程</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <p>特性</p>
+<ul>
+<li>用于存储不经常使用的、数据量较大的信息</li>
+<li>非易失</li>
+</ul>
+<h1 id="1-硬磁盘存储器"><a href="#1-硬磁盘存储器" class="headerlink" title="1. 硬磁盘存储器"></a>1. 硬磁盘存储器</h1><ul>
+<li>磁盘是由<strong>涂有可磁化材料</strong>的<strong>非磁性材料（基材）</strong> 构成的圆形盘片<ul>
+<li>玻璃基材优势：<ul>
+<li>改善磁膜表面的均匀性，提高磁盘的可靠性</li>
+<li>显著减少整体表面瑕疵，以帮助减少读写错误</li>
+<li>能够支持（磁头）较低的飞行高度</li>
+<li>更高的硬度，使磁盘转动时更加稳定</li>
+<li>更强的抗冲击和抗损伤能力</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-1-磁盘结构"><a href="#1-1-磁盘结构" class="headerlink" title="1.1. 磁盘结构"></a>1.1. 磁盘结构</h2><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b361e14a8763c60f535f3b8eb2d40619_68_VoIPSCreencastCoverWnd.png" alt="68_VoIPSCreencastCoverWnd.png"></p>
+<ul>
+<li><p>每个<strong>盘片</strong>（双面）表面都有一个<strong>磁头</strong>，同时移动</p>
+</li>
+<li><p>所有磁头都位于离中心等距离轨道上</p>
+</li>
+<li><p>磁头：</p>
+<ul>
+<li>对盘片进行读写的装置</li>
+<li>必须产生或感应足够大的电磁场，以便正确地读写</li>
+<li>磁头越窄，离盘片的距离就越近</li>
+<li>更高的数据密度需要更窄的磁头和更窄的磁道，这将导致更高的出错风险</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-读写机制"><a href="#1-2-读写机制" class="headerlink" title="1.2. 读写机制"></a>1.2. 读写机制</h2><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/abe3863939a32d0705ed63d203426a0a_69_VoIPSCreencastCoverWnd.png" alt="69_VoIPSCreencastCoverWnd.png"></p>
+<ul>
+<li>读写期间，磁头静止，盘片旋转</li>
+<li>磁头不工作时在最外面</li>
+<li>磁头数量<ul>
+<li>单磁头：读写公用同一个磁头（软盘、早期硬盘）</li>
+<li>双磁头：使用一个单独的磁头进行读取（当代硬盘）</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-1-写入机制"><a href="#1-2-1-写入机制" class="headerlink" title="1.2.1. 写入机制"></a>1.2.1. 写入机制</h3><p>上图绿色</p>
+<ul>
+<li>电流脉冲被发送到写入磁头</li>
+<li>变化的电流激发出磁场</li>
+<li>产生的磁性图案被记录在下面的盘片表面上</li>
+<li>反转电流方向，则记录介质上的磁化方向也会反转</li>
+</ul>
+<h3 id="1-2-2-读取机制"><a href="#1-2-2-读取机制" class="headerlink" title="1.2.2. 读取机制"></a>1.2.2. 读取机制</h3><p>上图红色</p>
+<ul>
+<li>读取磁头是由一个部分屏蔽的<strong>磁阻（MR）敏感器组成</strong>，其电阻取决于在其下移动的介质的磁化方向</li>
+<li>电流通过MR敏感器时，通过<strong>电压信号</strong>检测其电阻变化</li>
+<li>MR敏感器允许更高频率的操作，实现更高的存储密度和更快的操作速度</li>
+</ul>
+<h2 id="1-3-数据组织"><a href="#1-3-数据组织" class="headerlink" title="1.3.  数据组织"></a>1.3.  数据组织</h2><ul>
+<li><strong>磁道（track）:</strong> 盘片上的数据组织呈现为一组同心圆环</li>
+<li><strong>扇区（sector）:</strong> 数据以扇区（sector）的形式传输到磁盘或从传出磁盘<ul>
+<li><strong>默认大小512B</strong></li>
+<li>每个扇区大小相同</li>
+</ul>
+</li>
+<li><strong>间隙（gap）:</strong> 相邻磁道之间有间隙（gap），相邻的扇区之间也留有间隙<br><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3cf48711e3c8ff2c54cba02d10827906_6a_VoIPSCreencastCoverWnd.png" alt="6a_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+<h3 id="1-3-1-扇区划分"><a href="#1-3-1-扇区划分" class="headerlink" title="1.3.1. 扇区划分"></a>1.3.1. 扇区划分</h3><ul>
+<li>恒定角速度<ul>
+<li>读写速度恒定，转过每个扇区时间一样。增大记录在盘片区域上的信息位的间 隔，使得磁盘能够以恒定的速度扫描信息</li>
+<li>优点：能以磁道号和扇区号直接寻址 各个数据块、</li>
+<li>缺点：磁盘存储容量受到了<strong>最内层</strong>磁道所能实现的最大记录密度的限制<br> <img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/26/1bbeccaa84633cc12e62d23ad3ccd672_1bbeccaa84633cc12e62d23ad3ccd672_6b_VoIPSCreencastCoverWnd.png" alt="6b_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+</li>
+<li>多带式记录<ul>
+<li>分成多个带，里中心越远的带扇区越多</li>
+<li>读写速度恒定的代价：不同带的转速不同</li>
+<li>优点：提升存储容量</li>
+<li>缺点：需要更复杂的电路<img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b761a7f6308f9bfac36b52eb0209f81b_6c_VoIPSCreencastCoverWnd.png" alt="6c_VoIPSCreencastCoverWnd.png"></li>
+<li>其中每个圈为一组磁道<ul>
+<li>例子：$r_1:0,1,2$ 8个扇区 $r_2:3,4,5$ 9个扇区</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4-格式化"><a href="#1-4-格式化" class="headerlink" title="1.4. 格式化"></a>1.4. 格式化</h2><ul>
+<li>磁道必须有一些起始点和辨别每个扇区起点及终点的方法</li>
+<li>格式化时，会附有一些仅被磁盘驱动器使用而不被用户存取的额外数据<br><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/4fffcd557ca29b44513a77feab1f2226_6d_VoIPSCreencastCoverWnd.png" alt="6d_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+<h2 id="1-5-I-x2F-O访问时间"><a href="#1-5-I-x2F-O访问时间" class="headerlink" title="1.5. I&#x2F;O访问时间"></a>1.5. I&#x2F;O访问时间</h2><ul>
+<li><p><strong>寻道时间（seek time）</strong>：磁头定位到磁道所花时间</p>
+<ul>
+<li><strong>初始化时间</strong>，跨越若干磁道所用时间</li>
+</ul>
+</li>
+<li><p><strong>旋转延迟（rotational delay）:</strong> 等待响应扇区的其实位置到达磁头的时间</p>
+<ul>
+<li>通常时<strong>磁道旋转半圈</strong>的时间</li>
+</ul>
+</li>
+<li><p><strong>传送时间（transfer time）:</strong> 数据传输时间<br><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3ca95dd57710a6659d48612d2beb60bd_6e_VoIPSCreencastCoverWnd.png" alt="6e_VoIPSCreencastCoverWnd.png"></p>
+</li>
+<li><p><strong>平均访问时间</strong>：</p>
+<ul>
+<li>其中$T_s$为平均寻道时间<img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/47b02f2b72538d533d4986e42a790d32_47b02f2b72538d533d4986e42a790d32_6f_VoIPSCreencastCoverWnd.png" alt="6f_VoIPSCreencastCoverWnd.png"></li>
+<li>当<strong>连续访问多个相邻的磁道</strong>时，跨越磁道：<ul>
+<li>对于每个磁道都需要考虑旋转延迟</li>
+<li>通常只需要考虑第一个磁道的寻道时间，但在明确知道跨越每个磁道需要的时间时需要考虑</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>顺序读取和随机读取</p>
+<ul>
+<li>随机读取每次都需要寻道，因此比顺序读取慢得多</li>
+<li>磁盘整理可以一定程度上缓解</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-6-磁头寻道-x2F-磁盘调度"><a href="#1-6-磁头寻道-x2F-磁盘调度" class="headerlink" title="1.6. 磁头寻道&#x2F;磁盘调度"></a>1.6. 磁头寻道&#x2F;磁盘调度</h2><ul>
+<li><strong>目标：</strong> 当有多个访问磁盘任务时，使得<strong>平均寻道时间最小</strong></li>
+<li>常见算法</li>
+</ul>
+<h3 id="1-6-1-先来先服务（FCFS）"><a href="#1-6-1-先来先服务（FCFS）" class="headerlink" title="1.6.1. 先来先服务（FCFS）"></a>1.6.1. 先来先服务（FCFS）</h3><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/85444d477fe5b1a94b5eadd2e0142107_70_VoIPSCreencastCoverWnd.png" alt="70_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-2-最短寻道时间优先（SSTF）"><a href="#1-6-2-最短寻道时间优先（SSTF）" class="headerlink" title="1.6.2. 最短寻道时间优先（SSTF）"></a>1.6.2. 最短寻道时间优先（SSTF）</h3><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/304b388ba8be80e4f73319ecc78ab288_71_VoIPSCreencastCoverWnd.png" alt="71_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-3-扫描-x2F-电梯（SCAN）"><a href="#1-6-3-扫描-x2F-电梯（SCAN）" class="headerlink" title="1.6.3. 扫描&#x2F;电梯（SCAN）"></a>1.6.3. 扫描&#x2F;电梯（SCAN）</h3><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/118fe4711116becaa87b0e49f111f2f9_72_VoIPSCreencastCoverWnd.png" alt="72_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-4-循环扫描（C-SCAN）"><a href="#1-6-4-循环扫描（C-SCAN）" class="headerlink" title="1.6.4. 循环扫描（C-SCAN）"></a>1.6.4. 循环扫描（C-SCAN）</h3><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/11598b06df10bd304745a30c205e4d4f_73_VoIPSCreencastCoverWnd.png" alt="73_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-5-LOOK"><a href="#1-6-5-LOOK" class="headerlink" title="1.6.5. LOOK"></a>1.6.5. LOOK</h3><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/5d22fa9bd87f3ba26df28cd7cce7a52b_74_VoIPSCreencastCoverWnd.png" alt="74_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-6-C-LOOK"><a href="#1-6-6-C-LOOK" class="headerlink" title="1.6.6. C-LOOK"></a>1.6.6. C-LOOK</h3><p><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/ad5af7f0a16b3af62fb8696e42ef6807_75_VoIPSCreencastCoverWnd.png" alt="75_VoIPSCreencastCoverWnd.png"></p>
+<h1 id="2-光存储器"><a href="#2-光存储器" class="headerlink" title="2. 光存储器"></a>2. 光存储器</h1><h2 id="2-1-CD和CD-ROM"><a href="#2-1-CD和CD-ROM" class="headerlink" title="2.1. CD和CD-ROM"></a>2.1. CD和CD-ROM</h2><ul>
+<li>CD和CD-ROM采用类似的技术，但<strong>CD-ROM更加耐用且有纠错功能</strong></li>
+<li>制造方法<ul>
+<li>用精密聚焦的高强度激光束制造一个<strong>母盘</strong></li>
+<li>以母盘作为模板压印出聚碳酸酯的复制品</li>
+<li>在凹坑表面上镀上一层高反射材料</li>
+<li>使用丙烯酸树脂保护高反射材料</li>
+<li>在丙烯酸树脂层上用丝网印刷术印制标签<img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b347e2608d763c1694f53b63fe73dfb3_76_VoIPSCreencastCoverWnd.png" alt="76_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-读取"><a href="#2-2-读取" class="headerlink" title="2.2. 读取"></a>2.2. 读取</h2><ul>
+<li><p>通过安装在光盘播放器或驱动装置内的低强度激光束从CD或CD-ROM处读取信息</p>
+<ul>
+<li>激光束照在<strong>凹坑（pit）</strong> 上，由于凹坑表面有些不平，因此 光被散射，反射回<strong>低强度</strong>的激光</li>
+<li>激光束照在<strong>台（land）</strong> 上，台的表面光滑平坦，反射回来 的是<strong>高强度</strong>的激光</li>
+</ul>
+</li>
+<li><p>盘片上包含<strong>一条单螺旋</strong>的轨道，轨道上的所有扇区长度相同</p>
+<ul>
+<li>盘片以<strong>变速旋转</strong></li>
+<li>凹坑被激光以<strong>恒定线速度</strong>读出</li>
+<li><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f330d060f9a4f72cb6e2130c30da1555_77_VoIPSCreencastCoverWnd.png" alt="77_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+</li>
+<li><p>CD-R</p>
+<ul>
+<li>高强度激光可修改</li>
+<li>只能修改一次</li>
+</ul>
+</li>
+<li><p>CD-RW</p>
+<ul>
+<li>使用两种反射率显著不同的材料</li>
+<li>可以修改多次</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-数字多功能光盘（DVD）"><a href="#2-3-数字多功能光盘（DVD）" class="headerlink" title="2.3. 数字多功能光盘（DVD）"></a>2.3. 数字多功能光盘（DVD）</h2><ul>
+<li>DVD vs CD<ul>
+<li>DVD 上的位组装更紧密：光道间隙，凹坑间距（容量达到4.7GB）</li>
+<li>DVD 采用双层结构：设有半反射层，可以通过调整焦距读取每一 层（容量达到8.5GB）</li>
+<li>DVD-ROM 可以用两面记录数据（容量达到17GB）</li>
+</ul>
+</li>
+<li>DVD-R和DVD-RW</li>
+</ul>
+<h2 id="2-4-高清晰光盘"><a href="#2-4-高清晰光盘" class="headerlink" title="2.4. 高清晰光盘"></a>2.4. 高清晰光盘</h2><p>通过使用更短波长的激光（在蓝-紫光范围），可以实现<strong>更高的位密度</strong>（数据凹坑相对更小）<br><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f0993670675b245e097d424221b7de0d_78_VoIPSCreencastCoverWnd.png" alt="78_VoIPSCreencastCoverWnd.png"></p>
+<h2 id="2-5-磁带"><a href="#2-5-磁带" class="headerlink" title="2.5. 磁带"></a>2.5. 磁带</h2><ul>
+<li>与磁盘类似的记录和读取技术</li>
+<li>记录<ul>
+<li>介质是柔韧的聚酯薄膜带，外涂磁性材料</li>
+</ul>
+</li>
+<li>读取<ul>
+<li>磁带：顺序读取（sequential-access）</li>
+<li>磁盘：直接读取（direct-access）</li>
+</ul>
+</li>
+<li>记录<ul>
+<li>磁带：串行记录（蛇形记录）</li>
+<li>磁盘：并行记录</li>
+</ul>
+</li>
+<li><img src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/cbdc83c8b51a717766c9e33c2661456d_cbdc83c8b51a717766c9e33c2661456d_79_VoIPSCreencastCoverWnd.png" alt="79_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+<h1 id="3-U盘和固态硬盘"><a href="#3-U盘和固态硬盘" class="headerlink" title="3. U盘和固态硬盘"></a>3. U盘和固态硬盘</h1><p>[[08_内部存储器#4.3 快闪存储器]]</p>
+<ul>
+<li>U盘<ul>
+<li>采用了快闪存储器，属于非易失性半导体存储器</li>
+<li>相比于软盘和光盘：体积小，容量大，携带方便，寿命长达数年</li>
+</ul>
+</li>
+<li>固态硬盘<ul>
+<li>与U盘没有本质区别：容量更大，存储性能更好</li>
+<li>与硬磁盘存储器相比：抗振性好，无噪声，能耗低，发热量低</li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/2023/02/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/11_%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97(RAID)/"
+      title="11_冗余磁盘阵列(RAID)"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        11_冗余磁盘阵列(RAID)
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2023/01/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/09_%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Cache%EF%BC%89/"
+      title="09_高速缓冲存储器（Cache）"
+     >
+
+    <p class="title-text">
+      
+        09_高速缓冲存储器（Cache）
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+ 
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2023 Your Name<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn" onclick="topFunction()">
+        <span class="material-symbols-rounded">keyboard_arrow_up</span>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.style.opacity = 1;
+        } else {
+            btn.style.opacity = 0;
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
