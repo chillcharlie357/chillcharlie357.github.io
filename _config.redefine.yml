@@ -14,7 +14,7 @@ info:
   # Author name
   author: Charlie
   # Site URL
-  url: https://redefine.ohevan.com
+  url: https://chillcharlie357.github.io
 # BASIC INFORMATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -62,7 +62,7 @@ global:
     scale: false # scale effect
   # Scroll progress
   scroll_progress:
-    bar: false # progress bar
+    bar: true # progress bar
     percentage: true # percentage
   # Website counter
   website_counter:
@@ -87,7 +87,7 @@ fontawesome: # Pro v6.2.1
   # Thin version
   thin: false
   # Light version
-  light: false
+  light: true
   # Duotone version
   duotone: false
   # Sharp Solid version
@@ -106,7 +106,7 @@ home_banner:
     light: /images/wallhaven-wqery6-light.webp # light mode
     dark: /images/wallhaven-wqery6-dark.webp # dark mode
   # Home banner title
-  title: Theme Redefine
+  title: Charlie's Blog
   # Home banner subtitle
   subtitle:
     text: [] # subtitle text, array
