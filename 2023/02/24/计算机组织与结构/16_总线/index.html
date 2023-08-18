@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Charlie">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/02/24/计算机组织与结构/16_总线/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="false">
+<meta property="og:type" content="article">
+<meta property="og:title" content="16_总线">
+<meta property="og:url" content="http://example.com/2023/02/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/16_%E6%80%BB%E7%BA%BF/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="false">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/458801c8257195d5ce9986d3a11be334_msedge_951_547.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/83186883301ed17a79330978d2f17dc8_msedge_1071_318.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/e9ef2e6785dfd254c6eaf92489305be2_msedge_1018_314.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/9f04fa2ce8f4f276554a50cc81a4d8c3_msedge_990_325.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/28e3c188b5b89fe7a04b58c37642a7a3_msedge_1089_331.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bcce0d24cafb9420381c43dabcd0796c_msedge_530_521.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/40bcd9533a7305a9b11b7c16bb51a28d_msedge_1057_220.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bebf2b876047acd859bf275551555d21_msedge_1029_602.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/181e715ae2b4ec3c37082823d2a7e71b_msedge_1094_403.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/36671cd094dbc15b6e0f9a8fdb766130_msedge_830_424.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/333d5ccb7f292ba52410db663d36439e_msedge_1076_555.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/976bf0b3e79e38cabe72f3f1af21755e_msedge_1055_628.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/230b844b23d26bbf0b25494b5b1d5312_msedge_1092_515.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/fe2ebc93525bc1e35002c968e5d54157_msedge_1035_608.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/81cfefb9dd06b5e4b7e819a3312bafc8_msedge_890_602.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/7d5bdd896398523ae2db4a3afde86cf6_msedge_1036_606.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/decf98deaffb5849d97761e1a64cd8b1_NVIDIA_Share_962_272.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/0f8e17e23b84ee9e2e16d6acced376fd_NVIDIA_Share_968_328.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/d542c83c260d50e459111969be88a211_NVIDIA_Share_1041_401.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/4a5cb8c06ec0ff8f1f3eb7e769b03ce6_NVIDIA_Share_1007_447.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/955bae7c66f39b06978d76381dfe24f9_NVIDIA_Share_1025_321.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/1925f5de97d61216df199455540b18a7_NVIDIA_Share_1032_469.png">
+<meta property="article:published_time" content="2023-02-24T08:40:00.000Z">
+<meta property="article:modified_time" content="2023-07-11T12:46:13.954Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="2022Fall_计算机组织与结构 课程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/458801c8257195d5ce9986d3a11be334_msedge_951_547.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            16_总线 -
+        
+        Charlie&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Charlie's Blog","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.3.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+    
+
+    
+
+    <div class="main-content-container">
+        
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Charlie&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">16_总线</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/redefine-avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Charlie</span>
+                        
+                            <span class="author-label">Lv3</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-02-24 16:40</span>
+        <span class="mobile">2023-02-24 16:40</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-07-11 20:46:13</span>
+            <span class="mobile">2023-07-11 20:46:13</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">2022Fall_计算机组织与结构</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/">2022Fall_计算机组织与结构 课程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="1-总线结构"><a href="#1-总线结构" class="headerlink" title="1. 总线结构"></a>1. 总线结构</h1><ul>
+<li>数据线：在系统组件之间传输数据<ul>
+<li>数据线的数量决定了一次可以传输的数据的大小</li>
+</ul>
+</li>
+<li>地址线：在数据线和地址I&#x2F;O端口上指定数据的来源和去向<ul>
+<li>地址线的数量决定了寻址空间的大小</li>
+</ul>
+</li>
+<li>控制线：控制对数据线和地址线的存取和使用<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/458801c8257195d5ce9986d3a11be334_msedge_951_547.png"
+                      alt="msedge_951_547.png"
+                ></li>
+</ul>
+<h1 id="2-总线上数据传输的特点"><a href="#2-总线上数据传输的特点" class="headerlink" title="2. 总线上数据传输的特点"></a>2. 总线上数据传输的特点</h1><ul>
+<li><p>总线可以被多个设备监听，但同一时刻只能由<strong>一个设备</strong>发送数据；如果同一时刻多个设备同时发送数据，会造成数据之间的混淆</p>
+</li>
+<li><p>使用总线进行数据传输</p>
+<ul>
+<li>如果连在总线上的某个设备希望向另一个设备<strong>发送数据</strong>，需要：<ul>
+<li>获得总线的使用权</li>
+<li>通过总线传送数据</li>
+</ul>
+</li>
+<li>如果连在总线上的某个设备希望向另一个组件<strong>请求数据</strong>，需要：<ul>
+<li>获得总线的使用权</li>
+<li>通过总线向另一个设备发送请求，等待另一个设备发送数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>当总线在被使用过程中，其它设备<strong>不可以抢占</strong></p>
+</li>
+</ul>
+<h1 id="3-设计要素"><a href="#3-设计要素" class="headerlink" title="3. 设计要素"></a>3. 设计要素</h1><h2 id="3-1-用途"><a href="#3-1-用途" class="headerlink" title="3.1. 用途"></a>3.1. 用途</h2><ul>
+<li><strong>专用总线dedicated</strong>：始终只负责一项功能，或始终分配给特定的计算机组件<ul>
+<li>优点：高吞吐量，减少总线冲突</li>
+<li>缺点：增加了系统的规模和成本</li>
+</ul>
+</li>
+<li><strong>复用总线multiplexed</strong><ul>
+<li>优点：使用的布线数量少，节省空间和成本</li>
+<li>缺点：每个模块需要更复杂的控制电路，且共享可能会降低性能</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-仲裁"><a href="#3-2-仲裁" class="headerlink" title="3.2. 仲裁"></a>3.2. 仲裁</h2><p><strong>仲裁方案</strong></p>
+<ul>
+<li>集中式：由仲裁器（arbiter）或总线控制器 （bus controller）负责分配总线使用权<ul>
+<li>链式查询 &#x2F; 菊花链（daisy chain）</li>
+<li>计数器查询（query by a counter）</li>
+<li>独立请求（independently request）</li>
+</ul>
+</li>
+<li>分布式（distributed）：每个设备都包含访问控制逻辑，各设 备共同作用分享总线<ul>
+<li>自举式（self selection）</li>
+<li>冲突检测（collision detection）</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-1-链式查询"><a href="#3-2-1-链式查询" class="headerlink" title="3.2.1. 链式查询"></a>3.2.1. 链式查询</h3><ul>
+<li><p>所有的设备都是串行连接的，并将允许信号从优先级最高的设备下发到优先级最低的设备</p>
+</li>
+<li><p>总线仲裁器收到请求后，在总线不忙的前提下，发起允许信号 </p>
+</li>
+<li><p>如果某个设备收到了允许信号并且发起了总线请求，该设备将总线设置为繁忙状态，允许信号将不再被进一步传递</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>确定优先级简单</li>
+<li>可以更灵活地添加设备</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>不保证公平性</li>
+<li>对电力故障敏感</li>
+<li>限制总线速度</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/83186883301ed17a79330978d2f17dc8_msedge_1071_318.png"
+                      alt="msedge_1071_318.png"
+                ></p>
+<h3 id="3-2-2-计数器查询"><a href="#3-2-2-计数器查询" class="headerlink" title="3.2.2. 计数器查询"></a>3.2.2. 计数器查询</h3><ul>
+<li><p>将总线允许线替换为设备ID线 </p>
+</li>
+<li><p>如果总线空闲，总线仲裁器通过设备ID线发送计数</p>
+</li>
+<li><p>如果当前发送请求的设备ID等于裁决器当前的计数，裁决器将停止计数，设备将总线设置为忙</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>通过使用不同的初始计数，可以灵活地确定设备优先级<ul>
+<li>强调优先级：从1开始</li>
+<li>强调公平性：从下一个设备的ID开始</li>
+</ul>
+</li>
+<li>对电路故障不敏感</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>需要添加设备ID线</li>
+<li>需要解码和比较设备ID信号</li>
+<li>限制总线的速度</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/e9ef2e6785dfd254c6eaf92489305be2_msedge_1018_314.png"
+                      alt="msedge_1018_314.png"
+                ></p>
+<h3 id="3-2-3-独立请求"><a href="#3-2-3-独立请求" class="headerlink" title="3.2.3. 独立请求"></a>3.2.3. 独立请求</h3><ul>
+<li>每个设备都有自己的总线请求线和总线允许线</li>
+<li>当一个设备请求总线时，它通过总线请求线将请求信号发送给总线仲裁器</li>
+<li>总线仲裁器决定哪个设备可以使用总线<ul>
+<li>确定策略：固定优先级，公平链式，LRU，FIFO，…</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>快速响应</li>
+<li>可编程的优先级</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>复杂的控制逻辑</li>
+<li>更多的控制线路</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/9f04fa2ce8f4f276554a50cc81a4d8c3_msedge_990_325.png"
+                      alt="msedge_990_325.png"
+                ></p>
+<h3 id="3-2-4-自举式"><a href="#3-2-4-自举式" class="headerlink" title="3.2.4. 自举式"></a>3.2.4. 自举式</h3><ul>
+<li>固定优先级</li>
+<li>每个设备在其总线请求线上发送请求<ul>
+<li>最低优先级的设备没有请求线，<strong>使用Busy线</strong></li>
+</ul>
+</li>
+<li>每个设备自行判断自己是否在请求总线的设备中优先级最高</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/28e3c188b5b89fe7a04b58c37642a7a3_msedge_1089_331.png"
+                      alt="msedge_1089_331.png"
+                ><br>优先级：0&lt;1&lt;2&lt;3</p>
+<h3 id="3-2-5-冲突检测"><a href="#3-2-5-冲突检测" class="headerlink" title="3.2.5. 冲突检测"></a>3.2.5. 冲突检测</h3><ul>
+<li>当一个设备想要使用总线时，它会检查总线是否繁忙<ul>
+<li>如果总线空闲，设备使用总线</li>
+</ul>
+</li>
+<li><strong>冲突</strong>：如果两个设备发现总线空闲，它们可能同时使用总线<ul>
+<li>在传输数据时，设备会监听总线，检查是否存在冲突</li>
+<li>如果发生冲突，所有使用总线的设备将停止数据传输，并分别在随机间隔时间后再次请求总线</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-时序"><a href="#3-3-时序" class="headerlink" title="3.3. 时序"></a>3.3. 时序</h2><p>确定每个<strong>总线事务</strong>的开始和结束时间<br>总线事务：地址+数据+…+数据</p>
+<h3 id="3-3-1-同步时序"><a href="#3-3-1-同步时序" class="headerlink" title="3.3.1. 同步时序"></a>3.3.1. 同步时序</h3><ul>
+<li>同步时序：事件的发生由时钟决定</li>
+<li>优点<ul>
+<li>跟容易实现和测试</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>所用设备共享一个时钟</li>
+<li>总线长度受到时钟偏差影响</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bcce0d24cafb9420381c43dabcd0796c_msedge_530_521.png"
+                      alt="msedge_530_521.png"
+                ></p>
+<h3 id="3-3-2-异步时序"><a href="#3-3-2-异步时序" class="headerlink" title="3.3.2. 异步时序"></a>3.3.2. 异步时序</h3><ul>
+<li><p>异步时序：一个事件的发生取决于前一个事件的发生</p>
+</li>
+<li><p>握手策略<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/40bcd9533a7305a9b11b7c16bb51a28d_msedge_1057_220.png"
+                      alt="msedge_1057_220.png"
+                ></p>
+</li>
+<li><p>异步数据传输<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bebf2b876047acd859bf275551555d21_msedge_1029_602.png"
+                      alt="msedge_1029_602.png"
+                ></p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>可以灵活协调不同设备</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>逻辑接口复杂</li>
+<li>对噪声敏感</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-3-半同步时序"><a href="#3-3-3-半同步时序" class="headerlink" title="3.3.3. 半同步时序"></a>3.3.3. 半同步时序</h3><ul>
+<li>半同步：同步时序和异步时序相结合。为了减少噪声的影响，在异步计时中使用时钟<ul>
+<li>准备和响应信号在时钟上升沿有效</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/181e715ae2b4ec3c37082823d2a7e71b_msedge_1094_403.png"
+                      alt="msedge_1094_403.png"
+                ></p>
+<h3 id="3-3-4-分离事务"><a href="#3-3-4-分离事务" class="headerlink" title="3.3.4. 分离事务"></a>3.3.4. 分离事务</h3><ul>
+<li>分离事务：设备准备数据期间释放总线，将一个总线事件分离为两个过程</li>
+<li>优点<ul>
+<li>增加总线利用率</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>增加每个总线事件的持续时间和系统复杂度</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/36671cd094dbc15b6e0f9a8fdb766130_msedge_830_424.png"
+                      alt="msedge_830_424.png"
+                ></p>
+<h2 id="3-4-总线带宽和数据传输速率"><a href="#3-4-总线带宽和数据传输速率" class="headerlink" title="3.4. 总线带宽和数据传输速率"></a>3.4. 总线带宽和数据传输速率</h2><ul>
+<li>总线带宽（bus bandwidth）：总线的最大数据传输速率。理想化。</li>
+<li>传输速率：考虑地址传输，握手等。</li>
+<li>总线宽度（bus width）：组成总线的线数<ul>
+<li>数据总线越宽，一次传输的数据位数就越多</li>
+<li>地址总线越宽，一次传输的地址位数就越多</li>
+</ul>
+</li>
+<li><strong>单位</strong>：Mbps <ul>
+<li>M为$10^6$，形容bps</li>
+<li>只有在表示存储时才用mb $2^{20}$，kb $2^{10}$ </li>
+<li>k m g t p</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-1-例：同步总线和异步总线的数据传输速率"><a href="#3-4-1-例：同步总线和异步总线的数据传输速率" class="headerlink" title="3.4.1. 例：同步总线和异步总线的数据传输速率"></a>3.4.1. 例：同步总线和异步总线的数据传输速率</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/333d5ccb7f292ba52410db663d36439e_msedge_1076_555.png"
+                      alt="msedge_1076_555.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/976bf0b3e79e38cabe72f3f1af21755e_msedge_1055_628.png"
+                      alt="msedge_1055_628.png"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/230b844b23d26bbf0b25494b5b1d5312_msedge_1092_515.png"
+                      alt="msedge_1092_515.png"
+                ></p>
+<h3 id="3-4-2-例：不同数据块大小的数据传输速率"><a href="#3-4-2-例：不同数据块大小的数据传输速率" class="headerlink" title="3.4.2. 例：不同数据块大小的数据传输速率"></a>3.4.2. 例：不同数据块大小的数据传输速率</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/fe2ebc93525bc1e35002c968e5d54157_msedge_1035_608.png"
+                      alt="msedge_1035_608.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/81cfefb9dd06b5e4b7e819a3312bafc8_msedge_890_602.png"
+                      alt="msedge_890_602.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/7d5bdd896398523ae2db4a3afde86cf6_msedge_1036_606.png"
+                      alt="msedge_1036_606.png"
+                ></p>
+<h2 id="3-5-提高总线的数据传输率"><a href="#3-5-提高总线的数据传输率" class="headerlink" title="3.5. 提高总线的数据传输率"></a>3.5. 提高总线的数据传输率</h2><ul>
+<li>提高时钟频率</li>
+<li>增加数据总线宽度<ul>
+<li>每次传输更多的数据（成本：更多的总线线路）</li>
+</ul>
+</li>
+<li>块传输<ul>
+<li>传输一次地址就传输一块数据（成本：高复杂性）</li>
+</ul>
+</li>
+<li>分离总线事务<ul>
+<li>减少总线空闲时间（成本：复杂性高，增加每个事务的持续时间）</li>
+</ul>
+</li>
+<li>分离地址线和数据线<ul>
+<li>同时传输地址和数据（成本：更多的总线线路）</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-6-层次结构"><a href="#3-6-层次结构" class="headerlink" title="3.6. 层次结构"></a>3.6. 层次结构</h2><h3 id="3-6-1-单总线结构"><a href="#3-6-1-单总线结构" class="headerlink" title="3.6.1. 单总线结构"></a>3.6.1. 单总线结构</h3><ul>
+<li>CPU、存储器和 I&#x2F;O 模块都连接到一条系统总线</li>
+<li>优点：简单，易于扩展</li>
+<li>缺点<ul>
+<li>连接的设备越多，总线长度越大，传输延迟也就越大</li>
+<li>聚集的传输请求接近总线容量时，总线成为瓶颈</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/decf98deaffb5849d97761e1a64cd8b1_NVIDIA_Share_962_272.png"
+                      alt="NVIDIA_Share_962_272.png"
+                ></p>
+<h3 id="3-6-2-双总线结构I"><a href="#3-6-2-双总线结构I" class="headerlink" title="3.6.2. 双总线结构I"></a>3.6.2. 双总线结构I</h3><ul>
+<li>在CPU和存储器中间增加一个存储器总线</li>
+<li>优点：增加CPU和存储器之间的传输效率，同时降低系统总线的负担</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/0f8e17e23b84ee9e2e16d6acced376fd_NVIDIA_Share_968_328.png"
+                      alt="NVIDIA_Share_968_328.png"
+                ></p>
+<h3 id="3-6-3-双总线结构II"><a href="#3-6-3-双总线结构II" class="headerlink" title="3.6.3. 双总线结构II"></a>3.6.3. 双总线结构II</h3><ul>
+<li>将系统总线分为存储器总线、I&#x2F;O 总线 和 IOP (input&#x2F;output processer)</li>
+<li>优点：降低I&#x2F;O对总线的负担<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/d542c83c260d50e459111969be88a211_NVIDIA_Share_1041_401.png"
+                      alt="NVIDIA_Share_1041_401.png"
+                ></li>
+</ul>
+<h3 id="3-6-4-多总线结构I"><a href="#3-6-4-多总线结构I" class="headerlink" title="3.6.4. 多总线结构I"></a>3.6.4. 多总线结构I</h3><ul>
+<li>增加一个 <strong>本地总线（local bus）</strong>来连接 CPU 和 cache</li>
+<li>优点：增加 I&#x2F;O 效率<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/4a5cb8c06ec0ff8f1f3eb7e769b03ce6_NVIDIA_Share_1007_447.png"
+                      alt="NVIDIA_Share_1007_447.png"
+                ></li>
+</ul>
+<h3 id="3-6-5-多总线结构II"><a href="#3-6-5-多总线结构II" class="headerlink" title="3.6.5. 多总线结构II"></a>3.6.5. 多总线结构II</h3><ul>
+<li>将系统总线分为存储器总线、I&#x2F;O 总线和 <strong>DMA 总线</strong></li>
+<li>优点：增加 I&#x2F;O 效率<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/955bae7c66f39b06978d76381dfe24f9_NVIDIA_Share_1025_321.png"
+                      alt="NVIDIA_Share_1025_321.png"
+                ></li>
+</ul>
+<h3 id="3-6-6-多总线结构III"><a href="#3-6-6-多总线结构III" class="headerlink" title="3.6.6. 多总线结构III"></a>3.6.6. 多总线结构III</h3><ul>
+<li>增加一个 高速 I&#x2F;O 总线 来连接高速设备</li>
+<li>优点：增加 I&#x2F;O 交互效率<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/1925f5de97d61216df199455540b18a7_NVIDIA_Share_1032_469.png"
+                      alt="NVIDIA_Share_1032_469.png"
+                ></li>
+</ul>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 16_总线</li>
+        <li><strong>Author:</strong> Charlie</li>
+        <li><strong>Created at:</strong> 2023-02-24 16:40:00</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-07-11 20:46:13
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/02/24/计算机组织与结构/16_总线/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/">#2022Fall_计算机组织与结构 课程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/07/11/hello-world/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/02/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/15_%E6%8E%A7%E5%88%B6%E5%99%A8/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">15_控制器</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-swup-reload-script>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">16_总线</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84"><span class="nav-text">1. 总线结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%80%BB%E7%BA%BF%E4%B8%8A%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">2. 总线上数据传输的特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E8%AE%BE%E8%AE%A1%E8%A6%81%E7%B4%A0"><span class="nav-text">3. 设计要素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E7%94%A8%E9%80%94"><span class="nav-text">3.1. 用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E4%BB%B2%E8%A3%81"><span class="nav-text">3.2. 仲裁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-%E9%93%BE%E5%BC%8F%E6%9F%A5%E8%AF%A2"><span class="nav-text">3.2.1. 链式查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-%E8%AE%A1%E6%95%B0%E5%99%A8%E6%9F%A5%E8%AF%A2"><span class="nav-text">3.2.2. 计数器查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-3-%E7%8B%AC%E7%AB%8B%E8%AF%B7%E6%B1%82"><span class="nav-text">3.2.3. 独立请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-4-%E8%87%AA%E4%B8%BE%E5%BC%8F"><span class="nav-text">3.2.4. 自举式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-5-%E5%86%B2%E7%AA%81%E6%A3%80%E6%B5%8B"><span class="nav-text">3.2.5. 冲突检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E6%97%B6%E5%BA%8F"><span class="nav-text">3.3. 时序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-%E5%90%8C%E6%AD%A5%E6%97%B6%E5%BA%8F"><span class="nav-text">3.3.1. 同步时序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-%E5%BC%82%E6%AD%A5%E6%97%B6%E5%BA%8F"><span class="nav-text">3.3.2. 异步时序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-%E5%8D%8A%E5%90%8C%E6%AD%A5%E6%97%B6%E5%BA%8F"><span class="nav-text">3.3.3. 半同步时序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-4-%E5%88%86%E7%A6%BB%E4%BA%8B%E5%8A%A1"><span class="nav-text">3.3.4. 分离事务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E6%80%BB%E7%BA%BF%E5%B8%A6%E5%AE%BD%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E9%80%9F%E7%8E%87"><span class="nav-text">3.4. 总线带宽和数据传输速率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-1-%E4%BE%8B%EF%BC%9A%E5%90%8C%E6%AD%A5%E6%80%BB%E7%BA%BF%E5%92%8C%E5%BC%82%E6%AD%A5%E6%80%BB%E7%BA%BF%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E9%80%9F%E7%8E%87"><span class="nav-text">3.4.1. 例：同步总线和异步总线的数据传输速率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-2-%E4%BE%8B%EF%BC%9A%E4%B8%8D%E5%90%8C%E6%95%B0%E6%8D%AE%E5%9D%97%E5%A4%A7%E5%B0%8F%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E9%80%9F%E7%8E%87"><span class="nav-text">3.4.2. 例：不同数据块大小的数据传输速率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E6%8F%90%E9%AB%98%E6%80%BB%E7%BA%BF%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%8E%87"><span class="nav-text">3.5. 提高总线的数据传输率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-text">3.6. 层次结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-1-%E5%8D%95%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84"><span class="nav-text">3.6.1. 单总线结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-2-%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84I"><span class="nav-text">3.6.2. 双总线结构I</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-3-%E5%8F%8C%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84II"><span class="nav-text">3.6.3. 双总线结构II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-4-%E5%A4%9A%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84I"><span class="nav-text">3.6.4. 多总线结构I</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-5-%E5%A4%9A%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84II"><span class="nav-text">3.6.5. 多总线结构II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-6-%E5%A4%9A%E6%80%BB%E7%BA%BF%E7%BB%93%E6%9E%84III"><span class="nav-text">3.6.6. 多总线结构III</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Charlie</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.3.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+
+</main>
+
+
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+        ],
+        containers: ["#swup"],
+    });
+
+    swup.on("pageView", () => {
+        Global.refresh();
+    });
+
+    // if (document.readyState === "complete") {
+    //
+    // } else {
+    //     document.addEventListener("DOMContentLoaded", () => init());
+    // }
+</script>
+
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/navbarShrink.js"></script>
+
+<script src="/js/tools/scrollTopBottom.js"></script>
+
+<script src="/js/tools/lightDarkSwitch.js"></script>
+
+<script src="/js/layouts/categoryList.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+</div>
+
+
+</body>
+</html>
