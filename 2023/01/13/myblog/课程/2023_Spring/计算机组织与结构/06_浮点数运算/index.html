@@ -13,22 +13,38 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/12/17/hello-world/"/>
+    <link rel="canonical" href="http://example.com/2023/01/13/myblog/课程/2023_spring/计算机组织与结构/06_浮点数运算/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+        <meta name="description" content="回顾：[[03_数据的机器级表示#3.3 IEEE 754标准]] 1.浮点加减法1.1步骤 检查0  对阶  小阶向大阶对其，阶小的数向右移 损失低位，但精度更高   尾数加减  IEE754使用定点原码小数表示尾数  两个带符号的原码小数加减 要还原隐藏位 若结果为0，则强行令指数为0   尾数规格化  经过对阶、尾数加减的浮点数不一定是规格化的 1b.bb…b，右规格化：尾数右移1位，阶码加">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/12/17/hello-world/index.html">
+<meta property="og:title" content="06_浮点数运算">
+<meta property="og:url" content="http://example.com/2023/01/13/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/06_%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+<meta property="og:description" content="回顾：[[03_数据的机器级表示#3.3 IEEE 754标准]] 1.浮点加减法1.1步骤 检查0  对阶  小阶向大阶对其，阶小的数向右移 损失低位，但精度更高   尾数加减  IEE754使用定点原码小数表示尾数  两个带符号的原码小数加减 要还原隐藏位 若结果为0，则强行令指数为0   尾数规格化  经过对阶、尾数加减的浮点数不一定是规格化的 1b.bb…b，右规格化：尾数右移1位，阶码加">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-17T15:16:22.899Z">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/0c987e12082ee6de80736c513ffcc641_capture-2023-01-18-20-20-11.jpg">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/c1055b2fa41c71f8c4a017682a0a10e6_1e_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/7bebf3f1fd76575e27d285fc05f5480c_1f_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/5e257236cab33f744e75985335cf598d_20_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/d43aae1eda69aa2c29c9781bcccd10af_21_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/37290d1eb2d045a83517a1df13f0d9aa_capture-2023-01-18-20-40-51.jpg">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/ff3ac1e1db72a821367eee1d85a8ff32_22_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/f258d64c3ffee347ae6ff84ff187060b_23_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/7c049f604d847ec2db7998aef7cf2e37_24_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/42166db56d1ab4605f381bbf30dd4d50_25_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/40343bfea0a631b30b6e40f77c5baeaa_26_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/99949b9d9eb0bbfb59f9abdf572fc48d_27_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/50223a665b053ef31cfbd1a07b93aead_28_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/6291e5922a3b7ea9adfece51a28a1586_29_NVIDIA_GeForce_Overlay_DT.png">
+<meta property="article:published_time" content="2023-01-13T16:35:00.000Z">
 <meta property="article:modified_time" content="2023-12-17T15:16:22.899Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="2022Fall_计算机组织与结构 课程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/0c987e12082ee6de80736c513ffcc641_capture-2023-01-18-20-20-11.jpg">
     
     
     <!--- Icon Part-->
@@ -40,7 +56,7 @@
     
     <title>
         
-            Hello World -
+            06_浮点数运算 -
         
         Charlie&#39;s Blog
     </title>
@@ -208,7 +224,7 @@
 
         <div class="article-title">
             
-                <h1 class="article-title-regular">Hello World</h1>
+                <h1 class="article-title-regular">06_浮点数运算</h1>
             
             </div>
             
@@ -230,8 +246,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-12-17 15:16:22</span>
-        <span class="mobile">2023-12-17 15:16:22</span>
+        <span class="desktop">2023-01-13 16:35</span>
+        <span class="mobile">2023-01-13 16:35</span>
         <span class="hover-info">Created</span>
     </span>
     
@@ -244,6 +260,33 @@
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">2022Fall_计算机组织与结构</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/">2022Fall_计算机组织与结构 课程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -262,19 +305,163 @@
         
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+            <p><strong>回顾：</strong>[[03_数据的机器级表示#3.3 IEEE 754标准]]</p>
+<h1 id="1-浮点加减法"><a href="#1-浮点加减法" class="headerlink" title="1.浮点加减法"></a>1.浮点加减法</h1><h2 id="1-1步骤"><a href="#1-1步骤" class="headerlink" title="1.1步骤"></a>1.1步骤</h2><ol>
+<li><p>检查0</p>
+</li>
+<li><p>对阶</p>
+<ul>
+<li>小阶向大阶对其，阶小的数向右移</li>
+<li>损失低位，但精度更高<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/0c987e12082ee6de80736c513ffcc641_capture-2023-01-18-20-20-11.jpg"
+                      alt="capture-2023-01-18-20-20-11.jpg"
+                ></li>
+</ul>
+</li>
+<li><p>尾数加减</p>
+<ul>
+<li>IEE754使用<strong>定点原码小数</strong>表示尾数 </li>
+<li>两个带符号的原码小数加减</li>
+<li>要<strong>还原隐藏位</strong></li>
+<li><strong>若结果为0，则强行令指数为0</strong></li>
+</ul>
+</li>
+<li><p>尾数规格化</p>
+<ul>
+<li>经过对阶、尾数加减的浮点数不一定是规格化的</li>
+<li>1b.bb…b，右规格化：尾数右移1位，阶码加1</li>
+<li>0.00…01bb…b，左规格化：数值位每次左移1位，阶码减1，直到小数点左边为1或非规格化表示</li>
+</ul>
+</li>
+<li><p>尾数舍入</p>
+</li>
+<li><p>溢出判断</p>
+<ul>
+<li>右规格化和尾数舍入</li>
+<li>左规格化<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/c1055b2fa41c71f8c4a017682a0a10e6_1e_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="1e_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+</li>
+</ol>
+<h2 id="1-2原码加减法"><a href="#1-2原码加减法" class="headerlink" title="1.2原码加减法"></a>1.2原码加减法</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/7bebf3f1fd76575e27d285fc05f5480c_1f_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="1f_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<ul>
+<li>计算时可以假设有一位符号位</li>
+</ul>
+<h2 id="1-3例子"><a href="#1-3例子" class="headerlink" title="1.3例子"></a>1.3例子</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/5e257236cab33f744e75985335cf598d_20_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="20_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/d43aae1eda69aa2c29c9781bcccd10af_21_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="21_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h1 id="2-浮点乘法"><a href="#2-浮点乘法" class="headerlink" title="2.浮点乘法"></a>2.浮点乘法</h1><h2 id="2-1步骤"><a href="#2-1步骤" class="headerlink" title="2.1步骤"></a>2.1步骤</h2><ol>
+<li><p>无论哪个操作数是0，乘积即为0</p>
+</li>
+<li><p>指数相加</p>
+<ul>
+<li>从阶值的和中减去一个偏移量<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/37290d1eb2d045a83517a1df13f0d9aa_capture-2023-01-18-20-40-51.jpg"
+                      alt="capture-2023-01-18-20-40-51.jpg"
+                ></li>
+</ul>
+</li>
+<li><p>尾数相乘</p>
+<ul>
+<li>[[05_整数运算#2.3乘法]]</li>
+</ul>
+</li>
+<li><p>结果的规格化和舍入处理</p>
+<ul>
+<li>结果的规格化和舍入处理</li>
+</ul>
+</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/ff3ac1e1db72a821367eee1d85a8ff32_22_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="22_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h2 id="2-2例子"><a href="#2-2例子" class="headerlink" title="2.2例子"></a>2.2例子</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/f258d64c3ffee347ae6ff84ff187060b_23_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="23_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h1 id="3-浮点除法"><a href="#3-浮点除法" class="headerlink" title="3.浮点除法"></a>3.浮点除法</h1><h2 id="3-1步骤"><a href="#3-1步骤" class="headerlink" title="3.1步骤"></a>3.1步骤</h2><ul>
+<li>如果除数为0，则报告出错， 或将结果设置为无穷大</li>
+<li>如果被除数是0，则结果是0</li>
+<li>被除数的阶值减除数的阶值， 加上偏移量</li>
+<li>有效值相除</li>
+<li>结果规格化和舍入处理<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/7c049f604d847ec2db7998aef7cf2e37_24_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="24_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h2 id="3-2例子"><a href="#3-2例子" class="headerlink" title="3.2例子"></a>3.2例子</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/42166db56d1ab4605f381bbf30dd4d50_25_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="25_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h1 id="4-精度考虑"><a href="#4-精度考虑" class="headerlink" title="4.精度考虑"></a>4.精度考虑</h1><h2 id="4-1保护位"><a href="#4-1保护位" class="headerlink" title="4.1保护位"></a>4.1保护位</h2><ul>
+<li>寄存器的长度几乎总是大于有效值位长与一个隐含位之和</li>
+<li>寄存器包含的这些附加位，称为<strong>保护位</strong></li>
+<li>保护位用0填充，用于扩充有效值的右端</li>
+</ul>
+<h2 id="4-2舍入"><a href="#4-2舍入" class="headerlink" title="4.2舍入"></a>4.2舍入</h2><ul>
+<li>对有效值操作的结果通常保存在更长的寄存器中</li>
+<li>当结果转换回浮点格式时，必须要去掉多余的位<ul>
+<li>就近舍入：结果被舍入成最近的<strong>可表示的数</strong></li>
+<li>朝$+\infty$舍入：结果朝正无穷大方向向上舍入</li>
+<li>朝$-\infty$舍入：结果朝负无穷大方向向下舍入</li>
+<li>朝0舍入：结果朝0舍入</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3例子"><a href="#4-3例子" class="headerlink" title="4.3例子"></a>4.3例子</h2><ol>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/40343bfea0a631b30b6e40f77c5baeaa_26_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="26_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/99949b9d9eb0bbfb59f9abdf572fc48d_27_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="27_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/50223a665b053ef31cfbd1a07b93aead_28_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="28_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/6291e5922a3b7ea9adfece51a28a1586_29_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="29_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ol>
 
         </div>
 
@@ -282,16 +469,16 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> Hello World</li>
+        <li><strong>Title:</strong> 06_浮点数运算</li>
         <li><strong>Author:</strong> Charlie</li>
-        <li><strong>Created at:</strong> 2023-12-17 15:16:22</li>
+        <li><strong>Created at:</strong> 2023-01-13 16:35:00</li>
         
             <li>
                 <strong>Updated at:</strong> 2023-12-17 15:16:22
             </li>
         
         <li>
-            <strong>Link:</strong> https://chillcharlie357.github.io/2023/12/17/hello-world/
+            <strong>Link:</strong> https://chillcharlie357.github.io/2023/01/13/myblog/课程/2023_Spring/计算机组织与结构/06_浮点数运算/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -303,20 +490,43 @@
         
 
         
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/">#2022Fall_计算机组织与结构 课程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
 
         
 
         
             <div class="article-nav">
                 
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/01/13/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/05_%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">05_整数运算</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next">
                         <a class="next"
                         rel="next"
-                        href="/2023/12/17/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/"
+                        href="/2023/01/13/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/04_%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">12_虚拟存储器</span>
+                                <span class="post-nav-title-item">04_数据校验码</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -381,8 +591,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Hello World</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <div class="page-title">06_浮点数运算</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E6%B5%AE%E7%82%B9%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="nav-text">1.浮点加减法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1%E6%AD%A5%E9%AA%A4"><span class="nav-text">1.1步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2%E5%8E%9F%E7%A0%81%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="nav-text">1.2原码加减法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3%E4%BE%8B%E5%AD%90"><span class="nav-text">1.3例子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%B5%AE%E7%82%B9%E4%B9%98%E6%B3%95"><span class="nav-text">2.浮点乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1%E6%AD%A5%E9%AA%A4"><span class="nav-text">2.1步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2%E4%BE%8B%E5%AD%90"><span class="nav-text">2.2例子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%B5%AE%E7%82%B9%E9%99%A4%E6%B3%95"><span class="nav-text">3.浮点除法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1%E6%AD%A5%E9%AA%A4"><span class="nav-text">3.1步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2%E4%BE%8B%E5%AD%90"><span class="nav-text">3.2例子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E7%B2%BE%E5%BA%A6%E8%80%83%E8%99%91"><span class="nav-text">4.精度考虑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1%E4%BF%9D%E6%8A%A4%E4%BD%8D"><span class="nav-text">4.1保护位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2%E8%88%8D%E5%85%A5"><span class="nav-text">4.2舍入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3%E4%BE%8B%E5%AD%90"><span class="nav-text">4.3例子</span></a></li></ol></li></ol>
 
     </div>
 </div>

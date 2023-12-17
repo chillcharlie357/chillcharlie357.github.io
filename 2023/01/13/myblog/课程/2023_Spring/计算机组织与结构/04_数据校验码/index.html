@@ -13,22 +13,34 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/12/17/hello-world/"/>
+    <link rel="canonical" href="http://example.com/2023/01/13/myblog/课程/2023_spring/计算机组织与结构/04_数据校验码/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+        <meta name="description" content="1.差错和纠错1.1故障的分类 硬故障（hard failure）：永久性的物理故障 软故障（soft error）：随机非破坏性事件  1.2纠错 基本思想 大多数数据校验方式都基于冗余校验，，即除了原数据的信息外还增加额外若干位的编码校验位   处理过程 数据输入：使用函数$f$在$M$位数据$D$上生成$K$位校验码$C$ 数据输出：使用函数$f$在$M$位数据$D^{‘}$上生成新的$K$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/12/17/hello-world/index.html">
+<meta property="og:title" content="04_数据校验码">
+<meta property="og:url" content="http://example.com/2023/01/13/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/04_%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+<meta property="og:description" content="1.差错和纠错1.1故障的分类 硬故障（hard failure）：永久性的物理故障 软故障（soft error）：随机非破坏性事件  1.2纠错 基本思想 大多数数据校验方式都基于冗余校验，，即除了原数据的信息外还增加额外若干位的编码校验位   处理过程 数据输入：使用函数$f$在$M$位数据$D$上生成$K$位校验码$C$ 数据输出：使用函数$f$在$M$位数据$D^{‘}$上生成新的$K$">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-17T15:16:22.899Z">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_uii8D9WkPu.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_fxiRi6Cw8k.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_xn6Gmjdkm1.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_o6gmrQ5KPD.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_eOFPqQitcf.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/capture-2023-01-13-16-03-19.jpg">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_pURvFPwV4D.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/capture-2023-01-13-16-03-32.jpg">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_zGApIY3y1N.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Sk1KerfZvD.png">
+<meta property="article:published_time" content="2023-01-13T15:11:00.000Z">
 <meta property="article:modified_time" content="2023-12-17T15:16:22.899Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="2022Fall_计算机组织与结构 课程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_uii8D9WkPu.png">
     
     
     <!--- Icon Part-->
@@ -40,7 +52,7 @@
     
     <title>
         
-            Hello World -
+            04_数据校验码 -
         
         Charlie&#39;s Blog
     </title>
@@ -208,7 +220,7 @@
 
         <div class="article-title">
             
-                <h1 class="article-title-regular">Hello World</h1>
+                <h1 class="article-title-regular">04_数据校验码</h1>
             
             </div>
             
@@ -230,8 +242,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-12-17 15:16:22</span>
-        <span class="mobile">2023-12-17 15:16:22</span>
+        <span class="desktop">2023-01-13 15:11</span>
+        <span class="mobile">2023-01-13 15:11</span>
         <span class="hover-info">Created</span>
     </span>
     
@@ -244,6 +256,33 @@
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">2022Fall_计算机组织与结构</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/">2022Fall_计算机组织与结构 课程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -262,19 +301,133 @@
         
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+            <h1 id="1-差错和纠错"><a href="#1-差错和纠错" class="headerlink" title="1.差错和纠错"></a>1.差错和纠错</h1><h2 id="1-1故障的分类"><a href="#1-1故障的分类" class="headerlink" title="1.1故障的分类"></a>1.1故障的分类</h2><ul>
+<li>硬故障（hard failure）：永久性的物理故障</li>
+<li>软故障（soft error）：随机非破坏性事件</li>
+</ul>
+<h2 id="1-2纠错"><a href="#1-2纠错" class="headerlink" title="1.2纠错"></a>1.2纠错</h2><ul>
+<li>基本思想<ul>
+<li>大多数数据校验方式都基于<strong>冗余校验</strong>，，即除了原数据的信息外还增加额外若干位的编码<strong>校验位</strong></li>
+</ul>
+</li>
+<li>处理过程<ul>
+<li>数据输入：使用函数$f$在$M$位数据$D$上生成$K$位校验码$C$</li>
+<li>数据输出：使用函数$f$在$M$位数据$D^{‘}$上生成新的$K$位代码$C^{‘’}$ ，并与取出的$K$位码        $C^{‘}$进行比较<ul>
+<li>没有检测到差错：使用数据$D^{‘}$</li>
+<li>检测到差错且可以校正：校正数据$D^{‘}$来生成数据$D^{‘’}$ ，并用数据$D^{‘’}$</li>
+<li>检测到差错但无法纠正：报告</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_uii8D9WkPu.png"
+                      alt="NVIDIA_Share_uii8D9WkPu.png"
+                ></p>
+<h1 id="2-奇偶校验码"><a href="#2-奇偶校验码" class="headerlink" title="2.奇偶校验码"></a>2.奇偶校验码</h1><ul>
+<li>基本思想<ul>
+<li>利用了<strong>异或运算</strong>的性质（消除，相同异或为0，不同异或为1）</li>
+<li>增加<strong>1位校验码</strong>来表示数据中1的数量是奇数还是偶数</li>
+<li>偶校验直接对数据按位做异或，奇校验的最后多异或一个1</li>
+</ul>
+</li>
+<li>运算过程<ul>
+<li>在源部件计算出奇（偶）校验位$P$</li>
+<li>在目标部件计算出奇（偶）校验位$P^{‘}$</li>
+<li>计算最终校验位$P^{‘’}&#x3D;P\oplus P^{‘}$，结果为1则<strong>奇数个位置出错</strong>，结果为0则<strong>正确或偶数个位置错</strong><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_fxiRi6Cw8k.png"
+                      alt="NVIDIA_Share_fxiRi6Cw8k.png"
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_xn6Gmjdkm1.png"
+                      alt="NVIDIA_Share_xn6Gmjdkm1.png"
+                ></li>
+</ul>
+</li>
+<li>优点<ul>
+<li>代价低，只要1位额外数据</li>
+<li>计算简单</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>不能发现出错位数为偶数的情形</li>
+<li>无法纠错</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>存储器读写检查或按字节传输过程中的数据校验，因为一字节长的数据中一位出错的概率远大于两位以上出错。</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-海明码"><a href="#3-海明码" class="headerlink" title="3.海明码"></a>3.海明码</h1><ul>
+<li>基本思想<ul>
+<li>将数据<strong>分组</strong>，对每一组都使用奇偶校验码进行检错</li>
+<li><strong>数据位和校验位按某种排列方式</strong>一起存储成$M+K$位的码字</li>
+</ul>
+</li>
+<li>处理过程<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_o6gmrQ5KPD.png"
+                      alt="NVIDIA_Share_o6gmrQ5KPD.png"
+                ></li>
+<li>校验码长度确定<ul>
+<li>假设<font color="#ff0000">最多1位发生错误</font></li>
+<li>可能的差错<ul>
+<li>数据中有1位出现错误：M</li>
+<li>校验码中有1位出现错误：K</li>
+<li>没有出现错误：1</li>
+</ul>
+</li>
+<li>校验码长度$2^K\ge M+K+1$</li>
+</ul>
+</li>
+<li>故障字的规则<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_eOFPqQitcf.png"
+                      alt="NVIDIA_Share_eOFPqQitcf.png"
+                ></li>
+<li>码字排列方式&#x2F;分组方式<ul>
+<li>数据$M&#x3D;M_1 M_2\cdots M_8$，校验位$P_1 P_2 P_3 P_4$</li>
+<li>位设置在与其故障字值相同的位置($P_1 :0001,P_2:0010,P_3:0100$)</li>
+<li>每个数据位至少要参与两组奇偶校验<br><em>紫书排列方式从左往右，PPT排列方式从右往左，但不影响</em><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/capture-2023-01-13-16-03-19.jpg"
+                      alt="capture-2023-01-13-16-03-19.jpg"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_pURvFPwV4D.png"
+                      alt="NVIDIA_Share_pURvFPwV4D.png"
+                ></li>
+</ul>
+</li>
+<li>校验位计算<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/capture-2023-01-13-16-03-32.jpg"
+                      alt="capture-2023-01-13-16-03-32.jpg"
+                ></li>
+</ul>
+<h1 id="4-循环冗余校验"><a href="#4-循环冗余校验" class="headerlink" title="4.循环冗余校验"></a>4.循环冗余校验</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_zGApIY3y1N.png"
+                      alt="NVIDIA_Share_zGApIY3y1N.png"
+                ><br>模2除法-&gt;异或<br>模2除法它既不向上位借位，也不比较除数和被除数的相同位数值的大小，只要以相同位数进行相除即可<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Sk1KerfZvD.png"
+                      alt="NVIDIA_Share_Sk1KerfZvD.png"
+                ><br>在网络通信中，数据的位数较大，通常只用循环冗余校验检查错误直接要求对方重发，不用循环冗余校验码来纠错。</p>
 
         </div>
 
@@ -282,16 +435,16 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> Hello World</li>
+        <li><strong>Title:</strong> 04_数据校验码</li>
         <li><strong>Author:</strong> Charlie</li>
-        <li><strong>Created at:</strong> 2023-12-17 15:16:22</li>
+        <li><strong>Created at:</strong> 2023-01-13 15:11:00</li>
         
             <li>
                 <strong>Updated at:</strong> 2023-12-17 15:16:22
             </li>
         
         <li>
-            <strong>Link:</strong> https://chillcharlie357.github.io/2023/12/17/hello-world/
+            <strong>Link:</strong> https://chillcharlie357.github.io/2023/01/13/myblog/课程/2023_Spring/计算机组织与结构/04_数据校验码/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -303,20 +456,43 @@
         
 
         
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/">#2022Fall_计算机组织与结构 课程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
 
         
 
         
             <div class="article-nav">
                 
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/01/13/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/06_%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">06_浮点数运算</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next">
                         <a class="next"
                         rel="next"
-                        href="/2023/12/17/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/"
+                        href="/2023/01/12/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/03_%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">12_虚拟存储器</span>
+                                <span class="post-nav-title-item">03_数据的机器级表示</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -381,8 +557,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Hello World</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <div class="page-title">04_数据校验码</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%B7%AE%E9%94%99%E5%92%8C%E7%BA%A0%E9%94%99"><span class="nav-text">1.差错和纠错</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1%E6%95%85%E9%9A%9C%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-text">1.1故障的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2%E7%BA%A0%E9%94%99"><span class="nav-text">1.2纠错</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="nav-text">2.奇偶校验码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%B5%B7%E6%98%8E%E7%A0%81"><span class="nav-text">3.海明码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C"><span class="nav-text">4.循环冗余校验</span></a></li></ol>
 
     </div>
 </div>

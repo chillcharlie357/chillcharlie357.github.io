@@ -13,22 +13,35 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/12/17/hello-world/"/>
+    <link rel="canonical" href="http://example.com/2023/01/12/myblog/课程/2023_spring/计算机组织与结构/03_数据的机器级表示/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+        <meta name="description" content="1.信息的二进制编码  编码：用少量简单的基本符号对复杂多样的信息进行一定规律的组合 $K$位的二进制编码至多表示$2^K$个不同的值  2.整数的二进制表示原码、反码、移码在进行加法运算时都会造成不必要的硬件需求，因此目前计算机中普遍使用补码。补码可以实现不同符号统一的加减运算，即可以用加法实现减法。 2.1补码表示$K$位补码可以表示$-2^{K-1\sim}2^{k-1}-1$ 2.2补码的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/12/17/hello-world/index.html">
+<meta property="og:title" content="03_数据的机器级表示">
+<meta property="og:url" content="http://example.com/2023/01/12/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/03_%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting  or you can ask me on GitHub . Q">
+<meta property="og:description" content="1.信息的二进制编码  编码：用少量简单的基本符号对复杂多样的信息进行一定规律的组合 $K$位的二进制编码至多表示$2^K$个不同的值  2.整数的二进制表示原码、反码、移码在进行加法运算时都会造成不必要的硬件需求，因此目前计算机中普遍使用补码。补码可以实现不同符号统一的加减运算，即可以用加法实现减法。 2.1补码表示$K$位补码可以表示$-2^{K-1\sim}2^{k-1}-1$ 2.2补码的">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-17T15:16:22.899Z">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_kM0hbupCGD.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Ru7MCmvL93.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_mFleHVLRCl.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_ncgsju1w2b.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_epSSsbGIzF.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_520rTpHmZE.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_r4zn8tV3XX.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_IJKCm8FGWX.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Kx5Jix6JSe.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_eDmDKAt9CZ.png">
+<meta property="og:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_lEdaUYmBvx.png">
+<meta property="article:published_time" content="2023-01-12T18:53:00.000Z">
 <meta property="article:modified_time" content="2023-12-17T15:16:22.899Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="2022Fall_计算机组织与结构 课程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_kM0hbupCGD.png">
     
     
     <!--- Icon Part-->
@@ -40,7 +53,7 @@
     
     <title>
         
-            Hello World -
+            03_数据的机器级表示 -
         
         Charlie&#39;s Blog
     </title>
@@ -208,7 +221,7 @@
 
         <div class="article-title">
             
-                <h1 class="article-title-regular">Hello World</h1>
+                <h1 class="article-title-regular">03_数据的机器级表示</h1>
             
             </div>
             
@@ -230,8 +243,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-12-17 15:16:22</span>
-        <span class="mobile">2023-12-17 15:16:22</span>
+        <span class="desktop">2023-01-12 18:53</span>
+        <span class="mobile">2023-01-12 18:53</span>
         <span class="hover-info">Created</span>
     </span>
     
@@ -244,6 +257,33 @@
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/">2022Fall_计算机组织与结构</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/">2022Fall_计算机组织与结构 课程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -262,19 +302,113 @@
         
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+            <h1 id="1-信息的二进制编码"><a href="#1-信息的二进制编码" class="headerlink" title="1.信息的二进制编码"></a>1.信息的二进制编码</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_kM0hbupCGD.png"
+                      alt="NVIDIA_Share_kM0hbupCGD.png"
+                ></p>
+<ul>
+<li><strong>编码</strong>：用少量简单的<font color="#ff0000">基本符号</font>对复杂多样的信息进行一定<font color="#ff0000">规律</font>的组合</li>
+<li>$K$位的二进制编码至多表示$2^K$个不同的值</li>
+</ul>
+<h1 id="2-整数的二进制表示"><a href="#2-整数的二进制表示" class="headerlink" title="2.整数的二进制表示"></a>2.整数的二进制表示</h1><p>原码、反码、移码在进行加法运算时都会造成不必要的硬件需求，因此目前计算机中普遍使用补码。<br><font color="#ff0000">补码</font>可以实现不同符号统一的加减运算，即可以用加法实现减法。</p>
+<h2 id="2-1补码表示"><a href="#2-1补码表示" class="headerlink" title="2.1补码表示"></a>2.1补码表示</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Ru7MCmvL93.png"
+                      alt="NVIDIA_Share_Ru7MCmvL93.png"
+                ><br>$K$位补码可以表示$-2^{K-1\sim}2^{k-1}-1$</p>
+<h2 id="2-2补码的真值"><a href="#2-2补码的真值" class="headerlink" title="2.2补码的真值"></a>2.2补码的真值</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_mFleHVLRCl.png"
+                      alt="NVIDIA_Share_mFleHVLRCl.png"
+                ></p>
+<h2 id="2-3不同的整数编码"><a href="#2-3不同的整数编码" class="headerlink" title="2.3不同的整数编码"></a>2.3不同的整数编码</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_ncgsju1w2b.png"
+                      alt="NVIDIA_Share_ncgsju1w2b.png"
+                ></p>
+<h1 id="3-浮点数的二进制表示"><a href="#3-浮点数的二进制表示" class="headerlink" title="3.浮点数的二进制表示"></a>3.浮点数的二进制表示</h1><ul>
+<li><strong>浮点数</strong>：小数点的位置不固定<ul>
+<li>越大的数精度越低，但可表示数的范围比定点数大</li>
+<li>可<font color="#ff0000">表示数的个数不变</font>，k位浮点数可表示的数仍是$2^k$个（类比插旗，🚩总数不变）<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_epSSsbGIzF.png"
+                      alt="NVIDIA_Share_epSSsbGIzF.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-1规格化数"><a href="#3-1规格化数" class="headerlink" title="3.1规格化数"></a>3.1规格化数</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_520rTpHmZE.png"
+                      alt="NVIDIA_Share_520rTpHmZE.png"
+                ></p>
+<ul>
+<li>尾数第一位总是1，因此可以隐藏。多表示一位增加了精度，但可表示的数不会增加。</li>
+<li>尾数为<strong>原码</strong>，指数为<strong>移码</strong></li>
+</ul>
+<h3 id="3-1-1规格化数的范围"><a href="#3-1-1规格化数的范围" class="headerlink" title="3.1.1规格化数的范围"></a>3.1.1规格化数的范围</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_r4zn8tV3XX.png"
+                      alt="NVIDIA_Share_r4zn8tV3XX.png"
+                ></p>
+<h3 id="3-1-2规格化数的变化"><a href="#3-1-2规格化数的变化" class="headerlink" title="3.1.2规格化数的变化"></a>3.1.2规格化数的变化</h3><ul>
+<li>增加阶码（E）位数：扩大表示范围，降低表示精度</li>
+<li>增加尾数（S）位数：提高表示精度，减少表示范围</li>
+<li>采用更大的底（B）：实现更大的范围，提高&#x2F;降低表示精度</li>
+</ul>
+<h2 id="3-2非规格化数"><a href="#3-2非规格化数" class="headerlink" title="3.2非规格化数"></a>3.2非规格化数</h2><ul>
+<li>处理<font color="#ff0000">规格化数下溢</font>的情况</li>
+<li>当结果的阶值太小时，通过右移进行非规格化；每次右移阶值增，直到阶值落在可表示范围内<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_IJKCm8FGWX.png"
+                      alt="NVIDIA_Share_IJKCm8FGWX.png"
+                ></li>
+</ul>
+<h2 id="3-3-IEEE-754标准"><a href="#3-3-IEEE-754标准" class="headerlink" title="3.3 IEEE 754标准"></a>3.3 IEEE 754标准</h2><ul>
+<li>分为32位单精度和32位双精度<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Kx5Jix6JSe.png"
+                      alt="NVIDIA_Share_Kx5Jix6JSe.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_eDmDKAt9CZ.png"
+                      alt="NVIDIA_Share_eDmDKAt9CZ.png"
+                ><br><strong>分类</strong>：</li>
+</ul>
+<ol>
+<li>全0阶码全0尾数：$+0&#x2F;-0$</li>
+<li>全0阶码非0尾数：非规格化数<ul>
+<li>单精度指数为-126，双精度指数为-1022</li>
+<li>隐藏位为0</li>
+</ul>
+</li>
+<li>全1阶码全0尾数：$+\infty&#x2F;-\infty$<ul>
+<li>操作数为$\infty$时运算结果可能为NaN也可能为$\infty$</li>
+</ul>
+</li>
+<li>全1阶码非全0尾数：NaN</li>
+<li>阶码非全0且非全1：规格化数且非0</li>
+</ol>
+<h1 id="4-二进制编码的十进制数表示"><a href="#4-二进制编码的十进制数表示" class="headerlink" title="4.二进制编码的十进制数表示"></a>4.二进制编码的十进制数表示</h1><ul>
+<li>用4位<font color="#ff0000">二进制编码十进制（BCD）</font>表示0，1，…，9。</li>
+<li>**<font color="#ff0000">问题</font>**：4位二进制有16种可能，而0-9只有十个数。运算时如何处理进位问题。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_lEdaUYmBvx.png"
+                      alt="NVIDIA_Share_lEdaUYmBvx.png"
+                ></li>
+</ul>
 
         </div>
 
@@ -282,16 +416,16 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> Hello World</li>
+        <li><strong>Title:</strong> 03_数据的机器级表示</li>
         <li><strong>Author:</strong> Charlie</li>
-        <li><strong>Created at:</strong> 2023-12-17 15:16:22</li>
+        <li><strong>Created at:</strong> 2023-01-12 18:53:00</li>
         
             <li>
                 <strong>Updated at:</strong> 2023-12-17 15:16:22
             </li>
         
         <li>
-            <strong>Link:</strong> https://chillcharlie357.github.io/2023/12/17/hello-world/
+            <strong>Link:</strong> https://chillcharlie357.github.io/2023/01/12/myblog/课程/2023_Spring/计算机组织与结构/03_数据的机器级表示/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -303,20 +437,43 @@
         
 
         
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/2022Fall-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84-%E8%AF%BE%E7%A8%8B/">#2022Fall_计算机组织与结构 课程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
 
         
 
         
             <div class="article-nav">
                 
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/01/13/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/04_%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">04_数据校验码</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next">
                         <a class="next"
                         rel="next"
-                        href="/2023/12/17/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/"
+                        href="/2023/01/11/myblog/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A1%B6%E5%B1%82%E8%A7%86%E5%9B%BE/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">12_虚拟存储器</span>
+                                <span class="post-nav-title-item">01_计算机顶层视图</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -381,8 +538,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Hello World</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <div class="page-title">03_数据的机器级表示</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%BF%A1%E6%81%AF%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81"><span class="nav-text">1.信息的二进制编码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%95%B4%E6%95%B0%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA"><span class="nav-text">2.整数的二进制表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA"><span class="nav-text">2.1补码表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2%E8%A1%A5%E7%A0%81%E7%9A%84%E7%9C%9F%E5%80%BC"><span class="nav-text">2.2补码的真值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B4%E6%95%B0%E7%BC%96%E7%A0%81"><span class="nav-text">2.3不同的整数编码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA"><span class="nav-text">3.浮点数的二进制表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1%E8%A7%84%E6%A0%BC%E5%8C%96%E6%95%B0"><span class="nav-text">3.1规格化数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1%E8%A7%84%E6%A0%BC%E5%8C%96%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4"><span class="nav-text">3.1.1规格化数的范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2%E8%A7%84%E6%A0%BC%E5%8C%96%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96"><span class="nav-text">3.1.2规格化数的变化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2%E9%9D%9E%E8%A7%84%E6%A0%BC%E5%8C%96%E6%95%B0"><span class="nav-text">3.2非规格化数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-IEEE-754%E6%A0%87%E5%87%86"><span class="nav-text">3.3 IEEE 754标准</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E7%9A%84%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0%E8%A1%A8%E7%A4%BA"><span class="nav-text">4.二进制编码的十进制数表示</span></a></li></ol>
 
     </div>
 </div>
