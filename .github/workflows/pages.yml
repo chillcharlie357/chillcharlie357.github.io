@@ -11,13 +11,13 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@main
       - name: Use Node.js 20.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@main
         with:
           node-version: "20"
       - name: Cache NPM dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@main
         with:
           path: node_modules
           key: ${{ runner.OS }}-npm-cache
