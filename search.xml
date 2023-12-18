@@ -2,12 +2,12 @@
 <search>
   <entry>
     <title>更新日志</title>
-    <url>/2023/12/18/changelog/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/18/changelog/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>12.17 Linux使用分享</title>
-    <url>/2023/12/18/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/12.17%20Linux%E4%BD%BF%E7%94%A8%E5%88%86%E4%BA%AB/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/18/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/12.17%20Linux%E4%BD%BF%E7%94%A8%E5%88%86%E4%BA%AB/</url>
     <content><![CDATA[<h1 id="1-Linux概述"><a href="#1-Linux概述" class="headerlink" title="1. Linux概述"></a>1. Linux概述</h1><h2 id="1-1-发展历史"><a href="#1-1-发展历史" class="headerlink" title="1.1. 发展历史"></a>1.1. 发展历史</h2><p><strong>Linux</strong>是一种<a class="link" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6">自由和开放源码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E7%B1%BBUnix%E7%B3%BB%E7%BB%9F">类UNIX <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1">操作系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。该操作系统的<a class="link" href="https://zh.wikipedia.org/wiki/%E5%86%85%E6%A0%B8">内核 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>由Linus_Torvalds在1991年10月5日首次发布，再加上<a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%BF%E7%94%A8%E8%80%85%E7%A9%BA%E9%96%93">用户空间 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F">应用程序 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>之后，就成为了Linux操作系统。除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like。</p>
 <p>只要遵循<a class="link" href="https://zh.wikipedia.org/wiki/GNU%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E8%AF%81">GNU 通用公共许可证 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（GPL），任何个人和机构都可以自由地使用Linux的所有底层<a class="link" href="https://zh.wikipedia.org/wiki/%E6%BA%90%E4%BB%A3%E7%A0%81">源代码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，也可以自由地修改和再发布。</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTNkMzIyODMyYzlhZDk3MGU0OWU0MzQwYzU3ZGQ0ZDhfMlNPT1JIRElacXFjT2FrV0ljS24zSWowR3lXQjFZMjBfVG9rZW46SDkwS2JRZnB5b0RrUG54cGlKdGNlQVFRblBnXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmZiMjdiMjYyYmNjNzA0OWI3NWNhNjc0ZThkNWE2ODZfM014QkZ6NHRKeG5oa01LNDZMbkVJU2wwYTdyODkyd2FfVG9rZW46QWV6YmJuRW9ObzYzSld4TWtSamNxNUtZbnRlXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
@@ -201,7 +201,7 @@
   </entry>
   <entry>
     <title>01_计算机顶层视图</title>
-    <url>/2023/01/11/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A1%B6%E5%B1%82%E8%A7%86%E5%9B%BE/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/11/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A1%B6%E5%B1%82%E8%A7%86%E5%9B%BE/</url>
     <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
 <li>组织：可见</li>
 <li>结构：不可见<br><img  
@@ -274,7 +274,7 @@
   </entry>
   <entry>
     <title>02_计算机系统概述</title>
-    <url>/2023/01/10/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/02_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/10/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/02_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<h1 id="1-什么是计算机"><a href="#1-什么是计算机" class="headerlink" title="1.什么是计算机"></a>1.什么是计算机</h1><p><strong>通用电子数字计算机</strong>：</p>
 <ul>
 <li>通用：不是一种专用设备</li>
@@ -361,7 +361,7 @@
   </entry>
   <entry>
     <title>03_数据的机器级表示</title>
-    <url>/2023/01/12/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/03_%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/12/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/03_%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</url>
     <content><![CDATA[<h1 id="1-信息的二进制编码"><a href="#1-信息的二进制编码" class="headerlink" title="1.信息的二进制编码"></a>1.信息的二进制编码</h1><p><img  
                      lazyload
                      src="/images/loading.svg"
@@ -479,7 +479,7 @@
   </entry>
   <entry>
     <title>04_数据校验码</title>
-    <url>/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/04_%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/04_%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/</url>
     <content><![CDATA[<h1 id="1-差错和纠错"><a href="#1-差错和纠错" class="headerlink" title="1.差错和纠错"></a>1.差错和纠错</h1><h2 id="1-1故障的分类"><a href="#1-1故障的分类" class="headerlink" title="1.1故障的分类"></a>1.1故障的分类</h2><ul>
 <li>硬故障（hard failure）：永久性的物理故障</li>
 <li>软故障（soft error）：随机非破坏性事件</li>
@@ -617,7 +617,7 @@
   </entry>
   <entry>
     <title>05_整数运算</title>
-    <url>/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/05_%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/05_%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97/</url>
     <content><![CDATA[<h1 id="1-算数逻辑单元ALU"><a href="#1-算数逻辑单元ALU" class="headerlink" title="1.算数逻辑单元ALU"></a>1.算数逻辑单元ALU</h1><ul>
 <li>数据由寄存器 (Registers) 提交给ALU，运算结果也存于寄存器</li>
 <li>ALU可能根据运算结果设置一些标志 (Flags)，标志值也保存在处理器内的寄存器中</li>
@@ -798,7 +798,7 @@
   </entry>
   <entry>
     <title>06_浮点数运算</title>
-    <url>/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/06_%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/06_%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97/</url>
     <content><![CDATA[<p><strong>回顾：</strong>[[03_数据的机器级表示#3.3 IEEE 754标准]]</p>
 <h1 id="1-浮点加减法"><a href="#1-浮点加减法" class="headerlink" title="1.浮点加减法"></a>1.浮点加减法</h1><h2 id="1-1步骤"><a href="#1-1步骤" class="headerlink" title="1.1步骤"></a>1.1步骤</h2><ol>
 <li><p>检查0</p>
@@ -966,7 +966,7 @@
   </entry>
   <entry>
     <title>07_二进制编码的十进制数运算</title>
-    <url>/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/07_%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E7%9A%84%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BF%90%E7%AE%97/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/07_%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E7%9A%84%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BF%90%E7%AE%97/</url>
     <content><![CDATA[<h1 id="1-加法"><a href="#1-加法" class="headerlink" title="1.加法"></a>1.加法</h1><p><img  
                      lazyload
                      src="/images/loading.svg"
@@ -998,7 +998,7 @@
   </entry>
   <entry>
     <title>08_内部存储器</title>
-    <url>/2023/01/28/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/08_%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/28/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/08_%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/</url>
     <content><![CDATA[<ul>
 <li>地址：单元的唯一标识符（采用二进制）</li>
 <li>地址空间：可唯一标识的单元总数</li>
@@ -1247,7 +1247,7 @@
   </entry>
   <entry>
     <title>09_高速缓冲存储器（Cache）</title>
-    <url>/2023/01/28/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/09_%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Cache%EF%BC%89/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/28/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/09_%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Cache%EF%BC%89/</url>
     <content><![CDATA[<h1 id="1-Cache的基本思路"><a href="#1-Cache的基本思路" class="headerlink" title="1.Cache的基本思路"></a>1.Cache的基本思路</h1><ul>
 <li>Cache存放主存的“副本”</li>
 <li>解决内存墙<br><img  
@@ -1507,7 +1507,7 @@
   </entry>
   <entry>
     <title>10_外部存储器</title>
-    <url>/2023/01/30/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/10_%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/</url>
+    <url>//%5Bobject%20Object%5D/2023/01/30/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/10_%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/</url>
     <content><![CDATA[<p>特性</p>
 <ul>
 <li>用于存储不经常使用的、数据量较大的信息</li>
@@ -1815,7 +1815,7 @@
   </entry>
   <entry>
     <title>11_冗余磁盘阵列(RAID)</title>
-    <url>/2023/02/03/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/11_%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97(RAID)/</url>
+    <url>//%5Bobject%20Object%5D/2023/02/03/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/11_%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97(RAID)/</url>
     <content><![CDATA[<ul>
 <li>冗余磁盘阵列 &#x2F; 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
 <li>基本思想<ul>
@@ -2046,7 +2046,7 @@
   </entry>
   <entry>
     <title>12_虚拟存储器</title>
-    <url>/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</url>
     <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
 <h1 id="2-存取器管理"><a href="#2-存取器管理" class="headerlink" title="2.存取器管理"></a>2.存取器管理</h1><p>在多道程序系统中，主存需要进一步划分给<strong>多个任务</strong>，划分的任务由操作系统动态执行。</p>
 <h2 id="2-1-如何将更多任务装进主存"><a href="#2-1-如何将更多任务装进主存" class="headerlink" title="2.1 如何将更多任务装进主存"></a>2.1 如何将更多任务装进主存</h2><ul>
@@ -2217,7 +2217,7 @@
   </entry>
   <entry>
     <title>13_指令系统</title>
-    <url>/2023/02/06/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/13_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</url>
+    <url>//%5Bobject%20Object%5D/2023/02/06/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/13_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h1 id="1-指令"><a href="#1-指令" class="headerlink" title="1. 指令"></a>1. 指令</h1><ul>
 <li>指令是计算机处理的最基本单位<ul>
 <li>操作码（指令执行的内容）+操作数（要操作的对象）</li>
@@ -2825,7 +2825,7 @@
   </entry>
   <entry>
     <title>14_指令周期和指令流水线</title>
-    <url>/2023/02/06/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/14_%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F%E5%92%8C%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF/</url>
+    <url>//%5Bobject%20Object%5D/2023/02/06/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/14_%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F%E5%92%8C%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF/</url>
     <content><![CDATA[<h1 id="1-指令周期"><a href="#1-指令周期" class="headerlink" title="1. 指令周期"></a>1. 指令周期</h1><p>处理单个指令的过程</p>
 <ul>
 <li>取指周期：从内存中提取一条指令</li>
@@ -3135,7 +3135,7 @@
   </entry>
   <entry>
     <title>15_控制器</title>
-    <url>/2023/02/06/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/15_%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
+    <url>//%5Bobject%20Object%5D/2023/02/06/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/15_%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
     <content><![CDATA[<h1 id="1-指令周期"><a href="#1-指令周期" class="headerlink" title="1. 指令周期"></a>1. 指令周期</h1><p>处理单个指令的过程</p>
 <ul>
 <li>取指周期：从内存中提取一条指令</li>
@@ -3574,7 +3574,7 @@
   </entry>
   <entry>
     <title>16_总线</title>
-    <url>/2023/02/24/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/16_%E6%80%BB%E7%BA%BF/</url>
+    <url>//%5Bobject%20Object%5D/2023/02/24/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/16_%E6%80%BB%E7%BA%BF/</url>
     <content><![CDATA[<h1 id="1-总线结构"><a href="#1-总线结构" class="headerlink" title="1. 总线结构"></a>1. 总线结构</h1><ul>
 <li>数据线：在系统组件之间传输数据<ul>
 <li>数据线的数量决定了一次可以传输的数据的大小</li>
@@ -3959,7 +3959,7 @@
   </entry>
   <entry>
     <title>17_输入输出</title>
-    <url>/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/17_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/17_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
     <content><![CDATA[<h1 id="1-外围设备"><a href="#1-外围设备" class="headerlink" title="1. 外围设备"></a>1. 外围设备</h1><p>输入/输出操作通过连接到输入输出模块的各种外部设备完成， 这些外部设备提供了在外部环境和计算机系统之间的数据交 换，通常被称为<strong>外围设备（peripheral device</strong>），简称为外设 （peripheral）</p>
 <ul>
 <li>为什么<strong>不能</strong>把外设直接连接到系统总线上？<ul>
