@@ -22,7 +22,7 @@ info:
 # Docs: https://redefine-docs.ohevan.com/basic/defaults
 defaults:
   # Favicon
-  favicon: /images/redefine-favicon.svg
+  favicon: https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F17-51-16-045340060059cb67a9b4b7b6ad1a0060-favicon-6d5df3.svg
   # Site logo
   logo: 
   # Site avatar
