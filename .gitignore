@@ -7,4 +7,5 @@ public/
 .deploy*/
 _multiconfig.yml
 source/_posts/myblog/.obsidian/*
+source/.obsidian/*
 .idea/*
