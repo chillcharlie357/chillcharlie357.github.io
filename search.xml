@@ -1420,79 +1420,6 @@
       </tags>
   </entry>
   <entry>
-    <title>01_计算机顶层视图</title>
-    <url>//%5Bobject%20Object%5D/2023/01/11/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A1%B6%E5%B1%82%E8%A7%86%E5%9B%BE/</url>
-    <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
-<li>组织：可见</li>
-<li>结构：不可见<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png"
-                      alt="NVIDIA_Share_nwCw64dafh.png"
-                ></li>
-</ul>
-<h1 id="2-计算机工作原理"><a href="#2-计算机工作原理" class="headerlink" title="2.计算机工作原理"></a>2.计算机工作原理</h1><ul>
-<li>指令和数据存储在单个读写存储器中</li>
-<li>主存中的内容按位置访问，无需考虑其中包含的类型</li>
-<li>CPU从一条指令到下一条指令以顺序方式执行（除非明确修改）</li>
-<li>I&#x2F;O模块与 CPU、主存交换 算机系统外部的数据</li>
-</ul>
-<h1 id="3-计算机组件"><a href="#3-计算机组件" class="headerlink" title="3.计算机组件"></a>3.计算机组件</h1><h2 id="3-1CPU"><a href="#3-1CPU" class="headerlink" title="3.1CPU"></a>3.1CPU</h2><ul>
-<li><strong>问题1</strong>：CPU的频率不能无限提高<ul>
-<li><strong>解决</strong>：改进CPU芯片结构</li>
-</ul>
-</li>
-<li><strong>问题2</strong>：内存墙的存在<br>  主存和CPU之间传输数据的速度跟不上CPU的速度。<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_E0pwIAZkDi.png"
-                      alt="NVIDIA_Share_E0pwIAZkDi.png"
-                ><ul>
-<li><strong>解决</strong>：采用高速缓存cache</li>
-</ul>
-</li>
-<li><strong>问题3</strong>：CPU在等待 I&#x2F;O 设备时保持空闲<ul>
-<li><strong>解决</strong>：采用中断机制</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-2存储器"><a href="#3-2存储器" class="headerlink" title="3.2存储器"></a>3.2存储器</h2><ul>
-<li><strong>问题1</strong>：兼顾存储容量、速度和成本<ul>
-<li><strong>解决</strong>：使用存储器层次结构而不是依赖单个存储器组件<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_yalT0gaea2.png"
-                      alt="NVIDIA_Share_yalT0gaea2.png"
-                ></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3I-O"><a href="#3-3I-O" class="headerlink" title="3.3I&#x2F;O"></a>3.3I&#x2F;O</h2><ul>
-<li><strong>问题1</strong>：不同I&#x2F;O设备的传输速度差异大<ul>
-<li><strong>解决</strong>：设立缓冲区，新的接口技术，不同I&#x2F;O操作</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-4总线"><a href="#3-4总线" class="headerlink" title="3.4总线"></a>3.4总线</h2><ul>
-<li><strong>问题</strong>：计算机部件互连复杂<ul>
-<li><strong>解决</strong>：采用总线<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_WkoYiClJtv.png"
-                      alt="NVIDIA_Share_WkoYiClJtv.png"
-                ></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>7-客户洞察与构思</title>
     <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/7-%E5%AE%A2%E6%88%B7%E6%B4%9E%E5%AF%9F%E4%B8%8E%E6%9E%84%E6%80%9D/</url>
     <content><![CDATA[<h1 id="商业模式设计：工具、方法、思维"><a href="#商业模式设计：工具、方法、思维" class="headerlink" title="商业模式设计：工具、方法、思维"></a>商业模式设计：工具、方法、思维</h1><ul>
@@ -1639,6 +1566,79 @@
       <tags>
         <tag>2023_Fall_需求与商业模式创新</tag>
         <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01_计算机顶层视图</title>
+    <url>//%5Bobject%20Object%5D/2023/01/11/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A1%B6%E5%B1%82%E8%A7%86%E5%9B%BE/</url>
+    <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
+<li>组织：可见</li>
+<li>结构：不可见<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png"
+                      alt="NVIDIA_Share_nwCw64dafh.png"
+                ></li>
+</ul>
+<h1 id="2-计算机工作原理"><a href="#2-计算机工作原理" class="headerlink" title="2.计算机工作原理"></a>2.计算机工作原理</h1><ul>
+<li>指令和数据存储在单个读写存储器中</li>
+<li>主存中的内容按位置访问，无需考虑其中包含的类型</li>
+<li>CPU从一条指令到下一条指令以顺序方式执行（除非明确修改）</li>
+<li>I&#x2F;O模块与 CPU、主存交换 算机系统外部的数据</li>
+</ul>
+<h1 id="3-计算机组件"><a href="#3-计算机组件" class="headerlink" title="3.计算机组件"></a>3.计算机组件</h1><h2 id="3-1CPU"><a href="#3-1CPU" class="headerlink" title="3.1CPU"></a>3.1CPU</h2><ul>
+<li><strong>问题1</strong>：CPU的频率不能无限提高<ul>
+<li><strong>解决</strong>：改进CPU芯片结构</li>
+</ul>
+</li>
+<li><strong>问题2</strong>：内存墙的存在<br>  主存和CPU之间传输数据的速度跟不上CPU的速度。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_E0pwIAZkDi.png"
+                      alt="NVIDIA_Share_E0pwIAZkDi.png"
+                ><ul>
+<li><strong>解决</strong>：采用高速缓存cache</li>
+</ul>
+</li>
+<li><strong>问题3</strong>：CPU在等待 I&#x2F;O 设备时保持空闲<ul>
+<li><strong>解决</strong>：采用中断机制</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2存储器"><a href="#3-2存储器" class="headerlink" title="3.2存储器"></a>3.2存储器</h2><ul>
+<li><strong>问题1</strong>：兼顾存储容量、速度和成本<ul>
+<li><strong>解决</strong>：使用存储器层次结构而不是依赖单个存储器组件<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_yalT0gaea2.png"
+                      alt="NVIDIA_Share_yalT0gaea2.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3I-O"><a href="#3-3I-O" class="headerlink" title="3.3I&#x2F;O"></a>3.3I&#x2F;O</h2><ul>
+<li><strong>问题1</strong>：不同I&#x2F;O设备的传输速度差异大<ul>
+<li><strong>解决</strong>：设立缓冲区，新的接口技术，不同I&#x2F;O操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4总线"><a href="#3-4总线" class="headerlink" title="3.4总线"></a>3.4总线</h2><ul>
+<li><strong>问题</strong>：计算机部件互连复杂<ul>
+<li><strong>解决</strong>：采用总线<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_WkoYiClJtv.png"
+                      alt="NVIDIA_Share_WkoYiClJtv.png"
+                ></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
       </tags>
   </entry>
   <entry>
