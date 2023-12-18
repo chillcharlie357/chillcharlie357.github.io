@@ -1,0 +1,14 @@
+ 
+- links_category: 小伙伴们
+  has_thumbnail: false
+  list: 
+  - name: quas-modo
+    link: https://quas-modo.github.io/
+    description: 
+    avatar: https://quas-modo.github.io/images/avatar.jpg
+  - name: Nboxff's Blog
+    link: https://nboxff.cn/
+    description: 记录学习，记录生活
+    avatar: 
+ 
+ 
