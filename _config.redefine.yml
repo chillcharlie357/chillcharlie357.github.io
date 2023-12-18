@@ -189,9 +189,9 @@ navbar:
     Tags:
       path: /tags/
       icon: fa-regular fa-tags # can be empty
-    Friends:
+    Links:
       path: /links
-      icon: fa-regular fa-user-friends # can be empty
+      icon: fa-regular fa-link # can be empty
 
     # Status: 
     #   path: https://status.ohevan.com/
