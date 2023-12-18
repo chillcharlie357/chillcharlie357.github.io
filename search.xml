@@ -1,0 +1,4178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>更新日志</title>
+    <url>/2023/12/18/changelog/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>12.17 Linux使用分享</title>
+    <url>/2023/12/18/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/12.17%20Linux%E4%BD%BF%E7%94%A8%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<h1 id="1-Linux概述"><a href="#1-Linux概述" class="headerlink" title="1. Linux概述"></a>1. Linux概述</h1><h2 id="1-1-发展历史"><a href="#1-1-发展历史" class="headerlink" title="1.1. 发展历史"></a>1.1. 发展历史</h2><p><strong>Linux</strong>是一种<a class="link" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6">自由和开放源码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E7%B1%BBUnix%E7%B3%BB%E7%BB%9F">类UNIX <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1">操作系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。该操作系统的<a class="link" href="https://zh.wikipedia.org/wiki/%E5%86%85%E6%A0%B8">内核 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>由Linus_Torvalds在1991年10月5日首次发布，再加上<a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%BF%E7%94%A8%E8%80%85%E7%A9%BA%E9%96%93">用户空间 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F">应用程序 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>之后，就成为了Linux操作系统。除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like。</p>
+<p>只要遵循<a class="link" href="https://zh.wikipedia.org/wiki/GNU%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E8%AF%81">GNU 通用公共许可证 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（GPL），任何个人和机构都可以自由地使用Linux的所有底层<a class="link" href="https://zh.wikipedia.org/wiki/%E6%BA%90%E4%BB%A3%E7%A0%81">源代码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，也可以自由地修改和再发布。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTNkMzIyODMyYzlhZDk3MGU0OWU0MzQwYzU3ZGQ0ZDhfMlNPT1JIRElacXFjT2FrV0ljS24zSWowR3lXQjFZMjBfVG9rZW46SDkwS2JRZnB5b0RrUG54cGlKdGNlQVFRblBnXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmZiMjdiMjYyYmNjNzA0OWI3NWNhNjc0ZThkNWE2ODZfM014QkZ6NHRKeG5oa01LNDZMbkVJU2wwYTdyODkyd2FfVG9rZW46QWV6YmJuRW9ObzYzSld4TWtSamNxNUtZbnRlXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<h2 id="1-2-不同发行版"><a href="#1-2-不同发行版" class="headerlink" title="1.2. 不同发行版"></a>1.2. 不同发行版</h2><p><strong>Linux 发行版</strong>，为一般用户预先集成好的<a class="link" href="https://zh.wikipedia.org/wiki/Linux">Linux <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1">操作系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>及各种应用软件。一般用户不需要重新<a class="link" href="https://zh.wikipedia.org/wiki/%E7%BC%96%E8%AF%91">编译 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，在直接安装之后，只需要小幅度更改设置就可以使用，通常以<a class="link" href="https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">软件包管理系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>来进行应用软件的管理。还有很多发行版是基于其他发行版再次修改的。</p>
+<ul>
+<li>常见的发行版包括：<ul>
+<li>Debian系</li>
+<li>Red Hat系</li>
+<li>Arch系：简洁、自定义和滚动更新</li>
+<li><del>WSL</del></li>
+</ul>
+</li>
+</ul>
+<p>你可以在这个网站查看各个发行版的排名：<a class="link" href="https://distrowatch.com/">https://distrowatch.com/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> （ 标准为<strong>HPD：Hits Per Day）</strong></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTE4Y2U1ZTRmOTk0MjQwMGQ0OTc1MDM2ZTZlNTU4ZGZfaFF4R2pxUlpmcU9EYUxQN2N6ZTRjaklVeTFPa3BVVFFfVG9rZW46RVNyTmJNaVljb0VpTkN4aXdPMWN0d2dVbk1mXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTBhNGE4YmJmN2NkZGNhODQwOGJkZGI1YzVkMGZkZTZfQWtOZU5qdlBQVmN0ek1sM0NSWUVrR0JHc25aYUJCMEFfVG9rZW46RWs4aWJVUnh3b3ZzY0d4SmJxQWNuekp3bmJqXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<h2 id="1-3-为什么要用linux"><a href="#1-3-为什么要用linux" class="headerlink" title="1.3. 为什么要用linux"></a>1.3. 为什么要用linux</h2><p>自己平时Ubuntu用的多，下面就按Ubuntu为准（</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGU4M2JlOGUzNjAyMTg2NDIwZDlmMzc0Y2Q3NTI1YzJfSDV4Qk9mN083NmZsbmFMSGV3cGc2dnRhUnNzMHAyeTBfVG9rZW46STZNMWJ2U0hpb0VWM0N4RHFRZWNMeDA2blVlXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<h3 id="1-3-1-增加就业竞争力"><a href="#1-3-1-增加就业竞争力" class="headerlink" title="1.3.1. 增加就业竞争力"></a>1.3.1. 增加就业竞争力</h3><p>优秀程序员必备技能。</p>
+<h3 id="1-3-2-提高coding的效率"><a href="#1-3-2-提高coding的效率" class="headerlink" title="1.3.2. 提高coding的效率"></a>1.3.2. 提高coding的效率</h3><ol>
+<li>更适合程序员体质的工具链</li>
+<li>更简单的环境配置（显卡驱动除外）</li>
+</ol>
+<h4 id="1-3-2-1-例子：配置gcc"><a href="#1-3-2-1-例子：配置gcc" class="headerlink" title="1.3.2.1. 例子：配置gcc"></a>1.3.2.1. 例子：配置gcc</h4><p>在windows下配置gcc：下载MinGW，在藏得很深的系统菜单里找到环境变量，写一堆复杂的环境变量。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=NWM1NzhlZGIyMTljNDE1OTBjMDNlY2RhZDk2OGQ1N2Jfd1Y5WlVFbFM2NHpyTjV2UFh4YlMzSzY0aUp2TGtQRUhfVG9rZW46QjF3T2JGSDhobzQ2c0F4d3dqUmNGejhubmpoXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p>在ubuntu下配置gcc：<code>sudo apt install build-essential</code>。<br><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=Yjc5N2RmNzZiY2IzZTNjNmU5NjkwYWM0ZDI0NWI4NGVfQTRERzV3VXFUdWVjblJ3TDFxaEdocHVMVlNnc2FKMEJfVG9rZW46WTRwb2IwRzN3bzFCQU54TUR5emNtckRXbk9nXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<h3 id="1-3-3-生态丰富"><a href="#1-3-3-生态丰富" class="headerlink" title="1.3.3. 生态丰富"></a>1.3.3. 生态丰富</h3><ul>
+<li>数据库 MySQL、PostgreSQL</li>
+<li>消息队列 RabbitMQ、Kafka</li>
+<li>大数据 Hadoop、Spark</li>
+<li>虚拟化 KVM、Openvswitch</li>
+<li>容器 Kubernetes、Docker</li>
+</ul>
+<p>这些软件都会默认提供 Linux 下的安装、使用、运维手册，都会默认先适配 Linux。</p>
+<h2 id="1-4-Linux上除了写代码可以干什么"><a href="#1-4-Linux上除了写代码可以干什么" class="headerlink" title="1.4. Linux上除了写代码可以干什么"></a>1.4. Linux上除了写代码可以干什么</h2><ol>
+<li>专业领域相关：写代码, gnu-toolchain, docker…</li>
+<li>游戏：Steamdeck、Proton<ul>
+<li>如何在Steam上运行艾尔登法环?</li>
+<li>左上角帧数显示工具：<a class="link" href="https://github.com/benjamimgois/goverlay">GitHub - benjamimgois/goverlay: GOverlay is an opensource project that aims to create a Graphical UI to help manage Linux overlays. <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=MmRjMDU1ODk4YjMyMTk1MzUwYjFhNTAzNjQyOWVlZjFfbXhUTDlyaFlsVlZMV2JWeXZlRUZyVXBLM2p0SExNT09fVG9rZW46R3kyOGJOU3Bwb09oRG94Q21QaGM5WTNIbnNiXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjk3MTM5Y2FhYWI5ODMyNzkyMTJhZDhmMDFhYzJjODhfV3NFN3R5MWNxUExaZGJqeUw4NnJzeENCRmx4a3NsUXZfVG9rZW46SlRaZmJLTERDb0VKTG54SXhZRGNQUlYwbjNlXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<h1 id="2-安装Linux"><a href="#2-安装Linux" class="headerlink" title="2. 安装Linux"></a>2. 安装Linux</h1><p>为什么推荐使用实机而非虚拟机？</p>
+<ol>
+<li>稳定性会比虚拟机相对高一些</li>
+<li>性能会比虚拟机相对高一些</li>
+</ol>
+<h2 id="2-1-一些教程"><a href="#2-1-一些教程" class="headerlink" title="2.1. 一些教程"></a>2.1. 一些教程</h2><ol>
+<li><a class="link" href="https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview">Install Ubuntu desktop | Ubuntu <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link" href="https://blog.csdn.net/weixin_70137390/article/details/124724957">Ubuntu安装步骤(图文)_安装ubuntu-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link" href="https://www.dell.com/support/kbdoc/zh-cn/000131655/%E5%A6%82%E4%BD%95-%E5%9C%A8-%E6%88%B4%E5%B0%94-pc-%E4%B8%8A-%E5%AE%89%E8%A3%85-ubuntu-linux">如何在戴尔计算机上安装 Ubuntu Linux | Dell 中国 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ol>
+<h2 id="2-2-注意事项"><a href="#2-2-注意事项" class="headerlink" title="2.2. 注意事项"></a>2.2. 注意事项</h2><ol>
+<li>记得备份数据<ul>
+<li>就算你安装系统的操作看上去是正确的, 也有可能因为硬件兼容问题导致操作系统无法启动等后果</li>
+</ul>
+</li>
+<li>关闭Bitlocker</li>
+<li>可能还需要关闭Secure Boot<ul>
+<li>微软要求原始设备制造商(OEM) 强制启用，可能导致你无法安装其他OS</li>
+<li>不能打瓦罗兰特</li>
+</ul>
+</li>
+</ol>
+<h1 id="3-中文输入法：fcitx-google-pinyin"><a href="#3-中文输入法：fcitx-google-pinyin" class="headerlink" title="3. 中文输入法：fcitx + google pinyin"></a>3. 中文输入法：fcitx + google pinyin</h1><ol>
+<li><code>sudo apt install fcitx fcitx-pinyin fcitx-googlepinyin</code></li>
+<li>在设置里把输入法改成fcitx</li>
+</ol>
+<p><a class="link" href="https://zhuanlan.zhihu.com/p/341637818">开心的使用fcitx5进行输入 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link" href="https://mrzhubin.wordpress.com/2019/09/20/install-google-pinyin-input-method-on-debian/">mrzhubin.wordpress.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="4-Google-ChatGPT"><a href="#4-Google-ChatGPT" class="headerlink" title="4. Google + ChatGPT"></a>4. <strong>Google + ChatGPT</strong></h1><p>只要你能把问题描述清楚，多半能找到解决方法。</p>
+<h1 id="5-命令行环境"><a href="#5-命令行环境" class="headerlink" title="5. 命令行环境"></a>5. 命令行环境</h1><h2 id="5-1-tldr：man的省流版"><a href="#5-1-tldr：man的省流版" class="headerlink" title="5.1. tldr：man的省流版"></a>5.1. tldr：man的省流版</h2><p><strong>TL;DR（Too Long; Didn’t Read）</strong> 是一个开源项目，旨在<strong>提供简化和精简的命令行工具文档</strong>。它是一个命令行工具，供开发人员和系统管理员快速查找和了解各种命令的用法和示例。<br>TL;DR的设计初衷是<strong>解决传统的命令行手册文档过于冗长和复杂的问题</strong>，所以它会用简明扼要的方式来解释和演示常用命令的基本功能和用法。每个命令都有一个简短的描述，然后是一些常用的示例，展示了如何在实际场景中使用该命令。</p>
+<p><a class="link" href="https://tldr.sh/">tldr pages <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjQ0OTk2NjQzOTk3ODhhZjJhYjA3NDk4MmJhMjNlZjhfY0xKNXgwZnRjT2dlSmk3cWtPTzlPN25hbDZPMUU5MExfVG9rZW46UWltMGJVTEFyb3VkNDZ4cFVja2NXR3JubnZmXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<h2 id="5-2-文件重定向和管道"><a href="#5-2-文件重定向和管道" class="headerlink" title="5.2. 文件重定向和管道"></a>5.2. 文件重定向和管道</h2><p><a class="link" href="https://www.redhat.com/sysadmin/linux-shell-redirection-pipelining">https://www.redhat.com/sysadmin/linux-shell-redirection-pipelining <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li>文件描述符：<ul>
+<li>Stdin</li>
+<li>Stdout</li>
+<li>Stderr</li>
+</ul>
+</li>
+</ul>
+<p>你可以利用重定向和管道来操作和更改这三种基本文件描述符的默认行为。例如，你可以将键盘输入改为文件输入。你可以将信息重定向到文件，而不是在终端上获取信息，甚至丢弃错误信息，而不是在显示器上看到它们。你还可以同时将输出重定向到终端和文件。你甚至可以将一条命令的输出作为另一条命令的输入来处理。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ODhjOTJmYjlkMTRlNGVmN2NiNzNjNzdhNDA2ZjMzOTVfdVliM01ZTDB0Q2x4R2NYTTh6QmpPU1RGRkxlU0JGclFfVG9rZW46RmVkT2JQQ1JOb0daQ2x4elpvZWNibUk1bjViXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p>特殊用法 cat &lt;&lt; EOF</p>
+<h3 id="5-2-1-重定向"><a href="#5-2-1-重定向" class="headerlink" title="5.2.1. 重定向"></a>5.2.1. 重定向</h3><p>例子：</p>
+<p>将指定命令的标准输出重定向到文件：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Enable Sysadmin"</span> &gt; myfile</span><br></pre></td></tr></table></figure></div>
+
+<p>将给定命令的错误输出重定向到文件：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> /root 2&gt; myfile</span><br></pre></td></tr></table></figure></div>
+
+<p>将给定命令的错误输出重定向到标准输出，即终端：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> /root 2&gt;&amp;1</span><br></pre></td></tr></table></figure></div>
+
+<p>将指定命令的标准输出和错误输出重定向到文件：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">find /usr -name <span class="built_in">ls</span> &gt; myfile 2&gt;&amp;1</span><br><span class="line">find /usr -name <span class="built_in">ls</span> &amp;&gt; myfile</span><br></pre></td></tr></table></figure></div>
+
+<p>将给定命令的错误输出重定向到标准输出、终端，并将同一命令的标准输出重定向到文件：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">find /usr -name <span class="built_in">ls</span> 2&gt;&amp;1 &gt; myfile</span><br></pre></td></tr></table></figure></div>
+
+<p>将给定命令的标准输出追加到现有文件中（如果文件不存在，它会创建该文件，就像 &gt; 操作符所做的那样）：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Enable Sysadmin"</span> &gt;&gt; myfile</span><br></pre></td></tr></table></figure></div>
+
+<p>将给定命令的错误输出附加到现有文件中：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ls</span> /root 2&gt;&gt; myfile</span><br></pre></td></tr></table></figure></div>
+
+<p>为命令输入非标准输入，这里是指文件：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span> &lt; myfile</span><br></pre></td></tr></table></figure></div>
+
+<p>为命令提供非标准动态输入，在本例中，输入是需要标记分隔符的字符串列表，同时将结果重定向到文件：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="5-2-2-管道"><a href="#5-2-2-管道" class="headerlink" title="5.2.2. 管道"></a>5.2.2. 管道</h3><p><strong>管道</strong>：多个程序可以一起运行，一个程序可以直接将另外一个程序的输出作为其输入，并且不需要借助中间文件.</p>
+<p>在 Linux 中，管道是一种允许两个或多个进程合并或并发执行的机制。这意味着进程的输出将作为下一个进程的输入来处理，以此类推。管道并不是白叫的：它指的是进程流通过管道从源头流向目的地的概念。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=MmYxZDE5ZDVlZTkxNDFjZmY0YmU5MGM5MzcyNTNlYzdfaDNPTERZUkxDV2tPc3ppWHI1OEl6UnpiTHhycnpkZDdfVG9rZW46TmhmTGJ3UXUyb2IxbVN4QlRxYmNyOEh5bnZlXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p>例子：</p>
+<p>将 cat 命令的输出结果输入 grep 输入命令：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/passwd | grep localuser</span><br></pre></td></tr></table></figure></div>
+
+<p>将 printf 命令的标准输出重定向到文件中，然后将排序命令和新创建的相同内容输入到文件中</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span> <span class="string">"Sysadmin\nEnable\n"</span> &gt; myfile | <span class="built_in">sort</span> myfile</span><br></pre></td></tr></table></figure></div>
+
+<p>使用 free 命令检查可用内存，使用 grep 命令过滤结果中的交换信息，然后使用 awk 命令从输出中只剪切出 “总计 “列，以便展示：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">free -h | grep Swap | awk <span class="string">'{print $2}'</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="5-3-Shell-框架"><a href="#5-3-Shell-框架" class="headerlink" title="5.3. Shell + 框架"></a>5.3. Shell + 框架</h2><ul>
+<li>Bash<ul>
+<li>Bourne Again SHell</li>
+<li>大多数Linux发行版的默认shell</li>
+</ul>
+</li>
+<li>Zsh<ul>
+<li><code>bash</code> 的超集并提供了一些方便的功能</li>
+<li><code>Oh my zsh</code>：zsh的插件</li>
+</ul>
+</li>
+<li>Fish<ul>
+<li>不完全遵守posix</li>
+<li>但是提供了更强大的命令补全和提示</li>
+</ul>
+</li>
+</ul>
+<p>为什么windows的shell不好用？因为它不完全遵守POSIX协议。</p>
+<p><strong>POSIX（Portable Operating System Interface）</strong>是一个定义了操作系统接口标准的协议。它是由IEEE（Institute of Electrical and Electronics Engineers）组织制定的，旨在提供可移植性和互操作性，使得在不同的UNIX-like操作系统上编写的应用程序能够在其他兼容POSIX的系统上运行。Linux、macOS和FreeBSD等UNIX-like都遵守该协议。</p>
+<ol>
+<li><p><strong>Shell</strong>：POSIX标准中定义了一种命令行解释器的接口，称为Shell。Shell是一个用于解释和执行命令的程序，用户可以在Shell中输入命令来与操作系统进行交互。POSIX要求操作系统提供符合Shell接口规范的默认Shell，例如Bourne Shell（/bin/sh）或C Shell（/bin/csh）。</p>
+</li>
+<li><p><strong>命令行工具</strong>：POSIX标准中定义了一些常用的命令行工具，如文件操作工具（例如cp、mv、rm）、文本处理工具（例如grep、sed、awk）、进程管理工具（例如ps、kill）等。这些工具提供了在命令行下执行各种操作的功能。</p>
+</li>
+<li><p><strong>环境变量</strong>：POSIX标准中定义了一些与环境变量相关的接口和规范。环境变量是一种在操作系统中存储配置信息的机制，可以通过命令行访问和设置环境变量，以影响程序的行为和运行环境。</p>
+</li>
+<li><p><strong>I/O重定向</strong>：POSIX标准中定义了I/O重定向的机制，允许将命令的输入和输出重定向到文件或其他设备。例如，使用”&gt;”符号将命令的输出重定向到文件，或使用”&lt;”符号将文件内容作为命令的输入。</p>
+</li>
+<li><p><strong>通配符</strong>：POSIX标准中定义了通配符的规范，允许在命令行中使用通配符来匹配文件名。常见的通配符包括”*”（匹配任意字符序列）和”?”（匹配任意单个字符）等。</p>
+</li>
+</ol>
+<h2 id="5-4-任务控制"><a href="#5-4-任务控制" class="headerlink" title="5.4. 任务控制"></a>5.4. 任务控制</h2><h3 id="5-4-1-结束进程"><a href="#5-4-1-结束进程" class="headerlink" title="5.4.1. 结束进程"></a>5.4.1. 结束进程</h3><p><code>CTRL-C</code></p>
+<p><code>Ctrl-\</code></p>
+<h3 id="5-4-2-暂停进程"><a href="#5-4-2-暂停进程" class="headerlink" title="5.4.2. 暂停进程"></a>5.4.2. 暂停进程</h3><p><code>CTRL-Z</code>/<code>nohup</code></p>
+<p><code>jobs</code>：列出当前终端会话中尚未完成的全部任务</p>
+<p><code>bg</code>: 恢复任务，在后台继续</p>
+<p><code>fg</code>: 恢复任务，在前台继续</p>
+<p><code>kill %job_id</code></p>
+<h3 id="5-4-3-查看有哪些进程在运行"><a href="#5-4-3-查看有哪些进程在运行" class="headerlink" title="5.4.3. 查看有哪些进程在运行"></a>5.4.3. 查看有哪些进程在运行</h3><p><code>ps aux</code></p>
+<p><code>glances</code></p>
+<p><code>htop</code></p>
+<h3 id="5-4-4-例：在后台运行一个任务并把日志实时输出到文件？"><a href="#5-4-4-例：在后台运行一个任务并把日志实时输出到文件？" class="headerlink" title="5.4.4. 例：在后台运行一个任务并把日志实时输出到文件？"></a>5.4.4. 例：在后台运行一个任务并把日志实时输出到文件？</h3><p>我为什么不直接运行这个任务？</p>
+<ol>
+<li>连接服务器（一般是ssh连接）的时候，如果直接在终端里run，把终端关掉之后任务就会结束。如果任务的运行时间特别长，难道我要一直把终端开着吗？<ol>
+<li><em>可以连个虚拟机演示一下</em></li>
+<li>例子：<code>python count.py &gt; output.txt 2&gt;&amp;1 &amp;</code></li>
+</ol>
+</li>
+<li>直接运行任务，直接在终端输出，无法记录记录日志内容。</li>
+</ol>
+<h2 id="5-5-终端复用"><a href="#5-5-终端复用" class="headerlink" title="5.5. 终端复用"></a>5.5. 终端复用</h2><ol>
+<li><strong>Tmux</strong></li>
+<li>Screen</li>
+<li>直接开多个窗口</li>
+</ol>
+<h1 id="6-推荐资源"><a href="#6-推荐资源" class="headerlink" title="6. 推荐资源"></a>6. 推荐资源</h1><p><a class="link" href="https://missing-semester-cn.github.io/">计算机教育中缺失的一课 · the missing semester of your cs education <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link" href="https://www.redhat.com/sysadmin/linux-shell-redirection-pipelining">How to manipulate files with shell redirection and pipelines in Linux | Enable Sysadmin <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>技术分享</category>
+      </categories>
+      <tags>
+        <tag>技术分享</tag>
+        <tag>Linux使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01_计算机顶层视图</title>
+    <url>/2023/01/11/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/01_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%A1%B6%E5%B1%82%E8%A7%86%E5%9B%BE/</url>
+    <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
+<li>组织：可见</li>
+<li>结构：不可见<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png"
+                      alt="NVIDIA_Share_nwCw64dafh.png"
+                ></li>
+</ul>
+<h1 id="2-计算机工作原理"><a href="#2-计算机工作原理" class="headerlink" title="2.计算机工作原理"></a>2.计算机工作原理</h1><ul>
+<li>指令和数据存储在单个读写存储器中</li>
+<li>主存中的内容按位置访问，无需考虑其中包含的类型</li>
+<li>CPU从一条指令到下一条指令以顺序方式执行（除非明确修改）</li>
+<li>I&#x2F;O模块与 CPU、主存交换 算机系统外部的数据</li>
+</ul>
+<h1 id="3-计算机组件"><a href="#3-计算机组件" class="headerlink" title="3.计算机组件"></a>3.计算机组件</h1><h2 id="3-1CPU"><a href="#3-1CPU" class="headerlink" title="3.1CPU"></a>3.1CPU</h2><ul>
+<li><strong>问题1</strong>：CPU的频率不能无限提高<ul>
+<li><strong>解决</strong>：改进CPU芯片结构</li>
+</ul>
+</li>
+<li><strong>问题2</strong>：内存墙的存在<br>  主存和CPU之间传输数据的速度跟不上CPU的速度。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_E0pwIAZkDi.png"
+                      alt="NVIDIA_Share_E0pwIAZkDi.png"
+                ><ul>
+<li><strong>解决</strong>：采用高速缓存cache</li>
+</ul>
+</li>
+<li><strong>问题3</strong>：CPU在等待 I&#x2F;O 设备时保持空闲<ul>
+<li><strong>解决</strong>：采用中断机制</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2存储器"><a href="#3-2存储器" class="headerlink" title="3.2存储器"></a>3.2存储器</h2><ul>
+<li><strong>问题1</strong>：兼顾存储容量、速度和成本<ul>
+<li><strong>解决</strong>：使用存储器层次结构而不是依赖单个存储器组件<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_yalT0gaea2.png"
+                      alt="NVIDIA_Share_yalT0gaea2.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3I-O"><a href="#3-3I-O" class="headerlink" title="3.3I&#x2F;O"></a>3.3I&#x2F;O</h2><ul>
+<li><strong>问题1</strong>：不同I&#x2F;O设备的传输速度差异大<ul>
+<li><strong>解决</strong>：设立缓冲区，新的接口技术，不同I&#x2F;O操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4总线"><a href="#3-4总线" class="headerlink" title="3.4总线"></a>3.4总线</h2><ul>
+<li><strong>问题</strong>：计算机部件互连复杂<ul>
+<li><strong>解决</strong>：采用总线<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_WkoYiClJtv.png"
+                      alt="NVIDIA_Share_WkoYiClJtv.png"
+                ></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>02_计算机系统概述</title>
+    <url>/2023/01/10/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/02_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="1-什么是计算机"><a href="#1-什么是计算机" class="headerlink" title="1.什么是计算机"></a>1.什么是计算机</h1><p><strong>通用电子数字计算机</strong>：</p>
+<ul>
+<li>通用：不是一种专用设备</li>
+<li>电子：非机械，采用电子元件</li>
+<li>数字：非模拟，信息采用数字化的形式表</li>
+</ul>
+<p><strong>计算机系统</strong>：</p>
+<ul>
+<li>软件</li>
+<li>硬件</li>
+</ul>
+<h1 id="2-冯·诺伊曼结构"><a href="#2-冯·诺伊曼结构" class="headerlink" title="2.冯·诺伊曼结构"></a>2.冯·诺伊曼结构</h1><ul>
+<li><p><strong>组成</strong>：运算器、存储器、控制器、输入设备、输出设备</p>
+<ul>
+<li>主存储器：地址和存储的内容</li>
+<li>算术逻辑单元 &#x2F; 处理单元：执行信息的实际处理</li>
+<li>程序控制单元 &#x2F; 控制单元：指挥信息的处理</li>
+<li>输入设备：将信息送入计算机中</li>
+<li>输出设备：将处理结果以某种形式显示在计算机外</li>
+</ul>
+</li>
+<li><p><strong>存储程序思想</strong>：</p>
+<ul>
+<li>指令和数据以同等地位存放在存储器内，并可按地址访问</li>
+<li>指令和数据均用二进制表示</li>
+</ul>
+</li>
+<li><p>CPU区分指令和数据的<strong>依据</strong></p>
+<ul>
+<li>指令周期中取指令和取数据是在不同阶段</li>
+<li>指令和数据的存储位置、寻址方式是没有本质区别的</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-计算机性能"><a href="#3-计算机性能" class="headerlink" title="3.计算机性能"></a>3.计算机性能</h1><p><strong>性能评价标准</strong>：</p>
+<ul>
+<li>CPU:速度</li>
+<li>存储器：速度、容量</li>
+<li>I&#x2F;O:速度、容量<br><font color="#ff0000"><font color="#ff0000">计算机设计的主要目标是：提高CPU性能</font></font></li>
+</ul>
+<h1 id="4-CPU性能"><a href="#4-CPU性能" class="headerlink" title="4.CPU性能"></a>4.CPU性能</h1><h2 id="4-0CPU时间"><a href="#4-0CPU时间" class="headerlink" title="4.0CPU时间"></a>4.0CPU时间</h2><p>CPU用于执行程序的时间，可分为两部分：</p>
+<ul>
+<li>用户CPU时间：真正用于执行用户代码的时间</li>
+<li>系统CPU时间：为了执行用户程序而需要CPU操作系统程序的时间<br>一般<font color="#ff0000">只考虑用户CPU时间</font>，因为系统CPU时间测量不准确</li>
+</ul>
+<h2 id="4-1系统时钟"><a href="#4-1系统时钟" class="headerlink" title="4.1系统时钟"></a>4.1系统时钟</h2><p><strong>时钟频率</strong>:</p>
+<ul>
+<li>时钟速度</li>
+<li>单位：Hz</li>
+<li>计算机在单位时间内（例如1秒钟）执行最基本操作的次数<br><strong>时钟周期</strong>：</li>
+<li>周期时间&#x2F;时钟滴答</li>
+<li>单位：s</li>
+<li><strong>执行每次最基本操作的时间</strong>。CPU中用于同步执行最基本操作的单个电子脉冲。因此，周期时间即为<strong>两个电子脉冲之间的时间</strong><br><font color="#ff0000">两者互为倒数</font></li>
+</ul>
+<h2 id="4-2指令执行"><a href="#4-2指令执行" class="headerlink" title="4.2指令执行"></a>4.2指令执行</h2><ul>
+<li>CPI(Cycles Per Instruction):一条指令所需的时钟周期</li>
+<li>MIPS(Million Instruction Per Second):平均每秒执行多少百万条指令</li>
+<li>MFLOPS(Million Floating-point Operation Per Second):浮点数<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_arAHthsIcb.png"
+                      alt="NVIDIA_Share_arAHthsIcb.png"
+                ></li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_GO8FiL37LH.png"
+                      alt="NVIDIA_Share_GO8FiL37LH.png"
+                ></p>
+<h2 id="4-3基准程序"><a href="#4-3基准程序" class="headerlink" title="4.3基准程序"></a>4.3基准程序</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_jqZIiZj9bL.png"
+                      alt="NVIDIA_Share_jqZIiZj9bL.png"
+                ></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>03_数据的机器级表示</title>
+    <url>/2023/01/12/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/03_%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/</url>
+    <content><![CDATA[<h1 id="1-信息的二进制编码"><a href="#1-信息的二进制编码" class="headerlink" title="1.信息的二进制编码"></a>1.信息的二进制编码</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_kM0hbupCGD.png"
+                      alt="NVIDIA_Share_kM0hbupCGD.png"
+                ></p>
+<ul>
+<li><strong>编码</strong>：用少量简单的<font color="#ff0000">基本符号</font>对复杂多样的信息进行一定<font color="#ff0000">规律</font>的组合</li>
+<li>$K$位的二进制编码至多表示$2^K$个不同的值</li>
+</ul>
+<h1 id="2-整数的二进制表示"><a href="#2-整数的二进制表示" class="headerlink" title="2.整数的二进制表示"></a>2.整数的二进制表示</h1><p>原码、反码、移码在进行加法运算时都会造成不必要的硬件需求，因此目前计算机中普遍使用补码。<br><font color="#ff0000">补码</font>可以实现不同符号统一的加减运算，即可以用加法实现减法。</p>
+<h2 id="2-1补码表示"><a href="#2-1补码表示" class="headerlink" title="2.1补码表示"></a>2.1补码表示</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Ru7MCmvL93.png"
+                      alt="NVIDIA_Share_Ru7MCmvL93.png"
+                ><br>$K$位补码可以表示$-2^{K-1\sim}2^{k-1}-1$</p>
+<h2 id="2-2补码的真值"><a href="#2-2补码的真值" class="headerlink" title="2.2补码的真值"></a>2.2补码的真值</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_mFleHVLRCl.png"
+                      alt="NVIDIA_Share_mFleHVLRCl.png"
+                ></p>
+<h2 id="2-3不同的整数编码"><a href="#2-3不同的整数编码" class="headerlink" title="2.3不同的整数编码"></a>2.3不同的整数编码</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_ncgsju1w2b.png"
+                      alt="NVIDIA_Share_ncgsju1w2b.png"
+                ></p>
+<h1 id="3-浮点数的二进制表示"><a href="#3-浮点数的二进制表示" class="headerlink" title="3.浮点数的二进制表示"></a>3.浮点数的二进制表示</h1><ul>
+<li><strong>浮点数</strong>：小数点的位置不固定<ul>
+<li>越大的数精度越低，但可表示数的范围比定点数大</li>
+<li>可<font color="#ff0000">表示数的个数不变</font>，k位浮点数可表示的数仍是$2^k$个（类比插旗，🚩总数不变）<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_epSSsbGIzF.png"
+                      alt="NVIDIA_Share_epSSsbGIzF.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-1规格化数"><a href="#3-1规格化数" class="headerlink" title="3.1规格化数"></a>3.1规格化数</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_520rTpHmZE.png"
+                      alt="NVIDIA_Share_520rTpHmZE.png"
+                ></p>
+<ul>
+<li>尾数第一位总是1，因此可以隐藏。多表示一位增加了精度，但可表示的数不会增加。</li>
+<li>尾数为<strong>原码</strong>，指数为<strong>移码</strong></li>
+</ul>
+<h3 id="3-1-1规格化数的范围"><a href="#3-1-1规格化数的范围" class="headerlink" title="3.1.1规格化数的范围"></a>3.1.1规格化数的范围</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_r4zn8tV3XX.png"
+                      alt="NVIDIA_Share_r4zn8tV3XX.png"
+                ></p>
+<h3 id="3-1-2规格化数的变化"><a href="#3-1-2规格化数的变化" class="headerlink" title="3.1.2规格化数的变化"></a>3.1.2规格化数的变化</h3><ul>
+<li>增加阶码（E）位数：扩大表示范围，降低表示精度</li>
+<li>增加尾数（S）位数：提高表示精度，减少表示范围</li>
+<li>采用更大的底（B）：实现更大的范围，提高&#x2F;降低表示精度</li>
+</ul>
+<h2 id="3-2非规格化数"><a href="#3-2非规格化数" class="headerlink" title="3.2非规格化数"></a>3.2非规格化数</h2><ul>
+<li>处理<font color="#ff0000">规格化数下溢</font>的情况</li>
+<li>当结果的阶值太小时，通过右移进行非规格化；每次右移阶值增，直到阶值落在可表示范围内<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_IJKCm8FGWX.png"
+                      alt="NVIDIA_Share_IJKCm8FGWX.png"
+                ></li>
+</ul>
+<h2 id="3-3-IEEE-754标准"><a href="#3-3-IEEE-754标准" class="headerlink" title="3.3 IEEE 754标准"></a>3.3 IEEE 754标准</h2><ul>
+<li>分为32位单精度和32位双精度<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Kx5Jix6JSe.png"
+                      alt="NVIDIA_Share_Kx5Jix6JSe.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_eDmDKAt9CZ.png"
+                      alt="NVIDIA_Share_eDmDKAt9CZ.png"
+                ><br><strong>分类</strong>：</li>
+</ul>
+<ol>
+<li>全0阶码全0尾数：$+0&#x2F;-0$</li>
+<li>全0阶码非0尾数：非规格化数<ul>
+<li>单精度指数为-126，双精度指数为-1022</li>
+<li>隐藏位为0</li>
+</ul>
+</li>
+<li>全1阶码全0尾数：$+\infty&#x2F;-\infty$<ul>
+<li>操作数为$\infty$时运算结果可能为NaN也可能为$\infty$</li>
+</ul>
+</li>
+<li>全1阶码非全0尾数：NaN</li>
+<li>阶码非全0且非全1：规格化数且非0</li>
+</ol>
+<h1 id="4-二进制编码的十进制数表示"><a href="#4-二进制编码的十进制数表示" class="headerlink" title="4.二进制编码的十进制数表示"></a>4.二进制编码的十进制数表示</h1><ul>
+<li>用4位<font color="#ff0000">二进制编码十进制（BCD）</font>表示0，1，…，9。</li>
+<li>**<font color="#ff0000">问题</font>**：4位二进制有16种可能，而0-9只有十个数。运算时如何处理进位问题。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_lEdaUYmBvx.png"
+                      alt="NVIDIA_Share_lEdaUYmBvx.png"
+                ></li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>04_数据校验码</title>
+    <url>/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/04_%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%E7%A0%81/</url>
+    <content><![CDATA[<h1 id="1-差错和纠错"><a href="#1-差错和纠错" class="headerlink" title="1.差错和纠错"></a>1.差错和纠错</h1><h2 id="1-1故障的分类"><a href="#1-1故障的分类" class="headerlink" title="1.1故障的分类"></a>1.1故障的分类</h2><ul>
+<li>硬故障（hard failure）：永久性的物理故障</li>
+<li>软故障（soft error）：随机非破坏性事件</li>
+</ul>
+<h2 id="1-2纠错"><a href="#1-2纠错" class="headerlink" title="1.2纠错"></a>1.2纠错</h2><ul>
+<li>基本思想<ul>
+<li>大多数数据校验方式都基于<strong>冗余校验</strong>，，即除了原数据的信息外还增加额外若干位的编码<strong>校验位</strong></li>
+</ul>
+</li>
+<li>处理过程<ul>
+<li>数据输入：使用函数$f$在$M$位数据$D$上生成$K$位校验码$C$</li>
+<li>数据输出：使用函数$f$在$M$位数据$D^{‘}$上生成新的$K$位代码$C^{‘’}$ ，并与取出的$K$位码        $C^{‘}$进行比较<ul>
+<li>没有检测到差错：使用数据$D^{‘}$</li>
+<li>检测到差错且可以校正：校正数据$D^{‘}$来生成数据$D^{‘’}$ ，并用数据$D^{‘’}$</li>
+<li>检测到差错但无法纠正：报告</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_uii8D9WkPu.png"
+                      alt="NVIDIA_Share_uii8D9WkPu.png"
+                ></p>
+<h1 id="2-奇偶校验码"><a href="#2-奇偶校验码" class="headerlink" title="2.奇偶校验码"></a>2.奇偶校验码</h1><ul>
+<li>基本思想<ul>
+<li>利用了<strong>异或运算</strong>的性质（消除，相同异或为0，不同异或为1）</li>
+<li>增加<strong>1位校验码</strong>来表示数据中1的数量是奇数还是偶数</li>
+<li>偶校验直接对数据按位做异或，奇校验的最后多异或一个1</li>
+</ul>
+</li>
+<li>运算过程<ul>
+<li>在源部件计算出奇（偶）校验位$P$</li>
+<li>在目标部件计算出奇（偶）校验位$P^{‘}$</li>
+<li>计算最终校验位$P^{‘’}&#x3D;P\oplus P^{‘}$，结果为1则<strong>奇数个位置出错</strong>，结果为0则<strong>正确或偶数个位置错</strong><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_fxiRi6Cw8k.png"
+                      alt="NVIDIA_Share_fxiRi6Cw8k.png"
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_xn6Gmjdkm1.png"
+                      alt="NVIDIA_Share_xn6Gmjdkm1.png"
+                ></li>
+</ul>
+</li>
+<li>优点<ul>
+<li>代价低，只要1位额外数据</li>
+<li>计算简单</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>不能发现出错位数为偶数的情形</li>
+<li>无法纠错</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>存储器读写检查或按字节传输过程中的数据校验，因为一字节长的数据中一位出错的概率远大于两位以上出错。</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-海明码"><a href="#3-海明码" class="headerlink" title="3.海明码"></a>3.海明码</h1><ul>
+<li>基本思想<ul>
+<li>将数据<strong>分组</strong>，对每一组都使用奇偶校验码进行检错</li>
+<li><strong>数据位和校验位按某种排列方式</strong>一起存储成$M+K$位的码字</li>
+</ul>
+</li>
+<li>处理过程<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_o6gmrQ5KPD.png"
+                      alt="NVIDIA_Share_o6gmrQ5KPD.png"
+                ></li>
+<li>校验码长度确定<ul>
+<li>假设<font color="#ff0000">最多1位发生错误</font></li>
+<li>可能的差错<ul>
+<li>数据中有1位出现错误：M</li>
+<li>校验码中有1位出现错误：K</li>
+<li>没有出现错误：1</li>
+</ul>
+</li>
+<li>校验码长度$2^K\ge M+K+1$</li>
+</ul>
+</li>
+<li>故障字的规则<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_eOFPqQitcf.png"
+                      alt="NVIDIA_Share_eOFPqQitcf.png"
+                ></li>
+<li>码字排列方式&#x2F;分组方式<ul>
+<li>数据$M&#x3D;M_1 M_2\cdots M_8$，校验位$P_1 P_2 P_3 P_4$</li>
+<li>位设置在与其故障字值相同的位置($P_1 :0001,P_2:0010,P_3:0100$)</li>
+<li>每个数据位至少要参与两组奇偶校验<br><em>紫书排列方式从左往右，PPT排列方式从右往左，但不影响</em><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/capture-2023-01-13-16-03-19.jpg"
+                      alt="capture-2023-01-13-16-03-19.jpg"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_pURvFPwV4D.png"
+                      alt="NVIDIA_Share_pURvFPwV4D.png"
+                ></li>
+</ul>
+</li>
+<li>校验位计算<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/capture-2023-01-13-16-03-32.jpg"
+                      alt="capture-2023-01-13-16-03-32.jpg"
+                ></li>
+</ul>
+<h1 id="4-循环冗余校验"><a href="#4-循环冗余校验" class="headerlink" title="4.循环冗余校验"></a>4.循环冗余校验</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_zGApIY3y1N.png"
+                      alt="NVIDIA_Share_zGApIY3y1N.png"
+                ><br>模2除法-&gt;异或<br>模2除法它既不向上位借位，也不比较除数和被除数的相同位数值的大小，只要以相同位数进行相除即可<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Sk1KerfZvD.png"
+                      alt="NVIDIA_Share_Sk1KerfZvD.png"
+                ><br>在网络通信中，数据的位数较大，通常只用循环冗余校验检查错误直接要求对方重发，不用循环冗余校验码来纠错。</p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>05_整数运算</title>
+    <url>/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/05_%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h1 id="1-算数逻辑单元ALU"><a href="#1-算数逻辑单元ALU" class="headerlink" title="1.算数逻辑单元ALU"></a>1.算数逻辑单元ALU</h1><ul>
+<li>数据由寄存器 (Registers) 提交给ALU，运算结果也存于寄存器</li>
+<li>ALU可能根据运算结果设置一些标志 (Flags)，标志值也保存在处理器内的寄存器中</li>
+<li>控制器 (Control unit) 提供控制ALU操作和数据传入送出ALU的信号<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/17/d62b3b210f64c1ba8ede3f52f74bb9d5_e_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="e_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h2 id="1-1全加器"><a href="#1-1全加器" class="headerlink" title="1.1全加器"></a>1.1全加器</h2><ul>
+<li>延迟</li>
+<li>异或基于与或非实现，因此延迟为3ty<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/17/2c43cf647a4901dbeb932fd7f3d6517d_9_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="9_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h2 id="1-2串行进位加法器"><a href="#1-2串行进位加法器" class="headerlink" title="1.2串行进位加法器"></a>1.2串行进位加法器</h2><ul>
+<li>延迟</li>
+<li>n&#x3D;1、2时，S&#x3D;6</li>
+<li>$n \ge 3$时，可以提前算好 x异或y,2(n-1)+3&#x3D;2n+1<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/17/083a9e4366762cb83b39908d796f4cde_a_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="a_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h2 id="1-3全先行进位加法器"><a href="#1-3全先行进位加法器" class="headerlink" title="1.3全先行进位加法器"></a>1.3全先行进位加法器</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/17/61ca3b99f2174d3a56dadfc5995b253c_b_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="b_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<ul>
+<li>缺点：复杂</li>
+<li>延迟：<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/17/baca26da49c8eecbc6da5ed2f3a68df2_c_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="c_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h2 id="1-4部分先行进位加法器"><a href="#1-4部分先行进位加法器" class="headerlink" title="1.4部分先行进位加法器"></a>1.4部分先行进位加法器</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/17/f6d41b4cf833b2fe9d5c9f1c9bc96fb4_d_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="d_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h1 id="2-补码表示的整数运算"><a href="#2-补码表示的整数运算" class="headerlink" title="2.补码表示的整数运算"></a>2.补码表示的整数运算</h1><h2 id="2-1加法"><a href="#2-1加法" class="headerlink" title="2.1加法"></a>2.1加法</h2><p>溢出判断：</p>
+<ol>
+<li>加数符号相同，且和与两个加数符号不同(符号相反的数相加不会溢出)</li>
+<li>符号位的进位与最高数值位的进位不同<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/0a8c2f291917cc77598377fd719236b8_13_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="13_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ol>
+<h2 id="2-2减法"><a href="#2-2减法" class="headerlink" title="2.2减法"></a>2.2减法</h2><ul>
+<li>硬件实现是在加法器的基础上增加一个多路选择器<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/231a49362aa813a244136247ed839d93_14_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="14_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h2 id="2-3乘法"><a href="#2-3乘法" class="headerlink" title="2.3乘法"></a>2.3乘法</h2><p>布斯乘法：其中右移为<strong>算术右移</strong></p>
+<ul>
+<li>一开始高位补零<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/f27b3229f47f3d0708e70868be93d508_15_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="15_NVIDIA_GeForce_Overlay_DT.png"
+                ><br>例子：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/a18ee1136e0e5c7c58beb45646efa6ec_16_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="16_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h2 id="2-4除法"><a href="#2-4除法" class="headerlink" title="2.4除法"></a>2.4除法</h2><p><strong>不同情形的处理</strong>：</p>
+<ul>
+<li>若被除数为0，除数不为0：商为0</li>
+<li>若被除数不为0，除数为0：发生“除数为0”异常</li>
+<li>若被除数、除数均为0：发生“除法错”异常</li>
+<li>若被除数、除数均不为0：进行进一步除法运算<br><strong>具体实现</strong>：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/4dae944d2d83263875a0565df0b6ece8_18_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="18_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><strong>如何判断“够减”：余数是否足够“大”：</strong></li>
+<li>如果<strong>余数</strong>和<strong>除数</strong>的符号相同： 减法</li>
+<li>如果<strong>余数</strong>和<strong>除数</strong>的符号不同： 加法</li>
+<li>余数变号不够减，不变号够减</li>
+<li><strong>本质</strong>是去削减余数（一开始是被除数）绝对值，并且符号不改变<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/94ceb7def080bb954ea470b40f1cc2d4_19_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="19_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><font color="#ff0000">思考</font>：</li>
+<li>-7 &#x2F; 3 &#x3D; -2 余 -1？（正确）</li>
+<li>-7 &#x2F; 3 &#x3D; -3 余 2？</li>
+</ul>
+<h2 id="2-4-1恢复余数除法"><a href="#2-4-1恢复余数除法" class="headerlink" title="2.4.1恢复余数除法"></a>2.4.1恢复余数除法</h2><p><strong>步骤过程</strong>：</p>
+<ul>
+<li>先左移，再试商</li>
+<li>最后可能要<strong>修正商的符号</strong><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/06bd52e93cf1ddaa84919958c7ca64cf_1a_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="1a_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<p><strong>例子</strong>：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/e2c6d99181db1000760ece6b136c0492_1c_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="1c_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h2 id="2-4-2不恢复余数除法"><a href="#2-4-2不恢复余数除法" class="headerlink" title="2.4.2不恢复余数除法"></a>2.4.2不恢复余数除法</h2><p>掌握运算过程即可<br><strong>大致思路</strong>：</p>
+<ul>
+<li>只考虑减法（同号试商）<ul>
+<li>如果余数$R_i$够大<ul>
+<li>$R_{i+1}&#x3D;2R_{i}-Y$</li>
+<li>左移再减去除数</li>
+</ul>
+</li>
+<li>如果余数$R_i$不够大，即余数不够减变号<ul>
+<li>$R_{i+1}&#x3D;2(R_i + Y) - Y&#x3D;2R_i +Y$ </li>
+<li>即先恢复余数再左移，然后减去除数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>步骤过程：</strong></p>
+<ol>
+<li>通过在前面加n位符号扩展被除数，并存储在余数寄存器和商寄存器中</li>
+<li>如果<strong>除数</strong>和<strong>被除数</strong>符号相同，则做减法；否则，做加法（本质是削减余数绝对值）<ul>
+<li>如果<strong>余数</strong>和<strong>除数</strong>符号相同，则商$Q_n$ &#x3D; 1；</li>
+<li>否则，$Q_n$ &#x3D; 0<br>  注：这一步没有左移</li>
+</ul>
+</li>
+<li>如果<strong>余数</strong>和<strong>除数</strong>符号相同，$R_{i+1}&#x3D;2R_i-Y$；否则，$R_{i+1}&#x3D;2R_i+Y$<ul>
+<li>如果<strong>新的余数</strong>和<strong>除数</strong>符号相同，使商为1；否则，使商为0<br> 注：余数乘2即为左移</li>
+</ul>
+</li>
+<li>重复步骤3 n次<ul>
+<li>此时得到n+1位商</li>
+</ul>
+</li>
+<li><strong>修正商</strong><ul>
+<li>先左移商</li>
+<li>如果此时商是负的 (被除数和除数的符号不同) ，商加1</li>
+</ul>
+</li>
+<li>若<strong>余数</strong>和<strong>被除数</strong>符号不同，<strong>修正余数</strong><ul>
+<li>若<strong>被除数</strong>和<strong>除数</strong>符号相同，最后余数加除数</li>
+<li>否则，最后余数减除数</li>
+</ul>
+</li>
+</ol>
+<p><strong>例子：</strong><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/6331fe8d000d476edde0b7fae928ea66_1d_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="1d_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>06_浮点数运算</title>
+    <url>/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/06_%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<p><strong>回顾：</strong>[[03_数据的机器级表示#3.3 IEEE 754标准]]</p>
+<h1 id="1-浮点加减法"><a href="#1-浮点加减法" class="headerlink" title="1.浮点加减法"></a>1.浮点加减法</h1><h2 id="1-1步骤"><a href="#1-1步骤" class="headerlink" title="1.1步骤"></a>1.1步骤</h2><ol>
+<li><p>检查0</p>
+</li>
+<li><p>对阶</p>
+<ul>
+<li>小阶向大阶对其，阶小的数向右移</li>
+<li>损失低位，但精度更高<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/0c987e12082ee6de80736c513ffcc641_capture-2023-01-18-20-20-11.jpg"
+                      alt="capture-2023-01-18-20-20-11.jpg"
+                ></li>
+</ul>
+</li>
+<li><p>尾数加减</p>
+<ul>
+<li>IEE754使用<strong>定点原码小数</strong>表示尾数 </li>
+<li>两个带符号的原码小数加减</li>
+<li>要<strong>还原隐藏位</strong></li>
+<li><strong>若结果为0，则强行令指数为0</strong></li>
+</ul>
+</li>
+<li><p>尾数规格化</p>
+<ul>
+<li>经过对阶、尾数加减的浮点数不一定是规格化的</li>
+<li>1b.bb…b，右规格化：尾数右移1位，阶码加1</li>
+<li>0.00…01bb…b，左规格化：数值位每次左移1位，阶码减1，直到小数点左边为1或非规格化表示</li>
+</ul>
+</li>
+<li><p>尾数舍入</p>
+</li>
+<li><p>溢出判断</p>
+<ul>
+<li>右规格化和尾数舍入</li>
+<li>左规格化<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/c1055b2fa41c71f8c4a017682a0a10e6_1e_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="1e_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+</li>
+</ol>
+<h2 id="1-2原码加减法"><a href="#1-2原码加减法" class="headerlink" title="1.2原码加减法"></a>1.2原码加减法</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/7bebf3f1fd76575e27d285fc05f5480c_1f_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="1f_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<ul>
+<li>计算时可以假设有一位符号位</li>
+</ul>
+<h2 id="1-3例子"><a href="#1-3例子" class="headerlink" title="1.3例子"></a>1.3例子</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/5e257236cab33f744e75985335cf598d_20_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="20_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/d43aae1eda69aa2c29c9781bcccd10af_21_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="21_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h1 id="2-浮点乘法"><a href="#2-浮点乘法" class="headerlink" title="2.浮点乘法"></a>2.浮点乘法</h1><h2 id="2-1步骤"><a href="#2-1步骤" class="headerlink" title="2.1步骤"></a>2.1步骤</h2><ol>
+<li><p>无论哪个操作数是0，乘积即为0</p>
+</li>
+<li><p>指数相加</p>
+<ul>
+<li>从阶值的和中减去一个偏移量<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/37290d1eb2d045a83517a1df13f0d9aa_capture-2023-01-18-20-40-51.jpg"
+                      alt="capture-2023-01-18-20-40-51.jpg"
+                ></li>
+</ul>
+</li>
+<li><p>尾数相乘</p>
+<ul>
+<li>[[05_整数运算#2.3乘法]]</li>
+</ul>
+</li>
+<li><p>结果的规格化和舍入处理</p>
+<ul>
+<li>结果的规格化和舍入处理</li>
+</ul>
+</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/ff3ac1e1db72a821367eee1d85a8ff32_22_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="22_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h2 id="2-2例子"><a href="#2-2例子" class="headerlink" title="2.2例子"></a>2.2例子</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/f258d64c3ffee347ae6ff84ff187060b_23_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="23_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h1 id="3-浮点除法"><a href="#3-浮点除法" class="headerlink" title="3.浮点除法"></a>3.浮点除法</h1><h2 id="3-1步骤"><a href="#3-1步骤" class="headerlink" title="3.1步骤"></a>3.1步骤</h2><ul>
+<li>如果除数为0，则报告出错， 或将结果设置为无穷大</li>
+<li>如果被除数是0，则结果是0</li>
+<li>被除数的阶值减除数的阶值， 加上偏移量</li>
+<li>有效值相除</li>
+<li>结果规格化和舍入处理<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/7c049f604d847ec2db7998aef7cf2e37_24_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="24_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h2 id="3-2例子"><a href="#3-2例子" class="headerlink" title="3.2例子"></a>3.2例子</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/42166db56d1ab4605f381bbf30dd4d50_25_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="25_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h1 id="4-精度考虑"><a href="#4-精度考虑" class="headerlink" title="4.精度考虑"></a>4.精度考虑</h1><h2 id="4-1保护位"><a href="#4-1保护位" class="headerlink" title="4.1保护位"></a>4.1保护位</h2><ul>
+<li>寄存器的长度几乎总是大于有效值位长与一个隐含位之和</li>
+<li>寄存器包含的这些附加位，称为<strong>保护位</strong></li>
+<li>保护位用0填充，用于扩充有效值的右端</li>
+</ul>
+<h2 id="4-2舍入"><a href="#4-2舍入" class="headerlink" title="4.2舍入"></a>4.2舍入</h2><ul>
+<li>对有效值操作的结果通常保存在更长的寄存器中</li>
+<li>当结果转换回浮点格式时，必须要去掉多余的位<ul>
+<li>就近舍入：结果被舍入成最近的<strong>可表示的数</strong></li>
+<li>朝$+\infty$舍入：结果朝正无穷大方向向上舍入</li>
+<li>朝$-\infty$舍入：结果朝负无穷大方向向下舍入</li>
+<li>朝0舍入：结果朝0舍入</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3例子"><a href="#4-3例子" class="headerlink" title="4.3例子"></a>4.3例子</h2><ol>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/40343bfea0a631b30b6e40f77c5baeaa_26_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="26_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/99949b9d9eb0bbfb59f9abdf572fc48d_27_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="27_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/50223a665b053ef31cfbd1a07b93aead_28_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="28_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/18/6291e5922a3b7ea9adfece51a28a1586_29_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="29_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ol>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>07_二进制编码的十进制数运算</title>
+    <url>/2023/01/13/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/07_%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E7%9A%84%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h1 id="1-加法"><a href="#1-加法" class="headerlink" title="1.加法"></a>1.加法</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/aa14a6ec0dc75fe08c29d86f6be70bd2_38_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="38_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><strong>调整</strong></p>
+<ul>
+<li>超过16（有进位），个位消耗了16，多消耗了6，要补回去</li>
+<li>超过10（无进位），但未消耗16，额外补6来产生进位。个位只消耗了10，产生正确进位。</li>
+</ul>
+<h1 id="2-减法"><a href="#2-减法" class="headerlink" title="2.减法"></a>2.减法</h1><p><strong>反转</strong><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/695cd34174bec02ac6a830af5c254fcd_39_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="39_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/f75e643d4a1a621718a531e95d799f03_3a_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="3a_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>08_内部存储器</title>
+    <url>/2023/01/28/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/08_%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/</url>
+    <content><![CDATA[<ul>
+<li>地址：单元的唯一标识符（采用二进制）</li>
+<li>地址空间：可唯一标识的单元总数</li>
+<li>寻址能力：存储在每个单元中的信息的位数</li>
+</ul>
+<h1 id="1-存储器类型"><a href="#1-存储器类型" class="headerlink" title="1.存储器类型"></a>1.存储器类型</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/64805d816680fb1ccfda32bf8d5c9557_3b_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="3b_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<ul>
+<li>只有ROM使用掩膜写入，其它都是电写入</li>
+<li>只有RAM是易失，其它都是非易失</li>
+</ul>
+<h1 id="2-读写存储器"><a href="#2-读写存储器" class="headerlink" title="2.读写存储器"></a>2.读写存储器</h1><h2 id="2-1-随机存取存储器（RAM）"><a href="#2-1-随机存取存储器（RAM）" class="headerlink" title="2.1 随机存取存储器（RAM）"></a>2.1 随机存取存储器（RAM）</h2><ul>
+<li>Random-Access Memory（RAM）</li>
+<li>特性<ul>
+<li>简单快速地进行读&#x2F;写操作</li>
+<li><strong>易失的</strong>（Volatile）</li>
+</ul>
+</li>
+<li>类型<ul>
+<li>动态RAM（DRAM）：Dynamic RAM</li>
+<li>静态RAM（SRAM）：Static RAM</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-DRAM"><a href="#2-2-DRAM" class="headerlink" title="2.2 DRAM"></a>2.2 DRAM</h2><ol>
+<li>电容充电的方式存储数据</li>
+<li>需要<strong>周期性充电刷新</strong>（电容器会漏电）</li>
+<li>更简单、更小的位元</li>
+<li>密度更高，价格更低</li>
+<li><strong>容量更大，用于主存</strong><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/15f0600b20ae33c4fc121cb8d127205a_3c_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="3c_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ol>
+<h2 id="2-3-SRAM"><a href="#2-3-SRAM" class="headerlink" title="2.3 SRAM"></a>2.3 SRAM</h2><ol>
+<li>传统触发器、逻辑门配置来存储二进制值</li>
+<li>只要有电源，就可以一直维持数据</li>
+<li><strong>速度快</strong></li>
+<li>一般用于<strong>高速缓存</strong><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/25e62935cb43ff1960f5f2ee522c5cf4_3d_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="3d_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ol>
+<h2 id="2-4-更高级的DRAM架构"><a href="#2-4-更高级的DRAM架构" class="headerlink" title="2.4 更高级的DRAM架构"></a>2.4 更高级的DRAM架构</h2><p>传统的DRAM芯片受到其内部架构和与处理器内存总线接口的限制</p>
+<h3 id="2-3-1-同步DRAM-Synchronous-DRAM-SDRAM"><a href="#2-3-1-同步DRAM-Synchronous-DRAM-SDRAM" class="headerlink" title="2.3.1 同步DRAM(Synchronous DRAM, SDRAM)"></a>2.3.1 同步DRAM(Synchronous DRAM, SDRAM)</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/c85ecc262d18b4cb1da9a8de35283b36_3e_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="3e_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/1e60b9ad9348f2ca21021d587ac2fe62_3f_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="3f_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h3 id="2-3-2-双速率SDRAM"><a href="#2-3-2-双速率SDRAM" class="headerlink" title="2.3.2 双速率SDRAM"></a>2.3.2 双速率SDRAM</h3><ul>
+<li><strong>Double-Data-Rate SDRAM，DDR SDRAM&#x2F;DDR</strong></li>
+<li>每个时钟周期发送两次数据，一次在时钟脉冲的上升沿，一次在下降沿</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/22a43cc2e4fa8b8370932cd902e304e9_40_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="40_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h1 id="3-只读存储器"><a href="#3-只读存储器" class="headerlink" title="3.只读存储器"></a>3.只读存储器</h1><h2 id="3-1-只读存储器（ROM）"><a href="#3-1-只读存储器（ROM）" class="headerlink" title="3.1 只读存储器（ROM）"></a>3.1 只读存储器（ROM）</h2><ul>
+<li><strong>Read-only memory（ROM）</strong></li>
+<li>特性<ul>
+<li>非易失</li>
+<li>可读</li>
+<li>不能写入新数据，只能用<strong>掩膜</strong>写入一次</li>
+</ul>
+</li>
+<li>应用<ul>
+<li>微程序设计，库子程序，系统程序，函数表</li>
+</ul>
+</li>
+<li>问题<ul>
+<li>无出错处理机会：如果有一位出错，整批的ROM芯片只能报废</li>
+<li>用户无法写入数据：唯一的数据写入机会在出厂时完成</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-可编程ROM-PROM"><a href="#3-2-可编程ROM-PROM" class="headerlink" title="3.2 可编程ROM(PROM)"></a>3.2 可编程ROM(PROM)</h2><ul>
+<li>Programmable ROM（PROM）</li>
+<li>特性<ul>
+<li>非易失</li>
+<li>只能写入一次<ul>
+<li>写过程是用电信号执行</li>
+<li>特殊设备来完成写或“编程”过程</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>与ROM的对比<ul>
+<li>PROM提供了灵活性和方便性</li>
+<li>ROM在大批量生产领域仍具有吸引力</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-主要进行读操作的存储器"><a href="#4-主要进行读操作的存储器" class="headerlink" title="4.主要进行读操作的存储器"></a>4.主要进行读操作的存储器</h1><ul>
+<li>Read-Mostly Memory（<strong>但这类存储器不叫RMM</strong>）</li>
+<li>特性<ul>
+<li>非易失的</li>
+<li>写操作与读操作相比，<strong>较为困难</strong></li>
+</ul>
+</li>
+<li>应用<ul>
+<li>读操作比写操作频繁得多的场景</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-1-光可擦除-可编程只读存储器（EPROM）"><a href="#4-1-光可擦除-可编程只读存储器（EPROM）" class="headerlink" title="4.1 光可擦除&#x2F;可编程只读存储器（EPROM）"></a>4.1 光可擦除&#x2F;可编程只读存储器（EPROM）</h2><ul>
+<li>Erasable programmable read-only memory（EPROM）<ul>
+<li>事实上并不是read-only</li>
+</ul>
+</li>
+<li>特性<ul>
+<li>光擦除<ul>
+<li>每次擦除需要约20分钟</li>
+<li>只能整块<strong>芯片</strong>擦除</li>
+</ul>
+</li>
+<li>电写入</li>
+</ul>
+</li>
+<li>与PROM对比<ul>
+<li>更贵</li>
+<li>具有可多次改写的优点</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-电可擦除-可编程只读存储器（EEPROM）"><a href="#4-2-电可擦除-可编程只读存储器（EEPROM）" class="headerlink" title="4.2 电可擦除&#x2F;可编程只读存储器（EEPROM）"></a>4.2 电可擦除&#x2F;可编程只读存储器（EEPROM）</h2><ul>
+<li>Electrically erasable programmable read-only memory（EEPROM）</li>
+<li>特性<ul>
+<li>随时写入而不删除之前的内容</li>
+<li>只更新寻址到的一个或多个<strong>字节</strong></li>
+<li>写操作每字节需要几百微秒（写很困难，无法取代内存）、</li>
+</ul>
+</li>
+<li>与EPROM对比<ul>
+<li>EEPROM更贵，且密度低，支持小容量芯片</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3-快闪存储器"><a href="#4-3-快闪存储器" class="headerlink" title="4.3 快闪存储器"></a>4.3 快闪存储器</h2><ul>
+<li>Flash Memory </li>
+<li>特性<ul>
+<li>电可擦除：与EEPROM相同，优于EPROM</li>
+<li>擦除时间为几秒：优于EPROM，不如EEPROM</li>
+<li>块级擦除：优于EPROM，不如 EEPROM</li>
+<li>达到与EPROM相同的密度：优于EEPROM</li>
+</ul>
+</li>
+<li>与EPROM、EEPROM对比<ul>
+<li>价格和功能介于EPROM和EEPROM之间</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-从位元到主存"><a href="#5-从位元到主存" class="headerlink" title="5.从位元到主存"></a>5.从位元到主存</h1><ol>
+<li>位元</li>
+<li>寻址单元</li>
+<li>存储阵列</li>
+<li>芯片</li>
+<li>组织模块</li>
+<li>主存</li>
+</ol>
+<h2 id="5-1-寻址单元"><a href="#5-1-寻址单元" class="headerlink" title="5.1 寻址单元"></a>5.1 寻址单元</h2><ul>
+<li>寻址单元（Addressable unit）：由若干相同地址的位元组成</li>
+<li>寻址模式：<ul>
+<li>字节（Byte）</li>
+<li>字（Word）</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/db6464d530ffc04675de7e5d9af9031b_41_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="41_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h2 id="5-2-存储阵列"><a href="#5-2-存储阵列" class="headerlink" title="5.2 存储阵列"></a>5.2 存储阵列</h2><ul>
+<li>存储阵列（Memory Array）：由大量寻址单元组成<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/bd56d9edf184b428bbc1f8bb78ccb7ac_42_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="42_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+<h3 id="5-2-1-如何寻址"><a href="#5-2-1-如何寻址" class="headerlink" title="5.2.1 如何寻址"></a>5.2.1 如何寻址</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/69240f49f268cff8506d096560a5ded8_43_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="43_NVIDIA_GeForce_Overlay_DT.png"
+                ></p>
+<h3 id="5-2-2-如何刷新"><a href="#5-2-2-如何刷新" class="headerlink" title="5.2.2 如何刷新"></a>5.2.2 如何刷新</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/594f54d93ec2b202b95eeb01887b955b_44_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="44_NVIDIA_GeForce_Overlay_DT.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/332a0402bae3be4d944c64c675c6c9b5_NVIDIA_Share_1102_552.png"
+                      alt="NVIDIA_Share_1102_552.png"
+                ></p>
+<h2 id="5-3-组织模块"><a href="#5-3-组织模块" class="headerlink" title="5.3 组织模块"></a>5.3 组织模块</h2><ul>
+<li>位扩展<ul>
+<li><strong>寻址单元的位数</strong>增加</li>
+<li>地址线不变，<strong>数据线</strong>增加</li>
+<li>使用 8 块 4K*1bit 的芯片组成 4K*8bit 的存储器</li>
+</ul>
+</li>
+<li>字扩展<ul>
+<li><strong>地址线</strong>增加，数据线不变</li>
+<li><strong>寻址单元个数</strong>增加</li>
+<li>地址线的首几位用于选片。两个10位芯片组合，地址线11位，第一位用于选片</li>
+<li>使用 4 个 16K*8bit 的芯片组成 64K*8bit 的存储器</li>
+</ul>
+</li>
+<li>字、位同时扩展：地址线增加，数据线增加<ul>
+<li>使用 8 个 16K*4bit 的芯片组成 64K*8bit 的存储器<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/1853e79359a1742aaf2abfc086b24d59_45_NVIDIA_GeForce_Overlay_DT.png"
+                      alt="45_NVIDIA_GeForce_Overlay_DT.png"
+                ></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>09_高速缓冲存储器（Cache）</title>
+    <url>/2023/01/28/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/09_%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Cache%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="1-Cache的基本思路"><a href="#1-Cache的基本思路" class="headerlink" title="1.Cache的基本思路"></a>1.Cache的基本思路</h1><ul>
+<li>Cache存放主存的“副本”</li>
+<li>解决内存墙<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/75f4ce2335d68f77c1a16c28ea2458a4_49_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="49_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></li>
+</ul>
+<h1 id="2-Cache的工作流程"><a href="#2-Cache的工作流程" class="headerlink" title="2.Cache的工作流程"></a>2.Cache的工作流程</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/27712c3415ed48dfe2a922524c0e1736_4a_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="4a_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+<h2 id="2-1-是否命中判断"><a href="#2-1-是否命中判断" class="headerlink" title="2.1 是否命中判断"></a>2.1 是否命中判断</h2><ul>
+<li>CPU通过<strong>位置</strong>对主存中的内容进行寻址，不关心存储在其中的内容</li>
+<li>Cache通过<strong>标记（tags）</strong> 来标识其内容在主存中的对应<strong>位置</strong></li>
+</ul>
+<h2 id="2-2-平均访问时间"><a href="#2-2-平均访问时间" class="headerlink" title="2.2 平均访问时间"></a>2.2 平均访问时间</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/3ad27bad2d1a52721bca99303e86df26_4b_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="4b_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+<ul>
+<li>hit的情况要远远多于miss的情况</li>
+<li>不考虑数据回传时间</li>
+</ul>
+<h2 id="2-3-cache访存过程"><a href="#2-3-cache访存过程" class="headerlink" title="2.3 cache访存过程"></a>2.3 cache访存过程</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/20a9fed2441f766b430adcb1bb4c90d3_20a9fed2441f766b430adcb1bb4c90d3_capture-2023-01-30-15-23-02.jpeg"
+                      alt="capture-2023-01-30-15-23-02.jpg"
+                ></p>
+<h1 id="3-Cache设计要素"><a href="#3-Cache设计要素" class="headerlink" title="3.Cache设计要素"></a>3.Cache设计要素</h1><h2 id="3-1-容量"><a href="#3-1-容量" class="headerlink" title="3.1 容量"></a>3.1 容量</h2><p>扩大cache容量带来的结果：</p>
+<ul>
+<li>增大了命中率$p$</li>
+<li>增加了cache的开销和访问时间$T_c$</li>
+</ul>
+<h2 id="3-2-映射策略"><a href="#3-2-映射策略" class="headerlink" title="3.2 映射策略"></a>3.2 映射策略</h2><ul>
+<li>cache中的行数据:主存块数据+tag</li>
+<li>tag!&#x3D;address，但可表示地址</li>
+<li>tag是额外信息，tag位数越少，可表示cache行越多</li>
+<li>1块!&#x3D;内存中的1个字</li>
+<li>访存：<strong>主存地址&#x3D;块号+块内地址</strong><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/4f2956541956c64c3a829bde396f99b9_4c_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="4c_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></li>
+</ul>
+<h3 id="3-2-1-直接映射"><a href="#3-2-1-直接映射" class="headerlink" title="3.2.1 直接映射"></a>3.2.1 直接映射</h3><ul>
+<li>直接映射：把主存的每一块直接映射到cache的<strong>固定可用行</strong><ul>
+<li>主存地址被分为三个字段：tag+cache行号+块内地址</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/eac06d1d89d2d24f1d3dadf5a613f8f2_4e_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="4e_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/72d6e220f663fb124bebdde90d1aa5aa_capture-2023-01-30-15-49-44.jpg"
+                      alt="capture-2023-01-30-15-49-44.jpg"
+                ></p>
+<ul>
+<li><p>cache行号 &#x3D; 主存块号 mod cache行数</p>
+<ul>
+<li>假设cache有$2^c$行，主存有$2^m$块。cache行号就是m位主存块号的低c位</li>
+<li>对应关系为<strong>多对一</strong></li>
+</ul>
+</li>
+<li><p>标记tag：地址中的高n位</p>
+<ul>
+<li>$n&#x3D;m-c$</li>
+<li>同一块中的字地址高位都相同</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>简单</li>
+<li>快速映射</li>
+<li>快速检查</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>抖动现象（Thrashing）：如果一个程序重复访问两个需要映射到 同一行中且来自不同块的字，则这两个块不断地被交换到cache中， cache的命中率将会降低</li>
+</ul>
+</li>
+<li><p>适合大容量cache</p>
+</li>
+</ul>
+<h2 id="3-2-2-全关联映射"><a href="#3-2-2-全关联映射" class="headerlink" title="3.2.2 全关联映射"></a>3.2.2 全关联映射</h2><ul>
+<li>关联映射：一个主存块可以装入cache的任意一行<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/f37b5607c9be01a6386016b9919aa730_4f_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="4f_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/abe1750361fd0b516dc4fff6c59a6dc3_4d_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="4d_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+<ul>
+<li>标记tag:地址中最高m位<ul>
+<li>tag为<strong>块号</strong></li>
+<li>每行标记直接记录改行来自哪个块</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>避免抖动</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>复杂</li>
+<li>Cache搜索代价很大，即在检查的时候需要去访问cache的每一行</li>
+</ul>
+</li>
+<li>适合小容量cache</li>
+</ul>
+<h3 id="3-2-3-组关联映射"><a href="#3-2-3-组关联映射" class="headerlink" title="3.2.3 组关联映射"></a>3.2.3 组关联映射</h3><ul>
+<li><p>组关联映射：Cache分为若干组，每一组包含相同数量的行，每个主存块被映射到固定组的任意一行</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/cc116d97518818902f99364e684336a6_51_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="51_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></li>
+</ul>
+</li>
+<li><p>假设s为cache组号，j为主存块号，S为组数，C为cache行数</p>
+<ul>
+<li>s&#x3D; j mod S</li>
+<li>K路组关联映射：K&#x3D;C&#x2F;S</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/4897c15ee4cc8756d49afc7956f21ca1_capture-2023-01-30-16-25-09.jpg"
+                      alt="capture-2023-01-30-16-25-09.jpg"
+                ></p>
+<ul>
+<li>标记tag：地址最高$n&#x3D;los_2 M - log_2 S$位</li>
+</ul>
+<h3 id="3-2-4-三种映射方式比较"><a href="#3-2-4-三种映射方式比较" class="headerlink" title="3.2.4 三种映射方式比较"></a>3.2.4 三种映射方式比较</h3><ul>
+<li>如果 𝐾 &#x3D; 1，组关联映射等同于直接映射</li>
+<li>如果 𝐾 &#x3D; 𝐶，组关联映射等同于关联映射</li>
+</ul>
+<p>关联度：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/98fc4046b9d8719f6b4b2afcb6a83033_52_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="52_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+<h2 id="3-3-替换算法"><a href="#3-3-替换算法" class="headerlink" title="3.3 替换算法"></a>3.3 替换算法</h2><ul>
+<li>一旦cache行被占用，当新的数据块装入cache中时，原先存放的数据块将会被替换掉</li>
+<li>对于直接映射，每个数据块都只有唯一对应的行可以放置，没有选择的机会</li>
+<li>替换算法通过硬件来实现</li>
+</ul>
+<h3 id="3-3-1-最近最少使用算法（LRU）"><a href="#3-3-1-最近最少使用算法（LRU）" class="headerlink" title="3.3.1 最近最少使用算法（LRU）"></a>3.3.1 最近最少使用算法（LRU）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/0cddf04115a1bb5dd3f4c655bbdfb6da_53_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="53_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+<h3 id="3-3-2-先进先出算法（FIFO）"><a href="#3-3-2-先进先出算法（FIFO）" class="headerlink" title="3.3.2 先进先出算法（FIFO）"></a>3.3.2 先进先出算法（FIFO）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/bb4508c0ae6564c231471c67bfb15a7b_54_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="54_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+<h3 id="3-3-3-最不经常使用算法（LFU）"><a href="#3-3-3-最不经常使用算法（LFU）" class="headerlink" title="3.3.3 最不经常使用算法（LFU）"></a>3.3.3 最不经常使用算法（LFU）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/f3b3c6fac508b93fc1aef7e0d5d7b275_55_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="55_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+<h3 id="3-3-4-随机替换算法（Random）"><a href="#3-3-4-随机替换算法（Random）" class="headerlink" title="3.3.4 随机替换算法（Random）"></a>3.3.4 随机替换算法（Random）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/7a57b1333112050c402d89ad689bc113_56_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="56_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+<h2 id="3-4-写策略"><a href="#3-4-写策略" class="headerlink" title="3.4 写策略"></a>3.4 写策略</h2><ul>
+<li>主存和cache的一致性<ul>
+<li>当cache中的某个数据块<strong>被替换时</strong>，需要考虑该数据块是否被修改</li>
+<li>如果没被修改，则该数据块可以直接被替换掉</li>
+<li>如果<strong>被修改</strong>，则在替换掉该数据块之前，必须将修改后的数据块写回到主存中对应位置</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-1-写回法（write-back）"><a href="#3-4-1-写回法（write-back）" class="headerlink" title="3.4.1 写回法（write back）"></a>3.4.1 写回法（write back）</h3><ul>
+<li>利用<font color="#ff0000">脏位(dirty bit)</font>标记块是否被修改</li>
+<li>优点<ul>
+<li>减少了访问主存的次数</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>部分主存数据可能不是最新的<ul>
+<li>I&#x2F;O模块存取时可能无法获得最新的数据，为解决该问题会使得电路设计更加复杂且有可能带来性能瓶颈</li>
+</ul>
+</li>
+<li>多CPU时存在一致性问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-2-写直达（write-through）"><a href="#3-4-2-写直达（write-through）" class="headerlink" title="3.4.2 写直达（write through）"></a>3.4.2 写直达（write through）</h3><ul>
+<li>所有写操作都同时对cache和主存进行</li>
+<li>优点<ul>
+<li>确保主存中的数据总是和cache中的数据一致，总是最新的</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>产生大量的主存访问，减慢写操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-5-行大小"><a href="#3-5-行大小" class="headerlink" title="3.5 行大小"></a>3.5 行大小</h2><p>行大小与cache命中率关系较复杂<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/103bb6b93c409bc87b3e8dc24b052e82_57_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="57_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+<h2 id="3-6-Cache数目"><a href="#3-6-Cache数目" class="headerlink" title="3.6 Cache数目"></a>3.6 Cache数目</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/981cc93bdd84acadcb0ed4bd730b0436_58_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="58_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/09af25ea8612f5e082133b10c6320199_59_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png"
+                      alt="59_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"
+                ></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>10_外部存储器</title>
+    <url>/2023/01/30/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/10_%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/</url>
+    <content><![CDATA[<p>特性</p>
+<ul>
+<li>用于存储不经常使用的、数据量较大的信息</li>
+<li>非易失</li>
+</ul>
+<h1 id="1-硬磁盘存储器"><a href="#1-硬磁盘存储器" class="headerlink" title="1. 硬磁盘存储器"></a>1. 硬磁盘存储器</h1><ul>
+<li>磁盘是由<strong>涂有可磁化材料</strong>的<strong>非磁性材料（基材）</strong> 构成的圆形盘片<ul>
+<li>玻璃基材优势：<ul>
+<li>改善磁膜表面的均匀性，提高磁盘的可靠性</li>
+<li>显著减少整体表面瑕疵，以帮助减少读写错误</li>
+<li>能够支持（磁头）较低的飞行高度</li>
+<li>更高的硬度，使磁盘转动时更加稳定</li>
+<li>更强的抗冲击和抗损伤能力</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-1-磁盘结构"><a href="#1-1-磁盘结构" class="headerlink" title="1.1. 磁盘结构"></a>1.1. 磁盘结构</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b361e14a8763c60f535f3b8eb2d40619_68_VoIPSCreencastCoverWnd.png"
+                      alt="68_VoIPSCreencastCoverWnd.png"
+                ></p>
+<ul>
+<li><p>每个<strong>盘片</strong>（双面）表面都有一个<strong>磁头</strong>，同时移动</p>
+</li>
+<li><p>所有磁头都位于离中心等距离轨道上</p>
+</li>
+<li><p>磁头：</p>
+<ul>
+<li>对盘片进行读写的装置</li>
+<li>必须产生或感应足够大的电磁场，以便正确地读写</li>
+<li>磁头越窄，离盘片的距离就越近</li>
+<li>更高的数据密度需要更窄的磁头和更窄的磁道，这将导致更高的出错风险</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-读写机制"><a href="#1-2-读写机制" class="headerlink" title="1.2. 读写机制"></a>1.2. 读写机制</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/abe3863939a32d0705ed63d203426a0a_69_VoIPSCreencastCoverWnd.png"
+                      alt="69_VoIPSCreencastCoverWnd.png"
+                ></p>
+<ul>
+<li>读写期间，磁头静止，盘片旋转</li>
+<li>磁头不工作时在最外面</li>
+<li>磁头数量<ul>
+<li>单磁头：读写公用同一个磁头（软盘、早期硬盘）</li>
+<li>双磁头：使用一个单独的磁头进行读取（当代硬盘）</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-1-写入机制"><a href="#1-2-1-写入机制" class="headerlink" title="1.2.1. 写入机制"></a>1.2.1. 写入机制</h3><p>上图绿色</p>
+<ul>
+<li>电流脉冲被发送到写入磁头</li>
+<li>变化的电流激发出磁场</li>
+<li>产生的磁性图案被记录在下面的盘片表面上</li>
+<li>反转电流方向，则记录介质上的磁化方向也会反转</li>
+</ul>
+<h3 id="1-2-2-读取机制"><a href="#1-2-2-读取机制" class="headerlink" title="1.2.2. 读取机制"></a>1.2.2. 读取机制</h3><p>上图红色</p>
+<ul>
+<li>读取磁头是由一个部分屏蔽的<strong>磁阻（MR）敏感器组成</strong>，其电阻取决于在其下移动的介质的磁化方向</li>
+<li>电流通过MR敏感器时，通过<strong>电压信号</strong>检测其电阻变化</li>
+<li>MR敏感器允许更高频率的操作，实现更高的存储密度和更快的操作速度</li>
+</ul>
+<h2 id="1-3-数据组织"><a href="#1-3-数据组织" class="headerlink" title="1.3.  数据组织"></a>1.3.  数据组织</h2><ul>
+<li><strong>磁道（track）:</strong> 盘片上的数据组织呈现为一组同心圆环</li>
+<li><strong>扇区（sector）:</strong> 数据以扇区（sector）的形式传输到磁盘或从传出磁盘<ul>
+<li><strong>默认大小512B</strong></li>
+<li>每个扇区大小相同</li>
+</ul>
+</li>
+<li><strong>间隙（gap）:</strong> 相邻磁道之间有间隙（gap），相邻的扇区之间也留有间隙<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3cf48711e3c8ff2c54cba02d10827906_6a_VoIPSCreencastCoverWnd.png"
+                      alt="6a_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+<h3 id="1-3-1-扇区划分"><a href="#1-3-1-扇区划分" class="headerlink" title="1.3.1. 扇区划分"></a>1.3.1. 扇区划分</h3><ul>
+<li>恒定角速度<ul>
+<li>读写速度恒定，转过每个扇区时间一样。增大记录在盘片区域上的信息位的间 隔，使得磁盘能够以恒定的速度扫描信息</li>
+<li>优点：能以磁道号和扇区号直接寻址 各个数据块、</li>
+<li>缺点：磁盘存储容量受到了<strong>最内层</strong>磁道所能实现的最大记录密度的限制<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/26/1bbeccaa84633cc12e62d23ad3ccd672_1bbeccaa84633cc12e62d23ad3ccd672_6b_VoIPSCreencastCoverWnd.png"
+                      alt="6b_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+<li>多带式记录<ul>
+<li>分成多个带，里中心越远的带扇区越多</li>
+<li>读写速度恒定的代价：不同带的转速不同</li>
+<li>优点：提升存储容量</li>
+<li>缺点：需要更复杂的电路<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b761a7f6308f9bfac36b52eb0209f81b_6c_VoIPSCreencastCoverWnd.png"
+                      alt="6c_VoIPSCreencastCoverWnd.png"
+                ></li>
+<li>其中每个圈为一组磁道<ul>
+<li>例子：$r_1:0,1,2$ 8个扇区 $r_2:3,4,5$ 9个扇区</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4-格式化"><a href="#1-4-格式化" class="headerlink" title="1.4. 格式化"></a>1.4. 格式化</h2><ul>
+<li>磁道必须有一些起始点和辨别每个扇区起点及终点的方法</li>
+<li>格式化时，会附有一些仅被磁盘驱动器使用而不被用户存取的额外数据<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/4fffcd557ca29b44513a77feab1f2226_6d_VoIPSCreencastCoverWnd.png"
+                      alt="6d_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+<h2 id="1-5-I-O访问时间"><a href="#1-5-I-O访问时间" class="headerlink" title="1.5. I&#x2F;O访问时间"></a>1.5. I&#x2F;O访问时间</h2><ul>
+<li><p><strong>寻道时间（seek time）</strong>：磁头定位到磁道所花时间</p>
+<ul>
+<li><strong>初始化时间</strong>，跨越若干磁道所用时间</li>
+</ul>
+</li>
+<li><p><strong>旋转延迟（rotational delay）:</strong> 等待响应扇区的其实位置到达磁头的时间</p>
+<ul>
+<li>通常时<strong>磁道旋转半圈</strong>的时间</li>
+</ul>
+</li>
+<li><p><strong>传送时间（transfer time）:</strong> 数据传输时间<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3ca95dd57710a6659d48612d2beb60bd_6e_VoIPSCreencastCoverWnd.png"
+                      alt="6e_VoIPSCreencastCoverWnd.png"
+                ></p>
+</li>
+<li><p><strong>平均访问时间</strong>：</p>
+<ul>
+<li>其中$T_s$为平均寻道时间<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/47b02f2b72538d533d4986e42a790d32_47b02f2b72538d533d4986e42a790d32_6f_VoIPSCreencastCoverWnd.png"
+                      alt="6f_VoIPSCreencastCoverWnd.png"
+                ></li>
+<li>当<strong>连续访问多个相邻的磁道</strong>时，跨越磁道：<ul>
+<li>对于每个磁道都需要考虑旋转延迟</li>
+<li>通常只需要考虑第一个磁道的寻道时间，但在明确知道跨越每个磁道需要的时间时需要考虑</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>顺序读取和随机读取</p>
+<ul>
+<li>随机读取每次都需要寻道，因此比顺序读取慢得多</li>
+<li>磁盘整理可以一定程度上缓解</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-6-磁头寻道-磁盘调度"><a href="#1-6-磁头寻道-磁盘调度" class="headerlink" title="1.6. 磁头寻道&#x2F;磁盘调度"></a>1.6. 磁头寻道&#x2F;磁盘调度</h2><ul>
+<li><strong>目标：</strong> 当有多个访问磁盘任务时，使得<strong>平均寻道时间最小</strong></li>
+<li>常见算法</li>
+</ul>
+<h3 id="1-6-1-先来先服务（FCFS）"><a href="#1-6-1-先来先服务（FCFS）" class="headerlink" title="1.6.1. 先来先服务（FCFS）"></a>1.6.1. 先来先服务（FCFS）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/85444d477fe5b1a94b5eadd2e0142107_70_VoIPSCreencastCoverWnd.png"
+                      alt="70_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h3 id="1-6-2-最短寻道时间优先（SSTF）"><a href="#1-6-2-最短寻道时间优先（SSTF）" class="headerlink" title="1.6.2. 最短寻道时间优先（SSTF）"></a>1.6.2. 最短寻道时间优先（SSTF）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/304b388ba8be80e4f73319ecc78ab288_71_VoIPSCreencastCoverWnd.png"
+                      alt="71_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h3 id="1-6-3-扫描-电梯（SCAN）"><a href="#1-6-3-扫描-电梯（SCAN）" class="headerlink" title="1.6.3. 扫描&#x2F;电梯（SCAN）"></a>1.6.3. 扫描&#x2F;电梯（SCAN）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/118fe4711116becaa87b0e49f111f2f9_72_VoIPSCreencastCoverWnd.png"
+                      alt="72_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h3 id="1-6-4-循环扫描（C-SCAN）"><a href="#1-6-4-循环扫描（C-SCAN）" class="headerlink" title="1.6.4. 循环扫描（C-SCAN）"></a>1.6.4. 循环扫描（C-SCAN）</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/11598b06df10bd304745a30c205e4d4f_73_VoIPSCreencastCoverWnd.png"
+                      alt="73_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h3 id="1-6-5-LOOK"><a href="#1-6-5-LOOK" class="headerlink" title="1.6.5. LOOK"></a>1.6.5. LOOK</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/5d22fa9bd87f3ba26df28cd7cce7a52b_74_VoIPSCreencastCoverWnd.png"
+                      alt="74_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h3 id="1-6-6-C-LOOK"><a href="#1-6-6-C-LOOK" class="headerlink" title="1.6.6. C-LOOK"></a>1.6.6. C-LOOK</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/ad5af7f0a16b3af62fb8696e42ef6807_75_VoIPSCreencastCoverWnd.png"
+                      alt="75_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h1 id="2-光存储器"><a href="#2-光存储器" class="headerlink" title="2. 光存储器"></a>2. 光存储器</h1><h2 id="2-1-CD和CD-ROM"><a href="#2-1-CD和CD-ROM" class="headerlink" title="2.1. CD和CD-ROM"></a>2.1. CD和CD-ROM</h2><ul>
+<li>CD和CD-ROM采用类似的技术，但<strong>CD-ROM更加耐用且有纠错功能</strong></li>
+<li>制造方法<ul>
+<li>用精密聚焦的高强度激光束制造一个<strong>母盘</strong></li>
+<li>以母盘作为模板压印出聚碳酸酯的复制品</li>
+<li>在凹坑表面上镀上一层高反射材料</li>
+<li>使用丙烯酸树脂保护高反射材料</li>
+<li>在丙烯酸树脂层上用丝网印刷术印制标签<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b347e2608d763c1694f53b63fe73dfb3_76_VoIPSCreencastCoverWnd.png"
+                      alt="76_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-读取"><a href="#2-2-读取" class="headerlink" title="2.2. 读取"></a>2.2. 读取</h2><ul>
+<li><p>通过安装在光盘播放器或驱动装置内的低强度激光束从CD或CD-ROM处读取信息</p>
+<ul>
+<li>激光束照在<strong>凹坑（pit）</strong> 上，由于凹坑表面有些不平，因此 光被散射，反射回<strong>低强度</strong>的激光</li>
+<li>激光束照在<strong>台（land）</strong> 上，台的表面光滑平坦，反射回来 的是<strong>高强度</strong>的激光</li>
+</ul>
+</li>
+<li><p>盘片上包含<strong>一条单螺旋</strong>的轨道，轨道上的所有扇区长度相同</p>
+<ul>
+<li>盘片以<strong>变速旋转</strong></li>
+<li>凹坑被激光以<strong>恒定线速度</strong>读出</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f330d060f9a4f72cb6e2130c30da1555_77_VoIPSCreencastCoverWnd.png"
+                      alt="77_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+<li><p>CD-R</p>
+<ul>
+<li>高强度激光可修改</li>
+<li>只能修改一次</li>
+</ul>
+</li>
+<li><p>CD-RW</p>
+<ul>
+<li>使用两种反射率显著不同的材料</li>
+<li>可以修改多次</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-数字多功能光盘（DVD）"><a href="#2-3-数字多功能光盘（DVD）" class="headerlink" title="2.3. 数字多功能光盘（DVD）"></a>2.3. 数字多功能光盘（DVD）</h2><ul>
+<li>DVD vs CD<ul>
+<li>DVD 上的位组装更紧密：光道间隙，凹坑间距（容量达到4.7GB）</li>
+<li>DVD 采用双层结构：设有半反射层，可以通过调整焦距读取每一 层（容量达到8.5GB）</li>
+<li>DVD-ROM 可以用两面记录数据（容量达到17GB）</li>
+</ul>
+</li>
+<li>DVD-R和DVD-RW</li>
+</ul>
+<h2 id="2-4-高清晰光盘"><a href="#2-4-高清晰光盘" class="headerlink" title="2.4. 高清晰光盘"></a>2.4. 高清晰光盘</h2><p>通过使用更短波长的激光（在蓝-紫光范围），可以实现<strong>更高的位密度</strong>（数据凹坑相对更小）<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f0993670675b245e097d424221b7de0d_78_VoIPSCreencastCoverWnd.png"
+                      alt="78_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h2 id="2-5-磁带"><a href="#2-5-磁带" class="headerlink" title="2.5. 磁带"></a>2.5. 磁带</h2><ul>
+<li>与磁盘类似的记录和读取技术</li>
+<li>记录<ul>
+<li>介质是柔韧的聚酯薄膜带，外涂磁性材料</li>
+</ul>
+</li>
+<li>读取<ul>
+<li>磁带：顺序读取（sequential-access）</li>
+<li>磁盘：直接读取（direct-access）</li>
+</ul>
+</li>
+<li>记录<ul>
+<li>磁带：串行记录（蛇形记录）</li>
+<li>磁盘：并行记录</li>
+</ul>
+</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/cbdc83c8b51a717766c9e33c2661456d_cbdc83c8b51a717766c9e33c2661456d_79_VoIPSCreencastCoverWnd.png"
+                      alt="79_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+<h1 id="3-U盘和固态硬盘"><a href="#3-U盘和固态硬盘" class="headerlink" title="3. U盘和固态硬盘"></a>3. U盘和固态硬盘</h1><p>[[08_内部存储器#4.3 快闪存储器]]</p>
+<ul>
+<li>U盘<ul>
+<li>采用了快闪存储器，属于非易失性半导体存储器</li>
+<li>相比于软盘和光盘：体积小，容量大，携带方便，寿命长达数年</li>
+</ul>
+</li>
+<li>固态硬盘<ul>
+<li>与U盘没有本质区别：容量更大，存储性能更好</li>
+<li>与硬磁盘存储器相比：抗振性好，无噪声，能耗低，发热量低</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>11_冗余磁盘阵列(RAID)</title>
+    <url>/2023/02/03/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/11_%E5%86%97%E4%BD%99%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97(RAID)/</url>
+    <content><![CDATA[<ul>
+<li>冗余磁盘阵列 &#x2F; 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
+<li>基本思想<ul>
+<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
+<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
+<li>采用<strong>数据冗余</strong>来进行错误恢复以提高系统可靠性</li>
+</ul>
+</li>
+<li>特性<ul>
+<li>由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器</li>
+<li>数据是分布在多个物理磁盘上</li>
+<li>冗余磁盘容量用于存储校验信息，保证磁盘万一损坏时能恢复数据</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-RAID分类"><a href="#1-RAID分类" class="headerlink" title="1.RAID分类"></a>1.RAID分类</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="68_VoIPSCreencastCoverWnd (2).png"
+                ></p>
+<h1 id="2-RAID-0"><a href="#2-RAID-0" class="headerlink" title="2.RAID 0"></a>2.RAID 0</h1><ul>
+<li>数据以<strong>条带</strong>的形式在可用的磁盘上分布<ul>
+<li>Eg：按照0、1、2、3顺序</li>
+</ul>
+</li>
+<li>不采用冗余来改善性能（不是RAID家族中的真正成员）</li>
+</ul>
+<h2 id="2-1-优点"><a href="#2-1-优点" class="headerlink" title="2.1 优点"></a>2.1 优点</h2><ul>
+<li>高数据传输率</li>
+<li>高速响应I&#x2F;O请求：两个I&#x2F;O请求所需要的数据块可能在不同的磁盘</li>
+</ul>
+<h2 id="2-2-缺点"><a href="#2-2-缺点" class="headerlink" title="2.2 缺点"></a>2.2 缺点</h2><ul>
+<li>任何一个盘损坏文件就不可用</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="69_VoIPSCreencastCoverWnd (2).png"
+                ></p>
+<h1 id="3-RAID-1"><a href="#3-RAID-1" class="headerlink" title="3.RAID 1"></a>3.RAID 1</h1><ul>
+<li>采用了数据<strong>条带</strong></li>
+<li>采用简单地<strong>备份所有数据</strong>的方法来实现冗余</li>
+</ul>
+<h2 id="3-1-优点"><a href="#3-1-优点" class="headerlink" title="3.1 优点"></a>3.1 优点</h2><ul>
+<li>高速响应I&#x2F;O请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应<ul>
+<li><strong>读请求</strong>可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个，<strong>更快</strong></li>
+<li><strong>写请求</strong>需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘，<strong>更慢</strong></li>
+</ul>
+</li>
+<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单</li>
+</ul>
+<h2 id="3-2-缺点"><a href="#3-2-缺点" class="headerlink" title="3.2 缺点"></a>3.2 缺点</h2><ul>
+<li>价格昂贵</li>
+</ul>
+<h2 id="3-3-用途"><a href="#3-3-用途" class="headerlink" title="3.3 用途"></a>3.3 用途</h2><ul>
+<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
+</ul>
+<h2 id="3-4-与RAID-0相比"><a href="#3-4-与RAID-0相比" class="headerlink" title="3.4 与RAID 0相比"></a>3.4 与RAID 0相比</h2><ul>
+<li>如果有大批的读请求，则RAID 1能实现高速的I&#x2F;O速率，性能可以达到RAID 0的两倍</li>
+<li>如果I&#x2F;O请求有相当大的部分是写请求，则它不比RAID 0的性能好多少<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="6a_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+<h2 id="3-5RAID-01-vs-RAID-10"><a href="#3-5RAID-01-vs-RAID-10" class="headerlink" title="3.5RAID 01 vs. RAID 10"></a>3.5RAID 01 vs. RAID 10</h2><ul>
+<li>RAID 01 &#x3D; RAID 0+1：先做RAID 0，再做RAID 1</li>
+<li>RAID 10 &#x3D; RAID 1+0：先做RAID 1，再做RAID 0</li>
+<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的<strong>容错能力</strong><ul>
+<li>RAID 10容错率更高</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="6b_VoIPSCreencastCoverWnd (2).png"
+                ></p>
+<h1 id="4-RAID-2"><a href="#4-RAID-2" class="headerlink" title="4.RAID 2"></a>4.RAID 2</h1><ul>
+<li>采用并行存取技术<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/83dee816dc8e78b2e3bcb2354c8497d6_6c_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="6c_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+<h2 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h2><ul>
+<li><strong>所有</strong>磁盘都参与<strong>每</strong>个I&#x2F;O请求的执行</li>
+</ul>
+<h2 id="4-2-特点"><a href="#4-2-特点" class="headerlink" title="4.2 特点"></a>4.2 特点</h2><ul>
+<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
+<li>采用<strong>数据条带</strong>：<strong>条带非常小</strong>，经常只有一个字节或一个字</li>
+</ul>
+<h2 id="4-3-纠错"><a href="#4-3-纠错" class="headerlink" title="4.3 纠错"></a>4.3 纠错</h2><p>对位于同一条带的各个数据盘上的数据位<strong>计算校验码（通常采用海明码）</strong>，校验码存储在该条带中多个校验盘的对应位置</p>
+<h2 id="4-4-访问"><a href="#4-4-访问" class="headerlink" title="4.4 访问"></a>4.4 访问</h2><ul>
+<li>读取：获取请求的数据和对应的校验码</li>
+<li>写入：所有数据盘和校验盘都被访问</li>
+</ul>
+<h2 id="4-5-缺点"><a href="#4-5-缺点" class="headerlink" title="4.5 缺点"></a>4.5 缺点</h2><ul>
+<li>冗余盘依然比较多，价格较贵</li>
+<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高 可靠性的情况没有意义</li>
+</ul>
+<h1 id="5-RAID-3"><a href="#5-RAID-3" class="headerlink" title="5.RAID 3"></a>5.RAID 3</h1><ul>
+<li>采用并行存取技术<ul>
+<li>各个驱动器的轴同步旋转</li>
+<li>采用<strong>非常小</strong>的数据条带</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-1-校验"><a href="#5-1-校验" class="headerlink" title="5.1 校验"></a>5.1 校验</h2><ul>
+<li>对所有数据盘上<strong>同一位置</strong>的数据计算奇偶校验码<ul>
+<li>当某一磁盘损坏时，可以用于重构数据<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f7562ab00bdaf086770ab9ba01f78f12_6d_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="6d_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-优缺点"><a href="#5-2-优缺点" class="headerlink" title="5.2 优缺点"></a>5.2 优缺点</h2><ul>
+<li>优点：能够获得非常高的数据传输率<ul>
+<li>对于大量传送，性能改善特别明显</li>
+</ul>
+</li>
+<li>缺点：一次只能执行一个I&#x2F;O请求<ul>
+<li>在面向多个IO请求时，性能将受损</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-RAID-4"><a href="#6-RAID-4" class="headerlink" title="6.RAID 4"></a>6.RAID 4</h1><ul>
+<li>采用独立存取技术<ul>
+<li>读可以独立，写无法独立</li>
+<li>每个磁盘成员的操作是独立的，各个I&#x2F;O请求能够并行处理</li>
+<li>采用相对<strong>较大的数据条带</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-1-校验"><a href="#6-1-校验" class="headerlink" title="6.1 校验"></a>6.1 校验</h2><p>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在<strong>奇偶校验盘</strong>的对应条带上<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/521fcea4b354b9de72e3a4c5ffe926bd_6e_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="6e_VoIPSCreencastCoverWnd (2).png"
+                ></p>
+<ul>
+<li>优化修改数据时<strong>重新计算校验码</strong>的读写次数<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/39de9d867ee7099a563e4d67ea0e97d2_capture-2023-02-06-11-06-09.jpg"
+                      alt="capture-2023-02-06-11-06-09.jpg"
+                ></li>
+</ul>
+<h2 id="6-2-性能"><a href="#6-2-性能" class="headerlink" title="6.2 性能"></a>6.2 性能</h2><ul>
+<li>当执行<strong>较小规模</strong>的I&#x2F;O写请求时，RAID 4会遭遇<strong>写损失</strong><ul>
+<li>对于每一次写操作，阵列管理软件不仅要修改用户数据， 而且要修改相应的校验位</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/13b04dadc923526ad38ea677a3fd5656_6f_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="6f_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+</li>
+<li>当涉及所有磁盘的数据条带的较大I&#x2F;O写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
+<li>每一次写操作必须涉及到<strong>唯一的校验盘</strong>，校验盘会成为瓶颈</li>
+</ul>
+<h1 id="7-RAID-5"><a href="#7-RAID-5" class="headerlink" title="7.RAID 5"></a>7.RAID 5</h1><ul>
+<li>与RAID 4 组织方式相似</li>
+<li>在所有磁盘上都分布了奇偶校验条带<ul>
+<li>避免潜在的I&#x2F;O瓶颈问题</li>
+</ul>
+</li>
+<li>访问时的“两读两写”<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/c4f46bafa944914cebc6c8989ebaf21f_70_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="70_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+<h2 id="7-1-RAID-50"><a href="#7-1-RAID-50" class="headerlink" title="7.1 RAID 50"></a>7.1 RAID 50</h2><ul>
+<li>先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问</li>
+<li>RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效</li>
+<li>RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低</li>
+</ul>
+<h1 id="8-RAID-6"><a href="#8-RAID-6" class="headerlink" title="8.RAID 6"></a>8.RAID 6</h1><ul>
+<li>采用<strong>两种不同的校验码</strong>，并将校验码以分开的块存于不同的磁盘中</li>
+<li>优点<ul>
+<li>提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>写损失:每次写影响到两个校验块<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="71_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h1 id="9-RAID比较"><a href="#9-RAID比较" class="headerlink" title="9.RAID比较"></a>9.RAID比较</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2d0b20945c49a12772798b2459b890bb_72_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="72_VoIPSCreencastCoverWnd (2).png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/927619b8756054d87fa147a66555f92d_73_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="73_VoIPSCreencastCoverWnd (2).png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="74_VoIPSCreencastCoverWnd (2).png"
+                ></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>12_虚拟存储器</title>
+    <url>/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h1 id="2-存取器管理"><a href="#2-存取器管理" class="headerlink" title="2.存取器管理"></a>2.存取器管理</h1><p>在多道程序系统中，主存需要进一步划分给<strong>多个任务</strong>，划分的任务由操作系统动态执行。</p>
+<h2 id="2-1-如何将更多任务装进主存"><a href="#2-1-如何将更多任务装进主存" class="headerlink" title="2.1 如何将更多任务装进主存"></a>2.1 如何将更多任务装进主存</h2><ul>
+<li>增大主存容量</li>
+<li>使用交换（exchange）技术<ul>
+<li>当主存中没有处于就绪的任务时，操作系统调入其他任务来执行</li>
+<li>分区（partitioning）和分页（paging）</li>
+</ul>
+</li>
+<li>虚拟存储器<ul>
+<li><strong>请求分页</strong>：每次访问仅将当前需要的页面调入主存，而其他不活跃的页面放在外存磁盘</li>
+<li>虚拟地址</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-分区方式"><a href="#2-2-分区方式" class="headerlink" title="2.2 分区方式"></a>2.2 分区方式</h2><ul>
+<li>主存划分<ul>
+<li>系统区：固定的地址范围内，存放操作系统</li>
+<li>用户区：存放所有用户程序</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-1-简单固定分区"><a href="#2-2-1-简单固定分区" class="headerlink" title="2.2.1 简单固定分区"></a>2.2.1 简单固定分区</h3><ul>
+<li>基本思想：<ul>
+<li>用户区划分成<strong>长度不等的固定长</strong>的分区</li>
+<li>当一个任务调入主存时，分配一个<strong>可用</strong>的、 能容纳它的、<strong>最小</strong>的分区</li>
+</ul>
+</li>
+<li>优点：简单</li>
+<li>缺点：浪费空间，产生“<strong>内碎片</strong>”</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/17583f0623a3d0b59911835f22715509_5c_NVIDIA_GeForce_Overlay_DT.png" alt="5c_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ul>
+<h3 id="2-2-2-可变长分区"><a href="#2-2-2-可变长分区" class="headerlink" title="2.2.2 可变长分区"></a>2.2.2 可变长分区</h3><ul>
+<li>基本思想<ul>
+<li>用户区按每个任务所需要的内存大小进行分配</li>
+</ul>
+</li>
+<li>优点：提高了主存的利用率</li>
+<li>缺点：时间越长，存储器中的<strong>碎片</strong>就会越多<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/0619006da4805046e4a5bd63e162b6c6_5d_NVIDIA_GeForce_Overlay_DT.png" alt="5d_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ul>
+<h2 id="2-3-分页方式"><a href="#2-3-分页方式" class="headerlink" title="2.3 分页方式"></a>2.3 分页方式</h2><ul>
+<li>基本思想<ul>
+<li>把<strong>主存</strong>分成固定长且比较小的存储块，称为<strong>页框（page frame）</strong>，每个任务也被划分成固定长的<strong>程序块</strong>，称为<strong>页（page）</strong></li>
+<li>将页装入页框中，且<strong>无需采用连续的页框来存放一个任务中所有的页</strong></li>
+</ul>
+</li>
+<li>逻辑地址/虚拟地址：指令中的地址</li>
+<li>物理地址：实际的<strong>主存地址</strong></li>
+<li>页表（page table）:建立页和页框的映射关系，每个进程都有一个页表，实现虚拟地址和物理地址的转换<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/73031fda94faa13ea99841808700ec22_73031fda94faa13ea99841808700ec22_5e_NVIDIA_GeForce_Overlay_DT.png" alt="5e_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ul>
+<h1 id="3-虚拟存储器"><a href="#3-虚拟存储器" class="headerlink" title="3.虚拟存储器"></a>3.虚拟存储器</h1><ul>
+<li><p>基本思想</p>
+<ul>
+<li><strong>请求分页</strong>：仅将当前需要的的页面从磁盘调入主存</li>
+<li>通过<strong>硬件</strong>将逻辑地址转换为物理地址</li>
+<li>未命中时在主存和硬盘之间交换信息（类似cache）</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>在不扩大物理内存的前提下，可以载入更多的任务</li>
+<li>编写程序时不需要考虑可用物理内存的状态<ul>
+<li>程序员认为可以独享一个连续的、很大的内存</li>
+</ul>
+</li>
+<li>可以在大于物理内存的逻辑地址空间中编程</li>
+</ul>
+</li>
+<li><p><strong>设计要素</strong></p>
+<ul>
+<li>页大小</li>
+<li>映射算法<ul>
+<li>Cache比主存块10倍，主存比硬盘块100000多倍，<strong>缺页代价非常大</strong>，因此主存页框和虚拟页之间采用<strong>全关联映射</strong></li>
+</ul>
+</li>
+<li>写策略<ul>
+<li><strong>写回法</strong>，减少访问硬盘次数</li>
+</ul>
+</li>
+<li>类型<ul>
+<li>分页式虚拟存储器</li>
+<li>分段式虚拟存储器</li>
+<li>段页式虚拟存储器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-1-流程"><a href="#3-1-流程" class="headerlink" title="3.1 流程"></a>3.1 流程</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/ccab8fbb228724bd01085ee263452bfe_5f_NVIDIA_GeForce_Overlay_DT.png" alt="5f_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h2 id="3-2-分页式"><a href="#3-2-分页式" class="headerlink" title="3.2 分页式"></a>3.2 分页式</h2><ul>
+<li>主存储器和虚拟地址空间都被划分为大小相等的页面<ul>
+<li>虚拟页（virtual page，VP）/ 逻辑页（logical page）：<strong>虚拟地址空间</strong>中的页面</li>
+<li>物理页（physical page，PP）/ 页框（page frame）：<strong>主存空间</strong>中的页面</li>
+</ul>
+</li>
+<li>页表<ul>
+<li>页表中包含了<strong>所有虚拟页</strong>的信息，包括虚拟页的存放位置、装入位（valid）、修改位（dirty）、存取权限位等等</li>
+<li>保存在主存中</li>
+<li>虚拟地址：虚拟页号+页内偏移量</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-1-页表"><a href="#3-2-1-页表" class="headerlink" title="3.2.1 页表"></a>3.2.1 页表</h3><ul>
+<li>根据页表中记录的物理页存放位置，可以将虚拟地址转化为物理地址<ul>
+<li>高位直接替换</li>
+</ul>
+</li>
+<li>页表大小由虚拟内存地址空间大小决定</li>
+<li>装入位/有效位<ul>
+<li>1：对应页在主存，是缓存页，存放位置指向主存页框号（物理页号）</li>
+<li>0：未调入主存，若存放位置为null则是为分配页；否则是为缓存页，给出虚拟页在磁盘上的起始地址</li>
+</ul>
+</li>
+</ul>
+<p><font color="#ff0000">虚拟页号</font>+<font color="#f79646">页内偏移量</font>-&gt;<font color="#4bacc6">物理页号</font>+<font color="#f79646">页内偏移量</font><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/52e6d25b19098e8682fb825f9c188f20_60_NVIDIA_GeForce_Overlay_DT.png" alt="60_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h3 id="3-2-2-快表（Translation-Lookaside-Buffer，-TLB）"><a href="#3-2-2-快表（Translation-Lookaside-Buffer，-TLB）" class="headerlink" title="3.2.2 快表（Translation Lookaside Buffer， TLB）"></a>3.2.2 快表（Translation Lookaside Buffer， TLB）</h3><p>页表的使用增加了主存的访问次数，为了<strong>减少访存次数</strong>，把页表中最活跃的几个页表项复制到<strong>高速缓存</strong>中</p>
+<ul>
+<li>后备转换缓冲器（简称“快表”）：将页表项放入高速缓存中<ul>
+<li>映射：全关联映射，组关联映射</li>
+<li>替换：随机替换</li>
+<li>主存中的页表相应地称之为“慢表”</li>
+</ul>
+</li>
+<li>TLB标记<ul>
+<li>该表项对应页表中哪个虚拟页的表项</li>
+<li>全关联：虚拟页号</li>
+<li>组关联：虚拟页号的高位（低位用于选择TLB组的组号）</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-3-CPU访存过程"><a href="#3-2-3-CPU访存过程" class="headerlink" title="3.2.3 CPU访存过程"></a>3.2.3 CPU访存过程</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/d2f860ed41f335178208d7c2e8dff11b_61_NVIDIA_GeForce_Overlay_DT.png" alt="61_NVIDIA_GeForce_Overlay_DT.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/c7705c8b487da9c22ff5f500efd4d7f4_62_NVIDIA_GeForce_Overlay_DT.png" alt="62_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h3 id="3-2-4-TLB、页表、cache的缺失组合"><a href="#3-2-4-TLB、页表、cache的缺失组合" class="headerlink" title="3.2.4 TLB、页表、cache的缺失组合"></a>3.2.4 TLB、页表、cache的缺失组合</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/0131beb6267258138204707408b125bf_63_NVIDIA_GeForce_Overlay_DT.png" alt="63_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h3 id="3-2-5-缓存关系"><a href="#3-2-5-缓存关系" class="headerlink" title="3.2.5 缓存关系"></a>3.2.5 缓存关系</h3><ul>
+<li>TLB&lt;-页表</li>
+<li>cache&lt;-主存</li>
+<li>主存&lt;-硬盘</li>
+</ul>
+<h2 id="3-3-分段式"><a href="#3-3-分段式" class="headerlink" title="3.3 分段式"></a>3.3 分段式</h2><p>将程序和数据分成<strong>不同长度的段</strong>，将所需的段加载到主存中</p>
+<ul>
+<li>虚拟地址：段号 + 段内偏移量</li>
+<li>与分页式虚拟存储器相比<ul>
+<li>分页式虚拟存储器<ul>
+<li>优点：实现简单、开销少</li>
+<li>缺点：一个数据或一条指令可能会分跨在两个页面</li>
+</ul>
+</li>
+<li>分段式虚拟存储器<ul>
+<li>优点：段的分界与程序的自然分界相对应，易于编译、管理、修改和保护</li>
+<li>缺点：段的长度不固定</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4-段页式"><a href="#3-4-段页式" class="headerlink" title="3.4 段页式"></a>3.4 段页式</h2><p>将程序和数据分段，段内再进行分页，<strong>每个分段都有一个页表</strong></p>
+<ul>
+<li>虚拟地址：段号 + 页号 + 页内偏移量</li>
+<li>优点：程序按段实现共享与保护</li>
+<li>缺点：需要多次查表</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>13_指令系统</title>
+    <url>/2023/02/06/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/13_%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h1 id="1-指令"><a href="#1-指令" class="headerlink" title="1. 指令"></a>1. 指令</h1><ul>
+<li>指令是计算机处理的最基本单位<ul>
+<li>操作码（指令执行的内容）+操作数（要操作的对象）</li>
+</ul>
+</li>
+<li>多周期实现方案<ul>
+<li>可以将一条指令的执行分解为一系列步骤<ul>
+<li>取指令，译码&#x2F;取寄存器，执行&#x2F;有效地址&#x2F;完成分支，访问内存， 存储结果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-1-指令要素"><a href="#1-1-指令要素" class="headerlink" title="1.1. 指令要素"></a>1.1. 指令要素</h2><ul>
+<li>操作码：指定将要完成的操作</li>
+<li>源操作数引用：操作会涉及一个或多个源操作数，这是操作所需的输入</li>
+<li>结果操作数引用：操作可能会产生一个结果</li>
+<li>下一指令引用：告诉处理器这条指令执行完成后到哪儿去取下一 条指令</li>
+</ul>
+<h2 id="1-2-指令表示"><a href="#1-2-指令表示" class="headerlink" title="1.2. 指令表示"></a>1.2. 指令表示</h2><ul>
+<li>在计算机内部，指令由一个位串来表示</li>
+<li><strong>指令格式</strong>：对应于指令的各要素，这个位串划分成几个字段<ul>
+<li>一个指令集往往有多种指令格式</li>
+</ul>
+</li>
+<li>机器指令符号表示法<ul>
+<li>操作码被缩写成助记符来表示</li>
+<li>操作数也可以用符号表示<ul>
+<li>用寄存器编号或内存地址替换操作数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-操作码"><a href="#2-操作码" class="headerlink" title="2. 操作码"></a>2. 操作码</h1><ul>
+<li>所有计算机上都会存在相同的常用操作类型<ul>
+<li>数据传送</li>
+<li>算术运算</li>
+<li>逻辑运算</li>
+<li>转换</li>
+<li>输入&#x2F;输出</li>
+<li>系统控制</li>
+<li>控制转移</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-1-数据传送"><a href="#2-1-数据传送" class="headerlink" title="2.1. 数据传送"></a>2.1. 数据传送</h2><ul>
+<li>指明源和目标操作数的位置</li>
+<li>指明将要传送数据的长度</li>
+<li>指明每个操作数的寻址方式<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2a15cab202986a5ab027a9aac98a0c39_75_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="75_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+<h2 id="2-2-算数运算"><a href="#2-2-算数运算" class="headerlink" title="2.2. 算数运算"></a>2.2. 算数运算</h2><ul>
+<li>一条算术指令的执行会涉及数据传送操作，来为算术和逻辑 单元准备输入，并传送逻辑单元的输出<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/db887dc847dcc585483bda5dc27bfe95_76_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="76_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+<h2 id="2-3-逻辑运算"><a href="#2-3-逻辑运算" class="headerlink" title="2.3. 逻辑运算"></a>2.3. 逻辑运算</h2><ul>
+<li>位操作：操作一个字或其它可寻址单元的中的个别位</li>
+<li>移位和旋转<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/37ae91510128c6f70b6a852e6abf7bd2_77_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="77_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+<li>算数移位和逻辑移位<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/6d72d0d98cce9e506462304378b0640c_78_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="78_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+<h2 id="2-4-输入-输出"><a href="#2-4-输入-输出" class="headerlink" title="2.4. 输入&#x2F;输出"></a>2.4. 输入&#x2F;输出</h2><ul>
+<li>各种输入&#x2F;输出方法仅有少数输入&#x2F;输出指令实现，具体操作由参数、代码或命令字指定<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f3c02c0754467e76cab487493fbe6ab1_79_VoIPSCreencastCoverWnd%20-2-.png"
+                      alt="79_VoIPSCreencastCoverWnd (2).png"
+                ></li>
+</ul>
+<h2 id="2-5-控制转移"><a href="#2-5-控制转移" class="headerlink" title="2.5. 控制转移"></a>2.5. 控制转移</h2><ul>
+<li>分支指令（亦称为跳转指令）<ul>
+<li>把将要执行的下一条指令的地址作为它的操作数之一</li>
+</ul>
+</li>
+<li>跳步指令<ul>
+<li>包含一个隐含地址，该隐含地址等于下一指令地址加上该指令 长度之和</li>
+</ul>
+</li>
+<li>过程调用指令<ul>
+<li>涉及由目前位置转移到过程的调用指令和由过程返回到调用发生位置的返回指令<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/447d55f20e901de190126db4acf119ed_7a_VoIPSCreencastCoverWnd.png"
+                      alt="7a_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h1 id="3-操作数"><a href="#3-操作数" class="headerlink" title="3. 操作数"></a>3. 操作数</h1><h2 id="3-1-地址"><a href="#3-1-地址" class="headerlink" title="3.1. 地址"></a>3.1. 地址</h2><ul>
+<li>一个指令需要有4个地址引用<ul>
+<li>2个源操作数</li>
+<li>1个目标操作数</li>
+<li>下一指令地址（一般是隐含的）</li>
+</ul>
+</li>
+<li>地址数量<ul>
+<li>地址数目越少<ul>
+<li>指令越短，对CPU要求越低</li>
+<li>使得程序总指令更多，导致执行时间更长，程序更长更复杂</li>
+</ul>
+</li>
+<li>对于多地址指令，普遍采用多个通用寄存器<br><strong>例子</strong></li>
+</ul>
+</li>
+<li>3参数指令<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/e95520fea28c6f3f2a485200f0dac61c_7b_VoIPSCreencastCoverWnd.png"
+                      alt="7b_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+<li>2参数指令<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2257d54b8706bf7474ae51a5c42c23b0_7c_VoIPSCreencastCoverWnd.png"
+                      alt="7c_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+<li>1参数指令<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/ad11fc2add2ca6915a3b11b8b11d730d_7d_VoIPSCreencastCoverWnd.png"
+                      alt="7d_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-数值"><a href="#3-2-数值" class="headerlink" title="3.2. 数值"></a>3.2. 数值</h2><ul>
+<li>计算机存储的数值是受限的<ul>
+<li>机器可表示数值的幅值是有限</li>
+<li>浮点数情况下数值精度是有限</li>
+</ul>
+</li>
+<li>数值数据的类型<ul>
+<li>二进制整数或定点数</li>
+<li>二进制浮点数</li>
+<li>十进制数</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-字符"><a href="#3-3-字符" class="headerlink" title="3.3. 字符"></a>3.3. 字符</h2><ul>
+<li>国际参考字母表（IRA） &#x2F; 美国信息交换标准码（ASCII）： 每个字符 被表示成唯一的7位二进制串</li>
+<li>扩展的二进制编码的十进制交换码（EBCDIC）：8位编码</li>
+<li>统一码（Unicode）：16 位 &#x2F; 32 位</li>
+</ul>
+<h2 id="3-4-逻辑数据"><a href="#3-4-逻辑数据" class="headerlink" title="3.4. 逻辑数据"></a>3.4. 逻辑数据</h2><ul>
+<li>将一个n位单元看成是由n个1位项组成，每项有值0或1<ul>
+<li>存储一个布尔或者二进制数据项序列，序列中的每个值只能取值1 （真）或0（假）</li>
+<li>有利于实现对数据项的具体位进行操纵</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-5-大端序和小端序"><a href="#3-5-大端序和小端序" class="headerlink" title="3.5. 大端序和小端序"></a>3.5. 大端序和小端序</h2><ul>
+<li>大端序：数据高位放在低地址</li>
+<li>小端序：数据高位放在高地址</li>
+<li>例子<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/9372243c73ccbbcc86b89c133ebe98c5_7e_VoIPSCreencastCoverWnd.png"
+                      alt="7e_VoIPSCreencastCoverWnd.png"
+                ></li>
+<li>在两种策略中每个数据项有同样地址</li>
+<li>在任何一个给定的多字节值中，小端的字节排序是大端的反序，反之亦</li>
+<li>端序不影响结构中数据项的次序</li>
+</ul>
+<h2 id="3-6-操作数引用"><a href="#3-6-操作数引用" class="headerlink" title="3.6. 操作数引用"></a>3.6. 操作数引用</h2><ul>
+<li>操作数实际值</li>
+<li>操作数地址<ul>
+<li>寄存器</li>
+<li>主存</li>
+<li>虚拟内存</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-寻址方式"><a href="#4-寻址方式" class="headerlink" title="4. 寻址方式"></a>4. 寻址方式</h1><ul>
+<li>直接寻址</li>
+<li>立即寻址</li>
+<li>间接寻址</li>
+<li>寄存器寻址</li>
+<li>寄存器间接寻址</li>
+<li>偏移寻址</li>
+<li>栈寻址</li>
+</ul>
+<p><strong>记号</strong></p>
+<ul>
+<li>A: 指令中地址字段的内容</li>
+<li>R: 指向寄存器的指令地址字段内容</li>
+<li>EA: 被访问位置的实际（有效）地址</li>
+<li>(X): 存储器位置 X 或寄存器 X 的内容</li>
+</ul>
+<h2 id="4-1-立即寻址"><a href="#4-1-立即寻址" class="headerlink" title="4.1. 立即寻址"></a>4.1. 立即寻址</h2><ul>
+<li>方式<ul>
+<li>操作数直接出现在指令中</li>
+<li>这种操作数又称为<strong>立即数</strong></li>
+</ul>
+</li>
+<li>用法<ul>
+<li>定义和使用常数或设置变量的初始值</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>操作数&#x3D;A</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>除了取指令之外，获得操作数不要求另外的存储器访问</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>数的大小受限于地址字段的长度<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/d404c16134d2dbe7d2505ff3d1e2c0d3_7f_VoIPSCreencastCoverWnd.png"
+                      alt="7f_VoIPSCreencastCoverWnd.png"
+                ><br>直接寻址</li>
+</ul>
+</li>
+<li>方式<ul>
+<li>地址字段含有操作数的有效地址</li>
+<li><strong>直接地址</strong>或<strong>绝对地址</strong></li>
+</ul>
+</li>
+<li>用法<ul>
+<li>早期计算机常用，在当代计算机体系结构中不多见</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>EA&#x3D;A</li>
+<li>指令中地址字段为实际地址</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>只要访问1此存储器</li>
+<li>不需要额外计算实际地址</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>地址空间有限（操作数位数）<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/10658ee6f53697a9297c318a9098f329_81_VoIPSCreencastCoverWnd.png"
+                      alt="81_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-间接寻址"><a href="#4-2-间接寻址" class="headerlink" title="4.2. 间接寻址"></a>4.2. 间接寻址</h2><ul>
+<li><p>方式</p>
+<ul>
+<li>地址字段指示一个存储器字地址, 而此地址处保存有操作数的全长度地址</li>
+</ul>
+</li>
+<li><p>算法</p>
+<ul>
+<li>EA&#x3D;(A)</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>扩大地址空间</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>取操作数需要2此访问存储器</li>
+</ul>
+</li>
+<li><p>解释</p>
+<ul>
+<li>地址引用的数量限制可能时有益的</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/4c4847d0ecdb25d7678b625c5096132b_capture-2023-02-06-16-32-06.jpg"
+                      alt="capture-2023-02-06-16-32-06.jpg"
+                ></p>
+<h2 id="4-3-寄存器寻址"><a href="#4-3-寄存器寻址" class="headerlink" title="4.3. 寄存器寻址"></a>4.3. 寄存器寻址</h2><ul>
+<li>方式<ul>
+<li>地址字段指示的是寄存器</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>EA&#x3D;R</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>指令中仅需要一个较小的地址字段</li>
+<li>不需要存储器访问</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>地址空间十分有限，寄存器数量很少</li>
+</ul>
+</li>
+<li>解释<ul>
+<li>寄存器寻址只有在被有效使用的时候才有意义<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/b7d4a3451a6634c06f0539280dd94a92_82_VoIPSCreencastCoverWnd.png"
+                      alt="82_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="4-4-寄存器间接寻址"><a href="#4-4-寄存器间接寻址" class="headerlink" title="4.4. 寄存器间接寻址"></a>4.4. 寄存器间接寻址</h2><ul>
+<li>方式<ul>
+<li>地址字段指示寄存器，寄存器记录存储器地址</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>EA&#x3D;(R)</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>扩大了地址空间</li>
+<li>比间接寻址少1次存储器访问</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>相对于寄存器寻址，需要多1次存储器访问<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/d575333de547c94220460c7d30e38b73_83_VoIPSCreencastCoverWnd.png"
+                      alt="83_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="4-5-偏移寻址"><a href="#4-5-偏移寻址" class="headerlink" title="4.5. 偏移寻址"></a>4.5. 偏移寻址</h2><ul>
+<li>方式<ul>
+<li>结合直接寻址和寄存器间接寻址</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>EA&#x3D;(R)+A</li>
+<li>寄存器中基址+立即数偏移量</li>
+</ul>
+</li>
+<li>类型<ul>
+<li>相对寻址</li>
+<li>基址寄存器寻址</li>
+<li>变址</li>
+</ul>
+</li>
+<li>解释<ul>
+<li>偏移寻址要求指令有两个地址字段，至少其中一个是显式的<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/ddfffae980c81344ac7aaa42092528e7_84_VoIPSCreencastCoverWnd.png"
+                      alt="84_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-5-1-相对寻址"><a href="#4-5-1-相对寻址" class="headerlink" title="4.5.1. 相对寻址"></a>4.5.1. 相对寻址</h3><ul>
+<li>方式<ul>
+<li>隐含引用的寄存器是程序计数器（PC）</li>
+<li>此指令后续的下一条指令的地址加上地址字段的值产生有效地址</li>
+</ul>
+</li>
+<li>用法<ul>
+<li>大多数存储器访问都相对靠近正在执行的指令，相对寻址可节省指令中的地址位数</li>
+<li>目标地址位于该指令的前后固定位置上</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>EA&#x3D;(PC)+A</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>利用程序局部性</li>
+<li>节省地址位数</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-5-2-基址寄存器寻址"><a href="#4-5-2-基址寄存器寻址" class="headerlink" title="4.5.2. 基址寄存器寻址"></a>4.5.2. 基址寄存器寻址</h3><ul>
+<li>方式<ul>
+<li>被引用的寄存器含有一个存储器地址，地址字段含有一个 相对于那个地址的偏移量（通常是无符号整数表示）</li>
+<li>寄存器引用可以是显式的，也可以是隐式的</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>EA&#x3D;(B)+A</li>
+</ul>
+</li>
+<li>用法<ul>
+<li>虚拟内存空间中的程序重定位，虚拟地址转换到物理地址</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-5-3-变址寻址"><a href="#4-5-3-变址寻址" class="headerlink" title="4.5.3. 变址寻址"></a>4.5.3. 变址寻址</h3><ul>
+<li><p>方式</p>
+<ul>
+<li>指令地址字段引用一个主存地址，被引用的寄存器含有对于该地址的一个正的偏移量</li>
+</ul>
+</li>
+<li><p>算法</p>
+<ul>
+<li>EA&#x3D;A+(R)</li>
+</ul>
+</li>
+<li><p>用法</p>
+<ul>
+<li>为完成重复操作提供一种高效机制</li>
+<li>方便访问线性表</li>
+</ul>
+</li>
+<li><p>例子</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/69a2c454b0bdc87eba41d426c5d9e4f6_capture-2023-02-06-16-59-09.jpg"
+                      alt="capture-2023-02-06-16-59-09.jpg"
+                ></li>
+<li>基质A：数组起始地址</li>
+<li>变址寄存器：下标</li>
+</ul>
+</li>
+<li><p>扩展</p>
+<ul>
+<li>结合间接寻址和变址寻址</li>
+<li>前变址：EA &#x3D; (A + (R))</li>
+<li>后变址：EA &#x3D; (A) + (R)</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-6-栈寻址"><a href="#4-6-栈寻址" class="headerlink" title="4.6. 栈寻址"></a>4.6. 栈寻址</h2><h3 id="4-6-1-栈（stack）"><a href="#4-6-1-栈（stack）" class="headerlink" title="4.6.1. 栈（stack）"></a>4.6.1. 栈（stack）</h3><ul>
+<li><p>有序数组，一次仅能存取它的一个元素</p>
+<ul>
+<li>栈顶（top）：存取元素的点<ul>
+<li>栈的元素只能由栈顶添加或删除（后进先出）</li>
+</ul>
+</li>
+<li>栈底（base）：栈中最后一个元素</li>
+</ul>
+</li>
+<li><p>栈操作</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/ae469d2b5f96c7f999529da704accaa4_86_VoIPSCreencastCoverWnd.png"
+                      alt="86_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+<li><p>栈的实现</p>
+<ul>
+<li>栈基（base）：保存为栈保留的内存 块底部位置的地址</li>
+<li>栈限（limit）：保存为栈保留的内存块 另一端的地址</li>
+<li>栈指针（pointer）：保存栈顶的地址</li>
+<li>向上&#x2F;向下增长：向着地址增大&#x2F;减小的 方向增长</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/3e27c8fda28a054c63882a4c90209a6c_87_VoIPSCreencastCoverWnd.png"
+                      alt="87_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+<li><p>栈的应用</p>
+<ul>
+<li>后缀（postfix）&#x2F; 逆波兰（reverse polish）表示 • 无论表达式多么复杂，后缀表示都不需要括号</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-6-2-栈寻址"><a href="#4-6-2-栈寻址" class="headerlink" title="4.6.2. 栈寻址"></a>4.6.2. 栈寻址</h3><ul>
+<li>方式<ul>
+<li>栈指针保存在寄存器中，对寄存器中栈位置的访问实际上是一种寄存器间接寻址方式</li>
+</ul>
+</li>
+<li>解释<ul>
+<li>与栈相关的是一个指针，它的值是栈顶地址，或者当栈顶的两个元素已在CPU寄存器内，此时栈顶指针指向栈顶的第三个元素</li>
+</ul>
+</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/680e3421f0573a57da21053dbdeba042_88_VoIPSCreencastCoverWnd.png"
+                      alt="88_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+<h1 id="5-指令格式"><a href="#5-指令格式" class="headerlink" title="5. 指令格式"></a>5. 指令格式</h1><p> 指令格式</p>
+<ul>
+<li>一共操作码，以及隐式或显式的、零个或多个操作数</li>
+<li>通过它的各个构成部分来定义指令的位安排</li>
+<li>显式或隐式地为每个操作数指定其寻址方式</li>
+<li>大多数指令集使用不止一种指令格式</li>
+</ul>
+<h2 id="5-1-设计原则"><a href="#5-1-设计原则" class="headerlink" title="5.1. 设计原则"></a>5.1. 设计原则</h2><ul>
+<li>指令尽量短<ul>
+<li>程序占用存储存储空间小</li>
+</ul>
+</li>
+<li>有足够的操作码位数<ul>
+<li>要为操作类型不断增加预留</li>
+</ul>
+</li>
+<li>操作码的编码必须有唯一的解释<ul>
+<li>操作码译码时要么是唯一的合法编码，要么是不合法的</li>
+</ul>
+</li>
+<li>指令长度是字节的整数倍<ul>
+<li>与内存按照字节寻址相对应，便于指令的读取和地址计算</li>
+</ul>
+</li>
+<li>合理选择地址字段的个数<ul>
+<li>涉及到指令长度和规整性，是空间和时间开销权衡的结果</li>
+</ul>
+</li>
+<li>指令尽量规整<ul>
+<li>简化硬件的实现</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-指令长度"><a href="#5-2-指令长度" class="headerlink" title="5.2. 指令长度"></a>5.2. 指令长度</h2><ul>
+<li>最明显的权衡考虑是在强有力的指令清单和节省空间之间进行<ul>
+<li>编程人员希望更多的操作码、更多的操作数、更多的寻址方式和更 大的地址范围</li>
+<li>指令长度变短可以节省存储空间和减少数据传送时间</li>
+</ul>
+</li>
+<li>指令长度应该是字符长度或定点数长度的整数倍</li>
+<li>指令长度应该等于存储器的传送长度（即数据总线宽度），或者 这两个值其中之一是另一个的整数</li>
+</ul>
+<h2 id="5-3-位的分配"><a href="#5-3-位的分配" class="headerlink" title="5.3. 位的分配"></a>5.3. 位的分配</h2><p>给定的指令长度，在操作码数目和寻址能力之间存在着权衡考虑</p>
+<ul>
+<li>使用变长的操作码<ul>
+<li>使用一个最小操作码长度，但是对于某些操作码，可通过使用指令附加位的方法来指定附加的操作</li>
+</ul>
+</li>
+<li>使用寻址位的考虑因素<ul>
+<li>寻址方式的种数</li>
+<li>操作数的数量</li>
+<li>寄存器与存储器比较：能用于操作数引用的寄存器越多，指令需要的位数越少</li>
+<li>寄存器组的数目：对于固定数目的寄存器, 功<strong>能上的分开</strong>将使指令只需 较少的位数</li>
+<li>地址范围</li>
+<li>寻址粒度：使用较大的字时，需要的地址位更少</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-4-变长指令"><a href="#5-4-变长指令" class="headerlink" title="5.4. 变长指令"></a>5.4. 变长指令</h2><p>取至少等于最长指令长度的几个字节或几个字</p>
+<ul>
+<li>优点<ul>
+<li>易于提供大的操作码清单，而操作码具有不同的长度</li>
+<li>寻址方式能更灵活，指令格式能将各种寄存器和存储器引用加上寻 址方式予以组合</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>增加CPU的复杂度</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-5-指令集设计"><a href="#5-5-指令集设计" class="headerlink" title="5.5. 指令集设计"></a>5.5. 指令集设计</h2><ul>
+<li>设计的基本原则<ul>
+<li>完备性&#x2F;完整性：操作类型应当尽可能完备，但太复杂了也会给硬 件实现增加困难</li>
+<li>兼容性：应当兼容以前的指令系统，为软件重复利用带来方便</li>
+<li>均匀性：应当能对多种类型的数据进行处理</li>
+<li>可扩充性：操作码要预留一定的编码空间</li>
+</ul>
+</li>
+<li>设计的基本问题<ul>
+<li>操作指令表：应提供多少和什么样的操作，操作有多复杂</li>
+<li>数据类型：对哪几种数据类型完成操作</li>
+<li>指令格式：指令的位长度、地址数目、各个字段的大小等</li>
+<li>寄存器：能被指令访问的寄存器数目以及它们的用途</li>
+<li>寻址：寻址方式的种类以及有效地址的计算</li>
+<li>下一条指令地址的确定：通常通过PC寄存器实现</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>14_指令周期和指令流水线</title>
+    <url>/2023/02/06/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/14_%E6%8C%87%E4%BB%A4%E5%91%A8%E6%9C%9F%E5%92%8C%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF/</url>
+    <content><![CDATA[<h1 id="1-指令周期"><a href="#1-指令周期" class="headerlink" title="1. 指令周期"></a>1. 指令周期</h1><p>处理单个指令的过程</p>
+<ul>
+<li>取指周期：从内存中提取一条指令</li>
+<li>执行周期：执行所提取的指令</li>
+</ul>
+<h2 id="1-1-指令周期"><a href="#1-1-指令周期" class="headerlink" title="1.1. 指令周期"></a>1.1. 指令周期</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/6e4ec90eb7eec117af309c9246fa01a1_89_VoIPSCreencastCoverWnd.png"
+                      alt="89_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h3 id="1-1-1-状态图"><a href="#1-1-1-状态图" class="headerlink" title="1.1.1. 状态图"></a>1.1.1. 状态图</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/66187f804a9c1a18f05fea2f49cbcfc7_8a_VoIPSCreencastCoverWnd.png"
+                      alt="8a_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h2 id="1-2-带中断的指令周期"><a href="#1-2-带中断的指令周期" class="headerlink" title="1.2. 带中断的指令周期"></a>1.2. 带中断的指令周期</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/750804e8ba395e7cdd8cecc4b65d769e_8b_VoIPSCreencastCoverWnd.png"
+                      alt="8b_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h3 id="1-2-1-状态图"><a href="#1-2-1-状态图" class="headerlink" title="1.2.1. 状态图"></a>1.2.1. 状态图</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1e4debec8b371e18d894df323101c4ba_8c_VoIPSCreencastCoverWnd.png"
+                      alt="8c_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h2 id="1-3-间址周期"><a href="#1-3-间址周期" class="headerlink" title="1.3. 间址周期"></a>1.3. 间址周期</h2><ul>
+<li>间址周期：把<strong>间接地址</strong>的读取看成是一个额外的指令子周期<ul>
+<li>指令的执行可能涉及一个或多个存储器中的操作数，它们每个都要求一次存储器访问</li>
+<li>使用间接寻址，还需要额外的存储器访问</li>
+<li>相当于取了两次操作数<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/0e44babaa68ae90abc5e0cba24f7aa6c_8d_VoIPSCreencastCoverWnd.png"
+                      alt="8d_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-1-状态图"><a href="#1-3-1-状态图" class="headerlink" title="1.3.1. 状态图"></a>1.3.1. 状态图</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/3ebefe01cd74e9268267d66a5c01ff3b_8e_VoIPSCreencastCoverWnd.png"
+                      alt="8e_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h2 id="1-4-CPU"><a href="#1-4-CPU" class="headerlink" title="1.4. CPU"></a>1.4. CPU</h2><h3 id="1-4-1-CPU任务"><a href="#1-4-1-CPU任务" class="headerlink" title="1.4.1. CPU任务"></a>1.4.1. CPU任务</h3><ol>
+<li>取指令：CPU必须从存储器（寄存器、cache、主存）读取指令</li>
+<li>解释指令：必须对指令进行译码，以确定所要求的动作</li>
+<li>取数据：指令的执行可能要求从存储器或输入&#x2F;输出（I&#x2F;O）模块中读取数据</li>
+<li>处理数据：指令的执行可能要求对数据完成某些算术或逻辑运算</li>
+<li>写数据：执行的结果可能要求写数据到存储器或I&#x2F;O模块</li>
+</ol>
+<h3 id="1-4-2-CPU需求"><a href="#1-4-2-CPU需求" class="headerlink" title="1.4.2. CPU需求"></a>1.4.2. CPU需求</h3><ul>
+<li><strong>寄存器</strong>：小容量内部存储器<ul>
+<li>CPU需要在指令周期中<strong>临时</strong>保存指令和数据</li>
+<li>CPU需要记录<strong>当前</strong>所执行指令的位置，以便知道从何处得到<strong>下一条指令</strong></li>
+</ul>
+</li>
+</ul>
+<p>假定CPU有</p>
+<ul>
+<li>1个存储地址寄存器（MAR）</li>
+<li>1个存储缓冲寄存器（MBR）&#x2F; 存储数据寄存器（MDR）</li>
+<li>1个程序计数器（PC）</li>
+<li>1个指令寄存器（IR）</li>
+</ul>
+<h2 id="数据流"><a href="#数据流" class="headerlink" title="数据流"></a>数据流</h2><h3 id="取指周期"><a href="#取指周期" class="headerlink" title="取指周期"></a>取指周期</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/7e9e60f8abc04fa4ada8d90d0e556d24_NVIDIA_Share_957_704.png"
+                      alt="NVIDIA_Share_957_704.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/557960e134e0d58b341c49a0419c3814_NVIDIA_Share_921_676.png"
+                      alt="NVIDIA_Share_921_676.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/c9df8c04f60bb0767b969e94d95e874a_NVIDIA_Share_918_669.png"
+                      alt="NVIDIA_Share_918_669.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/ec150b39a3e62e48a7e4476d42c6d2f3_NVIDIA_Share_876_684.png"
+                      alt="NVIDIA_Share_876_684.png"
+                ></p>
+<h3 id="间址周期"><a href="#间址周期" class="headerlink" title="间址周期"></a>间址周期</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/bddabce6c120e84748cbf01bf59f8d54_NVIDIA_Share_966_667.png"
+                      alt="NVIDIA_Share_966_667.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/3fb3b5b5e3754b50eec66fa76baca538_NVIDIA_Share_1008_632.png"
+                      alt="NVIDIA_Share_1008_632.png"
+                ></p>
+<h3 id="中断周期"><a href="#中断周期" class="headerlink" title="中断周期"></a>中断周期</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/8c3eafd71c309b2cbc5e35f6e3a99b33_NVIDIA_Share_1001_607.png"
+                      alt="NVIDIA_Share_1001_607.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/fb715672c8c503a417af7e3f2b78f760_NVIDIA_Share_958_622.png"
+                      alt="NVIDIA_Share_958_622.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/f42e45e08abd45478498243844e9f093_NVIDIA_Share_966_614.png"
+                      alt="NVIDIA_Share_966_614.png"
+                ></p>
+<h1 id="指令流水线"><a href="#指令流水线" class="headerlink" title="指令流水线"></a>指令流水线</h1><ul>
+<li>指令流水线：一条指令的处理过程分成若干个阶段，每个阶段由 相应的功能部件完成</li>
+</ul>
+<h2 id="二阶段方法"><a href="#二阶段方法" class="headerlink" title="二阶段方法"></a>二阶段方法</h2><ul>
+<li>将指令处理分成两个阶段：取指令和执行指令</li>
+<li>在当前指令的执行期间取下一条指令<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/3ed1ff5712e6cd5a2ff873ccadecd902_NVIDIA_Share_867_174.png"
+                      alt="NVIDIA_Share_867_174.png"
+                ></li>
+</ul>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>执行时间一般要长于取指时间</li>
+<li>主存访问冲突</li>
+<li>条件分支指令使得待取的下一条指令的地址是未知的<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/c53f9e107f95fc1a8ae0a41ebf6ff7aa_NVIDIA_Share_853_322.png"
+                      alt="NVIDIA_Share_853_322.png"
+                ></li>
+</ul>
+<h2 id="六阶段方法"><a href="#六阶段方法" class="headerlink" title="六阶段方法"></a>六阶段方法</h2><ul>
+<li><p>更多阶段</p>
+<ul>
+<li>取指令（Fetch instruction，FI）：读下一条预期的指令到缓冲器</li>
+<li>译码指令（Decode instruction，DI）：确定操作码和操作数指定符</li>
+<li>计算操作数（Calculate operands，CO）：计算每个源操作数的有效地址</li>
+<li>取操作数（Fetch operands，FO）：从存储器取出每个操作数，寄存器中的操作数不需要取</li>
+<li>执行指令（Execute instruction，EI）：完成指定的操作。若有指定的目的操作数位置，则将结果写入此位置</li>
+<li>写操作数（Write operand，WO）：将结果存入存储器</li>
+</ul>
+</li>
+<li><p>各阶段时间几乎相等</p>
+</li>
+<li><p>例子：<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/084ada72d1d864ead4eeb0d64ed92081_NVIDIA_Share_1002_628.png"
+                      alt="NVIDIA_Share_1002_628.png"
+                ></p>
+</li>
+</ul>
+<h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>不是所有指令都包含6个阶段<ul>
+<li>例：一条LOAD指令不需要WO阶段</li>
+<li>为了简化流水线硬件设计，在假定每条指令都要求这6个阶段的基础上来建立时序</li>
+</ul>
+</li>
+<li>不是所有的阶段都能并行完成<ul>
+<li>例：FI、FO和 WO都涉及存储器访问</li>
+</ul>
+</li>
+<li>若6个阶段不全是相等的时间，则会在各个流水阶段涉及某种等待</li>
+</ul>
+<h3 id="限制"><a href="#限制" class="headerlink" title="限制"></a>限制</h3><ul>
+<li><p>条件转移指令能使若干指令的读取变为无效<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/bb46d2cad0ae875968473f8eaab8a3f7_NVIDIA_Share_701_471.png"
+                      alt="NVIDIA_Share_701_471.png"
+                ></p>
+</li>
+<li><p>中断<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/a7bebe892bac1f41f0d724f013e6e089_NVIDIA_Share_535_737.png"
+                      alt="NVIDIA_Share_535_737.png"
+                ></p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/ea14a74dedef65838f5fc7d3559b0584_NVIDIA_Share_607_570.png"
+                      alt="NVIDIA_Share_607_570.png"
+                ></p>
+<p>I3为跳转指令</p>
+<h2 id="流水线性能"><a href="#流水线性能" class="headerlink" title="流水线性能"></a>流水线性能</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/412091b23226811f0aea274d473dd004_NVIDIA_Share_1122_577.png"
+                      alt="NVIDIA_Share_1122_577.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/345fe32b294d962c582904785a4d42d7_NVIDIA_Share_1002_379.png"
+                      alt="NVIDIA_Share_1002_379.png"
+                ></p>
+<ul>
+<li>误解<ul>
+<li>流水线中的阶段数越多，执行速度越快</li>
+</ul>
+</li>
+<li>原因<ul>
+<li>在流水线的每个阶段，将数据从一个缓冲区移动到另一个缓冲区以及执行各种准备和传递功能都涉及一些开销</li>
+<li>处理内存和寄存器依赖以及优化管道使用所需的控制逻辑数量随着阶段的增加而急剧增加</li>
+</ul>
+</li>
+</ul>
+<h2 id="冒险（Hazard）"><a href="#冒险（Hazard）" class="headerlink" title="冒险（Hazard）"></a>冒险（Hazard）</h2><ul>
+<li>在某些情况下，指令流水线会阻塞或停顿（stall），导致后续指令无法正确执行</li>
+</ul>
+<h3 id="结构冒险（Structure-hazard）"><a href="#结构冒险（Structure-hazard）" class="headerlink" title="结构冒险（Structure hazard）"></a>结构冒险（Structure hazard）</h3><ul>
+<li>硬件资源冲突</li>
+<li>原因：已进入流水线的不同指令在同一时刻访问相同的硬件资源</li>
+<li>解决：使用多个不同的硬件资源，或者分时使用同一个硬件资源</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/533a6bafb059889831056b1a423f82d5_NVIDIA_Share_1129_375.png"
+                      alt="NVIDIA_Share_1129_375.png"
+                ></p>
+<h3 id="数据冒险（Data-hazard）"><a href="#数据冒险（Data-hazard）" class="headerlink" title="数据冒险（Data hazard）"></a>数据冒险（Data hazard）</h3><ul>
+<li>数据依赖性</li>
+<li>原因：未生成指令所需要的数据<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/cebcbe021a74c6d3f7a51de8b21f5377_NVIDIA_Share_763_433.png"
+                      alt="NVIDIA_Share_763_433.png"
+                ></li>
+</ul>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/7554160d0050dfa72e004a4505818525_NVIDIA_Share_975_600.png"
+                      alt="NVIDIA_Share_975_600.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/1c824a88c8e123d8f3ace0d8dcfa45b3_NVIDIA_Share_949_613.png"
+                      alt="NVIDIA_Share_949_613.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/bfc9f0b911c95d6db2178b947cb6c2ba_NVIDIA_Share_988_601.png"
+                      alt="NVIDIA_Share_988_601.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/2d3617dcb7d6028365dd882b622cb5f3_NVIDIA_Share_1065_616.png"
+                      alt="NVIDIA_Share_1065_616.png"
+                ></p>
+<h3 id="控制冒险（Control-hazard）"><a href="#控制冒险（Control-hazard）" class="headerlink" title="控制冒险（Control hazard）"></a>控制冒险（Control hazard）</h3><ul>
+<li>原因：指令的执行顺序被更改<ul>
+<li>转移（Transfer）: 分支（branch）, 循环（loop）, …</li>
+<li>中断（Interrupt）</li>
+<li>异常（Exception）</li>
+<li>调用 &#x2F; 返回（Call &#x2F; return）</li>
+</ul>
+</li>
+</ul>
+<h4 id="解决：取多条指令"><a href="#解决：取多条指令" class="headerlink" title="解决：取多条指令"></a>解决：取多条指令</h4><ul>
+<li>多个指令流：复制流水线的开始部分，并允许流水线同时取这两条指令，使用两个指令流</li>
+<li>预取分支目标：识别出一个条件分支指令时，除了取此分支指令之后的指令外，分支目标处的指令也被取来</li>
+<li>循环缓冲器：由流水线指令取指阶段维护的一个小的但极高速的存储器，含有 n 条最近顺序取来的指令</li>
+</ul>
+<h4 id="解决：分支预测"><a href="#解决：分支预测" class="headerlink" title="解决：分支预测"></a>解决：分支预测</h4><ul>
+<li>静态预测<ul>
+<li>预测绝不发生</li>
+<li>预测总是发生</li>
+<li>依操作码预测</li>
+</ul>
+</li>
+<li>动态预测<ul>
+<li>发生 &#x2F; 不发生切换</li>
+<li>转移历史表</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/d3e0e945af5a2c708a8b7283dd80f54f_NVIDIA_Share_1013_617.png"
+                      alt="NVIDIA_Share_1013_617.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/25/7d556dfc52fbbe33c44b347a3f8d263d_NVIDIA_Share_925_623.png"
+                      alt="NVIDIA_Share_925_623.png"
+                ></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>15_控制器</title>
+    <url>/2023/02/06/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/15_%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="1-指令周期"><a href="#1-指令周期" class="headerlink" title="1. 指令周期"></a>1. 指令周期</h1><p>处理单个指令的过程</p>
+<ul>
+<li>取指周期：从内存中提取一条指令</li>
+<li>执行周期：执行所提取的指令</li>
+</ul>
+<h2 id="1-1-指令周期"><a href="#1-1-指令周期" class="headerlink" title="1.1. 指令周期"></a>1.1. 指令周期</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/6e4ec90eb7eec117af309c9246fa01a1_89_VoIPSCreencastCoverWnd.png"
+                      alt="89_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h3 id="1-1-1-状态图"><a href="#1-1-1-状态图" class="headerlink" title="1.1.1. 状态图"></a>1.1.1. 状态图</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/66187f804a9c1a18f05fea2f49cbcfc7_8a_VoIPSCreencastCoverWnd.png"
+                      alt="8a_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h2 id="1-2-带中断的指令周期"><a href="#1-2-带中断的指令周期" class="headerlink" title="1.2. 带中断的指令周期"></a>1.2. 带中断的指令周期</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/750804e8ba395e7cdd8cecc4b65d769e_8b_VoIPSCreencastCoverWnd.png"
+                      alt="8b_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h3 id="1-2-1-状态图"><a href="#1-2-1-状态图" class="headerlink" title="1.2.1. 状态图"></a>1.2.1. 状态图</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1e4debec8b371e18d894df323101c4ba_8c_VoIPSCreencastCoverWnd.png"
+                      alt="8c_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h2 id="1-3-间址周期"><a href="#1-3-间址周期" class="headerlink" title="1.3. 间址周期"></a>1.3. 间址周期</h2><ul>
+<li>间址周期：把<strong>间接地址</strong>的读取看成是一个额外的指令子周期<ul>
+<li>指令的执行可能涉及一个或多个存储器中的操作数，它们每个都要求一次存储器访问</li>
+<li>使用间接寻址，还需要额外的存储器访问</li>
+<li>相当于取了两次操作数<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/0e44babaa68ae90abc5e0cba24f7aa6c_8d_VoIPSCreencastCoverWnd.png"
+                      alt="8d_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-1-状态图"><a href="#1-3-1-状态图" class="headerlink" title="1.3.1. 状态图"></a>1.3.1. 状态图</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/3ebefe01cd74e9268267d66a5c01ff3b_8e_VoIPSCreencastCoverWnd.png"
+                      alt="8e_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h2 id="1-4-CPU"><a href="#1-4-CPU" class="headerlink" title="1.4. CPU"></a>1.4. CPU</h2><h3 id="1-4-1-CPU任务"><a href="#1-4-1-CPU任务" class="headerlink" title="1.4.1. CPU任务"></a>1.4.1. CPU任务</h3><ol>
+<li>取指令：CPU必须从存储器（寄存器、cache、主存）读取指令</li>
+<li>解释指令：必须对指令进行译码，以确定所要求的动作</li>
+<li>取数据：指令的执行可能要求从存储器或输入&#x2F;输出（I&#x2F;O）模块中读取数据</li>
+<li>处理数据：指令的执行可能要求对数据完成某些算术或逻辑运算</li>
+<li>写数据：执行的结果可能要求写数据到存储器或I&#x2F;O模块</li>
+</ol>
+<h3 id="1-4-2-CPU需求"><a href="#1-4-2-CPU需求" class="headerlink" title="1.4.2. CPU需求"></a>1.4.2. CPU需求</h3><ul>
+<li><strong>寄存器</strong>：小容量内部存储器<ul>
+<li>CPU需要在指令周期中<strong>临时</strong>保存指令和数据</li>
+<li>CPU需要记录<strong>当前</strong>所执行指令的位置，以便知道从何处得到<strong>下一条指令</strong></li>
+</ul>
+</li>
+</ul>
+<p>假定CPU有</p>
+<ul>
+<li>1个存储地址寄存器（MAR）</li>
+<li>1个存储缓冲寄存器（MBR）&#x2F; 存储数据寄存器（MDR）</li>
+<li>1个程序计数器（PC）</li>
+<li>1个指令寄存器（IR）</li>
+</ul>
+<h2 id="1-5-数据流"><a href="#1-5-数据流" class="headerlink" title="1.5. 数据流"></a>1.5. 数据流</h2><h1 id="2-处理器结构"><a href="#2-处理器结构" class="headerlink" title="2. 处理器结构"></a>2. 处理器结构</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/07/a629116d035cda973654584f1669caa9_90_VoIPSCreencastCoverWnd.png"
+                      alt="90_VoIPSCreencastCoverWnd.png"
+                ></p>
+<h1 id="3-寄存器"><a href="#3-寄存器" class="headerlink" title="3. 寄存器"></a>3. 寄存器</h1><h2 id="3-1-用户可见寄存器"><a href="#3-1-用户可见寄存器" class="headerlink" title="3.1. 用户可见寄存器"></a>3.1. 用户可见寄存器</h2><ul>
+<li>user-visible register<ul>
+<li>允许编程人员通过机器语言或汇编语言访问，通过优化寄存器的使用而减少对主存的访问</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-1-类型"><a href="#3-1-1-类型" class="headerlink" title="3.1.1. 类型"></a>3.1.1. 类型</h3><ol>
+<li>通用寄存器（general-purpose register）<ul>
+<li>可被程序员指派各种用途</li>
+</ul>
+</li>
+<li>数据寄存器（data register）<ul>
+<li>仅可用于保持数据而不能用于操作数地址的计算</li>
+</ul>
+</li>
+<li>地址寄存器（address register）<ul>
+<li>可以是自身有某些通用性，或是专用于某种具体的寻址方式</li>
+<li>例如：段指针、变址寄存器、栈指针</li>
+</ul>
+</li>
+<li>条件码寄存器（condition codes register） &#x2F; 标志（flag）寄存器<ul>
+<li>CPU硬件设置这些条件位作为操作的结果</li>
+<li>至少是部分用户可见的</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-1-2-设计出发点"><a href="#3-1-2-设计出发点" class="headerlink" title="3.1.2. 设计出发点"></a>3.1.2. 设计出发点</h3><ol>
+<li>使用完全通用的寄存器还是规定各寄存器的用途？</li>
+<li>寄存器数量<ul>
+<li>太少的寄存器会导致更多的存储器访问</li>
+<li>太多的寄存器又不能显著地减少存储器访问</li>
+</ul>
+</li>
+<li>寄存器长度<ul>
+<li>应能保存大多数数据类型的值</li>
+<li>某些机器允许两个相邻的寄存器作为一个寄存器来保持两倍长度 的值</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-1-3-保存和恢复"><a href="#3-1-3-保存和恢复" class="headerlink" title="3.1.3. 保存和恢复"></a>3.1.3. 保存和恢复</h3><ul>
+<li>子程序调用<ul>
+<li>会导致自动保存所有用户可见的寄存器，并在返回时自动取回</li>
+<li>这些保存和恢复是作为调用和返回指令执行功能的一部分，由CPU完成</li>
+<li>允许各个子程序独立地使用用户可见寄存器</li>
+</ul>
+</li>
+<li>子程序调用之外保存用户可见寄存器的相关内容是程序员的责任，需要在程序中为此编写专门的指令</li>
+</ul>
+<h2 id="3-2-控制和状态寄存器"><a href="#3-2-控制和状态寄存器" class="headerlink" title="3.2. 控制和状态寄存器"></a>3.2. 控制和状态寄存器</h2><h3 id="3-2-1-类型"><a href="#3-2-1-类型" class="headerlink" title="3.2.1. 类型"></a>3.2.1. 类型</h3><ol>
+<li>程序计数器（Program counter，PC）<ul>
+<li>存有待取指令的地址</li>
+<li>通常在每次取指令之后，PC的内容即被CPU更改，转移或跳步指令也会修改PC的内容，因此总指向将被执行的下一条指令</li>
+</ul>
+</li>
+<li>指令寄存器（Instruction register，IR）<ul>
+<li>存有最近取来的指令，在其中分析操作码和操作数</li>
+</ul>
+</li>
+<li>存储器地址寄存器（Memory address register，MAR）<ul>
+<li>直接与地址总线相连，存有存储器位置的地址</li>
+</ul>
+</li>
+<li>存储器缓冲寄存器（Memory buffer register，MBR）<ul>
+<li>直接与数据总线相连，存有将被写入存储器的数据字或从存储器读出的字，用户可见寄存器再与MBR交换数据</li>
+<li>ALU可对MBR和用户可见寄存器直接存取</li>
+</ul>
+</li>
+<li>程序状态字（Program status word，PSW）<ul>
+<li>一个或一组包含状态信息的寄存器，包含条件码加上其他状态信息</li>
+<li>包含的字段或标志<ul>
+<li>符号（Sign）：容纳算术运算结果的符号位</li>
+<li>零（Zero）：当结果是0时被置位</li>
+<li>进位（Carry）：若操作导致最高位有向上的进位（加法）或借位（减法）时被置位，用于多字算数运算</li>
+<li>等于（Equal）：若逻辑比较的结果相等，则置位</li>
+<li>溢出（Overflow）：用于表示算术溢出</li>
+<li>中断允许&#x2F;禁止：用于允许或禁止中断</li>
+<li>监管（Supervisor）：指出CPU是执行在监管模式中还是在用户模式中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>一个指向含有附加状态信息的存储器块的指针寄存器</li>
+<li>在使用向量式中断的机器中，可能提供有一个中断向量寄存器</li>
+<li>若栈用于实现某些功能，需要有一个系统栈指针</li>
+<li>对于虚拟存储器系统，会有一个页表指针寄存器</li>
+</ol>
+<h3 id="3-2-2-设计出发点"><a href="#3-2-2-设计出发点" class="headerlink" title="3.2.2. 设计出发点"></a>3.2.2. 设计出发点</h3><ol>
+<li>设计出发点<ul>
+<li>某些类型的控制信息是专门为操作系统使用的</li>
+<li>若CPU设计者对将要使用的操作系统有基本的了解，则寄存器 的组织可能在一定程度上为该操作系统定制</li>
+</ul>
+</li>
+<li>控制信息在寄存器和存储器之间的分配<ul>
+<li>一种普遍的做法是将存储器最前面（最低地址）的几百或几千个字用于控制目的</li>
+<li>在成本和速度之间进行权衡</li>
+</ul>
+</li>
+</ol>
+<h1 id="4-微操作"><a href="#4-微操作" class="headerlink" title="4. 微操作"></a>4. 微操作</h1><ul>
+<li>定义：执行程序时，计算机操作是由一系列指令周期组成，每个周期执 行一条机器指令。每个指令周期又可以看作是由几个更小的子周期组成。每个子周期由一系列涉及<strong>CPU寄存器操作</strong>的更小步骤组成，这些步骤称为<strong>微操作</strong><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/07/c058c702798dee245234c233231682c6_91_VoIPSCreencastCoverWnd.png"
+                      alt="91_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+<h2 id="4-1-微操作分组的原则"><a href="#4-1-微操作分组的原则" class="headerlink" title="4.1. 微操作分组的原则"></a>4.1. 微操作分组的原则</h2><ul>
+<li>事件的流动顺序必须是恰当的<ul>
+<li>例：MAR &lt;- (PC) 必须先于MBR &lt;- 内存，因为内存读操作要使用 MAR中的地址</li>
+</ul>
+</li>
+<li>必须避免冲突<ul>
+<li>例：MBR &lt;- 内存 和IR &lt;- MBR 这两个微操作不应出现在同一时间 单位里</li>
+</ul>
+</li>
+<li>满足上述条件下，所用的时间单位尽可能少</li>
+</ul>
+<h2 id="4-2-取指周期"><a href="#4-2-取指周期" class="headerlink" title="4.2. 取指周期"></a>4.2. 取指周期</h2><ul>
+<li>出现在每个指令周期的开始，将指令从存储器中取出</li>
+<li>过程：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/07/57836ed7b8c3e2aba7a8644205814750_92_VoIPSCreencastCoverWnd.png"
+                      alt="92_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+<h2 id="4-3-间址周期"><a href="#4-3-间址周期" class="headerlink" title="4.3. 间址周期"></a>4.3. 间址周期</h2><ul>
+<li>如果指令采用间接寻址，则在指令执行前有一个间址周期</li>
+<li>完成间址周期后，IR的状态与不使用间接寻址方式的状态是 相同的，已经为执行周期准备就绪</li>
+<li>过程：<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/07/6c4d70bd6df5beb35e78f85aaa74fb6b_93_VoIPSCreencastCoverWnd.png"
+                      alt="93_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+<h2 id="4-4-执行周期"><a href="#4-4-执行周期" class="headerlink" title="4.4. 执行周期"></a>4.4. 执行周期</h2><ul>
+<li>对于不同的操作码，会出现不同的微操作序列</li>
+<li>例子<ul>
+<li><p>加法指令<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/07/b8cb22423d8cbfea9ddbacb8fbaf6861_94_VoIPSCreencastCoverWnd.png"
+                      alt="94_VoIPSCreencastCoverWnd.png"
+                ></p>
+</li>
+<li><p>“转移并保存地址”指令<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/07/35b0bd8a280dfb87eaf8adce99c3b54a_95_VoIPSCreencastCoverWnd.png"
+                      alt="95_VoIPSCreencastCoverWnd.png"
+                ></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-5-中断周期"><a href="#4-5-中断周期" class="headerlink" title="4.5. 中断周期"></a>4.5. 中断周期</h2><ul>
+<li>在完成执行周期时，要确定是否有允许的中断产生</li>
+<li>如果有，则出现一个中断周期</li>
+<li>过程：<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/07/c7a671b141c6af5a0273f705d6723127_96_VoIPSCreencastCoverWnd.png"
+                      alt="96_VoIPSCreencastCoverWnd.png"
+                ></li>
+</ul>
+<h2 id="4-6-指令周期代码"><a href="#4-6-指令周期代码" class="headerlink" title="4.6. 指令周期代码"></a>4.6. 指令周期代码</h2><ul>
+<li><p>Instruction Cycle Code，ICC</p>
+</li>
+<li><p>取指、间址、中断周期各有一个微操作序列，执行周期则对于每 个操作码有一个微操作序列</p>
+</li>
+<li><p>指令周期代码：假设一个2位的ICC寄存器，明确CPU处于指令 周期哪个阶段</p>
+<ul>
+<li>00：取指</li>
+<li>01：间值</li>
+<li>10：执行</li>
+<li>11：中断<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/5d3c542a2d080f9f238d2c073148033b_msedge_846_503.png"
+                      alt="msedge_846_503.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="4-7-CPU内部总线"><a href="#4-7-CPU内部总线" class="headerlink" title="4.7. CPU内部总线"></a>4.7. CPU内部总线</h2><ul>
+<li>ALU和寄存器都连接到CPU内部总线上</li>
+<li>为了数据在该内部总线和各寄存器之间传递， 内部总线和寄存器之间有门和控制信号</li>
+<li>控制线控制着数据和系统总线（外部）的交 换以及ALU的操作</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/5081d97e6c47daa240c5832888bcd1cc_msedge_319_719.png"
+                      alt="msedge_319_719.png"
+                ></p>
+<h1 id="5-控制器"><a href="#5-控制器" class="headerlink" title="5. 控制器"></a>5. 控制器</h1><h2 id="5-1-基本任务"><a href="#5-1-基本任务" class="headerlink" title="5.1. 基本任务"></a>5.1. 基本任务</h2><ul>
+<li>定序（sequencing）：根据正被执行的程序，控制器使CPU以正确 的顺序通过一系列微操作</li>
+<li>执行（execution）：控制器使每个微操作得以完成</li>
+</ul>
+<h2 id="5-2-输入"><a href="#5-2-输入" class="headerlink" title="5.2. 输入"></a>5.2. 输入</h2><ul>
+<li>指令寄存器：当前指令的寻址方式和操作码</li>
+<li>标志：确定CPU的状态和前一个ALU操作的结果</li>
+<li>时钟：控制器要在每个时钟脉冲完成一个或一组同时的微操作</li>
+<li>来自控制总线的控制信号：向控制器提供控制信号<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/eed5d2a9230287c1d780e549ed92cfe7_msedge_755_375.png"
+                      alt="msedge_755_375.png"
+                ></li>
+</ul>
+<h2 id="5-3-输出"><a href="#5-3-输出" class="headerlink" title="5.3. 输出"></a>5.3. 输出</h2><p><font color="#ff0000">所有的控制信号最终作为二进制输入量 直接输入到各个逻辑门</font><font color="#ff0000"><font color="#ff0000">上</font></font></p>
+<ul>
+<li>CPU内的控制信号<ul>
+<li>用于寄存器之间传送数据</li>
+<li>用于启动特定的ALU功能</li>
+</ul>
+</li>
+<li>到控制总线的控制信号<ul>
+<li>到存储器的控制信号</li>
+<li>到I&#x2F;O模块的控制信号</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/c5ff0eeb4faefdf25650557b901ce2b4_msedge_740_329.png"
+                      alt="msedge_740_329.png"
+                ></p>
+<h2 id="5-4-例子"><a href="#5-4-例子" class="headerlink" title="5.4. 例子"></a>5.4. 例子</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/b7c046187e00d2d7fc0d226fe0eebafc_msedge_1187_902.png"
+                      alt="msedge_1187_902.png"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/f26129c83789499516287223c20f6c0c_msedge_1188_896.png"
+                      alt="msedge_1188_896.png"
+                ></p>
+<h2 id="5-5-控制器最小特性"><a href="#5-5-控制器最小特性" class="headerlink" title="5.5. 控制器最小特性"></a>5.5. 控制器最小特性</h2><ul>
+<li>它只需要知道将被执行的指令和算术、逻辑运算结果的性质（如 正负、溢出等），而不需要知道正被处理的数据或得到的实际结 果具体是什么</li>
+<li>它只是以少量的送到CPU内的和送到系统总线上的控制信号来实 现控制</li>
+</ul>
+<h1 id="6-控制器实现"><a href="#6-控制器实现" class="headerlink" title="6. 控制器实现"></a>6. 控制器实现</h1><ul>
+<li><strong>硬布线实现（hardwired implementation）</strong><ul>
+<li>控制器是一个组合电路，把输入逻辑信号转换为一组输出逻辑信号， 即控制信号</li>
+</ul>
+</li>
+<li><strong>微程序实现（microprogrammed implementation）</strong><ul>
+<li>控制逻辑是微程序指定的，控制器是一个相对简单的逻辑电路，通 过执行每条微指令来产生控制信号</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-1-硬布线实现"><a href="#6-1-硬布线实现" class="headerlink" title="6.1. 硬布线实现"></a>6.1. 硬布线实现</h2><h3 id="6-1-1-控制器输入"><a href="#6-1-1-控制器输入" class="headerlink" title="6.1.1. 控制器输入"></a>6.1.1. 控制器输入</h3><ul>
+<li><p>标志和控制总线信号</p>
+<ul>
+<li>每位都有特定的意义</li>
+</ul>
+</li>
+<li><p>指令寄存器</p>
+<ul>
+<li>通过译码，使每一操作码有一个唯一的逻辑输入</li>
+<li>译码器有 n 个输入和 $2^n$个输出<ul>
+<li>控制器要考虑变长的操作码，译码器会更复杂些</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>时钟</p>
+<ul>
+<li>在一个指令周期内，控制器要在不同时间单位发送不同的控制信号</li>
+<li>使用一个定时器作为控制器的输入，并且控制器在指令周期结束时必须通知定时器以使其重新开始计数<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/1db94f1d8145968efa836c97c9d7cd70_msedge_591_358.png"
+                      alt="msedge_591_358.png"
+                ></li>
+</ul>
+</li>
+</ul>
+<h3 id="6-1-2-控制器逻辑"><a href="#6-1-2-控制器逻辑" class="headerlink" title="6.1.2. 控制器逻辑"></a>6.1.2. 控制器逻辑</h3><ul>
+<li>为每个输出的控制信号设计一个关于控制器输入的<strong>布尔表达式</strong></li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bc8a1b7ec094954fbf70bbcd1ecd520f_msedge_1092_491.png"
+                      alt="msedge_1092_491.png"
+                ></p>
+<h2 id="6-2-微程序实现"><a href="#6-2-微程序实现" class="headerlink" title="6.2. 微程序实现"></a>6.2. 微程序实现</h2><h3 id="6-2-1-基本概念和思路"><a href="#6-2-1-基本概念和思路" class="headerlink" title="6.2.1. 基本概念和思路"></a>6.2.1. 基本概念和思路</h3><ul>
+<li>微程序（固件）介于硬件与软件之间<ul>
+<li>设计固件比设计硬件容易，但写固件程序比软件程序困难</li>
+<li>微指令序列</li>
+</ul>
+</li>
+<li>微指令：每行描述一个时间内出现的一组微操作</li>
+<li><strong>基本思路</strong><ul>
+<li>对于每个微操作，控制器的任务是产生一组控制信号，即控制器发出的每根控制线或开或关（每根控制线由一个二进制数字表示）</li>
+<li>构造一个<strong>控制字</strong>，每位代表一根控制线，这样每个微操作能用控制 字中的不同的0和1的样式来表示</li>
+<li>将这些控制字串在一起，可以表示控制器需要完成的微操作序列</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/18ac797702538909b485ebcfb93e08cf_msedge_1057_703.png"
+                      alt="msedge_1057_703.png"
+                ></p>
+<h2 id="6-3-任务"><a href="#6-3-任务" class="headerlink" title="6.3. 任务"></a>6.3. 任务</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/7cc1ebb02b010aa7c23839616c700a2a_msedge_1137_527.png"
+                      alt="msedge_1137_527.png"
+                ></p>
+<h2 id="6-4-定序"><a href="#6-4-定序" class="headerlink" title="6.4. 定序"></a>6.4. 定序</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/91463a815f70ea84078943b5306ce1a7_msedge_1148_847.png"
+                      alt="msedge_1148_847.png"
+                ></p>
+<h2 id="6-5-构成"><a href="#6-5-构成" class="headerlink" title="6.5. 构成"></a>6.5. 构成</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/e1a5ddfc3bb20988f6c620a4c54fcb02_msedge_1179_692.png"
+                      alt="msedge_1179_692.png"
+                ></p>
+<h2 id="6-6-工作流程"><a href="#6-6-工作流程" class="headerlink" title="6.6. 工作流程"></a>6.6. 工作流程</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/1d746880d1bc47acb9052d4d06c47bdb_msedge_1182_712.png"
+                      alt="msedge_1182_712.png"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/9fd3f886e6d3f8672fff51d9fb8ad6b0_msedge_1173_711.png"
+                      alt="msedge_1173_711.png"
+                ></p>
+<h2 id="6-7-优点与缺点"><a href="#6-7-优点与缺点" class="headerlink" title="6.7. 优点与缺点"></a>6.7. 优点与缺点</h2><ul>
+<li>优点<ul>
+<li>简化了控制器的设计任务</li>
+<li>实现成本低，减少出错机会</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>比采用相同半导体工艺的硬布线控制器慢一些</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>16_总线</title>
+    <url>/2023/02/24/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/16_%E6%80%BB%E7%BA%BF/</url>
+    <content><![CDATA[<h1 id="1-总线结构"><a href="#1-总线结构" class="headerlink" title="1. 总线结构"></a>1. 总线结构</h1><ul>
+<li>数据线：在系统组件之间传输数据<ul>
+<li>数据线的数量决定了一次可以传输的数据的大小</li>
+</ul>
+</li>
+<li>地址线：在数据线和地址I&#x2F;O端口上指定数据的来源和去向<ul>
+<li>地址线的数量决定了寻址空间的大小</li>
+</ul>
+</li>
+<li>控制线：控制对数据线和地址线的存取和使用<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/458801c8257195d5ce9986d3a11be334_msedge_951_547.png"
+                      alt="msedge_951_547.png"
+                ></li>
+</ul>
+<h1 id="2-总线上数据传输的特点"><a href="#2-总线上数据传输的特点" class="headerlink" title="2. 总线上数据传输的特点"></a>2. 总线上数据传输的特点</h1><ul>
+<li><p>总线可以被多个设备监听，但同一时刻只能由<strong>一个设备</strong>发送数据；如果同一时刻多个设备同时发送数据，会造成数据之间的混淆</p>
+</li>
+<li><p>使用总线进行数据传输</p>
+<ul>
+<li>如果连在总线上的某个设备希望向另一个设备<strong>发送数据</strong>，需要：<ul>
+<li>获得总线的使用权</li>
+<li>通过总线传送数据</li>
+</ul>
+</li>
+<li>如果连在总线上的某个设备希望向另一个组件<strong>请求数据</strong>，需要：<ul>
+<li>获得总线的使用权</li>
+<li>通过总线向另一个设备发送请求，等待另一个设备发送数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>当总线在被使用过程中，其它设备<strong>不可以抢占</strong></p>
+</li>
+</ul>
+<h1 id="3-设计要素"><a href="#3-设计要素" class="headerlink" title="3. 设计要素"></a>3. 设计要素</h1><h2 id="3-1-用途"><a href="#3-1-用途" class="headerlink" title="3.1. 用途"></a>3.1. 用途</h2><ul>
+<li><strong>专用总线dedicated</strong>：始终只负责一项功能，或始终分配给特定的计算机组件<ul>
+<li>优点：高吞吐量，减少总线冲突</li>
+<li>缺点：增加了系统的规模和成本</li>
+</ul>
+</li>
+<li><strong>复用总线multiplexed</strong><ul>
+<li>优点：使用的布线数量少，节省空间和成本</li>
+<li>缺点：每个模块需要更复杂的控制电路，且共享可能会降低性能</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-仲裁"><a href="#3-2-仲裁" class="headerlink" title="3.2. 仲裁"></a>3.2. 仲裁</h2><p><strong>仲裁方案</strong></p>
+<ul>
+<li>集中式：由仲裁器（arbiter）或总线控制器 （bus controller）负责分配总线使用权<ul>
+<li>链式查询 &#x2F; 菊花链（daisy chain）</li>
+<li>计数器查询（query by a counter）</li>
+<li>独立请求（independently request）</li>
+</ul>
+</li>
+<li>分布式（distributed）：每个设备都包含访问控制逻辑，各设 备共同作用分享总线<ul>
+<li>自举式（self selection）</li>
+<li>冲突检测（collision detection）</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-1-链式查询"><a href="#3-2-1-链式查询" class="headerlink" title="3.2.1. 链式查询"></a>3.2.1. 链式查询</h3><ul>
+<li><p>所有的设备都是串行连接的，并将允许信号从优先级最高的设备下发到优先级最低的设备</p>
+</li>
+<li><p>总线仲裁器收到请求后，在总线不忙的前提下，发起允许信号 </p>
+</li>
+<li><p>如果某个设备收到了允许信号并且发起了总线请求，该设备将总线设置为繁忙状态，允许信号将不再被进一步传递</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>确定优先级简单</li>
+<li>可以更灵活地添加设备</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>不保证公平性</li>
+<li>对电力故障敏感</li>
+<li>限制总线速度</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/83186883301ed17a79330978d2f17dc8_msedge_1071_318.png"
+                      alt="msedge_1071_318.png"
+                ></p>
+<h3 id="3-2-2-计数器查询"><a href="#3-2-2-计数器查询" class="headerlink" title="3.2.2. 计数器查询"></a>3.2.2. 计数器查询</h3><ul>
+<li><p>将总线允许线替换为设备ID线 </p>
+</li>
+<li><p>如果总线空闲，总线仲裁器通过设备ID线发送计数</p>
+</li>
+<li><p>如果当前发送请求的设备ID等于裁决器当前的计数，裁决器将停止计数，设备将总线设置为忙</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>通过使用不同的初始计数，可以灵活地确定设备优先级<ul>
+<li>强调优先级：从1开始</li>
+<li>强调公平性：从下一个设备的ID开始</li>
+</ul>
+</li>
+<li>对电路故障不敏感</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>需要添加设备ID线</li>
+<li>需要解码和比较设备ID信号</li>
+<li>限制总线的速度</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/e9ef2e6785dfd254c6eaf92489305be2_msedge_1018_314.png"
+                      alt="msedge_1018_314.png"
+                ></p>
+<h3 id="3-2-3-独立请求"><a href="#3-2-3-独立请求" class="headerlink" title="3.2.3. 独立请求"></a>3.2.3. 独立请求</h3><ul>
+<li>每个设备都有自己的总线请求线和总线允许线</li>
+<li>当一个设备请求总线时，它通过总线请求线将请求信号发送给总线仲裁器</li>
+<li>总线仲裁器决定哪个设备可以使用总线<ul>
+<li>确定策略：固定优先级，公平链式，LRU，FIFO，…</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>快速响应</li>
+<li>可编程的优先级</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>复杂的控制逻辑</li>
+<li>更多的控制线路</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/9f04fa2ce8f4f276554a50cc81a4d8c3_msedge_990_325.png"
+                      alt="msedge_990_325.png"
+                ></p>
+<h3 id="3-2-4-自举式"><a href="#3-2-4-自举式" class="headerlink" title="3.2.4. 自举式"></a>3.2.4. 自举式</h3><ul>
+<li>固定优先级</li>
+<li>每个设备在其总线请求线上发送请求<ul>
+<li>最低优先级的设备没有请求线，<strong>使用Busy线</strong></li>
+</ul>
+</li>
+<li>每个设备自行判断自己是否在请求总线的设备中优先级最高</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/28e3c188b5b89fe7a04b58c37642a7a3_msedge_1089_331.png"
+                      alt="msedge_1089_331.png"
+                ><br>优先级：0&lt;1&lt;2&lt;3</p>
+<h3 id="3-2-5-冲突检测"><a href="#3-2-5-冲突检测" class="headerlink" title="3.2.5. 冲突检测"></a>3.2.5. 冲突检测</h3><ul>
+<li>当一个设备想要使用总线时，它会检查总线是否繁忙<ul>
+<li>如果总线空闲，设备使用总线</li>
+</ul>
+</li>
+<li><strong>冲突</strong>：如果两个设备发现总线空闲，它们可能同时使用总线<ul>
+<li>在传输数据时，设备会监听总线，检查是否存在冲突</li>
+<li>如果发生冲突，所有使用总线的设备将停止数据传输，并分别在随机间隔时间后再次请求总线</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-时序"><a href="#3-3-时序" class="headerlink" title="3.3. 时序"></a>3.3. 时序</h2><p>确定每个<strong>总线事务</strong>的开始和结束时间<br>总线事务：地址+数据+…+数据</p>
+<h3 id="3-3-1-同步时序"><a href="#3-3-1-同步时序" class="headerlink" title="3.3.1. 同步时序"></a>3.3.1. 同步时序</h3><ul>
+<li>同步时序：事件的发生由时钟决定</li>
+<li>优点<ul>
+<li>跟容易实现和测试</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>所用设备共享一个时钟</li>
+<li>总线长度受到时钟偏差影响</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bcce0d24cafb9420381c43dabcd0796c_msedge_530_521.png"
+                      alt="msedge_530_521.png"
+                ></p>
+<h3 id="3-3-2-异步时序"><a href="#3-3-2-异步时序" class="headerlink" title="3.3.2. 异步时序"></a>3.3.2. 异步时序</h3><ul>
+<li><p>异步时序：一个事件的发生取决于前一个事件的发生</p>
+</li>
+<li><p>握手策略<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/40bcd9533a7305a9b11b7c16bb51a28d_msedge_1057_220.png"
+                      alt="msedge_1057_220.png"
+                ></p>
+</li>
+<li><p>异步数据传输<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bebf2b876047acd859bf275551555d21_msedge_1029_602.png"
+                      alt="msedge_1029_602.png"
+                ></p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>可以灵活协调不同设备</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>逻辑接口复杂</li>
+<li>对噪声敏感</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-3-半同步时序"><a href="#3-3-3-半同步时序" class="headerlink" title="3.3.3. 半同步时序"></a>3.3.3. 半同步时序</h3><ul>
+<li>半同步：同步时序和异步时序相结合。为了减少噪声的影响，在异步计时中使用时钟<ul>
+<li>准备和响应信号在时钟上升沿有效</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/181e715ae2b4ec3c37082823d2a7e71b_msedge_1094_403.png"
+                      alt="msedge_1094_403.png"
+                ></p>
+<h3 id="3-3-4-分离事务"><a href="#3-3-4-分离事务" class="headerlink" title="3.3.4. 分离事务"></a>3.3.4. 分离事务</h3><ul>
+<li>分离事务：设备准备数据期间释放总线，将一个总线事件分离为两个过程</li>
+<li>优点<ul>
+<li>增加总线利用率</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>增加每个总线事件的持续时间和系统复杂度</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/36671cd094dbc15b6e0f9a8fdb766130_msedge_830_424.png"
+                      alt="msedge_830_424.png"
+                ></p>
+<h2 id="3-4-总线带宽和数据传输速率"><a href="#3-4-总线带宽和数据传输速率" class="headerlink" title="3.4. 总线带宽和数据传输速率"></a>3.4. 总线带宽和数据传输速率</h2><ul>
+<li>总线带宽（bus bandwidth）：总线的最大数据传输速率。理想化。</li>
+<li>传输速率：考虑地址传输，握手等。</li>
+<li>总线宽度（bus width）：组成总线的线数<ul>
+<li>数据总线越宽，一次传输的数据位数就越多</li>
+<li>地址总线越宽，一次传输的地址位数就越多</li>
+</ul>
+</li>
+<li><strong>单位</strong>：Mbps <ul>
+<li>M为$10^6$，形容bps</li>
+<li>只有在表示存储时才用mb $2^{20}$，kb $2^{10}$ </li>
+<li>k m g t p</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-1-例：同步总线和异步总线的数据传输速率"><a href="#3-4-1-例：同步总线和异步总线的数据传输速率" class="headerlink" title="3.4.1. 例：同步总线和异步总线的数据传输速率"></a>3.4.1. 例：同步总线和异步总线的数据传输速率</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/333d5ccb7f292ba52410db663d36439e_msedge_1076_555.png"
+                      alt="msedge_1076_555.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/976bf0b3e79e38cabe72f3f1af21755e_msedge_1055_628.png"
+                      alt="msedge_1055_628.png"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/230b844b23d26bbf0b25494b5b1d5312_msedge_1092_515.png"
+                      alt="msedge_1092_515.png"
+                ></p>
+<h3 id="3-4-2-例：不同数据块大小的数据传输速率"><a href="#3-4-2-例：不同数据块大小的数据传输速率" class="headerlink" title="3.4.2. 例：不同数据块大小的数据传输速率"></a>3.4.2. 例：不同数据块大小的数据传输速率</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/fe2ebc93525bc1e35002c968e5d54157_msedge_1035_608.png"
+                      alt="msedge_1035_608.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/81cfefb9dd06b5e4b7e819a3312bafc8_msedge_890_602.png"
+                      alt="msedge_890_602.png"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/7d5bdd896398523ae2db4a3afde86cf6_msedge_1036_606.png"
+                      alt="msedge_1036_606.png"
+                ></p>
+<h2 id="3-5-提高总线的数据传输率"><a href="#3-5-提高总线的数据传输率" class="headerlink" title="3.5. 提高总线的数据传输率"></a>3.5. 提高总线的数据传输率</h2><ul>
+<li>提高时钟频率</li>
+<li>增加数据总线宽度<ul>
+<li>每次传输更多的数据（成本：更多的总线线路）</li>
+</ul>
+</li>
+<li>块传输<ul>
+<li>传输一次地址就传输一块数据（成本：高复杂性）</li>
+</ul>
+</li>
+<li>分离总线事务<ul>
+<li>减少总线空闲时间（成本：复杂性高，增加每个事务的持续时间）</li>
+</ul>
+</li>
+<li>分离地址线和数据线<ul>
+<li>同时传输地址和数据（成本：更多的总线线路）</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-6-层次结构"><a href="#3-6-层次结构" class="headerlink" title="3.6. 层次结构"></a>3.6. 层次结构</h2><h3 id="3-6-1-单总线结构"><a href="#3-6-1-单总线结构" class="headerlink" title="3.6.1. 单总线结构"></a>3.6.1. 单总线结构</h3><ul>
+<li>CPU、存储器和 I&#x2F;O 模块都连接到一条系统总线</li>
+<li>优点：简单，易于扩展</li>
+<li>缺点<ul>
+<li>连接的设备越多，总线长度越大，传输延迟也就越大</li>
+<li>聚集的传输请求接近总线容量时，总线成为瓶颈</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/decf98deaffb5849d97761e1a64cd8b1_NVIDIA_Share_962_272.png"
+                      alt="NVIDIA_Share_962_272.png"
+                ></p>
+<h3 id="3-6-2-双总线结构I"><a href="#3-6-2-双总线结构I" class="headerlink" title="3.6.2. 双总线结构I"></a>3.6.2. 双总线结构I</h3><ul>
+<li>在CPU和存储器中间增加一个存储器总线</li>
+<li>优点：增加CPU和存储器之间的传输效率，同时降低系统总线的负担</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/0f8e17e23b84ee9e2e16d6acced376fd_NVIDIA_Share_968_328.png"
+                      alt="NVIDIA_Share_968_328.png"
+                ></p>
+<h3 id="3-6-3-双总线结构II"><a href="#3-6-3-双总线结构II" class="headerlink" title="3.6.3. 双总线结构II"></a>3.6.3. 双总线结构II</h3><ul>
+<li>将系统总线分为存储器总线、I&#x2F;O 总线 和 IOP (input&#x2F;output processer)</li>
+<li>优点：降低I&#x2F;O对总线的负担<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/d542c83c260d50e459111969be88a211_NVIDIA_Share_1041_401.png"
+                      alt="NVIDIA_Share_1041_401.png"
+                ></li>
+</ul>
+<h3 id="3-6-4-多总线结构I"><a href="#3-6-4-多总线结构I" class="headerlink" title="3.6.4. 多总线结构I"></a>3.6.4. 多总线结构I</h3><ul>
+<li>增加一个 <strong>本地总线（local bus）</strong>来连接 CPU 和 cache</li>
+<li>优点：增加 I&#x2F;O 效率<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/4a5cb8c06ec0ff8f1f3eb7e769b03ce6_NVIDIA_Share_1007_447.png"
+                      alt="NVIDIA_Share_1007_447.png"
+                ></li>
+</ul>
+<h3 id="3-6-5-多总线结构II"><a href="#3-6-5-多总线结构II" class="headerlink" title="3.6.5. 多总线结构II"></a>3.6.5. 多总线结构II</h3><ul>
+<li>将系统总线分为存储器总线、I&#x2F;O 总线和 <strong>DMA 总线</strong></li>
+<li>优点：增加 I&#x2F;O 效率<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/955bae7c66f39b06978d76381dfe24f9_NVIDIA_Share_1025_321.png"
+                      alt="NVIDIA_Share_1025_321.png"
+                ></li>
+</ul>
+<h3 id="3-6-6-多总线结构III"><a href="#3-6-6-多总线结构III" class="headerlink" title="3.6.6. 多总线结构III"></a>3.6.6. 多总线结构III</h3><ul>
+<li>增加一个 高速 I&#x2F;O 总线 来连接高速设备</li>
+<li>优点：增加 I&#x2F;O 交互效率<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/1925f5de97d61216df199455540b18a7_NVIDIA_Share_1032_469.png"
+                      alt="NVIDIA_Share_1032_469.png"
+                ></li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>17_输入输出</title>
+    <url>/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/17_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <content><![CDATA[<h1 id="1-外围设备"><a href="#1-外围设备" class="headerlink" title="1. 外围设备"></a>1. 外围设备</h1><p>输入/输出操作通过连接到输入输出模块的各种外部设备完成， 这些外部设备提供了在外部环境和计算机系统之间的数据交 换，通常被称为<strong>外围设备（peripheral device</strong>），简称为外设 （peripheral）</p>
+<ul>
+<li>为什么<strong>不能</strong>把外设直接连接到系统总线上？<ul>
+<li>外设种类繁多，操作方法多种多样</li>
+<li>外设的数据传送速度一般比存储器或处理器的慢得多</li>
+<li>某些外设的数据传送速度比存储器或处理器要快</li>
+<li>外设使用的数据格式和字长度通常与处理器不同</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-I-O模块"><a href="#2-I-O模块" class="headerlink" title="2. I/O模块"></a>2. I/O模块</h1><ul>
+<li>通过系统总线或中央交换器和存储器连接</li>
+<li>通过<strong>专用数据线</strong>与一个或多个外设连接</li>
+<li>I/O模块是计算机内部系统和外设之间的桥梁<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/32be486ac10d89d09eda4666959010da_NVIDIA_Share_469_469.png" alt="NVIDIA_Share_469_469.png"></li>
+</ul>
+<h2 id="2-1-外围设备的接口"><a href="#2-1-外围设备的接口" class="headerlink" title="2.1. 外围设备的接口"></a>2.1. 外围设备的接口</h2><ul>
+<li>输入/输出模块的接口以<strong>控制、状态和数据信号</strong>的形式出现</li>
+<li>与设备相关的控制逻辑控制外设的操作，以响应来自输入/输出模块的命令</li>
+<li><strong>缓冲器</strong>用于缓存输入/输出模块和外设之间传送的数据<ul>
+<li>缓冲器的大小一般为8位或16位</li>
+<li>速率不一致，缓冲</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/081fda1a8645a3ea97fc9e823d6d30f7_NVIDIA_Share_473_447.png" alt="NVIDIA_Share_473_447.png"></p>
+<h2 id="2-2-I-O模块的功能"><a href="#2-2-I-O模块的功能" class="headerlink" title="2.2. I/O模块的功能"></a>2.2. I/O模块的功能</h2><h3 id="2-2-1-处理器通信"><a href="#2-2-1-处理器通信" class="headerlink" title="2.2.1. 处理器通信"></a>2.2.1. 处理器通信</h3><ul>
+<li>命令译码：输入/输出模块接收来自处理器的命令，这些命令一般 作为信号发送到控制总线</li>
+<li>数据：数据是在处理器和输入/输出模块之间经由数据总线来交换的</li>
+<li>状态报告：由于外设速度很慢, 所以知道输入/输出模块的状态很重要</li>
+<li>地址识别：输入/输出模块必须能识别它所控制的每个外设的唯一 地址</li>
+</ul>
+<h3 id="2-2-2-设备通信"><a href="#2-2-2-设备通信" class="headerlink" title="2.2.2. 设备通信"></a>2.2.2. 设备通信</h3><p>通信内容包含命令、状态信息和数据</p>
+<h3 id="2-2-3-数据缓冲"><a href="#2-2-3-数据缓冲" class="headerlink" title="2.2.3. 数据缓冲"></a>2.2.3. 数据缓冲</h3><ul>
+<li>外设的数据传送速度一般比存储器或处理器的慢得多</li>
+<li>某些外设的数据传送速度比存储器或处理器要快</li>
+</ul>
+<h3 id="2-2-4-控制和定时"><a href="#2-2-4-控制和定时" class="headerlink" title="2.2.4. 控制和定时"></a>2.2.4. 控制和定时</h3><ul>
+<li>处理器会<strong>非预期的</strong>与一个或几个外设进行通信</li>
+<li>一些内部资源，如<strong>主存和系统总线，是被共享的</strong></li>
+<li>例子：控制从外设到处理器的数据传送包括以下几个步骤<ul>
+<li>处理器查询输入/输出模块以检验所连接设备的状态</li>
+<li>输入输出模块返回设备状态</li>
+<li>如果设备运转并准备就绪，则处理器通过向输入/输出模块发出一条命令,请求数据传送</li>
+<li>数据从输入/输出模块来到处理器</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-5-检错"><a href="#2-2-5-检错" class="headerlink" title="2.2.5. 检错"></a>2.2.5. 检错</h3><ul>
+<li>检错并把差错信息报告给处理器</li>
+<li>差错类型<ul>
+<li>设备报告的机械和电路故障</li>
+<li>传输过程中数据位的变化</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-I-O模块结构"><a href="#2-3-I-O模块结构" class="headerlink" title="2.3. I/O模块结构"></a>2.3. I/O模块结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/3f9f5419e48c74183cd40192275587c9_NVIDIA_Share_1180_886.png" alt="NVIDIA_Share_1180_886.png"></p>
+<ul>
+<li>USB：通用串行总线（Universal Serial Bus）</li>
+<li>FireWire：IEEE标准1394串行总线</li>
+</ul>
+<h1 id="3-I-O操作技术"><a href="#3-I-O操作技术" class="headerlink" title="3. I/O操作技术"></a>3. I/O操作技术</h1><ul>
+<li>编程式 I/O：处理器通过执行程序<strong>来直接控制I/O操作</strong>，当处理器发送一条命令到I/O模块时，它必须等待，直到I/O操作完成</li>
+<li>中断驱动式 I/O：处理器发送一条I/O命令后，继续执行其他指令； 并且当I/O模块完成其工作后，才去中断处理器工作</li>
+<li>直接存储器读取（Direct Memory Access，DMA）：I/O模块与主存直接交换数据，而不需要处理器的干涉</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>I/O与存储器传递方式</th>
+<th>无中断</th>
+<th>使用中断</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>通过处理器</td>
+<td>编程式I/O</td>
+<td>中断驱动式I/O</td>
+</tr>
+<tr>
+<td>直接传递</td>
+<td></td>
+<td>直接存储器存取（DMA）</td>
+</tr>
+</tbody></table>
+<h2 id="3-1-编程式I-O"><a href="#3-1-编程式I-O" class="headerlink" title="3.1. 编程式I/O"></a>3.1. 编程式I/O</h2><ul>
+<li>当<strong>处理器</strong>在执行过程中遇到一条与I/O操作有关的指令时，它通过发送指令到适当 的I/O模块来执行这条指令</li>
+<li>I/O模块将执行所要求的动作，然后在I/O 状态寄存器中设置一些适当的位</li>
+<li>I/O不会中断处理器，因此处理器需要周期性地检查I/O模块的状态，直到发现该操作完成</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/84962f8ad92f7ad35dedf3424797d7e9_NVIDIA_Share_292_626.png" alt="NVIDIA_Share_292_626.png"></p>
+<h3 id="3-1-1-I-O命令"><a href="#3-1-1-I-O命令" class="headerlink" title="3.1.1. I/O命令"></a>3.1.1. I/O命令</h3><ul>
+<li>为了执行I/O操作，<strong>处理器</strong>发送一个指定具体I/O模块和外设的地址，并发送一条<strong>I/O命令</strong></li>
+<li>类型<ul>
+<li>控制命令：激活外设并告诉它要做什么</li>
+<li>测试命令：测试I/O模块及其外设相关的各种状态条件</li>
+<li>读命令：使I/O模块从外设获得一个数据，把它存入内部缓冲区</li>
+<li>写命令：使I/O模块从数据总线获得一个数据，把它传入外设</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-2-I-O指令"><a href="#3-1-2-I-O指令" class="headerlink" title="3.1.2. I/O指令"></a>3.1.2. I/O指令</h3><ul>
+<li>I/O指令很容易映射为I/O命令, 并且两者之间通常是简单的一 一对应关系<ul>
+<li>指令的形式取决于外设寻址的方式</li>
+</ul>
+</li>
+<li>编址方式<ul>
+<li>存储器映射式I/O：存储单元和I/O设备有统一的地址空间<ul>
+<li>能使用大的指令系统，可进行更有效的编程</li>
+</ul>
+</li>
+<li>分离式I/O：让总线既有存储器的读线和写线，同时也有输入和输出命令线</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-中断驱动式I-O"><a href="#3-2-中断驱动式I-O" class="headerlink" title="3.2. 中断驱动式I/O"></a>3.2. 中断驱动式I/O</h2><ul>
+<li>处理器发送一个I/O命令到模块，然后去处理其它有用的工作</li>
+<li>当I/O模块准备好和处理器交换数据时，它<strong>中断处理器</strong>以请求服务</li>
+<li>处理器执行数据传送，最后恢复它原先的处理工作</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/36fa86caa632a2ede1a3574b7a4ee00a_36fa86caa632a2ede1a3574b7a4ee00a_NVIDIA_Share_344_681.png" alt="NVIDIA_Share_344_681.png"></p>
+<h3 id="3-2-1-从处理器视角和IO视角看中断"><a href="#3-2-1-从处理器视角和IO视角看中断" class="headerlink" title="3.2.1. 从处理器视角和IO视角看中断"></a>3.2.1. 从处理器视角和IO视角看中断</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/2bcb2629f54195d02ec4c9302d2dd724_NVIDIA_Share_1090_455.png" alt="NVIDIA_Share_1090_455.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/9986d19d4a666411964d7a81abaf6473_NVIDIA_Share_1070_370.png" alt="NVIDIA_Share_1070_370.png"></p>
+<h3 id="3-2-2-中断允许和中断禁止"><a href="#3-2-2-中断允许和中断禁止" class="headerlink" title="3.2.2. 中断允许和中断禁止"></a>3.2.2. 中断允许和中断禁止</h3><ul>
+<li>保存上下文和恢复上下文过程中<strong>禁止中断</strong></li>
+<li>处理中断和恢复完上下文后<strong>允许中断</strong><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/c70d88515715d4e2975bbc1ade1e222d_NVIDIA_Share_1186_875.png" alt="NVIDIA_Share_1186_875.png"></li>
+</ul>
+<h3 id="3-2-3-响应优先级和处理优先级"><a href="#3-2-3-响应优先级和处理优先级" class="headerlink" title="3.2.3. 响应优先级和处理优先级"></a>3.2.3. 响应优先级和处理优先级</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/37c2b9436672122529f80b9562191ae8_NVIDIA_Share_1162_619.png" alt="NVIDIA_Share_1162_619.png"></p>
+<h3 id="3-2-4-设备识别"><a href="#3-2-4-设备识别" class="headerlink" title="3.2.4. 设备识别"></a>3.2.4. 设备识别</h3><ul>
+<li>多条中断线<ul>
+<li>即使有多条中断线可用，每条线上也需要采用其它三种技术中的一种</li>
+</ul>
+</li>
+<li>软件轮询<ul>
+<li>轮询每一个I/O模块来确定是哪个模块发生的中断</li>
+</ul>
+</li>
+<li>菊花链<ul>
+<li>所有的I/O模块共享一条中断请求线，中断应答线采用菊花链穿过这些中断模块</li>
+</ul>
+</li>
+<li>独立请求<ul>
+<li>特定的中断控制器用于解码和分析优先级</li>
+</ul>
+</li>
+</ul>
+<p>类似：[[16_总线#3.2. 仲裁]]</p>
+<h3 id="3-2-5-分配优先级"><a href="#3-2-5-分配优先级" class="headerlink" title="3.2.5. 分配优先级"></a>3.2.5. 分配优先级</h3><ul>
+<li>多条中断线：处理器仅仅挑选具有最高优先级的中断线</li>
+<li>软件轮询：模块的轮询次序就决定了模块的优先级</li>
+<li>菊花链：链接模块次序就决定了模块的优先级</li>
+<li>独立请求：中断控制器决定</li>
+</ul>
+<h2 id="3-3-直接存储器存取DMA"><a href="#3-3-直接存储器存取DMA" class="headerlink" title="3.3. 直接存储器存取DMA"></a>3.3. 直接存储器存取DMA</h2><ul>
+<li>不足<ul>
+<li>I/O传送速度受处理器测试和服务设备速度的限制</li>
+<li>处理器负责管理I/O传送，对于每一次I/O传送，处理器必须执行很多指令</li>
+</ul>
+</li>
+<li>直接存储器存取<ul>
+<li>无需经过处理器即可直接访问内存的模块</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/feeb193c5f1f8c3ae30f40f8f23be81d_NVIDIA_Share_364_701.png" alt="NVIDIA_Share_364_701.png"></p>
+<h3 id="3-3-1-处理过程"><a href="#3-3-1-处理过程" class="headerlink" title="3.3.1. 处理过程"></a>3.3.1. 处理过程</h3><ul>
+<li>处理器通过发送以下信息向DMA模块发出命令：读/写、I/O设备地址、内存中的起始位置、字数</li>
+<li>处理器继续进行其他工作</li>
+<li>DMA模块将全部数据块，每次一个字，直接将数据传输到存储器或从存储器读出，而<strong>无需经过处理器</strong></li>
+<li><strong>当传输完成时</strong>，DMA模块向处理器发送一个中断信号</li>
+</ul>
+<h3 id="3-3-2-DMA内存访问"><a href="#3-3-2-DMA内存访问" class="headerlink" title="3.3.2. DMA内存访问"></a>3.3.2. DMA内存访问</h3><h4 id="3-3-2-1-CPU停止法"><a href="#3-3-2-1-CPU停止法" class="headerlink" title="3.3.2.1. CPU停止法"></a>3.3.2.1. CPU停止法</h4><ul>
+<li>优点：控制简单</li>
+<li>缺点：影响CPU，没有充分利用内存</li>
+<li>适用：高速I/O设备的块传输<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/2d7422830f6fb6d52eb4fbca0fd33502_NVIDIA_Share_948_300.png" alt="NVIDIA_Share_948_300.png"></li>
+</ul>
+<h4 id="3-3-2-2-周期窃取"><a href="#3-3-2-2-周期窃取" class="headerlink" title="3.3.2.2. 周期窃取"></a>3.3.2.2. 周期窃取</h4><ul>
+<li>优点：充分利用CPU和内存，及时响应I/O请求</li>
+<li>缺点：DMA每次都请求总线</li>
+<li>适用：I/O周期大于存储周期<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/12047bf6ca615049da2f1567b92981b5_NVIDIA_Share_965_303.png" alt="NVIDIA_Share_965_303.png"></li>
+</ul>
+<h4 id="3-3-2-3-交替分时访问"><a href="#3-3-2-3-交替分时访问" class="headerlink" title="3.3.2.3. 交替分时访问"></a>3.3.2.3. 交替分时访问</h4><ul>
+<li>优点：CPU未停止或等待，DMA不请求总线</li>
+<li>缺点：CPU周期大于存储周期<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/14aaebdf4deee5b894f1c20eb8b3ecd8_NVIDIA_Share_915_326.png" alt="NVIDIA_Share_915_326.png"></li>
+</ul>
+<h3 id="3-3-3-DMA配置机制"><a href="#3-3-3-DMA配置机制" class="headerlink" title="3.3.3. DMA配置机制"></a>3.3.3. DMA配置机制</h3><h4 id="3-3-3-1-单总线分离DMA"><a href="#3-3-3-1-单总线分离DMA" class="headerlink" title="3.3.3.1. 单总线分离DMA"></a>3.3.3.1. 单总线分离DMA</h4><ul>
+<li>所有模块共享相同的系统总线</li>
+<li>DMA模块使用<strong>编程式I/O</strong>，通过DMA模块在存储器和I/O模块之间交换数据</li>
+<li>便宜但低效<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/33ccba4c17f39248a793a9242b9dd7c9_NVIDIA_Share_847_213.png" alt="NVIDIA_Share_847_213.png"></li>
+</ul>
+<h4 id="3-3-3-2-单总线集合的DMA-I-O"><a href="#3-3-3-2-单总线集合的DMA-I-O" class="headerlink" title="3.3.3.2. 单总线集合的DMA-I/O"></a>3.3.3.2. 单总线集合的DMA-I/O</h4><ul>
+<li>DMA逻辑实际上可能是I/O模块的一部分，也可能是控制一个或多个I/O模块的单独模块</li>
+<li>减少总线周期数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/79750831cb015a614092b246efabac28_NVIDIA_Share_775_230.png" alt="NVIDIA_Share_775_230.png"></li>
+</ul>
+<h4 id="3-3-3-3-I-O-总线"><a href="#3-3-3-3-I-O-总线" class="headerlink" title="3.3.3.3. I/O 总线"></a>3.3.3.3. I/O 总线</h4><ul>
+<li>使用I/O总线将I/O模块连接到DMA模块</li>
+<li>多个I/O模块共享DMA，且易于扩展<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/92aa65b994db7f43b1bbc284c75db767_NVIDIA_Share_771_283.png" alt="NVIDIA_Share_771_283.png"></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/e3906e7db3ced54a1f17b29c1974f70f_NVIDIA_Share_610_729.png" alt="NVIDIA_Share_610_729.png"></p>
+<h1 id="4-I-O模块的演变"><a href="#4-I-O模块的演变" class="headerlink" title="4. I/O模块的演变"></a>4. I/O模块的演变</h1><ul>
+<li>CPU直接控制外设</li>
+<li>增加控制器或I/O模块，CPU使用编程式I/O，将CPU与外围设备的细节分离</li>
+<li>采用中断，CPU无需花费时间等待外围设备就绪</li>
+<li>I/O模块可通过DMA直接存取存储器，无需CPU负责存储器和I/O模块之间的数据传递</li>
+<li>I/O通道（I/O channel）：I/O模块有自己的处理器，带有专门为I/O操作定制的指令集</li>
+<li>CPU指示I/O通道执行存储器中的I/O指令，只有在执行完成后才会中断CPU</li>
+<li>I/O处理器（I/O processor）：I/O模块有一个局部存储器，I/O模块成为一个自治的计算机，常用于与交互式终端进行通信</li>
+<li>只需最少的CPU参与即可控制大量I/O设备</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+</search>
