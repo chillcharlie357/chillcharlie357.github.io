@@ -105,3 +105,13 @@ deploy:
   type: git
   repo: git@github.com:chillcharlie357/chillcharlie357.github.io.git
   branch: gh-pages
+
+mathjax:
+  tags: none               # or 'ams' or 'all'
+  single_dollars: true     # enable single dollar signs as in-line math delimiters
+  cjk_width: 0.9           # relative CJK char width
+  normal_width: 0.6        # relative normal (monospace) width
+  append_css: true         # add CSS to every page
+  every_page: false        # if true, every page will be rendered by mathjax regardless the `mathjax` setting in Front-matter of each article
+
+all_minifier: true
