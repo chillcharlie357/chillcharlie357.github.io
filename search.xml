@@ -2,15 +2,16 @@
 <search>
   <entry>
     <title>更新日志</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/changelog/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/changelog/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>12.17 Linux使用分享</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/12.17%20Linux%E4%BD%BF%E7%94%A8%E5%88%86%E4%BA%AB/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/12.17%20Linux%E4%BD%BF%E7%94%A8%E5%88%86%E4%BA%AB/</url>
     <content><![CDATA[<h1 id="1-Linux概述"><a href="#1-Linux概述" class="headerlink" title="1. Linux概述"></a>1. Linux概述</h1><h2 id="1-1-发展历史"><a href="#1-1-发展历史" class="headerlink" title="1.1. 发展历史"></a>1.1. 发展历史</h2><p><strong>Linux</strong>是一种<a class="link" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6">自由和开放源码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E7%B1%BBUnix%E7%B3%BB%E7%BB%9F">类UNIX <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1">操作系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。该操作系统的<a class="link" href="https://zh.wikipedia.org/wiki/%E5%86%85%E6%A0%B8">内核 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>由Linus_Torvalds在1991年10月5日首次发布，再加上<a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%BF%E7%94%A8%E8%80%85%E7%A9%BA%E9%96%93">用户空间 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F">应用程序 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>之后，就成为了Linux操作系统。除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like。</p>
 <p>只要遵循<a class="link" href="https://zh.wikipedia.org/wiki/GNU%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E8%AF%81">GNU 通用公共许可证 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（GPL），任何个人和机构都可以自由地使用Linux的所有底层<a class="link" href="https://zh.wikipedia.org/wiki/%E6%BA%90%E4%BB%A3%E7%A0%81">源代码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，也可以自由地修改和再发布。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTNkMzIyODMyYzlhZDk3MGU0OWU0MzQwYzU3ZGQ0ZDhfMlNPT1JIRElacXFjT2FrV0ljS24zSWowR3lXQjFZMjBfVG9rZW46SDkwS2JRZnB5b0RrUG54cGlKdGNlQVFRblBnXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmZiMjdiMjYyYmNjNzA0OWI3NWNhNjc0ZThkNWE2ODZfM014QkZ6NHRKeG5oa01LNDZMbkVJU2wwYTdyODkyd2FfVG9rZW46QWV6YmJuRW9ObzYzSld4TWtSamNxNUtZbnRlXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-40-14-cef124053748f929f2d2691e8ccd14df-20231226194013-5e1031.png" alt="image.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-40-24-ea5e35739bc8fdfa7a881aa69568119d-20231226194024-6a9f39.png" alt="image.png"></p>
 <h2 id="1-2-不同发行版"><a href="#1-2-不同发行版" class="headerlink" title="1.2. 不同发行版"></a>1.2. 不同发行版</h2><p><strong>Linux 发行版</strong>，为一般用户预先集成好的<a class="link" href="https://zh.wikipedia.org/wiki/Linux">Linux <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1">操作系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>及各种应用软件。一般用户不需要重新<a class="link" href="https://zh.wikipedia.org/wiki/%E7%BC%96%E8%AF%91">编译 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，在直接安装之后，只需要小幅度更改设置就可以使用，通常以<a class="link" href="https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">软件包管理系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>来进行应用软件的管理。还有很多发行版是基于其他发行版再次修改的。</p>
 <ul>
 <li>常见的发行版包括：<ul>
@@ -22,17 +23,19 @@
 </li>
 </ul>
 <p>你可以在这个网站查看各个发行版的排名：<a class="link" href="https://distrowatch.com/">https://distrowatch.com/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> （ 标准为<strong>HPD：Hits Per Day）</strong></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTE4Y2U1ZTRmOTk0MjQwMGQ0OTc1MDM2ZTZlNTU4ZGZfaFF4R2pxUlpmcU9EYUxQN2N6ZTRjaklVeTFPa3BVVFFfVG9rZW46RVNyTmJNaVljb0VpTkN4aXdPMWN0d2dVbk1mXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTBhNGE4YmJmN2NkZGNhODQwOGJkZGI1YzVkMGZkZTZfQWtOZU5qdlBQVmN0ek1sM0NSWUVrR0JHc25aYUJCMEFfVG9rZW46RWs4aWJVUnh3b3ZzY0d4SmJxQWNuekp3bmJqXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-40-43-0ca336f796cd8fb68f83f4c3a2f9d6c4-20231226194042-9ef623.png" alt="image.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-40-51-022f96c116ade14fb6fa00e98890905b-20231226194050-56112a.png" alt="image.png"></p>
 <h2 id="1-3-为什么要用linux"><a href="#1-3-为什么要用linux" class="headerlink" title="1.3. 为什么要用linux"></a>1.3. 为什么要用linux</h2><p>自己平时Ubuntu用的多，下面就按Ubuntu为准（</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGU4M2JlOGUzNjAyMTg2NDIwZDlmMzc0Y2Q3NTI1YzJfSDV4Qk9mN083NmZsbmFMSGV3cGc2dnRhUnNzMHAyeTBfVG9rZW46STZNMWJ2U0hpb0VWM0N4RHFRZWNMeDA2blVlXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-40-58-6d8d2dee3c837430a7aecbcafca1cc45-20231226194058-e3b7c4.png" alt="image.png"></p>
 <h3 id="1-3-1-增加就业竞争力"><a href="#1-3-1-增加就业竞争力" class="headerlink" title="1.3.1. 增加就业竞争力"></a>1.3.1. 增加就业竞争力</h3><p>优秀程序员必备技能。</p>
 <h3 id="1-3-2-提高coding的效率"><a href="#1-3-2-提高coding的效率" class="headerlink" title="1.3.2. 提高coding的效率"></a>1.3.2. 提高coding的效率</h3><ol>
 <li>更适合程序员体质的工具链</li>
 <li>更简单的环境配置（显卡驱动除外）</li>
 </ol>
 <h4 id="1-3-2-1-例子：配置gcc"><a href="#1-3-2-1-例子：配置gcc" class="headerlink" title="1.3.2.1. 例子：配置gcc"></a>1.3.2.1. 例子：配置gcc</h4><p>在windows下配置gcc：下载MinGW，在藏得很深的系统菜单里找到环境变量，写一堆复杂的环境变量。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=NWM1NzhlZGIyMTljNDE1OTBjMDNlY2RhZDk2OGQ1N2Jfd1Y5WlVFbFM2NHpyTjV2UFh4YlMzSzY0aUp2TGtQRUhfVG9rZW46QjF3T2JGSDhobzQ2c0F4d3dqUmNGejhubmpoXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
-<p>在ubuntu下配置gcc：<code>sudo apt install build-essential</code>。<br><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=Yjc5N2RmNzZiY2IzZTNjNmU5NjkwYWM0ZDI0NWI4NGVfQTRERzV3VXFUdWVjblJ3TDFxaEdocHVMVlNnc2FKMEJfVG9rZW46WTRwb2IwRzN3bzFCQU54TUR5emNtckRXbk9nXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-41-06-2d3fff66704b78af141ed43a50891355-20231226194105-723ce2.png" alt="image.png"></p>
+<p>在ubuntu下配置gcc：<code>sudo apt install build-essential</code>。  </p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-41-16-594590d8b2301421664fa89c06d53140-20231226194116-209d31.png" alt="image.png"></p>
 <h3 id="1-3-3-生态丰富"><a href="#1-3-3-生态丰富" class="headerlink" title="1.3.3. 生态丰富"></a>1.3.3. 生态丰富</h3><ul>
 <li>数据库 MySQL、PostgreSQL</li>
 <li>消息队列 RabbitMQ、Kafka</li>
@@ -49,7 +52,8 @@
 </ul>
 </li>
 </ol>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=MmRjMDU1ODk4YjMyMTk1MzUwYjFhNTAzNjQyOWVlZjFfbXhUTDlyaFlsVlZMV2JWeXZlRUZyVXBLM2p0SExNT09fVG9rZW46R3kyOGJOU3Bwb09oRG94Q21QaGM5WTNIbnNiXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjk3MTM5Y2FhYWI5ODMyNzkyMTJhZDhmMDFhYzJjODhfV3NFN3R5MWNxUExaZGJqeUw4NnJzeENCRmx4a3NsUXZfVG9rZW46SlRaZmJLTERDb0VKTG54SXhZRGNQUlYwbjNlXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-41-28-bdafd3a6b5069af3baf10a882b0cbb07-20231226194127-7a24d5.png" alt="image.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-41-32-2c6df3cc1026545b680da70ef88cab80-20231226194131-930dc1.png" alt="image.png"></p>
 <h1 id="2-安装Linux"><a href="#2-安装Linux" class="headerlink" title="2. 安装Linux"></a>2. 安装Linux</h1><p>为什么推荐使用实机而非虚拟机？</p>
 <ol>
 <li>稳定性会比虚拟机相对高一些</li>
@@ -80,7 +84,7 @@
 <h1 id="4-Google-ChatGPT"><a href="#4-Google-ChatGPT" class="headerlink" title="4. Google + ChatGPT"></a>4. <strong>Google + ChatGPT</strong></h1><p>只要你能把问题描述清楚，多半能找到解决方法。</p>
 <h1 id="5-命令行环境"><a href="#5-命令行环境" class="headerlink" title="5. 命令行环境"></a>5. 命令行环境</h1><h2 id="5-1-tldr：man的省流版"><a href="#5-1-tldr：man的省流版" class="headerlink" title="5.1. tldr：man的省流版"></a>5.1. tldr：man的省流版</h2><p><strong>TL;DR（Too Long; Didn’t Read）</strong> 是一个开源项目，旨在<strong>提供简化和精简的命令行工具文档</strong>。它是一个命令行工具，供开发人员和系统管理员快速查找和了解各种命令的用法和示例。<br>TL;DR的设计初衷是<strong>解决传统的命令行手册文档过于冗长和复杂的问题</strong>，所以它会用简明扼要的方式来解释和演示常用命令的基本功能和用法。每个命令都有一个简短的描述，然后是一些常用的示例，展示了如何在实际场景中使用该命令。</p>
 <p><a class="link" href="https://tldr.sh/">tldr pages <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjQ0OTk2NjQzOTk3ODhhZjJhYjA3NDk4MmJhMjNlZjhfY0xKNXgwZnRjT2dlSmk3cWtPTzlPN25hbDZPMUU5MExfVG9rZW46UWltMGJVTEFyb3VkNDZ4cFVja2NXR3JubnZmXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-41-42-379aae210d1a2da49ada41334dd1890d-20231226194142-3b09e9.png" alt="image.png"></p>
 <h2 id="5-2-文件重定向和管道"><a href="#5-2-文件重定向和管道" class="headerlink" title="5.2. 文件重定向和管道"></a>5.2. 文件重定向和管道</h2><p><a class="link" href="https://www.redhat.com/sysadmin/linux-shell-redirection-pipelining">https://www.redhat.com/sysadmin/linux-shell-redirection-pipelining <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <ul>
 <li>文件描述符：<ul>
@@ -91,7 +95,7 @@
 </li>
 </ul>
 <p>你可以利用重定向和管道来操作和更改这三种基本文件描述符的默认行为。例如，你可以将键盘输入改为文件输入。你可以将信息重定向到文件，而不是在终端上获取信息，甚至丢弃错误信息，而不是在显示器上看到它们。你还可以同时将输出重定向到终端和文件。你甚至可以将一条命令的输出作为另一条命令的输入来处理。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=ODhjOTJmYjlkMTRlNGVmN2NiNzNjNzdhNDA2ZjMzOTVfdVliM01ZTDB0Q2x4R2NYTTh6QmpPU1RGRkxlU0JGclFfVG9rZW46RmVkT2JQQ1JOb0daQ2x4elpvZWNibUk1bjViXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-41-49-45ed5b87133a5325d2e424083bf7fbba-20231226194148-6dc07d.png" alt="image.png"></p>
 <p>特殊用法 cat &lt;&lt; EOF</p>
 <h3 id="5-2-1-重定向"><a href="#5-2-1-重定向" class="headerlink" title="5.2.1. 重定向"></a>5.2.1. 重定向</h3><p>例子：</p>
 <p>将指定命令的标准输出重定向到文件：</p>
@@ -123,7 +127,7 @@
 
 <h3 id="5-2-2-管道"><a href="#5-2-2-管道" class="headerlink" title="5.2.2. 管道"></a>5.2.2. 管道</h3><p><strong>管道</strong>：多个程序可以一起运行，一个程序可以直接将另外一个程序的输出作为其输入，并且不需要借助中间文件.</p>
 <p>在 Linux 中，管道是一种允许两个或多个进程合并或并发执行的机制。这意味着进程的输出将作为下一个进程的输入来处理，以此类推。管道并不是白叫的：它指的是进程流通过管道从源头流向目的地的概念。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://yizviqvxjz.feishu.cn/space/api/box/stream/download/asynccode/?code=MmYxZDE5ZDVlZTkxNDFjZmY0YmU5MGM5MzcyNTNlYzdfaDNPTERZUkxDV2tPc3ppWHI1OEl6UnpiTHhycnpkZDdfVG9rZW46TmhmTGJ3UXUyb2IxbVN4QlRxYmNyOEh5bnZlXzE3MDI4MjU0ODc6MTcwMjgyOTA4N19WNA"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-41-59-262c2971c72449900e3e82e6cdfb8a53-20231226194159-4679d2.png" alt="image.png"></p>
 <p>例子：</p>
 <p>将 cat 命令的输出结果输入 grep 输入命令：</p>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/passwd | grep localuser</span><br></pre></td></tr></table></figure></div>
@@ -152,7 +156,7 @@
 </li>
 </ul>
 <p>为什么windows的shell不好用？因为它不完全遵守POSIX协议。</p>
-<p><strong>POSIX（Portable Operating System Interface）</strong>是一个定义了操作系统接口标准的协议。它是由IEEE（Institute of Electrical and Electronics Engineers）组织制定的，旨在提供可移植性和互操作性，使得在不同的UNIX-like操作系统上编写的应用程序能够在其他兼容POSIX的系统上运行。Linux、macOS和FreeBSD等UNIX-like都遵守该协议。</p>
+<p><strong>POSIX（Portable Operating System Interface）</strong> 是一个定义了操作系统接口标准的协议。它是由IEEE（Institute of Electrical and Electronics Engineers）组织制定的，旨在提供可移植性和互操作性，使得在不同的UNIX-like操作系统上编写的应用程序能够在其他兼容POSIX的系统上运行。Linux、macOS和FreeBSD等UNIX-like都遵守该协议。</p>
 <ol>
 <li><p><strong>Shell</strong>：POSIX标准中定义了一种命令行解释器的接口，称为Shell。Shell是一个用于解释和执行命令的程序，用户可以在Shell中输入命令来与操作系统进行交互。POSIX要求操作系统提供符合Shell接口规范的默认Shell，例如Bourne Shell（/bin/sh）或C Shell（/bin/csh）。</p>
 </li>
@@ -201,7 +205,7 @@
   </entry>
   <entry>
     <title>0-introduction</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/0-introduction/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/0-introduction/</url>
     <content><![CDATA[<h1 id="1-问题域-解系统"><a href="#1-问题域-解系统" class="headerlink" title="1. 问题域/解系统"></a>1. 问题域/解系统</h1><ul>
 <li>问题域：实体和状态构成问题解决的基本范围  <ul>
 <li>问题的产生地：<strong>当现实的状况与人们期望的状况产生差距时</strong>，就产生了问题。</li>
@@ -260,7 +264,7 @@
   </entry>
   <entry>
     <title>1-商业模式类型-平台、免费</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/1-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9E%8B-%E5%B9%B3%E5%8F%B0%E3%80%81%E5%85%8D%E8%B4%B9/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/1-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9E%8B-%E5%B9%B3%E5%8F%B0%E3%80%81%E5%85%8D%E8%B4%B9/</url>
     <content><![CDATA[<h1 id="1-商业模式画布概括"><a href="#1-商业模式画布概括" class="headerlink" title="1. 商业模式画布概括"></a>1. 商业模式画布概括</h1><p>商业模式：一个商业模式描述的是一个组织创造、传递以及获得价值的基本原理。</p>
 <ul>
 <li>从左到右实现价值的构建、主张与传递<ul>
@@ -481,7 +485,7 @@
   </entry>
   <entry>
     <title>2-商业模式画布</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/2-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E7%94%BB%E5%B8%83/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/2-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E7%94%BB%E5%B8%83/</url>
     <content><![CDATA[<h1 id="1-商业模式画布"><a href="#1-商业模式画布" class="headerlink" title="1. 商业模式画布"></a>1. 商业模式画布</h1><ul>
 <li>想要的商业模式模型</li>
 </ul>
@@ -808,7 +812,7 @@
   </entry>
   <entry>
     <title>3-商业模式战略-评估商业模式</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/3-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E6%88%98%E7%95%A5-%E8%AF%84%E4%BC%B0%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/3-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E6%88%98%E7%95%A5-%E8%AF%84%E4%BC%B0%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<h1 id="1-为什么要先评估"><a href="#1-为什么要先评估" class="headerlink" title="1. 为什么要先评估"></a>1. 为什么要先评估</h1><ul>
 <li>从商业模式画布的角度重新阐释战略-<strong>战略：产品的设计与运营</strong></li>
 <li>从商业模式<strong>建设性地发问</strong>，从战略角度审视你与友商的商业模式运作的环境</li>
@@ -990,7 +994,7 @@
   </entry>
   <entry>
     <title>4-商业模式战略-定期评估商业模式：“年度体验”</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/4-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E6%88%98%E7%95%A5-%E5%AE%9A%E6%9C%9F%E8%AF%84%E4%BC%B0%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%EF%BC%9A%E2%80%9C%E5%B9%B4%E5%BA%A6%E4%BD%93%E9%AA%8C%E2%80%9D/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/4-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E6%88%98%E7%95%A5-%E5%AE%9A%E6%9C%9F%E8%AF%84%E4%BC%B0%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%EF%BC%9A%E2%80%9C%E5%B9%B4%E5%BA%A6%E4%BD%93%E9%AA%8C%E2%80%9D/</url>
     <content><![CDATA[<ul>
 <li><p>一项重要的管理活动，让一个组织评估它的时长时长地位的健康程度，并做出相应的调整</p>
 <ul>
@@ -1239,7 +1243,7 @@
   </entry>
   <entry>
     <title>5-商业模式下的蓝海战略</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/5-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E8%93%9D%E6%B5%B7%E6%88%98%E7%95%A5/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/5-%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E8%93%9D%E6%B5%B7%E6%88%98%E7%95%A5/</url>
     <content><![CDATA[<ul>
 <li>蓝海战略：通过根本性的差异化来创造全新的行业，而不是模仿现有商业模式在当前行业中竞争。<ul>
 <li>隐含<strong>价值主张创新</strong></li>
@@ -1339,7 +1343,7 @@
   </entry>
   <entry>
     <title>6-长尾、拆分、开放商业模式</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/6-%E9%95%BF%E5%B0%BE%E3%80%81%E6%8B%86%E5%88%86%E3%80%81%E5%BC%80%E6%94%BE%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/6-%E9%95%BF%E5%B0%BE%E3%80%81%E6%8B%86%E5%88%86%E3%80%81%E5%BC%80%E6%94%BE%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<p>极致的客户细分：长尾商业模式</p>
 <h1 id="1-长尾商业模式"><a href="#1-长尾商业模式" class="headerlink" title="1. 长尾商业模式"></a>1. 长尾商业模式</h1><h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><ul>
 <li>专注于多种类型产品销售</li>
@@ -1421,7 +1425,7 @@
   </entry>
   <entry>
     <title>7-客户洞察与构思</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/7-%E5%AE%A2%E6%88%B7%E6%B4%9E%E5%AF%9F%E4%B8%8E%E6%9E%84%E6%80%9D/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E9%9C%80%E6%B1%82%E4%B8%8E%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9B%E6%96%B0/7-%E5%AE%A2%E6%88%B7%E6%B4%9E%E5%AF%9F%E4%B8%8E%E6%9E%84%E6%80%9D/</url>
     <content><![CDATA[<h1 id="商业模式设计：工具、方法、思维"><a href="#商业模式设计：工具、方法、思维" class="headerlink" title="商业模式设计：工具、方法、思维"></a>商业模式设计：工具、方法、思维</h1><ul>
 <li><p>挑战思维边界，创造新的选择，为用户创造新的价值</p>
 </li>
@@ -3415,7 +3419,7 @@
   </entry>
   <entry>
     <title>12_虚拟存储器</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/12_%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</url>
     <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
 <h1 id="2-存取器管理"><a href="#2-存取器管理" class="headerlink" title="2.存取器管理"></a>2.存取器管理</h1><p>在多道程序系统中，主存需要进一步划分给<strong>多个任务</strong>，划分的任务由操作系统动态执行。</p>
 <h2 id="2-1-如何将更多任务装进主存"><a href="#2-1-如何将更多任务装进主存" class="headerlink" title="2.1 如何将更多任务装进主存"></a>2.1 如何将更多任务装进主存</h2><ul>
@@ -5328,7 +5332,7 @@
   </entry>
   <entry>
     <title>17_输入输出</title>
-    <url>//%5Bobject%20Object%5D/2023/12/18/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/17_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Spring/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E7%BB%93%E6%9E%84/17_%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
     <content><![CDATA[<h1 id="1-外围设备"><a href="#1-外围设备" class="headerlink" title="1. 外围设备"></a>1. 外围设备</h1><p>输入/输出操作通过连接到输入输出模块的各种外部设备完成， 这些外部设备提供了在外部环境和计算机系统之间的数据交 换，通常被称为<strong>外围设备（peripheral device</strong>），简称为外设 （peripheral）</p>
 <ul>
 <li>为什么<strong>不能</strong>把外设直接连接到系统总线上？<ul>
