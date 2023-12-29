@@ -13,8 +13,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 4-Spring Data JDBC、JPA
-date:  Tuesday,October 10th 2023
-modified:  Thursday,December 28th 2023
+date: 2023-12-28 21:18
+modified: 2023-12-29 10:11
 ---
 
 持久化存储
