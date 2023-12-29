@@ -204,6 +204,519 @@
       </tags>
   </entry>
   <entry>
+    <title>1-概述</title>
+    <url>//%5Bobject%20Object%5D/2023/12/29/%E8%AF%BE%E7%A8%8B/2023_Fall/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/1-%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h1><p>名词：</p>
+<ul>
+<li>CLI：命令行界面<ul>
+<li>Recall,基于记忆的界面</li>
+</ul>
+</li>
+<li>GUI：图形用户界面<ul>
+<li>Recognition，基于识别的界面</li>
+</ul>
+</li>
+<li><strong>UCD</strong>：User-Centered Design，以用户为中心的设计方法</li>
+<li>Man-Machine Interaction (MMI) / Human-Machine Interaction (HMI)</li>
+<li>Man-Computer Interaction (MCI) / Human-Computer Interaction (HCI)</li>
+<li>Computer-Human Interaction (CHI)</li>
+<li>Human Factors (HF) / Ergonomics</li>
+<li>Usability</li>
+</ul>
+<p>⽤户⼼智模型</p>
+<h2 id="1-1-什么是人机交互"><a href="#1-1-什么是人机交互" class="headerlink" title="1.1. 什么是人机交互"></a>1.1. 什么是人机交互</h2><p><strong>⼈机交互(Human-Computer Interaction):</strong>  HCI是⼀⻔与⼈类使⽤的<strong>交互式计算系统</strong>的设计，评估和实施有关的学科， 并且研究了它们周围的主要现象。</p>
+<p>不能够设计用户体验，只能为用户体验而设计。</p>
+<h1 id="2-HCI的重要性"><a href="#2-HCI的重要性" class="headerlink" title="2. HCI的重要性"></a>2. HCI的重要性</h1><ul>
+<li>市场角度<ul>
+<li>用户期望简单易用的系统</li>
+<li>对设计低劣的系统容忍度越来越低</li>
+</ul>
+</li>
+<li>企业角度<ul>
+<li>提高员工的生产效率</li>
+<li>降低产品的生产效率</li>
+<li>降低产品的后续支持成本</li>
+</ul>
+</li>
+<li>用户角度<ul>
+<li>获得较高的主观满意度</li>
+<li>减少事件、金钱、生命损失</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-HCI发展历史"><a href="#3-HCI发展历史" class="headerlink" title="3. HCI发展历史"></a>3. HCI发展历史</h1><p>新的界面变革包含上一代界面 ，旧的交互方式仍然有必要（不是后⾯的阶段出现前⾯的阶段就消失了）</p>
+<h2 id="3-1-批处理阶段"><a href="#3-1-批处理阶段" class="headerlink" title="3.1. 批处理阶段"></a>3.1. 批处理阶段</h2><ul>
+<li>单用户</li>
+<li>机器语言编写<ul>
+<li>纸带</li>
+<li>不符合人的习惯</li>
+<li>耗费时间，又容易出错</li>
+<li>只有少数专业人士才能够运用自如</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-联机终端时代"><a href="#3-2-联机终端时代" class="headerlink" title="3.2. 联机终端时代"></a>3.2. 联机终端时代</h2><ul>
+<li><strong>命令行界面</strong><ul>
+<li>类自然语言交互</li>
+<li>一维界面</li>
+<li>回车后不能再对命令内容进行修改</li>
+</ul>
+</li>
+<li>对用户输入要求很严格<ul>
+<li>名称缩写减低用户负担</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-GUI时代"><a href="#3-3-GUI时代" class="headerlink" title="3.3. GUI时代"></a>3.3. GUI时代</h2><p>1962，Ivan Sutherland创建Sketchpad</p>
+<p>1964，Douglas Engelbart发明鼠标</p>
+<ul>
+<li><p>WIMP界面</p>
+</li>
+<li><p><strong>GUI的主要特征：直接操作</strong></p>
+</li>
+<li><p>图形用户界面优于字符界面？</p>
+<ul>
+<li>不同的交互方式本身在可用性方面并没有根本性的不同，更重要的是 认真对待界面设计的态度。 [Whiteside 1985]</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4-多通道⽤户界⾯"><a href="#3-4-多通道⽤户界⾯" class="headerlink" title="3.4. 多通道⽤户界⾯"></a>3.4. 多通道⽤户界⾯</h2><p>具有<strong>并行性</strong>，可同时接收来自多个通道的信息</p>
+<ul>
+<li>下一代界面的主要风格将是没有命令的用户界面<ul>
+<li>由更多的媒体类型来构成更高的信息维度</li>
+<li>交互也将高度便携和个性化</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>2023_Fall_人机交互</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2-交互设计的原则和目标</title>
+    <url>//%5Bobject%20Object%5D/2023/12/29/%E8%AF%BE%E7%A8%8B/2023_Fall/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/2-%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E5%88%99%E5%92%8C%E7%9B%AE%E6%A0%87/</url>
+    <content><![CDATA[<h1 id="1-交互框架"><a href="#1-交互框架" class="headerlink" title="1. 交互框架"></a>1. 交互框架</h1><ul>
+<li>作用<ul>
+<li>提供理解或定义某种事物的一种结构</li>
+<li>能够帮助人们结构化设计过程</li>
+<li>认识设计过程中的主要问题</li>
+<li>还有助于定义问题所涉及的领域</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-1-执行-评估活动周期-EEC模型"><a href="#1-1-执行-评估活动周期-EEC模型" class="headerlink" title="1.1. 执行/评估活动周期 EEC模型"></a>1.1. 执行/评估活动周期 EEC模型</h2><p>Norman提出</p>
+<p>最有影响力的框架</p>
+<h3 id="1-1-1-交互活动的四个组成部分"><a href="#1-1-1-交互活动的四个组成部分" class="headerlink" title="1.1.1. 交互活动的四个组成部分"></a>1.1.1. 交互活动的四个组成部分</h3><ol>
+<li>目标 Goal<ul>
+<li>目标：想做什么, 不等于意图单个目标可对应多个意图</li>
+<li>意向 Intention：达成目标的一系列活动</li>
+</ul>
+</li>
+<li>执行 Execution<ul>
+<li>要实现目标必须的操作</li>
+</ul>
+</li>
+<li>客观因素 World<ul>
+<li>执行活动需要考虑的客观条件</li>
+</ul>
+</li>
+<li>评估 Evaluation<ul>
+<li>用于衡量活动的执行结果和目标之间的差距</li>
+</ul>
+</li>
+</ol>
+<p>举例：删除文档中的部分内容的目标<br>意图1：通过编辑菜单删除<br>意图2：通过删除按钮删除</p>
+<h3 id="1-1-2-七阶段"><a href="#1-1-2-七阶段" class="headerlink" title="1.1.2. 七阶段"></a>1.1.2. 七阶段</h3><ul>
+<li>七阶段：归纳为2过程<ul>
+<li>1-4：执行阶段</li>
+<li>5-7：评估阶段</li>
+</ul>
+</li>
+<li>每个循环代表一个动作</li>
+<li><strong>从用户角度探讨人机界面问题</strong></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F12%2F8a5c3c87a6870965a6e8ce0c8d4ed510_20230912153008.png" alt="image.png"></p>
+<h3 id="1-1-3-执行隔阂-评估隔阂"><a href="#1-1-3-执行隔阂-评估隔阂" class="headerlink" title="1.1.3. 执行隔阂&评估隔阂"></a>1.1.3. 执行隔阂&amp;评估隔阂</h3><ul>
+<li>可以解释<strong>为什么有些界面的使用存在问题</strong><ul>
+<li><font color="#ff0000">执行隔阂</font><ul>
+<li>用户为达成目标而制定的举动和<strong>系统允许的举动</strong>之间的差别</li>
+<li>例子：保存文件后不刷新，用户重复保存</li>
+</ul>
+</li>
+<li><font color="#ff0000">评估隔阂</font><ul>
+<li>系统状态的<strong>实际表现和用户期望</strong>的差别</li>
+<li>例子：用户点击提交表单后系统没有变化，用户会以为系统没有提交</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-1-4-扩展ECC模型"><a href="#1-1-4-扩展ECC模型" class="headerlink" title="1.1.4. 扩展ECC模型"></a>1.1.4. 扩展ECC模型</h3><p>ECC模型交互时没有IO</p>
+<h2 id="1-2-人类处理机模型"><a href="#1-2-人类处理机模型" class="headerlink" title="1.2. 人类处理机模型"></a>1.2. 人类处理机模型</h2><p>最著名的信息处理模型，描述了人们从感知信息到付诸行动的认知过程</p>
+<h3 id="1-2-1-三个交互式组件"><a href="#1-2-1-三个交互式组件" class="headerlink" title="1.2.1. 三个交互式组件"></a>1.2.1. 三个交互式组件</h3><ul>
+<li>感知处理器<ul>
+<li>信息将被输出到声音存储和视觉存储区域</li>
+</ul>
+</li>
+<li>认知处理器<ul>
+<li>输入将被输出到工作记忆，能够访问工作记忆和长时记忆中的信息</li>
+</ul>
+</li>
+<li>动作处理器<ul>
+<li>执行动作</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-2-信息处理模型的用途"><a href="#1-2-2-信息处理模型的用途" class="headerlink" title="1.2.2. 信息处理模型的用途"></a>1.2.2. 信息处理模型的用途</h3><p>人机交互本质上也可以被看作是一个信息处理过程</p>
+<ol>
+<li>在进行界面设计时，可将与人的信息处理能力相关的知识和理论作为参考</li>
+<li>可评估完成不同任务所需的认知要求</li>
+<li>可预测不同界面下任务的完成效果</li>
+</ol>
+<h3 id="1-2-3-人的记忆过程"><a href="#1-2-3-人的记忆过程" class="headerlink" title="1.2.3. 人的记忆过程"></a>1.2.3. 人的记忆过程</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F24%2F20-54-06-878f7ac9a1caa9da72c6d208119fa4b4-20231224205406-68e247.png" alt="image.png"></p>
+<ol>
+<li>感觉记忆<ul>
+<li>瞬时记忆，持续约1s</li>
+<li>作用：视觉暂留，视频的实现</li>
+</ul>
+</li>
+<li>短时记忆<ul>
+<li>工作记忆，30s左右。储存当前正在处理的信息。</li>
+<li>感觉记忆经编码后进入短时记忆</li>
+<li>S h o r tTe r m Memory, 简称 STM</li>
+<li>存储能力：7+2，7-2个信息单元</li>
+</ul>
+</li>
+<li>长时记忆<ul>
+<li>短时记忆中的信息经进一步加工后会变为长时记忆不代表长时记忆区的信息丢失了</li>
+<li>可能失去了提取信息的途径，或原有联系受到了干扰</li>
+</ul>
+</li>
+</ol>
+<h1 id="2-以用户为中心的系统设计"><a href="#2-以用户为中心的系统设计" class="headerlink" title="2. 以用户为中心的系统设计"></a>2. 以用户为中心的系统设计</h1><h2 id="2-1-以用户为重的设计思想"><a href="#2-1-以用户为重的设计思想" class="headerlink" title="2.1. 以用户为重的设计思想"></a>2.1. 以用户为重的设计思想</h2><ul>
+<li>传统”<strong>以产品为中心</strong>“的设计过程主要关注的是机器及其效率，同时期望人能够适应机器</li>
+<li><strong>以用户为中心的设计思想</strong>：包含对用户需求的关注，对活动、任务以及需求的分析，早期的测试和评估，以及迭代式的设计</li>
+<li><strong>重点</strong>：更加强调用户，而不是关注于征集需求和说明的规范化方法<ul>
+<li>不是一个死板的设计过程，而是一个更加灵活、迭代式的设计方法</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-可用性"><a href="#3-可用性" class="headerlink" title="3. 可用性"></a>3. 可用性</h1><p><strong>目的</strong>：是为交互设计人员提供一个评估交互式产品和用户体验各方面的具体方法</p>
+<h2 id="3-1-示能-Affordance"><a href="#3-1-示能-Affordance" class="headerlink" title="3.1. 示能 Affordance"></a>3.1. 示能 Affordance</h2><ul>
+<li>Affordance<ul>
+<li>可供性、示能</li>
+<li>示能指<strong>所有操作的可能性</strong>,而非特定指好的交互操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-心智模型-Mental-Modal"><a href="#3-2-心智模型-Mental-Modal" class="headerlink" title="3.2. 心智模型 Mental Modal"></a>3.2. 心智模型 Mental Modal</h2><ul>
+<li>定义：用户对于产品如何使用的概念</li>
+</ul>
+<p>我们需要确保程序充分反映了用户关于特定任务的心智模型</p>
+<h1 id="4-设计目标"><a href="#4-设计目标" class="headerlink" title="4. 设计目标"></a>4. 设计目标</h1><h2 id="4-1-可用性的目标👍"><a href="#4-1-可用性的目标👍" class="headerlink" title="4.1. 可用性的目标👍"></a>4.1. 可用性的目标👍</h2><p>相对客观</p>
+<h3 id="4-1-1-易学性-learnability"><a href="#4-1-1-易学性-learnability" class="headerlink" title="4.1.1. 易学性 learnability"></a>4.1.1. 易学性 learnability</h3><ul>
+<li>解释：<ul>
+<li>使用系统的难易：关键问题在于确定用户准备花费多少时间学习一个产品？</li>
+<li>能否简单询问：系统是否易于学习？</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-1-2-易记性-memorability"><a href="#4-1-2-易记性-memorability" class="headerlink" title="4.1.2. 易记性 memorability"></a>4.1.2. 易记性 memorability</h3><ul>
+<li><p>解释：学会使用并<strong>记住</strong>该产品如何使用的难易程度</p>
+<ul>
+<li>学会某个系统后，能快速回想使用方法</li>
+</ul>
+</li>
+<li><p><strong>影响因素</strong></p>
+<ul>
+<li>意义：有意义的图标、命名和菜单项</li>
+<li>位置：特定对象放在特定位置</li>
+<li>分组：对事物按照逻辑进行恰当分组</li>
+<li>惯例：尽可能使用通用的对象和符号</li>
+<li>冗余：使用多个感知通道对信息进行编码</li>
+</ul>
+</li>
+</ul>
+<p>UCD:用户为中心设计</p>
+<h3 id="4-1-3-效用性-utility"><a href="#4-1-3-效用性-utility" class="headerlink" title="4.1.3. 效用性 utility"></a>4.1.3. 效用性 utility</h3><ul>
+<li>一定程度上产品提供<strong>正确</strong>的功能，可以让用户做他们需要或想做的事</li>
+</ul>
+<p>效用低：<strong>执行隔阂</strong>，用户想做但没有这个功能</p>
+<h3 id="4-1-4-高效率-efficiency"><a href="#4-1-4-高效率-efficiency" class="headerlink" title="4.1.4. 高效率 efficiency"></a>4.1.4. 高效率 efficiency</h3><ul>
+<li>产品在对用户执行任务的支持程度<ul>
+<li>当用户学会使用该产品后，用户因该具有更高的生产力</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-1-5-安全性-safety"><a href="#4-1-5-安全性-safety" class="headerlink" title="4.1.5. 安全性 safety"></a>4.1.5. 安全性 safety</h3><ul>
+<li><p>避免用户发生危险或陷入不好的情况</p>
+<ul>
+<li>工效学</li>
+<li>帮助用户在任何情况下避免因偶然执行不必要的行动而造成的危险</li>
+</ul>
+</li>
+<li><p>建议</p>
+<ul>
+<li>减少按键/按钮误启动的风险</li>
+<li>提供出错时的恢复方法</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-用户体验目标"><a href="#4-2-用户体验目标" class="headerlink" title="4.2. 用户体验目标"></a>4.2. 用户体验目标</h2><h2 id="4-3-目标"><a href="#4-3-目标" class="headerlink" title="4.3. 目标"></a>4.3. 目标</h2><p>通常交互式系统包含一个多样性的用户体验目标，涵盖了一系列情绪和感受体验。<br>经常和可用性交替使用，但是两者的关注点有明显的不同。</p>
+<h3 id="4-3-1-与可用性的关系"><a href="#4-3-1-与可用性的关系" class="headerlink" title="4.3.1. 与可用性的关系"></a>4.3.1. 与可用性的关系</h3><ol>
+<li>关注点：<ul>
+<li>可用性和可用性工程关注的是与<strong>任务相关</strong>的方面（即完成工作）</li>
+<li>用户体验与体验设计则将<strong>用户的感觉、心情、价值观</strong>等放在首位</li>
+</ul>
+</li>
+<li>主观vs.客观：交互时的情绪和感受体验，相对主观。</li>
+<li>可用性与用户体验存在矛盾，有时候不兼容</li>
+</ol>
+<h1 id="5-可用性工程"><a href="#5-可用性工程" class="headerlink" title="5. 可用性工程"></a>5. 可用性工程</h1><ul>
+<li>特点<ul>
+<li>以提高产品的可用性为目标的先进的产品开发方法论</li>
+<li>借鉴了许多不同领域的方法和技术</li>
+<li>强调以人为中心来进行交互式产品的设计研发</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-1-关键步骤"><a href="#5-1-关键步骤" class="headerlink" title="5.1. 关键步骤"></a>5.1. 关键步骤</h2><ul>
+<li>完整的<strong>可用性工程</strong>过程<ol>
+<li>了解用户</li>
+<li>竞争性分析</li>
+<li>设定可用性目标</li>
+<li>用户参与的设计</li>
+<li>迭代设计</li>
+<li>产品发布后的工作</li>
+</ol>
+</li>
+<li><font color="#ff0000">简化</font><ol>
+<li><strong>用户和任务观察</strong></li>
+<li><strong>场景</strong> scenario</li>
+<li><strong>简化的边做边说</strong> thinking aloud</li>
+<li><strong>启发式评估</strong></li>
+</ol>
+</li>
+</ul>
+<h2 id="5-2-可用性四种主要技术"><a href="#5-2-可用性四种主要技术" class="headerlink" title="5.2. 可用性四种主要技术"></a>5.2. 可用性四种主要技术</h2><h3 id="5-2-1-用户和任务观察"><a href="#5-2-1-用户和任务观察" class="headerlink" title="5.2.1. 用户和任务观察"></a>5.2.1. 用户和任务观察</h3><ul>
+<li><strong>直接与潜在用户接触</strong>，不要满足于间接接触</li>
+</ul>
+<h3 id="5-2-2-场景"><a href="#5-2-2-场景" class="headerlink" title="5.2.2. 场景"></a>5.2.2. 场景</h3><ul>
+<li><p>省略系统若干部分，简化实现系统的复杂性</p>
+</li>
+<li><p>简便易行的原型工具，可节省时间和成本</p>
+</li>
+<li><p>场景<strong>主要作用</strong></p>
+<ul>
+<li>在界面设计过程中可以把场景作为用户最终如何与系统进行交互的描述手段</li>
+<li>在用户界面设计的早期评估阶段，可以在没有实际可运行原型的情况下通过场景来获得用户的反馈</li>
+</ul>
+</li>
+<li><p>分类</p>
+<ul>
+<li>水平原型：<strong>减少功能的深度</strong>并获得界面的表层</li>
+<li>垂直原型：<strong>减少功能的数量</strong>而对所选功能进行完整实现</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-3-边做边说"><a href="#5-2-3-边做边说" class="headerlink" title="5.2.3. 边做边说"></a>5.2.3. 边做边说</h3><ul>
+<li>让<strong>最真实的用户</strong>在使用系统执行一组特定任务的时候，讲出他们的所思所想</li>
+<li><font color="#ff0000">最有价值的单个可用性工程方法</font></li>
+<li>可了解用户为什么这样做，并确定其可能对系统产生的误解</li>
+<li>实验人员需要不断地提示用户，或请他们实现观摩</li>
+</ul>
+<h3 id="5-2-4-启发式评估"><a href="#5-2-4-启发式评估" class="headerlink" title="5.2.4. 启发式评估"></a>5.2.4. 启发式评估</h3><ul>
+<li><strong>非正式</strong>可用性检查技术 </li>
+<li>使用“<strong>启发式原则</strong>”作为可用性原则</li>
+<li>评估不同设备，启发式原则并不一致</li>
+<li>研究表明，能够发现许多可用性问题<ul>
+<li>剩下的都可以通过简化的边做边说实现</li>
+</ul>
+</li>
+<li>避免个人偏见，应该多个人进行经验性评估<ul>
+<li>找n个<strong>启发式专家</strong>，<strong>5人是最经济的</strong></li>
+<li>测试用户较多时，可以分阶段进行测试</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F09%2F18-13-24-1d0906f1a5ab110c944751c0b98c6dd7-20231209181323-7c446e.png" alt="image.png"></p>
+<h2 id="5-3-可用性度量"><a href="#5-3-可用性度量" class="headerlink" title="5.3. 可用性度量"></a>5.3. 可用性度量</h2><p><font color="#c00000">针对每一个可用性属性，定义出可度量的标准</font></p>
+<h3 id="5-3-1-常用方法"><a href="#5-3-1-常用方法" class="headerlink" title="5.3.1. 常用方法"></a>5.3.1. 常用方法</h3><ol>
+<li>选择一些能够代表目标用户群体的测试用户</li>
+<li>让这些用户使用系统执行一组预定的任务</li>
+<li>比较任务的执行情况</li>
+<li>针对多维属性<ul>
+<li>取每个可用性属性的平均值</li>
+<li>查看整体分布情况</li>
+</ul>
+</li>
+</ol>
+<p>度量一定要针对<strong>特定的用户和特定的任务</strong>进行，用户对不同任务的可用性结果预期可能不同。<br>测试前要明确一组具有代表性的测试任务，任务描述应使用<strong>用户的任务语言</strong>，清晰明确。</p>
+<h3 id="5-3-2-易学性度量"><a href="#5-3-2-易学性度量" class="headerlink" title="5.3.2. 易学性度量"></a>5.3.2. 易学性度量</h3><ul>
+<li>最容易度量的属性。</li>
+<li>统计从未使用过系统的用户，从学习到达到<strong>某种熟练程度</strong>的时间。<ul>
+<li>学习曲线没有明确区分“学会”和“未学会”</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-3-使用效率度量"><a href="#5-3-3-使用效率度量" class="headerlink" title="5.3.3. 使用效率度量"></a>5.3.3. 使用效率度量</h3><ul>
+<li>并不是所有用户都能够迅速达到最终的绩效水平</li>
+<li>对于有经验的用户<ul>
+<li>“有经验”较为正规的衡量方式是通过使用系统的小时数来定义的</li>
+<li>先使用，然后度量其绩效水平</li>
+<li>或为用户绘制学习曲线<ul>
+<li>当发现用户的绩效水平在一段时间内不再提高时，就认为已经达到了该用户的稳定绩效水平</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-4-易记性度量"><a href="#5-3-4-易记性度量" class="headerlink" title="5.3.4. 易记性度量"></a>5.3.4. 易记性度量</h3><ul>
+<li>用户分类<ul>
+<li>新手</li>
+<li>熟练</li>
+<li>非频繁使用用户（<strong>最能体现易记性</strong>）</li>
+</ul>
+</li>
+<li>度量方法<ul>
+<li>对在特定长时间内没有使用系统的用户进行标准用户测试<ul>
+<li>记录下这些用户执行特定任务所用的时间</li>
+</ul>
+</li>
+<li>对用户进行记忆测试<ul>
+<li>如在用户完成一个应用系统的特定任务后，让用户解释各种命令的作用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-5-错误率度量"><a href="#5-3-5-错误率度量" class="headerlink" title="5.3.5. 错误率度量"></a>5.3.5. 错误率度量</h3><ul>
+<li>度量<ul>
+<li>在用户执行特定任务时通过统计这种操作的次数</li>
+<li>可以在度量其他可用性属性的同时来度量</li>
+</ul>
+</li>
+<li>错误分类<ul>
+<li>能立刻被用户纠正，不会给系统带来灾难，只会影响效率</li>
+<li>不易被用户发现，最终导致严重结果</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-6-用户体验满意度"><a href="#5-3-6-用户体验满意度" class="headerlink" title="5.3.6. 用户体验满意度"></a>5.3.6. 用户体验满意度</h3><ul>
+<li>满意度客观评价是主观的<ul>
+<li>更适合询问用户的方式</li>
+<li>多个用户取平均</li>
+</ul>
+</li>
+<li>度量通常在用户测试完成后进行</li>
+</ul>
+<h1 id="6-交互设计原则"><a href="#6-交互设计原则" class="headerlink" title="6. 交互设计原则"></a>6. 交互设计原则</h1><h2 id="6-1-一般原则"><a href="#6-1-一般原则" class="headerlink" title="6.1. 一般原则"></a>6.1. 一般原则</h2><p>Alan Dix</p>
+<ol>
+<li>可学习性<ul>
+<li>新用户能用它开始有效的交互并能获得最大的性能</li>
+</ul>
+</li>
+<li>灵活性<ul>
+<li>用户和系统能以多种方式交换信息</li>
+</ul>
+</li>
+<li>健壮性<ul>
+<li>在决定成就和目标评估方面对用户提供的支持程度</li>
+</ul>
+</li>
+</ol>
+<p>这些规则大多来源于提出者的经验和总结，不是完美无缺的，甚至有些会相互矛盾。在具体使用时，必须根据实际情况进行调整和细化</p>
+<h2 id="6-2-黄金规则"><a href="#6-2-黄金规则" class="headerlink" title="6.2. 黄金规则"></a>6.2. 黄金规则</h2><ol>
+<li>尽可能保证一致</li>
+<li>符合普遍可用性</li>
+<li>提供信息丰富的反差</li>
+<li>设计说明 对话框以生成结束信息</li>
+<li>预防并处理错误</li>
+<li>让操作容易撤销</li>
+<li>支持内部控制点</li>
+<li>减轻短时记忆负担</li>
+</ol>
+<h2 id="6-3-十项启发式交互原则👍"><a href="#6-3-十项启发式交互原则👍" class="headerlink" title="6.3. 十项启发式交互原则👍"></a>6.3. 十项启发式交互原则👍</h2><h3 id="6-3-1-系统状态的可见度"><a href="#6-3-1-系统状态的可见度" class="headerlink" title="6.3.1. 系统状态的可见度"></a>6.3.1. 系统状态的可见度</h3><ul>
+<li>系统应该始终在<strong>合理的时间</strong>以<strong>适当的反馈信息</strong>让用户知道系统正在做什么</li>
+<li>例：对于用时较长的操作（长于3-5秒），需要给出显示的反馈<ul>
+<li>改变界面组件的颜色</li>
+<li>刷新界面</li>
+<li>显示进度条</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-3-2-系统与现实世界的吻合"><a href="#6-3-2-系统与现实世界的吻合" class="headerlink" title="6.3.2. 系统与现实世界的吻合"></a>6.3.2. 系统与现实世界的吻合</h3><ul>
+<li>界面上的语言<strong>要使用用户熟悉的词汇、短语和概念</strong>，而不是内部术语</li>
+<li>遵循显示世界的惯例，使信息以自然和逻辑的顺序出现</li>
+</ul>
+<h3 id="6-3-3-用户享有控制权和自主权"><a href="#6-3-3-用户享有控制权和自主权" class="headerlink" title="6.3.3. 用户享有控制权和自主权"></a>6.3.3. 用户享有控制权和自主权</h3><ul>
+<li>对于由于错误而做出的选择，提供一个<strong>返回方法（撤销或重做）</strong><ul>
+<li>如撤销或重做，或者重新启动的方法（网页上返回主页的链接）</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-3-4-一致性和标准化"><a href="#6-3-4-一致性和标准化" class="headerlink" title="6.3.4. 一致性和标准化"></a>6.3.4. 一致性和标准化</h3><ul>
+<li>产品内部对同一功能使用的术语和形式一致</li>
+<li>使用没有歧义的图标或图片</li>
+<li>一致的颜色、布局、大小写、字体等</li>
+</ul>
+<h3 id="6-3-5-避免出错"><a href="#6-3-5-避免出错" class="headerlink" title="6.3.5. 避免出错"></a>6.3.5. 避免出错</h3><ul>
+<li>避免用户出错的可能性</li>
+<li>例：<ul>
+<li>日期输入使用日历</li>
+<li>反例：NJU教务系统很多功能图标都一样</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-3-6-依赖识别而非记忆"><a href="#6-3-6-依赖识别而非记忆" class="headerlink" title="6.3.6. 依赖识别而非记忆"></a>6.3.6. 依赖识别而非记忆</h3><p>让系统记忆而不是让用户记忆</p>
+<h3 id="6-3-7-使用的灵活性和高效性"><a href="#6-3-7-使用的灵活性和高效性" class="headerlink" title="6.3.7. 使用的灵活性和高效性"></a>6.3.7. 使用的灵活性和高效性</h3><ul>
+<li>充分<strong>考虑不同类型</strong>的用户使用偏好（老人、专家用户）</li>
+<li>例：<ul>
+<li>对于新手用户，提供简单（但流程较长）的交互操作</li>
+<li>对于高级用户，提供快捷腱，宏操作等</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-3-8-帮助用户识别、诊断和恢复错误"><a href="#6-3-8-帮助用户识别、诊断和恢复错误" class="headerlink" title="6.3.8. 帮助用户识别、诊断和恢复错误"></a>6.3.8. 帮助用户识别、诊断和恢复错误</h3><ul>
+<li><strong>错误信息</strong>用自然语言，用户一看就知道<ul>
+<li>错误信息应该用简单的语言表达（没有代码），准确指出问题所在，并建设性地提出解决方案。</li>
+</ul>
+</li>
+<li>反例：只给一个错误代码，不告诉具体错误</li>
+</ul>
+<h3 id="6-3-9-帮助和文档"><a href="#6-3-9-帮助和文档" class="headerlink" title="6.3.9. 帮助和文档"></a>6.3.9. 帮助和文档</h3><ul>
+<li><p>必须提供帮助文档</p>
+</li>
+<li><p>用户指南的语言和格式应该使用简单、标准的术语</p>
+</li>
+<li><p>例：微软帮助手册：</p>
+<ul>
+<li>标准化格式；</li>
+<li>支持搜索；</li>
+<li>书本隐喻；</li>
+<li>超链接便于跳转</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-3-10-审美感和最小化设计"><a href="#6-3-10-审美感和最小化设计" class="headerlink" title="6.3.10. 审美感和最小化设计"></a>6.3.10. 审美感和最小化设计</h3><ul>
+<li>不要放太多不相关的信息</li>
+<li>使用标准、常用、可接受的控制方式</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>2023_Fall_人机交互</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>0-introduction</title>
     <url>//%5Bobject%20Object%5D/2023/12/29/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/0-introduction/</url>
     <content><![CDATA[<h1 id="1-Spring"><a href="#1-Spring" class="headerlink" title="1. Spring"></a>1. Spring</h1><ul>
@@ -267,8 +780,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -417,8 +930,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -500,8 +1013,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -582,8 +1095,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -735,8 +1248,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -797,8 +1310,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -912,8 +1425,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -1096,8 +1609,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -1310,8 +1823,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -1468,8 +1981,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -1566,8 +2079,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -1766,8 +2279,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
         <tag>关系型数据库</tag>
         <tag>Spring_Data</tag>
       </tags>
@@ -1902,8 +2415,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -2057,8 +2570,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -2172,8 +2685,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -2357,8 +2870,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -2459,8 +2972,8 @@
         <category>2023_Fall_服务端开发</category>
       </categories>
       <tags>
-        <tag>2023_Fall_服务端开发</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
