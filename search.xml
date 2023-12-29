@@ -717,6 +717,331 @@
       </tags>
   </entry>
   <entry>
+    <title>3-评估的基础知识</title>
+    <url>//%5Bobject%20Object%5D/2023/10/10/%E8%AF%BE%E7%A8%8B/2023_Fall/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/3-%E8%AF%84%E4%BC%B0%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><ul>
+<li>什么是评估？<ul>
+<li><strong>系统化的数据搜集过程，对交互性能的测试</strong></li>
+<li>目的是了解用户或用户组在特定环境中，使用产品执行特定任务的情况<ul>
+<li>例如，用户能否找到特定的菜单项？图像是否有用，是否吸引人？产品是否引人入胜？</li>
+</ul>
+</li>
+<li>邀请用户进行评估的目的不是设法理解用户，而是评估特定用户在一个特定的环境背景中如何使用一个系统来执行一个特定的任务。</li>
+</ul>
+</li>
+</ul>
+<p><font color="#c00000">mental model</font>：人会根据已有的经验和知识假设使用方式</p>
+<ul>
+<li>为什么要评估<ul>
+<li>用户不仅期望一个可用的系统，还在追求愉悦感与参与感<ul>
+<li>用户体验首先要满足用户的确切体验，其次是让用户舒心和愉快</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-评估原则"><a href="#2-评估原则" class="headerlink" title="2. 评估原则"></a>2. 评估原则</h1><ol>
+<li>评估应该依赖于产品的用户：与专业技术人员的水平和技术无关</li>
+<li>评估与设计应结合进行：仅靠用户最后对产品的一两次评估，是不能全面反映出软件可用性的</li>
+<li>评估应在用户的实际工作任务和操作环境下进行：根据用户完成任务的结果，进行客观的分析和评估</li>
+<li>要选择有<strong>广泛代表性</strong>的用户：参加测试的人必须具有代表性<ul>
+<li><strong>5-12</strong>个具有代表性的用户，不是随便找12个</li>
+</ul>
+</li>
+</ol>
+<p>主观满意度常常使用问卷</p>
+<h1 id="3-评估泛型"><a href="#3-评估泛型" class="headerlink" title="3. 评估泛型"></a>3. 评估泛型</h1><h2 id="3-1-快速评估"><a href="#3-1-快速评估" class="headerlink" title="3.1. 快速评估"></a>3.1. 快速评估</h2><ul>
+<li>设计人员<strong>非正式</strong>向用户或顾问了解反馈信息，以证实设计构思是否符合用户需要</li>
+<li><strong>特点</strong><ol>
+<li>可在任何阶段进行</li>
+<li>得到数据是非正式的、叙述性的<ul>
+<li>可以是口语、书面笔记、草图、场景的形式反馈到设计过程</li>
+</ul>
+</li>
+<li>强调“<strong>快速了解</strong>”，而非仔细记录研究发现<ul>
+<li>在设计初期阶段了解用户对产品的意见</li>
+</ul>
+</li>
+<li>是设计网站时常用的方法</li>
+</ol>
+</li>
+<li>基本特征：快速</li>
+</ul>
+<h2 id="3-2-可用性测试👍"><a href="#3-2-可用性测试👍" class="headerlink" title="3.2. 可用性测试👍"></a>3.2. 可用性测试👍</h2><p><strong>非常正式</strong>，20实际80年代主导方法</p>
+<ul>
+<li>评测<strong>典型用户执行典型任务时</strong>的情况<ul>
+<li>包括用户出错次数、完成任务的时间等</li>
+</ul>
+</li>
+<li>基本特征：<ul>
+<li>是在评估人员密切控制下实现的</li>
+<li>专门可用性实验室</li>
+</ul>
+</li>
+<li>主要任务<ul>
+<li><strong>量化</strong>表示用户的执行情况</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>测试用户的数量通常较少</li>
+<li>不合适进行细致的统计分析</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-实地研究-Field-Study"><a href="#3-3-实地研究-Field-Study" class="headerlink" title="3.3. 实地研究 Field Study"></a>3.3. 实地研究 Field Study</h2><ul>
+<li>基本特征：在自然工作环境中进行</li>
+<li>目的：理解用户的实际工作情况以及技术对他们的影响</li>
+<li>作用<ul>
+<li>探索新技术的应用契机</li>
+<li>确定产品的需求</li>
+<li>促进技术的引入</li>
+<li>评估技术的应用</li>
+</ul>
+</li>
+<li>重难点<ul>
+<li>如何不对受试者造成影响</li>
+<li>控制权在用户，很难预测即将发生和出现的情况</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4-预测性评估"><a href="#3-4-预测性评估" class="headerlink" title="3.4. 预测性评估"></a>3.4. 预测性评估</h2><ul>
+<li>研究人员能通过想象或对界面的使用过程进行建模<ul>
+<li><strong>启发式评估</strong>：启发式专家“角色扮演”，评估产品</li>
+<li>模型法：用于比较相同应用不同界面的原型法，如使用Fitts定律</li>
+<li>走查法：逐步通过场景或基于问题回答，类似Code Review</li>
+</ul>
+</li>
+<li>基本特征：<ul>
+<li>用户可以不在场</li>
+<li>整个过程快速、成本较低</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-区分评估技术的因素"><a href="#4-区分评估技术的因素" class="headerlink" title="4. 区分评估技术的因素"></a>4. 区分评估技术的因素</h1><ol>
+<li>评估在周期中位置<ul>
+<li>设计早期阶段评估更快速、便宜</li>
+</ul>
+</li>
+<li>评估的形式<ul>
+<li>实验室/工作环境</li>
+</ul>
+</li>
+<li>技术的主客观程度<ul>
+<li>技术越主观，受评估人员知识的影响越大</li>
+</ul>
+</li>
+<li>测量的类型<ul>
+<li>主观技术：定性</li>
+<li>客观技术：定量</li>
+</ul>
+</li>
+<li>提供的信息<ul>
+<li>低层：图标可理解？</li>
+<li>高层：系统可用？</li>
+</ul>
+</li>
+<li>响应的及时性<ul>
+<li>边做边说发可及时记录用户行为</li>
+<li>任务后的走查取决于对事件的回忆</li>
+</ul>
+</li>
+<li>干扰程度<ul>
+<li>直接响应测量可能会影响用户表现</li>
+</ul>
+</li>
+<li>所需资源</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>2023_Fall_人机交互</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4-实验设计</title>
+    <url>//%5Bobject%20Object%5D/2023/11/11/%E8%AF%BE%E7%A8%8B/2023_Fall/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/4-%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h1 id="1-研究假设"><a href="#1-研究假设" class="headerlink" title="1. 研究假设"></a>1. 研究假设</h1><h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><ul>
+<li>实验通常从研究假设开始</li>
+<li>假设类型<ul>
+<li><strong>零假设</strong>Null Hypothesis<ul>
+<li>假设不同实验条件不会产生差异</li>
+</ul>
+</li>
+<li><strong>备择假设</strong><ul>
+<li>存在差异，往往是一个与零假设相反的陈述。</li>
+</ul>
+</li>
+<li>两者应该互斥</li>
+</ul>
+</li>
+<li><font color="#c00000">实验的目标</font>是找到统计学证据来反驳或否定零假设，以支持备择假设</li>
+</ul>
+<p>一个成功的实验，从一个或多个好的假设开始</p>
+<h2 id="1-2-自变量和应变量"><a href="#1-2-自变量和应变量" class="headerlink" title="1.2. 自变量和应变量"></a>1.2. 自变量和应变量</h2><ul>
+<li><p>自变量 Independent Variables</p>
+<ul>
+<li>指的是研究者感兴趣的因素或因变量<strong>变化的可能原因</strong></li>
+<li>实验条件：一个自变量至少需要2个不同取值，这些取值被称为实验条件test conditions</li>
+<li>如：不同技术和设备，不同类型设计</li>
+</ul>
+</li>
+<li><p>因变量 Dependent Variables</p>
+<ul>
+<li>指的是研究者感兴趣的<strong>结果或效果</strong></li>
+<li>如：任务完成事件、速度、准确性、错误率…</li>
+<li><strong>应变量必须明确定义</strong></li>
+</ul>
+</li>
+</ul>
+<p>研究者希望找出自变量的变化是否会引起因变量的变化（<strong>实验必须可复现</strong>）</p>
+<ul>
+<li><p>如何区分</p>
+<ul>
+<li>自变量时实验人员可以控制的实验条件</li>
+<li>因变量时研究者需要测量的实验结果</li>
+</ul>
+</li>
+<li><p>例子：零假设，下拉式菜单和弹出式菜单在定位界面的时间上没有开销差异。</p>
+<ul>
+<li>自变量：菜单类型</li>
+<li>因变量：定位时间</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-实验构成"><a href="#2-实验构成" class="headerlink" title="2. 实验构成"></a>2. 实验构成</h1><ul>
+<li><p><strong>实验条件</strong></p>
+<ul>
+<li>指我们需要比较不同技术、设备和程序</li>
+</ul>
+</li>
+<li><p><strong>实验单位</strong></p>
+<ul>
+<li>指的是我们<strong>应用实验条件的对象</strong></li>
+<li>在人机交互研究领域，通常指具有特定特征的人类受试者。特征指年龄、性别等</li>
+</ul>
+</li>
+<li><p><strong>分配方式</strong></p>
+<ul>
+<li>实验单位分配到不同实验条件的方式</li>
+</ul>
+</li>
+<li><p>例子：</p>
+<ul>
+<li>比较QWERTY键盘和DVORAK键盘打字速度</li>
+<li>假设：没有差异</li>
+<li>实验条件：键盘类型</li>
+<li>自变量：键盘类型</li>
+<li>为了公平，找受试者之前都没有使用这两种键盘的经验</li>
+<li>分配：随机选择</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-实验设计"><a href="#3-实验设计" class="headerlink" title="3. 实验设计"></a>3. 实验设计</h1><ul>
+<li><p>特点:</p>
+<ol>
+<li>至少两种条件或组（实验组，对照组）</li>
+<li>以至少一个可检验的研究假设为基础，并旨在验证他们</li>
+<li>因变量通常<strong>定量</strong>测量</li>
+<li>通过各种统计显著性检验对结果进行分析, 以消除潜在偏差为目标来设计和进行</li>
+<li>具备不同的参与者样本, 在不同的时间，不同的地点，由不同的参与者进行复现</li>
+</ol>
+</li>
+<li><p>注意事项</p>
+<ol>
+<li>需要定义明确的、合理范围内的研究假设</li>
+<li>自变量的数量和值直接决定了实验有多少条件</li>
+<li>需要确定自变量是谁，如何取值？因变量是谁，如何度量？</li>
+</ol>
+</li>
+</ul>
+<h1 id="4-实验结构"><a href="#4-实验结构" class="headerlink" title="4. 实验结构"></a>4. 实验结构</h1><ul>
+<li>实验中要研究多少自变量？<ul>
+<li>基本设计 or 析因设计</li>
+</ul>
+</li>
+<li>每个自变量有多少个不同的值？<ul>
+<li>条件数 =&gt; 组间设计、组内设计、列区设计</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-49-54-c37836752e3882a28f8f113090983520-20231229104952-d45df8.png" alt="image.png"></p>
+<h1 id="5-组间设计与组内设计"><a href="#5-组间设计与组内设计" class="headerlink" title="5. 组间设计与组内设计"></a>5. 组间设计与组内设计</h1><p>理想情况下组件设计更好，但实际上可能因为用户数量不够选择组内设计。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-52-02-609e737bc6785c764a56a5ad0634a91b-20231229105201-7ebdbc.png" alt="image.png"></p>
+<h2 id="5-1-组间设计"><a href="#5-1-组间设计" class="headerlink" title="5.1. 组间设计"></a>5.1. 组间设计</h2><ul>
+<li><p><strong>每个参与者只暴露在一种实验条件下</strong></p>
+</li>
+<li><p>参与组的数量直接对应于实验条件的数量</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>设计更简洁</li>
+<li>避免学习效应</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>结果受个体差异大</li>
+<li>样本大</li>
+</ul>
+</li>
+</ul>
+<p>对于简单任务，个体差异小，有条件时可以使用组间设计</p>
+<h2 id="5-2-组内设计"><a href="#5-2-组内设计" class="headerlink" title="5.2. 组内设计"></a>5.2. 组内设计</h2><ul>
+<li><p><strong>一个参与者暴露在多个条件下</strong></p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>样本小</li>
+<li>隔离个体差异</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>疲劳问题</li>
+<li>存在学习效应</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-3-选择设计方法"><a href="#5-3-选择设计方法" class="headerlink" title="5.3. 选择设计方法"></a>5.3. 选择设计方法</h2><ul>
+<li><p>组间设计</p>
+<ul>
+<li>任务简单，个体差异有限</li>
+<li>受学习效应影响大</li>
+<li>一些任务不可能使用组内（例：不可能既是新手又是老手）</li>
+</ul>
+</li>
+<li><p>组内设计</p>
+<ul>
+<li>个体差异大的任务，学习效果不容易受到影响的任务</li>
+<li>或目标与群体很小的任务</li>
+<li>需要考虑控制于组内设计相关的学习效果、疲劳和其他潜在问题的负面因素</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-多自变量的实验"><a href="#6-多自变量的实验" class="headerlink" title="6. 多自变量的实验"></a>6. 多自变量的实验</h1><h2 id="析因设计-Factorial-Design"><a href="#析因设计-Factorial-Design" class="headerlink" title="析因设计 Factorial Design"></a>析因设计 Factorial Design</h2><ul>
+<li><strong>优点</strong>：允许在一个实验中研究两个或两个以上自变量之间的相互作用的影响</li>
+<li>相互作用可以被描述为“一个自变量对因变量的不同影响，取决于另一个自变量的特定取值”</li>
+<li>析因设计中条件的数量由自变量的总数和每个自变量的取值决定</li>
+</ul>
+<p>举例：比较使用三种类型键盘(QWERTY键盘、DVORAK键盘和字母键盘)时的打字速度，且调查不同的任务(写作和抄写)对打字速度的影响。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-38-80c0c6ba4faee72ea0da3341882db425-20231229110137-3fd385.png" alt="image.png"></p>
+<p>条件数： <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="5.028ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 2222.4 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(722.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(1722.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></svg></mjx-container></p>
+<h2 id="裂区设计split-plot-design"><a href="#裂区设计split-plot-design" class="headerlink" title="裂区设计split-plot design"></a>裂区设计split-plot design</h2><p>析因研究中的一种设计，既有组间成分，也有组内成分。</p>
+<p>举例：</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-21-71cba743181699807fe45ed3cc184d3f-20231229110120-4709e9.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>2023_Fall_人机交互</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>0-introduction</title>
     <url>//%5Bobject%20Object%5D/2023/12/28/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/0-introduction/</url>
     <content><![CDATA[<h1 id="1-Spring"><a href="#1-Spring" class="headerlink" title="1. Spring"></a>1. Spring</h1><ul>
