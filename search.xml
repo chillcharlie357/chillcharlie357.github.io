@@ -4780,6 +4780,13 @@
     <content><![CDATA[<p>多选题<br>问答题：5道题</p>
 <p>web开发框架分层，请求处理过程<br>spring security web请求保护<br>web请求开发有哪些步骤<br>反应式编程的4个接口<br>AOP编程解决什么问题，开发要点<br>OAuth2基于授权码的授权，系统组成，处理流程<br>Spring集成流解决了什么问题</p>
 ]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
   </entry>
   <entry>
     <title>0-introduction</title>
