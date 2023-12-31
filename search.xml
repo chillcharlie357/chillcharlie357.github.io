@@ -4499,13 +4499,13 @@
   </entry>
   <entry>
     <title>6-Spring Security</title>
-    <url>//%5Bobject%20Object%5D/2023/12/28/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/6-Spring%20Security/</url>
+    <url>//%5Bobject%20Object%5D/2023/10/16/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/6-Spring%20Security/</url>
     <content><![CDATA[<ul>
 <li>JAAS: Java Authentication Authorization Service. JDK提供的认证授权服务</li>
 </ul>
-<p><code>spring-boot-starter-security</code></p>
-<h1 id="1-Spring-Security"><a href="#1-Spring-Security" class="headerlink" title="1. Spring Security"></a>1. Spring Security</h1><ul>
-<li>作用<ol>
+<h1 id="1-Spring-Security👍"><a href="#1-Spring-Security👍" class="headerlink" title="1. Spring Security👍"></a>1. Spring Security👍</h1><ul>
+<li><p>划分为两类：</p>
+<ol>
 <li>针对客户web请求权限控制</li>
 <li>针对方法级的权限控制<ul>
 <li>针对业务层代码</li>
@@ -4515,34 +4515,46 @@
 </li>
 </ol>
 </li>
+<li><p>在spring中使用：添加依赖<code>spring-boot-starter-security</code>后会自动加载安全相关的bean</p>
+</li>
 </ul>
-<p>添加依赖后会自动加载安全相关的bean</p>
-<h1 id="2-Cookie"><a href="#2-Cookie" class="headerlink" title="2. Cookie"></a>2. Cookie</h1><ul>
+<h1 id="2-Cookie"><a href="#2-Cookie" class="headerlink" title="2. Cookie"></a>2. Cookie</h1><p>维持客户端与服务端长时间的会话。</p>
+<ul>
 <li>http是无状态的协议，cookie可以保存状态<ul>
 <li>例：保持用户登录状态</li>
 </ul>
 </li>
 </ul>
 <p>用户登录后，服务端会返回session-id，作为cookie存在本地每次请求都带上cookie</p>
-<h1 id="3-Web请求拦截"><a href="#3-Web请求拦截" class="headerlink" title="3. Web请求拦截"></a>3. Web请求拦截</h1><p>使用filter</p>
+<h1 id="3-Web请求拦截"><a href="#3-Web请求拦截" class="headerlink" title="3. Web请求拦截"></a>3. Web请求拦截</h1><ul>
+<li>spring data权限认证的原理：使用servlet容器的filter</li>
+</ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F092f577948a6053f598961fe1a329feb_20231026184400.png" alt="image.png"></p>
-<h1 id="4-开发人员要做什么👍"><a href="#4-开发人员要做什么👍" class="headerlink" title="4. 开发人员要做什么👍"></a>4. 开发人员要做什么👍</h1><p><font color="#ff0000">除了框架提供的，开发人员还需要做什么?</font></p>
+<h1 id="4-开发人员还要做什么👍"><a href="#4-开发人员还要做什么👍" class="headerlink" title="4. 开发人员还要做什么👍"></a>4. 开发人员还要做什么👍</h1><p><font color="#ff0000">除了框架提供的，开发人员还需要做什么，很重要</font></p>
 <ol>
 <li>实现接口<ul>
-<li>被Spring Security调用</li>
-<li><code>UserDetailInterface</code>接口：给Spring框架提供用户详细信息</li>
+<li><code>UserDetailsService</code>接口：给Spring框架提供用户详细信息。用户信息注册存储，需要用到用户信息的时候从数据访问层获取<ul>
+<li>这里用到之前讲到数据访问层实现技术。</li>
+<li>和spring security解耦，只需要提供用户信息但不关心怎么实现。</li>
 </ul>
 </li>
-<li>密码加密/解密对象</li>
+<li>被Spring Security调用</li>
+</ul>
+</li>
+<li>实现密码加密/解密对象<ul>
+<li>PasswordEncoder</li>
+<li>Bean对象</li>
+</ul>
+</li>
 <li>(optional)实现登录页面<ul>
 <li>有默认页面</li>
 <li><code>/login</code>, Spring已经自动实现了对应的<code>Controller</code></li>
 </ul>
 </li>
-<li>权限设定  <ul>
-<li><code>SecurityFilterChain</code></li>
-<li>从父类<code>WebSecurityConfigurerAdapter</code>实现<code>configure</code>方法</li>
-</ul>
+<li>权限设定<ol>
+<li><code>SecurityFilterChain</code>，基于注入的<code>httpSecurity</code>对象</li>
+<li>继承父类<code>WebSecurityConfigurerAdapter</code>，实现<code>configure</code>方法</li>
+</ol>
 </li>
 </ol>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F4875ccdece8ae8892f54cde6042a6fef_20231026184427.png" alt="image.png"></p>
@@ -4560,14 +4572,18 @@
 </li>
 <li>通过Filter对用户设定的权限进行权限控制</li>
 </ol>
-<h1 id="6-用户信息存储👍"><a href="#6-用户信息存储👍" class="headerlink" title="6. 用户信息存储👍"></a>6. 用户信息存储👍</h1><ul>
+<h1 id="6-用户信息存储👍"><a href="#6-用户信息存储👍" class="headerlink" title="6. 用户信息存储👍"></a>6. 用户信息存储👍</h1><p>来自多个渠道，spring security不关心。</p>
+<ol>
 <li>内存用户数据库</li>
-<li>JDBC用户存储</li>
+<li>JDBC用户存储<ul>
+<li>不止是JDBC、关系型数据库，只要是持久化的都算</li>
+</ul>
+</li>
 <li>LDAP用户数据库<ul>
 <li>轻量级目录数据库</li>
 </ul>
 </li>
-</ul>
+</ol>
 <h1 id="7-权限分类"><a href="#7-权限分类" class="headerlink" title="7. 权限分类"></a>7. 权限分类</h1><ul>
 <li>Authority，权限</li>
 <li>Role，角色<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>权限，加<strong>前缀</strong>：ROLE_<ul>
@@ -4581,15 +4597,15 @@
 <li>视图控制器，定义login请求对应的视图：<code>registry.addViewController("/login")</code>;</li>
 <li>登录的post请求由Spring Security自动处理，名称默认：<code>username</code>、<code>password</code>，可配置</li>
 </ul>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">.loginPage(<span class="string">"/login"</span>)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">formLogin()</span><br><span class="line">.loginPage(<span class="string">"/login"</span>).usernameParamrter(<span class="string">'username'</span>).passwordParameter(<span class="string">'password'</span>)</span><br></pre></td></tr></table></figure></div>
 
-<h1 id="9-启用HTTP-Basic认证👍"><a href="#9-启用HTTP-Basic认证👍" class="headerlink" title="9. 启用HTTP Basic认证👍"></a>9. 启用HTTP Basic认证👍</h1><p>HTTP协议内容，与Spring框架无关。由于用户 ID 与密码是是以明文的形式在网络中进行传输的（尽管采用了 base64 编码，但是 base64 算法是可逆的），所以基本验证方案并<strong>不安全</strong>。</p>
+<h1 id="9-启用HTTP-Basic认证👍"><a href="#9-启用HTTP-Basic认证👍" class="headerlink" title="9. 启用HTTP Basic认证👍"></a>9. 启用HTTP Basic认证👍</h1><p>HTTP协议内容，与Spring框架无关。<br>由于用户 ID 与密码是是以明文的形式在网络中进行传输的（尽管采用了 base64 编码，但是 base64 算法是可逆的），所以基本验证方案并<strong>不安全</strong>。</p>
 <ul>
 <li>启用HTTP basic认证: <code>httpBasic()</code><ul>
 <li>默认关闭</li>
 </ul>
 </li>
-<li>在请求时带上用户名密码<ul>
+<li>在请求时带上用户名密码，一般在测试的时候使用<ul>
 <li><code>Authorization</code>属性</li>
 <li><code>https://username:password@www.example.com/</code></li>
 </ul>
@@ -4597,7 +4613,10 @@
 </ul>
 <p><a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication">HTTP authentication - HTTP | MDN <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h1 id="10-CSRF"><a href="#10-CSRF" class="headerlink" title="10. CSRF"></a>10. CSRF</h1><ul>
-<li>跨站请求伪造</li>
+<li>跨站请求伪造<ul>
+<li>攻击者诱导受害者进入第三方网站，在第三方网站中，向被攻击网站发送跨站请求。利用受害者在被攻击网站已经获取的注册凭证，绕过后台的用户验证，达到冒充用户对被攻击的网站执行某项操作的目的。</li>
+</ul>
+</li>
 <li>默认开启</li>
 <li>如何关闭：<code>.csrd().disable()</code></li>
 <li>如何忽略：<code>.ignoringAntMatchers("/admin/**")</code></li>
@@ -4606,20 +4625,23 @@
 <ul>
 <li><p>例子：</p>
 <ol>
-<li>C访问A，登录，建立长期会话</li>
-<li>C每次对A请求，都会带有SessionID</li>
-<li>在此期间C又访问了B，假设又一个表达</li>
-<li>B返回表单，但提交地址是A</li>
-<li>由于有C的SessionID，所以A认为是合法的</li>
+<li>受害者登录a.com，并保留了登录凭证（Cookie）。</li>
+<li>攻击者引诱受害者访问了b.com。</li>
+<li>b.com 向 a.com 发送了一个请求：a.com/act=xx。浏览器会默认携带a.com的Cookie。</li>
+<li>a.com接收到请求后，对请求进行验证，并确认是受害者的凭证，误以为是受害者自己发送的请求。</li>
+<li>a.com以受害者的名义执行了act=xx。</li>
+<li>攻击完成，攻击者在受害者不知情的情况下，冒充受害者，让a.com执行了自己定义的操作。</li>
 </ol>
 </li>
 <li><p>解决：C每次提交表单A，<strong>_csrf 字段</strong>有唯一ID，无法伪造</p>
 <ul>
 <li>get得到<code>_csrf</code>， post请求携带<code>_csrf</code> ，防止第三方伪造</li>
+<li>不在cookie中</li>
 </ul>
 </li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F16%2F6a1a8a2f1ac8edf6f33638931d9d15b6_20231016210157.png" alt="image.png"></p>
+<p><a class="link" href="https://tech.meituan.com/2018/10/11/fe-security-csrf.html">前端安全系列（二）：如何防止CSRF攻击？ - 美团技术团队 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h1 id="11-CORS：跨域资源共享"><a href="#11-CORS：跨域资源共享" class="headerlink" title="11. CORS：跨域资源共享"></a>11. CORS：跨域资源共享</h1><ul>
 <li>是由浏览器定义的协议<ul>
 <li>是一种基于 <a class="link" href="https://developer.mozilla.org/zh-CN/docs/Glossary/HTTP">HTTP <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 头的机制，该机制通过允许服务器标示除了它自己以外的其他<a class="link" href="https://developer.mozilla.org/zh-CN/docs/Glossary/Origin">源 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。</li>
@@ -4630,7 +4652,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="12-在后端代码获得用户信息"><a href="#12-在后端代码获得用户信息" class="headerlink" title="12. 在后端代码获得用户信息"></a>12. 在后端代码获得用户信息</h1><ol>
+<h1 id="12-在后端代码获得当前登录的用户信息"><a href="#12-在后端代码获得当前登录的用户信息" class="headerlink" title="12. 在后端代码获得当前登录的用户信息"></a>12. 在后端代码获得当前登录的用户信息</h1><ol>
 <li>注入<code>Principal</code>对象<ul>
 <li>来自<code>java.security</code>，是JDK中JASS的低层框架</li>
 <li><code>String username = principal.getName()</code>获取用户名</li>
