@@ -3830,7 +3830,7 @@
   </entry>
   <entry>
     <title>2-面向切面编程</title>
-    <url>//%5Bobject%20Object%5D/2023/12/28/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/2-%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/</url>
+    <url>//%5Bobject%20Object%5D/2023/10/10/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/2-%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="1-软件编程方法"><a href="#1-软件编程方法" class="headerlink" title="1. 软件编程方法"></a>1. 软件编程方法</h1><ul>
 <li>面向过程编程 POP</li>
 <li>面向对象编程 OOP</li>
@@ -3857,7 +3857,7 @@
 <ul>
 <li>继承<ul>
 <li>让业务类继承日志类</li>
-<li>缺点：对业务代码造成了侵入</li>
+<li>缺点：感知到日志代码存在，强耦合，对业务代码造成了侵入</li>
 </ul>
 </li>
 <li>委托<ul>
@@ -3871,9 +3871,9 @@
 <li>时间：方法前/后…</li>
 </ul>
 </li>
-<li><strong>切点 Pointcut</strong>：何处<ul>
+<li><strong>切点 Pointcut</strong>：指定在何处切<ul>
 <li>Spring只支持在<font color="#ff0000">方法</font>的前后切</li>
-<li>写<strong>切点表达式</strong>指定</li>
+<li>写<strong>切点表达式</strong>指定逻辑</li>
 </ul>
 </li>
 <li><strong>切面 Aspect</strong>：Advice和Pointcut的结合<ul>
@@ -3887,7 +3887,7 @@
 </li>
 <li><strong>织入 Weaving</strong>：切面应用到目标对象的过程</li>
 </ol>
-<h2 id="3-1-通知（Advice）"><a href="#3-1-通知（Advice）" class="headerlink" title="3.1. 通知（Advice）"></a>3.1. 通知（Advice）</h2><p><strong>在aspect类的方法上注解</strong></p>
+<h2 id="3-1-通知-Advice"><a href="#3-1-通知-Advice" class="headerlink" title="3.1. 通知 Advice"></a>3.1. 通知 Advice</h2><p><strong>在aspect类的方法上注解</strong></p>
 <ul>
 <li>@Before</li>
 <li>@After：不区分是否正常结束</li>
@@ -3895,6 +3895,7 @@
 <li>@AfterThrowing</li>
 <li>@Around：结合前面所有类型</li>
 </ul>
+<p>被切方法成功运行之后会执行：After、AfterReturning、Around</p>
 <h2 id="3-2-切点-Pointcut"><a href="#3-2-切点-Pointcut" class="headerlink" title="3.2. 切点 Pointcut"></a>3.2. 切点 Pointcut</h2><ul>
 <li><code>@Pointcut</code>，空方法</li>
 <li>可以在不同的Advice的切点表达式中直接重用<ul>
@@ -3902,25 +3903,37 @@
 <li><strong>不是方法调用</strong></li>
 </ul>
 </li>
+<li>相当于<strong>对比较复杂的切点表达式进行封装</strong>，简单的就可以直接写在Advice里<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2Fe5eb3eb6b02f362f0bdf531c29a71c55_20230921201543.png" alt="image.png"></li>
 </ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2Fe5eb3eb6b02f362f0bdf531c29a71c55_20230921201543.png" alt="image.png"></p>
 <h2 id="3-3-切面-Aspect👍"><a href="#3-3-切面-Aspect👍" class="headerlink" title="3.3. 切面 Aspect👍"></a>3.3. 切面 Aspect👍</h2><ul>
-<li>类上加<code>@Aspect</code>注解</li>
+<li>java类上加<code>@Aspect</code>注解，是一个单独的类</li>
 <li>包含切的时间、切点和逻辑</li>
-<li>是一个单独的类</li>
+<li>定义可重用的切点</li>
 </ul>
 <p>==不需要修改业务代码==</p>
 <h3 id="3-3-1-创建步骤"><a href="#3-3-1-创建步骤" class="headerlink" title="3.3.1. 创建步骤"></a>3.3.1. 创建步骤</h3><ol>
 <li>实现一个java类，在类上加<code>@Aspect</code>注解，定义逻辑和行为。用<code>@Before</code>等注解定义Advice和<strong>切点表达式</strong>。</li>
-<li>在配置类增加注解<code>@EnableAspectJProxy</code></li>
-<li>创建切面类对应的Bean</li>
+<li>在配置类增加注解<code>@EnableAspectJProxy</code><ul>
+<li>启用AspectJ代理</li>
+</ul>
+</li>
+<li>实例化：在配置类中实例化切面类对应的Bean，或者使用<code>@Component</code></li>
 </ol>
 <h3 id="3-3-2-切点表达式-切点指示器👍"><a href="#3-3-2-切点表达式-切点指示器👍" class="headerlink" title="3.3.2. 切点表达式/切点指示器👍"></a>3.3.2. 切点表达式/切点指示器👍</h3><ol>
 <li>借助<code>AspectJ</code>切点指示器的语法</li>
-<li>在方法上加<code>@Before(&lt;切点表达式&gt;)</code>、<code>@Pointercut(&lt;expression)</code></li>
+<li>在方法上加<code>@Before(&lt;expression&gt;)</code>、<code>@Pointercut(&lt;expression)</code></li>
 </ol>
-<h4 id="3-3-2-1-Pointcut"><a href="#3-3-2-1-Pointcut" class="headerlink" title="3.3.2.1. `Pointcut"></a>3.3.2.1. `Pointcut</h4><p>`</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Pointcut(</span></span><br><span class="line"><span class="meta">"execution(* soundsystem.CompactDisc.playTrack( int )) " + </span></span><br><span class="line"><span class="meta">"&amp;&amp; args(trackNumber)")</span> <span class="comment">//获取参数</span></span><br><span class="line">&amp;&amp; within(soundsystem.*)	<span class="comment">//限定包路径</span></span><br><span class="line">&amp;&amp; bean(sgtPeppers)	<span class="comment">//限定bean名称，或者： &amp;&amp; !bean(sgtPeppers)</span></span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>可以实现👍<ol>
+<li>指定在哪些方法上切入</li>
+<li>获取参数</li>
+<li>限定包路径</li>
+<li>限定bean名称，白名单或黑名单</li>
+<li>限定在特定注解上切入</li>
+</ol>
+</li>
+</ul>
+<h4 id="3-3-2-1-Pointcut"><a href="#3-3-2-1-Pointcut" class="headerlink" title="3.3.2.1. `Pointcut"></a>3.3.2.1. `Pointcut</h4><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Pointcut(</span></span><br><span class="line"><span class="meta">"execution(* soundsystem.CompactDisc.playTrack( int )) " + </span></span><br><span class="line"><span class="meta">"&amp;&amp; args(trackNumber)")</span> <span class="comment">//获取参数</span></span><br><span class="line">&amp;&amp; within(soundsystem.*)	<span class="comment">//限定包路径</span></span><br><span class="line">&amp;&amp; bean(sgtPeppers)	<span class="comment">//限定bean名称，或者： &amp;&amp; !bean(sgtPeppers)</span></span><br></pre></td></tr></table></figure></div>
 
 <ol>
 <li>指定方法<code>execution</code></li>
@@ -3959,23 +3972,32 @@
 </li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2F0e23d5f342f4383c7a76122ca75ea479_20230921200101.png" alt="image.png"></p>
-<h2 id="3-4-织入-Weaving"><a href="#3-4-织入-Weaving" class="headerlink" title="3.4. 织入 Weaving"></a>3.4. 织入 Weaving</h2><p>动态给对象增加新的行为，不用继承子类。<br>背后的实现方式还是代理。</p>
-<h3 id="3-4-1-织入方式"><a href="#3-4-1-织入方式" class="headerlink" title="3.4.1. 织入方式"></a>3.4.1. 织入方式</h3><ol>
+<h2 id="3-4-织入-Weaving"><a href="#3-4-织入-Weaving" class="headerlink" title="3.4. 织入 Weaving"></a>3.4. 织入 Weaving</h2><p>切面应用到目标对象的过程。</p>
+<h3 id="3-4-1-织入时机"><a href="#3-4-1-织入时机" class="headerlink" title="3.4.1. 织入时机"></a>3.4.1. 织入时机</h3><ol>
+<li>编译期： 需要特殊的编译器</li>
+<li>类加载期: 需要类加载器的处理</li>
+<li><strong>运行期</strong>: Spring所采纳的方式，使用代理对象，只支持方法级别的<font color="#c00000">连接点</font></li>
+</ol>
+<h3 id="3-4-2-织入方式"><a href="#3-4-2-织入方式" class="headerlink" title="3.4.2. 织入方式"></a>3.4.2. 织入方式</h3><p>使用代理机制。  </p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F10-35-22-e9d137daf3c4b7f22dc84e135ebdf72f-20231231103521-3027ed.png" alt="image.png"></p>
+<h2 id="3-5-引入-introduction👍"><a href="#3-5-引入-introduction👍" class="headerlink" title="3.5. 引入 introduction👍"></a>3.5. 引入 introduction👍</h2><p>引入新的行为和状态。</p>
+<h3 id="3-5-1-引入方式"><a href="#3-5-1-引入方式" class="headerlink" title="3.5.1. 引入方式"></a>3.5.1. 引入方式</h3><ol>
 <li>创建需要增加的接口和实现类</li>
 <li>新建一个切面类，加<code>@Aspect</code></li>
-<li>在里面定义一个<code>static</code>接口，加上<code>@DeclareParents</code>注解</li>
-<li>注册切面类Bean</li>
+<li>在里面定义一个新增实现类的<code>static</code>接口，加上<code>@DeclareParents</code>注解</li>
+<li>实例化切面类Bean</li>
 </ol>
-<h3 id="3-4-2-织入时机"><a href="#3-4-2-织入时机" class="headerlink" title="3.4.2. 织入时机"></a>3.4.2. 织入时机</h3><ol>
-<li>编译器</li>
-<li>类加载器</li>
-<li><strong>运行期</strong></li>
-</ol>
-<h2 id="3-5-引入-introduction"><a href="#3-5-引入-introduction" class="headerlink" title="3.5. 引入 introduction"></a>3.5. 引入 introduction</h2><ul>
-<li><code>@DeclareParents</code></li>
+<h3 id="3-5-2-例子"><a href="#3-5-2-例子" class="headerlink" title="3.5.2. 例子"></a>3.5.2. 例子</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2Ff76b26d26ccfff3dcc22e9fd080b07ea_20230921211603.png" alt="image.png"></p>
+<p>定义切面，<strong>为对象增加新的行为</strong>。Encoreable接口里包含要引入的新的行为的定义。新的行为引入到原有类中的时候，每个类都会实例化一个新的DefaultEncoreable类，一对一。</p>
+<p>切面本身是<strong>单实例</strong>的，但是实现新行为的类对应的实例和被切入类是<strong>一对一</strong>的。</p>
+<ul>
+<li><code>@DeclareParents</code>：<ul>
+<li><code>value</code>：给实现了这个接口的对象，引入新的行为</li>
+<li><code>defaultImpl</code>：实现了需要引入的新行为。在该例子中实现了<code>Encoreable</code>。</li>
+</ul>
+</li>
 <li><code>main</code>和测试</li>
 </ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2Ff76b26d26ccfff3dcc22e9fd080b07ea_20230921211603.png" alt="image.png"></p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F28%2F786a0319e1f1f5d0d8e5422f97265926_20230928185355.png" alt="image.png"></p>
 ]]></content>
       <categories>
@@ -4287,6 +4309,140 @@
       </tags>
   </entry>
   <entry>
+    <title>5-Spring Data MongoDB、Redis</title>
+    <url>//%5Bobject%20Object%5D/2023/12/28/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/5-Spring%20Data%20MongoDB%E3%80%81Redis/</url>
+    <content><![CDATA[<h1 id="1-MongoDB"><a href="#1-MongoDB" class="headerlink" title="1. MongoDB"></a>1. MongoDB</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1. 介绍"></a>1.1. 介绍</h2><p>文档数据库，存储类Json文件。<br>可以分布式存储。</p>
+<table>
+<thead>
+<tr>
+<th>SQL</th>
+<th>MongoDB</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>database</td>
+<td>database</td>
+<td>数据库</td>
+</tr>
+<tr>
+<td>table</td>
+<td>collection</td>
+<td>数据库表/集合</td>
+</tr>
+<tr>
+<td>row</td>
+<td>document</td>
+<td>数据库记录行/文档</td>
+</tr>
+<tr>
+<td>column</td>
+<td>field</td>
+<td>数据字段/域</td>
+</tr>
+</tbody></table>
+<p>数据库document可以直接包含子document（在关系型数据库中只能创建子表），不同的document包含字段可能不一样。</p>
+<h2 id="1-2-使用"><a href="#1-2-使用" class="headerlink" title="1.2. 使用"></a>1.2. 使用</h2><p>Id为String，mongoDB会自动生成</p>
+<p>可以使用mongdb-shell交互</p>
+<h2 id="1-3-Spring-Data-MongoDB👍"><a href="#1-3-Spring-Data-MongoDB👍" class="headerlink" title="1.3. Spring Data MongoDB👍"></a>1.3. Spring Data MongoDB👍</h2><p>业务代码不需要修改</p>
+<h3 id="1-3-1-定义存储库"><a href="#1-3-1-定义存储库" class="headerlink" title="1.3.1. 定义存储库"></a>1.3.1. 定义存储库</h3><p>继承<code>CrudRepository&lt;&gt;</code>接口</p>
+<h3 id="1-3-2-领域类"><a href="#1-3-2-领域类" class="headerlink" title="1.3.2. 领域类"></a>1.3.2. 领域类</h3><ol>
+<li>领域类加<code>@Document</code><ul>
+<li>Collection默认名：类名，第一个字母改成小写</li>
+</ul>
+</li>
+<li>Id字段加<code>@Id</code>，需要定义为<strong>String</strong>类型<ul>
+<li>因为String类型MongoDB可以自动创建并唯一赋值</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><font color="#ff0000">和关系型数据库主要区别</font><ul>
+<li>List，可以把原来的子表放到同一个Collection里。</li>
+<li>可能会导致重复存储，但可以通过加索引等方法解决</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4-在Spring中配置"><a href="#1-4-在Spring中配置" class="headerlink" title="1.4. 在Spring中配置"></a>1.4. 在Spring中配置</h2><p>在Appication配置文件中指定</p>
+<p><code>spring.data.mongodb.url=&lt;url&gt;</code></p>
+<h2 id="1-5-性能对比"><a href="#1-5-性能对比" class="headerlink" title="1.5. 性能对比"></a>1.5. 性能对比</h2><ul>
+<li>批量插入数据<ul>
+<li>直接从client插入</li>
+<li>Spring Data Mongodb插入</li>
+</ul>
+</li>
+</ul>
+<p>Spring插入时会自动创建一个<code>_class</code>字段</p>
+<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-介绍"><a href="#2-1-介绍" class="headerlink" title="2.1. 介绍"></a>2.1. 介绍</h2><ul>
+<li>分布式存储</li>
+<li>存在内存里，常用于作缓存</li>
+<li>可以持久化，但不太重要，不是主要用途</li>
+<li>主从复制</li>
+<li>key-value的Hash表结构，区分大小写</li>
+</ul>
+<h2 id="2-2-Redis命令"><a href="#2-2-Redis命令" class="headerlink" title="2.2. Redis命令"></a>2.2. Redis命令</h2><p>可以设置key的存活时长<br>默认创建16个数据库</p>
+<p>flushdb：deletes the keys in a database<br>flushall：deletes all keys in all databases</p>
+<h2 id="2-3-Redis数据类型👍"><a href="#2-3-Redis数据类型👍" class="headerlink" title="2.3. Redis数据类型👍"></a>2.3. Redis数据类型👍</h2><p>指的是<strong>value类型</strong></p>
+<ol>
+<li>String</li>
+<li>List</li>
+<li>Hash</li>
+<li>Set</li>
+<li>……</li>
+</ol>
+<p>在cilent内：<br><code>type</code>查看value类型<br><code>lrang mylist 0 -1</code>：查看list内容<br><code>lpush</code>,<code>rpush</code>插入数据<br><code>sadd mysqet 1 2 3 4</code>：add set<br><code>smember myset</code>：查看set内容</p>
+<h2 id="2-4-Redis客户端"><a href="#2-4-Redis客户端" class="headerlink" title="2.4. Redis客户端"></a>2.4. Redis客户端</h2><ul>
+<li>Jedis：早期Spring集成</li>
+<li>Lettuce：目前Spring采用的客户端</li>
+</ul>
+<h2 id="2-5-Spring-Data-Redis"><a href="#2-5-Spring-Data-Redis" class="headerlink" title="2.5. Spring Data Redis"></a>2.5. Spring Data Redis</h2><ul>
+<li><p><strong>RedisConnectionFactory接口</strong></p>
+<ul>
+<li>Spring Boot会自动创建，直接注入即可。</li>
+<li>连接需要提供Redis Server的地址、端口号等信息<ul>
+<li>这些信息在Application文件配置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>通过<code>RedisTemplate</code>模板对象访问Redis</strong></p>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> RedisTemplate&lt;String, Product&gt; <span class="title function_">redisTemplate</span><span class="params">(RedisConnectionFactory cf)</span>{</span><br><span class="line">	RedisTemplate&lt;String,Product&gt; redis = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>();</span><br><span class="line">	redis.setFactory(cf);</span><br><span class="line">	<span class="keyword">return</span> redis;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>BoudListOperations绑定key，不需要每个操作都写一边</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BoudListOperations</span> <span class="variable">cart</span> <span class="operator">=</span> redisTemplate.boundListOp(<span class="string">''</span>cart<span class="string">")</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-5-1-JDK序列化"><a href="#2-5-1-JDK序列化" class="headerlink" title="2.5.1. JDK序列化"></a>2.5.1. JDK序列化</h3><ul>
+<li>存储java对象需要序列化<ul>
+<li>即持久化</li>
+</ul>
+</li>
+<li><strong>必须需要实现<code>Serializable</code>接口</strong></li>
+<li>把java对象通过key-value读出来，反序列化</li>
+</ul>
+<p>mongodb没有这个要求，因为它会把所有值都转成json串</p>
+<p>做得很失败，性能也不好</p>
+<h3 id="2-5-2-JSON序列化"><a href="#2-5-2-JSON序列化" class="headerlink" title="2.5.2. JSON序列化"></a>2.5.2. JSON序列化</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">redis.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>())</span><br><span class="line">redis.setVAlueSerializer(<span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;Product.class&gt;)</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>Key比较简单，可以直接用String序列化</li>
+<li>指定Value使用<code>Jackson2JsonRedisSerializer</code>进行序列化</li>
+</ol>
+<p>对数据存取操作的代码没有影响</p>
+<p>直接使用<strong>RedisTemplate</strong>获取的Value会经过反序列化，仍然为Java对象<br>如果想要获取String，可以使用<strong>StringRedisTemplate</strong>读取Value</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>6-Spring Security</title>
     <url>//%5Bobject%20Object%5D/2023/12/28/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/6-Spring%20Security/</url>
     <content><![CDATA[<ul>
@@ -4433,140 +4589,6 @@
 <li>安全上下文获取</li>
 </ol>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">Authentication</span> <span class="variable">authentication</span> <span class="operator">=</span> SecurityContextHolder.getContext().getAuthentication(); <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> (User) authentication.getPrincipal();</span><br></pre></td></tr></table></figure></div>]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>5-Spring Data MongoDB、Redis</title>
-    <url>//%5Bobject%20Object%5D/2023/12/28/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/5-Spring%20Data%20MongoDB%E3%80%81Redis/</url>
-    <content><![CDATA[<h1 id="1-MongoDB"><a href="#1-MongoDB" class="headerlink" title="1. MongoDB"></a>1. MongoDB</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1. 介绍"></a>1.1. 介绍</h2><p>文档数据库，存储类Json文件。<br>可以分布式存储。</p>
-<table>
-<thead>
-<tr>
-<th>SQL</th>
-<th>MongoDB</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>database</td>
-<td>database</td>
-<td>数据库</td>
-</tr>
-<tr>
-<td>table</td>
-<td>collection</td>
-<td>数据库表/集合</td>
-</tr>
-<tr>
-<td>row</td>
-<td>document</td>
-<td>数据库记录行/文档</td>
-</tr>
-<tr>
-<td>column</td>
-<td>field</td>
-<td>数据字段/域</td>
-</tr>
-</tbody></table>
-<p>数据库document可以直接包含子document（在关系型数据库中只能创建子表），不同的document包含字段可能不一样。</p>
-<h2 id="1-2-使用"><a href="#1-2-使用" class="headerlink" title="1.2. 使用"></a>1.2. 使用</h2><p>Id为String，mongoDB会自动生成</p>
-<p>可以使用mongdb-shell交互</p>
-<h2 id="1-3-Spring-Data-MongoDB👍"><a href="#1-3-Spring-Data-MongoDB👍" class="headerlink" title="1.3. Spring Data MongoDB👍"></a>1.3. Spring Data MongoDB👍</h2><p>业务代码不需要修改</p>
-<h3 id="1-3-1-定义存储库"><a href="#1-3-1-定义存储库" class="headerlink" title="1.3.1. 定义存储库"></a>1.3.1. 定义存储库</h3><p>继承<code>CrudRepository&lt;&gt;</code>接口</p>
-<h3 id="1-3-2-领域类"><a href="#1-3-2-领域类" class="headerlink" title="1.3.2. 领域类"></a>1.3.2. 领域类</h3><ol>
-<li>领域类加<code>@Document</code><ul>
-<li>Collection默认名：类名，第一个字母改成小写</li>
-</ul>
-</li>
-<li>Id字段加<code>@Id</code>，需要定义为<strong>String</strong>类型<ul>
-<li>因为String类型MongoDB可以自动创建并唯一赋值</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><font color="#ff0000">和关系型数据库主要区别</font><ul>
-<li>List，可以把原来的子表放到同一个Collection里。</li>
-<li>可能会导致重复存储，但可以通过加索引等方法解决</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-4-在Spring中配置"><a href="#1-4-在Spring中配置" class="headerlink" title="1.4. 在Spring中配置"></a>1.4. 在Spring中配置</h2><p>在Appication配置文件中指定</p>
-<p><code>spring.data.mongodb.url=&lt;url&gt;</code></p>
-<h2 id="1-5-性能对比"><a href="#1-5-性能对比" class="headerlink" title="1.5. 性能对比"></a>1.5. 性能对比</h2><ul>
-<li>批量插入数据<ul>
-<li>直接从client插入</li>
-<li>Spring Data Mongodb插入</li>
-</ul>
-</li>
-</ul>
-<p>Spring插入时会自动创建一个<code>_class</code>字段</p>
-<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-介绍"><a href="#2-1-介绍" class="headerlink" title="2.1. 介绍"></a>2.1. 介绍</h2><ul>
-<li>分布式存储</li>
-<li>存在内存里，常用于作缓存</li>
-<li>可以持久化，但不太重要，不是主要用途</li>
-<li>主从复制</li>
-<li>key-value的Hash表结构，区分大小写</li>
-</ul>
-<h2 id="2-2-Redis命令"><a href="#2-2-Redis命令" class="headerlink" title="2.2. Redis命令"></a>2.2. Redis命令</h2><p>可以设置key的存活时长<br>默认创建16个数据库</p>
-<p>flushdb：deletes the keys in a database<br>flushall：deletes all keys in all databases</p>
-<h2 id="2-3-Redis数据类型👍"><a href="#2-3-Redis数据类型👍" class="headerlink" title="2.3. Redis数据类型👍"></a>2.3. Redis数据类型👍</h2><p>指的是<strong>value类型</strong></p>
-<ol>
-<li>String</li>
-<li>List</li>
-<li>Hash</li>
-<li>Set</li>
-<li>……</li>
-</ol>
-<p>在cilent内：<br><code>type</code>查看value类型<br><code>lrang mylist 0 -1</code>：查看list内容<br><code>lpush</code>,<code>rpush</code>插入数据<br><code>sadd mysqet 1 2 3 4</code>：add set<br><code>smember myset</code>：查看set内容</p>
-<h2 id="2-4-Redis客户端"><a href="#2-4-Redis客户端" class="headerlink" title="2.4. Redis客户端"></a>2.4. Redis客户端</h2><ul>
-<li>Jedis：早期Spring集成</li>
-<li>Lettuce：目前Spring采用的客户端</li>
-</ul>
-<h2 id="2-5-Spring-Data-Redis"><a href="#2-5-Spring-Data-Redis" class="headerlink" title="2.5. Spring Data Redis"></a>2.5. Spring Data Redis</h2><ul>
-<li><p><strong>RedisConnectionFactory接口</strong></p>
-<ul>
-<li>Spring Boot会自动创建，直接注入即可。</li>
-<li>连接需要提供Redis Server的地址、端口号等信息<ul>
-<li>这些信息在Application文件配置</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>通过<code>RedisTemplate</code>模板对象访问Redis</strong></p>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> RedisTemplate&lt;String, Product&gt; <span class="title function_">redisTemplate</span><span class="params">(RedisConnectionFactory cf)</span>{</span><br><span class="line">	RedisTemplate&lt;String,Product&gt; redis = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>();</span><br><span class="line">	redis.setFactory(cf);</span><br><span class="line">	<span class="keyword">return</span> redis;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li>BoudListOperations绑定key，不需要每个操作都写一边</li>
-</ul>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BoudListOperations</span> <span class="variable">cart</span> <span class="operator">=</span> redisTemplate.boundListOp(<span class="string">''</span>cart<span class="string">")</span></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="2-5-1-JDK序列化"><a href="#2-5-1-JDK序列化" class="headerlink" title="2.5.1. JDK序列化"></a>2.5.1. JDK序列化</h3><ul>
-<li>存储java对象需要序列化<ul>
-<li>即持久化</li>
-</ul>
-</li>
-<li><strong>必须需要实现<code>Serializable</code>接口</strong></li>
-<li>把java对象通过key-value读出来，反序列化</li>
-</ul>
-<p>mongodb没有这个要求，因为它会把所有值都转成json串</p>
-<p>做得很失败，性能也不好</p>
-<h3 id="2-5-2-JSON序列化"><a href="#2-5-2-JSON序列化" class="headerlink" title="2.5.2. JSON序列化"></a>2.5.2. JSON序列化</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">redis.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>())</span><br><span class="line">redis.setVAlueSerializer(<span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;Product.class&gt;)</span><br></pre></td></tr></table></figure></div>
-
-<ol>
-<li>Key比较简单，可以直接用String序列化</li>
-<li>指定Value使用<code>Jackson2JsonRedisSerializer</code>进行序列化</li>
-</ol>
-<p>对数据存取操作的代码没有影响</p>
-<p>直接使用<strong>RedisTemplate</strong>获取的Value会经过反序列化，仍然为Java对象<br>如果想要获取String，可以使用<strong>StringRedisTemplate</strong>读取Value</p>
-]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
       </categories>
