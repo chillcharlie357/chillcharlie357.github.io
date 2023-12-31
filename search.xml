@@ -4342,7 +4342,7 @@
   </entry>
   <entry>
     <title>5-Spring Data MongoDB、Redis</title>
-    <url>//%5Bobject%20Object%5D/2023/12/28/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/5-Spring%20Data%20MongoDB%E3%80%81Redis/</url>
+    <url>//%5Bobject%20Object%5D/2023/10/12/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/5-Spring%20Data%20MongoDB%E3%80%81Redis/</url>
     <content><![CDATA[<h1 id="1-MongoDB"><a href="#1-MongoDB" class="headerlink" title="1. MongoDB"></a>1. MongoDB</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1. 介绍"></a>1.1. 介绍</h2><p>文档数据库，存储类Json文件。<br>可以分布式存储。</p>
 <table>
 <thead>
@@ -4374,8 +4374,10 @@
 </tr>
 </tbody></table>
 <p>数据库document可以直接包含子document（在关系型数据库中只能创建子表），不同的document包含字段可能不一样。</p>
-<h2 id="1-2-使用"><a href="#1-2-使用" class="headerlink" title="1.2. 使用"></a>1.2. 使用</h2><p>Id为String，mongoDB会自动生成</p>
-<p>可以使用mongdb-shell交互</p>
+<h2 id="1-2-使用"><a href="#1-2-使用" class="headerlink" title="1.2. 使用"></a>1.2. 使用</h2><ul>
+<li>Id为String，mongoDB会自动生成</li>
+<li>可以使用mongdb-shell交互</li>
+</ul>
 <h2 id="1-3-Spring-Data-MongoDB👍"><a href="#1-3-Spring-Data-MongoDB👍" class="headerlink" title="1.3. Spring Data MongoDB👍"></a>1.3. Spring Data MongoDB👍</h2><p>业务代码不需要修改</p>
 <h3 id="1-3-1-定义存储库"><a href="#1-3-1-定义存储库" class="headerlink" title="1.3.1. 定义存储库"></a>1.3.1. 定义存储库</h3><p>继承<code>CrudRepository&lt;&gt;</code>接口</p>
 <h3 id="1-3-2-领域类"><a href="#1-3-2-领域类" class="headerlink" title="1.3.2. 领域类"></a>1.3.2. 领域类</h3><ol>
@@ -4389,10 +4391,10 @@
 </li>
 </ol>
 <ul>
-<li><font color="#ff0000">和关系型数据库主要区别</font><ul>
-<li>List，可以把原来的子表放到同一个Collection里。</li>
+<li><font color="#ff0000">和关系型数据库主要区别</font><ol>
+<li>List，可以把原来关系型数据库的子表放到同一个Collection里。document可以直接包含子document。</li>
 <li>可能会导致重复存储，但可以通过加索引等方法解决</li>
-</ul>
+</ol>
 </li>
 </ul>
 <h2 id="1-4-在Spring中配置"><a href="#1-4-在Spring中配置" class="headerlink" title="1.4. 在Spring中配置"></a>1.4. 在Spring中配置</h2><p>在Appication配置文件中指定</p>
@@ -4405,12 +4407,15 @@
 </li>
 </ul>
 <p>Spring插入时会自动创建一个<code>_class</code>字段</p>
-<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-介绍"><a href="#2-1-介绍" class="headerlink" title="2.1. 介绍"></a>2.1. 介绍</h2><ul>
+<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-介绍👍"><a href="#2-1-介绍👍" class="headerlink" title="2.1. 介绍👍"></a>2.1. 介绍👍</h2><ul>
 <li>分布式存储</li>
-<li>存在内存里，常用于作缓存</li>
+<li>内存数据库，存在内存里，常用于作<strong>缓存</strong></li>
 <li>可以持久化，但不太重要，不是主要用途</li>
-<li>主从复制</li>
-<li>key-value的Hash表结构，区分大小写</li>
+<li>可以集群式部署<ul>
+<li><font color="#c00000">主从复制</font>，主机写，从机并发读</li>
+</ul>
+</li>
+<li><font color="#c00000">key-value的Hash表结构，区分大小写</font></li>
 </ul>
 <h2 id="2-2-Redis命令"><a href="#2-2-Redis命令" class="headerlink" title="2.2. Redis命令"></a>2.2. Redis命令</h2><p>可以设置key的存活时长<br>默认创建16个数据库</p>
 <p>flushdb：deletes the keys in a database<br>flushall：deletes all keys in all databases</p>
@@ -4431,23 +4436,43 @@
 <li><p><strong>RedisConnectionFactory接口</strong></p>
 <ul>
 <li>Spring Boot会自动创建，直接注入即可。</li>
-<li>连接需要提供Redis Server的地址、端口号等信息<ul>
+<li>连接需要提供Redis Server的地址、端口、用户和密码等信息<ul>
 <li>这些信息在Application文件配置</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p><strong>通过<code>RedisTemplate</code>模板对象访问Redis</strong></p>
+<ul>
+<li>RedisTemplate&lt;Key,Value&gt;</li>
+</ul>
 </li>
 </ul>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> RedisTemplate&lt;String, Product&gt; <span class="title function_">redisTemplate</span><span class="params">(RedisConnectionFactory cf)</span>{</span><br><span class="line">	RedisTemplate&lt;String,Product&gt; redis = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>();</span><br><span class="line">	redis.setFactory(cf);</span><br><span class="line">	<span class="keyword">return</span> redis;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
 <ul>
-<li>BoudListOperations绑定key，不需要每个操作都写一边</li>
+<li>RedisTemplate的子API: 对应不同的value类型<ul>
+<li>使用简单的值： opForValue()</li>
+<li>lIst类型的值：opForList()<ul>
+<li>rigjtPush, leftPop(), range</li>
+</ul>
+</li>
+<li>Set上的操作: opForSet()<ul>
+<li>add, union,</li>
+</ul>
+</li>
+<li>绑定到某个key上<ul>
+<li>BoudListOperations绑定key，不需要每个操作都写一遍</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BoudListOperations</span> <span class="variable">cart</span> <span class="operator">=</span> redisTemplate.boundListOp(<span class="string">''</span>cart<span class="string">")</span></span><br></pre></td></tr></table></figure></div>
 
-<h3 id="2-5-1-JDK序列化"><a href="#2-5-1-JDK序列化" class="headerlink" title="2.5.1. JDK序列化"></a>2.5.1. JDK序列化</h3><ul>
+<p><a class="link" href="https://potoyang.gitbook.io/spring-in-action-v4/untitled-6/untitled-1/12.3.2-shi-yong-redis-template">12.3.2　使用 Redis Template - Spring 实战(第四版) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="2-6-序列化👍"><a href="#2-6-序列化👍" class="headerlink" title="2.6. 序列化👍"></a>2.6. 序列化👍</h2><p><font color="#c00000">mongodb没有这个要求，因为它会把所有值都转成json串</font>。<br>redis默认使用JDK序列化，但JSON序列化更常用。</p>
+<h3 id="2-6-1-JDK序列化"><a href="#2-6-1-JDK序列化" class="headerlink" title="2.6.1. JDK序列化"></a>2.6.1. JDK序列化</h3><ul>
 <li>存储java对象需要序列化<ul>
 <li>即持久化</li>
 </ul>
@@ -4455,16 +4480,14 @@
 <li><strong>必须需要实现<code>Serializable</code>接口</strong></li>
 <li>把java对象通过key-value读出来，反序列化</li>
 </ul>
-<p>mongodb没有这个要求，因为它会把所有值都转成json串</p>
 <p>做得很失败，性能也不好</p>
-<h3 id="2-5-2-JSON序列化"><a href="#2-5-2-JSON序列化" class="headerlink" title="2.5.2. JSON序列化"></a>2.5.2. JSON序列化</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">redis.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>())</span><br><span class="line">redis.setVAlueSerializer(<span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;Product.class&gt;)</span><br></pre></td></tr></table></figure></div>
+<h3 id="2-6-2-JSON序列化"><a href="#2-6-2-JSON序列化" class="headerlink" title="2.6.2. JSON序列化"></a>2.6.2. JSON序列化</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">redis.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>())</span><br><span class="line">redis.setVAlueSerializer(<span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;Product.class&gt;)</span><br></pre></td></tr></table></figure></div>
 
 <ol>
 <li>Key比较简单，可以直接用String序列化</li>
 <li>指定Value使用<code>Jackson2JsonRedisSerializer</code>进行序列化</li>
 </ol>
-<p>对数据存取操作的代码没有影响</p>
-<p>直接使用<strong>RedisTemplate</strong>获取的Value会经过反序列化，仍然为Java对象<br>如果想要获取String，可以使用<strong>StringRedisTemplate</strong>读取Value</p>
+<p>对数据存取操作的代码没有影响。<br><font color="#c00000">可读性更好。 </font><br>直接使用<strong>RedisTemplate</strong>获取的Value会经过反序列化，仍然为Java对象<br>如果想要获取String，可以使用<strong>StringRedisTemplate</strong>读取Value。</p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
