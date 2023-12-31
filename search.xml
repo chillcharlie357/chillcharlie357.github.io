@@ -4676,7 +4676,7 @@
   </entry>
   <entry>
     <title>7-配置属性</title>
-    <url>//%5Bobject%20Object%5D/2023/12/28/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/7-%E9%85%8D%E7%BD%AE%E5%B1%9E%E6%80%A7/</url>
+    <url>//%5Bobject%20Object%5D/2023/10/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/7-%E9%85%8D%E7%BD%AE%E5%B1%9E%E6%80%A7/</url>
     <content><![CDATA[<h1 id="1-属性来源👍"><a href="#1-属性来源👍" class="headerlink" title="1. 属性来源👍"></a>1. 属性来源👍</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
 <ol>
 <li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
@@ -4743,8 +4743,8 @@
 <h1 id="7-多个Profile文件"><a href="#7-多个Profile文件" class="headerlink" title="7. 多个Profile文件"></a>7. 多个Profile文件</h1><h2 id="7-1-命名规则"><a href="#7-1-命名规则" class="headerlink" title="7.1. 命名规则"></a>7.1. 命名规则</h2><p>Profile文件命名有固定规则</p>
 <ul>
 <li>定义特定profile的属性，通过使用不同的YAML或属性文件  <ul>
-<li>✓ application-{profile名}.properties  </li>
-<li>✓ application-{profile名}.yml</li>
+<li>application-{profile名}.properties  </li>
+<li>application-{profile名}.yml</li>
 </ul>
 </li>
 <li>也可以将不同profile属性放到同一个YAML文件中，使用3个短线进行分隔，并且使用spring.profiles属性来命名profile</li>
@@ -4771,15 +4771,23 @@
 <h1 id="9-Actuator👍"><a href="#9-Actuator👍" class="headerlink" title="9. Actuator👍"></a>9. Actuator👍</h1><ul>
 <li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
 <li>/actuator，查询所有暴露端点</li>
-<li>/actuator/configprops，查询配置属性</li>
+<li><strong>/actuator/configprops</strong>，查询配置属性</li>
 <li>/actuator/health，健康检查</li>
 <li>/actuator/beans，包含bean依赖关系</li>
 </ul>
 </li>
+<li>想要获得更多端点如何配置：<code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></li>
 </ul>
 <div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">"*"</span></span><br></pre></td></tr></table></figure></div>
 
-<p><code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></p>
+<h1 id="10-分布式系统配置数据的获取"><a href="#10-分布式系统配置数据的获取" class="headerlink" title="10. 分布式系统配置数据的获取"></a>10. 分布式系统配置数据的获取</h1><ul>
+<li>配置服务： Config Server<ul>
+<li>给所有微服务提供配置数据</li>
+<li>配置可能来自文件系统，git仓库等</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F16-29-03-ac42f08cd7916e48e1cfabe5ef89772e-20231231162903-1ef9fd.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
