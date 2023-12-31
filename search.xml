@@ -204,6 +204,178 @@
       </tags>
   </entry>
   <entry>
+    <title>13-期末复习</title>
+    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/13-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="1-内容组织"><a href="#1-内容组织" class="headerlink" title="1. 内容组织"></a>1. 内容组织</h1><p>软件主导硬件<br>以应用为中心</p>
+<ul>
+<li><strong>重要</strong> ，+</li>
+<li><em>不重要</em>，-</li>
+</ul>
+<h1 id="2-嵌入式系统概述"><a href="#2-嵌入式系统概述" class="headerlink" title="2. 嵌入式系统概述"></a>2. 嵌入式系统概述</h1><ol>
+<li>定义、术语</li>
+<li>组成</li>
+<li>特点</li>
+<li>分类</li>
+<li>典型应用</li>
+</ol>
+<h1 id="3-设计方法"><a href="#3-设计方法" class="headerlink" title="3. 设计方法"></a>3. 设计方法</h1><ol>
+<li>嵌入式系统设计的挑战</li>
+<li>设计目标</li>
+<li>传统的设计过程</li>
+<li><em>软硬件协同设计</em></li>
+<li><em>原型</em></li>
+</ol>
+<h1 id="4-嵌入式微处理器"><a href="#4-嵌入式微处理器" class="headerlink" title="4. 嵌入式微处理器"></a>4. 嵌入式微处理器</h1><ol>
+<li>分类</li>
+<li>特点</li>
+<li>流水线清空，分支预测技术</li>
+<li>选择微处理器的准则、步骤</li>
+</ol>
+<p>更关注那些可能会影响上层软件开发的部分<br>偏向集成/板级开发</p>
+<p><strong>考试一定会涉及，但是量不大</strong></p>
+<h1 id="5-存储器架构"><a href="#5-存储器架构" class="headerlink" title="5. 存储器架构"></a>5. 存储器架构</h1><ol>
+<li>复杂</li>
+<li><em>易失性存储器</em></li>
+<li><em>非易失性存储器</em></li>
+<li>固件、可固化（ROMable）</li>
+<li>存储器系统的层次架构</li>
+<li><em>flash</em></li>
+</ol>
+<h1 id="6-总线"><a href="#6-总线" class="headerlink" title="6. 总线"></a>6. 总线</h1><ol>
+<li>可重入</li>
+<li>竞态条件</li>
+<li>总线，常用</li>
+</ol>
+<h1 id="7-硬件部分总结与实例"><a href="#7-硬件部分总结与实例" class="headerlink" title="7. 硬件部分总结与实例+"></a>7. 硬件部分总结与实例+</h1><ol>
+<li>感知决策控制</li>
+<li>根据能力和性能，设备分类</li>
+<li>车载为例，计算平台</li>
+<li>环境感知，常用传感器</li>
+</ol>
+<h1 id="8-嵌入式软件概述"><a href="#8-嵌入式软件概述" class="headerlink" title="8. 嵌入式软件概述"></a>8. 嵌入式软件概述</h1><p>嵌入式软件和桌面软件对比<br>有关硬件的决策会对软件产生持久的影响，软件主导硬件<br>嵌入式软件系统层次架构<br><strong>为什么要对实时系统建模</strong><br><strong>实时系统</strong></p>
+<h1 id="9-嵌入式软件架构综述"><a href="#9-嵌入式软件架构综述" class="headerlink" title="9. 嵌入式软件架构综述+"></a>9. 嵌入式软件架构综述+</h1><ol>
+<li>嵌入式软件架构</li>
+<li>实时嵌入式软件常用的设计模式</li>
+<li>获取数据的设计模式</li>
+<li>RTOS应用程序中的同步（资源，活动），不同方式/设计模式</li>
+</ol>
+<h1 id="10-建模"><a href="#10-建模" class="headerlink" title="10. 建模+"></a>10. 建模+</h1><ol>
+<li>建模，设计，分析</li>
+<li>模型，特征</li>
+<li>常见的建模技术，建模语言</li>
+<li>嵌入式系统模型的用途</li>
+<li>何时对嵌入式系统建模</li>
+<li><strong>反应式系统</strong>，模型，特征<ul>
+<li>对机器人很重要</li>
+</ul>
+</li>
+<li><strong>FSM</strong>有限状态机<ul>
+<li>所有的示例都要看一下</li>
+</ul>
+</li>
+<li>层次FSM<ul>
+<li>补充常规有限状态机的局限</li>
+</ul>
+</li>
+</ol>
+<p>CPS</p>
+<h1 id="11-嵌入式操作系统概述"><a href="#11-嵌入式操作系统概述" class="headerlink" title="11. 嵌入式操作系统概述+"></a>11. 嵌入式操作系统概述+</h1><ol>
+<li>实时系统，术语，分类</li>
+<li>RTOS &amp; GPOS</li>
+<li>RTOS关键要求</li>
+<li>为何使用RTOS</li>
+<li>RTOS类别</li>
+<li><strong>物联网操作系统</strong>，要求，通用架构<ul>
+<li>与以往的嵌入式系统有一些差异</li>
+</ul>
+</li>
+</ol>
+<h1 id="12-实时调度"><a href="#12-实时调度" class="headerlink" title="12. 实时调度+"></a>12. 实时调度+</h1><ol>
+<li>实时系统所需的调度策略</li>
+<li>调度决策</li>
+<li>任务模型</li>
+<li>时限约束</li>
+<li>调度程序的度量</li>
+<li><strong>RMS、EDF及其改进</strong></li>
+<li><em>实时调度异常</em></li>
+<li><em>优先级反转，优先级继承，优先级天花板</em></li>
+</ol>
+<h1 id="13-嵌入式实时内核（结合ucOS-II和freertos）"><a href="#13-嵌入式实时内核（结合ucOS-II和freertos）" class="headerlink" title="13. 嵌入式实时内核（结合ucOS-II和freertos）-"></a>13. 嵌入式实时内核（结合ucOS-II和freertos）-</h1><ol>
+<li>实时任务调度</li>
+<li>中断时钟</li>
+<li>同步与通信</li>
+<li>存储管理（静态、动态</li>
+</ol>
+<h1 id="14-bsp-bootloader"><a href="#14-bsp-bootloader" class="headerlink" title="14. bsp,bootloader -"></a>14. bsp,bootloader -</h1><ol>
+<li>嵌入式系统启动过程</li>
+<li>bsp,特点，与bios区别</li>
+<li>引导模式</li>
+<li>bootloader及其启动过程</li>
+</ol>
+<h1 id="15-物联网概述"><a href="#15-物联网概述" class="headerlink" title="15. 物联网概述 +"></a>15. 物联网概述 +</h1><ol>
+<li>定义，术语</li>
+<li>IOT特征</li>
+<li>IOT的优势和不足</li>
+<li>应用</li>
+</ol>
+<h1 id="16-IoT技术"><a href="#16-IoT技术" class="headerlink" title="16. IoT技术 +"></a>16. IoT技术 +</h1><ol>
+<li>IoT的多样化技术环境</li>
+<li>物联网软件、硬件、连接<ul>
+<li>介绍了一些比较成熟的技术</li>
+</ul>
+</li>
+<li>进步最快的技术</li>
+<li>IoT面临的挑战</li>
+</ol>
+<h1 id="17-IoT平台"><a href="#17-IoT平台" class="headerlink" title="17. IoT平台"></a>17. IoT平台</h1><ol>
+<li>概念</li>
+<li>功能领域</li>
+</ol>
+<p>管理平台，中间件<br>纯后端系统</p>
+<h1 id="18-IoT平台关键技术"><a href="#18-IoT平台关键技术" class="headerlink" title="18. IoT平台关键技术+"></a>18. IoT平台关键技术+</h1><p>设备影子，物模型<br>边缘计算</p>
+<ol>
+<li>设备管理：主要功能，<strong>物模型</strong>、<strong>设备影子</strong>、数字孪生（概念，价值）</li>
+<li>边缘计算：基于云的IoT解决方案不足，边缘/边缘计算计算概念，优势，用途<ul>
+<li>CDN是边缘计算的落地</li>
+</ul>
+</li>
+<li>通信协议：主流技术，多协议接入方案</li>
+</ol>
+<h1 id="19-ROS"><a href="#19-ROS" class="headerlink" title="19. ROS"></a>19. ROS</h1><ol>
+<li>相关概念</li>
+<li>为何使用</li>
+</ol>
+<p>作业用到的</p>
+<h1 id="20-自动紧急制动-AEB"><a href="#20-自动紧急制动-AEB" class="headerlink" title="20. 自动紧急制动 AEB"></a>20. 自动紧急制动 AEB</h1><ol>
+<li>意义</li>
+<li>难点</li>
+<li>功能</li>
+<li>流程</li>
+<li>策略</li>
+</ol>
+<h1 id="21-PID算法及其应用"><a href="#21-PID算法及其应用" class="headerlink" title="21. PID算法及其应用"></a>21. PID算法及其应用</h1><ol>
+<li>反馈控制</li>
+<li><strong>开环控制</strong></li>
+<li><strong>闭环控制</strong></li>
+<li>PID算法</li>
+</ol>
+<h1 id="22-关键词提示"><a href="#22-关键词提示" class="headerlink" title="22. 关键词提示 +"></a>22. 关键词提示 +</h1><ol>
+<li>嵌入式：受限（资源，成本），专用，实时，可靠</li>
+<li>物联：网络连接，节能，多样/异构，安全<ul>
+<li>通信的能耗不弱于计算</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2023_Fall_嵌入式系统概论</category>
+      </categories>
+      <tags>
+        <tag>2023_Fall_嵌入式系统概论</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1-概述</title>
     <url>//%5Bobject%20Object%5D/2023/12/29/%E8%AF%BE%E7%A8%8B/2023_Fall/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/1-%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h1><p>名词：</p>
@@ -293,8 +465,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
       </tags>
   </entry>
   <entry>
@@ -472,8 +644,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
       </tags>
   </entry>
   <entry>
@@ -669,8 +841,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
       </tags>
   </entry>
   <entry>
@@ -862,8 +1034,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
       </tags>
   </entry>
   <entry>
@@ -1240,152 +1412,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3-评估的基础知识</title>
-    <url>//%5Bobject%20Object%5D/2023/10/10/%E8%AF%BE%E7%A8%8B/2023_Fall/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/3-%E8%AF%84%E4%BC%B0%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><ul>
-<li>什么是评估？<ul>
-<li><strong>系统化的数据搜集过程，对交互性能的测试</strong></li>
-<li>目的是了解用户或用户组在特定环境中，使用产品执行特定任务的情况<ul>
-<li>例如，用户能否找到特定的菜单项？图像是否有用，是否吸引人？产品是否引人入胜？</li>
-</ul>
-</li>
-<li>邀请用户进行评估的目的不是设法理解用户，而是评估特定用户在一个特定的环境背景中如何使用一个系统来执行一个特定的任务。</li>
-</ul>
-</li>
-</ul>
-<p><font color="#c00000">mental model</font>：人会根据已有的经验和知识假设使用方式</p>
-<ul>
-<li>为什么要评估<ul>
-<li>用户不仅期望一个可用的系统，还在追求愉悦感与参与感<ul>
-<li>用户体验首先要满足用户的确切体验，其次是让用户舒心和愉快</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-评估原则"><a href="#2-评估原则" class="headerlink" title="2. 评估原则"></a>2. 评估原则</h1><ol>
-<li>评估应该依赖于产品的用户：与专业技术人员的水平和技术无关</li>
-<li>评估与设计应结合进行：仅靠用户最后对产品的一两次评估，是不能全面反映出软件可用性的</li>
-<li>评估应在用户的实际工作任务和操作环境下进行：根据用户完成任务的结果，进行客观的分析和评估</li>
-<li>要选择有<strong>广泛代表性</strong>的用户：参加测试的人必须具有代表性<ul>
-<li><strong>5-12</strong>个具有代表性的用户，不是随便找12个</li>
-</ul>
-</li>
-</ol>
-<p>主观满意度常常使用问卷</p>
-<h1 id="3-评估泛型"><a href="#3-评估泛型" class="headerlink" title="3. 评估泛型"></a>3. 评估泛型</h1><h2 id="3-1-快速评估"><a href="#3-1-快速评估" class="headerlink" title="3.1. 快速评估"></a>3.1. 快速评估</h2><ul>
-<li>设计人员<strong>非正式</strong>向用户或顾问了解反馈信息，以证实设计构思是否符合用户需要</li>
-<li><strong>特点</strong><ol>
-<li>可在任何阶段进行</li>
-<li>得到数据是非正式的、叙述性的<ul>
-<li>可以是口语、书面笔记、草图、场景的形式反馈到设计过程</li>
-</ul>
-</li>
-<li>强调“<strong>快速了解</strong>”，而非仔细记录研究发现<ul>
-<li>在设计初期阶段了解用户对产品的意见</li>
-</ul>
-</li>
-<li>是设计网站时常用的方法</li>
-</ol>
-</li>
-<li>基本特征：快速</li>
-</ul>
-<h2 id="3-2-可用性测试👍"><a href="#3-2-可用性测试👍" class="headerlink" title="3.2. 可用性测试👍"></a>3.2. 可用性测试👍</h2><p><strong>非常正式</strong>，20实际80年代主导方法</p>
-<ul>
-<li>评测<strong>典型用户执行典型任务时</strong>的情况<ul>
-<li>包括用户出错次数、完成任务的时间等</li>
-</ul>
-</li>
-<li>基本特征：<ul>
-<li>是在评估人员密切控制下实现的</li>
-<li>专门可用性实验室</li>
-</ul>
-</li>
-<li>主要任务<ul>
-<li><strong>量化</strong>表示用户的执行情况</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>测试用户的数量通常较少</li>
-<li>不合适进行细致的统计分析</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-实地研究-Field-Study"><a href="#3-3-实地研究-Field-Study" class="headerlink" title="3.3. 实地研究 Field Study"></a>3.3. 实地研究 Field Study</h2><ul>
-<li>基本特征：在自然工作环境中进行</li>
-<li>目的：理解用户的实际工作情况以及技术对他们的影响</li>
-<li>作用<ul>
-<li>探索新技术的应用契机</li>
-<li>确定产品的需求</li>
-<li>促进技术的引入</li>
-<li>评估技术的应用</li>
-</ul>
-</li>
-<li>重难点<ul>
-<li>如何不对受试者造成影响</li>
-<li>控制权在用户，很难预测即将发生和出现的情况</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-4-预测性评估"><a href="#3-4-预测性评估" class="headerlink" title="3.4. 预测性评估"></a>3.4. 预测性评估</h2><ul>
-<li>研究人员能通过想象或对界面的使用过程进行建模<ul>
-<li><strong>启发式评估</strong>：启发式专家“角色扮演”，评估产品</li>
-<li>模型法：用于比较相同应用不同界面的原型法，如使用Fitts定律</li>
-<li>走查法：逐步通过场景或基于问题回答，类似Code Review</li>
-</ul>
-</li>
-<li>基本特征：<ul>
-<li>用户可以不在场</li>
-<li>整个过程快速、成本较低</li>
-</ul>
-</li>
-</ul>
-<h1 id="4-区分评估技术的因素"><a href="#4-区分评估技术的因素" class="headerlink" title="4. 区分评估技术的因素"></a>4. 区分评估技术的因素</h1><ol>
-<li>评估在周期中位置<ul>
-<li>设计早期阶段评估更快速、便宜</li>
-</ul>
-</li>
-<li>评估的形式<ul>
-<li>实验室/工作环境</li>
-</ul>
-</li>
-<li>技术的主客观程度<ul>
-<li>技术越主观，受评估人员知识的影响越大</li>
-</ul>
-</li>
-<li>测量的类型<ul>
-<li>主观技术：定性</li>
-<li>客观技术：定量</li>
-</ul>
-</li>
-<li>提供的信息<ul>
-<li>低层：图标可理解？</li>
-<li>高层：系统可用？</li>
-</ul>
-</li>
-<li>响应的及时性<ul>
-<li>边做边说发可及时记录用户行为</li>
-<li>任务后的走查取决于对事件的回忆</li>
-</ul>
-</li>
-<li>干扰程度<ul>
-<li>直接响应测量可能会影响用户表现</li>
-</ul>
-</li>
-<li>所需资源</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
         <tag>2023_Fall_人机交互</tag>
-        <tag>课程</tag>
       </tags>
   </entry>
   <entry>
@@ -1565,8 +1593,152 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3-评估的基础知识</title>
+    <url>//%5Bobject%20Object%5D/2023/10/10/%E8%AF%BE%E7%A8%8B/2023_Fall/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/3-%E8%AF%84%E4%BC%B0%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><ul>
+<li>什么是评估？<ul>
+<li><strong>系统化的数据搜集过程，对交互性能的测试</strong></li>
+<li>目的是了解用户或用户组在特定环境中，使用产品执行特定任务的情况<ul>
+<li>例如，用户能否找到特定的菜单项？图像是否有用，是否吸引人？产品是否引人入胜？</li>
+</ul>
+</li>
+<li>邀请用户进行评估的目的不是设法理解用户，而是评估特定用户在一个特定的环境背景中如何使用一个系统来执行一个特定的任务。</li>
+</ul>
+</li>
+</ul>
+<p><font color="#c00000">mental model</font>：人会根据已有的经验和知识假设使用方式</p>
+<ul>
+<li>为什么要评估<ul>
+<li>用户不仅期望一个可用的系统，还在追求愉悦感与参与感<ul>
+<li>用户体验首先要满足用户的确切体验，其次是让用户舒心和愉快</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-评估原则"><a href="#2-评估原则" class="headerlink" title="2. 评估原则"></a>2. 评估原则</h1><ol>
+<li>评估应该依赖于产品的用户：与专业技术人员的水平和技术无关</li>
+<li>评估与设计应结合进行：仅靠用户最后对产品的一两次评估，是不能全面反映出软件可用性的</li>
+<li>评估应在用户的实际工作任务和操作环境下进行：根据用户完成任务的结果，进行客观的分析和评估</li>
+<li>要选择有<strong>广泛代表性</strong>的用户：参加测试的人必须具有代表性<ul>
+<li><strong>5-12</strong>个具有代表性的用户，不是随便找12个</li>
+</ul>
+</li>
+</ol>
+<p>主观满意度常常使用问卷</p>
+<h1 id="3-评估泛型"><a href="#3-评估泛型" class="headerlink" title="3. 评估泛型"></a>3. 评估泛型</h1><h2 id="3-1-快速评估"><a href="#3-1-快速评估" class="headerlink" title="3.1. 快速评估"></a>3.1. 快速评估</h2><ul>
+<li>设计人员<strong>非正式</strong>向用户或顾问了解反馈信息，以证实设计构思是否符合用户需要</li>
+<li><strong>特点</strong><ol>
+<li>可在任何阶段进行</li>
+<li>得到数据是非正式的、叙述性的<ul>
+<li>可以是口语、书面笔记、草图、场景的形式反馈到设计过程</li>
+</ul>
+</li>
+<li>强调“<strong>快速了解</strong>”，而非仔细记录研究发现<ul>
+<li>在设计初期阶段了解用户对产品的意见</li>
+</ul>
+</li>
+<li>是设计网站时常用的方法</li>
+</ol>
+</li>
+<li>基本特征：快速</li>
+</ul>
+<h2 id="3-2-可用性测试👍"><a href="#3-2-可用性测试👍" class="headerlink" title="3.2. 可用性测试👍"></a>3.2. 可用性测试👍</h2><p><strong>非常正式</strong>，20实际80年代主导方法</p>
+<ul>
+<li>评测<strong>典型用户执行典型任务时</strong>的情况<ul>
+<li>包括用户出错次数、完成任务的时间等</li>
+</ul>
+</li>
+<li>基本特征：<ul>
+<li>是在评估人员密切控制下实现的</li>
+<li>专门可用性实验室</li>
+</ul>
+</li>
+<li>主要任务<ul>
+<li><strong>量化</strong>表示用户的执行情况</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>测试用户的数量通常较少</li>
+<li>不合适进行细致的统计分析</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-实地研究-Field-Study"><a href="#3-3-实地研究-Field-Study" class="headerlink" title="3.3. 实地研究 Field Study"></a>3.3. 实地研究 Field Study</h2><ul>
+<li>基本特征：在自然工作环境中进行</li>
+<li>目的：理解用户的实际工作情况以及技术对他们的影响</li>
+<li>作用<ul>
+<li>探索新技术的应用契机</li>
+<li>确定产品的需求</li>
+<li>促进技术的引入</li>
+<li>评估技术的应用</li>
+</ul>
+</li>
+<li>重难点<ul>
+<li>如何不对受试者造成影响</li>
+<li>控制权在用户，很难预测即将发生和出现的情况</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4-预测性评估"><a href="#3-4-预测性评估" class="headerlink" title="3.4. 预测性评估"></a>3.4. 预测性评估</h2><ul>
+<li>研究人员能通过想象或对界面的使用过程进行建模<ul>
+<li><strong>启发式评估</strong>：启发式专家“角色扮演”，评估产品</li>
+<li>模型法：用于比较相同应用不同界面的原型法，如使用Fitts定律</li>
+<li>走查法：逐步通过场景或基于问题回答，类似Code Review</li>
+</ul>
+</li>
+<li>基本特征：<ul>
+<li>用户可以不在场</li>
+<li>整个过程快速、成本较低</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-区分评估技术的因素"><a href="#4-区分评估技术的因素" class="headerlink" title="4. 区分评估技术的因素"></a>4. 区分评估技术的因素</h1><ol>
+<li>评估在周期中位置<ul>
+<li>设计早期阶段评估更快速、便宜</li>
+</ul>
+</li>
+<li>评估的形式<ul>
+<li>实验室/工作环境</li>
+</ul>
+</li>
+<li>技术的主客观程度<ul>
+<li>技术越主观，受评估人员知识的影响越大</li>
+</ul>
+</li>
+<li>测量的类型<ul>
+<li>主观技术：定性</li>
+<li>客观技术：定量</li>
+</ul>
+</li>
+<li>提供的信息<ul>
+<li>低层：图标可理解？</li>
+<li>高层：系统可用？</li>
+</ul>
+</li>
+<li>响应的及时性<ul>
+<li>边做边说发可及时记录用户行为</li>
+<li>任务后的走查取决于对事件的回忆</li>
+</ul>
+</li>
+<li>干扰程度<ul>
+<li>直接响应测量可能会影响用户表现</li>
+</ul>
+</li>
+<li>所需资源</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
       </tags>
   </entry>
   <entry>
@@ -1774,8 +1946,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
       </tags>
   </entry>
   <entry>
@@ -1870,8 +2042,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
       </tags>
   </entry>
   <entry>
@@ -2036,8 +2208,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
       </tags>
   </entry>
   <entry>
@@ -2290,8 +2462,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
-        <tag>2023_Fall_人机交互</tag>
         <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
       </tags>
   </entry>
   <entry>
@@ -2510,180 +2682,8 @@
         <category>2023_Fall_人机交互</category>
       </categories>
       <tags>
+        <tag>课程</tag>
         <tag>2023_Fall_人机交互</tag>
-        <tag>课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>13-期末复习</title>
-    <url>//%5Bobject%20Object%5D/2023/12/26/%E8%AF%BE%E7%A8%8B/2023_Fall/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/13-%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="1-内容组织"><a href="#1-内容组织" class="headerlink" title="1. 内容组织"></a>1. 内容组织</h1><p>软件主导硬件<br>以应用为中心</p>
-<ul>
-<li><strong>重要</strong> ，+</li>
-<li><em>不重要</em>，-</li>
-</ul>
-<h1 id="2-嵌入式系统概述"><a href="#2-嵌入式系统概述" class="headerlink" title="2. 嵌入式系统概述"></a>2. 嵌入式系统概述</h1><ol>
-<li>定义、术语</li>
-<li>组成</li>
-<li>特点</li>
-<li>分类</li>
-<li>典型应用</li>
-</ol>
-<h1 id="3-设计方法"><a href="#3-设计方法" class="headerlink" title="3. 设计方法"></a>3. 设计方法</h1><ol>
-<li>嵌入式系统设计的挑战</li>
-<li>设计目标</li>
-<li>传统的设计过程</li>
-<li><em>软硬件协同设计</em></li>
-<li><em>原型</em></li>
-</ol>
-<h1 id="4-嵌入式微处理器"><a href="#4-嵌入式微处理器" class="headerlink" title="4. 嵌入式微处理器"></a>4. 嵌入式微处理器</h1><ol>
-<li>分类</li>
-<li>特点</li>
-<li>流水线清空，分支预测技术</li>
-<li>选择微处理器的准则、步骤</li>
-</ol>
-<p>更关注那些可能会影响上层软件开发的部分<br>偏向集成/板级开发</p>
-<p><strong>考试一定会涉及，但是量不大</strong></p>
-<h1 id="5-存储器架构"><a href="#5-存储器架构" class="headerlink" title="5. 存储器架构"></a>5. 存储器架构</h1><ol>
-<li>复杂</li>
-<li><em>易失性存储器</em></li>
-<li><em>非易失性存储器</em></li>
-<li>固件、可固化（ROMable）</li>
-<li>存储器系统的层次架构</li>
-<li><em>flash</em></li>
-</ol>
-<h1 id="6-总线"><a href="#6-总线" class="headerlink" title="6. 总线"></a>6. 总线</h1><ol>
-<li>可重入</li>
-<li>竞态条件</li>
-<li>总线，常用</li>
-</ol>
-<h1 id="7-硬件部分总结与实例"><a href="#7-硬件部分总结与实例" class="headerlink" title="7. 硬件部分总结与实例+"></a>7. 硬件部分总结与实例+</h1><ol>
-<li>感知决策控制</li>
-<li>根据能力和性能，设备分类</li>
-<li>车载为例，计算平台</li>
-<li>环境感知，常用传感器</li>
-</ol>
-<h1 id="8-嵌入式软件概述"><a href="#8-嵌入式软件概述" class="headerlink" title="8. 嵌入式软件概述"></a>8. 嵌入式软件概述</h1><p>嵌入式软件和桌面软件对比<br>有关硬件的决策会对软件产生持久的影响，软件主导硬件<br>嵌入式软件系统层次架构<br><strong>为什么要对实时系统建模</strong><br><strong>实时系统</strong></p>
-<h1 id="9-嵌入式软件架构综述"><a href="#9-嵌入式软件架构综述" class="headerlink" title="9. 嵌入式软件架构综述+"></a>9. 嵌入式软件架构综述+</h1><ol>
-<li>嵌入式软件架构</li>
-<li>实时嵌入式软件常用的设计模式</li>
-<li>获取数据的设计模式</li>
-<li>RTOS应用程序中的同步（资源，活动），不同方式/设计模式</li>
-</ol>
-<h1 id="10-建模"><a href="#10-建模" class="headerlink" title="10. 建模+"></a>10. 建模+</h1><ol>
-<li>建模，设计，分析</li>
-<li>模型，特征</li>
-<li>常见的建模技术，建模语言</li>
-<li>嵌入式系统模型的用途</li>
-<li>何时对嵌入式系统建模</li>
-<li><strong>反应式系统</strong>，模型，特征<ul>
-<li>对机器人很重要</li>
-</ul>
-</li>
-<li><strong>FSM</strong>有限状态机<ul>
-<li>所有的示例都要看一下</li>
-</ul>
-</li>
-<li>层次FSM<ul>
-<li>补充常规有限状态机的局限</li>
-</ul>
-</li>
-</ol>
-<p>CPS</p>
-<h1 id="11-嵌入式操作系统概述"><a href="#11-嵌入式操作系统概述" class="headerlink" title="11. 嵌入式操作系统概述+"></a>11. 嵌入式操作系统概述+</h1><ol>
-<li>实时系统，术语，分类</li>
-<li>RTOS &amp; GPOS</li>
-<li>RTOS关键要求</li>
-<li>为何使用RTOS</li>
-<li>RTOS类别</li>
-<li><strong>物联网操作系统</strong>，要求，通用架构<ul>
-<li>与以往的嵌入式系统有一些差异</li>
-</ul>
-</li>
-</ol>
-<h1 id="12-实时调度"><a href="#12-实时调度" class="headerlink" title="12. 实时调度+"></a>12. 实时调度+</h1><ol>
-<li>实时系统所需的调度策略</li>
-<li>调度决策</li>
-<li>任务模型</li>
-<li>时限约束</li>
-<li>调度程序的度量</li>
-<li><strong>RMS、EDF及其改进</strong></li>
-<li><em>实时调度异常</em></li>
-<li><em>优先级反转，优先级继承，优先级天花板</em></li>
-</ol>
-<h1 id="13-嵌入式实时内核（结合ucOS-II和freertos）"><a href="#13-嵌入式实时内核（结合ucOS-II和freertos）" class="headerlink" title="13. 嵌入式实时内核（结合ucOS-II和freertos）-"></a>13. 嵌入式实时内核（结合ucOS-II和freertos）-</h1><ol>
-<li>实时任务调度</li>
-<li>中断时钟</li>
-<li>同步与通信</li>
-<li>存储管理（静态、动态</li>
-</ol>
-<h1 id="14-bsp-bootloader"><a href="#14-bsp-bootloader" class="headerlink" title="14. bsp,bootloader -"></a>14. bsp,bootloader -</h1><ol>
-<li>嵌入式系统启动过程</li>
-<li>bsp,特点，与bios区别</li>
-<li>引导模式</li>
-<li>bootloader及其启动过程</li>
-</ol>
-<h1 id="15-物联网概述"><a href="#15-物联网概述" class="headerlink" title="15. 物联网概述 +"></a>15. 物联网概述 +</h1><ol>
-<li>定义，术语</li>
-<li>IOT特征</li>
-<li>IOT的优势和不足</li>
-<li>应用</li>
-</ol>
-<h1 id="16-IoT技术"><a href="#16-IoT技术" class="headerlink" title="16. IoT技术 +"></a>16. IoT技术 +</h1><ol>
-<li>IoT的多样化技术环境</li>
-<li>物联网软件、硬件、连接<ul>
-<li>介绍了一些比较成熟的技术</li>
-</ul>
-</li>
-<li>进步最快的技术</li>
-<li>IoT面临的挑战</li>
-</ol>
-<h1 id="17-IoT平台"><a href="#17-IoT平台" class="headerlink" title="17. IoT平台"></a>17. IoT平台</h1><ol>
-<li>概念</li>
-<li>功能领域</li>
-</ol>
-<p>管理平台，中间件<br>纯后端系统</p>
-<h1 id="18-IoT平台关键技术"><a href="#18-IoT平台关键技术" class="headerlink" title="18. IoT平台关键技术+"></a>18. IoT平台关键技术+</h1><p>设备影子，物模型<br>边缘计算</p>
-<ol>
-<li>设备管理：主要功能，<strong>物模型</strong>、<strong>设备影子</strong>、数字孪生（概念，价值）</li>
-<li>边缘计算：基于云的IoT解决方案不足，边缘/边缘计算计算概念，优势，用途<ul>
-<li>CDN是边缘计算的落地</li>
-</ul>
-</li>
-<li>通信协议：主流技术，多协议接入方案</li>
-</ol>
-<h1 id="19-ROS"><a href="#19-ROS" class="headerlink" title="19. ROS"></a>19. ROS</h1><ol>
-<li>相关概念</li>
-<li>为何使用</li>
-</ol>
-<p>作业用到的</p>
-<h1 id="20-自动紧急制动-AEB"><a href="#20-自动紧急制动-AEB" class="headerlink" title="20. 自动紧急制动 AEB"></a>20. 自动紧急制动 AEB</h1><ol>
-<li>意义</li>
-<li>难点</li>
-<li>功能</li>
-<li>流程</li>
-<li>策略</li>
-</ol>
-<h1 id="21-PID算法及其应用"><a href="#21-PID算法及其应用" class="headerlink" title="21. PID算法及其应用"></a>21. PID算法及其应用</h1><ol>
-<li>反馈控制</li>
-<li><strong>开环控制</strong></li>
-<li><strong>闭环控制</strong></li>
-<li>PID算法</li>
-</ol>
-<h1 id="22-关键词提示"><a href="#22-关键词提示" class="headerlink" title="22. 关键词提示 +"></a>22. 关键词提示 +</h1><ol>
-<li>嵌入式：受限（资源，成本），专用，实时，可靠</li>
-<li>物联：网络连接，节能，多样/异构，安全<ul>
-<li>通信的能耗不弱于计算</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2023_Fall_嵌入式系统概论</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_嵌入式系统概论</tag>
       </tags>
   </entry>
   <entry>
@@ -4997,15 +4997,8 @@
   </entry>
   <entry>
     <title>9-OAuth2</title>
-    <url>//%5Bobject%20Object%5D/2023/12/28/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/9-OAuth2/</url>
-    <content><![CDATA[<p>之前讲了Spring Security的单体应用权限控制</p>
-<ul>
-<li>OAth2：分布式环境中微服务权限控制，需要把认证和授权集中在一个地方<ul>
-<li>restful api权限控制</li>
-</ul>
-</li>
-</ul>
-<h1 id="1-创建授权服务器"><a href="#1-创建授权服务器" class="headerlink" title="1. 创建授权服务器"></a>1. 创建授权服务器</h1><h2 id="1-1-增加权限控制"><a href="#1-1-增加权限控制" class="headerlink" title="1.1. 增加权限控制"></a>1.1. 增加权限控制</h2><p>POST：<a class="link" href="http://tacocloud:8080/api/ingredients">http://tacocloud:8080/api/ingredients <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>DELETE ：<a class="link" href="http://tacocloud:8080/">http://tacocloud:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> /api/ingredients/*</p>
+    <url>//%5Bobject%20Object%5D/2023/11/13/%E8%AF%BE%E7%A8%8B/2023_Fall/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/9-OAuth2/</url>
+    <content><![CDATA[<h1 id="1-创建授权服务器"><a href="#1-创建授权服务器" class="headerlink" title="1. 创建授权服务器"></a>1. 创建授权服务器</h1><h2 id="1-1-增加权限控制"><a href="#1-1-增加权限控制" class="headerlink" title="1.1. 增加权限控制"></a>1.1. 增加权限控制</h2><p>POST：<a class="link" href="http://tacocloud:8080/api/ingredients">http://tacocloud:8080/api/ingredients <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>DELETE ：<a class="link" href="http://tacocloud:8080/">http://tacocloud:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> /api/ingredients/*</p>
 <ul>
 <li>两种方式<ul>
 <li>.antMatchers(HttpMethod.POST, “/api/ingredients”).hasAuthority(“ROLE_USER”)</li>
@@ -5013,8 +5006,15 @@
 </ul>
 </li>
 </ul>
-<h2 id="1-2-OAth2👍"><a href="#1-2-OAth2👍" class="headerlink" title="1.2. OAth2👍"></a>1.2. OAth2👍</h2><p>是一个与变成语言无关的规范</p>
-<h2 id="1-3-授仅码授权（authorization-code-grant）模式👍"><a href="#1-3-授仅码授权（authorization-code-grant）模式👍" class="headerlink" title="1.3. 授仅码授权（authorization code grant）模式👍"></a>1.3. 授仅码授权（authorization code grant）模式👍</h2><h3 id="1-3-1-流程图"><a href="#1-3-1-流程图" class="headerlink" title="1.3.1. 流程图"></a>1.3.1. 流程图</h3><ul>
+<h2 id="1-2-OAth2👍"><a href="#1-2-OAth2👍" class="headerlink" title="1.2. OAth2👍"></a>1.2. OAth2👍</h2><p>之前讲了Spring Security的单体应用权限控制</p>
+<ul>
+<li>OAth2：<strong>分布式环境</strong>中微服务权限控制，需要把认证和授权集中在一个地方，不需要每个微服务单独做认证授权。<ul>
+<li>是一个与变成语言无关的规范</li>
+<li>restful api权限控制</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-3-授仅码授权（authorization-code-grant）模式👍"><a href="#1-3-授仅码授权（authorization-code-grant）模式👍" class="headerlink" title="1.3. 授仅码授权（authorization code grant）模式👍"></a>1.3. 授仅码授权（authorization code grant）模式👍</h2><h3 id="1-3-1-流程图👍"><a href="#1-3-1-流程图👍" class="headerlink" title="1.3.1. 流程图👍"></a>1.3.1. 流程图👍</h3><ul>
 <li>Client application：客户端（第三方应用程序），消费API提供的资源</li>
 <li>Authorization server：授权服务器</li>
 <li>Resource server：提供API资源</li>
@@ -5024,7 +5024,8 @@
 <li>授权服务器会用<strong>私钥</strong>给token签名，资源服务器用<strong>公钥</strong>验证token是否合法</li>
 <li>token不变时公钥也不变，只有第一次才需要向授权服务器索取公钥</li>
 </ul>
-<h3 id="1-3-2-过程"><a href="#1-3-2-过程" class="headerlink" title="1.3.2. 过程"></a>1.3.2. 过程</h3><ol>
+<h3 id="1-3-2-过程👍"><a href="#1-3-2-过程👍" class="headerlink" title="1.3.2. 过程👍"></a>1.3.2. 过程👍</h3><p>其中使用<strong>授权码授权模式</strong></p>
+<ol>
 <li>用户使用第三方的应用程序，也就是客户端应用程序</li>
 <li>客户端发现用户未登录，把用户请求<strong>重定向</strong>到授权服务器<ul>
 <li>授权服务器会维护合法的重定向地址，用于校验</li>
@@ -5032,19 +5033,26 @@
 </li>
 <li>授权服务器向用户索取用户名密码</li>
 <li>用户名密码匹配，则授权服务器请求用户授权</li>
-<li><strong>授权服务器给客户端程序返回code</strong></li>
+<li><strong>授权服务器给客户端程序返回code</strong>，重定向回到应用程序<ul>
+<li>code需要经过浏览器</li>
+</ul>
+</li>
 <li><strong>客户端应用程序用code向授权服务器索取token</strong><ul>
 <li>用code交换token</li>
-<li>不过浏览器，直接与授权服务器沟通</li>
+<li>token不过浏览器，在应用程序服务端和授权服务器之间处理</li>
 </ul>
 </li>
 <li>客户端在请求头带上token调用资源服务器的API</li>
-<li>资源服务器验证token，返回结果</li>
+<li>资源服务器验证token，返回结果<ul>
+<li>第一次，资源服务器向授权服务器索取公钥，验证Token合法性</li>
+<li>Token过期时才会重新索取公钥</li>
+</ul>
+</li>
 <li>客户端程序把结果返回给用户</li>
 </ol>
 <p>密码没有在浏览器来回传送，但是如果没有密码即使拿到code也没用<br>用code向授权服务器换取token才需要密码</p>
 <h2 id="1-4-其他授权模式"><a href="#1-4-其他授权模式" class="headerlink" title="1.4. 其他授权模式"></a>1.4. 其他授权模式</h2><ol>
-<li>隐式授权（implicit grant），直接返回访问令牌，而不是授仅码</li>
+<li>隐式授权（implicit grant）：直接返回访问令牌Token，而不是授仅码</li>
 <li>用户凭证（或密码）授权（user credentials (password) grant）：用户凭证直接换取访问令牌，不经过浏览器登录</li>
 <li>客户端凭证授权（client credentials grant）：客户端交换自己的凭证以获取访问令牌</li>
 </ol>
