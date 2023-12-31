@@ -1580,11 +1580,6 @@ hexo-log@^4.0.1:
   dependencies:
     picocolors "^1.0.0"
 
-hexo-obsidian-backlink@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.npmmirror.com/hexo-obsidian-backlink/-/hexo-obsidian-backlink-0.0.5.tgz#ac6475eb48b360819fb494fede344038613676af"
-  integrity sha512-QNVKoVbNQsPxKkGo0J24KMBAEsBkaH4IQ04z3NcRTJNNuM5vj6f/ddNA2w2cVXW56iCc7zGulS0F72OBcihvDA==
-
 hexo-pagination@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/hexo-pagination/-/hexo-pagination-3.0.0.tgz#b98b050bbddff25ae646e3d00ad607ac6ae77ea7"
