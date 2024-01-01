@@ -1,18 +1,19 @@
 ---
-aliases: 
 tags:
   - 2023_Fall_需求与商业模式创新
   - 课程
 categories: 2023_Fall_需求与商业模式创新
-sticky: 
-thumbnail: 
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 0-introduction
-date: 2023-12-18 17:58
-modified: 2023-12-29 10:07
+date: '2023-12-18 17:58'
+modified: '2023-12-29 10:07'
+abbrlink: ea84b3
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 
 # 1. 问题域/解系统

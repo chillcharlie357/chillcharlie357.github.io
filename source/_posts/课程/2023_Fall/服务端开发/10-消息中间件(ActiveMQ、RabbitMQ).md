@@ -1,18 +1,19 @@
 ---
-aliases: 
 tags:
   - 2023_Fall_服务端开发
   - 课程
 categories: 2023_Fall_服务端开发
-sticky:
-thumbnail:
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 10-消息中间件(ActiveMQ、RabbitMQ)
-date:  2023-11-16 18:11
-modified:  2023-12-31 17:12
+date: '2023-11-16 18:11'
+modified: '2023-12-31 17:12'
+abbrlink: b48e71af
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 
 # 1. 消息中间件

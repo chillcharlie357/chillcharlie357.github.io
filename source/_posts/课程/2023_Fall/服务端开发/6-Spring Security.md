@@ -1,18 +1,19 @@
 ---
-aliases: 
 tags:
   - 2023_Fall_服务端开发
   - 课程
 categories: 2023_Fall_服务端开发
-sticky:
-thumbnail:
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 6-Spring Security
-date:  2023-10-16 18:10
-modified:  2023-12-31 16:12
+date: '2023-10-16 18:10'
+modified: '2023-12-31 16:12'
+abbrlink: b9233e24
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 - JAAS: Java Authentication Authorization Service. JDK提供的认证授权服务
 

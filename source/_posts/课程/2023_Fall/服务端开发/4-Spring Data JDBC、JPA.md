@@ -1,20 +1,21 @@
 ---
-aliases: 
 tags:
   - 关系型数据库
   - Spring_Data
   - 2023_Fall_服务端开发
   - 课程
 categories: 2023_Fall_服务端开发
-sticky: 
-thumbnail: 
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 4-Spring Data JDBC、JPA
-date:  2023-10-10 18:10
-modified:  2023-12-31 15:12
+date: '2023-10-10 18:10'
+modified: '2023-12-31 15:12'
+abbrlink: '12184527'
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 
 # 1. 数据库访问层的开发👍

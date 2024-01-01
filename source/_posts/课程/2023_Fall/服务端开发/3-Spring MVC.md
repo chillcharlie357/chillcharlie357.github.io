@@ -1,18 +1,19 @@
 ---
-aliases: 
 tags:
   - 2023_Fall_服务端开发
   - 课程
 categories: 2023_Fall_服务端开发
-sticky:
-thumbnail:
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 3-Spring MVC
-date:  2023-10-10 18:10
-modified:  2023-12-31 14:12
+date: '2023-10-10 18:10'
+modified: '2023-12-31 14:12'
+abbrlink: c5191f2c
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 
 # 1. 基本概念👍

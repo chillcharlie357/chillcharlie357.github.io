@@ -1,16 +1,17 @@
 ---
-aliases: 
-sticky:
-thumbnail:
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 09_高速缓冲存储器（Cache）
 tags: 2022Fall_计算机组织与结构 课程
 categories: 2022Fall_计算机组织与结构
-date:  2023-01-28 17:03
-modified: 2023-12-29 10:12
+date: '2023-01-28 17:03'
+modified: '2023-12-29 10:12'
+abbrlink: f00fff12
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 
 # 1.Cache的基本思路

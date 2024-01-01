@@ -1,16 +1,17 @@
 ---
-aliases: 
-sticky:
-thumbnail:
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 11_冗余磁盘阵列(RAID)
 tags: 2022Fall_计算机组织与结构 课程
 categories: 2022Fall_计算机组织与结构
-date:  2023-02-03 21:57
-modified: 2023-12-29 10:12
+date: '2023-02-03 21:57'
+modified: '2023-12-29 10:12'
+abbrlink: b7ba64ea
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 
 - 冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)

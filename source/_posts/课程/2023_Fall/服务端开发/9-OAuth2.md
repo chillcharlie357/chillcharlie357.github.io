@@ -1,18 +1,19 @@
 ---
-aliases: 
 tags:
   - 2023_Fall_服务端开发
   - 课程
 categories: 2023_Fall_服务端开发
-sticky:
-thumbnail:
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 9-OAuth2
-date:  2023-11-13 18:11
-modified:  2023-12-31 16:12
+date: '2023-11-13 18:11'
+modified: '2023-12-31 16:12'
+abbrlink: a0bd262e
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 
 # 1. 创建授权服务器

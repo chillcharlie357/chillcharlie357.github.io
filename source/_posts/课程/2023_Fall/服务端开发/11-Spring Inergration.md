@@ -1,18 +1,19 @@
 ---
-aliases: 
 tags:
   - 2023_Fall_服务端开发
   - 课程
 categories: 2023_Fall_服务端开发
-sticky:
-thumbnail:
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 11-Spring Inergration
-date: 2023-12-28 21:18
-modified: 2023-12-29 10:11
+date: '2023-12-28 21:18'
+modified: '2023-12-29 10:11'
+abbrlink: b564c0a
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 
 做不同系统集成

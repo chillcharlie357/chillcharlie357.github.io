@@ -1,18 +1,19 @@
 ---
-aliases: 
 tags:
   - 2023_Fall_服务端开发
   - 课程
 categories: 2023_Fall_服务端开发
-sticky:
-thumbnail:
-cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 5-Spring Data MongoDB、Redis
-date:  2023-10-12 18:10
-modified:  2023-12-31 15:12
+date: '2023-10-12 18:10'
+modified: '2023-12-31 15:12'
+abbrlink: c56b76c9
+aliases:
+sticky:
+thumbnail:
+cover:
 ---
 
 # 1. MongoDB
