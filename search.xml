@@ -3428,6 +3428,7 @@
 <li>查看系统日志：docker system events</li>
 </ul>
 <h1 id="8-容器网络👍"><a href="#8-容器网络👍" class="headerlink" title="8. 容器网络👍"></a>8. 容器网络👍</h1><p>不同Network Driver的区别：<a class="link" href="https://docs.docker.com/network/drivers/">Network drivers overview | Docker Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link" href="https://zhuanlan.zhihu.com/p/212772001">Docker 网络模式详解及容器间网络通信 - 知乎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <ul>
 <li>none网络， <code>--net=none</code></li>
 <li>host网络，<code>--net=host</code><ul>
