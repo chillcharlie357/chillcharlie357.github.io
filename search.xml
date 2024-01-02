@@ -3511,7 +3511,7 @@
 <ol>
 <li><code>.dockerignore</code>文件</li>
 <li>容器只运行<strong>单个应用</strong><ul>
-<li>解耦，外来可以单独对一个应用进行升级/重启/…</li>
+<li>解耦，未来可以单独对一个应用进行升级/重启/…</li>
 </ul>
 </li>
 <li>将多个RUN指令合并为一个<ul>
