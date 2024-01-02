@@ -5052,7 +5052,7 @@
 <li>授权服务器向用户索取用户名密码</li>
 <li>用户名密码匹配，则授权服务器请求用户授权</li>
 <li><strong>授权服务器给客户端程序返回code</strong>，重定向回到应用程序<ul>
-<li><strong>code需要经过浏览器</strong></li>
+<li><strong>这里的code是和重定向URI一起返回给浏览器的，所以不安全</strong></li>
 <li>授权服务器返回的是重定向url+code</li>
 </ul>
 </li>
