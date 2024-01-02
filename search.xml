@@ -3390,9 +3390,9 @@
 <h1 id="3-镜像分层👍"><a href="#3-镜像分层👍" class="headerlink" title="3. 镜像分层👍"></a>3. 镜像分层👍</h1><ul>
 <li><strong>写时复制 COW</strong>(Copy-On-Write)<ul>
 <li>需要修改底层文件时才会复制一份到上层，然后进行修改</li>
-<li>否则一直共享底层文件</li>
 </ul>
 </li>
+<li>否则一直共享底层文件</li>
 <li>docker history &lt;image name&gt; 查看镜像的层</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-16-50-cef8d6cc91e64be46d5afa44e9e97583-20231214201648-b1c6b2.png" alt="image.png"></p>
