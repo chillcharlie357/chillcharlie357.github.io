@@ -3379,9 +3379,7 @@
 <li>如果加上-P则会建立外部端口映射</li>
 </ul>
 </li>
-<li><code>--link my-mysql:server</code>：添加链接到另一个容器<ul>
-<li>The linking feature is a <strong>legacy feature</strong>. You should always prefer using <strong>Docker network</strong> drivers over linking.</li>
-<li>远程容器链接到本地容器</li>
+<li><code>--link &lt;name or id&gt;:alias</code>：链接两个容器，使得他们可以相互通信<ul>
 <li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="0.629ex" height="0.973ex" role="img" focusable="false" viewBox="0 -430 278 430"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g></g></g></svg></mjx-container>右边可以写在本地属性文件，可以在不修改命令的情况下把远程容器映射到本地容器</li>
 </ul>
 </li>
@@ -3394,6 +3392,10 @@
 <p><font color="#c00000">如何在镜像中查看网卡信息和ip地址？</font></p>
 <div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">docker run --rm -it busybox</span><br><span class="line">cat /etc/hosts</span><br><span class="line">ip a</span><br></pre></td></tr></table></figure></div>
 
+<p><a class="link" href="https://www.jianshu.com/p/21d66ca6115e">关于对docker run –link的理解 - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li><code>--link</code>的例子：<code>docker run -d --name node --link selenium_hub:hub selenium/node-chrome-debug</code>。创建并启动名为node的容器，并把该容器和名为selenium_hub的容器链接起来。hub是该容器在link下的别名（alias），通俗易懂的讲，站在node容器的角度，selenium_hub和hub都是1cbbf6f07804容器的名字，并且作为容器的hostname，node用这2个名字中的哪一个都可以访问到1cbbf6f07804容器并与之通信（docker通过DNS自动解析）。</li>
+</ul>
 <h2 id="2-2-inspect"><a href="#2-2-inspect" class="headerlink" title="2.2. inspect"></a>2.2. inspect</h2><p>查看详细信息</p>
 <p><code>docker image</code>和<code>docker container</code>都有<code>inspect</code>子命令</p>
 <h1 id="3-镜像分层👍"><a href="#3-镜像分层👍" class="headerlink" title="3. 镜像分层👍"></a>3. 镜像分层👍</h1><ul>
