@@ -3666,7 +3666,7 @@
 <p>Node: 安装docker的宿主机，提供容器。<br>Master：管理集群的机器，安装k8s的核心模块。也可以与Node部署在同一台宿主机上。</p>
 <p>kubelet：和Master、本地docker交互。<br>flannel：容器网络的第三方实现，给容器提供虚拟网络。<br>etcd：类似reddis的缓存系统。</p>
 <p>k8s目的：通过多个Node节点，获得更多容器。</p>
-<h1 id="3-k8s资源👍"><a href="#3-k8s资源👍" class="headerlink" title="3. k8s资源👍"></a>3. k8s资源👍</h1><h1 id="4-类型"><a href="#4-类型" class="headerlink" title="4. 类型"></a>4. 类型</h1><ul>
+<h1 id="3-k8s资源👍"><a href="#3-k8s资源👍" class="headerlink" title="3. k8s资源👍"></a>3. k8s资源👍</h1><h2 id="3-1-类型"><a href="#3-1-类型" class="headerlink" title="3.1. 类型"></a>3.1. 类型</h2><ul>
 <li>namespaces<ul>
 <li>类似java中的package</li>
 <li>可以把不同资源放在不同namespace里，不同namespace里面可以有同名资源</li>
@@ -3714,7 +3714,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="4-1-Pod"><a href="#4-1-Pod" class="headerlink" title="4.1. Pod"></a>4.1. Pod</h2><ul>
+<h2 id="3-2-Pod"><a href="#3-2-Pod" class="headerlink" title="3.2. Pod"></a>3.2. Pod</h2><ul>
 <li><p><font color="#c00000">Pod是Kubernetes调度的最小单元</font> 👍</p>
 </li>
 <li><p>多个容器在一个Pod中共享网络和文件系统</p>
@@ -3737,7 +3737,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="4-1-1-pod管理命令"><a href="#4-1-1-pod管理命令" class="headerlink" title="4.1.1. pod管理命令"></a>4.1.1. pod管理命令</h3><ul>
+<h3 id="3-2-1-pod管理命令"><a href="#3-2-1-pod管理命令" class="headerlink" title="3.2.1. pod管理命令"></a>3.2.1. pod管理命令</h3><ul>
 <li><strong>创建pod</strong><ul>
 <li><code>kubectl run</code></li>
 <li><code>kubectl run myspittr --image spittr:1.0-SNAPSHOT</code></li>
@@ -3759,7 +3759,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="4-1-2-如何将pod或service的端口快速映射到本机端口（调试用）"><a href="#4-1-2-如何将pod或service的端口快速映射到本机端口（调试用）" class="headerlink" title="4.1.2. 如何将pod或service的端口快速映射到本机端口（调试用）"></a>4.1.2. 如何将pod或service的端口快速映射到本机端口（调试用）</h3><ul>
+<h3 id="3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）"><a href="#3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）" class="headerlink" title="3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）"></a>3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）</h3><ul>
 <li><p><strong>port-forward</strong>: ``kubectl port-forward <name> host_ip:container_ip`</name></p>
 <ul>
 <li>和<code>docker -p</code>一样，左边宿主机右边容器端口</li>
@@ -3774,9 +3774,9 @@
 <li><p>映射service：<code>kubectl port-forward service/demo 8081:80</code></p>
 </li>
 </ul>
-<h3 id="4-1-3-Pod、Container与Node之间的关系"><a href="#4-1-3-Pod、Container与Node之间的关系" class="headerlink" title="4.1.3. Pod、Container与Node之间的关系"></a>4.1.3. Pod、Container与Node之间的关系</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F19-32-11-f9c84bf9f2d585a4e92d0a7a6a7fe85d-20231228193210-1d543b.png" alt="image.png"></p>
-<h2 id="4-2-Service-👍"><a href="#4-2-Service-👍" class="headerlink" title="4.2. Service 👍"></a>4.2. Service 👍</h2><p>不希望让别人直接访问pod，k8s可能会对pod做更改，ip会改变。但<strong>cluster-ip或服务名不会改变</strong>。</p>
-<h3 id="4-2-1-命令"><a href="#4-2-1-命令" class="headerlink" title="4.2.1. 命令"></a>4.2.1. 命令</h3><ul>
+<h3 id="3-2-3-Pod、Container与Node之间的关系"><a href="#3-2-3-Pod、Container与Node之间的关系" class="headerlink" title="3.2.3. Pod、Container与Node之间的关系"></a>3.2.3. Pod、Container与Node之间的关系</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F19-32-11-f9c84bf9f2d585a4e92d0a7a6a7fe85d-20231228193210-1d543b.png" alt="image.png"></p>
+<h2 id="3-3-Service-👍"><a href="#3-3-Service-👍" class="headerlink" title="3.3. Service 👍"></a>3.3. Service 👍</h2><p>不希望让别人直接访问pod，k8s可能会对pod做更改，ip会改变。但<strong>cluster-ip或服务名不会改变</strong>。</p>
+<h3 id="3-3-1-命令"><a href="#3-3-1-命令" class="headerlink" title="3.3.1. 命令"></a>3.3.1. 命令</h3><ul>
 <li><p>创建：kubectl expose</p>
 <ul>
 <li><code>kubectl expose pod &lt;serveice name&gt; --port &lt;port&gt;</code></li>
@@ -3788,18 +3788,18 @@
 </ul>
 </li>
 </ul>
-<h3 id="4-2-2-如何访问Service"><a href="#4-2-2-如何访问Service" class="headerlink" title="4.2.2. 如何访问Service"></a>4.2.2. 如何访问Service</h3><ol>
+<h3 id="3-3-2-如何访问Service"><a href="#3-3-2-如何访问Service" class="headerlink" title="3.3.2. 如何访问Service"></a>3.3.2. 如何访问Service</h3><ol>
 <li>expose</li>
 <li>port-forward</li>
 <li>curl容器</li>
 </ol>
-<h2 id="4-3-Ingress-👍"><a href="#4-3-Ingress-👍" class="headerlink" title="4.3. Ingress 👍"></a>4.3. Ingress 👍</h2><ul>
+<h2 id="3-4-Ingress-👍"><a href="#3-4-Ingress-👍" class="headerlink" title="3.4. Ingress 👍"></a>3.4. Ingress 👍</h2><ul>
 <li><font color="#c00000">只能路由到service，不能路由到pod</font><ul>
 <li>service有cluseter-ip，不会改变，而pod的ip可能会改变</li>
 </ul>
 </li>
 </ul>
-<h3 id="4-3-1-命令"><a href="#4-3-1-命令" class="headerlink" title="4.3.1. 命令"></a>4.3.1. 命令</h3><ul>
+<h3 id="3-4-1-命令"><a href="#3-4-1-命令" class="headerlink" title="3.4.1. 命令"></a>3.4.1. 命令</h3><ul>
 <li>创建：kubectl create ingress myspittr –class=nginx –rule=<a class="link" href="http://www.license.com/*=myspittr:8080">www.license.com/*=myspittr:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ul>
 <li>访问：<a class="link" href="http://www.license.com/spittr/">http://www.license.com/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
@@ -3807,7 +3807,7 @@
 <li>删除：kubectl delete ingress myspittr</li>
 </ul>
 <p>ingress网关默认端口80</p>
-<h2 id="4-4-命令行快捷创建deployment、service、ingress"><a href="#4-4-命令行快捷创建deployment、service、ingress" class="headerlink" title="4.4. 命令行快捷创建deployment、service、ingress"></a>4.4. 命令行快捷创建deployment、service、ingress</h2><ul>
+<h2 id="3-5-命令行快捷创建deployment、service、ingress"><a href="#3-5-命令行快捷创建deployment、service、ingress" class="headerlink" title="3.5. 命令行快捷创建deployment、service、ingress"></a>3.5. 命令行快捷创建deployment、service、ingress</h2><ul>
 <li><p>kubectl create deployment myspittr–image=spittr:1.0-SNAPSHOT –port=8080</p>
 </li>
 <li><p>kubectl expose deployment myspittr 把上面的这个pod的8080端口暴露为myspittr服务</p>
@@ -3824,7 +3824,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="4-5-Deployment"><a href="#4-5-Deployment" class="headerlink" title="4.5. Deployment"></a>4.5. Deployment</h2><p><a class="link" href="https://www.jianshu.com/p/029661f38674">Kubernetes对象之Deployment - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="3-6-Deployment"><a href="#3-6-Deployment" class="headerlink" title="3.6. Deployment"></a>3.6. Deployment</h2><p><a class="link" href="https://www.jianshu.com/p/029661f38674">Kubernetes对象之Deployment - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <ul>
 <li>重启：kubectl rollout restart deployment/spittr<ul>
 <li>kubectl rollout restart deployment –selector=app=spittr</li>
@@ -3840,7 +3840,7 @@
 <li>查看历史版本：kubectl rollout history deployment/spittr</li>
 <li>回滚到前一个版本：kubectl rollout undo deployment/spittr</li>
 </ul>
-<h1 id="5-k8s常用命令"><a href="#5-k8s常用命令" class="headerlink" title="5. k8s常用命令"></a>5. k8s常用命令</h1><ul>
+<h1 id="4-k8s常用命令"><a href="#4-k8s常用命令" class="headerlink" title="4. k8s常用命令"></a>4. k8s常用命令</h1><ul>
 <li>kubectl get secrets/pods/all [ -n namespace]</li>
 <li>kubectl get secret mysecret-o yaml</li>
 <li>kubectl delete pod pod_name [ -n namespace]</li>
