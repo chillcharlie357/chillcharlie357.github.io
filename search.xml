@@ -2,12 +2,12 @@
 <search>
   <entry>
     <title>changelog</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/c8422601/</url>
+    <url>/posts/c8422601/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>12.17 Linux使用分享</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/cecaafa4/</url>
+    <url>/posts/cecaafa4/</url>
     <content><![CDATA[<h1 id="1-Linux概述"><a href="#1-Linux概述" class="headerlink" title="1. Linux概述"></a>1. Linux概述</h1><h2 id="1-1-发展历史"><a href="#1-1-发展历史" class="headerlink" title="1.1. 发展历史"></a>1.1. 发展历史</h2><p><strong>Linux</strong>是一种<a class="link" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6">自由和开放源码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E7%B1%BBUnix%E7%B3%BB%E7%BB%9F">类UNIX <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1">操作系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。该操作系统的<a class="link" href="https://zh.wikipedia.org/wiki/%E5%86%85%E6%A0%B8">内核 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>由Linus_Torvalds在1991年10月5日首次发布，再加上<a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%BF%E7%94%A8%E8%80%85%E7%A9%BA%E9%96%93">用户空间 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F">应用程序 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>之后，就成为了Linux操作系统。除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like。</p>
 <p>只要遵循<a class="link" href="https://zh.wikipedia.org/wiki/GNU%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E8%AF%81">GNU 通用公共许可证 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（GPL），任何个人和机构都可以自由地使用Linux的所有底层<a class="link" href="https://zh.wikipedia.org/wiki/%E6%BA%90%E4%BB%A3%E7%A0%81">源代码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，也可以自由地修改和再发布。</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F26%2F19-40-14-cef124053748f929f2d2691e8ccd14df-20231226194013-5e1031.png" alt="image.png"></p>
@@ -48,7 +48,7 @@
 <li>专业领域相关：写代码, gnu-toolchain, docker…</li>
 <li>游戏：Steamdeck、Proton<ul>
 <li>如何在Steam上运行艾尔登法环?</li>
-<li>左上角帧数显示工具：<a href="https://github.com/benjamimgois/goverlay">GitHub - benjamimgois/goverlay: GOverlay is an opensource project that aims to create a Graphical UI to help manage Linux overlays.</a></li>
+<li>左上角帧数显示工具：<a class="link" href="https://github.com/benjamimgois/goverlay">GitHub - benjamimgois/goverlay: GOverlay is an opensource project that aims to create a Graphical UI to help manage Linux overlays. <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
 </li>
 </ol>
@@ -205,7 +205,7 @@
   </entry>
   <entry>
     <title>1-概述</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/f5c8b82c/</url>
+    <url>/posts/f5c8b82c/</url>
     <content><![CDATA[<h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h1><p>名词：</p>
 <ul>
 <li>CLI：命令行界面<ul>
@@ -299,7 +299,7 @@
   </entry>
   <entry>
     <title>10-人机交互基础知识</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/c3e734a2/</url>
+    <url>/posts/c3e734a2/</url>
     <content><![CDATA[<h1 id="1-信息处理模型"><a href="#1-信息处理模型" class="headerlink" title="1. 信息处理模型"></a>1. 信息处理模型</h1><p>研究人对外界信息的接收、存储、集成、检索和使用，可预测人执行 特定任务的效率，如可推算人需要多长时间来感知和响应某个刺激（又 称“反应时间”），信息过载会出现怎样的瓶颈现象等。</p>
 <h2 id="1-1-人类处理机模型"><a href="#1-1-人类处理机模型" class="headerlink" title="1.1. 人类处理机模型"></a>1.1. 人类处理机模型</h2><p>最著名的<strong>信息处理模型</strong>，描述了人们从感知信息到付诸行动的认知过程</p>
 <h3 id="1-1-1-三个交互式组件"><a href="#1-1-1-三个交互式组件" class="headerlink" title="1.1.1. 三个交互式组件"></a>1.1.1. 三个交互式组件</h3><ul>
@@ -478,7 +478,7 @@
   </entry>
   <entry>
     <title>11-交互模型与理论</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/93e1d4e7/</url>
+    <url>/posts/93e1d4e7/</url>
     <content><![CDATA[<h1 id="1-交互设计领域的模型"><a href="#1-交互设计领域的模型" class="headerlink" title="1. 交互设计领域的模型"></a>1. 交互设计领域的模型</h1><ol>
 <li>计算用户完成任务的时间：KLM</li>
 <li>描述交互过程中系统状态的变化：状态转移网</li>
@@ -675,7 +675,7 @@
   </entry>
   <entry>
     <title>12-人机交互复习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/6a061927/</url>
+    <url>/posts/6a061927/</url>
     <content><![CDATA[<h1 id="1-知识点"><a href="#1-知识点" class="headerlink" title="1. 知识点"></a>1. 知识点</h1><h2 id="1-1-什么是人机交互"><a href="#1-1-什么是人机交互" class="headerlink" title="1.1. 什么是人机交互"></a>1.1. 什么是人机交互</h2><ul>
 <li>重要性</li>
 <li>相关领域</li>
@@ -868,7 +868,7 @@
   </entry>
   <entry>
     <title>2-交互设计的原则和目标</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/7e280519/</url>
+    <url>/posts/7e280519/</url>
     <content><![CDATA[<h1 id="1-交互框架"><a href="#1-交互框架" class="headerlink" title="1. 交互框架"></a>1. 交互框架</h1><ul>
 <li>作用<ul>
 <li>提供理解或定义某种事物的一种结构</li>
@@ -1246,7 +1246,7 @@
   </entry>
   <entry>
     <title>3-评估的基础知识</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/55aec671/</url>
+    <url>/posts/55aec671/</url>
     <content><![CDATA[<h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><ul>
 <li>什么是评估？<ul>
 <li><strong>系统化的数据搜集过程，对交互性能的测试</strong></li>
@@ -1390,7 +1390,7 @@
   </entry>
   <entry>
     <title>4-实验设计</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/276b8acd/</url>
+    <url>/posts/276b8acd/</url>
     <content><![CDATA[<h1 id="1-研究假设"><a href="#1-研究假设" class="headerlink" title="1. 研究假设"></a>1. 研究假设</h1><h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><ul>
 <li>实验通常从研究假设开始</li>
 <li>假设类型<ul>
@@ -1571,7 +1571,7 @@
   </entry>
   <entry>
     <title>5-评估之用户测试</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/cbd5957b/</url>
+    <url>/posts/cbd5957b/</url>
     <content><![CDATA[<h1 id="1-DECIDE评估框架👍"><a href="#1-DECIDE评估框架👍" class="headerlink" title="1. DECIDE评估框架👍"></a>1. DECIDE评估框架👍</h1><p><strong>步骤</strong>：</p>
 <ol>
 <li>决定评估需要完成的总体目标</li>
@@ -1780,7 +1780,7 @@
   </entry>
   <entry>
     <title>6-评估之观察用户</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/907ea608/</url>
+    <url>/posts/907ea608/</url>
     <content><![CDATA[<h1 id="1-观察用户"><a href="#1-观察用户" class="headerlink" title="1. 观察用户"></a>1. 观察用户</h1><ul>
 <li>观察用户怎样工作是极其重要的可用性方法<ul>
 <li>用户并不总是客观和完整地描述产品的使用情况</li>
@@ -1876,7 +1876,7 @@
   </entry>
   <entry>
     <title>7-询问专家和用户</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/a17d59f2/</url>
+    <url>/posts/a17d59f2/</url>
     <content><![CDATA[<h1 id="1-查询用户-访谈"><a href="#1-查询用户-访谈" class="headerlink" title="1. 查询用户-访谈"></a>1. 查询用户-访谈</h1><p>访谈：有目的的对话过程</p>
 <h2 id="1-1-分类"><a href="#1-1-分类" class="headerlink" title="1.1. 分类"></a>1.1. 分类</h2><ul>
 <li>非结构化访谈<ul>
@@ -2042,7 +2042,7 @@
   </entry>
   <entry>
     <title>8-交互需求获取</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/cfa39c4c/</url>
+    <url>/posts/cfa39c4c/</url>
     <content><![CDATA[<h1 id="1-交互需求的差异"><a href="#1-交互需求的差异" class="headerlink" title="1. 交互需求的差异"></a>1. 交互需求的差异</h1><ul>
 <li>分类<ul>
 <li>功能需求</li>
@@ -2296,7 +2296,7 @@
   </entry>
   <entry>
     <title>9-交互式系统设计</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/8a8cdc35/</url>
+    <url>/posts/8a8cdc35/</url>
     <content><![CDATA[<h1 id="1-设计框架"><a href="#1-设计框架" class="headerlink" title="1. 设计框架"></a>1. 设计框架</h1><p>定义高层次上的屏幕布局，放置过早把重点放在小细节上。</p>
 <h2 id="1-1-定义外形因素和输入方法"><a href="#1-1-定义外形因素和输入方法" class="headerlink" title="1.1. 定义外形因素和输入方法"></a>1.1. 定义外形因素和输入方法</h2><ul>
 <li>外形因素<ul>
@@ -2516,7 +2516,7 @@
   </entry>
   <entry>
     <title>13-期末复习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/20e7e86a/</url>
+    <url>/posts/20e7e86a/</url>
     <content><![CDATA[<h1 id="1-内容组织"><a href="#1-内容组织" class="headerlink" title="1. 内容组织"></a>1. 内容组织</h1><p>软件主导硬件<br>以应用为中心</p>
 <ul>
 <li><strong>重要</strong> ，+</li>
@@ -2688,7 +2688,7 @@
   </entry>
   <entry>
     <title>0-introduction</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/ea84b3/</url>
+    <url>/posts/ea84b3/</url>
     <content><![CDATA[<h1 id="1-Spring"><a href="#1-Spring" class="headerlink" title="1. Spring"></a>1. Spring</h1><ul>
 <li><p>Spring</p>
 <ul>
@@ -2756,7 +2756,7 @@
   </entry>
   <entry>
     <title>1-依赖注入</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/a22fb360/</url>
+    <url>/posts/a22fb360/</url>
     <content><![CDATA[<p>Git：分布式版本控制<br>Beam:java中一个对象，Spring负责对象创建、管理这些对象</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png" alt="image.png"></p>
 <p>商品服务需要引用库存服务（依赖），如何知道库存服务的地址/引用？</p>
@@ -2937,7 +2937,7 @@
   </entry>
   <entry>
     <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/b48e71af/</url>
+    <url>/posts/b48e71af/</url>
     <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
 <li>提供消息服务的应用程序</li>
 <li>主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然</li>
@@ -3037,7 +3037,7 @@
   </entry>
   <entry>
     <title>11-Spring Inergration</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/b564c0a/</url>
+    <url>/posts/b564c0a/</url>
     <content><![CDATA[<p>做不同系统集成</p>
 <h1 id="1-集成流-Intergration-FLow"><a href="#1-集成流-Intergration-FLow" class="headerlink" title="1. 集成流 Intergration FLow"></a>1. 集成流 Intergration FLow</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-00-32-18ab4ec2735aac2ccea5b42e91078cdf-20231123190031-d3597c.png" alt="image.png"></p>
 <p>gateway：流的入口<br>transformer：<strong>消息</strong>处理、转换</p>
@@ -3119,7 +3119,7 @@
   </entry>
   <entry>
     <title>12-反应式编程</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/d938b74e/</url>
+    <url>/posts/d938b74e/</url>
     <content><![CDATA[<h1 id="1-使用场景"><a href="#1-使用场景" class="headerlink" title="1. 使用场景"></a>1. 使用场景</h1><ul>
 <li>IO密集型场景</li>
 <li>同步阻塞模型，阻塞线程多，CPU利用率不高，性能下降</li>
@@ -3272,7 +3272,7 @@
   </entry>
   <entry>
     <title>13-WebFlux</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/bfe92605/</url>
+    <url>/posts/bfe92605/</url>
     <content><![CDATA[<h1 id="1-异步Web框架的事件轮询机制"><a href="#1-异步Web框架的事件轮询机制" class="headerlink" title="1. 异步Web框架的事件轮询机制"></a>1. 异步Web框架的事件轮询机制</h1><ul>
 <li>用较少的线程处理更多请求，减少线程管理的开销<ul>
 <li>很多请求的线程并不是在运行，而是在等待</li>
@@ -3334,7 +3334,7 @@
   </entry>
   <entry>
     <title>14-docker</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/33399bea/</url>
+    <url>/posts/33399bea/</url>
     <content><![CDATA[<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png" alt="image.png"></p>
 <h1 id="1-docker的三部分👍"><a href="#1-docker的三部分👍" class="headerlink" title="1. docker的三部分👍"></a>1. docker的三部分👍</h1><p>容器：一个轻量化的虚拟机</p>
 <ul>
@@ -3449,7 +3449,7 @@
   </entry>
   <entry>
     <title>15-容器镜像构建和编排</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/70e6ad8c/</url>
+    <url>/posts/70e6ad8c/</url>
     <content><![CDATA[<h1 id="1-由Dockerfile构建镜像"><a href="#1-由Dockerfile构建镜像" class="headerlink" title="1. 由Dockerfile构建镜像"></a>1. 由Dockerfile构建镜像</h1><h2 id="1-1-过程"><a href="#1-1-过程" class="headerlink" title="1.1. 过程"></a>1.1. 过程</h2><p>Image：静态的压缩包<br>Container：运行的容器，轻量级的虚拟机</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F21%2F18-48-00-e370271f15d63a6c253c9948ac97824b-20231221184759-c0bcd1.png" alt="image.png"></p>
 <h2 id="1-2-文件指令👍"><a href="#1-2-文件指令👍" class="headerlink" title="1.2. 文件指令👍"></a>1.2. 文件指令👍</h2><ul>
@@ -3633,8 +3633,8 @@
   </entry>
   <entry>
     <title>16-k8s使用</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/9aa54120/</url>
-    <content><![CDATA[<h1 id="1-k8s环境"><a href="#1-k8s环境" class="headerlink" title="1. k8s环境"></a>1. k8s环境</h1><h2 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1. 安装"></a>1.1. 安装</h2><p><a href="https://github.com/AliyunContainerService/k8s-for-docker-desktop">GitHub - AliyunContainerService/k8s-for-docker-desktop: 为Docker Desktop for Mac/Windows开启Kubernetes和Istio。</a></p>
+    <url>/posts/9aa54120/</url>
+    <content><![CDATA[<h1 id="1-k8s环境"><a href="#1-k8s环境" class="headerlink" title="1. k8s环境"></a>1. k8s环境</h1><h2 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1. 安装"></a>1.1. 安装</h2><p><a class="link" href="https://github.com/AliyunContainerService/k8s-for-docker-desktop">GitHub - AliyunContainerService/k8s-for-docker-desktop: 为Docker Desktop for Mac/Windows开启Kubernetes和Istio。 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>根据说明安装</p>
 <h2 id="1-2-部署dashboard"><a href="#1-2-部署dashboard" class="headerlink" title="1.2. 部署dashboard"></a>1.2. 部署dashboard</h2><p><code>kubectl apply -f kubernetes-dashboard.yaml</code></p>
 <p>kubectl： 客户端程序与远程k8s server交互<br>kubectl proxy： 把远程k8s server端口代理到本地端口</p>
@@ -3847,7 +3847,7 @@
   </entry>
   <entry>
     <title>2-面向切面编程</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/e2853af6/</url>
+    <url>/posts/e2853af6/</url>
     <content><![CDATA[<h1 id="1-软件编程方法"><a href="#1-软件编程方法" class="headerlink" title="1. 软件编程方法"></a>1. 软件编程方法</h1><ul>
 <li>面向过程编程 POP</li>
 <li>面向对象编程 OOP</li>
@@ -4027,7 +4027,7 @@
   </entry>
   <entry>
     <title>3-Spring MVC</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/c5191f2c/</url>
+    <url>/posts/c5191f2c/</url>
     <content><![CDATA[<h1 id="1-基本概念👍"><a href="#1-基本概念👍" class="headerlink" title="1. 基本概念👍"></a>1. 基本概念👍</h1><p><strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller</p>
 <ul>
 <li>模型model：存储内容，指数据、领域类</li>
@@ -4142,7 +4142,7 @@
   </entry>
   <entry>
     <title>4-Spring Data JDBC、JPA</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/12184527/</url>
+    <url>/posts/12184527/</url>
     <content><![CDATA[<h1 id="1-数据库访问层的开发👍"><a href="#1-数据库访问层的开发👍" class="headerlink" title="1. 数据库访问层的开发👍"></a>1. 数据库访问层的开发👍</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F14-28-47-548c2ef0125be168f0ca3fc94bf0437e-20231231142846-73f243.png" alt="image.png"></p>
 <p>基于接口，可以自己实现也可以让spring实现。</p>
 <ul>
@@ -4359,7 +4359,7 @@
   </entry>
   <entry>
     <title>5-Spring Data MongoDB、Redis</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/c56b76c9/</url>
+    <url>/posts/c56b76c9/</url>
     <content><![CDATA[<h1 id="1-MongoDB"><a href="#1-MongoDB" class="headerlink" title="1. MongoDB"></a>1. MongoDB</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1. 介绍"></a>1.1. 介绍</h2><p>文档数据库，存储类Json文件。<br>可以分布式存储。</p>
 <table>
 <thead>
@@ -4516,7 +4516,7 @@
   </entry>
   <entry>
     <title>6-Spring Security</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/b9233e24/</url>
+    <url>/posts/b9233e24/</url>
     <content><![CDATA[<ul>
 <li>JAAS: Java Authentication Authorization Service. JDK提供的认证授权服务</li>
 </ul>
@@ -4693,7 +4693,7 @@
   </entry>
   <entry>
     <title>7-配置属性</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/c75c265a/</url>
+    <url>/posts/c75c265a/</url>
     <content><![CDATA[<h1 id="1-属性来源👍"><a href="#1-属性来源👍" class="headerlink" title="1. 属性来源👍"></a>1. 属性来源👍</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
 <ol>
 <li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
@@ -4816,7 +4816,7 @@
   </entry>
   <entry>
     <title>8-REST API</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/c9789ed0/</url>
+    <url>/posts/c9789ed0/</url>
     <content><![CDATA[<h1 id="1-不同开发模式"><a href="#1-不同开发模式" class="headerlink" title="1. 不同开发模式"></a>1. 不同开发模式</h1><h2 id="1-1-前后端不分离"><a href="#1-1-前后端不分离" class="headerlink" title="1.1. 前后端不分离"></a>1.1. 前后端不分离</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F5ec4e681073f4e19bdfa388580e8f2ac_20231102185803.png" alt="image.png"></p>
 <h2 id="1-2-前后端分离"><a href="#1-2-前后端分离" class="headerlink" title="1.2. 前后端分离"></a>1.2. 前后端分离</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F458ecc31fe35e9d03f9062f9439a2ff3_20231102185749.png" alt="image.png"></p>
 <h1 id="2-使用Spring-MVC的控制器创建RESTful端点"><a href="#2-使用Spring-MVC的控制器创建RESTful端点" class="headerlink" title="2. 使用Spring MVC的控制器创建RESTful端点"></a>2. 使用Spring MVC的控制器创建RESTful端点</h1><h2 id="2-1-Rest原则👍"><a href="#2-1-Rest原则👍" class="headerlink" title="2.1. Rest原则👍"></a>2.1. Rest原则👍</h2><ul>
@@ -5014,7 +5014,7 @@
   </entry>
   <entry>
     <title>9-OAuth2</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/a0bd262e/</url>
+    <url>/posts/a0bd262e/</url>
     <content><![CDATA[<h1 id="1-创建授权服务器"><a href="#1-创建授权服务器" class="headerlink" title="1. 创建授权服务器"></a>1. 创建授权服务器</h1><h2 id="1-1-增加权限控制"><a href="#1-1-增加权限控制" class="headerlink" title="1.1. 增加权限控制"></a>1.1. 增加权限控制</h2><p>POST：<a class="link" href="http://tacocloud:8080/api/ingredients">http://tacocloud:8080/api/ingredients <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>DELETE ：<a class="link" href="http://tacocloud:8080/">http://tacocloud:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> /api/ingredients/*</p>
 <ul>
 <li>两种方式<ul>
@@ -5124,7 +5124,7 @@
   </entry>
   <entry>
     <title>考试</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/bd4d7fe/</url>
+    <url>/posts/bd4d7fe/</url>
     <content><![CDATA[<h1 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h1><p>多选题<br>问答题：5道题</p>
 <h1 id="问答题例题"><a href="#问答题例题" class="headerlink" title="问答题例题"></a>问答题例题</h1><h2 id="web开发框架分层，请求处理过程"><a href="#web开发框架分层，请求处理过程" class="headerlink" title="web开发框架分层，请求处理过程"></a>web开发框架分层，请求处理过程</h2><ul>
 <li><p>分层</p>
@@ -5168,7 +5168,7 @@
   </entry>
   <entry>
     <title>0-introduction</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/ea84b3/</url>
+    <url>/posts/ea84b3/</url>
     <content><![CDATA[<p>学习：利用经验改善系统的性能</p>
 <ul>
 <li>机器学习：现代特指统计机器学习<ul>
@@ -5328,7 +5328,7 @@
   </entry>
   <entry>
     <title>1-概率与学习-KNN</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/76a34f21/</url>
+    <url>/posts/76a34f21/</url>
     <content><![CDATA[<h1 id="1-回顾"><a href="#1-回顾" class="headerlink" title="1. 回顾"></a>1. 回顾</h1><h2 id="1-1-特征和属性"><a href="#1-1-特征和属性" class="headerlink" title="1.1. 特征和属性"></a>1.1. 特征和属性</h2><p><strong>统计学角度</strong>看机器学习：得到映射函数<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="5.922ex" height="1.62ex" role="img" focusable="false" viewBox="0 -511 2617.6 716"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(849.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2127.6,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></p>
 <p>将原始数据通过<strong>特征工程</strong>（手工/自动）得到<strong>特征向量</strong>x,再求<strong>映射</strong>函数<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="5.922ex" height="1.62ex" role="img" focusable="false" viewBox="0 -511 2617.6 716"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(849.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2127.6,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container>，得到<strong>标签</strong>y<br><strong>属性</strong>：特征向量的每个维度</p>
 <h2 id="1-2-分类问题和回归问题"><a href="#1-2-分类问题和回归问题" class="headerlink" title="1.2. 分类问题和回归问题"></a>1.2. 分类问题和回归问题</h2><p>分类：输出离散值，找到一个决策边界<br>回归：输出连续值</p>
@@ -5428,7 +5428,7 @@
   </entry>
   <entry>
     <title>11-维度约简</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/fcf58edf/</url>
+    <url>/posts/fcf58edf/</url>
     <content><![CDATA[<h1 id="1-特征选择和降维"><a href="#1-特征选择和降维" class="headerlink" title="1. 特征选择和降维"></a>1. 特征选择和降维</h1><ul>
 <li>维度约简<ul>
 <li>特征选择</li>
@@ -5470,7 +5470,7 @@
   </entry>
   <entry>
     <title>12-强化学习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/133f1f9d/</url>
+    <url>/posts/133f1f9d/</url>
     <content><![CDATA[<h1 id="1-起源"><a href="#1-起源" class="headerlink" title="1. 起源"></a>1. 起源</h1><p>强化学习：不是数据驱动而是和环境的交互驱动，奖惩和试错(Trial and Error）</p>
 <ul>
 <li><p>概念学习</p>
@@ -5724,7 +5724,7 @@
   </entry>
   <entry>
     <title>2-无监督学习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/18c82724/</url>
+    <url>/posts/18c82724/</url>
     <content><![CDATA[<h1 id="1-聚类学习"><a href="#1-聚类学习" class="headerlink" title="1. 聚类学习"></a>1. 聚类学习</h1><h2 id="1-1-相关概念"><a href="#1-1-相关概念" class="headerlink" title="1.1. 相关概念"></a>1.1. 相关概念</h2><ul>
 <li><p>聚类：数据对象的集合</p>
 <ul>
@@ -5920,7 +5920,7 @@
   </entry>
   <entry>
     <title>3-树学习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/21762f5e/</url>
+    <url>/posts/21762f5e/</url>
     <content><![CDATA[<h1 id="1-概念学习-Concept-Learning"><a href="#1-概念学习-Concept-Learning" class="headerlink" title="1. 概念学习 Concept Learning"></a>1. 概念学习 Concept Learning</h1><h2 id="1-1-推理"><a href="#1-1-推理" class="headerlink" title="1.1. 推理"></a>1.1. 推理</h2><ul>
 <li>演绎（正向）推理：已知<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="7.008ex" height="2.032ex" role="img" focusable="false" viewBox="0 -704 3097.6 898"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mo" transform="translate(1028.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2306.6,0)"><path data-c="1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"></path></g></g></g></svg></mjx-container>，P为真，则Q为真</li>
 <li>反绎（溯因/反向）推理：已知<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="7.008ex" height="2.032ex" role="img" focusable="false" viewBox="0 -704 3097.6 898"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mo" transform="translate(1028.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2306.6,0)"><path data-c="1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"></path></g></g></g></svg></mjx-container>，Q为真，则P为真</li>
@@ -6150,7 +6150,7 @@
   </entry>
   <entry>
     <title>4-集成学习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/9ebce654/</url>
+    <url>/posts/9ebce654/</url>
     <content><![CDATA[<p>与树学习有很多联系</p>
 <h1 id="1-原理"><a href="#1-原理" class="headerlink" title="1. 原理"></a>1. 原理</h1><p>三个臭皮匠，顶个诸葛亮</p>
 <ul>
@@ -6346,7 +6346,7 @@
   </entry>
   <entry>
     <title>5-概率与学习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/ec1919e/</url>
+    <url>/posts/ec1919e/</url>
     <content><![CDATA[<h1 id="1-符号与术语"><a href="#1-符号与术语" class="headerlink" title="1. 符号与术语"></a>1. 符号与术语</h1><ul>
 <li>标量scalar: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="5.777ex" height="1.636ex" role="img" focusable="false" viewBox="0 -683 2553.6 723"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(849.8,0)"><path data-c="2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"></path></g><g data-mml-node="mi" transform="translate(1794.6,0)"><path data-c="1D445" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"></path></g></g></g></svg></mjx-container></li>
 <li>向量vector: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="26.639ex" height="2.37ex" role="img" focusable="false" viewBox="0 -853.7 11774.3 1047.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mtext"><path data-c="1D431" d="M227 0Q212 3 121 3Q40 3 28 0H21V62H117L245 213L109 382H26V444H34Q49 441 143 441Q247 441 265 444H274V382H246L281 339Q315 297 316 297Q320 297 354 341L389 382H352V444H360Q375 441 466 441Q547 441 559 444H566V382H471L355 246L504 63L545 62H586V0H578Q563 3 469 3Q365 3 347 0H338V62H366Q366 63 326 112T285 163L198 63L217 62H235V0H227Z"></path></g><g data-mml-node="mo" transform="translate(884.8,0)"><path data-c="2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"></path></g><g data-mml-node="msup" transform="translate(1829.6,0)"><g data-mml-node="mi"><path data-c="1D445" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"></path></g><g data-mml-node="TeXAtom" transform="translate(792,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g></g></g><g data-mml-node="mo" transform="translate(3039.3,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mtext" transform="translate(3483.9,0)"><path data-c="1D431" d="M227 0Q212 3 121 3Q40 3 28 0H21V62H117L245 213L109 382H26V444H34Q49 441 143 441Q247 441 265 444H274V382H246L281 339Q315 297 316 297Q320 297 354 341L389 382H352V444H360Q375 441 466 441Q547 441 559 444H566V382H471L355 246L504 63L545 62H586V0H578Q563 3 469 3Q365 3 347 0H338V62H366Q366 63 326 112T285 163L198 63L217 62H235V0H227Z"></path></g><g data-mml-node="mo" transform="translate(4368.7,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="msup" transform="translate(5424.5,0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mn" transform="translate(605,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mo" transform="translate(1008.6,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="msub" transform="translate(1453.2,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mn" transform="translate(605,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mo" transform="translate(2461.8,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mo" transform="translate(2906.4,0)"><path data-c="2026" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60ZM525 60Q525 84 542 102T585 120Q609 120 627 104T646 61Q646 36 629 18T586 0T543 17T525 60ZM972 60Q972 84 989 102T1032 120Q1056 120 1074 104T1093 61Q1093 36 1076 18T1033 0T990 17T972 60Z"></path></g><g data-mml-node="mo" transform="translate(4245.1,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="msub" transform="translate(4689.8,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mi" transform="translate(605,-150) scale(0.707)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g><g data-mml-node="mi" transform="translate(5802,363) scale(0.707)"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g></g></g></g></svg></mjx-container></li>
@@ -6460,7 +6460,7 @@
   </entry>
   <entry>
     <title>6-支持向量机</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/b6848f7f/</url>
+    <url>/posts/b6848f7f/</url>
     <content><![CDATA[<h1 id="1-回顾"><a href="#1-回顾" class="headerlink" title="1. 回顾"></a>1. 回顾</h1><h2 id="1-1-统计学角度看机器学习"><a href="#1-1-统计学角度看机器学习" class="headerlink" title="1.1. 统计学角度看机器学习"></a>1.1. 统计学角度看机器学习</h2><p>机器学习目的得到映射: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="5.922ex" height="1.62ex" role="img" focusable="false" viewBox="0 -511 2617.6 716"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(849.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2127.6,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></p>
 <ul>
 <li>类先验概率： <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="7.804ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3449.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="mo" transform="translate(503,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(892,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(1659.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(2715.6,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(3060.6,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></li>
@@ -6602,7 +6602,7 @@
   </entry>
   <entry>
     <title>7-神经元</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/97787735/</url>
+    <url>/posts/97787735/</url>
     <content><![CDATA[<h1 id="1-Hebb法则"><a href="#1-Hebb法则" class="headerlink" title="1. Hebb法则"></a>1. Hebb法则</h1><p>连接强度的调整值与输入输出的乘积成正比，经常出现的模式增强神经元的连接</p>
 <h1 id="2-MP神经元模型"><a href="#2-MP神经元模型" class="headerlink" title="2. MP神经元模型"></a>2. MP神经元模型</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F07%2Ffabc679558d840c6d0dd65a0756fd57c_20231107193143.png" alt="image.png"></p>
 <p>输入：X<br>权重：W<br>输出：激活函数<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="23.563ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 10414.9 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(550,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(939,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(1539,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(2005,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mo" transform="translate(2366,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(3032.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(4088.6,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(4638.6,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mo" transform="translate(5027.6,0)"><path data-c="2211" d="M61 748Q64 750 489 750H913L954 640Q965 609 976 579T993 533T999 516H979L959 517Q936 579 886 621T777 682Q724 700 655 705T436 710H319Q183 710 183 709Q186 706 348 484T511 259Q517 250 513 244L490 216Q466 188 420 134T330 27L149 -187Q149 -188 362 -188Q388 -188 436 -188T506 -189Q679 -189 778 -162T936 -43Q946 -27 959 6H999L913 -249L489 -250Q65 -250 62 -248Q56 -246 56 -239Q56 -234 118 -161Q186 -81 245 -11L428 206Q428 207 242 462L57 717L56 728Q56 744 61 748Z"></path></g><g data-mml-node="mo" transform="translate(6083.6,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msub" transform="translate(6472.6,0)"><g data-mml-node="mi"><path data-c="1D464" d="M580 385Q580 406 599 424T641 443Q659 443 674 425T690 368Q690 339 671 253Q656 197 644 161T609 80T554 12T482 -11Q438 -11 404 5T355 48Q354 47 352 44Q311 -11 252 -11Q226 -11 202 -5T155 14T118 53T104 116Q104 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 293 29 315T52 366T96 418T161 441Q204 441 227 416T250 358Q250 340 217 250T184 111Q184 65 205 46T258 26Q301 26 334 87L339 96V119Q339 122 339 128T340 136T341 143T342 152T345 165T348 182T354 206T362 238T373 281Q402 395 406 404Q419 431 449 431Q468 431 475 421T483 402Q483 389 454 274T422 142Q420 131 420 107V100Q420 85 423 71T442 42T487 26Q558 26 600 148Q609 171 620 213T632 273Q632 306 619 325T593 357T580 385Z"></path></g><g data-mml-node="TeXAtom" transform="translate(749,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g><g data-mml-node="mo" transform="translate(7737.7,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="msub" transform="translate(8738,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" transform="translate(605,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g><g data-mml-node="mo" transform="translate(9636.9,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(10025.9,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p>
@@ -6646,7 +6646,7 @@
   </entry>
   <entry>
     <title>8-神经网络</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/c179ff56/</url>
+    <url>/posts/c179ff56/</url>
     <content><![CDATA[<h1 id="1-多层感知机MLP"><a href="#1-多层感知机MLP" class="headerlink" title="1. 多层感知机MLP"></a>1. 多层感知机MLP</h1><p>多了hidden layer</p>
 <h2 id="1-1-为什么需要隐藏层"><a href="#1-1-为什么需要隐藏层" class="headerlink" title="1.1. 为什么需要隐藏层"></a>1.1. 为什么需要隐藏层</h2><p>隐藏层的神经元实际为<strong>特征检测算子</strong>，隐藏层神经元开始逐步发现刻画训练数据的突出特征。</p>
 <h2 id="1-2-反向传播"><a href="#1-2-反向传播" class="headerlink" title="1.2. 反向传播"></a>1.2. 反向传播</h2><ul>
@@ -6740,7 +6740,7 @@
   </entry>
   <entry>
     <title>9-深度学习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/68ad7582/</url>
+    <url>/posts/68ad7582/</url>
     <content><![CDATA[<p>深度学习网络：学习良好的非线性结构</p>
 <ul>
 <li>从模式识别的角度看<ul>
@@ -6813,7 +6813,7 @@
   </entry>
   <entry>
     <title>0-introduction</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/ea84b3/</url>
+    <url>/posts/ea84b3/</url>
     <content><![CDATA[<h1 id="1-问题域-解系统"><a href="#1-问题域-解系统" class="headerlink" title="1. 问题域/解系统"></a>1. 问题域/解系统</h1><ul>
 <li>问题域：实体和状态构成问题解决的基本范围  <ul>
 <li>问题的产生地：<strong>当现实的状况与人们期望的状况产生差距时</strong>，就产生了问题。</li>
@@ -6872,7 +6872,7 @@
   </entry>
   <entry>
     <title>1-商业模式类型-平台、免费</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/529d5eb2/</url>
+    <url>/posts/529d5eb2/</url>
     <content><![CDATA[<h1 id="1-商业模式画布概括"><a href="#1-商业模式画布概括" class="headerlink" title="1. 商业模式画布概括"></a>1. 商业模式画布概括</h1><p>商业模式：一个商业模式描述的是一个组织创造、传递以及获得价值的基本原理。</p>
 <ul>
 <li>从左到右实现价值的构建、主张与传递<ul>
@@ -7093,7 +7093,7 @@
   </entry>
   <entry>
     <title>2-商业模式画布</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/51da8326/</url>
+    <url>/posts/51da8326/</url>
     <content><![CDATA[<h1 id="1-商业模式画布"><a href="#1-商业模式画布" class="headerlink" title="1. 商业模式画布"></a>1. 商业模式画布</h1><ul>
 <li>想要的商业模式模型</li>
 </ul>
@@ -7420,7 +7420,7 @@
   </entry>
   <entry>
     <title>3-商业模式战略-评估商业模式</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/b6a996be/</url>
+    <url>/posts/b6a996be/</url>
     <content><![CDATA[<h1 id="1-为什么要先评估"><a href="#1-为什么要先评估" class="headerlink" title="1. 为什么要先评估"></a>1. 为什么要先评估</h1><ul>
 <li>从商业模式画布的角度重新阐释战略-<strong>战略：产品的设计与运营</strong></li>
 <li>从商业模式<strong>建设性地发问</strong>，从战略角度审视你与友商的商业模式运作的环境</li>
@@ -7602,7 +7602,7 @@
   </entry>
   <entry>
     <title>4-商业模式战略-定期评估商业模式：“年度体验”</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/991913af/</url>
+    <url>/posts/991913af/</url>
     <content><![CDATA[<ul>
 <li><p>一项重要的管理活动，让一个组织评估它的时长时长地位的健康程度，并做出相应的调整</p>
 <ul>
@@ -7851,7 +7851,7 @@
   </entry>
   <entry>
     <title>5-商业模式下的蓝海战略</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/9906ef53/</url>
+    <url>/posts/9906ef53/</url>
     <content><![CDATA[<ul>
 <li>蓝海战略：通过根本性的差异化来创造全新的行业，而不是模仿现有商业模式在当前行业中竞争。<ul>
 <li>隐含<strong>价值主张创新</strong></li>
@@ -7951,7 +7951,7 @@
   </entry>
   <entry>
     <title>6-长尾、拆分、开放商业模式</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/525f2cc9/</url>
+    <url>/posts/525f2cc9/</url>
     <content><![CDATA[<p>极致的客户细分：长尾商业模式</p>
 <h1 id="1-长尾商业模式"><a href="#1-长尾商业模式" class="headerlink" title="1. 长尾商业模式"></a>1. 长尾商业模式</h1><h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><ul>
 <li>专注于多种类型产品销售</li>
@@ -8033,7 +8033,7 @@
   </entry>
   <entry>
     <title>7-客户洞察与构思</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/579a86d7/</url>
+    <url>/posts/579a86d7/</url>
     <content><![CDATA[<h1 id="商业模式设计：工具、方法、思维"><a href="#商业模式设计：工具、方法、思维" class="headerlink" title="商业模式设计：工具、方法、思维"></a>商业模式设计：工具、方法、思维</h1><ul>
 <li><p>挑战思维边界，创造新的选择，为用户创造新的价值</p>
 </li>
@@ -8182,7 +8182,7 @@
   </entry>
   <entry>
     <title>商业模式部分复习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/a8a21419/</url>
+    <url>/posts/a8a21419/</url>
     <content><![CDATA[<ul>
 <li><p>概述：基于给定背景和题目的知识点运用</p>
 </li>
@@ -8337,7 +8337,7 @@
   </entry>
   <entry>
     <title>期末组成</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/eb28109d/</url>
+    <url>/posts/eb28109d/</url>
     <content><![CDATA[<h1 id="商业模式部分期末考核（50分）"><a href="#商业模式部分期末考核（50分）" class="headerlink" title="商业模式部分期末考核（50分）"></a>商业模式部分期末考核（50分）</h1><ul>
 <li><p>概述：基于给定背景和题目的知识点运用</p>
 </li>
@@ -8401,7 +8401,7 @@
   </entry>
   <entry>
     <title>需求部分复习</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/e27123b2/</url>
+    <url>/posts/e27123b2/</url>
     <content><![CDATA[<ul>
 <li>需求获取（30分）<ul>
 <li>需求获取上半段（20分）<ul>
@@ -8641,7 +8641,7 @@
   </entry>
   <entry>
     <title>01_计算机顶层视图</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/c6f8f26e/</url>
+    <url>/posts/c6f8f26e/</url>
     <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
 <li>组织：可见</li>
 <li>结构：不可见<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png" alt="NVIDIA_Share_nwCw64dafh.png"></li>
@@ -8695,7 +8695,7 @@
   </entry>
   <entry>
     <title>02_计算机系统概述</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/75f7a7d2/</url>
+    <url>/posts/75f7a7d2/</url>
     <content><![CDATA[<h1 id="1-什么是计算机"><a href="#1-什么是计算机" class="headerlink" title="1.什么是计算机"></a>1.什么是计算机</h1><p><strong>通用电子数字计算机</strong>：</p>
 <ul>
 <li>通用：不是一种专用设备</li>
@@ -8768,7 +8768,7 @@
   </entry>
   <entry>
     <title>03_数据的机器级表示</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/4480f5fc/</url>
+    <url>/posts/4480f5fc/</url>
     <content><![CDATA[<h1 id="1-信息的二进制编码"><a href="#1-信息的二进制编码" class="headerlink" title="1.信息的二进制编码"></a>1.信息的二进制编码</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_kM0hbupCGD.png" alt="NVIDIA_Share_kM0hbupCGD.png"></p>
 <ul>
 <li><strong>编码</strong>：用少量简单的<font color="#ff0000">基本符号</font>对复杂多样的信息进行一定<font color="#ff0000">规律</font>的组合</li>
@@ -8831,7 +8831,7 @@
   </entry>
   <entry>
     <title>04_数据校验码</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/6a323243/</url>
+    <url>/posts/6a323243/</url>
     <content><![CDATA[<h1 id="1-差错和纠错"><a href="#1-差错和纠错" class="headerlink" title="1.差错和纠错"></a>1.差错和纠错</h1><h2 id="1-1故障的分类"><a href="#1-1故障的分类" class="headerlink" title="1.1故障的分类"></a>1.1故障的分类</h2><ul>
 <li>硬故障（hard failure）：永久性的物理故障</li>
 <li>软故障（soft error）：随机非破坏性事件</li>
@@ -8919,7 +8919,7 @@
   </entry>
   <entry>
     <title>05_整数运算</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/bbb50189/</url>
+    <url>/posts/bbb50189/</url>
     <content><![CDATA[<h1 id="1-算数逻辑单元ALU"><a href="#1-算数逻辑单元ALU" class="headerlink" title="1.算数逻辑单元ALU"></a>1.算数逻辑单元ALU</h1><ul>
 <li>数据由寄存器 (Registers) 提交给ALU，运算结果也存于寄存器</li>
 <li>ALU可能根据运算结果设置一些标志 (Flags)，标志值也保存在处理器内的寄存器中</li>
@@ -9025,7 +9025,7 @@
   </entry>
   <entry>
     <title>06_浮点数运算</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/efe423c2/</url>
+    <url>/posts/efe423c2/</url>
     <content><![CDATA[<p><strong>回顾：</strong>[[03_数据的机器级表示#3.3 IEEE 754标准]]</p>
 <h1 id="1-浮点加减法"><a href="#1-浮点加减法" class="headerlink" title="1.浮点加减法"></a>1.浮点加减法</h1><h2 id="1-1步骤"><a href="#1-1步骤" class="headerlink" title="1.1步骤"></a>1.1步骤</h2><ol>
 <li><p>检查0</p>
@@ -9123,7 +9123,7 @@
   </entry>
   <entry>
     <title>07_二进制编码的十进制数运算</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/fb20164/</url>
+    <url>/posts/fb20164/</url>
     <content><![CDATA[<h1 id="1-加法"><a href="#1-加法" class="headerlink" title="1.加法"></a>1.加法</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/aa14a6ec0dc75fe08c29d86f6be70bd2_38_NVIDIA_GeForce_Overlay_DT.png" alt="38_NVIDIA_GeForce_Overlay_DT.png"><br><strong>调整</strong></p>
 <ul>
 <li>超过16（有进位），个位消耗了16，多消耗了6，要补回去</li>
@@ -9140,7 +9140,7 @@
   </entry>
   <entry>
     <title>08_内部存储器</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/bacc272a/</url>
+    <url>/posts/bacc272a/</url>
     <content><![CDATA[<ul>
 <li>地址：单元的唯一标识符（采用二进制）</li>
 <li>地址空间：可唯一标识的单元总数</li>
@@ -9329,7 +9329,7 @@
   </entry>
   <entry>
     <title>09_高速缓冲存储器（Cache）</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/f00fff12/</url>
+    <url>/posts/f00fff12/</url>
     <content><![CDATA[<h1 id="1-Cache的基本思路"><a href="#1-Cache的基本思路" class="headerlink" title="1.Cache的基本思路"></a>1.Cache的基本思路</h1><ul>
 <li>Cache存放主存的“副本”</li>
 <li>解决内存墙<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/30/75f4ce2335d68f77c1a16c28ea2458a4_49_coa22_%E7%AC%AC9%E8%AE%B2.pdf_%E5%92%8C%E5%8F%A6%E5%A4%96_4_%E4%B8%AA%E9%A1%B5%E9%9D%A2_-_%E4%B8%AA%E4%BA%BA_-_Microsoft%E2%80%8B_Edge.png" alt="49_coa22_第9讲.pdf_和另外_4_个页面_-_个人_-_Microsoft​_Edge.png"></li>
@@ -9494,7 +9494,7 @@
   </entry>
   <entry>
     <title>10_外部存储器</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/9649a834/</url>
+    <url>/posts/9649a834/</url>
     <content><![CDATA[<p>特性</p>
 <ul>
 <li>用于存储不经常使用的、数据量较大的信息</li>
@@ -9712,7 +9712,7 @@
   </entry>
   <entry>
     <title>11_冗余磁盘阵列(RAID)</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/b7ba64ea/</url>
+    <url>/posts/b7ba64ea/</url>
     <content><![CDATA[<ul>
 <li>冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
 <li>基本思想<ul>
@@ -9873,7 +9873,7 @@
   </entry>
   <entry>
     <title>12_虚拟存储器</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/7a95209e/</url>
+    <url>/posts/7a95209e/</url>
     <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
 <h1 id="2-存取器管理"><a href="#2-存取器管理" class="headerlink" title="2.存取器管理"></a>2.存取器管理</h1><p>在多道程序系统中，主存需要进一步划分给<strong>多个任务</strong>，划分的任务由操作系统动态执行。</p>
 <h2 id="2-1-如何将更多任务装进主存"><a href="#2-1-如何将更多任务装进主存" class="headerlink" title="2.1 如何将更多任务装进主存"></a>2.1 如何将更多任务装进主存</h2><ul>
@@ -10044,7 +10044,7 @@
   </entry>
   <entry>
     <title>13_指令系统</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/8793ab50/</url>
+    <url>/posts/8793ab50/</url>
     <content><![CDATA[<h1 id="1-指令"><a href="#1-指令" class="headerlink" title="1. 指令"></a>1. 指令</h1><ul>
 <li>指令是计算机处理的最基本单位<ul>
 <li>操作码（指令执行的内容）+操作数（要操作的对象）</li>
@@ -10552,7 +10552,7 @@
   </entry>
   <entry>
     <title>14_指令周期和指令流水线</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/5ece27c9/</url>
+    <url>/posts/5ece27c9/</url>
     <content><![CDATA[<h1 id="1-指令周期"><a href="#1-指令周期" class="headerlink" title="1. 指令周期"></a>1. 指令周期</h1><p>处理单个指令的过程</p>
 <ul>
 <li>取指周期：从内存中提取一条指令</li>
@@ -10707,7 +10707,7 @@
   </entry>
   <entry>
     <title>15_控制器</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/404b6c10/</url>
+    <url>/posts/404b6c10/</url>
     <content><![CDATA[<h1 id="1-指令周期"><a href="#1-指令周期" class="headerlink" title="1. 指令周期"></a>1. 指令周期</h1><p>处理单个指令的过程</p>
 <ul>
 <li>取指周期：从内存中提取一条指令</li>
@@ -11011,7 +11011,7 @@
   </entry>
   <entry>
     <title>16_总线</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/1badac07/</url>
+    <url>/posts/1badac07/</url>
     <content><![CDATA[<h1 id="1-总线结构"><a href="#1-总线结构" class="headerlink" title="1. 总线结构"></a>1. 总线结构</h1><ul>
 <li>数据线：在系统组件之间传输数据<ul>
 <li>数据线的数量决定了一次可以传输的数据的大小</li>
@@ -11286,7 +11286,7 @@
   </entry>
   <entry>
     <title>17_输入输出</title>
-    <url>/chillcharlie357/chillcharlie357.github.io/posts/5f35f2c1/</url>
+    <url>/posts/5f35f2c1/</url>
     <content><![CDATA[<h1 id="1-外围设备"><a href="#1-外围设备" class="headerlink" title="1. 外围设备"></a>1. 外围设备</h1><p>输入/输出操作通过连接到输入输出模块的各种外部设备完成， 这些外部设备提供了在外部环境和计算机系统之间的数据交 换，通常被称为<strong>外围设备（peripheral device</strong>），简称为外设 （peripheral）</p>
 <ul>
 <li>为什么<strong>不能</strong>把外设直接连接到系统总线上？<ul>
