@@ -7,8 +7,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 10-消息中间件(ActiveMQ、RabbitMQ)
-date: '2023-11-16 18:11'
-modified: '2023-12-31 17:12'
+date: 2023-12-28 21:18
+modified: 2024-01-02 19:13
 abbrlink: b48e71af
 aliases:
 sticky:
@@ -29,7 +29,7 @@ cover:
 
 - Java Message Service
 	- Jms规定了ConnectionFactory、Connection、Session等接口/类
-- JMS是一个Java标准，使用消息代理（message broker）的同意API
+- JMS是一个Java标准，使用消息代理（message broker）的统一API
 - JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持
 
 # 3. ActiveMQ Artemis
