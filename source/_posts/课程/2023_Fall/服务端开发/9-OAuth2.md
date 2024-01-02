@@ -58,7 +58,7 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 3. 授权服务器向用户索取用户名密码
 4. 用户名密码匹配，则授权服务器请求用户授权
 5. **授权服务器给客户端程序返回code**，重定向回到应用程序
-	- **code需要经过浏览器**
+	- **这里的code是和重定向URI一起返回给浏览器的，所以不安全**
 	- 授权服务器返回的是重定向url+code
 6. **客户端应用程序用code向授权服务器索取token**
 	- 用code交换token，可能包含访问令牌（access token）和更新令牌（refresh token）
