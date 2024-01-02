@@ -7,8 +7,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 11-Spring Inergration
-date: '2023-12-28 21:18'
-modified: '2023-12-29 10:11'
+date: 2023-12-28 21:18
+modified: 2024-01-02 19:42
 abbrlink: b564c0a
 aliases:
 sticky:
@@ -125,7 +125,8 @@ RendezvousChannel
 
 ## 3.7. Gateways
 
-只需要写一个接口
+只需要写一个接口。  
+Gateways 是**应用程序代码和消息系统之间的桥梁**。它们抽象了消息发送和接收的细节，使得应用程序代码可以通过方法调用的方式与消息系统交互，而无需直接使用消息API。这样可以使应用程序代码保持简洁，同时也便于测试。
 
 - 单向网关
 - 双向网关
@@ -135,6 +136,9 @@ RendezvousChannel
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F20-12-01-e1f7a60e7156af19a94a54aaa98aec8c-20231123201200-615caa.png)
 
 ## 3.8. Channel adapters
+
+Adapters 则是用于将**消息从一种格式转换为另一种格式**，或者从一种传输协议转换为另一种传输协议。Inbound把外部系统的消息格式转为spring integration消息，outbound把spring integration消息转为外部系统消息。  
+例如，JMS适配器可以将JMS消息转换为Spring Integration通用消息，HTTP适配器可以将HTTP请求和响应转换为Spring Integration消息。
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F20-14-53-3423606ae480b57609abc38987c77384-20231123201453-e17b91.png)
 
