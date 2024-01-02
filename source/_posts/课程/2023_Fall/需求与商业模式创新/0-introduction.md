@@ -7,9 +7,8 @@ excerpt: false
 mathjax: true
 comment: true
 title: 0-introduction
-date: '2023-12-18 17:58'
-modified: '2023-12-29 10:07'
-abbrlink: ea84b3
+date: 2023-12-18 17:58
+modified: 2024-01-02 15:36
 aliases:
 sticky:
 thumbnail:

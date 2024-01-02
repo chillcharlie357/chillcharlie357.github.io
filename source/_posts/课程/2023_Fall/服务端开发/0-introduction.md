@@ -7,12 +7,11 @@ excerpt: false
 mathjax: true
 comment: true
 title: 0-introduction
-date: '2023-12-28 21:18'
-modified: '2023-12-29 10:11'
-abbrlink: ea84b3
-aliases:
-sticky:
-thumbnail:
+date: 2023-12-28 21:18
+modified: 2024-01-02 15:36
+aliases: 
+sticky: 
+thumbnail: 
 cover:
 ---
 
