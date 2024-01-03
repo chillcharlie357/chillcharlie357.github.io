@@ -4548,129 +4548,6 @@
       </tags>
   </entry>
   <entry>
-    <title>7-配置属性</title>
-    <url>/posts/c75c265a/</url>
-    <content><![CDATA[<h1 id="1-属性来源👍"><a href="#1-属性来源👍" class="headerlink" title="1. 属性来源👍"></a>1. 属性来源👍</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
-<ol>
-<li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
-<li><code>server.port = 8090</code></li>
-</ul>
-</li>
-<li><strong>命令行参数</strong><code>commandLineArgs</code>，在程序中直接获取<ul>
-<li><code>java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar -- server.port=8081</code></li>
-</ul>
-</li>
-<li><strong>JVM系统参数</strong> <code>-D</code><ul>
-<li><code>java -Dserver.port=8091 -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
-</ul>
-</li>
-<li><strong>操作系统环境变量</strong><ul>
-<li><code>set SERVER_PORT=8082、java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
-</ul>
-</li>
-</ol>
-<h1 id="2-YAML文件"><a href="#2-YAML文件" class="headerlink" title="2. YAML文件"></a>2. YAML文件</h1><ul>
-<li>使用缩进表示层级关系，不允许使用Tab建，<strong>只能使用空格</strong>(一般2个空格)</li>
-<li># 表示注释</li>
-<li>对象：键值对，使用冒号结构表示<ul>
-<li>冒号后面加空格</li>
-<li><code>animal: pets</code></li>
-<li><code>hash: {name: Steve, foo: bar}</code></li>
-</ul>
-</li>
-<li>一般数组：一组连线开头的行，构成一个数组</li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Cat</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Dog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Goldfish</span></span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li>行内数组：<code>animal: [Cat, Dog]</code></li>
-</ul>
-<h1 id="3-配置数据源"><a href="#3-配置数据源" class="headerlink" title="3. 配置数据源"></a>3. 配置数据源</h1><ul>
-<li>org.h2.Driver</li>
-<li>com.mysql.cj.jdbc.Driver</li>
-</ul>
-<p>不一定要在application.yaml里显式指定，只添加对应依赖spring也能识别</p>
-<h1 id="4-建立HTTPS安全通道"><a href="#4-建立HTTPS安全通道" class="headerlink" title="4. 建立HTTPS安全通道"></a>4. 建立HTTPS安全通道</h1><ul>
-<li>解决客户端和服务端传输数据时的加密问题<ul>
-<li>HTTP明文传输数据，不安全</li>
-<li>TLS/SSL具有身份认证、信息加密和完整性校验</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F609986015a78cfd18e72b154942d8f25_20231026200319.png" alt="image.png"></p>
-<p><strong>SSL(Secure Sockets Layer 安全套接字协议 )<strong>，及其继任者</strong>传输层安全（Transport Layer Security ， TLS）</strong> 是为网络通信提供安全及数据完整性的一种安全协议。TLS 与SSL在传输层与应用层之间对网 络连接进行加密。</p>
-<h2 id="4-1-单向认证"><a href="#4-1-单向认证" class="headerlink" title="4.1. 单向认证"></a>4.1. 单向认证</h2><ul>
-<li>客户端校验服务端证书的合法性，服务端不需要校验客户端</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fb843eb927502da6e44df35255de08531_20231026200909.png" alt="image.png"></p>
-<h2 id="4-2-双向认证"><a href="#4-2-双向认证" class="headerlink" title="4.2. 双向认证"></a>4.2. 双向认证</h2><ul>
-<li>客户端要校验服务端，服务端要校验客户端的证书</li>
-</ul>
-<p>相对复杂</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fc877b90370c978ce90e18d403f7c8f2f_20231026201330.png" alt="image.png"></p>
-<h1 id="5-keytool"><a href="#5-keytool" class="headerlink" title="5. keytool"></a>5. keytool</h1><ul>
-<li>是JDK自带的一个密钥库管理工具，我们可以用它生产密钥库、管理证书</li>
-</ul>
-<h1 id="6-从配置属性获取值-自定义属性"><a href="#6-从配置属性获取值-自定义属性" class="headerlink" title="6. 从配置属性获取值/自定义属性"></a>6. 从配置属性获取值/自定义属性</h1><p><code>@ConfigurationProperties(prefix=&lt;&gt;)</code>从<code>yaml</code>中加载属性值</p>
-<p>通过application.yml文件提供值<br>环境变量：taco_orders_pageSize=12<br>程序参数：–taco.orders.pageSize=13<br>访问：<a class="link" href="http://localhost:8080/orders">http://localhost:8080/orders <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="7-多个Profile文件"><a href="#7-多个Profile文件" class="headerlink" title="7. 多个Profile文件"></a>7. 多个Profile文件</h1><h2 id="7-1-命名规则"><a href="#7-1-命名规则" class="headerlink" title="7.1. 命名规则"></a>7.1. 命名规则</h2><p>Profile文件命名有固定规则</p>
-<ul>
-<li>定义特定profile的属性，通过使用不同的YAML或属性文件  <ul>
-<li>application-{profile名}.properties  </li>
-<li>application-{profile名}.yml</li>
-</ul>
-</li>
-<li>也可以将不同profile属性放到同一个YAML文件中，使用3个短线进行分隔，并且使用spring.profiles属性来命名profile</li>
-</ul>
-<h2 id="7-2-激活Profile"><a href="#7-2-激活Profile" class="headerlink" title="7.2. 激活Profile"></a>7.2. 激活Profile</h2><ul>
-<li>环境变量：spring_profiles_active=prod</li>
-<li>命令行参数：java -jar &lt;&gt;.jar –spring.profiles.active=prod</li>
-<li>JVM系统属性：java -Dspring.profiles.active=prod -jar &lt;&gt;.jar</li>
-<li>使用注解<code>@Profile</code>条<strong>件化地创建Bean</strong>，可以加到<code>@Configuration</code>或<code>@Bean</code>上<ul>
-<li>场景：测试环境下初始化数据库填充测试数据，但是在生产环境下不能乱初始化</li>
-</ul>
-</li>
-</ul>
-<h1 id="8-配置日志"><a href="#8-配置日志" class="headerlink" title="8. 配置日志"></a>8. 配置日志</h1><ul>
-<li>默认Logback,配置文件logback.xml</li>
-<li>默认日志级别: INFO</li>
-<li>日志配置(application.yml)<ul>
-<li>可以根据不同包路径设置不同日志级别</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">root:</span> <span class="string">WARN</span></span><br><span class="line">    <span class="attr">org:</span></span><br><span class="line">      <span class="attr">Springframework:</span></span><br><span class="line">	    <span class="attr">security:</span> <span class="string">DEBUG</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="9-Actuator👍"><a href="#9-Actuator👍" class="headerlink" title="9. Actuator👍"></a>9. Actuator👍</h1><ul>
-<li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
-<li>/actuator，查询所有暴露端点</li>
-<li><strong>/actuator/configprops</strong>，查询配置属性</li>
-<li>/actuator/health，健康检查</li>
-<li>/actuator/beans，包含bean依赖关系</li>
-</ul>
-</li>
-<li>想要获得更多端点如何配置：<code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">"*"</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="10-分布式系统配置数据的获取"><a href="#10-分布式系统配置数据的获取" class="headerlink" title="10. 分布式系统配置数据的获取"></a>10. 分布式系统配置数据的获取</h1><ul>
-<li>配置服务： Config Server<ul>
-<li>给所有微服务提供配置数据</li>
-<li>配置可能来自文件系统，git仓库等</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F16-29-03-ac42f08cd7916e48e1cfabe5ef89772e-20231231162903-1ef9fd.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5-Spring Data MongoDB、Redis</title>
     <url>/posts/c56b76c9/</url>
     <content><![CDATA[<h1 id="1-MongoDB"><a href="#1-MongoDB" class="headerlink" title="1. MongoDB"></a>1. MongoDB</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1. 介绍"></a>1.1. 介绍</h2><p>文档数据库，存储类Json文件。<br>可以分布式存储。</p>
@@ -4818,6 +4695,129 @@
 <li>指定Value使用<code>Jackson2JsonRedisSerializer</code>进行序列化</li>
 </ol>
 <p>对数据存取操作的代码没有影响。<br><font color="#c00000">可读性更好。 </font><br>直接使用<strong>RedisTemplate</strong>获取的Value会经过反序列化，仍然为Java对象<br>如果想要获取String，可以使用<strong>StringRedisTemplate</strong>读取Value。</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>7-配置属性</title>
+    <url>/posts/c75c265a/</url>
+    <content><![CDATA[<h1 id="1-属性来源👍"><a href="#1-属性来源👍" class="headerlink" title="1. 属性来源👍"></a>1. 属性来源👍</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
+<ol>
+<li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
+<li><code>server.port = 8090</code></li>
+</ul>
+</li>
+<li><strong>命令行参数</strong><code>commandLineArgs</code>，在程序中直接获取<ul>
+<li><code>java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar -- server.port=8081</code></li>
+</ul>
+</li>
+<li><strong>JVM系统参数</strong> <code>-D</code><ul>
+<li><code>java -Dserver.port=8091 -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
+</ul>
+</li>
+<li><strong>操作系统环境变量</strong><ul>
+<li><code>set SERVER_PORT=8082、java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
+</ul>
+</li>
+</ol>
+<h1 id="2-YAML文件"><a href="#2-YAML文件" class="headerlink" title="2. YAML文件"></a>2. YAML文件</h1><ul>
+<li>使用缩进表示层级关系，不允许使用Tab建，<strong>只能使用空格</strong>(一般2个空格)</li>
+<li># 表示注释</li>
+<li>对象：键值对，使用冒号结构表示<ul>
+<li>冒号后面加空格</li>
+<li><code>animal: pets</code></li>
+<li><code>hash: {name: Steve, foo: bar}</code></li>
+</ul>
+</li>
+<li>一般数组：一组连线开头的行，构成一个数组</li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Cat</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Dog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Goldfish</span></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>行内数组：<code>animal: [Cat, Dog]</code></li>
+</ul>
+<h1 id="3-配置数据源"><a href="#3-配置数据源" class="headerlink" title="3. 配置数据源"></a>3. 配置数据源</h1><ul>
+<li>org.h2.Driver</li>
+<li>com.mysql.cj.jdbc.Driver</li>
+</ul>
+<p>不一定要在application.yaml里显式指定，只添加对应依赖spring也能识别</p>
+<h1 id="4-建立HTTPS安全通道"><a href="#4-建立HTTPS安全通道" class="headerlink" title="4. 建立HTTPS安全通道"></a>4. 建立HTTPS安全通道</h1><ul>
+<li>解决客户端和服务端传输数据时的加密问题<ul>
+<li>HTTP明文传输数据，不安全</li>
+<li>TLS/SSL具有身份认证、信息加密和完整性校验</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F609986015a78cfd18e72b154942d8f25_20231026200319.png" alt="image.png"></p>
+<p><strong>SSL(Secure Sockets Layer 安全套接字协议 )<strong>，及其继任者</strong>传输层安全（Transport Layer Security ， TLS）</strong> 是为网络通信提供安全及数据完整性的一种安全协议。TLS 与SSL在传输层与应用层之间对网 络连接进行加密。</p>
+<h2 id="4-1-单向认证"><a href="#4-1-单向认证" class="headerlink" title="4.1. 单向认证"></a>4.1. 单向认证</h2><ul>
+<li>客户端校验服务端证书的合法性，服务端不需要校验客户端</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fb843eb927502da6e44df35255de08531_20231026200909.png" alt="image.png"></p>
+<h2 id="4-2-双向认证"><a href="#4-2-双向认证" class="headerlink" title="4.2. 双向认证"></a>4.2. 双向认证</h2><ul>
+<li>客户端要校验服务端，服务端要校验客户端的证书</li>
+</ul>
+<p>相对复杂</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fc877b90370c978ce90e18d403f7c8f2f_20231026201330.png" alt="image.png"></p>
+<h1 id="5-keytool"><a href="#5-keytool" class="headerlink" title="5. keytool"></a>5. keytool</h1><ul>
+<li>是JDK自带的一个密钥库管理工具，我们可以用它生产密钥库、管理证书</li>
+</ul>
+<h1 id="6-从配置属性获取值-自定义属性"><a href="#6-从配置属性获取值-自定义属性" class="headerlink" title="6. 从配置属性获取值/自定义属性"></a>6. 从配置属性获取值/自定义属性</h1><p><code>@ConfigurationProperties(prefix=&lt;&gt;)</code>从<code>yaml</code>中加载属性值</p>
+<p>通过application.yml文件提供值<br>环境变量：taco_orders_pageSize=12<br>程序参数：–taco.orders.pageSize=13<br>访问：<a class="link" href="http://localhost:8080/orders">http://localhost:8080/orders <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="7-多个Profile文件"><a href="#7-多个Profile文件" class="headerlink" title="7. 多个Profile文件"></a>7. 多个Profile文件</h1><h2 id="7-1-命名规则"><a href="#7-1-命名规则" class="headerlink" title="7.1. 命名规则"></a>7.1. 命名规则</h2><p>Profile文件命名有固定规则</p>
+<ul>
+<li>定义特定profile的属性，通过使用不同的YAML或属性文件  <ul>
+<li>application-{profile名}.properties  </li>
+<li>application-{profile名}.yml</li>
+</ul>
+</li>
+<li>也可以将不同profile属性放到同一个YAML文件中，使用3个短线进行分隔，并且使用spring.profiles属性来命名profile</li>
+</ul>
+<h2 id="7-2-激活Profile"><a href="#7-2-激活Profile" class="headerlink" title="7.2. 激活Profile"></a>7.2. 激活Profile</h2><ul>
+<li>环境变量：spring_profiles_active=prod</li>
+<li>命令行参数：java -jar &lt;&gt;.jar –spring.profiles.active=prod</li>
+<li>JVM系统属性：java -Dspring.profiles.active=prod -jar &lt;&gt;.jar</li>
+<li>使用注解<code>@Profile</code>条<strong>件化地创建Bean</strong>，可以加到<code>@Configuration</code>或<code>@Bean</code>上<ul>
+<li>场景：测试环境下初始化数据库填充测试数据，但是在生产环境下不能乱初始化</li>
+</ul>
+</li>
+</ul>
+<h1 id="8-配置日志"><a href="#8-配置日志" class="headerlink" title="8. 配置日志"></a>8. 配置日志</h1><ul>
+<li>默认Logback,配置文件logback.xml</li>
+<li>默认日志级别: INFO</li>
+<li>日志配置(application.yml)<ul>
+<li>可以根据不同包路径设置不同日志级别</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">root:</span> <span class="string">WARN</span></span><br><span class="line">    <span class="attr">org:</span></span><br><span class="line">      <span class="attr">Springframework:</span></span><br><span class="line">	    <span class="attr">security:</span> <span class="string">DEBUG</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="9-Actuator👍"><a href="#9-Actuator👍" class="headerlink" title="9. Actuator👍"></a>9. Actuator👍</h1><ul>
+<li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
+<li>/actuator，查询所有暴露端点</li>
+<li><strong>/actuator/configprops</strong>，查询配置属性</li>
+<li>/actuator/health，健康检查</li>
+<li>/actuator/beans，包含bean依赖关系</li>
+</ul>
+</li>
+<li>想要获得更多端点如何配置：<code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">"*"</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="10-分布式系统配置数据的获取"><a href="#10-分布式系统配置数据的获取" class="headerlink" title="10. 分布式系统配置数据的获取"></a>10. 分布式系统配置数据的获取</h1><ul>
+<li>配置服务： Config Server<ul>
+<li>给所有微服务提供配置数据</li>
+<li>配置可能来自文件系统，git仓库等</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F16-29-03-ac42f08cd7916e48e1cfabe5ef89772e-20231231162903-1ef9fd.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -8384,6 +8384,7 @@
 <h2 id="3-5-分拆商业模式"><a href="#3-5-分拆商业模式" class="headerlink" title="3.5. 分拆商业模式"></a>3.5. 分拆商业模式</h2><ul>
 <li>定义：将企业从事的活动分为三种不同类型，客户关系管理，新产品开发以及基础设施管理。这三种类型可能共存于同一家企业中，但理想情况下，它们各自存在于相互独立的实体中以避免冲突或不必要的消长。</li>
 </ul>
+<h2 id="3-6-总结"><a href="#3-6-总结" class="headerlink" title="3.6. 总结"></a>3.6. 总结</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F24%2F20-22-43-8d955f97fd26df785a3ff6fa5a22e6c5-20231224202243-7fce94.png" alt="image.png"></p>
 <h1 id="4-商业模式设计（6选1）"><a href="#4-商业模式设计（6选1）" class="headerlink" title="4. 商业模式设计（6选1）"></a>4. 商业模式设计（6选1）</h1><ol>
 <li>客户洞察<ul>
 <li>客户视角是指导性原则</li>
@@ -8393,7 +8394,7 @@
 </li>
 <li>构思<ul>
 <li>步骤：产生大量商业模式创意，对创意进行整合并挑选</li>
-<li>焦点：客户 财政 资源 供给 多点</li>
+<li>创新焦点：客户驱动，财政驱动，资源驱动，供给驱动，多点驱动</li>
 <li>团队流程： 团队构建， 钻研， 开拓， 甄选，构建商业模型</li>
 </ul>
 </li>
@@ -8424,27 +8425,26 @@
 </ol>
 <p>讲故事和场景都是商业模式设计中的重要工具，它们各自有着不同的侧重点和应用场景。讲故事主要是为了更好地传达和解释新的商业模式，而场景则是为了更深入地理解和应用商业模式。</p>
 <h1 id="5-商业模式评估（4选1）"><a href="#5-商业模式评估（4选1）" class="headerlink" title="5. 商业模式评估（4选1）"></a>5. 商业模式评估（4选1）</h1><ol>
-<li><p>外部环境评估</p>
-<ul>
+<li>外部环境评估<ul>
 <li>市场影响力：市场问题 市场分类 切换成本 市场需求 收入影响力</li>
 <li>行业影响力：现在的竞争对手 新的竞争对手 供应商和价值链上的其他厂商 有可以替代的产品 利益相关者</li>
 <li>关键趋势：技术趋势 行业管理趋势 经济趋势 社会文化趋势</li>
 <li>宏观经济：资本市场 全球市场 大宗商品 经济基础设施</li>
 </ul>
 </li>
-<li><p>总体评估</p>
+<li>总体评估<ul>
+<li>针对画布各个模块分析加分项和减分项</li>
+</ul>
 </li>
-<li><p>SWOT</p>
-<ul>
-<li>价值主张，用户界面，基础设施，成本收入</li>
+<li>SWOT<ul>
+<li>四个评估角度：价值主张，用户界面，基础设施，成本收入</li>
 <li>SW 优势劣势</li>
 <li>O 机遇</li>
 <li>T 威胁</li>
 </ul>
 </li>
-<li><p>蓝海战略</p>
-<ul>
-<li>三个方向：价值主张 成本创新 客户创新</li>
+<li>蓝海战略<ul>
+<li>三个方向：探索价值主张，探索成本影响，探索对客户的影响</li>
 <li>四项基本行动：提升 削减 创造 删除</li>
 </ul>
 </li>
@@ -8456,6 +8456,7 @@
       <tags>
         <tag>课程</tag>
         <tag>2023_Fall_需求与商业模式创新</tag>
+        <tag>ikuang</tag>
       </tags>
   </entry>
   <entry>
@@ -8553,8 +8554,21 @@
 </ul>
 </li>
 </ul>
-<h1 id="1-需求获取"><a href="#1-需求获取" class="headerlink" title="1. 需求获取"></a>1. 需求获取</h1><h2 id="1-1-上半场"><a href="#1-1-上半场" class="headerlink" title="1.1. 上半场"></a>1.1. 上半场</h2><p>确定获取的内容主题</p>
-<h3 id="1-1-1-确定项目前景与范围-–-目标模型"><a href="#1-1-1-确定项目前景与范围-–-目标模型" class="headerlink" title="1.1.1. 确定项目前景与范围 – 目标模型"></a>1.1.1. 确定项目前景与范围 – 目标模型</h3><ul>
+<h1 id="1-需求分类"><a href="#1-需求分类" class="headerlink" title="1. 需求分类"></a>1. 需求分类</h1><ol>
+<li>功能需求<ul>
+<li>业务需求：系统建立的战略出发点，高层次目标，描述解决方案和系统特性。</li>
+<li>用户需求：用户对系统能完成的具体任务的期望，描述系统能帮用户做什么。</li>
+<li>系统需求：用户对系统行为的期望，一系列系统行为能帮助用户完成任务，满足业务需求。</li>
+</ul>
+</li>
+<li>性能需求：速度，容量，吞吐量，负载，实时性</li>
+<li>质量需求：功能性，可移植性，可维护性，效率，可用性，可靠性</li>
+<li>对外接口：软硬件接口，用户界面，通信接口</li>
+<li>约束：系统开发及运行的环境，问题域内的相关标准，商业准则，法律法规，社会性因素</li>
+<li>其他：安装需求，培训需求，数据内容，数据信息</li>
+</ol>
+<h1 id="2-需求获取"><a href="#2-需求获取" class="headerlink" title="2. 需求获取"></a>2. 需求获取</h1><h2 id="2-1-上半场"><a href="#2-1-上半场" class="headerlink" title="2.1. 上半场"></a>2.1. 上半场</h2><p>确定获取的内容主题</p>
+<h3 id="2-1-1-确定项目前景与范围-–-目标模型"><a href="#2-1-1-确定项目前景与范围-–-目标模型" class="headerlink" title="2.1.1. 确定项目前景与范围 – 目标模型"></a>2.1.1. 确定项目前景与范围 – 目标模型</h3><ul>
 <li><p>目标模型的关系</p>
 <ol>
 <li><strong>精化</strong>(Refinement)关系<ul>
@@ -8562,20 +8576,16 @@
 <li>OR：任一子目标都是目标的替代方案，关系画白圈</li>
 </ul>
 </li>
-<li><strong>阻碍</strong>(Obstruction)关系</li>
+<li><strong>阻碍</strong>(Obstruction)关系<ul>
+<li>可以继续and,or</li>
+</ul>
+</li>
 <li><strong>支持与冲突</strong>(Support/Conflict)关系<ul>
 <li>Support链接表示一个目标对其他目标的<strong>支持促进</strong>作用，支持关系可以被处理为<strong>OR精化关系</strong></li>
-<li>Conflict链接表示一个目标的实现对其他目标的实现有<strong>阻碍</strong>作用。在关系上画X</li>
+<li>Conflict链接表示一个目标的实现对其他目标的实现有<strong>阻碍</strong>作用。<strong>在关系上画X</strong></li>
 </ul>
 </li>
 </ol>
-</li>
-<li><p>软目标，硬目标</p>
-<ul>
-<li>能否利用技术手段确认是否满足</li>
-<li>软目标：主观，难量化</li>
-<li>硬目标：具体，可量化</li>
-</ul>
 </li>
 <li><p>目标模型做法</p>
 <ol>
@@ -8603,7 +8613,7 @@
 </li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F21-28-16-b827409729b9137df84dba4ed9d6c55b-20231231212815-ab4885.png" alt="image.png"></p>
-<h3 id="1-1-2-涉众分析"><a href="#1-1-2-涉众分析" class="headerlink" title="1.1.2. 涉众分析"></a>1.1.2. 涉众分析</h3><ul>
+<h3 id="2-1-2-涉众分析"><a href="#2-1-2-涉众分析" class="headerlink" title="2.1.2. 涉众分析"></a>2.1.2. 涉众分析</h3><ul>
 <li><p>涉众stakeholder：所有能够影响软件系统的实现，或者会被实现后的软件系统所影响的，<font color="#c00000">关键个人和团体</font></p>
 </li>
 <li><p>过程</p>
@@ -8634,7 +8644,28 @@
 </li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F09-02-42-2df333875e704153d24d553d49b07d59-20240101090241-80c8fa.png" alt="image.png"></p>
-<h3 id="1-1-3-涉众共赢之Stakeholder-Issue模型"><a href="#1-1-3-涉众共赢之Stakeholder-Issue模型" class="headerlink" title="1.1.3. 涉众共赢之Stakeholder-Issue模型"></a>1.1.3. 涉众共赢之Stakeholder-Issue模型</h3><p>列出系统所有的受众，明确描述他们的兴趣和对系统的期望，发现背后的共同问题<strong>Issue</strong>。如果某个涉众类别对一个Issue存在兴趣，那这个关系就是一个<strong>Stakeholder-Issue关系</strong>。</p>
+<ul>
+<li>Power-interest图：优先级评估<ol>
+<li>参与者：系统的实际使用者，对系统最终成功有较大影响力，收到系统较大影响，<strong>优先级最高</strong>。</li>
+<li>环境设定者：很少使用系统，但是由于政治、经济等因素对系统有比较大的影响，优先级次之，最常见的是政府和管理者。</li>
+<li>被影响者：可能是系统直接使用者，也可能是因为系统出现被剥夺了部分利益的输家，受影响大，能影响少，优先级一般低于环境设定者，但是特殊情况下也可能高于环境设定者。</li>
+<li>观众：不受影响，也不影响，优先级最低，比如环境专家和市场力量。</li>
+</ol>
+</li>
+<li>Power/Attitude图：风险评估<ol>
+<li>强反对者是需要重点分析的。</li>
+<li>涉众的关注点和兴趣去向也是重要内容，一般环境设定者是项目高风险因素。</li>
+<li>对于高风险的涉众类别，要尽可能澄清各个涉众类别的角色和职责，发现项目对他们的依赖和假设条件，分析实际情况与预期不一致时可能出现的风险，并提前化解。</li>
+</ol>
+</li>
+<li>化解涉众风险<ol>
+<li>一方面提高环境设定者对系统的关注，转化为参与者</li>
+<li>一方面消除强反对者的反对原因，变为强支持者</li>
+<li>给予被影响者一些发表和实现自身意见的权利，缓解忧虑</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-1-3-涉众共赢之Stakeholder-Issue模型"><a href="#2-1-3-涉众共赢之Stakeholder-Issue模型" class="headerlink" title="2.1.3. 涉众共赢之Stakeholder-Issue模型"></a>2.1.3. 涉众共赢之Stakeholder-Issue模型</h3><p>列出系统所有的受众，明确描述他们的兴趣和对系统的期望，发现背后的共同问题<strong>Issue</strong>。如果某个涉众类别对一个Issue存在兴趣，那这个关系就是一个<strong>Stakeholder-Issue关系</strong>。</p>
 <p>共赢分析：</p>
 <ol>
 <li>某个Stakeholder-Issue关系上所寄予的期望与<strong>项目的业务需求</strong>无法保持一致，那么它关联的涉众就在该Issue的问题上和<strong>项目整体目标存在冲突</strong><ul>
@@ -8643,23 +8674,24 @@
 </ul>
 </li>
 <li>Stakeholder/Issue关系图中某个Issue所关联的不同关系标识有互相冲突的期望，那么就意味着它所关联的<strong>涉众在该Issue上存在需求冲突</strong><ul>
-<li>分析个冲突方成为赢家的条件</li>
+<li>分析各个冲突方成为赢家的条件</li>
 <li>适当的调整，化解冲突</li>
 <li>分析项目在该Issue上的目标、约束和可选方案，并提供给冲突方进行权衡，促进他们之间协商解决</li>
 </ul>
 </li>
 </ol>
-<h2 id="1-2-下半场"><a href="#1-2-下半场" class="headerlink" title="1.2. 下半场"></a>1.2. 下半场</h2><p>设计具体的应用环境和场景条件，由用户根据细节业务的执行来描述问题、表达期望</p>
-<h3 id="1-2-1-面谈、原型、观察三大获取手段的联系与区别"><a href="#1-2-1-面谈、原型、观察三大获取手段的联系与区别" class="headerlink" title="1.2.1. 面谈、原型、观察三大获取手段的联系与区别"></a>1.2.1. 面谈、原型、观察三大获取手段的联系与区别</h3><ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F02%2F16-03-05-059c866ff566bc5e0dba26a72f34e30b-20240102160304-fac1f8.png" alt="image.png"></p>
+<h2 id="2-2-下半场"><a href="#2-2-下半场" class="headerlink" title="2.2. 下半场"></a>2.2. 下半场</h2><p>设计具体的应用环境和场景条件，由用户根据细节业务的执行来描述问题、表达期望</p>
+<h3 id="2-2-1-面谈、原型、观察三大获取手段的联系与区别"><a href="#2-2-1-面谈、原型、观察三大获取手段的联系与区别" class="headerlink" title="2.2.1. 面谈、原型、观察三大获取手段的联系与区别"></a>2.2.1. 面谈、原型、观察三大获取手段的联系与区别</h3><ul>
 <li>联系：都是需求获取的方法</li>
-<li>区别：<ul>
+<li>区别：<ol>
 <li>面谈可以获取用户的直接反馈和需求</li>
 <li>原型可以让用户直观看到需求工程师的设计思路，并通过用户的反馈调整和。原型可以用来消除不确定性。</li>
 <li>观察可以让需求工程师更深入地理解用户在实际环境中的需求。应用于用户无法完成主动的信息告知的情况下。</li>
-</ul>
+</ol>
 </li>
 </ul>
-<h3 id="1-2-2-面谈问题的设计"><a href="#1-2-2-面谈问题的设计" class="headerlink" title="1.2.2. 面谈问题的设计"></a>1.2.2. 面谈问题的设计</h3><ol>
+<h3 id="2-2-2-面谈问题的设计"><a href="#2-2-2-面谈问题的设计" class="headerlink" title="2.2.2. 面谈问题的设计"></a>2.2.2. 面谈问题的设计</h3><ol>
 <li>开放式问题：回答不受限制</li>
 <li>封闭式问题：（受限制）程序性提示</li>
 <li>探究式问题 <ul>
@@ -8686,14 +8718,14 @@
 </ul>
 </li>
 </ol>
-<h1 id="2-需求分析"><a href="#2-需求分析" class="headerlink" title="2. 需求分析"></a>2. 需求分析</h1><h2 id="2-1-基本任务"><a href="#2-1-基本任务" class="headerlink" title="2.1. 基本任务"></a>2.1. 基本任务</h2><ol>
-<li>建立分析模型<ul>
+<h1 id="3-需求分析"><a href="#3-需求分析" class="headerlink" title="3. 需求分析"></a>3. 需求分析</h1><h2 id="3-1-基本任务"><a href="#3-1-基本任务" class="headerlink" title="3.1. 基本任务"></a>3.1. 基本任务</h2><ol>
+<li>建立分析模型，达成开发者和用户对需求的共同理解<ul>
 <li>将复杂的系统分解成为简单的部分以及它们之间的联系，确定本质特征</li>
 <li>和用户达成对信息内容的共同理解</li>
 <li>分析的活动主要包括识别、定义和结构化，它的目的是获取某个可以转换为知识的事物的信息</li>
 </ul>
 </li>
-<li>建立解决方案<ul>
+<li>依据共同理解，发挥创造性，建立解决方案<ul>
 <li>将一个问题分解成独立的、更简单和易于管理的子问题来帮助寻找解决方案</li>
 <li>创建解决方案的过程是创造性的</li>
 <li>帮助开发者建立问题的定义，并确定被定义的事物之间的逻辑关系</li>
@@ -8701,7 +8733,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="2-2-需求分析活动"><a href="#2-2-需求分析活动" class="headerlink" title="2.2. 需求分析活动"></a>2.2. 需求分析活动</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F10-15-15-b1ea8e4aaa788275de931e733c7ff18f-20240101101514-66f916.png" alt="image.png"></p>
+<h2 id="3-2-需求分析活动"><a href="#3-2-需求分析活动" class="headerlink" title="3.2. 需求分析活动"></a>3.2. 需求分析活动</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F10-15-15-b1ea8e4aaa788275de931e733c7ff18f-20240101101514-66f916.png" alt="image.png"></p>
 <ul>
 <li>需求细化：防止开发者各自假设造成的不一致</li>
 <li>确定需求优先级：<ul>
@@ -8712,41 +8744,55 @@
 <li>需求协商：开发人员内部，明确冲突的因素、解决空间和解决方案</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F10-21-07-9af6ddf87255b6d0447fdf8ca3f3ea9d-20240101102106-22ebef.png" alt="image.png"></p>
-<h1 id="3-需求验证与管理"><a href="#3-需求验证与管理" class="headerlink" title="3. 需求验证与管理"></a>3. 需求验证与管理</h1><p>需求验证是专指在需求规格说明完成之后，对需求规格说明文档进行的验证活动</p>
-<h2 id="3-1-需求验证基本活动"><a href="#3-1-需求验证基本活动" class="headerlink" title="3.1. 需求验证基本活动"></a>3.1. 需求验证基本活动</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F10-36-16-5f9bab4fd1aefa57ec716571f60edba9-20240101103615-64ac0b.png" alt="image.png"></p>
+<h1 id="4-需求验证与管理"><a href="#4-需求验证与管理" class="headerlink" title="4. 需求验证与管理"></a>4. 需求验证与管理</h1><p>需求验证是专指在需求规格说明完成之后，对需求规格说明文档进行的验证活动</p>
+<h2 id="4-1-需求验证基本活动"><a href="#4-1-需求验证基本活动" class="headerlink" title="4.1. 需求验证基本活动"></a>4.1. 需求验证基本活动</h2><ul>
+<li>验证流程：</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F10-36-16-5f9bab4fd1aefa57ec716571f60edba9-20240101103615-64ac0b.png" alt="image.png"></p>
 <ul>
-<li>验证普遍存在<ol>
-<li>获得的用户需求是否正确和充分的支持业务需求？ </li>
-<li>建立的分析模型是否正确的反映了问题域特性和需求？ 细化的系统需求是否充分和正确的支持用户需求？ </li>
-<li>需求规格说明文档是否组织良好、书写正确？需求规格 说明文档内的需求是否充分和正确的反映了涉众的意图？ 需求规格说明文档是否可以作为后续开发工作（设计、 实现、测试等等）的基础？</li>
-</ol>
-</li>
 <li>需求验证方法<ol>
 <li><font color="#c00000">评审</font>  </li>
 <li><font color="#c00000">原型与模拟</font>  </li>
 <li>开发测试用例  </li>
-<li>用户手册编制  </li>
+<li>用户手册编制 </li>
 <li>利用跟踪关系  </li>
-<li><del>自动化分析</del></li>
+<li><em>自动化分析</em></li>
 </ol>
 </li>
 </ul>
-<h2 id="3-2-需求管理任务与活动"><a href="#3-2-需求管理任务与活动" class="headerlink" title="3.2. 需求管理任务与活动"></a>3.2. 需求管理任务与活动</h2><ol>
-<li>交流涉众需要什么；</li>
-<li>将需求应用、实施到解决方案；</li>
-<li>驱动设计和实现工作；</li>
-<li>控制变更；</li>
-<li>将需求分配到子系统；</li>
-<li>测试和验证最终产品；</li>
-<li>控制迭代式开发中的变化；</li>
-<li>辅助项目管理</li>
+<h2 id="4-2-需求管理任务与活动"><a href="#4-2-需求管理任务与活动" class="headerlink" title="4.2. 需求管理任务与活动"></a>4.2. 需求管理任务与活动</h2><ul>
+<li>任务：<ol>
+<li>维护需求基线</li>
+<li>实现需求跟踪</li>
+<li>控制变更</li>
 </ol>
+</li>
+<li>活动：<ol>
+<li>交流涉众需要什么；</li>
+<li>驱动设计和实现工作；</li>
+<li>测试和验证最终产品；</li>
+<li>辅助项目管理</li>
+<li>将需求应用、实施到解决方案；</li>
+<li>将需求分配到子系统；</li>
+<li>控制变更；</li>
+<li>控制迭代式开发中的变化；</li>
+</ol>
+</li>
+</ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F21-41-59-75eebd931d884713c95d54bed8236100-20240101214158-7283f2.png" alt="image.png"></p>
-<h2 id="3-3-需求变更控制过程"><a href="#3-3-需求变更控制过程" class="headerlink" title="3.3. 需求变更控制过程"></a>3.3. 需求变更控制过程</h2><p>以可控、一致的方式进行需求基线中需求的变更处理，包括对变化的评估、协调、批准或拒绝、实现和验证。</p>
+<h2 id="4-3-需求变更控制过程"><a href="#4-3-需求变更控制过程" class="headerlink" title="4.3. 需求变更控制过程"></a>4.3. 需求变更控制过程</h2><p>以可控、一致的方式进行需求基线中需求的变更处理，包括对变化的评估、协调、批准或拒绝、实现和验证。</p>
+<ol>
+<li>提请者：提出需求变更</li>
+<li>接收者：接受需求变更</li>
+<li>评估者：进行变更评估，<strong>产生需求变更表单</strong></li>
+<li>变更控制委员会：变更决策，<strong>决定变更/拒绝变更</strong></li>
+<li>修改者：执行变更</li>
+<li>验证者：验证变更</li>
+</ol>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F21-46-48-01272090eaf64bdf514213ba56577415-20240101214647-f691a3.png" alt="image.png"></p>
-<h2 id="3-4-需求变更组织"><a href="#3-4-需求变更组织" class="headerlink" title="3.4. 需求变更组织"></a>3.4. 需求变更组织</h2><p>变更控制委员会（CCB）</p>
+<h2 id="4-4-需求变更组织"><a href="#4-4-需求变更组织" class="headerlink" title="4.4. 需求变更组织"></a>4.4. 需求变更组织</h2><p>变更控制委员会（CCB）:评价需求的变更，做出批准或者拒绝变化的决定，并确保已批准变化的实现。</p>
 <p>人员可能来自：项目或程序管理部门； 产品管理或者需求分析部门； 开发部门； 测试或者质量保障部门；配置管理部门</p>
-<h2 id="3-5-需求变更注意事项"><a href="#3-5-需求变更注意事项" class="headerlink" title="3.5. 需求变更注意事项"></a>3.5. 需求变更注意事项</h2><ol>
+<h2 id="4-5-需求变更注意事项"><a href="#4-5-需求变更注意事项" class="headerlink" title="4.5. 需求变更注意事项"></a>4.5. 需求变更注意事项</h2><ol>
 <li>认识到变更的必要性，并为之制定计划  </li>
 <li>维护需求基线，审计变更记录</li>
 <li>管理范围蔓延</li>
