@@ -69,7 +69,7 @@ global:
     percentage: true # percentage
   # Website counter
   website_counter:
-    url: https://busuanzi.icodeq.com/busuanzi.pure.mini.js # counter API URL (no need to change)
+    url: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # counter API URL (no need to change)
     enable: true # enable website counter or not
     site_pv: true # site page view
     site_uv: true # site unique visitor
@@ -396,7 +396,7 @@ inject:
 plugins:
   # RSS feed. Requires hexo-generator-feed (npm i hexo-generator-feed). See https://github.com/hexojs/hexo-generator-feed
   feed:
-    enable: false # Whether to enable
+    enable: true # Whether to enable
   # Aplayer. See https://github.com/DIYgod/APlayer
   aplayer:
     enable: false # Whether to enable
