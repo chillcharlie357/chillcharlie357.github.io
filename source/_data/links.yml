@@ -9,7 +9,7 @@
   - name: Nboxff's Blog
     link: https://nboxff.cn/
     description: 记录学习，记录生活
-    avatar: 
+    avatar: https://quas-modo.github.io/images/avatar.jpg
   - name: spricoder
     link: https://spricoder.github.io/categories/
     description:  软院期末指定复习资料（
@@ -26,4 +26,8 @@
     link: https://chendingya.github.io/
     description: Asimov's Blog
     avatar: https://chendingya.github.io/pic/avatar.png
+  - name: danie
+    link: https://daniel020605.github.io/
+    description:  daniel020605
+    avatar: https://daniel020605.github.io/img/head.webp
  
