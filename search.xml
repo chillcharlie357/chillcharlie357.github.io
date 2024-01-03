@@ -1248,26 +1248,37 @@
     <title>3-评估的基础知识</title>
     <url>/posts/55aec671/</url>
     <content><![CDATA[<h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><ul>
+<li>为什么要评估？<ul>
+<li>用户不仅期望一个可用的系统，还在追求愉悦感与参与感 <ul>
+<li>用户体验首先要满足客户的确切需求，其次是让用户舒心和愉快</li>
+</ul>
+</li>
+<li>对企业而言，好的设计有很大卖点；设计师可以专注于真实问题和不同用户群体的需求，而非与人们对喜爱与厌恶之处进行辩论</li>
+</ul>
+</li>
 <li>什么是评估？<ul>
 <li><strong>系统化的数据搜集过程，对交互性能的测试</strong></li>
-<li>目的是了解用户或用户组在特定环境中，使用产品执行特定任务的情况<ul>
+<li><font color="#c00000">目的</font>：是了解用户或用户组在特定环境中，使用产品执行特定任务的情况<ul>
 <li>例如，用户能否找到特定的菜单项？图像是否有用，是否吸引人？产品是否引人入胜？</li>
 </ul>
 </li>
 <li>邀请用户进行评估的目的不是设法理解用户，而是评估特定用户在一个特定的环境背景中如何使用一个系统来执行一个特定的任务。</li>
 </ul>
 </li>
+<li>评估对象：原型、可运行系统、特定屏幕功能、完整工作流程、审美设计、安全性等等</li>
+<li>在哪里评估？<ul>
+<li>取决于评估对象</li>
+<li>实验室环境：提供了必要条件系统地检查产品是否满足用户的所有要求，如测试手机的按键大小和布局</li>
+<li>实地环境：如小孩子是否喜欢一个玩具</li>
+</ul>
+</li>
+<li>何时开展评估？<ul>
+<li>如果研发新产品，则会投入大量时间做市场调研和建立需求，之后会设计草图/故事图板，可以通过评估检查是否正确理解了用户的需求，这被称作“形成性评估”，目的是调整和完善设计</li>
+<li>评估已完成产品成功与否被称作“总结性评估”，目的是确定产品需要改进的方面</li>
+</ul>
+</li>
 </ul>
 <p><font color="#c00000">mental model</font>：人会根据已有的经验和知识假设使用方式</p>
-<ul>
-<li>为什么要评估<ul>
-<li>用户不仅期望一个可用的系统，还在追求愉悦感与参与感<ul>
-<li>用户体验首先要满足用户的确切体验，其次是让用户舒心和愉快</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <h1 id="2-评估原则"><a href="#2-评估原则" class="headerlink" title="2. 评估原则"></a>2. 评估原则</h1><ol>
 <li>评估应该依赖于产品的用户：与专业技术人员的水平和技术无关</li>
 <li>评估与设计应结合进行：仅靠用户最后对产品的一两次评估，是不能全面反映出软件可用性的</li>
@@ -1301,51 +1312,100 @@
 <li>包括用户出错次数、完成任务的时间等</li>
 </ul>
 </li>
-<li>基本特征：<ul>
+<li>基本特征：<ol>
 <li>是在评估人员密切控制下实现的</li>
 <li>专门可用性实验室</li>
-</ul>
+</ol>
 </li>
 <li>主要任务<ul>
 <li><strong>量化</strong>表示用户的执行情况</li>
 </ul>
 </li>
-<li>缺点<ul>
+<li>缺点<ol>
 <li>测试用户的数量通常较少</li>
 <li>不合适进行细致的统计分析</li>
-</ul>
+</ol>
 </li>
 </ul>
 <h2 id="3-3-实地研究-Field-Study"><a href="#3-3-实地研究-Field-Study" class="headerlink" title="3.3. 实地研究 Field Study"></a>3.3. 实地研究 Field Study</h2><ul>
 <li>基本特征：在自然工作环境中进行</li>
 <li>目的：理解用户的实际工作情况以及技术对他们的影响</li>
-<li>作用<ul>
+<li>作用<ol>
 <li>探索新技术的应用契机</li>
 <li>确定产品的需求</li>
 <li>促进技术的引入</li>
 <li>评估技术的应用</li>
-</ul>
+</ol>
 </li>
-<li>重难点<ul>
+<li>重难点<ol>
 <li>如何不对受试者造成影响</li>
 <li>控制权在用户，很难预测即将发生和出现的情况</li>
-</ul>
+</ol>
 </li>
 </ul>
 <h2 id="3-4-预测性评估"><a href="#3-4-预测性评估" class="headerlink" title="3.4. 预测性评估"></a>3.4. 预测性评估</h2><ul>
-<li>研究人员能通过想象或对界面的使用过程进行建模<ul>
+<li><p>研究人员能通过想象或对界面的使用过程进行建模</p>
+<ol>
 <li><strong>启发式评估</strong>：启发式专家“角色扮演”，评估产品</li>
 <li>模型法：用于比较相同应用不同界面的原型法，如使用Fitts定律</li>
 <li>走查法：逐步通过场景或基于问题回答，类似Code Review</li>
-</ul>
+</ol>
 </li>
-<li>基本特征：<ul>
+<li><p>基本特征：</p>
+<ol>
 <li>用户可以不在场</li>
 <li>整个过程快速、成本较低</li>
-</ul>
+</ol>
+</li>
+<li><p><font color="#c00000">启发式评估的步骤</font></p>
+<ol>
+<li>彻底检查界⾯</li>
+<li>将界⾯与启发式规则进⾏对⽐</li>
+<li>列举可⽤性问题</li>
+<li>应⽤启发式规则对每⼀个问题进⾏解释与确认</li>
+</ol>
 </li>
 </ul>
-<h1 id="4-区分评估技术的因素"><a href="#4-区分评估技术的因素" class="headerlink" title="4. 区分评估技术的因素"></a>4. 区分评估技术的因素</h1><ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F20-41-57-38c051ab596db0f8f8c5b7339758a243-20240101204157-dca1a7.png" alt="image.png"></p>
+<h1 id="4-评估技术"><a href="#4-评估技术" class="headerlink" title="4. 评估技术"></a>4. 评估技术</h1><ol>
+<li>观察⽤户<ul>
+<li>有助于确定新产品的需求</li>
+<li>可⽤于评估原型</li>
+<li>挑战：如何在不⼲扰⽤户的前提下观察⽤户，如何分析⼤量数据</li>
+</ul>
+</li>
+<li>询问⽤户意⻅<ul>
+<li>简单</li>
+</ul>
+</li>
+<li>询问专家意⻅<ul>
+<li>“⻆⾊扮演”⽅式</li>
+<li>专家会提出解决⽅案</li>
+</ul>
+</li>
+<li>用户测试<ul>
+<li>可⽐较不同设计⽅案优劣</li>
+<li>通常在受控环境中进⾏</li>
+</ul>
+</li>
+<li>基于模型和理论，预测界⾯的有效性<ul>
+<li>如GOMS模型和KLM模型</li>
+</ul>
+</li>
+</ol>
+<h1 id="5-评估范型和评估技术的关系"><a href="#5-评估范型和评估技术的关系" class="headerlink" title="5. 评估范型和评估技术的关系"></a>5. 评估范型和评估技术的关系</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F01%2F20-43-27-2c7e903968bd8a0d86ef339431a6dffd-20240101204327-498e3c.png" alt="image.png"></p>
+<h1 id="6-评估方法"><a href="#6-评估方法" class="headerlink" title="6. 评估方法"></a>6. 评估方法</h1><ol>
+<li>启发式评估</li>
+<li>边做边说</li>
+<li>观察</li>
+<li>问卷调查</li>
+<li>访谈</li>
+<li>焦点小组</li>
+<li>可用性测试</li>
+<li>交互记录和用户反馈</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F03%2F17-18-00-bb5e948b7aec8d976382251b4a899543-0a0003d19860950729143d737831948-c14a88.jpg" alt="0a0003d19860950729143d737831948.jpg"></p>
+<h1 id="7-区分评估技术的因素"><a href="#7-区分评估技术的因素" class="headerlink" title="7. 区分评估技术的因素"></a>7. 区分评估技术的因素</h1><ol>
 <li>评估在周期中位置<ul>
 <li>设计早期阶段评估更快速、便宜</li>
 </ul>
@@ -1485,6 +1545,8 @@
 </ol>
 </li>
 </ul>
+<h2 id="3-1-减小疲劳和学习影响"><a href="#3-1-减小疲劳和学习影响" class="headerlink" title="3.1. 减小疲劳和学习影响"></a>3.1. 减小疲劳和学习影响</h2><p>假设有4种实验条件“ABCD”和4个测试用户“甲乙丙丁”，如何应 用拉丁方设计实验过程，尽量减小学习和疲劳的影响</p>
+<p>左边有三个都是BC任务连在一起，如果B很累或者BC有学习效应就会对实验数据造成影响。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F02%2F11-28-00-0184dd9e49ffc8ac54f8082059f47c3a-20240102112800-ec64f7.png" alt="image.png"></p>
 <h1 id="4-实验结构"><a href="#4-实验结构" class="headerlink" title="4. 实验结构"></a>4. 实验结构</h1><ul>
 <li>实验中要研究多少自变量？<ul>
 <li>基本设计 or 析因设计</li>
@@ -1549,7 +1611,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="6-多自变量的实验"><a href="#6-多自变量的实验" class="headerlink" title="6. 多自变量的实验"></a>6. 多自变量的实验</h1><h2 id="析因设计-Factorial-Design"><a href="#析因设计-Factorial-Design" class="headerlink" title="析因设计 Factorial Design"></a>析因设计 Factorial Design</h2><ul>
+<h1 id="6-多自变量的实验"><a href="#6-多自变量的实验" class="headerlink" title="6. 多自变量的实验"></a>6. 多自变量的实验</h1><h2 id="6-1-析因设计-Factorial-Design"><a href="#6-1-析因设计-Factorial-Design" class="headerlink" title="6.1. 析因设计 Factorial Design"></a>6.1. 析因设计 Factorial Design</h2><ul>
 <li><strong>优点</strong>：允许在一个实验中研究两个或两个以上自变量之间的相互作用的影响</li>
 <li>相互作用可以被描述为“一个自变量对因变量的不同影响，取决于另一个自变量的特定取值”</li>
 <li>析因设计中条件的数量由自变量的总数和每个自变量的取值决定</li>
@@ -1557,7 +1619,7 @@
 <p>举例：比较使用三种类型键盘(QWERTY键盘、DVORAK键盘和字母键盘)时的打字速度，且调查不同的任务(写作和抄写)对打字速度的影响。</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-38-80c0c6ba4faee72ea0da3341882db425-20231229110137-3fd385.png" alt="image.png"></p>
 <p>条件数： <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="5.028ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 2222.4 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(722.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(1722.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></svg></mjx-container></p>
-<h2 id="裂区设计split-plot-design"><a href="#裂区设计split-plot-design" class="headerlink" title="裂区设计split-plot design"></a>裂区设计split-plot design</h2><p>析因研究中的一种设计，既有组间成分，也有组内成分。</p>
+<h2 id="6-2-裂区设计split-plot-design"><a href="#6-2-裂区设计split-plot-design" class="headerlink" title="6.2. 裂区设计split-plot design"></a>6.2. 裂区设计split-plot design</h2><p>析因研究中的一种设计，既有组间成分，也有组内成分。</p>
 <p>举例：</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-21-71cba743181699807fe45ed3cc184d3f-20231229110120-4709e9.png" alt="image.png"></p>
 ]]></content>
@@ -1864,7 +1926,6 @@
 </ul>
 </li>
 </ul>
-<p>S</p>
 ]]></content>
       <categories>
         <category>2023_Fall_人机交互</category>
@@ -4371,6 +4432,163 @@
       </tags>
   </entry>
   <entry>
+    <title>5-Spring Data MongoDB、Redis</title>
+    <url>/posts/c56b76c9/</url>
+    <content><![CDATA[<h1 id="1-MongoDB"><a href="#1-MongoDB" class="headerlink" title="1. MongoDB"></a>1. MongoDB</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1. 介绍"></a>1.1. 介绍</h2><p>文档数据库，存储类Json文件。<br>可以分布式存储。</p>
+<table>
+<thead>
+<tr>
+<th>SQL</th>
+<th>MongoDB</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>database</td>
+<td>database</td>
+<td>数据库</td>
+</tr>
+<tr>
+<td>table</td>
+<td>collection</td>
+<td>数据库表/集合</td>
+</tr>
+<tr>
+<td>row</td>
+<td>document</td>
+<td>数据库记录行/文档</td>
+</tr>
+<tr>
+<td>column</td>
+<td>field</td>
+<td>数据字段/域</td>
+</tr>
+</tbody></table>
+<p>数据库document可以直接包含子document（在关系型数据库中只能创建子表），不同的document包含字段可能不一样。</p>
+<h2 id="1-2-使用"><a href="#1-2-使用" class="headerlink" title="1.2. 使用"></a>1.2. 使用</h2><ul>
+<li>Id为String，mongoDB会自动生成</li>
+<li>可以使用mongdb-shell交互</li>
+</ul>
+<h2 id="1-3-Spring-Data-MongoDB👍"><a href="#1-3-Spring-Data-MongoDB👍" class="headerlink" title="1.3. Spring Data MongoDB👍"></a>1.3. Spring Data MongoDB👍</h2><p>业务代码不需要修改</p>
+<h3 id="1-3-1-定义存储库"><a href="#1-3-1-定义存储库" class="headerlink" title="1.3.1. 定义存储库"></a>1.3.1. 定义存储库</h3><p>继承<code>CrudRepository&lt;&gt;</code>接口</p>
+<h3 id="1-3-2-领域类"><a href="#1-3-2-领域类" class="headerlink" title="1.3.2. 领域类"></a>1.3.2. 领域类</h3><ol>
+<li>领域类加<code>@Document</code><ul>
+<li>Collection默认名：类名，第一个字母改成小写</li>
+</ul>
+</li>
+<li>Id字段加<code>@Id</code>，需要定义为<strong>String</strong>类型<ul>
+<li>因为String类型MongoDB可以自动创建并唯一赋值</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><font color="#ff0000">和关系型数据库主要区别</font><ol>
+<li>List，可以把原来关系型数据库的子表放到同一个Collection里。document可以直接包含子document。</li>
+<li>可能会导致重复存储，但可以通过加索引等方法解决</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-4-在Spring中配置"><a href="#1-4-在Spring中配置" class="headerlink" title="1.4. 在Spring中配置"></a>1.4. 在Spring中配置</h2><p>在Appication配置文件中指定</p>
+<p><code>spring.data.mongodb.url=&lt;url&gt;</code></p>
+<h2 id="1-5-性能对比"><a href="#1-5-性能对比" class="headerlink" title="1.5. 性能对比"></a>1.5. 性能对比</h2><ul>
+<li>批量插入数据<ul>
+<li>直接从client插入</li>
+<li>Spring Data Mongodb插入</li>
+</ul>
+</li>
+</ul>
+<p>Spring插入时会自动创建一个<code>_class</code>字段</p>
+<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-介绍👍"><a href="#2-1-介绍👍" class="headerlink" title="2.1. 介绍👍"></a>2.1. 介绍👍</h2><ul>
+<li>分布式存储</li>
+<li>内存数据库，存在内存里，常用于作<strong>缓存</strong></li>
+<li>可以持久化，但不太重要，不是主要用途</li>
+<li>可以集群式部署<ul>
+<li><font color="#c00000">主从复制</font>，主机写，从机并发读</li>
+</ul>
+</li>
+<li><font color="#c00000">key-value的Hash表结构，区分大小写</font></li>
+</ul>
+<h2 id="2-2-Redis命令"><a href="#2-2-Redis命令" class="headerlink" title="2.2. Redis命令"></a>2.2. Redis命令</h2><p>可以设置key的存活时长<br>默认创建16个数据库</p>
+<p>flushdb：deletes the keys in a database<br>flushall：deletes all keys in all databases</p>
+<h2 id="2-3-Redis数据类型👍"><a href="#2-3-Redis数据类型👍" class="headerlink" title="2.3. Redis数据类型👍"></a>2.3. Redis数据类型👍</h2><p>指的是<strong>value类型</strong></p>
+<ol>
+<li>String</li>
+<li>List</li>
+<li>Hash</li>
+<li>Set</li>
+<li>……</li>
+</ol>
+<p>在cilent内：<br><code>type</code>查看value类型<br><code>lrang mylist 0 -1</code>：查看list内容<br><code>lpush</code>,<code>rpush</code>插入数据<br><code>sadd mysqet 1 2 3 4</code>：add set<br><code>smember myset</code>：查看set内容</p>
+<h2 id="2-4-Redis客户端"><a href="#2-4-Redis客户端" class="headerlink" title="2.4. Redis客户端"></a>2.4. Redis客户端</h2><ul>
+<li>Jedis：早期Spring集成</li>
+<li>Lettuce：目前Spring采用的客户端</li>
+</ul>
+<h2 id="2-5-Spring-Data-Redis"><a href="#2-5-Spring-Data-Redis" class="headerlink" title="2.5. Spring Data Redis"></a>2.5. Spring Data Redis</h2><ul>
+<li><p><strong>RedisConnectionFactory接口</strong></p>
+<ul>
+<li>Spring Boot会自动创建，直接注入即可。</li>
+<li>连接需要提供Redis Server的地址、端口、用户和密码等信息<ul>
+<li>这些信息在Application文件配置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>通过<code>RedisTemplate</code>模板对象访问Redis</strong></p>
+<ul>
+<li>RedisTemplate&lt;Key,Value&gt;</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> RedisTemplate&lt;String, Product&gt; <span class="title function_">redisTemplate</span><span class="params">(RedisConnectionFactory cf)</span>{</span><br><span class="line">	RedisTemplate&lt;String,Product&gt; redis = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>();</span><br><span class="line">	redis.setFactory(cf);</span><br><span class="line">	<span class="keyword">return</span> redis;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>RedisTemplate的子API: 对应不同的value类型<ul>
+<li>使用简单的值： opForValue()</li>
+<li>lIst类型的值：opForList()<ul>
+<li>rigjtPush, leftPop(), range</li>
+</ul>
+</li>
+<li>Set上的操作: opForSet()<ul>
+<li>add, union,</li>
+</ul>
+</li>
+<li>绑定到某个key上<ul>
+<li>BoudListOperations绑定key，不需要每个操作都写一遍</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BoudListOperations</span> <span class="variable">cart</span> <span class="operator">=</span> redisTemplate.boundListOp(<span class="string">''</span>cart<span class="string">")</span></span><br></pre></td></tr></table></figure></div>
+
+<p><a class="link" href="https://potoyang.gitbook.io/spring-in-action-v4/untitled-6/untitled-1/12.3.2-shi-yong-redis-template">12.3.2　使用 Redis Template - Spring 实战(第四版) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="2-6-序列化👍"><a href="#2-6-序列化👍" class="headerlink" title="2.6. 序列化👍"></a>2.6. 序列化👍</h2><p><font color="#c00000">mongodb没有这个要求，因为它会把所有值都转成json串</font>。<br>redis默认使用JDK序列化，但JSON序列化更常用。</p>
+<h3 id="2-6-1-JDK序列化"><a href="#2-6-1-JDK序列化" class="headerlink" title="2.6.1. JDK序列化"></a>2.6.1. JDK序列化</h3><ul>
+<li>存储java对象需要序列化<ul>
+<li>即持久化</li>
+</ul>
+</li>
+<li><strong>必须需要实现<code>Serializable</code>接口</strong></li>
+<li>把java对象通过key-value读出来，反序列化</li>
+</ul>
+<p>做得很失败，性能也不好</p>
+<h3 id="2-6-2-JSON序列化"><a href="#2-6-2-JSON序列化" class="headerlink" title="2.6.2. JSON序列化"></a>2.6.2. JSON序列化</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">redis.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>())</span><br><span class="line">redis.setVAlueSerializer(<span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;Product.class&gt;)</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>Key比较简单，可以直接用String序列化</li>
+<li>指定Value使用<code>Jackson2JsonRedisSerializer</code>进行序列化</li>
+</ol>
+<p>对数据存取操作的代码没有影响。<br><font color="#c00000">可读性更好。 </font><br>直接使用<strong>RedisTemplate</strong>获取的Value会经过反序列化，仍然为Java对象<br>如果想要获取String，可以使用<strong>StringRedisTemplate</strong>读取Value。</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>6-Spring Security</title>
     <url>/posts/b9233e24/</url>
     <content><![CDATA[<ul>
@@ -4539,163 +4757,6 @@
 <li>安全上下文获取</li>
 </ol>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">Authentication</span> <span class="variable">authentication</span> <span class="operator">=</span> SecurityContextHolder.getContext().getAuthentication(); <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> (User) authentication.getPrincipal();</span><br></pre></td></tr></table></figure></div>]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>5-Spring Data MongoDB、Redis</title>
-    <url>/posts/c56b76c9/</url>
-    <content><![CDATA[<h1 id="1-MongoDB"><a href="#1-MongoDB" class="headerlink" title="1. MongoDB"></a>1. MongoDB</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1. 介绍"></a>1.1. 介绍</h2><p>文档数据库，存储类Json文件。<br>可以分布式存储。</p>
-<table>
-<thead>
-<tr>
-<th>SQL</th>
-<th>MongoDB</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>database</td>
-<td>database</td>
-<td>数据库</td>
-</tr>
-<tr>
-<td>table</td>
-<td>collection</td>
-<td>数据库表/集合</td>
-</tr>
-<tr>
-<td>row</td>
-<td>document</td>
-<td>数据库记录行/文档</td>
-</tr>
-<tr>
-<td>column</td>
-<td>field</td>
-<td>数据字段/域</td>
-</tr>
-</tbody></table>
-<p>数据库document可以直接包含子document（在关系型数据库中只能创建子表），不同的document包含字段可能不一样。</p>
-<h2 id="1-2-使用"><a href="#1-2-使用" class="headerlink" title="1.2. 使用"></a>1.2. 使用</h2><ul>
-<li>Id为String，mongoDB会自动生成</li>
-<li>可以使用mongdb-shell交互</li>
-</ul>
-<h2 id="1-3-Spring-Data-MongoDB👍"><a href="#1-3-Spring-Data-MongoDB👍" class="headerlink" title="1.3. Spring Data MongoDB👍"></a>1.3. Spring Data MongoDB👍</h2><p>业务代码不需要修改</p>
-<h3 id="1-3-1-定义存储库"><a href="#1-3-1-定义存储库" class="headerlink" title="1.3.1. 定义存储库"></a>1.3.1. 定义存储库</h3><p>继承<code>CrudRepository&lt;&gt;</code>接口</p>
-<h3 id="1-3-2-领域类"><a href="#1-3-2-领域类" class="headerlink" title="1.3.2. 领域类"></a>1.3.2. 领域类</h3><ol>
-<li>领域类加<code>@Document</code><ul>
-<li>Collection默认名：类名，第一个字母改成小写</li>
-</ul>
-</li>
-<li>Id字段加<code>@Id</code>，需要定义为<strong>String</strong>类型<ul>
-<li>因为String类型MongoDB可以自动创建并唯一赋值</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><font color="#ff0000">和关系型数据库主要区别</font><ol>
-<li>List，可以把原来关系型数据库的子表放到同一个Collection里。document可以直接包含子document。</li>
-<li>可能会导致重复存储，但可以通过加索引等方法解决</li>
-</ol>
-</li>
-</ul>
-<h2 id="1-4-在Spring中配置"><a href="#1-4-在Spring中配置" class="headerlink" title="1.4. 在Spring中配置"></a>1.4. 在Spring中配置</h2><p>在Appication配置文件中指定</p>
-<p><code>spring.data.mongodb.url=&lt;url&gt;</code></p>
-<h2 id="1-5-性能对比"><a href="#1-5-性能对比" class="headerlink" title="1.5. 性能对比"></a>1.5. 性能对比</h2><ul>
-<li>批量插入数据<ul>
-<li>直接从client插入</li>
-<li>Spring Data Mongodb插入</li>
-</ul>
-</li>
-</ul>
-<p>Spring插入时会自动创建一个<code>_class</code>字段</p>
-<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-介绍👍"><a href="#2-1-介绍👍" class="headerlink" title="2.1. 介绍👍"></a>2.1. 介绍👍</h2><ul>
-<li>分布式存储</li>
-<li>内存数据库，存在内存里，常用于作<strong>缓存</strong></li>
-<li>可以持久化，但不太重要，不是主要用途</li>
-<li>可以集群式部署<ul>
-<li><font color="#c00000">主从复制</font>，主机写，从机并发读</li>
-</ul>
-</li>
-<li><font color="#c00000">key-value的Hash表结构，区分大小写</font></li>
-</ul>
-<h2 id="2-2-Redis命令"><a href="#2-2-Redis命令" class="headerlink" title="2.2. Redis命令"></a>2.2. Redis命令</h2><p>可以设置key的存活时长<br>默认创建16个数据库</p>
-<p>flushdb：deletes the keys in a database<br>flushall：deletes all keys in all databases</p>
-<h2 id="2-3-Redis数据类型👍"><a href="#2-3-Redis数据类型👍" class="headerlink" title="2.3. Redis数据类型👍"></a>2.3. Redis数据类型👍</h2><p>指的是<strong>value类型</strong></p>
-<ol>
-<li>String</li>
-<li>List</li>
-<li>Hash</li>
-<li>Set</li>
-<li>……</li>
-</ol>
-<p>在cilent内：<br><code>type</code>查看value类型<br><code>lrang mylist 0 -1</code>：查看list内容<br><code>lpush</code>,<code>rpush</code>插入数据<br><code>sadd mysqet 1 2 3 4</code>：add set<br><code>smember myset</code>：查看set内容</p>
-<h2 id="2-4-Redis客户端"><a href="#2-4-Redis客户端" class="headerlink" title="2.4. Redis客户端"></a>2.4. Redis客户端</h2><ul>
-<li>Jedis：早期Spring集成</li>
-<li>Lettuce：目前Spring采用的客户端</li>
-</ul>
-<h2 id="2-5-Spring-Data-Redis"><a href="#2-5-Spring-Data-Redis" class="headerlink" title="2.5. Spring Data Redis"></a>2.5. Spring Data Redis</h2><ul>
-<li><p><strong>RedisConnectionFactory接口</strong></p>
-<ul>
-<li>Spring Boot会自动创建，直接注入即可。</li>
-<li>连接需要提供Redis Server的地址、端口、用户和密码等信息<ul>
-<li>这些信息在Application文件配置</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>通过<code>RedisTemplate</code>模板对象访问Redis</strong></p>
-<ul>
-<li>RedisTemplate&lt;Key,Value&gt;</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> RedisTemplate&lt;String, Product&gt; <span class="title function_">redisTemplate</span><span class="params">(RedisConnectionFactory cf)</span>{</span><br><span class="line">	RedisTemplate&lt;String,Product&gt; redis = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>();</span><br><span class="line">	redis.setFactory(cf);</span><br><span class="line">	<span class="keyword">return</span> redis;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li>RedisTemplate的子API: 对应不同的value类型<ul>
-<li>使用简单的值： opForValue()</li>
-<li>lIst类型的值：opForList()<ul>
-<li>rigjtPush, leftPop(), range</li>
-</ul>
-</li>
-<li>Set上的操作: opForSet()<ul>
-<li>add, union,</li>
-</ul>
-</li>
-<li>绑定到某个key上<ul>
-<li>BoudListOperations绑定key，不需要每个操作都写一遍</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BoudListOperations</span> <span class="variable">cart</span> <span class="operator">=</span> redisTemplate.boundListOp(<span class="string">''</span>cart<span class="string">")</span></span><br></pre></td></tr></table></figure></div>
-
-<p><a class="link" href="https://potoyang.gitbook.io/spring-in-action-v4/untitled-6/untitled-1/12.3.2-shi-yong-redis-template">12.3.2　使用 Redis Template - Spring 实战(第四版) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="2-6-序列化👍"><a href="#2-6-序列化👍" class="headerlink" title="2.6. 序列化👍"></a>2.6. 序列化👍</h2><p><font color="#c00000">mongodb没有这个要求，因为它会把所有值都转成json串</font>。<br>redis默认使用JDK序列化，但JSON序列化更常用。</p>
-<h3 id="2-6-1-JDK序列化"><a href="#2-6-1-JDK序列化" class="headerlink" title="2.6.1. JDK序列化"></a>2.6.1. JDK序列化</h3><ul>
-<li>存储java对象需要序列化<ul>
-<li>即持久化</li>
-</ul>
-</li>
-<li><strong>必须需要实现<code>Serializable</code>接口</strong></li>
-<li>把java对象通过key-value读出来，反序列化</li>
-</ul>
-<p>做得很失败，性能也不好</p>
-<h3 id="2-6-2-JSON序列化"><a href="#2-6-2-JSON序列化" class="headerlink" title="2.6.2. JSON序列化"></a>2.6.2. JSON序列化</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">redis.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>())</span><br><span class="line">redis.setVAlueSerializer(<span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;Product.class&gt;)</span><br></pre></td></tr></table></figure></div>
-
-<ol>
-<li>Key比较简单，可以直接用String序列化</li>
-<li>指定Value使用<code>Jackson2JsonRedisSerializer</code>进行序列化</li>
-</ol>
-<p>对数据存取操作的代码没有影响。<br><font color="#c00000">可读性更好。 </font><br>直接使用<strong>RedisTemplate</strong>获取的Value会经过反序列化，仍然为Java对象<br>如果想要获取String，可以使用<strong>StringRedisTemplate</strong>读取Value。</p>
-]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
       </categories>
