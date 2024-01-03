@@ -149,18 +149,14 @@ home_banner:
   # Home banner social links
   social_links:
     # Whether to enable
-    enable: false
+    enable: true
     # Social links
     links:
-      github:  # your GitHub URL
-      instagram: # your Instagram URL
-      zhihu:  # your ZhiHu URL
-      twitter:  # your twitter URL
-      email:  # your email
+      github: https://github.com/chillcharlie357  # your GitHub URL
       # ...... # you can add more
     # Social links with QRcode drawers
     qrs:
-      weixin:  # your Wechat QRcode image URL
+      # weixin:  # your Wechat QRcode image URL
       # ...... # you can add more
 # HOME BANNER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
@@ -271,7 +267,7 @@ articles:
     min2read: true # Whether to display reading time
   # Author label
   author_label: 
-    enable: true # Whether to enable
+    enable: false # Whether to enable
     auto: false # Whether to automatically add author label, e.g. Lv1, Lv2, Lv3...
     list: []
   # Code block settings
@@ -286,7 +282,7 @@ articles:
   toc:
     enable: true # Whether to enable TOC
     max_depth: 3 # TOC depth
-    number: false # Whether to add number to TOC automatically
+    number: true # Whether to add number to TOC automatically
     expand: true # Whether to expand TOC
     init_open: true # Open toc by default
   # Whether to enable copyright notice
