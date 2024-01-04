@@ -3209,7 +3209,7 @@
 <ul>
 <li>Publisher：数据发布者</li>
 <li>Subscriber：数据订阅者</li>
-<li>Peocessor：处理器</li>
+<li>Processor：处理器</li>
 <li>Subscription：协调</li>
 </ul>
 <p>处理过程是异步的  </p>
