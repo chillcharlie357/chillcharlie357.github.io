@@ -1,19 +1,18 @@
 ---
+aliases: 
 tags:
   - 2023_Fall_机器学习
   - 课程
 categories: 2023_Fall_机器学习
+sticky:
+thumbnail:
+cover: 
 excerpt: false
 mathjax: true
 comment: true
 title: 1-概率与学习-KNN
-date: '2023-12-26 20:07'
-modified: '2023-12-29 10:11'
-abbrlink: 76a34f21
-aliases:
-sticky:
-thumbnail:
-cover:
+date:  2023-10-10 18:10
+modified:  2024-01-03 09:01
 ---
 
 # 1. 回顾
@@ -32,13 +31,13 @@ cover:
 
 ## 1.3. 距离度量/相似性度量
 
-[[2023Fall/机器学习/0-introduction#距离度量函数|距离度量]]
+[[0-introduction#3.2. 距离度量函数]]
 
 机器学习中大多是向量运算。
 
 # 2. k-近邻分类器
 
-## 2.1. 算法流程
+## 2.1. 算法流程👍
 
 1. 计算**测试样本**$\overline{x}$和$D_{train}$中的**训练样本**$x_i$之间的距离$d(\overline{x},x_i)$
 2. 对所有距离值（相似度）进行升序（降序）排序
@@ -69,7 +68,7 @@ k近邻的简化，选取最近的一个
 
 # 4. k-近邻回归
 
-## 4.1. 算法流程
+## 4.1. 算法流程👍
 
 1. 计算测试样本$\overline{x}$和$D_{train}$中的训练样本$x_i$之间的距离$d(\overline{x},x_i)$
 2. 对所有距离值（相似度）进行升序（降序）排序
@@ -110,11 +109,11 @@ k近邻的简化，选取最近的一个
 训练阶段：$0$  
 测试阶段：$O(nd+nlogk)$
 
-[What would be the time complexity to find top K elements in an unsorted array of size N using MaxHeap (of size N) and MinHeap (of size K) and which one would be more efficient? - Quora](https://www.quora.com/What-would-be-the-time-complexity-to-find-top-K-elements-in-an-unsorted-array-of-size-N-using-MaxHeap-of-size-N-and-MinHeap-of-size-K-and-which-one-would-be-more-efficient)
-
 Top k问题时间复杂度：
 
 [algorithm - Find the top K elements in O(N log K) time using heaps - Stack Overflow](https://stackoverflow.com/questions/49217910/find-the-top-k-elements-in-on-log-k-time-using-heaps)
+
+[What would be the time complexity to find top K elements in an unsorted array of size N using MaxHeap (of size N) and MinHeap (of size K) and which one would be more efficient? - Quora](https://www.quora.com/What-would-be-the-time-complexity-to-find-top-K-elements-in-an-unsorted-array-of-size-N-using-MaxHeap-of-size-N-and-MinHeap-of-size-K-and-which-one-would-be-more-efficient)
 
 # 5. 降低近邻计算
 
