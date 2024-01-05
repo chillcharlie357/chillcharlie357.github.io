@@ -4799,172 +4799,6 @@
       </tags>
   </entry>
   <entry>
-    <title>7-询问专家和用户</title>
-    <url>/posts/a17d59f2/</url>
-    <content><![CDATA[<h1 id="1-查询用户-访谈"><a href="#1-查询用户-访谈" class="headerlink" title="1. 查询用户-访谈"></a>1. 查询用户-访谈</h1><p>访谈：有目的的对话过程</p>
-<h2 id="1-1-分类"><a href="#1-1-分类" class="headerlink" title="1.1. 分类"></a>1.1. 分类</h2><ul>
-<li>非结构化访谈<ul>
-<li>问题是开放式的，不限定内容和格式</li>
-<li>受访人自行选择详细回答还是简要回答</li>
-<li>访问人应确保能够搜集到重要问题的回答</li>
-</ul>
-</li>
-<li>结构化访谈<ul>
-<li>根据预先确定的一组问题进行访谈</li>
-<li>问题通常是“封闭式”的，它要求准确的回答</li>
-</ul>
-</li>
-<li>半结构化访谈<ul>
-<li>开放式问题+封闭式问题</li>
-<li>注意不要暗示答案</li>
-</ul>
-</li>
-<li>集体访谈<ul>
-<li>基本思想：个别成员的看法是在应用的上下文中通过与其他用户的交流而形成的</li>
-<li>“焦点小组”是集体访谈的一种形式</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-2-焦点小组"><a href="#1-2-焦点小组" class="headerlink" title="1.2. 焦点小组"></a>1.2. 焦点小组</h2><ul>
-<li>非正式的评估方法<ul>
-<li>在界面设计之前和经过一段使用之后评估用户的需要和感受</li>
-<li>是市场、政治和社会科学研究经常使用的方法</li>
-<li>人数限制：由大约6到9个典型用户组成</li>
-</ul>
-</li>
-<li>主持人工作<ul>
-<li>事先列出一张讨论问题和数据收集目标的清单</li>
-<li>保持所谈论的内容不离题</li>
-<li>保证小组的每个成员都积极参与谈论</li>
-<li>讨论结果的分析报告</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-查询专家-问卷"><a href="#2-查询专家-问卷" class="headerlink" title="2. 查询专家-问卷"></a>2. 查询专家-问卷</h1><p>本质上也是访谈的一种</p>
-<h2 id="2-1-设计原则👍"><a href="#2-1-设计原则👍" class="headerlink" title="2.1. 设计原则👍"></a>2.1. 设计原则👍</h2><ol>
-<li>注意提问次序，先提出一般化再提出具体问题</li>
-<li>确保问题明确，具体</li>
-<li>在可能时，采用封闭式问题并提供充足的答案选项</li>
-<li>对于征求用户意见的问题时，应该提供”<strong>无看法</strong>“选项</li>
-<li>避免使用复杂的多重问题</li>
-<li>在使用等级标度时，应设定适当的等级范围，并确保它们不重叠<ul>
-<li>做到直观、一致</li>
-</ul>
-</li>
-<li>避免使用术语</li>
-<li>明确说明如何完成问卷<ul>
-<li>比如在选项前的方框内打√</li>
-</ul>
-</li>
-<li>在设计问卷时，既要做到紧凑，也应适当留空</li>
-</ol>
-<h2 id="2-2-用户满意度调查表QUIS"><a href="#2-2-用户满意度调查表QUIS" class="headerlink" title="2.2. 用户满意度调查表QUIS"></a>2.2. 用户满意度调查表QUIS</h2><ul>
-<li>涉及细节<ul>
-<li>界面细节</li>
-<li>界面对象</li>
-<li>界面行为</li>
-<li>任务表达</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-3-问卷组织👍"><a href="#2-3-问卷组织👍" class="headerlink" title="2.3. 问卷组织👍"></a>2.3. 问卷组织👍</h2><h3 id="2-3-1-问卷调查中的两个关键问题"><a href="#2-3-1-问卷调查中的两个关键问题" class="headerlink" title="2.3.1. 问卷调查中的两个关键问题"></a>2.3.1. 问卷调查中的两个关键问题</h3><ol>
-<li>如何寻找有代表性的用户</li>
-<li>如何达到合理的回复率</li>
-</ol>
-<h3 id="2-3-2-有助于提高回复率的措施"><a href="#2-3-2-有助于提高回复率的措施" class="headerlink" title="2.3.2. 有助于提高回复率的措施"></a>2.3.2. 有助于提高回复率的措施</h3><p>精心涉及问卷，避免用户厌烦<br>不要主观引导<br>参照QUIS，提供简要描述，说明用户若没有时间完成整份问卷，可以只完成简短的部分<br>解释为什么要进行这些问卷调查，并说明将为参与者保密<br>在发出问卷之后，通过后续邮件、电话或电子邮件联系参与者<br>采取一些激励措施（如有偿调查等）<br>进行小规模测验</p>
-<h2 id="2-4-问卷与访谈"><a href="#2-4-问卷与访谈" class="headerlink" title="2.4. 问卷与访谈"></a>2.4. 问卷与访谈</h2><ul>
-<li>都是间接方法<ul>
-<li>都不是对用户界面直接研究</li>
-<li>都不能完全听信和采纳用户的说法</li>
-</ul>
-</li>
-<li>访谈<ul>
-<li>形式更自由</li>
-<li>难以获得确切数据</li>
-<li>需要花费更多时间</li>
-<li>可在访谈后立即得到结果</li>
-<li>可能回避某些“敏感问题”的真实想法</li>
-</ul>
-</li>
-</ul>
-<h1 id="3-询问专家-认知走查"><a href="#3-询问专家-认知走查" class="headerlink" title="3. 询问专家-认知走查"></a>3. 询问专家-认知走查</h1><p>专家不是以自己身份评估，而是目标<strong>扮演用户</strong>。试图想象出人们在<font color="#c00000">第一次</font>使用某个产品时的想法以及所采取的动作，它的大作流程是怎样的。<strong>主要目标是确定使一个系统如何易于学习</strong>。</p>
-<p>实践中不太会用，因为很繁琐。</p>
-<p>与合作评估类似，也存在合作走查。</p>
-<ul>
-<li>优点<ul>
-<li>需要用户参与</li>
-<li>不需要可运行的原型(要界面原型)</li>
-<li>能找出非常具体的用户问题</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>工作量大，非常费时</li>
-<li>关注面有限<ul>
-<li>只适合于评估一个产品的易学习性</li>
-<li>不太容易发现使用效率方面的可用性问题</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="4-询问专家-启发式评估-👍"><a href="#4-询问专家-启发式评估-👍" class="headerlink" title="4. 询问专家-启发式评估 👍"></a>4. 询问专家-启发式评估 👍</h1><p>Nielsen的<font color="#c00000">十条启发式原则</font>：[[2-交互设计的原则和目标#6.3. 十项启发式交互原则👍]]</p>
-<p>经济评估，一种灵活而又相当廉价的评估方式。</p>
-<h2 id="4-1-步骤"><a href="#4-1-步骤" class="headerlink" title="4.1. 步骤"></a>4.1. 步骤</h2><ol>
-<li>彻底检查界面</li>
-<li>将界面与启发式规则进行对比</li>
-<li>列举可用性问题</li>
-<li>应用启发式规则对每一个问题进行解释与确认</li>
-</ol>
-<h2 id="4-2-问题严重性分类"><a href="#4-2-问题严重性分类" class="headerlink" title="4.2. 问题严重性分类"></a>4.2. 问题严重性分类</h2><ul>
-<li>不同作用因素<ul>
-<li>频率：有多经常？</li>
-<li>影响：有多难克服？</li>
-<li>持续时间：要多长时间克服？</li>
-</ul>
-</li>
-<li>严重性等级<ul>
-<li>表面问题：不需要被修复</li>
-<li>次要问题：需要修复，但优先级较低</li>
-<li>主要问题：需要修复且优先级很高</li>
-<li>灾难性问题：必须被修复</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-3-如何正确评估"><a href="#4-3-如何正确评估" class="headerlink" title="4.3. 如何正确评估"></a>4.3. 如何正确评估</h2><ol>
-<li>分析每个问题对应的启发式规则</li>
-<li>列出所有问题</li>
-<li>至少遍历两遍界面</li>
-<li>不要局限于10条启发式原则</li>
-</ol>
-<h2 id="4-4-优缺点"><a href="#4-4-优缺点" class="headerlink" title="4.4. 优缺点"></a>4.4. 优缺点</h2><ul>
-<li>优点<ul>
-<li>不涉及用户，所以面临的实际限制和道德问题较少</li>
-<li>成本相对较低，不需要特殊设备，而且较为快捷，又被称为“经济评估法”</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>评估人员需要经过长时间的训练才能成为专家<ul>
-<li>理想的专家应同时具备交互设计和产品应用域的知识</li>
-</ul>
-</li>
-<li>可能出现“虚假警报”<ul>
-<li>“专家每找到一个真实的可用性问题，将发出约一个假警报（1.2），忽略大约半个问题（0.6）”</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-5-提醒"><a href="#4-5-提醒" class="headerlink" title="4.5. 提醒"></a>4.5. 提醒</h2><p>邀请多个专家，推荐3-5<br>使用用户测试代替启发式评估<br>观察人员可以帮助评估专家，但对用户测试不合适</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_人机交互</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>8-交互需求获取</title>
     <url>/posts/cfa39c4c/</url>
     <content><![CDATA[<h1 id="1-交互需求的差异"><a href="#1-交互需求的差异" class="headerlink" title="1. 交互需求的差异"></a>1. 交互需求的差异</h1><ul>
@@ -5439,6 +5273,172 @@
       </tags>
   </entry>
   <entry>
+    <title>7-询问专家和用户</title>
+    <url>/posts/a17d59f2/</url>
+    <content><![CDATA[<h1 id="1-查询用户-访谈"><a href="#1-查询用户-访谈" class="headerlink" title="1. 查询用户-访谈"></a>1. 查询用户-访谈</h1><p>访谈：有目的的对话过程</p>
+<h2 id="1-1-分类"><a href="#1-1-分类" class="headerlink" title="1.1. 分类"></a>1.1. 分类</h2><ul>
+<li>非结构化访谈<ul>
+<li>问题是开放式的，不限定内容和格式</li>
+<li>受访人自行选择详细回答还是简要回答</li>
+<li>访问人应确保能够搜集到重要问题的回答</li>
+</ul>
+</li>
+<li>结构化访谈<ul>
+<li>根据预先确定的一组问题进行访谈</li>
+<li>问题通常是“封闭式”的，它要求准确的回答</li>
+</ul>
+</li>
+<li>半结构化访谈<ul>
+<li>开放式问题+封闭式问题</li>
+<li>注意不要暗示答案</li>
+</ul>
+</li>
+<li>集体访谈<ul>
+<li>基本思想：个别成员的看法是在应用的上下文中通过与其他用户的交流而形成的</li>
+<li>“焦点小组”是集体访谈的一种形式</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-焦点小组"><a href="#1-2-焦点小组" class="headerlink" title="1.2. 焦点小组"></a>1.2. 焦点小组</h2><ul>
+<li>非正式的评估方法<ul>
+<li>在界面设计之前和经过一段使用之后评估用户的需要和感受</li>
+<li>是市场、政治和社会科学研究经常使用的方法</li>
+<li>人数限制：由大约6到9个典型用户组成</li>
+</ul>
+</li>
+<li>主持人工作<ul>
+<li>事先列出一张讨论问题和数据收集目标的清单</li>
+<li>保持所谈论的内容不离题</li>
+<li>保证小组的每个成员都积极参与谈论</li>
+<li>讨论结果的分析报告</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-查询专家-问卷"><a href="#2-查询专家-问卷" class="headerlink" title="2. 查询专家-问卷"></a>2. 查询专家-问卷</h1><p>本质上也是访谈的一种</p>
+<h2 id="2-1-设计原则👍"><a href="#2-1-设计原则👍" class="headerlink" title="2.1. 设计原则👍"></a>2.1. 设计原则👍</h2><ol>
+<li>注意提问次序，先提出一般化再提出具体问题</li>
+<li>确保问题明确，具体</li>
+<li>在可能时，采用封闭式问题并提供充足的答案选项</li>
+<li>对于征求用户意见的问题时，应该提供”<strong>无看法</strong>“选项</li>
+<li>避免使用复杂的多重问题</li>
+<li>在使用等级标度时，应设定适当的等级范围，并确保它们不重叠<ul>
+<li>做到直观、一致</li>
+</ul>
+</li>
+<li>避免使用术语</li>
+<li>明确说明如何完成问卷<ul>
+<li>比如在选项前的方框内打√</li>
+</ul>
+</li>
+<li>在设计问卷时，既要做到紧凑，也应适当留空</li>
+</ol>
+<h2 id="2-2-用户满意度调查表QUIS"><a href="#2-2-用户满意度调查表QUIS" class="headerlink" title="2.2. 用户满意度调查表QUIS"></a>2.2. 用户满意度调查表QUIS</h2><ul>
+<li>涉及细节<ul>
+<li>界面细节</li>
+<li>界面对象</li>
+<li>界面行为</li>
+<li>任务表达</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-问卷组织👍"><a href="#2-3-问卷组织👍" class="headerlink" title="2.3. 问卷组织👍"></a>2.3. 问卷组织👍</h2><h3 id="2-3-1-问卷调查中的两个关键问题"><a href="#2-3-1-问卷调查中的两个关键问题" class="headerlink" title="2.3.1. 问卷调查中的两个关键问题"></a>2.3.1. 问卷调查中的两个关键问题</h3><ol>
+<li>如何寻找有代表性的用户</li>
+<li>如何达到合理的回复率</li>
+</ol>
+<h3 id="2-3-2-有助于提高回复率的措施"><a href="#2-3-2-有助于提高回复率的措施" class="headerlink" title="2.3.2. 有助于提高回复率的措施"></a>2.3.2. 有助于提高回复率的措施</h3><p>精心涉及问卷，避免用户厌烦<br>不要主观引导<br>参照QUIS，提供简要描述，说明用户若没有时间完成整份问卷，可以只完成简短的部分<br>解释为什么要进行这些问卷调查，并说明将为参与者保密<br>在发出问卷之后，通过后续邮件、电话或电子邮件联系参与者<br>采取一些激励措施（如有偿调查等）<br>进行小规模测验</p>
+<h2 id="2-4-问卷与访谈"><a href="#2-4-问卷与访谈" class="headerlink" title="2.4. 问卷与访谈"></a>2.4. 问卷与访谈</h2><ul>
+<li>都是间接方法<ul>
+<li>都不是对用户界面直接研究</li>
+<li>都不能完全听信和采纳用户的说法</li>
+</ul>
+</li>
+<li>访谈<ul>
+<li>形式更自由</li>
+<li>难以获得确切数据</li>
+<li>需要花费更多时间</li>
+<li>可在访谈后立即得到结果</li>
+<li>可能回避某些“敏感问题”的真实想法</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-询问专家-认知走查"><a href="#3-询问专家-认知走查" class="headerlink" title="3. 询问专家-认知走查"></a>3. 询问专家-认知走查</h1><p>专家不是以自己身份评估，而是目标<strong>扮演用户</strong>。试图想象出人们在<font color="#c00000">第一次</font>使用某个产品时的想法以及所采取的动作，它的大作流程是怎样的。<strong>主要目标是确定使一个系统如何易于学习</strong>。</p>
+<p>实践中不太会用，因为很繁琐。</p>
+<p>与合作评估类似，也存在合作走查。</p>
+<ul>
+<li>优点<ul>
+<li>需要用户参与</li>
+<li>不需要可运行的原型(要界面原型)</li>
+<li>能找出非常具体的用户问题</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>工作量大，非常费时</li>
+<li>关注面有限<ul>
+<li>只适合于评估一个产品的易学习性</li>
+<li>不太容易发现使用效率方面的可用性问题</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-询问专家-启发式评估-👍"><a href="#4-询问专家-启发式评估-👍" class="headerlink" title="4. 询问专家-启发式评估 👍"></a>4. 询问专家-启发式评估 👍</h1><p>Nielsen的<font color="#c00000">十条启发式原则</font>：[[2-交互设计的原则和目标#6.3. 十项启发式交互原则👍]]</p>
+<p>经济评估，一种灵活而又相当廉价的评估方式。</p>
+<h2 id="4-1-步骤"><a href="#4-1-步骤" class="headerlink" title="4.1. 步骤"></a>4.1. 步骤</h2><ol>
+<li>彻底检查界面</li>
+<li>将界面与启发式规则进行对比</li>
+<li>列举可用性问题</li>
+<li>应用启发式规则对每一个问题进行解释与确认</li>
+</ol>
+<h2 id="4-2-问题严重性分类"><a href="#4-2-问题严重性分类" class="headerlink" title="4.2. 问题严重性分类"></a>4.2. 问题严重性分类</h2><ul>
+<li>不同作用因素<ul>
+<li>频率：有多经常？</li>
+<li>影响：有多难克服？</li>
+<li>持续时间：要多长时间克服？</li>
+</ul>
+</li>
+<li>严重性等级<ul>
+<li>表面问题：不需要被修复</li>
+<li>次要问题：需要修复，但优先级较低</li>
+<li>主要问题：需要修复且优先级很高</li>
+<li>灾难性问题：必须被修复</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3-如何正确评估"><a href="#4-3-如何正确评估" class="headerlink" title="4.3. 如何正确评估"></a>4.3. 如何正确评估</h2><ol>
+<li>分析每个问题对应的启发式规则</li>
+<li>列出所有问题</li>
+<li>至少遍历两遍界面</li>
+<li>不要局限于10条启发式原则</li>
+</ol>
+<h2 id="4-4-优缺点"><a href="#4-4-优缺点" class="headerlink" title="4.4. 优缺点"></a>4.4. 优缺点</h2><ul>
+<li>优点<ul>
+<li>不涉及用户，所以面临的实际限制和道德问题较少</li>
+<li>成本相对较低，不需要特殊设备，而且较为快捷，又被称为“经济评估法”</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>评估人员需要经过长时间的训练才能成为专家<ul>
+<li>理想的专家应同时具备交互设计和产品应用域的知识</li>
+</ul>
+</li>
+<li>可能出现“虚假警报”<ul>
+<li>“专家每找到一个真实的可用性问题，将发出约一个假警报（1.2），忽略大约半个问题（0.6）”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-5-提醒"><a href="#4-5-提醒" class="headerlink" title="4.5. 提醒"></a>4.5. 提醒</h2><p>邀请多个专家，推荐3-5<br>使用用户测试代替启发式评估<br>观察人员可以帮助评估专家，但对用户测试不合适</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>13-期末复习</title>
     <url>/posts/20e7e86a/</url>
     <content><![CDATA[<h1 id="1-内容组织"><a href="#1-内容组织" class="headerlink" title="1. 内容组织"></a>1. 内容组织</h1><p>软件主导硬件<br>以应用为中心</p>
@@ -5669,187 +5669,6 @@
 <p>-方法命名随意</p>
 <h2 id="4-1-断言"><a href="#4-1-断言" class="headerlink" title="4.1. 断言"></a>4.1. 断言</h2><p>测试代码中对预期结果的断定</p>
 <h1 id="5-Spring模块组成"><a href="#5-Spring模块组成" class="headerlink" title="5. Spring模块组成"></a>5. Spring模块组成</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2F4df50c54d812c48ff73dfeac3b4008cc_20230914185434.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>1-依赖注入</title>
-    <url>/posts/a22fb360/</url>
-    <content><![CDATA[<p>Git：分布式版本控制<br>Beam:java中一个对象，Spring负责对象创建、管理这些对象</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png" alt="image.png"></p>
-<p>商品服务需要引用库存服务（依赖），如何知道库存服务的地址/引用？</p>
-<h1 id="1-Spring核心技术"><a href="#1-Spring核心技术" class="headerlink" title="1. Spring核心技术"></a>1. Spring核心技术</h1><ol>
-<li>DI（Dependency Injection）<ul>
-<li>保留抽象接口，让组件（Component）依赖于抽象接口，当组件要与其他实际的对象发生依赖关系时，<strong>由抽象接口来注入依赖的实际对象</strong></li>
-</ul>
-</li>
-<li>AOP（Aspect Oriented Programming）<ul>
-<li>通过<strong>预编译方式</strong>和<strong>运行期间动态代理</strong>实现程序功能的统一维护的一种技术</li>
-<li>利用AOP可以对业务逻辑的各个部分进行隔离， 从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发效率</li>
-</ul>
-</li>
-</ol>
-<h1 id="2-常用注解"><a href="#2-常用注解" class="headerlink" title="2. 常用注解"></a>2. 常用注解</h1><h2 id="2-1-Bean"><a href="#2-1-Bean" class="headerlink" title="2.1. Bean"></a>2.1. Bean</h2><p>==Object=Bean=Component==</p>
-<ul>
-<li><p><code>@Component</code></p>
-<ul>
-<li>普通的Java类加<code>@Component</code>注解，Spring会<strong>实例化</strong>这个类</li>
-<li>Component value属性，指定Bean Id，默认为类名</li>
-</ul>
-</li>
-<li><p><code>@Autowired</code></p>
-<ul>
-<li><strong>自动注入</strong>，Spring从从容器的上下文找实现了某个接口的对象</li>
-<li>找不到对象，注入失败</li>
-<li>找到多个实现了这个接口的对象，也会报错</li>
-</ul>
-</li>
-<li><p>自动装配时歧义：如何解决Bean冲突?</p>
-<ul>
-<li><code>@Qualifier</code>自定义限定符</li>
-<li><code>@Primary</code>在Bean上放指定</li>
-<li>自定义注解</li>
-</ul>
-</li>
-</ul>
-<p>@Profile需要在不同场景下运行不同Bean<br>@Conditional在运行环境下决定Bean是否要创建</p>
-<h2 id="2-2-组件扫描"><a href="#2-2-组件扫描" class="headerlink" title="2.2. 组件扫描"></a>2.2. 组件扫描</h2><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan</span> <span class="comment">//找当前包下加了注解的类并实例化</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CDPlaterConfig</span> {</span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	&lt;function&gt;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li><code>@ComponentScan</code> //找当前包下加了注解的类并实例化<ul>
-<li><code>basePackages</code><ul>
-<li>是数组可以写多个</li>
-<li>但是类型不安全，写错编译器不会报错</li>
-</ul>
-</li>
-<li><code>basePackageClasses</code><ul>
-<li>也是数组</li>
-<li>到类所在的包和子目录下搜索</li>
-<li><strong>类型安全</strong>，但无法保证类一直存在</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>当使用 <code>@ComponentScan</code> 注解时，Spring会自动扫描指定包下的组件，并将其注册为Bean。如果你在配置类中手动定义了相同的Bean，那么就会导致重复定义的问题。</p>
-<h2 id="2-3-Bean三种注入方法👍"><a href="#2-3-Bean三种注入方法👍" class="headerlink" title="2.3. Bean三种注入方法👍"></a>2.3. Bean三种注入方法👍</h2><h3 id="2-3-1-构造方法"><a href="#2-3-1-构造方法" class="headerlink" title="2.3.1. 构造方法"></a>2.3.1. 构造方法</h3><ul>
-<li>在构造函数上使用 @Autowired 注解，用于自动注入构造函数参数所需要的 Bean。<strong>如果构造函数只有一个参数，则可以省略 @Autowired 注解。</strong></li>
-</ul>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">public</span> <span class="title function_">MyService</span><span class="params">(MyDao myDao)</span> {</span><br><span class="line">    <span class="built_in">this</span>.myDao = myDao;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="2-3-2-setter方法"><a href="#2-3-2-setter方法" class="headerlink" title="2.3.2. setter方法"></a>2.3.2. setter方法</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setOrderRepo</span><span class="params">(OrderRepository orderRepo)</span> {</span><br><span class="line">    <span class="built_in">this</span>.orderRepo = orderRepo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>也可以加<code>Autowired</code>自动注入.</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setOrderRepo</span><span class="params">(OrderRepository orderRepo)</span> {</span><br><span class="line">    <span class="built_in">this</span>.orderRepo = orderRepo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="2-3-3-属性字段下加-Autowired"><a href="#2-3-3-属性字段下加-Autowired" class="headerlink" title="2.3.3. 属性字段下加@Autowired"></a>2.3.3. 属性字段下加<code>@Autowired</code></h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> MyBean myBean;</span><br></pre></td></tr></table></figure></div>
-
-<h1 id="3-Spring配置方案👍"><a href="#3-Spring配置方案👍" class="headerlink" title="3. Spring配置方案👍"></a>3. Spring配置方案👍</h1><ol>
-<li>自动配置</li>
-<li>JavaConfig</li>
-<li>XML配置（最早期）</li>
-</ol>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2Fc81a655bf33d1187cac863eabe4a64de_20230914190947.png" alt="image.png"><br><em>SgtPeppers是一张CD</em></p>
-<p>建议基于接口编程</p>
-<h2 id="3-1-自动配置"><a href="#3-1-自动配置" class="headerlink" title="3.1. 自动配置"></a>3.1. 自动配置</h2><ul>
-<li>组件扫描 component scanning<ul>
-<li><code>@Configuration</code> 配置类</li>
-<li><code>@ComponentScan</code></li>
-</ul>
-</li>
-<li>自动装配 autowiring<ul>
-<li><code>@Autowired</code></li>
-<li>构造方法</li>
-<li>字段</li>
-<li>set方法</li>
-<li><code>required=false</code></li>
-</ul>
-</li>
-<li>需要实例化的Bean：<code>@Component</code><ul>
-<li>默认是<strong>单实例模式</strong>，在Spring上下文永远只有一个实例</li>
-<li>可以<strong>参数指定多实例</strong></li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-55-36-ac898cc2918943f139876a34a27f386c-20231231095536-853b20.png" alt="image.png"></p>
-<h2 id="3-2-JavaConfig"><a href="#3-2-JavaConfig" class="headerlink" title="3.2. JavaConfig"></a>3.2. JavaConfig</h2><ul>
-<li>应用场景：自动化配置行不通，如第三方库</li>
-<li>注解<ul>
-<li><code>@Configuration</code></li>
-<li><code>@Bean(name=“..”)</code></li>
-</ul>
-</li>
-<li>注入<ul>
-<li>调用方法</li>
-<li>通过方法参数自动装配（其他配置类，其他方法创建的Bean）</li>
-</ul>
-</li>
-</ul>
-<p>只用于创建，不会把业务逻辑放进来。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-56-16-0ee4f7052c6e564839b82b9a7d299704-20231231095615-a30d06.png" alt="image.png"></p>
-<h2 id="3-3-XML"><a href="#3-3-XML" class="headerlink" title="3.3. XML"></a>3.3. XML</h2><ul>
-<li>格式：<code>&lt;beans&gt;&lt;bean&gt;</code></li>
-<li><strong>无类型检查</strong></li>
-<li>构造器注入<ul>
-<li>constructor-arg</li>
-<li>c-命名空间</li>
-<li>注入字面量值</li>
-<li>注入集合</li>
-</ul>
-</li>
-<li>属性注入<ul>
-<li>p-命名空间</li>
-<li>util-命名空间</li>
-</ul>
-</li>
-</ul>
-<p>建议：强依赖使用构造器注入</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-56-42-38e95d9182eff146ef5bd7df0b88a0a3-20231231095641-816334.png" alt="image.png"></p>
-<h2 id="3-4-混合配置"><a href="#3-4-混合配置" class="headerlink" title="3.4. 混合配置"></a>3.4. 混合配置</h2><p>在根配置类中导入其他配置类。</p>
-<ul>
-<li>JavaConfig导入<ul>
-<li><code>@import(配置类,class,...)</code></li>
-<li><code>@importResource(xml文件)</code></li>
-</ul>
-</li>
-<li>XML导入</li>
-</ul>
-<h1 id="4-应用上下文"><a href="#4-应用上下文" class="headerlink" title="4. 应用上下文"></a>4. 应用上下文</h1><ol>
-<li>AnnotationConfigApplicationContext<ul>
-<li>基于注解配置生成</li>
-</ul>
-</li>
-<li>ClassPathXmlApplicationContext</li>
-<li>AnnotationConfigWebApplicationContext</li>
-<li>FileSystemXmlApplicationContext</li>
-<li>XmlWebApplicationContext</li>
-</ol>
-<h1 id="5-Bean作用域"><a href="#5-Bean作用域" class="headerlink" title="5. Bean作用域"></a>5. Bean作用域</h1><p>@Scope与@Component和@Bean一起使用，指定作用域</p>
-<ol>
-<li>Singleton，单例，整个应用之创建一个实例</li>
-<li>Prototype，原型，每次注入或者通过Spring应用上下文获取的时候，都会创建一个新bean实例</li>
-<li>Session，会话，在会话范围内有效</li>
-<li>Request，请求，在Web应用中，为每个请求创建一个bean实例</li>
-</ol>
-<h2 id="5-1-单例"><a href="#5-1-单例" class="headerlink" title="5.1. 单例"></a>5.1. 单例</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2Fbcf741e46f28882a4c83561481669afc_20230921185636.png" alt="image.png"></p>
-<p>通过代理注入给单例对象</p>
-<h1 id="6-运行时注入外部值"><a href="#6-运行时注入外部值" class="headerlink" title="6. 运行时注入外部值"></a>6. 运行时注入外部值</h1><ol>
-<li>使用<code>Environment</code>属性</li>
-<li>使用<code>@PropertySource(/path/to/file)</code>指定文件</li>
-</ol>
-<h2 id="6-1-Environment-getProperty的几种形式"><a href="#6-1-Environment-getProperty的几种形式" class="headerlink" title="6.1. Environment.getProperty的几种形式"></a>6.1. Environment.getProperty的几种形式</h2><ul>
-<li><code>String getProperty（String key)</code></li>
-<li><code>String getProperty（String key, String defaultValue）</code> </li>
-<li><code>T getProperty（String key, Class type）</code> </li>
-<li><code>T getProperty（String key, Class type, T defaultValue</code>）</li>
-</ul>
-<h2 id="6-2-使用占位符"><a href="#6-2-使用占位符" class="headerlink" title="6.2. 使用占位符"></a>6.2. 使用占位符</h2><p><code>${...}</code></p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -8212,6 +8031,187 @@
 <li>在业务逻辑层处理请求，返回响应</li>
 </ol>
 <h2 id="OAuth2基于授权码的授权，系统组成，处理流程"><a href="#OAuth2基于授权码的授权，系统组成，处理流程" class="headerlink" title="OAuth2基于授权码的授权，系统组成，处理流程"></a>OAuth2基于授权码的授权，系统组成，处理流程</h2><h2 id="Spring集成流解决了什么问题"><a href="#Spring集成流解决了什么问题" class="headerlink" title="Spring集成流解决了什么问题"></a>Spring集成流解决了什么问题</h2><h2 id="反应式编程的4个接口"><a href="#反应式编程的4个接口" class="headerlink" title="反应式编程的4个接口"></a>反应式编程的4个接口</h2>]]></content>
+  </entry>
+  <entry>
+    <title>1-依赖注入</title>
+    <url>/posts/a22fb360/</url>
+    <content><![CDATA[<p>Git：分布式版本控制<br>Beam:java中一个对象，Spring负责对象创建、管理这些对象</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png" alt="image.png"></p>
+<p>商品服务需要引用库存服务（依赖），如何知道库存服务的地址/引用？</p>
+<h1 id="1-Spring核心技术"><a href="#1-Spring核心技术" class="headerlink" title="1. Spring核心技术"></a>1. Spring核心技术</h1><ol>
+<li>DI（Dependency Injection）<ul>
+<li>保留抽象接口，让组件（Component）依赖于抽象接口，当组件要与其他实际的对象发生依赖关系时，<strong>由抽象接口来注入依赖的实际对象</strong></li>
+</ul>
+</li>
+<li>AOP（Aspect Oriented Programming）<ul>
+<li>通过<strong>预编译方式</strong>和<strong>运行期间动态代理</strong>实现程序功能的统一维护的一种技术</li>
+<li>利用AOP可以对业务逻辑的各个部分进行隔离， 从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发效率</li>
+</ul>
+</li>
+</ol>
+<h1 id="2-常用注解"><a href="#2-常用注解" class="headerlink" title="2. 常用注解"></a>2. 常用注解</h1><h2 id="2-1-Bean"><a href="#2-1-Bean" class="headerlink" title="2.1. Bean"></a>2.1. Bean</h2><p>==Object=Bean=Component==</p>
+<ul>
+<li><p><code>@Component</code></p>
+<ul>
+<li>普通的Java类加<code>@Component</code>注解，Spring会<strong>实例化</strong>这个类</li>
+<li>Component value属性，指定Bean Id，默认为类名</li>
+</ul>
+</li>
+<li><p><code>@Autowired</code></p>
+<ul>
+<li><strong>自动注入</strong>，Spring从从容器的上下文找实现了某个接口的对象</li>
+<li>找不到对象，注入失败</li>
+<li>找到多个实现了这个接口的对象，也会报错</li>
+</ul>
+</li>
+<li><p>自动装配时歧义：如何解决Bean冲突?</p>
+<ul>
+<li><code>@Qualifier</code>自定义限定符</li>
+<li><code>@Primary</code>在Bean上放指定</li>
+<li>自定义注解</li>
+</ul>
+</li>
+</ul>
+<p>@Profile需要在不同场景下运行不同Bean<br>@Conditional在运行环境下决定Bean是否要创建</p>
+<h2 id="2-2-组件扫描"><a href="#2-2-组件扫描" class="headerlink" title="2.2. 组件扫描"></a>2.2. 组件扫描</h2><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan</span> <span class="comment">//找当前包下加了注解的类并实例化</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CDPlaterConfig</span> {</span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	&lt;function&gt;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>@ComponentScan</code> //找当前包下加了注解的类并实例化<ul>
+<li><code>basePackages</code><ul>
+<li>是数组可以写多个</li>
+<li>但是类型不安全，写错编译器不会报错</li>
+</ul>
+</li>
+<li><code>basePackageClasses</code><ul>
+<li>也是数组</li>
+<li>到类所在的包和子目录下搜索</li>
+<li><strong>类型安全</strong>，但无法保证类一直存在</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>当使用 <code>@ComponentScan</code> 注解时，Spring会自动扫描指定包下的组件，并将其注册为Bean。如果你在配置类中手动定义了相同的Bean，那么就会导致重复定义的问题。</p>
+<h2 id="2-3-Bean三种注入方法👍"><a href="#2-3-Bean三种注入方法👍" class="headerlink" title="2.3. Bean三种注入方法👍"></a>2.3. Bean三种注入方法👍</h2><h3 id="2-3-1-构造方法"><a href="#2-3-1-构造方法" class="headerlink" title="2.3.1. 构造方法"></a>2.3.1. 构造方法</h3><ul>
+<li>在构造函数上使用 @Autowired 注解，用于自动注入构造函数参数所需要的 Bean。<strong>如果构造函数只有一个参数，则可以省略 @Autowired 注解。</strong></li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">public</span> <span class="title function_">MyService</span><span class="params">(MyDao myDao)</span> {</span><br><span class="line">    <span class="built_in">this</span>.myDao = myDao;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-3-2-setter方法"><a href="#2-3-2-setter方法" class="headerlink" title="2.3.2. setter方法"></a>2.3.2. setter方法</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setOrderRepo</span><span class="params">(OrderRepository orderRepo)</span> {</span><br><span class="line">    <span class="built_in">this</span>.orderRepo = orderRepo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>也可以加<code>Autowired</code>自动注入.</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setOrderRepo</span><span class="params">(OrderRepository orderRepo)</span> {</span><br><span class="line">    <span class="built_in">this</span>.orderRepo = orderRepo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-3-3-属性字段下加-Autowired"><a href="#2-3-3-属性字段下加-Autowired" class="headerlink" title="2.3.3. 属性字段下加@Autowired"></a>2.3.3. 属性字段下加<code>@Autowired</code></h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> MyBean myBean;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="3-Spring配置方案👍"><a href="#3-Spring配置方案👍" class="headerlink" title="3. Spring配置方案👍"></a>3. Spring配置方案👍</h1><ol>
+<li>自动配置</li>
+<li>JavaConfig</li>
+<li>XML配置（最早期）</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2Fc81a655bf33d1187cac863eabe4a64de_20230914190947.png" alt="image.png"><br><em>SgtPeppers是一张CD</em></p>
+<p>建议基于接口编程</p>
+<h2 id="3-1-自动配置"><a href="#3-1-自动配置" class="headerlink" title="3.1. 自动配置"></a>3.1. 自动配置</h2><ul>
+<li>组件扫描 component scanning<ul>
+<li><code>@Configuration</code> 配置类</li>
+<li><code>@ComponentScan</code></li>
+</ul>
+</li>
+<li>自动装配 autowiring<ul>
+<li><code>@Autowired</code></li>
+<li>构造方法</li>
+<li>字段</li>
+<li>set方法</li>
+<li><code>required=false</code></li>
+</ul>
+</li>
+<li>需要实例化的Bean：<code>@Component</code><ul>
+<li>默认是<strong>单实例模式</strong>，在Spring上下文永远只有一个实例</li>
+<li>可以<strong>参数指定多实例</strong></li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-55-36-ac898cc2918943f139876a34a27f386c-20231231095536-853b20.png" alt="image.png"></p>
+<h2 id="3-2-JavaConfig"><a href="#3-2-JavaConfig" class="headerlink" title="3.2. JavaConfig"></a>3.2. JavaConfig</h2><ul>
+<li>应用场景：自动化配置行不通，如第三方库</li>
+<li>注解<ul>
+<li><code>@Configuration</code></li>
+<li><code>@Bean(name=“..”)</code></li>
+</ul>
+</li>
+<li>注入<ul>
+<li>调用方法</li>
+<li>通过方法参数自动装配（其他配置类，其他方法创建的Bean）</li>
+</ul>
+</li>
+</ul>
+<p>只用于创建，不会把业务逻辑放进来。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-56-16-0ee4f7052c6e564839b82b9a7d299704-20231231095615-a30d06.png" alt="image.png"></p>
+<h2 id="3-3-XML"><a href="#3-3-XML" class="headerlink" title="3.3. XML"></a>3.3. XML</h2><ul>
+<li>格式：<code>&lt;beans&gt;&lt;bean&gt;</code></li>
+<li><strong>无类型检查</strong></li>
+<li>构造器注入<ul>
+<li>constructor-arg</li>
+<li>c-命名空间</li>
+<li>注入字面量值</li>
+<li>注入集合</li>
+</ul>
+</li>
+<li>属性注入<ul>
+<li>p-命名空间</li>
+<li>util-命名空间</li>
+</ul>
+</li>
+</ul>
+<p>建议：强依赖使用构造器注入</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-56-42-38e95d9182eff146ef5bd7df0b88a0a3-20231231095641-816334.png" alt="image.png"></p>
+<h2 id="3-4-混合配置"><a href="#3-4-混合配置" class="headerlink" title="3.4. 混合配置"></a>3.4. 混合配置</h2><p>在根配置类中导入其他配置类。</p>
+<ul>
+<li>JavaConfig导入<ul>
+<li><code>@import(配置类,class,...)</code></li>
+<li><code>@importResource(xml文件)</code></li>
+</ul>
+</li>
+<li>XML导入</li>
+</ul>
+<h1 id="4-应用上下文"><a href="#4-应用上下文" class="headerlink" title="4. 应用上下文"></a>4. 应用上下文</h1><ol>
+<li>AnnotationConfigApplicationContext<ul>
+<li>基于注解配置生成</li>
+</ul>
+</li>
+<li>ClassPathXmlApplicationContext</li>
+<li>AnnotationConfigWebApplicationContext</li>
+<li>FileSystemXmlApplicationContext</li>
+<li>XmlWebApplicationContext</li>
+</ol>
+<h1 id="5-Bean作用域"><a href="#5-Bean作用域" class="headerlink" title="5. Bean作用域"></a>5. Bean作用域</h1><p>@Scope与@Component和@Bean一起使用，指定作用域</p>
+<ol>
+<li>Singleton，单例，整个应用之创建一个实例</li>
+<li>Prototype，原型，每次注入或者通过Spring应用上下文获取的时候，都会创建一个新bean实例</li>
+<li>Session，会话，在会话范围内有效</li>
+<li>Request，请求，在Web应用中，为每个请求创建一个bean实例</li>
+</ol>
+<h2 id="5-1-单例"><a href="#5-1-单例" class="headerlink" title="5.1. 单例"></a>5.1. 单例</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2Fbcf741e46f28882a4c83561481669afc_20230921185636.png" alt="image.png"></p>
+<p>通过代理注入给单例对象</p>
+<h1 id="6-运行时注入外部值"><a href="#6-运行时注入外部值" class="headerlink" title="6. 运行时注入外部值"></a>6. 运行时注入外部值</h1><ol>
+<li>使用<code>Environment</code>属性</li>
+<li>使用<code>@PropertySource(/path/to/file)</code>指定文件</li>
+</ol>
+<h2 id="6-1-Environment-getProperty的几种形式"><a href="#6-1-Environment-getProperty的几种形式" class="headerlink" title="6.1. Environment.getProperty的几种形式"></a>6.1. Environment.getProperty的几种形式</h2><ul>
+<li><code>String getProperty（String key)</code></li>
+<li><code>String getProperty（String key, String defaultValue）</code> </li>
+<li><code>T getProperty（String key, Class type）</code> </li>
+<li><code>T getProperty（String key, Class type, T defaultValue</code>）</li>
+</ul>
+<h2 id="6-2-使用占位符"><a href="#6-2-使用占位符" class="headerlink" title="6.2. 使用占位符"></a>6.2. 使用占位符</h2><p><code>${...}</code></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
   </entry>
   <entry>
     <title>0-机器学习</title>
