@@ -1057,224 +1057,6 @@
       </tags>
   </entry>
   <entry>
-    <title>10_外部存储器</title>
-    <url>/posts/9649a834/</url>
-    <content><![CDATA[<p>特性</p>
-<ul>
-<li>用于存储不经常使用的、数据量较大的信息</li>
-<li>非易失</li>
-</ul>
-<h1 id="1-硬磁盘存储器"><a href="#1-硬磁盘存储器" class="headerlink" title="1. 硬磁盘存储器"></a>1. 硬磁盘存储器</h1><ul>
-<li>磁盘是由<strong>涂有可磁化材料</strong>的<strong>非磁性材料（基材）</strong> 构成的圆形盘片<ul>
-<li>玻璃基材优势：<ul>
-<li>改善磁膜表面的均匀性，提高磁盘的可靠性</li>
-<li>显著减少整体表面瑕疵，以帮助减少读写错误</li>
-<li>能够支持（磁头）较低的飞行高度</li>
-<li>更高的硬度，使磁盘转动时更加稳定</li>
-<li>更强的抗冲击和抗损伤能力</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-1-磁盘结构"><a href="#1-1-磁盘结构" class="headerlink" title="1.1. 磁盘结构"></a>1.1. 磁盘结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b361e14a8763c60f535f3b8eb2d40619_68_VoIPSCreencastCoverWnd.png" alt="68_VoIPSCreencastCoverWnd.png"></p>
-<ul>
-<li><p>每个<strong>盘片</strong>（双面）表面都有一个<strong>磁头</strong>，同时移动</p>
-</li>
-<li><p>所有磁头都位于离中心等距离轨道上</p>
-</li>
-<li><p>磁头：</p>
-<ul>
-<li>对盘片进行读写的装置</li>
-<li>必须产生或感应足够大的电磁场，以便正确地读写</li>
-<li>磁头越窄，离盘片的距离就越近</li>
-<li>更高的数据密度需要更窄的磁头和更窄的磁道，这将导致更高的出错风险</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-2-读写机制"><a href="#1-2-读写机制" class="headerlink" title="1.2. 读写机制"></a>1.2. 读写机制</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/abe3863939a32d0705ed63d203426a0a_69_VoIPSCreencastCoverWnd.png" alt="69_VoIPSCreencastCoverWnd.png"></p>
-<ul>
-<li>读写期间，磁头静止，盘片旋转</li>
-<li>磁头不工作时在最外面</li>
-<li>磁头数量<ul>
-<li>单磁头：读写公用同一个磁头（软盘、早期硬盘）</li>
-<li>双磁头：使用一个单独的磁头进行读取（当代硬盘）</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-2-1-写入机制"><a href="#1-2-1-写入机制" class="headerlink" title="1.2.1. 写入机制"></a>1.2.1. 写入机制</h3><p>上图绿色</p>
-<ul>
-<li>电流脉冲被发送到写入磁头</li>
-<li>变化的电流激发出磁场</li>
-<li>产生的磁性图案被记录在下面的盘片表面上</li>
-<li>反转电流方向，则记录介质上的磁化方向也会反转</li>
-</ul>
-<h3 id="1-2-2-读取机制"><a href="#1-2-2-读取机制" class="headerlink" title="1.2.2. 读取机制"></a>1.2.2. 读取机制</h3><p>上图红色</p>
-<ul>
-<li>读取磁头是由一个部分屏蔽的<strong>磁阻（MR）敏感器组成</strong>，其电阻取决于在其下移动的介质的磁化方向</li>
-<li>电流通过MR敏感器时，通过<strong>电压信号</strong>检测其电阻变化</li>
-<li>MR敏感器允许更高频率的操作，实现更高的存储密度和更快的操作速度</li>
-</ul>
-<h2 id="1-3-数据组织"><a href="#1-3-数据组织" class="headerlink" title="1.3. 数据组织"></a>1.3. 数据组织</h2><ul>
-<li><strong>磁道（track）:</strong> 盘片上的数据组织呈现为一组同心圆环</li>
-<li><strong>扇区（sector）:</strong> 数据以扇区（sector）的形式传输到磁盘或从传出磁盘<ul>
-<li><strong>默认大小512B</strong></li>
-<li>每个扇区大小相同</li>
-</ul>
-</li>
-<li><strong>间隙（gap）:</strong> 相邻磁道之间有间隙（gap），相邻的扇区之间也留有间隙<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3cf48711e3c8ff2c54cba02d10827906_6a_VoIPSCreencastCoverWnd.png" alt="6a_VoIPSCreencastCoverWnd.png"></li>
-</ul>
-<h3 id="1-3-1-扇区划分"><a href="#1-3-1-扇区划分" class="headerlink" title="1.3.1. 扇区划分"></a>1.3.1. 扇区划分</h3><ul>
-<li>恒定角速度<ul>
-<li>读写速度恒定，转过每个扇区时间一样。增大记录在盘片区域上的信息位的间 隔，使得磁盘能够以恒定的速度扫描信息</li>
-<li>优点：能以磁道号和扇区号直接寻址 各个数据块、</li>
-<li>缺点：磁盘存储容量受到了<strong>最内层</strong>磁道所能实现的最大记录密度的限制<br> <img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/26/1bbeccaa84633cc12e62d23ad3ccd672_1bbeccaa84633cc12e62d23ad3ccd672_6b_VoIPSCreencastCoverWnd.png" alt="6b_VoIPSCreencastCoverWnd.png"></li>
-</ul>
-</li>
-<li>多带式记录<ul>
-<li>分成多个带，里中心越远的带扇区越多</li>
-<li>读写速度恒定的代价：不同带的转速不同</li>
-<li>优点：提升存储容量</li>
-<li>缺点：需要更复杂的电路<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b761a7f6308f9bfac36b52eb0209f81b_6c_VoIPSCreencastCoverWnd.png" alt="6c_VoIPSCreencastCoverWnd.png"></li>
-<li>其中每个圈为一组磁道<ul>
-<li>例子：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="9.3ex" height="1.946ex" role="img" focusable="false" viewBox="0 -666 4110.4 860"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mn" transform="translate(484,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mo" transform="translate(1165.3,0)"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mn" transform="translate(1721.1,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g><g data-mml-node="mo" transform="translate(2221.1,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(2665.8,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(3165.8,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(3610.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></svg></mjx-container> 8个扇区 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="9.3ex" height="1.971ex" role="img" focusable="false" viewBox="0 -677 4110.4 871"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mn" transform="translate(484,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mo" transform="translate(1165.3,0)"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mn" transform="translate(1721.1,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(2221.1,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(2665.8,0)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g><g data-mml-node="mo" transform="translate(3165.8,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(3610.4,0)"><path data-c="35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></g></g></g></svg></mjx-container> 9个扇区</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-4-格式化"><a href="#1-4-格式化" class="headerlink" title="1.4. 格式化"></a>1.4. 格式化</h2><ul>
-<li>磁道必须有一些起始点和辨别每个扇区起点及终点的方法</li>
-<li>格式化时，会附有一些仅被磁盘驱动器使用而不被用户存取的额外数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/4fffcd557ca29b44513a77feab1f2226_6d_VoIPSCreencastCoverWnd.png" alt="6d_VoIPSCreencastCoverWnd.png"></li>
-</ul>
-<h2 id="1-5-I-O访问时间"><a href="#1-5-I-O访问时间" class="headerlink" title="1.5. I/O访问时间"></a>1.5. I/O访问时间</h2><ul>
-<li><p><strong>寻道时间（seek time）</strong>：磁头定位到磁道所花时间</p>
-<ul>
-<li><strong>初始化时间</strong>，跨越若干磁道所用时间</li>
-</ul>
-</li>
-<li><p><strong>旋转延迟（rotational delay）:</strong> 等待响应扇区的其实位置到达磁头的时间</p>
-<ul>
-<li>通常时<strong>磁道旋转半圈</strong>的时间</li>
-</ul>
-</li>
-<li><p><strong>传送时间（transfer time）:</strong> 数据传输时间<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3ca95dd57710a6659d48612d2beb60bd_6e_VoIPSCreencastCoverWnd.png" alt="6e_VoIPSCreencastCoverWnd.png"></p>
-</li>
-<li><p><strong>平均访问时间</strong>：</p>
-<ul>
-<li>其中<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.355ex;" xmlns="http://www.w3.org/2000/svg" width="2.259ex" height="1.887ex" role="img" focusable="false" viewBox="0 -677 998.6 834.1"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g><g data-mml-node="mi" transform="translate(617,-150) scale(0.707)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g></g></g></g></svg></mjx-container>为平均寻道时间<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/47b02f2b72538d533d4986e42a790d32_47b02f2b72538d533d4986e42a790d32_6f_VoIPSCreencastCoverWnd.png" alt="6f_VoIPSCreencastCoverWnd.png"></li>
-<li>当<strong>连续访问多个相邻的磁道</strong>时，跨越磁道：<ul>
-<li>对于每个磁道都需要考虑旋转延迟</li>
-<li>通常只需要考虑第一个磁道的寻道时间，但在明确知道跨越每个磁道需要的时间时需要考虑</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>顺序读取和随机读取</p>
-<ul>
-<li>随机读取每次都需要寻道，因此比顺序读取慢得多</li>
-<li>磁盘整理可以一定程度上缓解</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-6-磁头寻道-磁盘调度"><a href="#1-6-磁头寻道-磁盘调度" class="headerlink" title="1.6. 磁头寻道/磁盘调度"></a>1.6. 磁头寻道/磁盘调度</h2><ul>
-<li><strong>目标：</strong> 当有多个访问磁盘任务时，使得<strong>平均寻道时间最小</strong></li>
-<li>常见算法</li>
-</ul>
-<h3 id="1-6-1-先来先服务（FCFS）"><a href="#1-6-1-先来先服务（FCFS）" class="headerlink" title="1.6.1. 先来先服务（FCFS）"></a>1.6.1. 先来先服务（FCFS）</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/85444d477fe5b1a94b5eadd2e0142107_70_VoIPSCreencastCoverWnd.png" alt="70_VoIPSCreencastCoverWnd.png"></p>
-<h3 id="1-6-2-最短寻道时间优先（SSTF）"><a href="#1-6-2-最短寻道时间优先（SSTF）" class="headerlink" title="1.6.2. 最短寻道时间优先（SSTF）"></a>1.6.2. 最短寻道时间优先（SSTF）</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/304b388ba8be80e4f73319ecc78ab288_71_VoIPSCreencastCoverWnd.png" alt="71_VoIPSCreencastCoverWnd.png"></p>
-<h3 id="1-6-3-扫描-电梯（SCAN）"><a href="#1-6-3-扫描-电梯（SCAN）" class="headerlink" title="1.6.3. 扫描/电梯（SCAN）"></a>1.6.3. 扫描/电梯（SCAN）</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/118fe4711116becaa87b0e49f111f2f9_72_VoIPSCreencastCoverWnd.png" alt="72_VoIPSCreencastCoverWnd.png"></p>
-<h3 id="1-6-4-循环扫描（C-SCAN）"><a href="#1-6-4-循环扫描（C-SCAN）" class="headerlink" title="1.6.4. 循环扫描（C-SCAN）"></a>1.6.4. 循环扫描（C-SCAN）</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/11598b06df10bd304745a30c205e4d4f_73_VoIPSCreencastCoverWnd.png" alt="73_VoIPSCreencastCoverWnd.png"></p>
-<h3 id="1-6-5-LOOK"><a href="#1-6-5-LOOK" class="headerlink" title="1.6.5. LOOK"></a>1.6.5. LOOK</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/5d22fa9bd87f3ba26df28cd7cce7a52b_74_VoIPSCreencastCoverWnd.png" alt="74_VoIPSCreencastCoverWnd.png"></p>
-<h3 id="1-6-6-C-LOOK"><a href="#1-6-6-C-LOOK" class="headerlink" title="1.6.6. C-LOOK"></a>1.6.6. C-LOOK</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/ad5af7f0a16b3af62fb8696e42ef6807_75_VoIPSCreencastCoverWnd.png" alt="75_VoIPSCreencastCoverWnd.png"></p>
-<h1 id="2-光存储器"><a href="#2-光存储器" class="headerlink" title="2. 光存储器"></a>2. 光存储器</h1><h2 id="2-1-CD和CD-ROM"><a href="#2-1-CD和CD-ROM" class="headerlink" title="2.1. CD和CD-ROM"></a>2.1. CD和CD-ROM</h2><ul>
-<li>CD和CD-ROM采用类似的技术，但<strong>CD-ROM更加耐用且有纠错功能</strong></li>
-<li>制造方法<ul>
-<li>用精密聚焦的高强度激光束制造一个<strong>母盘</strong></li>
-<li>以母盘作为模板压印出聚碳酸酯的复制品</li>
-<li>在凹坑表面上镀上一层高反射材料</li>
-<li>使用丙烯酸树脂保护高反射材料</li>
-<li>在丙烯酸树脂层上用丝网印刷术印制标签<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b347e2608d763c1694f53b63fe73dfb3_76_VoIPSCreencastCoverWnd.png" alt="76_VoIPSCreencastCoverWnd.png"></li>
-</ul>
-</li>
-</ul>
-<h2 id="2-2-读取"><a href="#2-2-读取" class="headerlink" title="2.2. 读取"></a>2.2. 读取</h2><ul>
-<li><p>通过安装在光盘播放器或驱动装置内的低强度激光束从CD或CD-ROM处读取信息</p>
-<ul>
-<li>激光束照在<strong>凹坑（pit）</strong> 上，由于凹坑表面有些不平，因此 光被散射，反射回<strong>低强度</strong>的激光</li>
-<li>激光束照在<strong>台（land）</strong> 上，台的表面光滑平坦，反射回来 的是<strong>高强度</strong>的激光</li>
-</ul>
-</li>
-<li><p>盘片上包含<strong>一条单螺旋</strong>的轨道，轨道上的所有扇区长度相同</p>
-<ul>
-<li>盘片以<strong>变速旋转</strong></li>
-<li>凹坑被激光以<strong>恒定线速度</strong>读出</li>
-<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f330d060f9a4f72cb6e2130c30da1555_77_VoIPSCreencastCoverWnd.png" alt="77_VoIPSCreencastCoverWnd.png"></li>
-</ul>
-</li>
-<li><p>CD-R</p>
-<ul>
-<li>高强度激光可修改</li>
-<li>只能修改一次</li>
-</ul>
-</li>
-<li><p>CD-RW</p>
-<ul>
-<li>使用两种反射率显著不同的材料</li>
-<li>可以修改多次</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-3-数字多功能光盘（DVD）"><a href="#2-3-数字多功能光盘（DVD）" class="headerlink" title="2.3. 数字多功能光盘（DVD）"></a>2.3. 数字多功能光盘（DVD）</h2><ul>
-<li>DVD vs CD<ul>
-<li>DVD 上的位组装更紧密：光道间隙，凹坑间距（容量达到4.7GB）</li>
-<li>DVD 采用双层结构：设有半反射层，可以通过调整焦距读取每一 层（容量达到8.5GB）</li>
-<li>DVD-ROM 可以用两面记录数据（容量达到17GB）</li>
-</ul>
-</li>
-<li>DVD-R和DVD-RW</li>
-</ul>
-<h2 id="2-4-高清晰光盘"><a href="#2-4-高清晰光盘" class="headerlink" title="2.4. 高清晰光盘"></a>2.4. 高清晰光盘</h2><p>通过使用更短波长的激光（在蓝-紫光范围），可以实现<strong>更高的位密度</strong>（数据凹坑相对更小）<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f0993670675b245e097d424221b7de0d_78_VoIPSCreencastCoverWnd.png" alt="78_VoIPSCreencastCoverWnd.png"></p>
-<h2 id="2-5-磁带"><a href="#2-5-磁带" class="headerlink" title="2.5. 磁带"></a>2.5. 磁带</h2><ul>
-<li>与磁盘类似的记录和读取技术</li>
-<li>记录<ul>
-<li>介质是柔韧的聚酯薄膜带，外涂磁性材料</li>
-</ul>
-</li>
-<li>读取<ul>
-<li>磁带：顺序读取（sequential-access）</li>
-<li>磁盘：直接读取（direct-access）</li>
-</ul>
-</li>
-<li>记录<ul>
-<li>磁带：串行记录（蛇形记录）</li>
-<li>磁盘：并行记录</li>
-</ul>
-</li>
-<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/cbdc83c8b51a717766c9e33c2661456d_cbdc83c8b51a717766c9e33c2661456d_79_VoIPSCreencastCoverWnd.png" alt="79_VoIPSCreencastCoverWnd.png"></li>
-</ul>
-<h1 id="3-U盘和固态硬盘"><a href="#3-U盘和固态硬盘" class="headerlink" title="3. U盘和固态硬盘"></a>3. U盘和固态硬盘</h1><p>[[08_内部存储器#4.3 快闪存储器]]</p>
-<ul>
-<li>U盘<ul>
-<li>采用了快闪存储器，属于非易失性半导体存储器</li>
-<li>相比于软盘和光盘：体积小，容量大，携带方便，寿命长达数年</li>
-</ul>
-</li>
-<li>固态硬盘<ul>
-<li>与U盘没有本质区别：容量更大，存储性能更好</li>
-<li>与硬磁盘存储器相比：抗振性好，无噪声，能耗低，发热量低</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>11_冗余磁盘阵列(RAID)</title>
     <url>/posts/b7ba64ea/</url>
     <content><![CDATA[<ul>
@@ -1597,6 +1379,224 @@
 <li>虚拟地址：段号 + 页号 + 页内偏移量</li>
 <li>优点：程序按段实现共享与保护</li>
 <li>缺点：需要多次查表</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>10_外部存储器</title>
+    <url>/posts/9649a834/</url>
+    <content><![CDATA[<p>特性</p>
+<ul>
+<li>用于存储不经常使用的、数据量较大的信息</li>
+<li>非易失</li>
+</ul>
+<h1 id="1-硬磁盘存储器"><a href="#1-硬磁盘存储器" class="headerlink" title="1. 硬磁盘存储器"></a>1. 硬磁盘存储器</h1><ul>
+<li>磁盘是由<strong>涂有可磁化材料</strong>的<strong>非磁性材料（基材）</strong> 构成的圆形盘片<ul>
+<li>玻璃基材优势：<ul>
+<li>改善磁膜表面的均匀性，提高磁盘的可靠性</li>
+<li>显著减少整体表面瑕疵，以帮助减少读写错误</li>
+<li>能够支持（磁头）较低的飞行高度</li>
+<li>更高的硬度，使磁盘转动时更加稳定</li>
+<li>更强的抗冲击和抗损伤能力</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-1-磁盘结构"><a href="#1-1-磁盘结构" class="headerlink" title="1.1. 磁盘结构"></a>1.1. 磁盘结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b361e14a8763c60f535f3b8eb2d40619_68_VoIPSCreencastCoverWnd.png" alt="68_VoIPSCreencastCoverWnd.png"></p>
+<ul>
+<li><p>每个<strong>盘片</strong>（双面）表面都有一个<strong>磁头</strong>，同时移动</p>
+</li>
+<li><p>所有磁头都位于离中心等距离轨道上</p>
+</li>
+<li><p>磁头：</p>
+<ul>
+<li>对盘片进行读写的装置</li>
+<li>必须产生或感应足够大的电磁场，以便正确地读写</li>
+<li>磁头越窄，离盘片的距离就越近</li>
+<li>更高的数据密度需要更窄的磁头和更窄的磁道，这将导致更高的出错风险</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-读写机制"><a href="#1-2-读写机制" class="headerlink" title="1.2. 读写机制"></a>1.2. 读写机制</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/abe3863939a32d0705ed63d203426a0a_69_VoIPSCreencastCoverWnd.png" alt="69_VoIPSCreencastCoverWnd.png"></p>
+<ul>
+<li>读写期间，磁头静止，盘片旋转</li>
+<li>磁头不工作时在最外面</li>
+<li>磁头数量<ul>
+<li>单磁头：读写公用同一个磁头（软盘、早期硬盘）</li>
+<li>双磁头：使用一个单独的磁头进行读取（当代硬盘）</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-1-写入机制"><a href="#1-2-1-写入机制" class="headerlink" title="1.2.1. 写入机制"></a>1.2.1. 写入机制</h3><p>上图绿色</p>
+<ul>
+<li>电流脉冲被发送到写入磁头</li>
+<li>变化的电流激发出磁场</li>
+<li>产生的磁性图案被记录在下面的盘片表面上</li>
+<li>反转电流方向，则记录介质上的磁化方向也会反转</li>
+</ul>
+<h3 id="1-2-2-读取机制"><a href="#1-2-2-读取机制" class="headerlink" title="1.2.2. 读取机制"></a>1.2.2. 读取机制</h3><p>上图红色</p>
+<ul>
+<li>读取磁头是由一个部分屏蔽的<strong>磁阻（MR）敏感器组成</strong>，其电阻取决于在其下移动的介质的磁化方向</li>
+<li>电流通过MR敏感器时，通过<strong>电压信号</strong>检测其电阻变化</li>
+<li>MR敏感器允许更高频率的操作，实现更高的存储密度和更快的操作速度</li>
+</ul>
+<h2 id="1-3-数据组织"><a href="#1-3-数据组织" class="headerlink" title="1.3. 数据组织"></a>1.3. 数据组织</h2><ul>
+<li><strong>磁道（track）:</strong> 盘片上的数据组织呈现为一组同心圆环</li>
+<li><strong>扇区（sector）:</strong> 数据以扇区（sector）的形式传输到磁盘或从传出磁盘<ul>
+<li><strong>默认大小512B</strong></li>
+<li>每个扇区大小相同</li>
+</ul>
+</li>
+<li><strong>间隙（gap）:</strong> 相邻磁道之间有间隙（gap），相邻的扇区之间也留有间隙<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3cf48711e3c8ff2c54cba02d10827906_6a_VoIPSCreencastCoverWnd.png" alt="6a_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+<h3 id="1-3-1-扇区划分"><a href="#1-3-1-扇区划分" class="headerlink" title="1.3.1. 扇区划分"></a>1.3.1. 扇区划分</h3><ul>
+<li>恒定角速度<ul>
+<li>读写速度恒定，转过每个扇区时间一样。增大记录在盘片区域上的信息位的间 隔，使得磁盘能够以恒定的速度扫描信息</li>
+<li>优点：能以磁道号和扇区号直接寻址 各个数据块、</li>
+<li>缺点：磁盘存储容量受到了<strong>最内层</strong>磁道所能实现的最大记录密度的限制<br> <img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/26/1bbeccaa84633cc12e62d23ad3ccd672_1bbeccaa84633cc12e62d23ad3ccd672_6b_VoIPSCreencastCoverWnd.png" alt="6b_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+</li>
+<li>多带式记录<ul>
+<li>分成多个带，里中心越远的带扇区越多</li>
+<li>读写速度恒定的代价：不同带的转速不同</li>
+<li>优点：提升存储容量</li>
+<li>缺点：需要更复杂的电路<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b761a7f6308f9bfac36b52eb0209f81b_6c_VoIPSCreencastCoverWnd.png" alt="6c_VoIPSCreencastCoverWnd.png"></li>
+<li>其中每个圈为一组磁道<ul>
+<li>例子：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="9.3ex" height="1.946ex" role="img" focusable="false" viewBox="0 -666 4110.4 860"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mn" transform="translate(484,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mo" transform="translate(1165.3,0)"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mn" transform="translate(1721.1,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g><g data-mml-node="mo" transform="translate(2221.1,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(2665.8,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(3165.8,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(3610.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></svg></mjx-container> 8个扇区 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="9.3ex" height="1.971ex" role="img" focusable="false" viewBox="0 -677 4110.4 871"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mn" transform="translate(484,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mo" transform="translate(1165.3,0)"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mn" transform="translate(1721.1,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(2221.1,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(2665.8,0)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g><g data-mml-node="mo" transform="translate(3165.8,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(3610.4,0)"><path data-c="35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></g></g></g></svg></mjx-container> 9个扇区</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4-格式化"><a href="#1-4-格式化" class="headerlink" title="1.4. 格式化"></a>1.4. 格式化</h2><ul>
+<li>磁道必须有一些起始点和辨别每个扇区起点及终点的方法</li>
+<li>格式化时，会附有一些仅被磁盘驱动器使用而不被用户存取的额外数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/4fffcd557ca29b44513a77feab1f2226_6d_VoIPSCreencastCoverWnd.png" alt="6d_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+<h2 id="1-5-I-O访问时间"><a href="#1-5-I-O访问时间" class="headerlink" title="1.5. I/O访问时间"></a>1.5. I/O访问时间</h2><ul>
+<li><p><strong>寻道时间（seek time）</strong>：磁头定位到磁道所花时间</p>
+<ul>
+<li><strong>初始化时间</strong>，跨越若干磁道所用时间</li>
+</ul>
+</li>
+<li><p><strong>旋转延迟（rotational delay）:</strong> 等待响应扇区的其实位置到达磁头的时间</p>
+<ul>
+<li>通常时<strong>磁道旋转半圈</strong>的时间</li>
+</ul>
+</li>
+<li><p><strong>传送时间（transfer time）:</strong> 数据传输时间<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/3ca95dd57710a6659d48612d2beb60bd_6e_VoIPSCreencastCoverWnd.png" alt="6e_VoIPSCreencastCoverWnd.png"></p>
+</li>
+<li><p><strong>平均访问时间</strong>：</p>
+<ul>
+<li>其中<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.355ex;" xmlns="http://www.w3.org/2000/svg" width="2.259ex" height="1.887ex" role="img" focusable="false" viewBox="0 -677 998.6 834.1"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g><g data-mml-node="mi" transform="translate(617,-150) scale(0.707)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g></g></g></g></svg></mjx-container>为平均寻道时间<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/47b02f2b72538d533d4986e42a790d32_47b02f2b72538d533d4986e42a790d32_6f_VoIPSCreencastCoverWnd.png" alt="6f_VoIPSCreencastCoverWnd.png"></li>
+<li>当<strong>连续访问多个相邻的磁道</strong>时，跨越磁道：<ul>
+<li>对于每个磁道都需要考虑旋转延迟</li>
+<li>通常只需要考虑第一个磁道的寻道时间，但在明确知道跨越每个磁道需要的时间时需要考虑</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>顺序读取和随机读取</p>
+<ul>
+<li>随机读取每次都需要寻道，因此比顺序读取慢得多</li>
+<li>磁盘整理可以一定程度上缓解</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-6-磁头寻道-磁盘调度"><a href="#1-6-磁头寻道-磁盘调度" class="headerlink" title="1.6. 磁头寻道/磁盘调度"></a>1.6. 磁头寻道/磁盘调度</h2><ul>
+<li><strong>目标：</strong> 当有多个访问磁盘任务时，使得<strong>平均寻道时间最小</strong></li>
+<li>常见算法</li>
+</ul>
+<h3 id="1-6-1-先来先服务（FCFS）"><a href="#1-6-1-先来先服务（FCFS）" class="headerlink" title="1.6.1. 先来先服务（FCFS）"></a>1.6.1. 先来先服务（FCFS）</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/85444d477fe5b1a94b5eadd2e0142107_70_VoIPSCreencastCoverWnd.png" alt="70_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-2-最短寻道时间优先（SSTF）"><a href="#1-6-2-最短寻道时间优先（SSTF）" class="headerlink" title="1.6.2. 最短寻道时间优先（SSTF）"></a>1.6.2. 最短寻道时间优先（SSTF）</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/304b388ba8be80e4f73319ecc78ab288_71_VoIPSCreencastCoverWnd.png" alt="71_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-3-扫描-电梯（SCAN）"><a href="#1-6-3-扫描-电梯（SCAN）" class="headerlink" title="1.6.3. 扫描/电梯（SCAN）"></a>1.6.3. 扫描/电梯（SCAN）</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/118fe4711116becaa87b0e49f111f2f9_72_VoIPSCreencastCoverWnd.png" alt="72_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-4-循环扫描（C-SCAN）"><a href="#1-6-4-循环扫描（C-SCAN）" class="headerlink" title="1.6.4. 循环扫描（C-SCAN）"></a>1.6.4. 循环扫描（C-SCAN）</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/11598b06df10bd304745a30c205e4d4f_73_VoIPSCreencastCoverWnd.png" alt="73_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-5-LOOK"><a href="#1-6-5-LOOK" class="headerlink" title="1.6.5. LOOK"></a>1.6.5. LOOK</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/5d22fa9bd87f3ba26df28cd7cce7a52b_74_VoIPSCreencastCoverWnd.png" alt="74_VoIPSCreencastCoverWnd.png"></p>
+<h3 id="1-6-6-C-LOOK"><a href="#1-6-6-C-LOOK" class="headerlink" title="1.6.6. C-LOOK"></a>1.6.6. C-LOOK</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/ad5af7f0a16b3af62fb8696e42ef6807_75_VoIPSCreencastCoverWnd.png" alt="75_VoIPSCreencastCoverWnd.png"></p>
+<h1 id="2-光存储器"><a href="#2-光存储器" class="headerlink" title="2. 光存储器"></a>2. 光存储器</h1><h2 id="2-1-CD和CD-ROM"><a href="#2-1-CD和CD-ROM" class="headerlink" title="2.1. CD和CD-ROM"></a>2.1. CD和CD-ROM</h2><ul>
+<li>CD和CD-ROM采用类似的技术，但<strong>CD-ROM更加耐用且有纠错功能</strong></li>
+<li>制造方法<ul>
+<li>用精密聚焦的高强度激光束制造一个<strong>母盘</strong></li>
+<li>以母盘作为模板压印出聚碳酸酯的复制品</li>
+<li>在凹坑表面上镀上一层高反射材料</li>
+<li>使用丙烯酸树脂保护高反射材料</li>
+<li>在丙烯酸树脂层上用丝网印刷术印制标签<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/b347e2608d763c1694f53b63fe73dfb3_76_VoIPSCreencastCoverWnd.png" alt="76_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-读取"><a href="#2-2-读取" class="headerlink" title="2.2. 读取"></a>2.2. 读取</h2><ul>
+<li><p>通过安装在光盘播放器或驱动装置内的低强度激光束从CD或CD-ROM处读取信息</p>
+<ul>
+<li>激光束照在<strong>凹坑（pit）</strong> 上，由于凹坑表面有些不平，因此 光被散射，反射回<strong>低强度</strong>的激光</li>
+<li>激光束照在<strong>台（land）</strong> 上，台的表面光滑平坦，反射回来 的是<strong>高强度</strong>的激光</li>
+</ul>
+</li>
+<li><p>盘片上包含<strong>一条单螺旋</strong>的轨道，轨道上的所有扇区长度相同</p>
+<ul>
+<li>盘片以<strong>变速旋转</strong></li>
+<li>凹坑被激光以<strong>恒定线速度</strong>读出</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f330d060f9a4f72cb6e2130c30da1555_77_VoIPSCreencastCoverWnd.png" alt="77_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+</li>
+<li><p>CD-R</p>
+<ul>
+<li>高强度激光可修改</li>
+<li>只能修改一次</li>
+</ul>
+</li>
+<li><p>CD-RW</p>
+<ul>
+<li>使用两种反射率显著不同的材料</li>
+<li>可以修改多次</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-数字多功能光盘（DVD）"><a href="#2-3-数字多功能光盘（DVD）" class="headerlink" title="2.3. 数字多功能光盘（DVD）"></a>2.3. 数字多功能光盘（DVD）</h2><ul>
+<li>DVD vs CD<ul>
+<li>DVD 上的位组装更紧密：光道间隙，凹坑间距（容量达到4.7GB）</li>
+<li>DVD 采用双层结构：设有半反射层，可以通过调整焦距读取每一 层（容量达到8.5GB）</li>
+<li>DVD-ROM 可以用两面记录数据（容量达到17GB）</li>
+</ul>
+</li>
+<li>DVD-R和DVD-RW</li>
+</ul>
+<h2 id="2-4-高清晰光盘"><a href="#2-4-高清晰光盘" class="headerlink" title="2.4. 高清晰光盘"></a>2.4. 高清晰光盘</h2><p>通过使用更短波长的激光（在蓝-紫光范围），可以实现<strong>更高的位密度</strong>（数据凹坑相对更小）<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/f0993670675b245e097d424221b7de0d_78_VoIPSCreencastCoverWnd.png" alt="78_VoIPSCreencastCoverWnd.png"></p>
+<h2 id="2-5-磁带"><a href="#2-5-磁带" class="headerlink" title="2.5. 磁带"></a>2.5. 磁带</h2><ul>
+<li>与磁盘类似的记录和读取技术</li>
+<li>记录<ul>
+<li>介质是柔韧的聚酯薄膜带，外涂磁性材料</li>
+</ul>
+</li>
+<li>读取<ul>
+<li>磁带：顺序读取（sequential-access）</li>
+<li>磁盘：直接读取（direct-access）</li>
+</ul>
+</li>
+<li>记录<ul>
+<li>磁带：串行记录（蛇形记录）</li>
+<li>磁盘：并行记录</li>
+</ul>
+</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/03/cbdc83c8b51a717766c9e33c2661456d_cbdc83c8b51a717766c9e33c2661456d_79_VoIPSCreencastCoverWnd.png" alt="79_VoIPSCreencastCoverWnd.png"></li>
+</ul>
+<h1 id="3-U盘和固态硬盘"><a href="#3-U盘和固态硬盘" class="headerlink" title="3. U盘和固态硬盘"></a>3. U盘和固态硬盘</h1><p>[[08_内部存储器#4.3 快闪存储器]]</p>
+<ul>
+<li>U盘<ul>
+<li>采用了快闪存储器，属于非易失性半导体存储器</li>
+<li>相比于软盘和光盘：体积小，容量大，携带方便，寿命长达数年</li>
+</ul>
+</li>
+<li>固态硬盘<ul>
+<li>与U盘没有本质区别：容量更大，存储性能更好</li>
+<li>与硬磁盘存储器相比：抗振性好，无噪声，能耗低，发热量低</li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -3537,199 +3537,6 @@
       </tags>
   </entry>
   <entry>
-    <title>12-人机交互复习</title>
-    <url>/posts/6a061927/</url>
-    <content><![CDATA[<h1 id="1-知识点"><a href="#1-知识点" class="headerlink" title="1. 知识点"></a>1. 知识点</h1><h2 id="1-1-什么是人机交互"><a href="#1-1-什么是人机交互" class="headerlink" title="1.1. 什么是人机交互"></a>1.1. 什么是人机交互</h2><ul>
-<li>重要性</li>
-<li>相关领域</li>
-<li>人机交发展历史<ul>
-<li>旧的交互形式作为特例保存下来——为什么图形化取代命令行</li>
-<li>人机交互与软件工程（不好考）<ul>
-<li>前者是对后者的促进和补充，二者结合存在许多困难</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-2-基础知识"><a href="#1-2-基础知识" class="headerlink" title="1.2. 基础知识"></a>1.2. 基础知识</h2><ul>
-<li>交互框架<ul>
-<li>EEC执行评估/活动周期</li>
-</ul>
-</li>
-<li><font color="#c00000">交互形式</font>——需要留意<ul>
-<li>手势、VR、触觉</li>
-<li>直接操纵、隐喻、问答</li>
-</ul>
-</li>
-<li>信息处理模型<ul>
-<li><font color="#c00000">人类处理机模型</font></li>
-<li>格式塔心理学——分析案例</li>
-<li>记忆特征——三个阶段用在哪里</li>
-</ul>
-</li>
-<li>交互设备——今年不重复</li>
-</ul>
-<h2 id="1-3-交互设计目标与原则"><a href="#1-3-交互设计目标与原则" class="headerlink" title="1.3. 交互设计目标与原则"></a>1.3. 交互设计目标与原则</h2><ul>
-<li>可用性目标<ul>
-<li>五个属性</li>
-</ul>
-</li>
-<li>用户体验目标</li>
-<li>简易的可用性工程<ul>
-<li>可用性度量</li>
-<li>四种主要技术</li>
-</ul>
-</li>
-<li>交互设计原则<ul>
-<li><font color="#c00000">启发式原则</font></li>
-<li>黄金原则</li>
-<li>七项原则</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-4-交互设计过程"><a href="#1-4-交互设计过程" class="headerlink" title="1.4. 交互设计过程"></a>1.4. 交互设计过程</h2><ul>
-<li>设计过程的基本活动和特征</li>
-<li>主要问题<ul>
-<li>用户、需求、候选方案、决策</li>
-</ul>
-</li>
-<li>交互设计生命周期<ul>
-<li>星型模型</li>
-<li>可用性工程生命周期模型</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-5-交互式系统的需求"><a href="#1-5-交互式系统的需求" class="headerlink" title="1.5. 交互式系统的需求"></a>1.5. 交互式系统的需求</h2><ul>
-<li><p>产品特性  </p>
-</li>
-<li><p>用户特性  </p>
-</li>
-<li><p>人物角色——别人的设计有什么问题</p>
-</li>
-<li><p>需求分析获取</p>
-<ul>
-<li>场景观察  </li>
-<li><strong>HTA 层次化考核——好考</strong><ul>
-<li>文字和图形描述</li>
-</ul>
-</li>
-<li>原型</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-6-交互式系统设计"><a href="#1-6-交互式系统设计" class="headerlink" title="1.6. 交互式系统设计"></a>1.6. 交互式系统设计</h2><ul>
-<li><strong>简化策略</strong>：删除、组织、隐藏、转移</li>
-<li>设计框架</li>
-<li>设计中的折中</li>
-<li>细节<ul>
-<li>让软件体贴</li>
-<li>加快响应时间</li>
-<li>减轻记忆负担</li>
-<li>减少等待感</li>
-<li>设计模式</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-7-交互设计模型"><a href="#1-7-交互设计模型" class="headerlink" title="1.7. 交互设计模型"></a>1.7. 交互设计模型</h2><ul>
-<li><font color="#c00000">预测模型</font><ul>
-<li>GOMS  </li>
-<li>kLM——大题  </li>
-<li>FITTS——会算</li>
-</ul>
-</li>
-<li>状态转移网络</li>
-<li>语言模型<ul>
-<li>BNF表达式</li>
-</ul>
-</li>
-<li>系统模型<ul>
-<li>Z标记法</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-8-评估"><a href="#1-8-评估" class="headerlink" title="1.8. 评估"></a>1.8. <font color="#c00000">评估</font></h2><p>一定会考怎么评估</p>
-<ul>
-<li>评估泛型和方法<ul>
-<li>快速评估</li>
-<li>可用性测试</li>
-<li>实地研究</li>
-<li>预测性评估</li>
-</ul>
-</li>
-<li>评估方法的选择<ul>
-<li>不同方法的适用阶段</li>
-<li>评估方法的组合</li>
-</ul>
-</li>
-<li>DECIDE评估框架</li>
-<li><font color="#c00000">小规模实验的重要性</font>——必有</li>
-</ul>
-<p><font color="#c00000">用户测试、启发式评估必考大题</font></p>
-<h2 id="1-9-观察用户"><a href="#1-9-观察用户" class="headerlink" title="1.9. 观察用户"></a>1.9. 观察用户</h2><ul>
-<li>观察方式<ul>
-<li>实验室vs实地</li>
-</ul>
-</li>
-<li>观察框架<ul>
-<li>减少干扰、完成目标</li>
-</ul>
-</li>
-<li>数据记录方式<ul>
-<li>纸笔</li>
-<li>音视频</li>
-<li>日志</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-10-询问用户和专家"><a href="#1-10-询问用户和专家" class="headerlink" title="1.10. 询问用户和专家"></a>1.10. 询问用户和专家</h2><ul>
-<li>访谈<ul>
-<li>分类和技巧</li>
-<li>焦点小组</li>
-</ul>
-</li>
-<li>问卷调查<ul>
-<li>问卷设计与组织</li>
-</ul>
-</li>
-<li>认知走查</li>
-<li><font color="#c00000">启发式评估</font><ul>
-<li>评估原则</li>
-<li>评估步骤</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-11-用户测试"><a href="#1-11-用户测试" class="headerlink" title="1.11. 用户测试"></a>1.11. 用户测试</h2><ul>
-<li><font color="#c00000">复习DECIDE评估框架</font><ul>
-<li>定义目标和问题</li>
-<li>选择参与者</li>
-<li>设计测试任务</li>
-<li>明确测试步骤</li>
-<li>数据搜集与分析</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-12-以用户为中心"><a href="#1-12-以用户为中心" class="headerlink" title="1.12. 以用户为中心"></a>1.12. 以用户为中心</h2><p>就考一些概念，对应的英文是什么</p>
-<ul>
-<li>以用户为中心：<ul>
-<li>UCD，英文怎么写</li>
-<li>User Center Design</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-试卷"><a href="#2-试卷" class="headerlink" title="2. 试卷"></a>2. 试卷</h1><h2 id="2-1-选择"><a href="#2-1-选择" class="headerlink" title="2.1. 选择"></a>2.1. 选择</h2><p>选择题40分<br>20题<br>从慕课上出<br>少量题目可能没见过</p>
-<h2 id="2-2-填空题"><a href="#2-2-填空题" class="headerlink" title="2.2. 填空题"></a>2.2. 填空题</h2><p>概念题</p>
-<p>UCD、GOMS</p>
-<h2 id="2-3-简答题"><a href="#2-3-简答题" class="headerlink" title="2.3. 简答题"></a>2.3. 简答题</h2><p>实验设计一定会考察</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_人机交互</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2-交互设计的原则和目标</title>
     <url>/posts/7e280519/</url>
     <content><![CDATA[<h1 id="1-交互框架"><a href="#1-交互框架" class="headerlink" title="1. 交互框架"></a>1. 交互框架</h1><ul>
@@ -4108,6 +3915,199 @@
       </tags>
   </entry>
   <entry>
+    <title>12-人机交互复习</title>
+    <url>/posts/6a061927/</url>
+    <content><![CDATA[<h1 id="1-知识点"><a href="#1-知识点" class="headerlink" title="1. 知识点"></a>1. 知识点</h1><h2 id="1-1-什么是人机交互"><a href="#1-1-什么是人机交互" class="headerlink" title="1.1. 什么是人机交互"></a>1.1. 什么是人机交互</h2><ul>
+<li>重要性</li>
+<li>相关领域</li>
+<li>人机交发展历史<ul>
+<li>旧的交互形式作为特例保存下来——为什么图形化取代命令行</li>
+<li>人机交互与软件工程（不好考）<ul>
+<li>前者是对后者的促进和补充，二者结合存在许多困难</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-基础知识"><a href="#1-2-基础知识" class="headerlink" title="1.2. 基础知识"></a>1.2. 基础知识</h2><ul>
+<li>交互框架<ul>
+<li>EEC执行评估/活动周期</li>
+</ul>
+</li>
+<li><font color="#c00000">交互形式</font>——需要留意<ul>
+<li>手势、VR、触觉</li>
+<li>直接操纵、隐喻、问答</li>
+</ul>
+</li>
+<li>信息处理模型<ul>
+<li><font color="#c00000">人类处理机模型</font></li>
+<li>格式塔心理学——分析案例</li>
+<li>记忆特征——三个阶段用在哪里</li>
+</ul>
+</li>
+<li>交互设备——今年不重复</li>
+</ul>
+<h2 id="1-3-交互设计目标与原则"><a href="#1-3-交互设计目标与原则" class="headerlink" title="1.3. 交互设计目标与原则"></a>1.3. 交互设计目标与原则</h2><ul>
+<li>可用性目标<ul>
+<li>五个属性</li>
+</ul>
+</li>
+<li>用户体验目标</li>
+<li>简易的可用性工程<ul>
+<li>可用性度量</li>
+<li>四种主要技术</li>
+</ul>
+</li>
+<li>交互设计原则<ul>
+<li><font color="#c00000">启发式原则</font></li>
+<li>黄金原则</li>
+<li>七项原则</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4-交互设计过程"><a href="#1-4-交互设计过程" class="headerlink" title="1.4. 交互设计过程"></a>1.4. 交互设计过程</h2><ul>
+<li>设计过程的基本活动和特征</li>
+<li>主要问题<ul>
+<li>用户、需求、候选方案、决策</li>
+</ul>
+</li>
+<li>交互设计生命周期<ul>
+<li>星型模型</li>
+<li>可用性工程生命周期模型</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-5-交互式系统的需求"><a href="#1-5-交互式系统的需求" class="headerlink" title="1.5. 交互式系统的需求"></a>1.5. 交互式系统的需求</h2><ul>
+<li><p>产品特性  </p>
+</li>
+<li><p>用户特性  </p>
+</li>
+<li><p>人物角色——别人的设计有什么问题</p>
+</li>
+<li><p>需求分析获取</p>
+<ul>
+<li>场景观察  </li>
+<li><strong>HTA 层次化考核——好考</strong><ul>
+<li>文字和图形描述</li>
+</ul>
+</li>
+<li>原型</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-6-交互式系统设计"><a href="#1-6-交互式系统设计" class="headerlink" title="1.6. 交互式系统设计"></a>1.6. 交互式系统设计</h2><ul>
+<li><strong>简化策略</strong>：删除、组织、隐藏、转移</li>
+<li>设计框架</li>
+<li>设计中的折中</li>
+<li>细节<ul>
+<li>让软件体贴</li>
+<li>加快响应时间</li>
+<li>减轻记忆负担</li>
+<li>减少等待感</li>
+<li>设计模式</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-7-交互设计模型"><a href="#1-7-交互设计模型" class="headerlink" title="1.7. 交互设计模型"></a>1.7. 交互设计模型</h2><ul>
+<li><font color="#c00000">预测模型</font><ul>
+<li>GOMS  </li>
+<li>kLM——大题  </li>
+<li>FITTS——会算</li>
+</ul>
+</li>
+<li>状态转移网络</li>
+<li>语言模型<ul>
+<li>BNF表达式</li>
+</ul>
+</li>
+<li>系统模型<ul>
+<li>Z标记法</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-8-评估"><a href="#1-8-评估" class="headerlink" title="1.8. 评估"></a>1.8. <font color="#c00000">评估</font></h2><p>一定会考怎么评估</p>
+<ul>
+<li>评估泛型和方法<ul>
+<li>快速评估</li>
+<li>可用性测试</li>
+<li>实地研究</li>
+<li>预测性评估</li>
+</ul>
+</li>
+<li>评估方法的选择<ul>
+<li>不同方法的适用阶段</li>
+<li>评估方法的组合</li>
+</ul>
+</li>
+<li>DECIDE评估框架</li>
+<li><font color="#c00000">小规模实验的重要性</font>——必有</li>
+</ul>
+<p><font color="#c00000">用户测试、启发式评估必考大题</font></p>
+<h2 id="1-9-观察用户"><a href="#1-9-观察用户" class="headerlink" title="1.9. 观察用户"></a>1.9. 观察用户</h2><ul>
+<li>观察方式<ul>
+<li>实验室vs实地</li>
+</ul>
+</li>
+<li>观察框架<ul>
+<li>减少干扰、完成目标</li>
+</ul>
+</li>
+<li>数据记录方式<ul>
+<li>纸笔</li>
+<li>音视频</li>
+<li>日志</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-10-询问用户和专家"><a href="#1-10-询问用户和专家" class="headerlink" title="1.10. 询问用户和专家"></a>1.10. 询问用户和专家</h2><ul>
+<li>访谈<ul>
+<li>分类和技巧</li>
+<li>焦点小组</li>
+</ul>
+</li>
+<li>问卷调查<ul>
+<li>问卷设计与组织</li>
+</ul>
+</li>
+<li>认知走查</li>
+<li><font color="#c00000">启发式评估</font><ul>
+<li>评估原则</li>
+<li>评估步骤</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-11-用户测试"><a href="#1-11-用户测试" class="headerlink" title="1.11. 用户测试"></a>1.11. 用户测试</h2><ul>
+<li><font color="#c00000">复习DECIDE评估框架</font><ul>
+<li>定义目标和问题</li>
+<li>选择参与者</li>
+<li>设计测试任务</li>
+<li>明确测试步骤</li>
+<li>数据搜集与分析</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-12-以用户为中心"><a href="#1-12-以用户为中心" class="headerlink" title="1.12. 以用户为中心"></a>1.12. 以用户为中心</h2><p>就考一些概念，对应的英文是什么</p>
+<ul>
+<li>以用户为中心：<ul>
+<li>UCD，英文怎么写</li>
+<li>User Center Design</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-试卷"><a href="#2-试卷" class="headerlink" title="2. 试卷"></a>2. 试卷</h1><h2 id="2-1-选择"><a href="#2-1-选择" class="headerlink" title="2.1. 选择"></a>2.1. 选择</h2><p>选择题40分<br>20题<br>从慕课上出<br>少量题目可能没见过</p>
+<h2 id="2-2-填空题"><a href="#2-2-填空题" class="headerlink" title="2.2. 填空题"></a>2.2. 填空题</h2><p>概念题</p>
+<p>UCD、GOMS</p>
+<h2 id="2-3-简答题"><a href="#2-3-简答题" class="headerlink" title="2.3. 简答题"></a>2.3. 简答题</h2><p>实验设计一定会考察</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>3-评估的基础知识</title>
     <url>/posts/55aec671/</url>
     <content><![CDATA[<h1 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h1><ul>
@@ -4302,189 +4302,6 @@
 </li>
 <li>所需资源</li>
 </ol>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_人机交互</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4-实验设计</title>
-    <url>/posts/276b8acd/</url>
-    <content><![CDATA[<h1 id="1-研究假设"><a href="#1-研究假设" class="headerlink" title="1. 研究假设"></a>1. 研究假设</h1><h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><ul>
-<li>实验通常从研究假设开始</li>
-<li>假设类型<ul>
-<li><strong>零假设</strong>Null Hypothesis<ul>
-<li>假设不同实验条件不会产生差异</li>
-</ul>
-</li>
-<li><strong>备择假设</strong><ul>
-<li>存在差异，往往是一个与零假设相反的陈述。</li>
-</ul>
-</li>
-<li>两者应该互斥</li>
-</ul>
-</li>
-<li><font color="#c00000">实验的目标</font>是找到统计学证据来反驳或否定零假设，以支持备择假设</li>
-</ul>
-<p>一个成功的实验，从一个或多个好的假设开始</p>
-<h2 id="1-2-自变量和应变量"><a href="#1-2-自变量和应变量" class="headerlink" title="1.2. 自变量和应变量"></a>1.2. 自变量和应变量</h2><ul>
-<li><p>自变量 Independent Variables</p>
-<ul>
-<li>指的是研究者感兴趣的因素或因变量<strong>变化的可能原因</strong></li>
-<li>实验条件：一个自变量至少需要2个不同取值，这些取值被称为实验条件test conditions</li>
-<li>如：不同技术和设备，不同类型设计</li>
-</ul>
-</li>
-<li><p>因变量 Dependent Variables</p>
-<ul>
-<li>指的是研究者感兴趣的<strong>结果或效果</strong></li>
-<li>如：任务完成事件、速度、准确性、错误率…</li>
-<li><strong>应变量必须明确定义</strong></li>
-</ul>
-</li>
-</ul>
-<p>研究者希望找出自变量的变化是否会引起因变量的变化（<strong>实验必须可复现</strong>）</p>
-<ul>
-<li><p>如何区分</p>
-<ul>
-<li>自变量时实验人员可以控制的实验条件</li>
-<li>因变量时研究者需要测量的实验结果</li>
-</ul>
-</li>
-<li><p>例子：零假设，下拉式菜单和弹出式菜单在定位界面的时间上没有开销差异。</p>
-<ul>
-<li>自变量：菜单类型</li>
-<li>因变量：定位时间</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-实验构成"><a href="#2-实验构成" class="headerlink" title="2. 实验构成"></a>2. 实验构成</h1><ul>
-<li><p><strong>实验条件</strong></p>
-<ul>
-<li>指我们需要比较不同技术、设备和程序</li>
-</ul>
-</li>
-<li><p><strong>实验单位</strong></p>
-<ul>
-<li>指的是我们<strong>应用实验条件的对象</strong></li>
-<li>在人机交互研究领域，通常指具有特定特征的人类受试者。特征指年龄、性别等</li>
-</ul>
-</li>
-<li><p><strong>分配方式</strong></p>
-<ul>
-<li>实验单位分配到不同实验条件的方式</li>
-</ul>
-</li>
-<li><p>例子：</p>
-<ul>
-<li>比较QWERTY键盘和DVORAK键盘打字速度</li>
-<li>假设：没有差异</li>
-<li>实验条件：键盘类型</li>
-<li>自变量：键盘类型</li>
-<li>为了公平，找受试者之前都没有使用这两种键盘的经验</li>
-<li>分配：随机选择</li>
-</ul>
-</li>
-</ul>
-<h1 id="3-实验设计"><a href="#3-实验设计" class="headerlink" title="3. 实验设计"></a>3. 实验设计</h1><ul>
-<li><p>特点:</p>
-<ol>
-<li>至少两种条件或组（实验组，对照组）</li>
-<li>以至少一个可检验的研究假设为基础，并旨在验证他们</li>
-<li>因变量通常<strong>定量</strong>测量</li>
-<li>通过各种统计显著性检验对结果进行分析, 以消除潜在偏差为目标来设计和进行</li>
-<li>具备不同的参与者样本, 在不同的时间，不同的地点，由不同的参与者进行复现</li>
-</ol>
-</li>
-<li><p>注意事项</p>
-<ol>
-<li>需要定义明确的、合理范围内的研究假设</li>
-<li>自变量的数量和值直接决定了实验有多少条件</li>
-<li>需要确定自变量是谁，如何取值？因变量是谁，如何度量？</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-1-减小疲劳和学习影响"><a href="#3-1-减小疲劳和学习影响" class="headerlink" title="3.1. 减小疲劳和学习影响"></a>3.1. 减小疲劳和学习影响</h2><p>假设有4种实验条件“ABCD”和4个测试用户“甲乙丙丁”，如何应 用拉丁方设计实验过程，尽量减小学习和疲劳的影响</p>
-<p>左边有三个都是BC任务连在一起，如果B很累或者BC有学习效应就会对实验数据造成影响。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F02%2F11-28-00-0184dd9e49ffc8ac54f8082059f47c3a-20240102112800-ec64f7.png" alt="image.png"></p>
-<h1 id="4-实验结构"><a href="#4-实验结构" class="headerlink" title="4. 实验结构"></a>4. 实验结构</h1><ul>
-<li>实验中要研究多少自变量？<ul>
-<li>基本设计 or 析因设计</li>
-</ul>
-</li>
-<li>每个自变量有多少个不同的值？<ul>
-<li>条件数 =&gt; 组间设计、组内设计、列区设计</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-49-54-c37836752e3882a28f8f113090983520-20231229104952-d45df8.png" alt="image.png"></p>
-<h1 id="5-组间设计与组内设计"><a href="#5-组间设计与组内设计" class="headerlink" title="5. 组间设计与组内设计"></a>5. 组间设计与组内设计</h1><p>理想情况下组件设计更好，但实际上可能因为用户数量不够选择组内设计。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-52-02-609e737bc6785c764a56a5ad0634a91b-20231229105201-7ebdbc.png" alt="image.png"></p>
-<h2 id="5-1-组间设计"><a href="#5-1-组间设计" class="headerlink" title="5.1. 组间设计"></a>5.1. 组间设计</h2><ul>
-<li><p><strong>每个参与者只暴露在一种实验条件下</strong></p>
-</li>
-<li><p>参与组的数量直接对应于实验条件的数量</p>
-</li>
-<li><p>优点</p>
-<ul>
-<li>设计更简洁</li>
-<li>避免学习效应</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>结果受个体差异大</li>
-<li>样本大</li>
-</ul>
-</li>
-</ul>
-<p>对于简单任务，个体差异小，有条件时可以使用组间设计</p>
-<h2 id="5-2-组内设计"><a href="#5-2-组内设计" class="headerlink" title="5.2. 组内设计"></a>5.2. 组内设计</h2><ul>
-<li><p><strong>一个参与者暴露在多个条件下</strong></p>
-</li>
-<li><p>优点</p>
-<ul>
-<li>样本小</li>
-<li>隔离个体差异</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>疲劳问题</li>
-<li>存在学习效应</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-3-选择设计方法"><a href="#5-3-选择设计方法" class="headerlink" title="5.3. 选择设计方法"></a>5.3. 选择设计方法</h2><ul>
-<li><p>组间设计</p>
-<ul>
-<li>任务简单，个体差异有限</li>
-<li>受学习效应影响大</li>
-<li>一些任务不可能使用组内（例：不可能既是新手又是老手）</li>
-</ul>
-</li>
-<li><p>组内设计</p>
-<ul>
-<li>个体差异大的任务，学习效果不容易受到影响的任务</li>
-<li>或目标与群体很小的任务</li>
-<li>需要考虑控制于组内设计相关的学习效果、疲劳和其他潜在问题的负面因素</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-多自变量的实验"><a href="#6-多自变量的实验" class="headerlink" title="6. 多自变量的实验"></a>6. 多自变量的实验</h1><h2 id="6-1-析因设计-Factorial-Design"><a href="#6-1-析因设计-Factorial-Design" class="headerlink" title="6.1. 析因设计 Factorial Design"></a>6.1. 析因设计 Factorial Design</h2><ul>
-<li><strong>优点</strong>：允许在一个实验中研究两个或两个以上自变量之间的相互作用的影响</li>
-<li>相互作用可以被描述为“一个自变量对因变量的不同影响，取决于另一个自变量的特定取值”</li>
-<li>析因设计中条件的数量由自变量的总数和每个自变量的取值决定</li>
-</ul>
-<p>举例：比较使用三种类型键盘(QWERTY键盘、DVORAK键盘和字母键盘)时的打字速度，且调查不同的任务(写作和抄写)对打字速度的影响。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-38-80c0c6ba4faee72ea0da3341882db425-20231229110137-3fd385.png" alt="image.png"></p>
-<p>条件数： <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="5.028ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 2222.4 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(722.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(1722.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></svg></mjx-container></p>
-<h2 id="6-2-裂区设计split-plot-design"><a href="#6-2-裂区设计split-plot-design" class="headerlink" title="6.2. 裂区设计split-plot design"></a>6.2. 裂区设计split-plot design</h2><p>析因研究中的一种设计，既有组间成分，也有组内成分。</p>
-<p>举例：</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-21-71cba743181699807fe45ed3cc184d3f-20231229110120-4709e9.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2023_Fall_人机交互</category>
@@ -4789,6 +4606,189 @@
 </ul>
 </li>
 </ul>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4-实验设计</title>
+    <url>/posts/276b8acd/</url>
+    <content><![CDATA[<h1 id="1-研究假设"><a href="#1-研究假设" class="headerlink" title="1. 研究假设"></a>1. 研究假设</h1><h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><ul>
+<li>实验通常从研究假设开始</li>
+<li>假设类型<ul>
+<li><strong>零假设</strong>Null Hypothesis<ul>
+<li>假设不同实验条件不会产生差异</li>
+</ul>
+</li>
+<li><strong>备择假设</strong><ul>
+<li>存在差异，往往是一个与零假设相反的陈述。</li>
+</ul>
+</li>
+<li>两者应该互斥</li>
+</ul>
+</li>
+<li><font color="#c00000">实验的目标</font>是找到统计学证据来反驳或否定零假设，以支持备择假设</li>
+</ul>
+<p>一个成功的实验，从一个或多个好的假设开始</p>
+<h2 id="1-2-自变量和应变量"><a href="#1-2-自变量和应变量" class="headerlink" title="1.2. 自变量和应变量"></a>1.2. 自变量和应变量</h2><ul>
+<li><p>自变量 Independent Variables</p>
+<ul>
+<li>指的是研究者感兴趣的因素或因变量<strong>变化的可能原因</strong></li>
+<li>实验条件：一个自变量至少需要2个不同取值，这些取值被称为实验条件test conditions</li>
+<li>如：不同技术和设备，不同类型设计</li>
+</ul>
+</li>
+<li><p>因变量 Dependent Variables</p>
+<ul>
+<li>指的是研究者感兴趣的<strong>结果或效果</strong></li>
+<li>如：任务完成事件、速度、准确性、错误率…</li>
+<li><strong>应变量必须明确定义</strong></li>
+</ul>
+</li>
+</ul>
+<p>研究者希望找出自变量的变化是否会引起因变量的变化（<strong>实验必须可复现</strong>）</p>
+<ul>
+<li><p>如何区分</p>
+<ul>
+<li>自变量时实验人员可以控制的实验条件</li>
+<li>因变量时研究者需要测量的实验结果</li>
+</ul>
+</li>
+<li><p>例子：零假设，下拉式菜单和弹出式菜单在定位界面的时间上没有开销差异。</p>
+<ul>
+<li>自变量：菜单类型</li>
+<li>因变量：定位时间</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-实验构成"><a href="#2-实验构成" class="headerlink" title="2. 实验构成"></a>2. 实验构成</h1><ul>
+<li><p><strong>实验条件</strong></p>
+<ul>
+<li>指我们需要比较不同技术、设备和程序</li>
+</ul>
+</li>
+<li><p><strong>实验单位</strong></p>
+<ul>
+<li>指的是我们<strong>应用实验条件的对象</strong></li>
+<li>在人机交互研究领域，通常指具有特定特征的人类受试者。特征指年龄、性别等</li>
+</ul>
+</li>
+<li><p><strong>分配方式</strong></p>
+<ul>
+<li>实验单位分配到不同实验条件的方式</li>
+</ul>
+</li>
+<li><p>例子：</p>
+<ul>
+<li>比较QWERTY键盘和DVORAK键盘打字速度</li>
+<li>假设：没有差异</li>
+<li>实验条件：键盘类型</li>
+<li>自变量：键盘类型</li>
+<li>为了公平，找受试者之前都没有使用这两种键盘的经验</li>
+<li>分配：随机选择</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-实验设计"><a href="#3-实验设计" class="headerlink" title="3. 实验设计"></a>3. 实验设计</h1><ul>
+<li><p>特点:</p>
+<ol>
+<li>至少两种条件或组（实验组，对照组）</li>
+<li>以至少一个可检验的研究假设为基础，并旨在验证他们</li>
+<li>因变量通常<strong>定量</strong>测量</li>
+<li>通过各种统计显著性检验对结果进行分析, 以消除潜在偏差为目标来设计和进行</li>
+<li>具备不同的参与者样本, 在不同的时间，不同的地点，由不同的参与者进行复现</li>
+</ol>
+</li>
+<li><p>注意事项</p>
+<ol>
+<li>需要定义明确的、合理范围内的研究假设</li>
+<li>自变量的数量和值直接决定了实验有多少条件</li>
+<li>需要确定自变量是谁，如何取值？因变量是谁，如何度量？</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-1-减小疲劳和学习影响"><a href="#3-1-减小疲劳和学习影响" class="headerlink" title="3.1. 减小疲劳和学习影响"></a>3.1. 减小疲劳和学习影响</h2><p>假设有4种实验条件“ABCD”和4个测试用户“甲乙丙丁”，如何应 用拉丁方设计实验过程，尽量减小学习和疲劳的影响</p>
+<p>左边有三个都是BC任务连在一起，如果B很累或者BC有学习效应就会对实验数据造成影响。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F02%2F11-28-00-0184dd9e49ffc8ac54f8082059f47c3a-20240102112800-ec64f7.png" alt="image.png"></p>
+<h1 id="4-实验结构"><a href="#4-实验结构" class="headerlink" title="4. 实验结构"></a>4. 实验结构</h1><ul>
+<li>实验中要研究多少自变量？<ul>
+<li>基本设计 or 析因设计</li>
+</ul>
+</li>
+<li>每个自变量有多少个不同的值？<ul>
+<li>条件数 =&gt; 组间设计、组内设计、列区设计</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-49-54-c37836752e3882a28f8f113090983520-20231229104952-d45df8.png" alt="image.png"></p>
+<h1 id="5-组间设计与组内设计"><a href="#5-组间设计与组内设计" class="headerlink" title="5. 组间设计与组内设计"></a>5. 组间设计与组内设计</h1><p>理想情况下组件设计更好，但实际上可能因为用户数量不够选择组内设计。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-52-02-609e737bc6785c764a56a5ad0634a91b-20231229105201-7ebdbc.png" alt="image.png"></p>
+<h2 id="5-1-组间设计"><a href="#5-1-组间设计" class="headerlink" title="5.1. 组间设计"></a>5.1. 组间设计</h2><ul>
+<li><p><strong>每个参与者只暴露在一种实验条件下</strong></p>
+</li>
+<li><p>参与组的数量直接对应于实验条件的数量</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>设计更简洁</li>
+<li>避免学习效应</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>结果受个体差异大</li>
+<li>样本大</li>
+</ul>
+</li>
+</ul>
+<p>对于简单任务，个体差异小，有条件时可以使用组间设计</p>
+<h2 id="5-2-组内设计"><a href="#5-2-组内设计" class="headerlink" title="5.2. 组内设计"></a>5.2. 组内设计</h2><ul>
+<li><p><strong>一个参与者暴露在多个条件下</strong></p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>样本小</li>
+<li>隔离个体差异</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>疲劳问题</li>
+<li>存在学习效应</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-3-选择设计方法"><a href="#5-3-选择设计方法" class="headerlink" title="5.3. 选择设计方法"></a>5.3. 选择设计方法</h2><ul>
+<li><p>组间设计</p>
+<ul>
+<li>任务简单，个体差异有限</li>
+<li>受学习效应影响大</li>
+<li>一些任务不可能使用组内（例：不可能既是新手又是老手）</li>
+</ul>
+</li>
+<li><p>组内设计</p>
+<ul>
+<li>个体差异大的任务，学习效果不容易受到影响的任务</li>
+<li>或目标与群体很小的任务</li>
+<li>需要考虑控制于组内设计相关的学习效果、疲劳和其他潜在问题的负面因素</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-多自变量的实验"><a href="#6-多自变量的实验" class="headerlink" title="6. 多自变量的实验"></a>6. 多自变量的实验</h1><h2 id="6-1-析因设计-Factorial-Design"><a href="#6-1-析因设计-Factorial-Design" class="headerlink" title="6.1. 析因设计 Factorial Design"></a>6.1. 析因设计 Factorial Design</h2><ul>
+<li><strong>优点</strong>：允许在一个实验中研究两个或两个以上自变量之间的相互作用的影响</li>
+<li>相互作用可以被描述为“一个自变量对因变量的不同影响，取决于另一个自变量的特定取值”</li>
+<li>析因设计中条件的数量由自变量的总数和每个自变量的取值决定</li>
+</ul>
+<p>举例：比较使用三种类型键盘(QWERTY键盘、DVORAK键盘和字母键盘)时的打字速度，且调查不同的任务(写作和抄写)对打字速度的影响。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-38-80c0c6ba4faee72ea0da3341882db425-20231229110137-3fd385.png" alt="image.png"></p>
+<p>条件数： <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="5.028ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 2222.4 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(722.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(1722.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></svg></mjx-container></p>
+<h2 id="6-2-裂区设计split-plot-design"><a href="#6-2-裂区设计split-plot-design" class="headerlink" title="6.2. 裂区设计split-plot design"></a>6.2. 裂区设计split-plot design</h2><p>析因研究中的一种设计，既有组间成分，也有组内成分。</p>
+<p>举例：</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-21-71cba743181699807fe45ed3cc184d3f-20231229110120-4709e9.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2023_Fall_人机交互</category>
@@ -5679,6 +5679,106 @@
       </tags>
   </entry>
   <entry>
+    <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
+    <url>/posts/b48e71af/</url>
+    <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
+<li>提供消息服务的应用程序</li>
+<li>主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然</li>
+</ul>
+<p>消息代理 broker：</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png" alt="image.png"></p>
+<h1 id="2-JMS👍"><a href="#2-JMS👍" class="headerlink" title="2. JMS👍"></a>2. JMS👍</h1><ul>
+<li>Java Message Service<ul>
+<li>Jms规定了ConnectionFactory、Connection、Session等接口/类</li>
+</ul>
+</li>
+<li>JMS是一个Java标准，使用消息代理（message broker）的统一API</li>
+<li>JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持</li>
+</ul>
+<h1 id="3-ActiveMQ-Artemis"><a href="#3-ActiveMQ-Artemis" class="headerlink" title="3. ActiveMQ Artemis"></a>3. ActiveMQ Artemis</h1><ul>
+<li>支持协议<ul>
+<li>JMS</li>
+<li>AMQP: Advanced Message Queueing Protocol</li>
+<li>MQTT: Message Queuing Telemetry Transport</li>
+</ul>
+</li>
+<li>支持Native内存模式和JVM内存模式<ul>
+<li>Native可以绕过JVM，加快访问</li>
+</ul>
+</li>
+<li>消息持久化</li>
+</ul>
+<h2 id="3-1-直接使用JMS接口发送与接受消息"><a href="#3-1-直接使用JMS接口发送与接受消息" class="headerlink" title="3.1. 直接使用JMS接口发送与接受消息"></a>3.1. 直接使用JMS接口发送与接受消息</h2><ol>
+<li>JMS规范：jakarta.jms-api-2.0.3.jar</li>
+<li>atemis客户端：artemis-jms-client-2.17.0.jar<ul>
+<li>与Spring无关</li>
+</ul>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ConnectionFactory</span> <span class="variable">connectionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ActiveMQConnectionFactory</span>(BROKER_URL, USERNAME, PASSWORD);</span><br><span class="line"><span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> connectionFactory.createConnection();</span><br><span class="line">connection.start();</span><br><span class="line"><span class="type">Session</span> <span class="variable">session</span> <span class="operator">=</span> connection.createSession(<span class="literal">false</span>, Session.AUTO_ACKNOWLEDGE);</span><br><span class="line"><span class="type">Destination</span> <span class="variable">destination</span> <span class="operator">=</span> session.createQueue(<span class="string">"queue.example"</span>);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="3-2-关键概念👍"><a href="#3-2-关键概念👍" class="headerlink" title="3.2. 关键概念👍"></a>3.2. 关键概念👍</h2><ul>
+<li>Message：类似广播, 生产端</li>
+<li>Destination：队列或主题。消费端<ul>
+<li>三种指定方式：<ol>
+<li>application.yml（default-destination）</li>
+<li>@Bean（Destination对象）</li>
+<li>直接String指定</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-JmsTemplate"><a href="#3-3-JmsTemplate" class="headerlink" title="3.3. JmsTemplate"></a>3.3. JmsTemplate</h2><ul>
+<li>JmsTemplate是Spring对JMS集成支持的核心</li>
+<li>发送的两个方法：send、convertAndSend</li>
+</ul>
+<h2 id="3-4-消息转换器-MessageConverter👍"><a href="#3-4-消息转换器-MessageConverter👍" class="headerlink" title="3.4. 消息转换器 MessageConverter👍"></a>3.4. 消息转换器 MessageConverter👍</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
+<ul>
+<li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
+<li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
+<li>typeId：目的是告诉对方是什么类型，以便于反序列化</li>
+<li>Message.setStringProperty，随属性集传输</li>
+<li>消息转换器使用@Configuration定义成Bean</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F17-02-28-148a7c245eb17542de98c2c91efe9929-20231231170228-794f8b.png" alt="image.png"></p>
+<h2 id="3-5-接收模式"><a href="#3-5-接收模式" class="headerlink" title="3.5. 接收模式"></a>3.5. 接收模式</h2><p><strong>拉取和推送都需要消息转换器做反序列化。</strong></p>
+<h3 id="3-5-1-拉取模式-pull-model"><a href="#3-5-1-拉取模式-pull-model" class="headerlink" title="3.5.1. 拉取模式 pull model"></a>3.5.1. 拉取模式 pull model</h3><p>JmsTemplate支持<br>访问URL</p>
+<h3 id="3-5-2-推送模式-push-model"><a href="#3-5-2-推送模式-push-model" class="headerlink" title="3.5.2. 推送模式 push model"></a>3.5.2. 推送模式 push model</h3><p>需要定义消息监听器<br>@JmsListener</p>
+<h1 id="4-RabbitMQ"><a href="#4-RabbitMQ" class="headerlink" title="4. RabbitMQ"></a>4. RabbitMQ</h1><p><strong>实现AMQP协议</strong>。<br>RabbitMQ基础概念详细介绍：<a class="link" href="https://www.cnblogs.com/williamjie/p/9481774.html">RabbitMQ基础概念详细介绍 - 割肉机 - 博客园 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>也需要消息转换器，虽然包路径不一样，但是功能一样。</p>
+<h2 id="4-1-概念👍"><a href="#4-1-概念👍" class="headerlink" title="4.1. 概念👍"></a>4.1. 概念👍</h2><ul>
+<li>ConnectionFactory、Connection、Channel</li>
+<li>Exchange：<ul>
+<li>Default、Direct、Topic、Fanout、Headers、Dead letter</li>
+</ul>
+</li>
+<li>Queue</li>
+<li>Routing key：exchange根据routing key确定消息发往哪个队列<ul>
+<li><strong>JMS里没有这个概念</strong></li>
+</ul>
+</li>
+<li>Binding key</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F20-31-55-d57a847ec3e2d2ed48f59f6b49ec2e0c-20231116203155-0bdbb4.png" alt="image.png"></p>
+<h2 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2. 使用"></a>4.2. 使用</h2><ol>
+<li>添加依赖</li>
+<li>配置文件</li>
+<li>需要到控制台创建exchange，queue，binding</li>
+</ol>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">rabbitmq:</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">template:</span></span><br><span class="line"><span class="attr">exchange:</span> <span class="string">tacocloud.order</span></span><br></pre></td></tr></table></figure></div>
+
+<p>生产放指定exchange、routing key<br>消费方只需关注队列名字</p>
+<p>也有拉取模式和推送模式，也需要消息的转换</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1-依赖注入</title>
     <url>/posts/a22fb360/</url>
     <content><![CDATA[<p>Git：分布式版本控制<br>Beam:java中一个对象，Spring负责对象创建、管理这些对象</p>
@@ -5850,106 +5950,6 @@
 <li><code>T getProperty（String key, Class type, T defaultValue</code>）</li>
 </ul>
 <h2 id="6-2-使用占位符"><a href="#6-2-使用占位符" class="headerlink" title="6.2. 使用占位符"></a>6.2. 使用占位符</h2><p><code>${...}</code></p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
-    <url>/posts/b48e71af/</url>
-    <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
-<li>提供消息服务的应用程序</li>
-<li>主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然</li>
-</ul>
-<p>消息代理 broker：</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png" alt="image.png"></p>
-<h1 id="2-JMS👍"><a href="#2-JMS👍" class="headerlink" title="2. JMS👍"></a>2. JMS👍</h1><ul>
-<li>Java Message Service<ul>
-<li>Jms规定了ConnectionFactory、Connection、Session等接口/类</li>
-</ul>
-</li>
-<li>JMS是一个Java标准，使用消息代理（message broker）的统一API</li>
-<li>JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持</li>
-</ul>
-<h1 id="3-ActiveMQ-Artemis"><a href="#3-ActiveMQ-Artemis" class="headerlink" title="3. ActiveMQ Artemis"></a>3. ActiveMQ Artemis</h1><ul>
-<li>支持协议<ul>
-<li>JMS</li>
-<li>AMQP: Advanced Message Queueing Protocol</li>
-<li>MQTT: Message Queuing Telemetry Transport</li>
-</ul>
-</li>
-<li>支持Native内存模式和JVM内存模式<ul>
-<li>Native可以绕过JVM，加快访问</li>
-</ul>
-</li>
-<li>消息持久化</li>
-</ul>
-<h2 id="3-1-直接使用JMS接口发送与接受消息"><a href="#3-1-直接使用JMS接口发送与接受消息" class="headerlink" title="3.1. 直接使用JMS接口发送与接受消息"></a>3.1. 直接使用JMS接口发送与接受消息</h2><ol>
-<li>JMS规范：jakarta.jms-api-2.0.3.jar</li>
-<li>atemis客户端：artemis-jms-client-2.17.0.jar<ul>
-<li>与Spring无关</li>
-</ul>
-</li>
-</ol>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ConnectionFactory</span> <span class="variable">connectionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ActiveMQConnectionFactory</span>(BROKER_URL, USERNAME, PASSWORD);</span><br><span class="line"><span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> connectionFactory.createConnection();</span><br><span class="line">connection.start();</span><br><span class="line"><span class="type">Session</span> <span class="variable">session</span> <span class="operator">=</span> connection.createSession(<span class="literal">false</span>, Session.AUTO_ACKNOWLEDGE);</span><br><span class="line"><span class="type">Destination</span> <span class="variable">destination</span> <span class="operator">=</span> session.createQueue(<span class="string">"queue.example"</span>);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="3-2-关键概念👍"><a href="#3-2-关键概念👍" class="headerlink" title="3.2. 关键概念👍"></a>3.2. 关键概念👍</h2><ul>
-<li>Message：类似广播, 生产端</li>
-<li>Destination：队列或主题。消费端<ul>
-<li>三种指定方式：<ol>
-<li>application.yml（default-destination）</li>
-<li>@Bean（Destination对象）</li>
-<li>直接String指定</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-JmsTemplate"><a href="#3-3-JmsTemplate" class="headerlink" title="3.3. JmsTemplate"></a>3.3. JmsTemplate</h2><ul>
-<li>JmsTemplate是Spring对JMS集成支持的核心</li>
-<li>发送的两个方法：send、convertAndSend</li>
-</ul>
-<h2 id="3-4-消息转换器-MessageConverter👍"><a href="#3-4-消息转换器-MessageConverter👍" class="headerlink" title="3.4. 消息转换器 MessageConverter👍"></a>3.4. 消息转换器 MessageConverter👍</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
-<ul>
-<li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
-<li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
-<li>typeId：目的是告诉对方是什么类型，以便于反序列化</li>
-<li>Message.setStringProperty，随属性集传输</li>
-<li>消息转换器使用@Configuration定义成Bean</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F17-02-28-148a7c245eb17542de98c2c91efe9929-20231231170228-794f8b.png" alt="image.png"></p>
-<h2 id="3-5-接收模式"><a href="#3-5-接收模式" class="headerlink" title="3.5. 接收模式"></a>3.5. 接收模式</h2><p><strong>拉取和推送都需要消息转换器做反序列化。</strong></p>
-<h3 id="3-5-1-拉取模式-pull-model"><a href="#3-5-1-拉取模式-pull-model" class="headerlink" title="3.5.1. 拉取模式 pull model"></a>3.5.1. 拉取模式 pull model</h3><p>JmsTemplate支持<br>访问URL</p>
-<h3 id="3-5-2-推送模式-push-model"><a href="#3-5-2-推送模式-push-model" class="headerlink" title="3.5.2. 推送模式 push model"></a>3.5.2. 推送模式 push model</h3><p>需要定义消息监听器<br>@JmsListener</p>
-<h1 id="4-RabbitMQ"><a href="#4-RabbitMQ" class="headerlink" title="4. RabbitMQ"></a>4. RabbitMQ</h1><p><strong>实现AMQP协议</strong>。<br>RabbitMQ基础概念详细介绍：<a class="link" href="https://www.cnblogs.com/williamjie/p/9481774.html">RabbitMQ基础概念详细介绍 - 割肉机 - 博客园 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>也需要消息转换器，虽然包路径不一样，但是功能一样。</p>
-<h2 id="4-1-概念👍"><a href="#4-1-概念👍" class="headerlink" title="4.1. 概念👍"></a>4.1. 概念👍</h2><ul>
-<li>ConnectionFactory、Connection、Channel</li>
-<li>Exchange：<ul>
-<li>Default、Direct、Topic、Fanout、Headers、Dead letter</li>
-</ul>
-</li>
-<li>Queue</li>
-<li>Routing key：exchange根据routing key确定消息发往哪个队列<ul>
-<li><strong>JMS里没有这个概念</strong></li>
-</ul>
-</li>
-<li>Binding key</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F20-31-55-d57a847ec3e2d2ed48f59f6b49ec2e0c-20231116203155-0bdbb4.png" alt="image.png"></p>
-<h2 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2. 使用"></a>4.2. 使用</h2><ol>
-<li>添加依赖</li>
-<li>配置文件</li>
-<li>需要到控制台创建exchange，queue，binding</li>
-</ol>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">rabbitmq:</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">template:</span></span><br><span class="line"><span class="attr">exchange:</span> <span class="string">tacocloud.order</span></span><br></pre></td></tr></table></figure></div>
-
-<p>生产放指定exchange、routing key<br>消费方只需关注队列名字</p>
-<p>也有拉取模式和推送模式，也需要消息的转换</p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -6569,220 +6569,6 @@
       </tags>
   </entry>
   <entry>
-    <title>16-k8s使用</title>
-    <url>/posts/9aa54120/</url>
-    <content><![CDATA[<h1 id="1-k8s环境"><a href="#1-k8s环境" class="headerlink" title="1. k8s环境"></a>1. k8s环境</h1><h2 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1. 安装"></a>1.1. 安装</h2><p><a class="link" href="https://github.com/AliyunContainerService/k8s-for-docker-desktop">GitHub - AliyunContainerService/k8s-for-docker-desktop: 为Docker Desktop for Mac/Windows开启Kubernetes和Istio。 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>根据说明安装</p>
-<h2 id="1-2-部署dashboard"><a href="#1-2-部署dashboard" class="headerlink" title="1.2. 部署dashboard"></a>1.2. 部署dashboard</h2><p><code>kubectl apply -f kubernetes-dashboard.yaml</code></p>
-<p>kubectl： 客户端程序与远程k8s server交互<br>kubectl proxy： 把远程k8s server端口代理到本地端口</p>
-<h2 id="1-3-部署ingress-controller"><a href="#1-3-部署ingress-controller" class="headerlink" title="1.3. 部署ingress controller"></a>1.3. 部署ingress controller</h2><p><code>kubectl apply -f ingress-nginx-controller.yaml</code></p>
-<h2 id="1-4-验证-Kubernetes-集群状态"><a href="#1-4-验证-Kubernetes-集群状态" class="headerlink" title="1.4. 验证 Kubernetes 集群状态"></a>1.4. 验证 Kubernetes 集群状态</h2><ul>
-<li>kubectl cluster-info</li>
-<li>kubectl get nodes</li>
-<li>kubectl get nodes –show-labels</li>
-<li>给节点打标签：kubectl label node docker-desktop disktype=ssd<ul>
-<li>查询满足标签的节点：kubectl get nodes -l disktype=ssd</li>
-<li>删除标签：kubectl label node docker-desktop disktype</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-k8s基本架构"><a href="#2-k8s基本架构" class="headerlink" title="2. k8s基本架构"></a>2. k8s基本架构</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F18-55-11-2838e48395432e6ee0c51d6f1cbf08d5-20231228185510-36573e.png" alt="image.png"></p>
-<p>Node: 安装docker的宿主机，提供容器。<br>Master：管理集群的机器，安装k8s的核心模块。也可以与Node部署在同一台宿主机上。</p>
-<p>kubelet：和Master、本地docker交互。<br>flannel：容器网络的第三方实现，给容器提供虚拟网络。<br>etcd：类似reddis的缓存系统。</p>
-<p>k8s目的：通过多个Node节点，获得更多容器。</p>
-<h1 id="3-k8s资源👍"><a href="#3-k8s资源👍" class="headerlink" title="3. k8s资源👍"></a>3. k8s资源👍</h1><h2 id="3-1-类型"><a href="#3-1-类型" class="headerlink" title="3.1. 类型"></a>3.1. 类型</h2><ul>
-<li>namespaces<ul>
-<li>类似java中的package</li>
-<li>可以把不同资源放在不同namespace里，不同namespace里面可以有同名资源</li>
-</ul>
-</li>
-<li>ReplicaSet<ul>
-<li>维持Pod实例数</li>
-</ul>
-</li>
-<li>Pods<ul>
-<li>以包含一个或多个容器，内部容器的逻辑宿主机</li>
-<li><font color="#c00000">k8s里管理的最小资源</font></li>
-</ul>
-</li>
-<li>Deployment<ul>
-<li>负责Pod的自动创建</li>
-</ul>
-</li>
-<li>Service<ul>
-<li>类似微服务的“服务”概念，为外界提供一定的业务能力</li>
-<li>部署在Pod中，一个服务可以有多个Pod</li>
-</ul>
-</li>
-<li>Ingress<ul>
-<li>网关，把不同域名/url路由到对应的服务</li>
-<li>k8s对外统一提供Ingress的入口</li>
-</ul>
-</li>
-<li>configmap<ul>
-<li>集群中提供配置信息的地方</li>
-<li>key-value结构</li>
-</ul>
-</li>
-<li>secrets<ul>
-<li>涉及安全的隐私数据，有不同类别</li>
-</ul>
-</li>
-<li>serviceaccounts<ul>
-<li>给容器里的软件用的账户，容器和k8s server交互时用到</li>
-</ul>
-</li>
-<li>DaemonSet<ul>
-<li>常驻在Node上</li>
-<li>例：fluentd，常驻的Node上收集日志</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-2-Pod"><a href="#3-2-Pod" class="headerlink" title="3.2. Pod"></a>3.2. Pod</h2><ul>
-<li><p><font color="#c00000">Pod是Kubernetes调度的最小单元</font> 👍</p>
-</li>
-<li><p>多个容器在一个Pod中共享网络和文件系统</p>
-<ul>
-<li>PID命名空间：Pod中不同的应用程序可以看到其他应用程序的进程ID</li>
-<li>network命名空间：Pod中多个容器处于<strong>同一个网络命名空间</strong>，因此能够访问的IP和端口范围都是相同的。也可以通过localhost相互访问</li>
-<li>IPC命名空间：Pod中的<strong>多个容器</strong>共享Inner-process Communication命名空间，因此可以通过SystemVIPC或POSIX进行<strong>进程间通信</strong></li>
-<li>UTS命名空间：Pod中的多个容器共享同一个主机名</li>
-<li>Volumes：Pod中各个容器可以共享在Pod中定义分存储卷（Volume）</li>
-</ul>
-</li>
-<li><p>restartPolicy字段</p>
-<ul>
-<li>Always：只要退出就重启</li>
-<li>OnFailure：失败退出时（exit code不为0）才重启<ul>
-<li>也可能是正常的退出</li>
-</ul>
-</li>
-<li>Never：永远不重启</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-2-1-pod管理命令"><a href="#3-2-1-pod管理命令" class="headerlink" title="3.2.1. pod管理命令"></a>3.2.1. pod管理命令</h3><ul>
-<li><strong>创建pod</strong><ul>
-<li><code>kubectl run</code></li>
-<li><code>kubectl run myspittr --image spittr:1.0-SNAPSHOT</code></li>
-<li>类似docker run</li>
-</ul>
-</li>
-<li><strong>查看pod</strong><ul>
-<li><code>kubectl get pods</code></li>
-<li><code>kubectl logs -f myspittr</code></li>
-</ul>
-</li>
-<li>在pod中<strong>执行命令</strong><ul>
-<li><code>kubectl exec</code></li>
-<li><code>kubectl exec myspittr -- ls /run/secrets/kubernetes.io/serviceaccount</code>，在myspittr中执行<code>--</code>后的命令</li>
-</ul>
-</li>
-<li><strong>删除pod</strong><ul>
-<li><code>kubectl delete pod &lt;pod name&gt;</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）"><a href="#3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）" class="headerlink" title="3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）"></a>3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）</h3><ul>
-<li><p><strong>port-forward</strong>: ``kubectl port-forward <name> host_ip:container_ip`</name></p>
-<ul>
-<li>和<code>docker -p</code>一样，左边宿主机右边容器端口</li>
-<li>可以直接映射pod，但更<strong>推荐映射service</strong></li>
-</ul>
-</li>
-<li><p>映射pod：<code>kubectl port-forward pod/myspittr 8081:8080</code></p>
-<ul>
-<li>访问：<a class="link" href="http://localhost:8081/spittr/">http://localhost:8081/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-</li>
-<li><p>映射service：<code>kubectl port-forward service/demo 8081:80</code></p>
-</li>
-</ul>
-<h3 id="3-2-3-Pod、Container与Node之间的关系"><a href="#3-2-3-Pod、Container与Node之间的关系" class="headerlink" title="3.2.3. Pod、Container与Node之间的关系"></a>3.2.3. Pod、Container与Node之间的关系</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F19-32-11-f9c84bf9f2d585a4e92d0a7a6a7fe85d-20231228193210-1d543b.png" alt="image.png"></p>
-<h2 id="3-3-Service-👍"><a href="#3-3-Service-👍" class="headerlink" title="3.3. Service 👍"></a>3.3. Service 👍</h2><p>不希望让别人直接访问pod，k8s可能会对pod做更改，ip会改变。但<strong>cluster-ip或服务名不会改变</strong>。</p>
-<h3 id="3-3-1-命令"><a href="#3-3-1-命令" class="headerlink" title="3.3.1. 命令"></a>3.3.1. 命令</h3><ul>
-<li><p>创建：kubectl expose</p>
-<ul>
-<li><code>kubectl expose pod &lt;serveice name&gt; --port &lt;port&gt;</code></li>
-</ul>
-</li>
-<li><p>查看</p>
-<ul>
-<li>kubectl svc</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-3-2-如何访问Service"><a href="#3-3-2-如何访问Service" class="headerlink" title="3.3.2. 如何访问Service"></a>3.3.2. 如何访问Service</h3><ol>
-<li>expose</li>
-<li>port-forward</li>
-<li>curl容器</li>
-</ol>
-<h2 id="3-4-Ingress-👍"><a href="#3-4-Ingress-👍" class="headerlink" title="3.4. Ingress 👍"></a>3.4. Ingress 👍</h2><ul>
-<li><font color="#c00000">只能路由到service，不能路由到pod</font><ul>
-<li>service有cluseter-ip，不会改变，而pod的ip可能会改变</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-4-1-命令"><a href="#3-4-1-命令" class="headerlink" title="3.4.1. 命令"></a>3.4.1. 命令</h3><ul>
-<li>创建：kubectl create ingress myspittr –class=nginx –rule=<a class="link" href="http://www.license.com/*=myspittr:8080">www.license.com/*=myspittr:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ul>
-<li>访问：<a class="link" href="http://www.license.com/spittr/">http://www.license.com/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-</li>
-<li>删除：kubectl delete ingress myspittr</li>
-</ul>
-<p>ingress网关默认端口80</p>
-<h2 id="3-5-命令行快捷创建deployment、service、ingress"><a href="#3-5-命令行快捷创建deployment、service、ingress" class="headerlink" title="3.5. 命令行快捷创建deployment、service、ingress"></a>3.5. 命令行快捷创建deployment、service、ingress</h2><ul>
-<li><p>kubectl create deployment myspittr–image=spittr:1.0-SNAPSHOT –port=8080</p>
-</li>
-<li><p>kubectl expose deployment myspittr 把上面的这个pod的8080端口暴露为myspittr服务</p>
-</li>
-<li><p>kubectl create ingress myspittr–class=nginx–rule=<a class="link" href="http://www.license.com/*=myspittr:8080">www.license.com/*=myspittr:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</li>
-<li><p>访问：<a class="link" href="http://www.license.com/spittr/">http://www.license.com/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</li>
-<li><p>删除：</p>
-<ul>
-<li>kubectl delete ingress myspittr</li>
-<li>kubectl delete service myspittr</li>
-<li>kubectl delete deployment myspittr</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-6-Deployment"><a href="#3-6-Deployment" class="headerlink" title="3.6. Deployment"></a>3.6. Deployment</h2><p><a class="link" href="https://www.jianshu.com/p/029661f38674">Kubernetes对象之Deployment - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<ul>
-<li>重启：kubectl rollout restart deployment/spittr<ul>
-<li>kubectl rollout restart deployment –selector=app=spittr</li>
-</ul>
-</li>
-<li><strong>更新镜像重部署</strong>：kubectl set image deployment/spittr spittr=spittr:1.0</li>
-<li>扩容：kubectl scale deployment spittr –replicas 2</li>
-<li><strong>自动伸缩</strong>：kubectl autoscale deployment spittr –min=10 –max=15 –cpu-percent=80 👍<ul>
-<li>k8s可以依据CPU使用率动态决定实例数量的选择</li>
-<li><font color="#c00000">记得删除</font>： kubectl delete horizontalpodautoscalers.autoscaling spittr</li>
-</ul>
-</li>
-<li>查看历史版本：kubectl rollout history deployment/spittr</li>
-<li>回滚到前一个版本：kubectl rollout undo deployment/spittr</li>
-</ul>
-<h1 id="4-k8s常用命令"><a href="#4-k8s常用命令" class="headerlink" title="4. k8s常用命令"></a>4. k8s常用命令</h1><ul>
-<li>kubectl get secrets/pods/all [ -n namespace]</li>
-<li>kubectl get secret mysecret-o yaml</li>
-<li>kubectl delete pod pod_name [ -n namespace]</li>
-<li>kubectl apply -f [json文件或yaml文件-路径]</li>
-<li>kubectl delete -f [json文件或yaml文件-路径]</li>
-<li>kubectl describe secret mysecret</li>
-<li>kubectl logs secret1-pod</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2-面向切面编程</title>
     <url>/posts/e2853af6/</url>
     <content><![CDATA[<h1 id="1-软件编程方法"><a href="#1-软件编程方法" class="headerlink" title="1. 软件编程方法"></a>1. 软件编程方法</h1><ul>
@@ -7068,6 +6854,220 @@
 </ul>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>16-k8s使用</title>
+    <url>/posts/9aa54120/</url>
+    <content><![CDATA[<h1 id="1-k8s环境"><a href="#1-k8s环境" class="headerlink" title="1. k8s环境"></a>1. k8s环境</h1><h2 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1. 安装"></a>1.1. 安装</h2><p><a class="link" href="https://github.com/AliyunContainerService/k8s-for-docker-desktop">GitHub - AliyunContainerService/k8s-for-docker-desktop: 为Docker Desktop for Mac/Windows开启Kubernetes和Istio。 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>根据说明安装</p>
+<h2 id="1-2-部署dashboard"><a href="#1-2-部署dashboard" class="headerlink" title="1.2. 部署dashboard"></a>1.2. 部署dashboard</h2><p><code>kubectl apply -f kubernetes-dashboard.yaml</code></p>
+<p>kubectl： 客户端程序与远程k8s server交互<br>kubectl proxy： 把远程k8s server端口代理到本地端口</p>
+<h2 id="1-3-部署ingress-controller"><a href="#1-3-部署ingress-controller" class="headerlink" title="1.3. 部署ingress controller"></a>1.3. 部署ingress controller</h2><p><code>kubectl apply -f ingress-nginx-controller.yaml</code></p>
+<h2 id="1-4-验证-Kubernetes-集群状态"><a href="#1-4-验证-Kubernetes-集群状态" class="headerlink" title="1.4. 验证 Kubernetes 集群状态"></a>1.4. 验证 Kubernetes 集群状态</h2><ul>
+<li>kubectl cluster-info</li>
+<li>kubectl get nodes</li>
+<li>kubectl get nodes –show-labels</li>
+<li>给节点打标签：kubectl label node docker-desktop disktype=ssd<ul>
+<li>查询满足标签的节点：kubectl get nodes -l disktype=ssd</li>
+<li>删除标签：kubectl label node docker-desktop disktype</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-k8s基本架构"><a href="#2-k8s基本架构" class="headerlink" title="2. k8s基本架构"></a>2. k8s基本架构</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F18-55-11-2838e48395432e6ee0c51d6f1cbf08d5-20231228185510-36573e.png" alt="image.png"></p>
+<p>Node: 安装docker的宿主机，提供容器。<br>Master：管理集群的机器，安装k8s的核心模块。也可以与Node部署在同一台宿主机上。</p>
+<p>kubelet：和Master、本地docker交互。<br>flannel：容器网络的第三方实现，给容器提供虚拟网络。<br>etcd：类似reddis的缓存系统。</p>
+<p>k8s目的：通过多个Node节点，获得更多容器。</p>
+<h1 id="3-k8s资源👍"><a href="#3-k8s资源👍" class="headerlink" title="3. k8s资源👍"></a>3. k8s资源👍</h1><h2 id="3-1-类型"><a href="#3-1-类型" class="headerlink" title="3.1. 类型"></a>3.1. 类型</h2><ul>
+<li>namespaces<ul>
+<li>类似java中的package</li>
+<li>可以把不同资源放在不同namespace里，不同namespace里面可以有同名资源</li>
+</ul>
+</li>
+<li>ReplicaSet<ul>
+<li>维持Pod实例数</li>
+</ul>
+</li>
+<li>Pods<ul>
+<li>以包含一个或多个容器，内部容器的逻辑宿主机</li>
+<li><font color="#c00000">k8s里管理的最小资源</font></li>
+</ul>
+</li>
+<li>Deployment<ul>
+<li>负责Pod的自动创建</li>
+</ul>
+</li>
+<li>Service<ul>
+<li>类似微服务的“服务”概念，为外界提供一定的业务能力</li>
+<li>部署在Pod中，一个服务可以有多个Pod</li>
+</ul>
+</li>
+<li>Ingress<ul>
+<li>网关，把不同域名/url路由到对应的服务</li>
+<li>k8s对外统一提供Ingress的入口</li>
+</ul>
+</li>
+<li>configmap<ul>
+<li>集群中提供配置信息的地方</li>
+<li>key-value结构</li>
+</ul>
+</li>
+<li>secrets<ul>
+<li>涉及安全的隐私数据，有不同类别</li>
+</ul>
+</li>
+<li>serviceaccounts<ul>
+<li>给容器里的软件用的账户，容器和k8s server交互时用到</li>
+</ul>
+</li>
+<li>DaemonSet<ul>
+<li>常驻在Node上</li>
+<li>例：fluentd，常驻的Node上收集日志</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-Pod"><a href="#3-2-Pod" class="headerlink" title="3.2. Pod"></a>3.2. Pod</h2><ul>
+<li><p><font color="#c00000">Pod是Kubernetes调度的最小单元</font> 👍</p>
+</li>
+<li><p>多个容器在一个Pod中共享网络和文件系统</p>
+<ul>
+<li>PID命名空间：Pod中不同的应用程序可以看到其他应用程序的进程ID</li>
+<li>network命名空间：Pod中多个容器处于<strong>同一个网络命名空间</strong>，因此能够访问的IP和端口范围都是相同的。也可以通过localhost相互访问</li>
+<li>IPC命名空间：Pod中的<strong>多个容器</strong>共享Inner-process Communication命名空间，因此可以通过SystemVIPC或POSIX进行<strong>进程间通信</strong></li>
+<li>UTS命名空间：Pod中的多个容器共享同一个主机名</li>
+<li>Volumes：Pod中各个容器可以共享在Pod中定义分存储卷（Volume）</li>
+</ul>
+</li>
+<li><p>restartPolicy字段</p>
+<ul>
+<li>Always：只要退出就重启</li>
+<li>OnFailure：失败退出时（exit code不为0）才重启<ul>
+<li>也可能是正常的退出</li>
+</ul>
+</li>
+<li>Never：永远不重启</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-1-pod管理命令"><a href="#3-2-1-pod管理命令" class="headerlink" title="3.2.1. pod管理命令"></a>3.2.1. pod管理命令</h3><ul>
+<li><strong>创建pod</strong><ul>
+<li><code>kubectl run</code></li>
+<li><code>kubectl run myspittr --image spittr:1.0-SNAPSHOT</code></li>
+<li>类似docker run</li>
+</ul>
+</li>
+<li><strong>查看pod</strong><ul>
+<li><code>kubectl get pods</code></li>
+<li><code>kubectl logs -f myspittr</code></li>
+</ul>
+</li>
+<li>在pod中<strong>执行命令</strong><ul>
+<li><code>kubectl exec</code></li>
+<li><code>kubectl exec myspittr -- ls /run/secrets/kubernetes.io/serviceaccount</code>，在myspittr中执行<code>--</code>后的命令</li>
+</ul>
+</li>
+<li><strong>删除pod</strong><ul>
+<li><code>kubectl delete pod &lt;pod name&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）"><a href="#3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）" class="headerlink" title="3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）"></a>3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）</h3><ul>
+<li><p><strong>port-forward</strong>: ``kubectl port-forward <name> host_ip:container_ip`</name></p>
+<ul>
+<li>和<code>docker -p</code>一样，左边宿主机右边容器端口</li>
+<li>可以直接映射pod，但更<strong>推荐映射service</strong></li>
+</ul>
+</li>
+<li><p>映射pod：<code>kubectl port-forward pod/myspittr 8081:8080</code></p>
+<ul>
+<li>访问：<a class="link" href="http://localhost:8081/spittr/">http://localhost:8081/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</li>
+<li><p>映射service：<code>kubectl port-forward service/demo 8081:80</code></p>
+</li>
+</ul>
+<h3 id="3-2-3-Pod、Container与Node之间的关系"><a href="#3-2-3-Pod、Container与Node之间的关系" class="headerlink" title="3.2.3. Pod、Container与Node之间的关系"></a>3.2.3. Pod、Container与Node之间的关系</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F19-32-11-f9c84bf9f2d585a4e92d0a7a6a7fe85d-20231228193210-1d543b.png" alt="image.png"></p>
+<h2 id="3-3-Service-👍"><a href="#3-3-Service-👍" class="headerlink" title="3.3. Service 👍"></a>3.3. Service 👍</h2><p>不希望让别人直接访问pod，k8s可能会对pod做更改，ip会改变。但<strong>cluster-ip或服务名不会改变</strong>。</p>
+<h3 id="3-3-1-命令"><a href="#3-3-1-命令" class="headerlink" title="3.3.1. 命令"></a>3.3.1. 命令</h3><ul>
+<li><p>创建：kubectl expose</p>
+<ul>
+<li><code>kubectl expose pod &lt;serveice name&gt; --port &lt;port&gt;</code></li>
+</ul>
+</li>
+<li><p>查看</p>
+<ul>
+<li>kubectl svc</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-2-如何访问Service"><a href="#3-3-2-如何访问Service" class="headerlink" title="3.3.2. 如何访问Service"></a>3.3.2. 如何访问Service</h3><ol>
+<li>expose</li>
+<li>port-forward</li>
+<li>curl容器</li>
+</ol>
+<h2 id="3-4-Ingress-👍"><a href="#3-4-Ingress-👍" class="headerlink" title="3.4. Ingress 👍"></a>3.4. Ingress 👍</h2><ul>
+<li><font color="#c00000">只能路由到service，不能路由到pod</font><ul>
+<li>service有cluseter-ip，不会改变，而pod的ip可能会改变</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-1-命令"><a href="#3-4-1-命令" class="headerlink" title="3.4.1. 命令"></a>3.4.1. 命令</h3><ul>
+<li>创建：kubectl create ingress myspittr –class=nginx –rule=<a class="link" href="http://www.license.com/*=myspittr:8080">www.license.com/*=myspittr:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ul>
+<li>访问：<a class="link" href="http://www.license.com/spittr/">http://www.license.com/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</li>
+<li>删除：kubectl delete ingress myspittr</li>
+</ul>
+<p>ingress网关默认端口80</p>
+<h2 id="3-5-命令行快捷创建deployment、service、ingress"><a href="#3-5-命令行快捷创建deployment、service、ingress" class="headerlink" title="3.5. 命令行快捷创建deployment、service、ingress"></a>3.5. 命令行快捷创建deployment、service、ingress</h2><ul>
+<li><p>kubectl create deployment myspittr–image=spittr:1.0-SNAPSHOT –port=8080</p>
+</li>
+<li><p>kubectl expose deployment myspittr 把上面的这个pod的8080端口暴露为myspittr服务</p>
+</li>
+<li><p>kubectl create ingress myspittr–class=nginx–rule=<a class="link" href="http://www.license.com/*=myspittr:8080">www.license.com/*=myspittr:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>访问：<a class="link" href="http://www.license.com/spittr/">http://www.license.com/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>删除：</p>
+<ul>
+<li>kubectl delete ingress myspittr</li>
+<li>kubectl delete service myspittr</li>
+<li>kubectl delete deployment myspittr</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-6-Deployment"><a href="#3-6-Deployment" class="headerlink" title="3.6. Deployment"></a>3.6. Deployment</h2><p><a class="link" href="https://www.jianshu.com/p/029661f38674">Kubernetes对象之Deployment - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li>重启：kubectl rollout restart deployment/spittr<ul>
+<li>kubectl rollout restart deployment –selector=app=spittr</li>
+</ul>
+</li>
+<li><strong>更新镜像重部署</strong>：kubectl set image deployment/spittr spittr=spittr:1.0</li>
+<li>扩容：kubectl scale deployment spittr –replicas 2</li>
+<li><strong>自动伸缩</strong>：kubectl autoscale deployment spittr –min=10 –max=15 –cpu-percent=80 👍<ul>
+<li>k8s可以依据CPU使用率动态决定实例数量的选择</li>
+<li><font color="#c00000">记得删除</font>： kubectl delete horizontalpodautoscalers.autoscaling spittr</li>
+</ul>
+</li>
+<li>查看历史版本：kubectl rollout history deployment/spittr</li>
+<li>回滚到前一个版本：kubectl rollout undo deployment/spittr</li>
+</ul>
+<h1 id="4-k8s常用命令"><a href="#4-k8s常用命令" class="headerlink" title="4. k8s常用命令"></a>4. k8s常用命令</h1><ul>
+<li>kubectl get secrets/pods/all [ -n namespace]</li>
+<li>kubectl get secret mysecret-o yaml</li>
+<li>kubectl delete pod pod_name [ -n namespace]</li>
+<li>kubectl apply -f [json文件或yaml文件-路径]</li>
+<li>kubectl delete -f [json文件或yaml文件-路径]</li>
+<li>kubectl describe secret mysecret</li>
+<li>kubectl logs secret1-pod</li>
+</ul>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -7629,129 +7629,6 @@
       </tags>
   </entry>
   <entry>
-    <title>7-配置属性</title>
-    <url>/posts/c75c265a/</url>
-    <content><![CDATA[<h1 id="1-属性来源👍"><a href="#1-属性来源👍" class="headerlink" title="1. 属性来源👍"></a>1. 属性来源👍</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
-<ol>
-<li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
-<li><code>server.port = 8090</code></li>
-</ul>
-</li>
-<li><strong>命令行参数</strong><code>commandLineArgs</code>，在程序中直接获取<ul>
-<li><code>java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar -- server.port=8081</code></li>
-</ul>
-</li>
-<li><strong>JVM系统参数</strong> <code>-D</code><ul>
-<li><code>java -Dserver.port=8091 -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
-</ul>
-</li>
-<li><strong>操作系统环境变量</strong><ul>
-<li><code>set SERVER_PORT=8082、java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
-</ul>
-</li>
-</ol>
-<h1 id="2-YAML文件"><a href="#2-YAML文件" class="headerlink" title="2. YAML文件"></a>2. YAML文件</h1><ul>
-<li>使用缩进表示层级关系，不允许使用Tab建，<strong>只能使用空格</strong>(一般2个空格)</li>
-<li># 表示注释</li>
-<li>对象：键值对，使用冒号结构表示<ul>
-<li>冒号后面加空格</li>
-<li><code>animal: pets</code></li>
-<li><code>hash: {name: Steve, foo: bar}</code></li>
-</ul>
-</li>
-<li>一般数组：一组连线开头的行，构成一个数组</li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Cat</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Dog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Goldfish</span></span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li>行内数组：<code>animal: [Cat, Dog]</code></li>
-</ul>
-<h1 id="3-配置数据源"><a href="#3-配置数据源" class="headerlink" title="3. 配置数据源"></a>3. 配置数据源</h1><ul>
-<li>org.h2.Driver</li>
-<li>com.mysql.cj.jdbc.Driver</li>
-</ul>
-<p>不一定要在application.yaml里显式指定，只添加对应依赖spring也能识别</p>
-<h1 id="4-建立HTTPS安全通道"><a href="#4-建立HTTPS安全通道" class="headerlink" title="4. 建立HTTPS安全通道"></a>4. 建立HTTPS安全通道</h1><ul>
-<li>解决客户端和服务端传输数据时的加密问题<ul>
-<li>HTTP明文传输数据，不安全</li>
-<li>TLS/SSL具有身份认证、信息加密和完整性校验</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F609986015a78cfd18e72b154942d8f25_20231026200319.png" alt="image.png"></p>
-<p><strong>SSL(Secure Sockets Layer 安全套接字协议 )<strong>，及其继任者</strong>传输层安全（Transport Layer Security ， TLS）</strong> 是为网络通信提供安全及数据完整性的一种安全协议。TLS 与SSL在传输层与应用层之间对网 络连接进行加密。</p>
-<h2 id="4-1-单向认证"><a href="#4-1-单向认证" class="headerlink" title="4.1. 单向认证"></a>4.1. 单向认证</h2><ul>
-<li>客户端校验服务端证书的合法性，服务端不需要校验客户端</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fb843eb927502da6e44df35255de08531_20231026200909.png" alt="image.png"></p>
-<h2 id="4-2-双向认证"><a href="#4-2-双向认证" class="headerlink" title="4.2. 双向认证"></a>4.2. 双向认证</h2><ul>
-<li>客户端要校验服务端，服务端要校验客户端的证书</li>
-</ul>
-<p>相对复杂</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fc877b90370c978ce90e18d403f7c8f2f_20231026201330.png" alt="image.png"></p>
-<h1 id="5-keytool"><a href="#5-keytool" class="headerlink" title="5. keytool"></a>5. keytool</h1><ul>
-<li>是JDK自带的一个密钥库管理工具，我们可以用它生产密钥库、管理证书</li>
-</ul>
-<h1 id="6-从配置属性获取值-自定义属性"><a href="#6-从配置属性获取值-自定义属性" class="headerlink" title="6. 从配置属性获取值/自定义属性"></a>6. 从配置属性获取值/自定义属性</h1><p><code>@ConfigurationProperties(prefix=&lt;&gt;)</code>从<code>yaml</code>中加载属性值</p>
-<p>通过application.yml文件提供值<br>环境变量：taco_orders_pageSize=12<br>程序参数：–taco.orders.pageSize=13<br>访问：<a class="link" href="http://localhost:8080/orders">http://localhost:8080/orders <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="7-多个Profile文件"><a href="#7-多个Profile文件" class="headerlink" title="7. 多个Profile文件"></a>7. 多个Profile文件</h1><h2 id="7-1-命名规则"><a href="#7-1-命名规则" class="headerlink" title="7.1. 命名规则"></a>7.1. 命名规则</h2><p>Profile文件命名有固定规则</p>
-<ul>
-<li>定义特定profile的属性，通过使用不同的YAML或属性文件  <ul>
-<li>application-{profile名}.properties  </li>
-<li>application-{profile名}.yml</li>
-</ul>
-</li>
-<li>也可以将不同profile属性放到同一个YAML文件中，使用3个短线进行分隔，并且使用spring.profiles属性来命名profile</li>
-</ul>
-<h2 id="7-2-激活Profile"><a href="#7-2-激活Profile" class="headerlink" title="7.2. 激活Profile"></a>7.2. 激活Profile</h2><ul>
-<li>环境变量：spring_profiles_active=prod</li>
-<li>命令行参数：java -jar &lt;&gt;.jar –spring.profiles.active=prod</li>
-<li>JVM系统属性：java -Dspring.profiles.active=prod -jar &lt;&gt;.jar</li>
-<li>使用注解<code>@Profile</code>条<strong>件化地创建Bean</strong>，可以加到<code>@Configuration</code>或<code>@Bean</code>上<ul>
-<li>场景：测试环境下初始化数据库填充测试数据，但是在生产环境下不能乱初始化</li>
-</ul>
-</li>
-</ul>
-<h1 id="8-配置日志"><a href="#8-配置日志" class="headerlink" title="8. 配置日志"></a>8. 配置日志</h1><ul>
-<li>默认Logback,配置文件logback.xml</li>
-<li>默认日志级别: INFO</li>
-<li>日志配置(application.yml)<ul>
-<li>可以根据不同包路径设置不同日志级别</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">root:</span> <span class="string">WARN</span></span><br><span class="line">    <span class="attr">org:</span></span><br><span class="line">      <span class="attr">Springframework:</span></span><br><span class="line">	    <span class="attr">security:</span> <span class="string">DEBUG</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="9-Actuator👍"><a href="#9-Actuator👍" class="headerlink" title="9. Actuator👍"></a>9. Actuator👍</h1><ul>
-<li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
-<li>/actuator，查询所有暴露端点</li>
-<li><strong>/actuator/configprops</strong>，查询配置属性</li>
-<li>/actuator/health，健康检查</li>
-<li>/actuator/beans，包含bean依赖关系</li>
-</ul>
-</li>
-<li>想要获得更多端点如何配置：<code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">"*"</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="10-分布式系统配置数据的获取"><a href="#10-分布式系统配置数据的获取" class="headerlink" title="10. 分布式系统配置数据的获取"></a>10. 分布式系统配置数据的获取</h1><ul>
-<li>配置服务： Config Server<ul>
-<li>给所有微服务提供配置数据</li>
-<li>配置可能来自文件系统，git仓库等</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F16-29-03-ac42f08cd7916e48e1cfabe5ef89772e-20231231162903-1ef9fd.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>8-REST API</title>
     <url>/posts/c9789ed0/</url>
     <content><![CDATA[<h1 id="1-不同开发模式"><a href="#1-不同开发模式" class="headerlink" title="1. 不同开发模式"></a>1. 不同开发模式</h1><h2 id="1-1-前后端不分离"><a href="#1-1-前后端不分离" class="headerlink" title="1.1. 前后端不分离"></a>1.1. 前后端不分离</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F5ec4e681073f4e19bdfa388580e8f2ac_20231102185803.png" alt="image.png"></p>
@@ -8160,6 +8037,129 @@
 </ul>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>7-配置属性</title>
+    <url>/posts/c75c265a/</url>
+    <content><![CDATA[<h1 id="1-属性来源👍"><a href="#1-属性来源👍" class="headerlink" title="1. 属性来源👍"></a>1. 属性来源👍</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
+<ol>
+<li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
+<li><code>server.port = 8090</code></li>
+</ul>
+</li>
+<li><strong>命令行参数</strong><code>commandLineArgs</code>，在程序中直接获取<ul>
+<li><code>java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar -- server.port=8081</code></li>
+</ul>
+</li>
+<li><strong>JVM系统参数</strong> <code>-D</code><ul>
+<li><code>java -Dserver.port=8091 -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
+</ul>
+</li>
+<li><strong>操作系统环境变量</strong><ul>
+<li><code>set SERVER_PORT=8082、java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
+</ul>
+</li>
+</ol>
+<h1 id="2-YAML文件"><a href="#2-YAML文件" class="headerlink" title="2. YAML文件"></a>2. YAML文件</h1><ul>
+<li>使用缩进表示层级关系，不允许使用Tab建，<strong>只能使用空格</strong>(一般2个空格)</li>
+<li># 表示注释</li>
+<li>对象：键值对，使用冒号结构表示<ul>
+<li>冒号后面加空格</li>
+<li><code>animal: pets</code></li>
+<li><code>hash: {name: Steve, foo: bar}</code></li>
+</ul>
+</li>
+<li>一般数组：一组连线开头的行，构成一个数组</li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Cat</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Dog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Goldfish</span></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>行内数组：<code>animal: [Cat, Dog]</code></li>
+</ul>
+<h1 id="3-配置数据源"><a href="#3-配置数据源" class="headerlink" title="3. 配置数据源"></a>3. 配置数据源</h1><ul>
+<li>org.h2.Driver</li>
+<li>com.mysql.cj.jdbc.Driver</li>
+</ul>
+<p>不一定要在application.yaml里显式指定，只添加对应依赖spring也能识别</p>
+<h1 id="4-建立HTTPS安全通道"><a href="#4-建立HTTPS安全通道" class="headerlink" title="4. 建立HTTPS安全通道"></a>4. 建立HTTPS安全通道</h1><ul>
+<li>解决客户端和服务端传输数据时的加密问题<ul>
+<li>HTTP明文传输数据，不安全</li>
+<li>TLS/SSL具有身份认证、信息加密和完整性校验</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F609986015a78cfd18e72b154942d8f25_20231026200319.png" alt="image.png"></p>
+<p><strong>SSL(Secure Sockets Layer 安全套接字协议 )<strong>，及其继任者</strong>传输层安全（Transport Layer Security ， TLS）</strong> 是为网络通信提供安全及数据完整性的一种安全协议。TLS 与SSL在传输层与应用层之间对网 络连接进行加密。</p>
+<h2 id="4-1-单向认证"><a href="#4-1-单向认证" class="headerlink" title="4.1. 单向认证"></a>4.1. 单向认证</h2><ul>
+<li>客户端校验服务端证书的合法性，服务端不需要校验客户端</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fb843eb927502da6e44df35255de08531_20231026200909.png" alt="image.png"></p>
+<h2 id="4-2-双向认证"><a href="#4-2-双向认证" class="headerlink" title="4.2. 双向认证"></a>4.2. 双向认证</h2><ul>
+<li>客户端要校验服务端，服务端要校验客户端的证书</li>
+</ul>
+<p>相对复杂</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fc877b90370c978ce90e18d403f7c8f2f_20231026201330.png" alt="image.png"></p>
+<h1 id="5-keytool"><a href="#5-keytool" class="headerlink" title="5. keytool"></a>5. keytool</h1><ul>
+<li>是JDK自带的一个密钥库管理工具，我们可以用它生产密钥库、管理证书</li>
+</ul>
+<h1 id="6-从配置属性获取值-自定义属性"><a href="#6-从配置属性获取值-自定义属性" class="headerlink" title="6. 从配置属性获取值/自定义属性"></a>6. 从配置属性获取值/自定义属性</h1><p><code>@ConfigurationProperties(prefix=&lt;&gt;)</code>从<code>yaml</code>中加载属性值</p>
+<p>通过application.yml文件提供值<br>环境变量：taco_orders_pageSize=12<br>程序参数：–taco.orders.pageSize=13<br>访问：<a class="link" href="http://localhost:8080/orders">http://localhost:8080/orders <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="7-多个Profile文件"><a href="#7-多个Profile文件" class="headerlink" title="7. 多个Profile文件"></a>7. 多个Profile文件</h1><h2 id="7-1-命名规则"><a href="#7-1-命名规则" class="headerlink" title="7.1. 命名规则"></a>7.1. 命名规则</h2><p>Profile文件命名有固定规则</p>
+<ul>
+<li>定义特定profile的属性，通过使用不同的YAML或属性文件  <ul>
+<li>application-{profile名}.properties  </li>
+<li>application-{profile名}.yml</li>
+</ul>
+</li>
+<li>也可以将不同profile属性放到同一个YAML文件中，使用3个短线进行分隔，并且使用spring.profiles属性来命名profile</li>
+</ul>
+<h2 id="7-2-激活Profile"><a href="#7-2-激活Profile" class="headerlink" title="7.2. 激活Profile"></a>7.2. 激活Profile</h2><ul>
+<li>环境变量：spring_profiles_active=prod</li>
+<li>命令行参数：java -jar &lt;&gt;.jar –spring.profiles.active=prod</li>
+<li>JVM系统属性：java -Dspring.profiles.active=prod -jar &lt;&gt;.jar</li>
+<li>使用注解<code>@Profile</code>条<strong>件化地创建Bean</strong>，可以加到<code>@Configuration</code>或<code>@Bean</code>上<ul>
+<li>场景：测试环境下初始化数据库填充测试数据，但是在生产环境下不能乱初始化</li>
+</ul>
+</li>
+</ul>
+<h1 id="8-配置日志"><a href="#8-配置日志" class="headerlink" title="8. 配置日志"></a>8. 配置日志</h1><ul>
+<li>默认Logback,配置文件logback.xml</li>
+<li>默认日志级别: INFO</li>
+<li>日志配置(application.yml)<ul>
+<li>可以根据不同包路径设置不同日志级别</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">root:</span> <span class="string">WARN</span></span><br><span class="line">    <span class="attr">org:</span></span><br><span class="line">      <span class="attr">Springframework:</span></span><br><span class="line">	    <span class="attr">security:</span> <span class="string">DEBUG</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="9-Actuator👍"><a href="#9-Actuator👍" class="headerlink" title="9. Actuator👍"></a>9. Actuator👍</h1><ul>
+<li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
+<li>/actuator，查询所有暴露端点</li>
+<li><strong>/actuator/configprops</strong>，查询配置属性</li>
+<li>/actuator/health，健康检查</li>
+<li>/actuator/beans，包含bean依赖关系</li>
+</ul>
+</li>
+<li>想要获得更多端点如何配置：<code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">"*"</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="10-分布式系统配置数据的获取"><a href="#10-分布式系统配置数据的获取" class="headerlink" title="10. 分布式系统配置数据的获取"></a>10. 分布式系统配置数据的获取</h1><ul>
+<li>配置服务： Config Server<ul>
+<li>给所有微服务提供配置数据</li>
+<li>配置可能来自文件系统，git仓库等</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F16-29-03-ac42f08cd7916e48e1cfabe5ef89772e-20231231162903-1ef9fd.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
