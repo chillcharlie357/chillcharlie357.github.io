@@ -8182,7 +8182,7 @@
 <h2 id="2-7-反应式编程的4个接口"><a href="#2-7-反应式编程的4个接口" class="headerlink" title="2.7. 反应式编程的4个接口"></a>2.7. 反应式编程的4个接口</h2><ol>
 <li>Publisher：数据发布者</li>
 <li>Subscriber：数据订阅者</li>
-<li>Peocessor：处理器</li>
+<li>Processor：处理器</li>
 <li>Subscription：协调</li>
 </ol>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F30%2F19-07-41-798ed044f2aa4ce418bbeb6519cfa668-20231130190741-06575a.png"></p>
