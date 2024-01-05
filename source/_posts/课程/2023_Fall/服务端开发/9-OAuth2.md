@@ -9,7 +9,6 @@ comment: true
 title: 9-OAuth2
 date: 2023-11-13 18:11
 modified: 2024-01-02 18:50
-abbrlink: a0bd262e
 aliases: 
 sticky: 
 thumbnail: 

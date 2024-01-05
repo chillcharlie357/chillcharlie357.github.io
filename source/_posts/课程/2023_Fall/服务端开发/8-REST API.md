@@ -7,12 +7,11 @@ excerpt: false
 mathjax: true
 comment: true
 title: 8-REST API
-date: '2023-11-11 18:11'
-modified: '2023-12-31 16:12'
-abbrlink: c9789ed0
-aliases:
-sticky:
-thumbnail:
+date: 2023-11-11 18:11
+modified: 2023-12-31 16:12
+aliases: 
+sticky: 
+thumbnail: 
 cover:
 ---
 

@@ -9,7 +9,6 @@ comment: true
 title: 10-消息中间件(ActiveMQ、RabbitMQ)
 date: 2023-11-16 18:11
 modified: 2024-01-02 19:13
-abbrlink: b48e71af
 aliases: 
 sticky: 
 thumbnail: 

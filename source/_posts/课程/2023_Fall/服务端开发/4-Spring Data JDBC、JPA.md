@@ -9,12 +9,11 @@ excerpt: false
 mathjax: true
 comment: true
 title: 4-Spring Data JDBC、JPA
-date: '2023-10-10 18:10'
-modified: '2023-12-31 15:12'
-abbrlink: '12184527'
-aliases:
-sticky:
-thumbnail:
+date: 2023-10-10 18:10
+modified: 2023-12-31 15:12
+aliases: 
+sticky: 
+thumbnail: 
 cover:
 ---
 
