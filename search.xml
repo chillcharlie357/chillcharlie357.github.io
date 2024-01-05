@@ -7486,7 +7486,7 @@
 <h1 id="3-Web请求拦截"><a href="#3-Web请求拦截" class="headerlink" title="3. Web请求拦截"></a>3. Web请求拦截</h1><ul>
 <li>spring data权限认证的原理：使用servlet容器的filter</li>
 </ul>
-<p>Spring Security是一种基于Spring AOP和Servlet过滤器的安全框架，它在Web请求级和方法调用级处理身份确认和授权1。Spring Security通过一系列的Servlet Filter实现这些功能1。当添加了@EnableWebSecurity注解之后，Spring会创建一个名为springSecurityFilterChain的Bean，其类型为DelegatingFilterProxy1。这是一个特殊的Servlet Filter，它将工作委托给一个javax.servlet.Filter的实现类（其类型为FilterChainProxy），这个实现类作为一个Bean注册在Spring的应用的上下文中1。</p>
+<p>Spring Security是一种基于Spring AOP和Servlet过滤器的安全框架，它在Web请求级和方法调用级处理身份确认和授权。Spring Security通过一系列的Servlet Filter实现这些功能。当添加了@EnableWebSecurity注解之后，Spring会创建一个名为springSecurityFilterChain的Bean，其类型为DelegatingFilterProxy。这是一个特殊的Servlet Filter，它将工作委托给一个javax.servlet.Filter的实现类（其类型为FilterChainProxy），这个实现类作为一个Bean注册在Spring的应用的上下文中。</p>
 <p>对于一个请求，其处理顺序是：<code>DelegatingFilterProxy =&gt; FilterChainProxy =&gt; 一系列的Filter =&gt; Controller</code></p>
 <p><a class="link" href="https://zhuanlan.zhihu.com/p/72305502">深入了解Spring Security的实现原理 - 知乎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F092f577948a6053f598961fe1a329feb_20231026184400.png" alt="image.png"></p>
@@ -8212,50 +8212,6 @@
         <tag>课程</tag>
         <tag>2023_Fall_服务端开发</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>考试</title>
-    <url>/posts/bd4d7fe/</url>
-    <content><![CDATA[<h1 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h1><p>多选题<br>问答题：5道题</p>
-<h1 id="问答题例题"><a href="#问答题例题" class="headerlink" title="问答题例题"></a>问答题例题</h1><h2 id="web开发框架分层，请求处理过程"><a href="#web开发框架分层，请求处理过程" class="headerlink" title="web开发框架分层，请求处理过程"></a>web开发框架分层，请求处理过程</h2><ul>
-<li><p>分层</p>
-<ol>
-<li>控制器层</li>
-<li>业务逻辑层</li>
-<li>数据访问层</li>
-</ol>
-</li>
-<li><p>处理过程：[[3-Spring MVC#3.1. 处理过程👍]]</p>
-<ol>
-<li>Web容器开发的基本单元是Servlet，请求先到servlet。</li>
-<li>mapping根据url把请求转到controller，其中spring框架会做参数解析。</li>
-<li>controller拿到请求和请求参数，把请求和请求参数传给业务层</li>
-<li>业务层处理业务逻辑，可能会做数据持久化访问DAO层</li>
-<li>业务层把处理结构返回控制器</li>
-<li>控制器把结果放回给servlet</li>
-<li>servlet拿到了数据和逻辑视图名，找到视图解析器的第三方库</li>
-<li>视图解析器渲染视图</li>
-</ol>
-</li>
-</ul>
-<h2 id="AOP编程解决什么问题，开发要点"><a href="#AOP编程解决什么问题，开发要点" class="headerlink" title="AOP编程解决什么问题，开发要点"></a>AOP编程解决什么问题，开发要点</h2><ul>
-<li>解决问题<ol>
-<li>分离横切关注点，把非业务逻辑分离出来，减少对业务代码的侵入</li>
-<li>降低耦合</li>
-</ol>
-</li>
-<li>开发要点<ol>
-<li>[[2-面向切面编程#3. AOP术语👍]]</li>
-</ol>
-</li>
-</ul>
-<h2 id="spring-security-web请求保护"><a href="#spring-security-web请求保护" class="headerlink" title="spring security web请求保护"></a>spring security web请求保护</h2><p>使用servlet容器的filter机制拦截web请求，对请求进行权限控制。</p>
-<h2 id="web请求开发有哪些步骤"><a href="#web请求开发有哪些步骤" class="headerlink" title="web请求开发有哪些步骤"></a>web请求开发有哪些步骤</h2><ol>
-<li>设计REST API [[8-REST API#2.12. Rest API接口设计👍]]</li>
-<li>创建controller，定义请求映射</li>
-<li>在业务逻辑层处理请求，返回响应</li>
-</ol>
-<h2 id="OAuth2基于授权码的授权，系统组成，处理流程"><a href="#OAuth2基于授权码的授权，系统组成，处理流程" class="headerlink" title="OAuth2基于授权码的授权，系统组成，处理流程"></a>OAuth2基于授权码的授权，系统组成，处理流程</h2><h2 id="Spring集成流解决了什么问题"><a href="#Spring集成流解决了什么问题" class="headerlink" title="Spring集成流解决了什么问题"></a>Spring集成流解决了什么问题</h2><h2 id="反应式编程的4个接口"><a href="#反应式编程的4个接口" class="headerlink" title="反应式编程的4个接口"></a>反应式编程的4个接口</h2>]]></content>
   </entry>
   <entry>
     <title>0-机器学习</title>
