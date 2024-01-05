@@ -7,113 +7,6 @@
   resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.3.2.tgz#a6abc715fb6884851fca9dad37fc34739a04fd11"
   integrity sha512-DA5a1C0gD/pLOvhv33YMrbf2FK3oUzwNl9oOJqE4XVjuEtt6XIakRcsd7eLiOSPkp1kTRQGICTA8cKra/vFbjw==
 
-"@emnapi/core@^0.45.0":
-  version "0.45.0"
-  resolved "https://registry.npmmirror.com/@emnapi/core/-/core-0.45.0.tgz#e58dc1f70ab3af3f6708991ba56d988088daf204"
-  integrity sha512-DPWjcUDQkCeEM4VnljEOEcXdAD7pp8zSZsgOujk/LGIwCXWbXJngin+MO4zbH429lzeC3WbYLGjE2MaUOwzpyw==
-  dependencies:
-    tslib "^2.4.0"
-
-"@emnapi/runtime@^0.45.0":
-  version "0.45.0"
-  resolved "https://registry.npmmirror.com/@emnapi/runtime/-/runtime-0.45.0.tgz#e754de04c683263f34fd0c7f32adfe718bbe4ddd"
-  integrity sha512-Txumi3td7J4A/xTTwlssKieHKTGl3j4A1tglBx72auZ49YK7ePY6XZricgIg9mnZT4xPfA+UPCUdnhRuEFDL+w==
-  dependencies:
-    tslib "^2.4.0"
-
-"@node-rs/jieba-android-arm-eabi@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-android-arm-eabi/-/jieba-android-arm-eabi-1.8.1.tgz#582e150cc3e70c51eec4da93cf49abe1d33d7c47"
-  integrity sha512-LQdmjOJ1yGaDgJJTbmcWetPDJBa0NkgUzTWegxZL/0/fgBm7+8wh/5r/bCGx5H00J/v0gLQ79A6CRLH8D4lC1g==
-
-"@node-rs/jieba-android-arm64@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-android-arm64/-/jieba-android-arm64-1.8.1.tgz#910a1b68ace48670f5be18c4dbd44c80b93a9c33"
-  integrity sha512-F/E95teA/3X+dolC/4ai18An38aneFs6xqaqgfzJwEuvypcOnFGyouhSHh/oEhT69m/RFgPuqG85WgfmKHCBzA==
-
-"@node-rs/jieba-darwin-arm64@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-darwin-arm64/-/jieba-darwin-arm64-1.8.1.tgz#d30648cf721e86a1b6ee0c1de5ff57ae0fc2f173"
-  integrity sha512-J5Zt25XlVyXQ8qkxCDLmACoBZYQqmXr4kTLcT16Q1xyN4FXoZe3Aq0QnBkDJLPHk3AngLOicG7FZci6q0LHgow==
-
-"@node-rs/jieba-darwin-x64@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-darwin-x64/-/jieba-darwin-x64-1.8.1.tgz#6b662e1d5772f57ab7bc6335bf52f5d14b3935f6"
-  integrity sha512-cUuEpx6L4rdLSvpIuuoN2UBh0gKjjeQt/xc7TbDWhUEkFh4bn1zvRFksUUMZpNOJ3OKDLk76oVwwA87P9PzlUA==
-
-"@node-rs/jieba-freebsd-x64@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-freebsd-x64/-/jieba-freebsd-x64-1.8.1.tgz#5e36af132c3aefa4b5abfc25713ef2c5960aa6e5"
-  integrity sha512-KCVqKTeiP03eGh/Xt/kMG/PAirq3tStw2YNeICKPG4L6rhCKPZc8wBW5+y3zSDsQolWB8+r89ZAJWEN/H1AGRw==
-
-"@node-rs/jieba-linux-arm-gnueabihf@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-linux-arm-gnueabihf/-/jieba-linux-arm-gnueabihf-1.8.1.tgz#a113a40fe153796c0c9f03fbff662de206eb9448"
-  integrity sha512-xEbzUrHnoEi6kpeBBNz7ZrJkPPBYasdXuH/RHyN9aoEre9Lg4UUbuRNns1nq7D4o8bV2EsULHsJyvKuS2TifIQ==
-
-"@node-rs/jieba-linux-arm64-gnu@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-linux-arm64-gnu/-/jieba-linux-arm64-gnu-1.8.1.tgz#1a176bc5b8761f385a709db1717374bddab6f5ed"
-  integrity sha512-NnUEBTuMrii6KvbsFHNX3IsEdYLHSS4sJHsh/HfgrqJUjWjbjD+QhzmgISCluxOTEGMrZmLsMMBHfN4t/hWMTA==
-
-"@node-rs/jieba-linux-arm64-musl@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-linux-arm64-musl/-/jieba-linux-arm64-musl-1.8.1.tgz#69b447c8534c997995977203b926cba89086eb9e"
-  integrity sha512-Tgo8FO18THofQx4ZGUVFbsEHbaQyC3MfiQQFA6vDIGHBQFB4vXgpxJCA9dFCOrmCpsg6Uurrz1G8S+ZVmmvjkQ==
-
-"@node-rs/jieba-linux-x64-gnu@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-linux-x64-gnu/-/jieba-linux-x64-gnu-1.8.1.tgz#0e7f4ec6fcc1d7dcf019713443347a342aa3e9b1"
-  integrity sha512-py5StersiDn5DdzWtybzvmicPLGHUykFWebpUu3MkY8vkypA3t//0yFFHMaw8V5ebuPw68iUnYTDcUycVszc7Q==
-
-"@node-rs/jieba-linux-x64-musl@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-linux-x64-musl/-/jieba-linux-x64-musl-1.8.1.tgz#4fead29729234b1185a36fb6f26690a5fde85b35"
-  integrity sha512-eW2lwqKrw4DWm51BX+/huWMKgfltJgPWAAnbX05st2Ayw14PFT3rVe9NK4Wc5Pkioux82VUa1w68yxymrYeWWQ==
-
-"@node-rs/jieba-wasm32-wasi@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-wasm32-wasi/-/jieba-wasm32-wasi-1.8.1.tgz#52e7564adfdf8bde0e937024babef5ebd2948614"
-  integrity sha512-3qZiNOuuoJia7S/mDslcp2ijK5WpP0zrRsqemJhQWLALXFt08Epfq1o+BQ7nMj176fki+PxmVG+VmS0WzetHAg==
-  dependencies:
-    "@emnapi/core" "^0.45.0"
-    "@emnapi/runtime" "^0.45.0"
-
-"@node-rs/jieba-win32-arm64-msvc@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-win32-arm64-msvc/-/jieba-win32-arm64-msvc-1.8.1.tgz#2324874987c862313819dc3dd71e6fbb89cf186f"
-  integrity sha512-gr6i+7Ys2GJTWGXZVhvX/qp4cajQPMw3dhIpx3mwC6Pvcdgm4z6HOyoWoKD77uFmzKROaIoOeFKFIfcF63H3Bw==
-
-"@node-rs/jieba-win32-ia32-msvc@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-win32-ia32-msvc/-/jieba-win32-ia32-msvc-1.8.1.tgz#816be91667548b2a7b563cd75764eb4134975c8a"
-  integrity sha512-i9uIK1E1M2vy7jtLvZRpXbh8enCZJPGn2JDy9NiYkbTR/u8WifSMDjOVEl88iziHp2R7uNiqNsuKexWe+pqXIA==
-
-"@node-rs/jieba-win32-x64-msvc@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba-win32-x64-msvc/-/jieba-win32-x64-msvc-1.8.1.tgz#93a4605d29b5b7cb0c6549c41dcf16be5d010d31"
-  integrity sha512-IP2wkDJBLJ3T+P78NkBgy864uAccrG1WtbJclRw3lu0xjLf8TLfn96ScM7GcFQMWh++EsX/L1t000mbWy25jrQ==
-
-"@node-rs/jieba@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.npmmirror.com/@node-rs/jieba/-/jieba-1.8.1.tgz#386b8a04723e2e1df539b35aef26fe47f3657157"
-  integrity sha512-eLk1ArIT8H3uGJCsOS2nDHkThILRu08IQO9SgKZnJ9F6gviszX+CneImIaeYaARdsNk6WsRVNFW9Ynk8/LNTyA==
-  optionalDependencies:
-    "@node-rs/jieba-android-arm-eabi" "1.8.1"
-    "@node-rs/jieba-android-arm64" "1.8.1"
-    "@node-rs/jieba-darwin-arm64" "1.8.1"
-    "@node-rs/jieba-darwin-x64" "1.8.1"
-    "@node-rs/jieba-freebsd-x64" "1.8.1"
-    "@node-rs/jieba-linux-arm-gnueabihf" "1.8.1"
-    "@node-rs/jieba-linux-arm64-gnu" "1.8.1"
-    "@node-rs/jieba-linux-arm64-musl" "1.8.1"
-    "@node-rs/jieba-linux-x64-gnu" "1.8.1"
-    "@node-rs/jieba-linux-x64-musl" "1.8.1"
-    "@node-rs/jieba-wasm32-wasi" "1.8.1"
-    "@node-rs/jieba-win32-arm64-msvc" "1.8.1"
-    "@node-rs/jieba-win32-ia32-msvc" "1.8.1"
-    "@node-rs/jieba-win32-x64-msvc" "1.8.1"
-
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -3621,7 +3514,7 @@ trim-repeated@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
-tslib@^2.0.3, tslib@^2.4.0:
+tslib@^2.0.3:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
   integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
