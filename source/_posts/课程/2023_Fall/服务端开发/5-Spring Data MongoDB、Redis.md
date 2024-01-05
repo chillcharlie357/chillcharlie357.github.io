@@ -37,7 +37,7 @@ cover:
 - Id为String，mongoDB会自动生成
 - 可以使用mongdb-shell交互
 
-## 1.3. Spring Data MongoDB👍
+## 1.3. 👍Spring Data MongoDB
 
 业务代码不需要修改
 
@@ -72,7 +72,7 @@ Spring插入时会自动创建一个`_class`字段
 
 # 2. Redis
 
-## 2.1. 介绍👍
+## 2.1. 👍介绍
 
 - 分布式存储
 - 内存数据库，存在内存里，常用于作**缓存**
@@ -89,7 +89,7 @@ Spring插入时会自动创建一个`_class`字段
 flushdb：deletes the keys in a database  
 flushall：deletes all keys in all databases
 
-## 2.3. Redis数据类型👍
+## 2.3. 👍Redis数据类型
 
 指的是**value类型**
 
@@ -144,7 +144,7 @@ public RedisTemplate<String, Product> redisTemplate(RedisConnectionFactory cf){
 
 [12.3.2　使用 Redis Template - Spring 实战(第四版)](https://potoyang.gitbook.io/spring-in-action-v4/untitled-6/untitled-1/12.3.2-shi-yong-redis-template)
 
-## 2.6. 序列化👍
+## 2.6. 👍序列化
 
 <font color="#c00000">mongodb没有这个要求，因为它会把所有值都转成json串</font>。  
 redis默认使用JDK序列化，但JSON序列化更常用。

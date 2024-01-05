@@ -27,7 +27,7 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 	- .antMatchers(HttpMethod.POST, "/api/ingredients").hasAuthority("ROLE_USER")
 	- @PreAuthorize("hasAuthority('ROLE_USER')")
 
-## 1.2. OAth2👍
+## 1.2. 👍OAth2
 
 之前讲了Spring Security的单体应用权限控制
 
@@ -35,9 +35,9 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 	- 是一个与变成语言无关的规范
 	- restful api权限控制
 
-## 1.3. 授仅码授权（authorization code grant）模式👍
+## 1.3. 👍授仅码授权（authorization code grant）模式
 
-### 1.3.1. 流程图👍
+### 1.3.1. 👍流程图
 
 - Client application：客户端（第三方应用程序），消费API提供的资源
 - Authorization server：授权服务器
@@ -48,7 +48,7 @@ DELETE ：http://tacocloud:8080 /api/ingredients/*
 - 授权服务器会用**私钥**给token签名，资源服务器用**公钥**验证token是否合法
 - token不变时公钥也不变，只有第一次才需要向授权服务器索取公钥
 
-### 1.3.2. 过程👍
+### 1.3.2. 👍过程
 
 其中使用**授权码授权模式**
 

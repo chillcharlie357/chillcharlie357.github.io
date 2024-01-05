@@ -28,7 +28,7 @@ cover:
 
 # 2. 使用Spring MVC的控制器创建RESTful端点
 
-## 2.1. Rest原则👍
+## 2.1. 👍Rest原则
 
 - Representational State Transfer，表现层状态转移
 	- 表现层（Representation）：json、xml、html、pdf、excel
@@ -45,7 +45,7 @@ cover:
 
 如果一个架构符合REST原则，就称它为RESTful架构. 请求都是针对资源的操作.
 
-## 2.2. RESTful 控制器实现👍
+## 2.2. 👍RESTful 控制器实现
 
 - RESR API以面向数据的格式返回, JSON或XML
 	- JSON更直观，结构清晰
@@ -95,7 +95,7 @@ cover:
 - application/octet-stream： 二进制流数据（如常见的文件下载）
 - application/x-www-form-urlencoded： < form encType=””>中默认的encType，form表单数据被编码为key/value格式发送到服务器（表单默认的提交数据的格式）
 
-## 2.4. 响应头与响应体👍
+## 2.4. 👍响应头与响应体
 
 - 状态行：由 HTTP 协议版本、状态码、状态码描述三部分构成，它们之间由空格隔开。
 - <font color="#ff0000">状态码</font>：由 3 位数字组成，**第一位标识响应的类型**，常用的**5大类状态码**如下：
@@ -169,7 +169,7 @@ CORS ，Cross Origin Resource Sharing
 4. 路径参数
 	- `@PathVariable`
 
-## 2.12. Rest API接口设计👍
+## 2.12. 👍Rest API接口设计
 
 **要求：**
 

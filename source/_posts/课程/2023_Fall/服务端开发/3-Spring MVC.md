@@ -16,7 +16,7 @@ thumbnail:
 cover:
 ---
 
-# 1. 基本概念👍
+# 1. 👍基本概念
 
 **M**odel-**V**iew-**C**ontroller
 
@@ -101,7 +101,7 @@ public String methodName(@ModelAttribute SomeObject object) {
 
 # 3. MVC请求
 
-## 3.1. 处理过程👍
+## 3.1. 👍处理过程
 
 客户端请求在**后端的处理过程**，非常重要。  
 **核心DispatcherServlet**，是Spring自己实现的Servlet容器。
@@ -130,14 +130,14 @@ public String methodName(@ModelAttribute SomeObject object) {
 - `PatchMapping`
 - `PutMapping`
 
-## 3.3. 重定向👍
+## 3.3. 👍重定向
 
 控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url
 
 - http状态码：302
 - 控制器`return redirect:<url>`
 
-## 3.4. Spring MVC获取参数的集中方式👍
+## 3.4. 👍Spring MVC获取参数的集中方式
 
 1. 表单(form)参数，转成model
 	- 成员类型可能要自己实现Converter进行转换

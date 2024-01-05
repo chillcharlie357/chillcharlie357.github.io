@@ -65,7 +65,7 @@ IntergrationFlow对象
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-40-43-b0218d8cb35748ff7d09c2f2e8d81d41-20231123194042-b1beb5.png)
 
-# 3. 集成流组件👍
+# 3. 👍集成流组件
 
 - Channels：消息通道，传递消息
 - Filters：过滤器，基于条件判断要不要在流上继续流下去

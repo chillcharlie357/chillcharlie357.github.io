@@ -25,7 +25,7 @@ cover:
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png)
 
-# 2. JMS👍
+# 2. 👍JMS
 
 - Java Message Service
 	- Jms规定了ConnectionFactory、Connection、Session等接口/类
@@ -56,7 +56,7 @@ Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 Destination destination = session.createQueue("queue.example");
 ```
 
-## 3.2. 关键概念👍
+## 3.2. 👍关键概念
 
 - Message：类似广播, 生产端
 - Destination：队列或主题。消费端
@@ -70,7 +70,7 @@ Destination destination = session.createQueue("queue.example");
 - JmsTemplate是Spring对JMS集成支持的核心
 - 发送的两个方法：send、convertAndSend
 
-## 3.4. 消息转换器 MessageConverter👍
+## 3.4. 👍消息转换器 MessageConverter
 
 MessageConverter是一个Spring的接口，实现各种**序列化**机制。
 
@@ -102,7 +102,7 @@ JmsTemplate支持
 RabbitMQ基础概念详细介绍：[RabbitMQ基础概念详细介绍 - 割肉机 - 博客园](https://www.cnblogs.com/williamjie/p/9481774.html)  
 也需要消息转换器，虽然包路径不一样，但是功能一样。
 
-## 4.1. 概念👍
+## 4.1. 👍概念
 
 - ConnectionFactory、Connection、Channel
 - Exchange：

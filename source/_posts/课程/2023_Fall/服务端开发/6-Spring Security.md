@@ -17,7 +17,7 @@ cover:
 ---
 - JAAS: Java Authentication Authorization Service. JDK提供的认证授权服务
 
-# 1. Spring Security👍
+# 1. 👍Spring Security
 
 - 划分为两类：
 	1. 针对客户web请求权限控制
@@ -43,7 +43,7 @@ cover:
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F092f577948a6053f598961fe1a329feb_20231026184400.png)
 
-# 4. 开发人员还要做什么👍
+# 4. 👍开发人员还要做什么
 
 <font color="#ff0000">除了框架提供的，开发人员还需要做什么，很重要</font>
 
@@ -74,7 +74,7 @@ cover:
 	- eg.用户未登录时，访问URL，服务端重定向到登录页面
 3. 通过Filter对用户设定的权限进行权限控制
 
-# 6. 用户信息存储👍
+# 6. 👍用户信息存储
 
 来自多个渠道，spring security不关心。
 
@@ -103,7 +103,7 @@ formLogin()
 .loginPage("/login").usernameParamrter('username').passwordParameter('password')
 ```
 
-# 9. 启用HTTP Basic认证👍
+# 9. 👍启用HTTP Basic认证
 
 HTTP协议内容，与Spring框架无关。  
 由于用户 ID 与密码是是以明文的形式在网络中进行传输的（尽管采用了 base64 编码，但是 base64 算法是可逆的），所以基本验证方案并**不安全**。

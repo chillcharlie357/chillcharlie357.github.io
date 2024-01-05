@@ -17,7 +17,7 @@ modified: 2024-01-02 21:05
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png)
 
-# 1. docker的三部分👍
+# 1. 👍docker的三部分
 
 容器：一个轻量化的虚拟机
 
@@ -31,7 +31,7 @@ modified: 2024-01-02 21:05
 
 # 2. docker子命令
 
-## 2.1. run👍
+## 2.1. 👍run
 
 文件：写时复制，不修改就用底层linux的文件，修改复制一份就放到上一层
 
@@ -74,7 +74,7 @@ ip a
 
 `docker image`和`docker container`都有`inspect`子命令
 
-# 3. 镜像分层👍
+# 3. 👍镜像分层
 
 - **写时复制 COW**(Copy-On-Write)
 	- 需要修改底层文件时才会复制一份到上层，然后进行修改
@@ -111,7 +111,7 @@ dangling镜像：没有tag的镜像
 - RECLAIMABLE 指可回收的，对 image, 指的是没有被容器使用的镜像
 - 查看系统日志：docker system events
 
-# 8. 容器网络👍
+# 8. 👍容器网络
 
 不同Network Driver的区别：[Network drivers overview | Docker Docs](https://docs.docker.com/network/drivers/)
 
