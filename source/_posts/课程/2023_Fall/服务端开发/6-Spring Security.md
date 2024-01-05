@@ -8,7 +8,7 @@ mathjax: true
 comment: true
 title: 6-Spring Security
 date: 2024-01-03 19:13
-modified: 2024-01-05 21:41
+modified: 2024-01-05 21:53
 abbrlink: b9233e24
 aliases:
 sticky:
@@ -41,7 +41,7 @@ cover:
 
 - spring data权限认证的原理：使用servlet容器的filter
 
-Spring Security是一种基于Spring AOP和Servlet过滤器的安全框架，它在Web请求级和方法调用级处理身份确认和授权1。Spring Security通过一系列的Servlet Filter实现这些功能1。当添加了@EnableWebSecurity注解之后，Spring会创建一个名为springSecurityFilterChain的Bean，其类型为DelegatingFilterProxy1。这是一个特殊的Servlet Filter，它将工作委托给一个javax.servlet.Filter的实现类（其类型为FilterChainProxy），这个实现类作为一个Bean注册在Spring的应用的上下文中1。
+Spring Security是一种基于Spring AOP和Servlet过滤器的安全框架，它在Web请求级和方法调用级处理身份确认和授权。Spring Security通过一系列的Servlet Filter实现这些功能。当添加了@EnableWebSecurity注解之后，Spring会创建一个名为springSecurityFilterChain的Bean，其类型为DelegatingFilterProxy。这是一个特殊的Servlet Filter，它将工作委托给一个javax.servlet.Filter的实现类（其类型为FilterChainProxy），这个实现类作为一个Bean注册在Spring的应用的上下文中。
 
 对于一个请求，其处理顺序是：`DelegatingFilterProxy => FilterChainProxy => 一系列的Filter => Controller`
 
