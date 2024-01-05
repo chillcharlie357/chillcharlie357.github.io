@@ -4799,6 +4799,172 @@
       </tags>
   </entry>
   <entry>
+    <title>7-询问专家和用户</title>
+    <url>/posts/a17d59f2/</url>
+    <content><![CDATA[<h1 id="1-查询用户-访谈"><a href="#1-查询用户-访谈" class="headerlink" title="1. 查询用户-访谈"></a>1. 查询用户-访谈</h1><p>访谈：有目的的对话过程</p>
+<h2 id="1-1-分类"><a href="#1-1-分类" class="headerlink" title="1.1. 分类"></a>1.1. 分类</h2><ul>
+<li>非结构化访谈<ul>
+<li>问题是开放式的，不限定内容和格式</li>
+<li>受访人自行选择详细回答还是简要回答</li>
+<li>访问人应确保能够搜集到重要问题的回答</li>
+</ul>
+</li>
+<li>结构化访谈<ul>
+<li>根据预先确定的一组问题进行访谈</li>
+<li>问题通常是“封闭式”的，它要求准确的回答</li>
+</ul>
+</li>
+<li>半结构化访谈<ul>
+<li>开放式问题+封闭式问题</li>
+<li>注意不要暗示答案</li>
+</ul>
+</li>
+<li>集体访谈<ul>
+<li>基本思想：个别成员的看法是在应用的上下文中通过与其他用户的交流而形成的</li>
+<li>“焦点小组”是集体访谈的一种形式</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-焦点小组"><a href="#1-2-焦点小组" class="headerlink" title="1.2. 焦点小组"></a>1.2. 焦点小组</h2><ul>
+<li>非正式的评估方法<ul>
+<li>在界面设计之前和经过一段使用之后评估用户的需要和感受</li>
+<li>是市场、政治和社会科学研究经常使用的方法</li>
+<li>人数限制：由大约6到9个典型用户组成</li>
+</ul>
+</li>
+<li>主持人工作<ul>
+<li>事先列出一张讨论问题和数据收集目标的清单</li>
+<li>保持所谈论的内容不离题</li>
+<li>保证小组的每个成员都积极参与谈论</li>
+<li>讨论结果的分析报告</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-查询专家-问卷"><a href="#2-查询专家-问卷" class="headerlink" title="2. 查询专家-问卷"></a>2. 查询专家-问卷</h1><p>本质上也是访谈的一种</p>
+<h2 id="2-1-设计原则👍"><a href="#2-1-设计原则👍" class="headerlink" title="2.1. 设计原则👍"></a>2.1. 设计原则👍</h2><ol>
+<li>注意提问次序，先提出一般化再提出具体问题</li>
+<li>确保问题明确，具体</li>
+<li>在可能时，采用封闭式问题并提供充足的答案选项</li>
+<li>对于征求用户意见的问题时，应该提供”<strong>无看法</strong>“选项</li>
+<li>避免使用复杂的多重问题</li>
+<li>在使用等级标度时，应设定适当的等级范围，并确保它们不重叠<ul>
+<li>做到直观、一致</li>
+</ul>
+</li>
+<li>避免使用术语</li>
+<li>明确说明如何完成问卷<ul>
+<li>比如在选项前的方框内打√</li>
+</ul>
+</li>
+<li>在设计问卷时，既要做到紧凑，也应适当留空</li>
+</ol>
+<h2 id="2-2-用户满意度调查表QUIS"><a href="#2-2-用户满意度调查表QUIS" class="headerlink" title="2.2. 用户满意度调查表QUIS"></a>2.2. 用户满意度调查表QUIS</h2><ul>
+<li>涉及细节<ul>
+<li>界面细节</li>
+<li>界面对象</li>
+<li>界面行为</li>
+<li>任务表达</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-问卷组织👍"><a href="#2-3-问卷组织👍" class="headerlink" title="2.3. 问卷组织👍"></a>2.3. 问卷组织👍</h2><h3 id="2-3-1-问卷调查中的两个关键问题"><a href="#2-3-1-问卷调查中的两个关键问题" class="headerlink" title="2.3.1. 问卷调查中的两个关键问题"></a>2.3.1. 问卷调查中的两个关键问题</h3><ol>
+<li>如何寻找有代表性的用户</li>
+<li>如何达到合理的回复率</li>
+</ol>
+<h3 id="2-3-2-有助于提高回复率的措施"><a href="#2-3-2-有助于提高回复率的措施" class="headerlink" title="2.3.2. 有助于提高回复率的措施"></a>2.3.2. 有助于提高回复率的措施</h3><p>精心涉及问卷，避免用户厌烦<br>不要主观引导<br>参照QUIS，提供简要描述，说明用户若没有时间完成整份问卷，可以只完成简短的部分<br>解释为什么要进行这些问卷调查，并说明将为参与者保密<br>在发出问卷之后，通过后续邮件、电话或电子邮件联系参与者<br>采取一些激励措施（如有偿调查等）<br>进行小规模测验</p>
+<h2 id="2-4-问卷与访谈"><a href="#2-4-问卷与访谈" class="headerlink" title="2.4. 问卷与访谈"></a>2.4. 问卷与访谈</h2><ul>
+<li>都是间接方法<ul>
+<li>都不是对用户界面直接研究</li>
+<li>都不能完全听信和采纳用户的说法</li>
+</ul>
+</li>
+<li>访谈<ul>
+<li>形式更自由</li>
+<li>难以获得确切数据</li>
+<li>需要花费更多时间</li>
+<li>可在访谈后立即得到结果</li>
+<li>可能回避某些“敏感问题”的真实想法</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-询问专家-认知走查"><a href="#3-询问专家-认知走查" class="headerlink" title="3. 询问专家-认知走查"></a>3. 询问专家-认知走查</h1><p>专家不是以自己身份评估，而是目标<strong>扮演用户</strong>。试图想象出人们在<font color="#c00000">第一次</font>使用某个产品时的想法以及所采取的动作，它的大作流程是怎样的。<strong>主要目标是确定使一个系统如何易于学习</strong>。</p>
+<p>实践中不太会用，因为很繁琐。</p>
+<p>与合作评估类似，也存在合作走查。</p>
+<ul>
+<li>优点<ul>
+<li>需要用户参与</li>
+<li>不需要可运行的原型(要界面原型)</li>
+<li>能找出非常具体的用户问题</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>工作量大，非常费时</li>
+<li>关注面有限<ul>
+<li>只适合于评估一个产品的易学习性</li>
+<li>不太容易发现使用效率方面的可用性问题</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-询问专家-启发式评估-👍"><a href="#4-询问专家-启发式评估-👍" class="headerlink" title="4. 询问专家-启发式评估 👍"></a>4. 询问专家-启发式评估 👍</h1><p>Nielsen的<font color="#c00000">十条启发式原则</font>：[[2-交互设计的原则和目标#6.3. 十项启发式交互原则👍]]</p>
+<p>经济评估，一种灵活而又相当廉价的评估方式。</p>
+<h2 id="4-1-步骤"><a href="#4-1-步骤" class="headerlink" title="4.1. 步骤"></a>4.1. 步骤</h2><ol>
+<li>彻底检查界面</li>
+<li>将界面与启发式规则进行对比</li>
+<li>列举可用性问题</li>
+<li>应用启发式规则对每一个问题进行解释与确认</li>
+</ol>
+<h2 id="4-2-问题严重性分类"><a href="#4-2-问题严重性分类" class="headerlink" title="4.2. 问题严重性分类"></a>4.2. 问题严重性分类</h2><ul>
+<li>不同作用因素<ul>
+<li>频率：有多经常？</li>
+<li>影响：有多难克服？</li>
+<li>持续时间：要多长时间克服？</li>
+</ul>
+</li>
+<li>严重性等级<ul>
+<li>表面问题：不需要被修复</li>
+<li>次要问题：需要修复，但优先级较低</li>
+<li>主要问题：需要修复且优先级很高</li>
+<li>灾难性问题：必须被修复</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3-如何正确评估"><a href="#4-3-如何正确评估" class="headerlink" title="4.3. 如何正确评估"></a>4.3. 如何正确评估</h2><ol>
+<li>分析每个问题对应的启发式规则</li>
+<li>列出所有问题</li>
+<li>至少遍历两遍界面</li>
+<li>不要局限于10条启发式原则</li>
+</ol>
+<h2 id="4-4-优缺点"><a href="#4-4-优缺点" class="headerlink" title="4.4. 优缺点"></a>4.4. 优缺点</h2><ul>
+<li>优点<ul>
+<li>不涉及用户，所以面临的实际限制和道德问题较少</li>
+<li>成本相对较低，不需要特殊设备，而且较为快捷，又被称为“经济评估法”</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>评估人员需要经过长时间的训练才能成为专家<ul>
+<li>理想的专家应同时具备交互设计和产品应用域的知识</li>
+</ul>
+</li>
+<li>可能出现“虚假警报”<ul>
+<li>“专家每找到一个真实的可用性问题，将发出约一个假警报（1.2），忽略大约半个问题（0.6）”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-5-提醒"><a href="#4-5-提醒" class="headerlink" title="4.5. 提醒"></a>4.5. 提醒</h2><p>邀请多个专家，推荐3-5<br>使用用户测试代替启发式评估<br>观察人员可以帮助评估专家，但对用户测试不合适</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>8-交互需求获取</title>
     <url>/posts/cfa39c4c/</url>
     <content><![CDATA[<h1 id="1-交互需求的差异"><a href="#1-交互需求的差异" class="headerlink" title="1. 交互需求的差异"></a>1. 交互需求的差异</h1><ul>
@@ -5273,172 +5439,6 @@
       </tags>
   </entry>
   <entry>
-    <title>7-询问专家和用户</title>
-    <url>/posts/a17d59f2/</url>
-    <content><![CDATA[<h1 id="1-查询用户-访谈"><a href="#1-查询用户-访谈" class="headerlink" title="1. 查询用户-访谈"></a>1. 查询用户-访谈</h1><p>访谈：有目的的对话过程</p>
-<h2 id="1-1-分类"><a href="#1-1-分类" class="headerlink" title="1.1. 分类"></a>1.1. 分类</h2><ul>
-<li>非结构化访谈<ul>
-<li>问题是开放式的，不限定内容和格式</li>
-<li>受访人自行选择详细回答还是简要回答</li>
-<li>访问人应确保能够搜集到重要问题的回答</li>
-</ul>
-</li>
-<li>结构化访谈<ul>
-<li>根据预先确定的一组问题进行访谈</li>
-<li>问题通常是“封闭式”的，它要求准确的回答</li>
-</ul>
-</li>
-<li>半结构化访谈<ul>
-<li>开放式问题+封闭式问题</li>
-<li>注意不要暗示答案</li>
-</ul>
-</li>
-<li>集体访谈<ul>
-<li>基本思想：个别成员的看法是在应用的上下文中通过与其他用户的交流而形成的</li>
-<li>“焦点小组”是集体访谈的一种形式</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-2-焦点小组"><a href="#1-2-焦点小组" class="headerlink" title="1.2. 焦点小组"></a>1.2. 焦点小组</h2><ul>
-<li>非正式的评估方法<ul>
-<li>在界面设计之前和经过一段使用之后评估用户的需要和感受</li>
-<li>是市场、政治和社会科学研究经常使用的方法</li>
-<li>人数限制：由大约6到9个典型用户组成</li>
-</ul>
-</li>
-<li>主持人工作<ul>
-<li>事先列出一张讨论问题和数据收集目标的清单</li>
-<li>保持所谈论的内容不离题</li>
-<li>保证小组的每个成员都积极参与谈论</li>
-<li>讨论结果的分析报告</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-查询专家-问卷"><a href="#2-查询专家-问卷" class="headerlink" title="2. 查询专家-问卷"></a>2. 查询专家-问卷</h1><p>本质上也是访谈的一种</p>
-<h2 id="2-1-设计原则👍"><a href="#2-1-设计原则👍" class="headerlink" title="2.1. 设计原则👍"></a>2.1. 设计原则👍</h2><ol>
-<li>注意提问次序，先提出一般化再提出具体问题</li>
-<li>确保问题明确，具体</li>
-<li>在可能时，采用封闭式问题并提供充足的答案选项</li>
-<li>对于征求用户意见的问题时，应该提供”<strong>无看法</strong>“选项</li>
-<li>避免使用复杂的多重问题</li>
-<li>在使用等级标度时，应设定适当的等级范围，并确保它们不重叠<ul>
-<li>做到直观、一致</li>
-</ul>
-</li>
-<li>避免使用术语</li>
-<li>明确说明如何完成问卷<ul>
-<li>比如在选项前的方框内打√</li>
-</ul>
-</li>
-<li>在设计问卷时，既要做到紧凑，也应适当留空</li>
-</ol>
-<h2 id="2-2-用户满意度调查表QUIS"><a href="#2-2-用户满意度调查表QUIS" class="headerlink" title="2.2. 用户满意度调查表QUIS"></a>2.2. 用户满意度调查表QUIS</h2><ul>
-<li>涉及细节<ul>
-<li>界面细节</li>
-<li>界面对象</li>
-<li>界面行为</li>
-<li>任务表达</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-3-问卷组织👍"><a href="#2-3-问卷组织👍" class="headerlink" title="2.3. 问卷组织👍"></a>2.3. 问卷组织👍</h2><h3 id="2-3-1-问卷调查中的两个关键问题"><a href="#2-3-1-问卷调查中的两个关键问题" class="headerlink" title="2.3.1. 问卷调查中的两个关键问题"></a>2.3.1. 问卷调查中的两个关键问题</h3><ol>
-<li>如何寻找有代表性的用户</li>
-<li>如何达到合理的回复率</li>
-</ol>
-<h3 id="2-3-2-有助于提高回复率的措施"><a href="#2-3-2-有助于提高回复率的措施" class="headerlink" title="2.3.2. 有助于提高回复率的措施"></a>2.3.2. 有助于提高回复率的措施</h3><p>精心涉及问卷，避免用户厌烦<br>不要主观引导<br>参照QUIS，提供简要描述，说明用户若没有时间完成整份问卷，可以只完成简短的部分<br>解释为什么要进行这些问卷调查，并说明将为参与者保密<br>在发出问卷之后，通过后续邮件、电话或电子邮件联系参与者<br>采取一些激励措施（如有偿调查等）<br>进行小规模测验</p>
-<h2 id="2-4-问卷与访谈"><a href="#2-4-问卷与访谈" class="headerlink" title="2.4. 问卷与访谈"></a>2.4. 问卷与访谈</h2><ul>
-<li>都是间接方法<ul>
-<li>都不是对用户界面直接研究</li>
-<li>都不能完全听信和采纳用户的说法</li>
-</ul>
-</li>
-<li>访谈<ul>
-<li>形式更自由</li>
-<li>难以获得确切数据</li>
-<li>需要花费更多时间</li>
-<li>可在访谈后立即得到结果</li>
-<li>可能回避某些“敏感问题”的真实想法</li>
-</ul>
-</li>
-</ul>
-<h1 id="3-询问专家-认知走查"><a href="#3-询问专家-认知走查" class="headerlink" title="3. 询问专家-认知走查"></a>3. 询问专家-认知走查</h1><p>专家不是以自己身份评估，而是目标<strong>扮演用户</strong>。试图想象出人们在<font color="#c00000">第一次</font>使用某个产品时的想法以及所采取的动作，它的大作流程是怎样的。<strong>主要目标是确定使一个系统如何易于学习</strong>。</p>
-<p>实践中不太会用，因为很繁琐。</p>
-<p>与合作评估类似，也存在合作走查。</p>
-<ul>
-<li>优点<ul>
-<li>需要用户参与</li>
-<li>不需要可运行的原型(要界面原型)</li>
-<li>能找出非常具体的用户问题</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>工作量大，非常费时</li>
-<li>关注面有限<ul>
-<li>只适合于评估一个产品的易学习性</li>
-<li>不太容易发现使用效率方面的可用性问题</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="4-询问专家-启发式评估-👍"><a href="#4-询问专家-启发式评估-👍" class="headerlink" title="4. 询问专家-启发式评估 👍"></a>4. 询问专家-启发式评估 👍</h1><p>Nielsen的<font color="#c00000">十条启发式原则</font>：[[2-交互设计的原则和目标#6.3. 十项启发式交互原则👍]]</p>
-<p>经济评估，一种灵活而又相当廉价的评估方式。</p>
-<h2 id="4-1-步骤"><a href="#4-1-步骤" class="headerlink" title="4.1. 步骤"></a>4.1. 步骤</h2><ol>
-<li>彻底检查界面</li>
-<li>将界面与启发式规则进行对比</li>
-<li>列举可用性问题</li>
-<li>应用启发式规则对每一个问题进行解释与确认</li>
-</ol>
-<h2 id="4-2-问题严重性分类"><a href="#4-2-问题严重性分类" class="headerlink" title="4.2. 问题严重性分类"></a>4.2. 问题严重性分类</h2><ul>
-<li>不同作用因素<ul>
-<li>频率：有多经常？</li>
-<li>影响：有多难克服？</li>
-<li>持续时间：要多长时间克服？</li>
-</ul>
-</li>
-<li>严重性等级<ul>
-<li>表面问题：不需要被修复</li>
-<li>次要问题：需要修复，但优先级较低</li>
-<li>主要问题：需要修复且优先级很高</li>
-<li>灾难性问题：必须被修复</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-3-如何正确评估"><a href="#4-3-如何正确评估" class="headerlink" title="4.3. 如何正确评估"></a>4.3. 如何正确评估</h2><ol>
-<li>分析每个问题对应的启发式规则</li>
-<li>列出所有问题</li>
-<li>至少遍历两遍界面</li>
-<li>不要局限于10条启发式原则</li>
-</ol>
-<h2 id="4-4-优缺点"><a href="#4-4-优缺点" class="headerlink" title="4.4. 优缺点"></a>4.4. 优缺点</h2><ul>
-<li>优点<ul>
-<li>不涉及用户，所以面临的实际限制和道德问题较少</li>
-<li>成本相对较低，不需要特殊设备，而且较为快捷，又被称为“经济评估法”</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>评估人员需要经过长时间的训练才能成为专家<ul>
-<li>理想的专家应同时具备交互设计和产品应用域的知识</li>
-</ul>
-</li>
-<li>可能出现“虚假警报”<ul>
-<li>“专家每找到一个真实的可用性问题，将发出约一个假警报（1.2），忽略大约半个问题（0.6）”</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-5-提醒"><a href="#4-5-提醒" class="headerlink" title="4.5. 提醒"></a>4.5. 提醒</h2><p>邀请多个专家，推荐3-5<br>使用用户测试代替启发式评估<br>观察人员可以帮助评估专家，但对用户测试不合适</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_人机交互</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>13-期末复习</title>
     <url>/posts/20e7e86a/</url>
     <content><![CDATA[<h1 id="1-内容组织"><a href="#1-内容组织" class="headerlink" title="1. 内容组织"></a>1. 内容组织</h1><p>软件主导硬件<br>以应用为中心</p>
@@ -5657,7 +5657,7 @@
 </ol>
 <p>war包小，不能独立运行<br>Jar包大，内嵌tomcat容器，本身可以独立运行</p>
 <h2 id="2-2-常用依赖"><a href="#2-2-常用依赖" class="headerlink" title="2.2. 常用依赖"></a>2.2. 常用依赖</h2><p>devtools：开发时候用于调试<br>web：MVC开发框架<br>thymeleaf：动态组装html页面</p>
-<h1 id="3-Spring-Web开发框架的分层👍"><a href="#3-Spring-Web开发框架的分层👍" class="headerlink" title="3. Spring Web开发框架的分层👍"></a>3. Spring Web开发框架的分层👍</h1><ul>
+<h1 id="3-👍Spring-Web开发框架的分层"><a href="#3-👍Spring-Web开发框架的分层" class="headerlink" title="3. 👍Spring Web开发框架的分层"></a>3. 👍Spring Web开发框架的分层</h1><ul>
 <li>在服务端一侧的划分：</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2Faa30cd55d3482bfd4228c3f361bba520_20230907204339.png" alt="image.png"></p>
@@ -5679,6 +5679,187 @@
       </tags>
   </entry>
   <entry>
+    <title>1-依赖注入</title>
+    <url>/posts/a22fb360/</url>
+    <content><![CDATA[<p>Git：分布式版本控制<br>Beam:java中一个对象，Spring负责对象创建、管理这些对象</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png" alt="image.png"></p>
+<p>商品服务需要引用库存服务（依赖），如何知道库存服务的地址/引用？</p>
+<h1 id="1-Spring核心技术"><a href="#1-Spring核心技术" class="headerlink" title="1. Spring核心技术"></a>1. Spring核心技术</h1><ol>
+<li>DI（Dependency Injection）<ul>
+<li>保留抽象接口，让组件（Component）依赖于抽象接口，当组件要与其他实际的对象发生依赖关系时，<strong>由抽象接口来注入依赖的实际对象</strong></li>
+</ul>
+</li>
+<li>AOP（Aspect Oriented Programming）<ul>
+<li>通过<strong>预编译方式</strong>和<strong>运行期间动态代理</strong>实现程序功能的统一维护的一种技术</li>
+<li>利用AOP可以对业务逻辑的各个部分进行隔离， 从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发效率</li>
+</ul>
+</li>
+</ol>
+<h1 id="2-常用注解"><a href="#2-常用注解" class="headerlink" title="2. 常用注解"></a>2. 常用注解</h1><h2 id="2-1-Bean"><a href="#2-1-Bean" class="headerlink" title="2.1. Bean"></a>2.1. Bean</h2><p>==Object=Bean=Component==</p>
+<ul>
+<li><p><code>@Component</code></p>
+<ul>
+<li>普通的Java类加<code>@Component</code>注解，Spring会<strong>实例化</strong>这个类</li>
+<li>Component value属性，指定Bean Id，默认为类名</li>
+</ul>
+</li>
+<li><p><code>@Autowired</code></p>
+<ul>
+<li><strong>自动注入</strong>，Spring从从容器的上下文找实现了某个接口的对象</li>
+<li>找不到对象，注入失败</li>
+<li>找到多个实现了这个接口的对象，也会报错</li>
+</ul>
+</li>
+<li><p>自动装配时歧义：如何解决Bean冲突?</p>
+<ul>
+<li><code>@Qualifier</code>自定义限定符</li>
+<li><code>@Primary</code>在Bean上放指定</li>
+<li>自定义注解</li>
+</ul>
+</li>
+</ul>
+<p>@Profile需要在不同场景下运行不同Bean<br>@Conditional在运行环境下决定Bean是否要创建</p>
+<h2 id="2-2-组件扫描"><a href="#2-2-组件扫描" class="headerlink" title="2.2. 组件扫描"></a>2.2. 组件扫描</h2><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan</span> <span class="comment">//找当前包下加了注解的类并实例化</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CDPlaterConfig</span> {</span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	&lt;function&gt;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>@ComponentScan</code> //找当前包下加了注解的类并实例化<ul>
+<li><code>basePackages</code><ul>
+<li>是数组可以写多个</li>
+<li>但是类型不安全，写错编译器不会报错</li>
+</ul>
+</li>
+<li><code>basePackageClasses</code><ul>
+<li>也是数组</li>
+<li>到类所在的包和子目录下搜索</li>
+<li><strong>类型安全</strong>，但无法保证类一直存在</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>当使用 <code>@ComponentScan</code> 注解时，Spring会自动扫描指定包下的组件，并将其注册为Bean。如果你在配置类中手动定义了相同的Bean，那么就会导致重复定义的问题。</p>
+<h2 id="2-3-👍Bean三种注入方法"><a href="#2-3-👍Bean三种注入方法" class="headerlink" title="2.3. 👍Bean三种注入方法"></a>2.3. 👍Bean三种注入方法</h2><h3 id="2-3-1-构造方法"><a href="#2-3-1-构造方法" class="headerlink" title="2.3.1. 构造方法"></a>2.3.1. 构造方法</h3><ul>
+<li>在构造函数上使用 @Autowired 注解，用于自动注入构造函数参数所需要的 Bean。<strong>如果构造函数只有一个参数，则可以省略 @Autowired 注解。</strong></li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">public</span> <span class="title function_">MyService</span><span class="params">(MyDao myDao)</span> {</span><br><span class="line">    <span class="built_in">this</span>.myDao = myDao;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-3-2-setter方法"><a href="#2-3-2-setter方法" class="headerlink" title="2.3.2. setter方法"></a>2.3.2. setter方法</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setOrderRepo</span><span class="params">(OrderRepository orderRepo)</span> {</span><br><span class="line">    <span class="built_in">this</span>.orderRepo = orderRepo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>也可以加<code>Autowired</code>自动注入.</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setOrderRepo</span><span class="params">(OrderRepository orderRepo)</span> {</span><br><span class="line">    <span class="built_in">this</span>.orderRepo = orderRepo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-3-3-属性字段下加-Autowired"><a href="#2-3-3-属性字段下加-Autowired" class="headerlink" title="2.3.3. 属性字段下加@Autowired"></a>2.3.3. 属性字段下加<code>@Autowired</code></h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> MyBean myBean;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="3-👍Spring配置方案"><a href="#3-👍Spring配置方案" class="headerlink" title="3. 👍Spring配置方案"></a>3. 👍Spring配置方案</h1><ol>
+<li>自动配置</li>
+<li>JavaConfig</li>
+<li>XML配置（最早期）</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2Fc81a655bf33d1187cac863eabe4a64de_20230914190947.png" alt="image.png"><br><em>SgtPeppers是一张CD</em></p>
+<p>建议基于接口编程</p>
+<h2 id="3-1-自动配置"><a href="#3-1-自动配置" class="headerlink" title="3.1. 自动配置"></a>3.1. 自动配置</h2><ul>
+<li>组件扫描 component scanning<ul>
+<li><code>@Configuration</code> 配置类</li>
+<li><code>@ComponentScan</code></li>
+</ul>
+</li>
+<li>自动装配 autowiring<ul>
+<li><code>@Autowired</code></li>
+<li>构造方法</li>
+<li>字段</li>
+<li>set方法</li>
+<li><code>required=false</code></li>
+</ul>
+</li>
+<li>需要实例化的Bean：<code>@Component</code><ul>
+<li>默认是<strong>单实例模式</strong>，在Spring上下文永远只有一个实例</li>
+<li>可以<strong>参数指定多实例</strong></li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-55-36-ac898cc2918943f139876a34a27f386c-20231231095536-853b20.png" alt="image.png"></p>
+<h2 id="3-2-JavaConfig"><a href="#3-2-JavaConfig" class="headerlink" title="3.2. JavaConfig"></a>3.2. JavaConfig</h2><ul>
+<li>应用场景：自动化配置行不通，如第三方库</li>
+<li>注解<ul>
+<li><code>@Configuration</code></li>
+<li><code>@Bean(name=“..”)</code></li>
+</ul>
+</li>
+<li>注入<ul>
+<li>调用方法</li>
+<li>通过方法参数自动装配（其他配置类，其他方法创建的Bean）</li>
+</ul>
+</li>
+</ul>
+<p>只用于创建，不会把业务逻辑放进来。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-56-16-0ee4f7052c6e564839b82b9a7d299704-20231231095615-a30d06.png" alt="image.png"></p>
+<h2 id="3-3-XML"><a href="#3-3-XML" class="headerlink" title="3.3. XML"></a>3.3. XML</h2><ul>
+<li>格式：<code>&lt;beans&gt;&lt;bean&gt;</code></li>
+<li><strong>无类型检查</strong></li>
+<li>构造器注入<ul>
+<li>constructor-arg</li>
+<li>c-命名空间</li>
+<li>注入字面量值</li>
+<li>注入集合</li>
+</ul>
+</li>
+<li>属性注入<ul>
+<li>p-命名空间</li>
+<li>util-命名空间</li>
+</ul>
+</li>
+</ul>
+<p>建议：强依赖使用构造器注入</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-56-42-38e95d9182eff146ef5bd7df0b88a0a3-20231231095641-816334.png" alt="image.png"></p>
+<h2 id="3-4-混合配置"><a href="#3-4-混合配置" class="headerlink" title="3.4. 混合配置"></a>3.4. 混合配置</h2><p>在根配置类中导入其他配置类。</p>
+<ul>
+<li>JavaConfig导入<ul>
+<li><code>@import(配置类,class,...)</code></li>
+<li><code>@importResource(xml文件)</code></li>
+</ul>
+</li>
+<li>XML导入</li>
+</ul>
+<h1 id="4-应用上下文"><a href="#4-应用上下文" class="headerlink" title="4. 应用上下文"></a>4. 应用上下文</h1><ol>
+<li>AnnotationConfigApplicationContext<ul>
+<li>基于注解配置生成</li>
+</ul>
+</li>
+<li>ClassPathXmlApplicationContext</li>
+<li>AnnotationConfigWebApplicationContext</li>
+<li>FileSystemXmlApplicationContext</li>
+<li>XmlWebApplicationContext</li>
+</ol>
+<h1 id="5-Bean作用域"><a href="#5-Bean作用域" class="headerlink" title="5. Bean作用域"></a>5. Bean作用域</h1><p>@Scope与@Component和@Bean一起使用，指定作用域</p>
+<ol>
+<li>Singleton，单例，整个应用之创建一个实例</li>
+<li>Prototype，原型，每次注入或者通过Spring应用上下文获取的时候，都会创建一个新bean实例</li>
+<li>Session，会话，在会话范围内有效</li>
+<li>Request，请求，在Web应用中，为每个请求创建一个bean实例</li>
+</ol>
+<h2 id="5-1-单例"><a href="#5-1-单例" class="headerlink" title="5.1. 单例"></a>5.1. 单例</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2Fbcf741e46f28882a4c83561481669afc_20230921185636.png" alt="image.png"></p>
+<p>通过代理注入给单例对象</p>
+<h1 id="6-运行时注入外部值"><a href="#6-运行时注入外部值" class="headerlink" title="6. 运行时注入外部值"></a>6. 运行时注入外部值</h1><ol>
+<li>使用<code>Environment</code>属性</li>
+<li>使用<code>@PropertySource(/path/to/file)</code>指定文件</li>
+</ol>
+<h2 id="6-1-Environment-getProperty的几种形式"><a href="#6-1-Environment-getProperty的几种形式" class="headerlink" title="6.1. Environment.getProperty的几种形式"></a>6.1. Environment.getProperty的几种形式</h2><ul>
+<li><code>String getProperty（String key)</code></li>
+<li><code>String getProperty（String key, String defaultValue）</code> </li>
+<li><code>T getProperty（String key, Class type）</code> </li>
+<li><code>T getProperty（String key, Class type, T defaultValue</code>）</li>
+</ul>
+<h2 id="6-2-使用占位符"><a href="#6-2-使用占位符" class="headerlink" title="6.2. 使用占位符"></a>6.2. 使用占位符</h2><p><code>${...}</code></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
     <url>/posts/b48e71af/</url>
     <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
@@ -5687,7 +5868,7 @@
 </ul>
 <p>消息代理 broker：</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png" alt="image.png"></p>
-<h1 id="2-JMS👍"><a href="#2-JMS👍" class="headerlink" title="2. JMS👍"></a>2. JMS👍</h1><ul>
+<h1 id="2-👍JMS"><a href="#2-👍JMS" class="headerlink" title="2. 👍JMS"></a>2. 👍JMS</h1><ul>
 <li>Java Message Service<ul>
 <li>Jms规定了ConnectionFactory、Connection、Session等接口/类</li>
 </ul>
@@ -5717,7 +5898,7 @@
 </ol>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ConnectionFactory</span> <span class="variable">connectionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ActiveMQConnectionFactory</span>(BROKER_URL, USERNAME, PASSWORD);</span><br><span class="line"><span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> connectionFactory.createConnection();</span><br><span class="line">connection.start();</span><br><span class="line"><span class="type">Session</span> <span class="variable">session</span> <span class="operator">=</span> connection.createSession(<span class="literal">false</span>, Session.AUTO_ACKNOWLEDGE);</span><br><span class="line"><span class="type">Destination</span> <span class="variable">destination</span> <span class="operator">=</span> session.createQueue(<span class="string">"queue.example"</span>);</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="3-2-关键概念👍"><a href="#3-2-关键概念👍" class="headerlink" title="3.2. 关键概念👍"></a>3.2. 关键概念👍</h2><ul>
+<h2 id="3-2-👍关键概念"><a href="#3-2-👍关键概念" class="headerlink" title="3.2. 👍关键概念"></a>3.2. 👍关键概念</h2><ul>
 <li>Message：类似广播, 生产端</li>
 <li>Destination：队列或主题。消费端<ul>
 <li>三种指定方式：<ol>
@@ -5733,7 +5914,7 @@
 <li>JmsTemplate是Spring对JMS集成支持的核心</li>
 <li>发送的两个方法：send、convertAndSend</li>
 </ul>
-<h2 id="3-4-消息转换器-MessageConverter👍"><a href="#3-4-消息转换器-MessageConverter👍" class="headerlink" title="3.4. 消息转换器 MessageConverter👍"></a>3.4. 消息转换器 MessageConverter👍</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
+<h2 id="3-4-👍消息转换器-MessageConverter"><a href="#3-4-👍消息转换器-MessageConverter" class="headerlink" title="3.4. 👍消息转换器 MessageConverter"></a>3.4. 👍消息转换器 MessageConverter</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
 <ul>
 <li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
 <li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
@@ -5746,7 +5927,7 @@
 <h3 id="3-5-1-拉取模式-pull-model"><a href="#3-5-1-拉取模式-pull-model" class="headerlink" title="3.5.1. 拉取模式 pull model"></a>3.5.1. 拉取模式 pull model</h3><p>JmsTemplate支持<br>访问URL</p>
 <h3 id="3-5-2-推送模式-push-model"><a href="#3-5-2-推送模式-push-model" class="headerlink" title="3.5.2. 推送模式 push model"></a>3.5.2. 推送模式 push model</h3><p>需要定义消息监听器<br>@JmsListener</p>
 <h1 id="4-RabbitMQ"><a href="#4-RabbitMQ" class="headerlink" title="4. RabbitMQ"></a>4. RabbitMQ</h1><p><strong>实现AMQP协议</strong>。<br>RabbitMQ基础概念详细介绍：<a class="link" href="https://www.cnblogs.com/williamjie/p/9481774.html">RabbitMQ基础概念详细介绍 - 割肉机 - 博客园 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>也需要消息转换器，虽然包路径不一样，但是功能一样。</p>
-<h2 id="4-1-概念👍"><a href="#4-1-概念👍" class="headerlink" title="4.1. 概念👍"></a>4.1. 概念👍</h2><ul>
+<h2 id="4-1-👍概念"><a href="#4-1-👍概念" class="headerlink" title="4.1. 👍概念"></a>4.1. 👍概念</h2><ul>
 <li>ConnectionFactory、Connection、Channel</li>
 <li>Exchange：<ul>
 <li>Default、Direct、Topic、Fanout、Headers、Dead letter</li>
@@ -5802,7 +5983,7 @@
 <h2 id="2-2-Java"><a href="#2-2-Java" class="headerlink" title="2.2. Java"></a>2.2. Java</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-37-20-5a24358a2e8ff6ef8db47e3bc36c8989-20231123193719-f55088.png" alt="image.png"></p>
 <h2 id="2-3-DSL"><a href="#2-3-DSL" class="headerlink" title="2.3. DSL"></a>2.3. DSL</h2><p>IntergrationFlow对象</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-40-43-b0218d8cb35748ff7d09c2f2e8d81d41-20231123194042-b1beb5.png" alt="image.png"></p>
-<h1 id="3-集成流组件👍"><a href="#3-集成流组件👍" class="headerlink" title="3. 集成流组件👍"></a>3. 集成流组件👍</h1><ul>
+<h1 id="3-👍集成流组件"><a href="#3-👍集成流组件" class="headerlink" title="3. 👍集成流组件"></a>3. 👍集成流组件</h1><ul>
 <li>Channels：消息通道，传递消息</li>
 <li>Filters：过滤器，基于条件判断要不要在流上继续流下去</li>
 <li>Transformers：转换器，消息的内容/类型做转换</li>
@@ -5869,7 +6050,7 @@
 <li>同步阻塞模型，阻塞线程多，CPU利用率不高，性能下降</li>
 <li>管理多线程，意味着更高的复杂性</li>
 </ul>
-<h1 id="2-Reactor👍"><a href="#2-Reactor👍" class="headerlink" title="2. Reactor👍"></a>2. Reactor👍</h1><ul>
+<h1 id="2-👍Reactor"><a href="#2-👍Reactor" class="headerlink" title="2. 👍Reactor"></a>2. 👍Reactor</h1><ul>
 <li><strong>Reactive Streams</strong>：Netflix、Lightbend和Pirotal于2013年开始制定的<strong>一种规范</strong>，旨在提供无阻塞回压的异步流处理标准<ul>
 <li>和JDK里的Stream不是同一个东西</li>
 </ul>
@@ -5880,11 +6061,11 @@
 </li>
 <li><strong>Spring WebFlux</strong>：启用基于响应式编程的Web应用程序的开发。提供类似于Spring MVC的编程模型</li>
 </ul>
-<h1 id="3-Java的stream与反应式的流区别👍"><a href="#3-Java的stream与反应式的流区别👍" class="headerlink" title="3. Java的stream与反应式的流区别👍"></a>3. Java的stream与反应式的流区别👍</h1><ol>
+<h1 id="3-👍Java的stream与反应式的流区别"><a href="#3-👍Java的stream与反应式的流区别" class="headerlink" title="3. 👍Java的stream与反应式的流区别"></a>3. 👍Java的stream与反应式的流区别</h1><ol>
 <li><strong>Java的stream通常都是同步的</strong>，并且只能处理有限的数据集，本质上来说，它们只是使用函数来对集合进行迭代的一种方式</li>
 <li>JDK9中的 <strong>Flow API对应反应式流</strong></li>
 </ol>
-<h1 id="4-反应式流规范定义的4个接口👍"><a href="#4-反应式流规范定义的4个接口👍" class="headerlink" title="4. 反应式流规范定义的4个接口👍"></a>4. 反应式流规范定义的4个接口👍</h1><ul>
+<h1 id="4-👍反应式流规范定义的4个接口"><a href="#4-👍反应式流规范定义的4个接口" class="headerlink" title="4. 👍反应式流规范定义的4个接口"></a>4. 👍反应式流规范定义的4个接口</h1><ul>
 <li>org.reactivestreams.*</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F30%2F19-07-41-798ed044f2aa4ce418bbeb6519cfa668-20231130190741-06575a.png" alt="image.png"></p>
@@ -5937,7 +6118,7 @@
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F30%2F20-50-27-9624d81ea1b9b815676419eb53eb71a3-20231130205026-100752.png" alt="image.png"></p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F30%2F20-50-36-9648126cc6e148b104e4369205f43c63-20231130205035-0bc08f.png" alt="image.png"></p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F30%2F20-50-08-1dc3601d6deecab36c6e8e25231983b3-20231130205008-b20327.png" alt="image.png"></p>
-<h2 id="7-4-转换Flux流"><a href="#7-4-转换Flux流" class="headerlink" title="7.4. 转换Flux流"></a>7.4. 转换Flux流</h2><h3 id="7-4-1-map-flatMap-👍"><a href="#7-4-1-map-flatMap-👍" class="headerlink" title="7.4.1. map/flatMap 👍"></a>7.4.1. map/flatMap 👍</h3><ul>
+<h2 id="7-4-转换Flux流"><a href="#7-4-转换Flux流" class="headerlink" title="7.4. 转换Flux流"></a>7.4. 转换Flux流</h2><h3 id="7-4-1-👍map-flatMap"><a href="#7-4-1-👍map-flatMap" class="headerlink" title="7.4.1. 👍map/flatMap"></a>7.4.1. 👍map/flatMap</h3><ul>
 <li><p>map：</p>
 <ul>
 <li>同步</li>
@@ -6088,7 +6269,7 @@
     <title>14-docker</title>
     <url>/posts/33399bea/</url>
     <content><![CDATA[<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png" alt="image.png"></p>
-<h1 id="1-docker的三部分👍"><a href="#1-docker的三部分👍" class="headerlink" title="1. docker的三部分👍"></a>1. docker的三部分👍</h1><p>容器：一个轻量化的虚拟机</p>
+<h1 id="1-👍docker的三部分"><a href="#1-👍docker的三部分" class="headerlink" title="1. 👍docker的三部分"></a>1. 👍docker的三部分</h1><p>容器：一个轻量化的虚拟机</p>
 <ul>
 <li>哪三部分？<ul>
 <li>docker engine：服务端，管理一系列资源的生命周期</li>
@@ -6099,7 +6280,7 @@
 <li>每一部分有哪些部分构成？</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-48-51-551a7d3c33dd450f7f8dc60d1a6ae29c-20231214184848-94a261.png" alt="image.png"></p>
-<h1 id="2-docker子命令"><a href="#2-docker子命令" class="headerlink" title="2. docker子命令"></a>2. docker子命令</h1><h2 id="2-1-run👍"><a href="#2-1-run👍" class="headerlink" title="2.1. run👍"></a>2.1. run👍</h2><p>文件：写时复制，不修改就用底层linux的文件，修改复制一份就放到上一层</p>
+<h1 id="2-docker子命令"><a href="#2-docker子命令" class="headerlink" title="2. docker子命令"></a>2. docker子命令</h1><h2 id="2-1-👍run"><a href="#2-1-👍run" class="headerlink" title="2.1. 👍run"></a>2.1. 👍run</h2><p>文件：写时复制，不修改就用底层linux的文件，修改复制一份就放到上一层</p>
 <ul>
 <li><code>--rm</code>: 退出时删除容器</li>
 <li><code>--it</code>: 进入命令行终端</li>
@@ -6141,7 +6322,7 @@
 </ul>
 <h2 id="2-2-inspect"><a href="#2-2-inspect" class="headerlink" title="2.2. inspect"></a>2.2. inspect</h2><p>查看详细信息</p>
 <p><code>docker image</code>和<code>docker container</code>都有<code>inspect</code>子命令</p>
-<h1 id="3-镜像分层👍"><a href="#3-镜像分层👍" class="headerlink" title="3. 镜像分层👍"></a>3. 镜像分层👍</h1><ul>
+<h1 id="3-👍镜像分层"><a href="#3-👍镜像分层" class="headerlink" title="3. 👍镜像分层"></a>3. 👍镜像分层</h1><ul>
 <li><strong>写时复制 COW</strong>(Copy-On-Write)<ul>
 <li>需要修改底层文件时才会复制一份到上层，然后进行修改</li>
 </ul>
@@ -6170,7 +6351,7 @@
 <li>RECLAIMABLE 指可回收的，对 image, 指的是没有被容器使用的镜像</li>
 <li>查看系统日志：docker system events</li>
 </ul>
-<h1 id="8-容器网络👍"><a href="#8-容器网络👍" class="headerlink" title="8. 容器网络👍"></a>8. 容器网络👍</h1><p>不同Network Driver的区别：<a class="link" href="https://docs.docker.com/network/drivers/">Network drivers overview | Docker Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="8-👍容器网络"><a href="#8-👍容器网络" class="headerlink" title="8. 👍容器网络"></a>8. 👍容器网络</h1><p>不同Network Driver的区别：<a class="link" href="https://docs.docker.com/network/drivers/">Network drivers overview | Docker Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p><a class="link" href="https://zhuanlan.zhihu.com/p/212772001">Docker 网络模式详解及容器间网络通信 - 知乎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <ul>
 <li>none网络， <code>--net=none</code></li>
@@ -6208,7 +6389,7 @@
     <url>/posts/70e6ad8c/</url>
     <content><![CDATA[<h1 id="1-由Dockerfile构建镜像"><a href="#1-由Dockerfile构建镜像" class="headerlink" title="1. 由Dockerfile构建镜像"></a>1. 由Dockerfile构建镜像</h1><h2 id="1-1-过程"><a href="#1-1-过程" class="headerlink" title="1.1. 过程"></a>1.1. 过程</h2><p>Image：静态的压缩包<br>Container：运行的容器，轻量级的虚拟机</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F21%2F18-48-00-e370271f15d63a6c253c9948ac97824b-20231221184759-c0bcd1.png" alt="image.png"></p>
-<h2 id="1-2-文件指令👍"><a href="#1-2-文件指令👍" class="headerlink" title="1.2. 文件指令👍"></a>1.2. 文件指令👍</h2><ul>
+<h2 id="1-2-👍文件指令"><a href="#1-2-👍文件指令" class="headerlink" title="1.2. 👍文件指令"></a>1.2. 👍文件指令</h2><ul>
 <li>FROM：<strong>指定基础镜像，必须为第一个命令</strong></li>
 <li>RUN：构建镜像时执行的命令</li>
 <li><font color="#c00000">ADD</font>：将本地文件添加到容器中，<strong>tar类型文件会自动解压</strong></li>
@@ -6249,7 +6430,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="2-2-最佳实践👍"><a href="#2-2-最佳实践👍" class="headerlink" title="2.2. 最佳实践👍"></a>2.2. 最佳实践👍</h2><ul>
+<h2 id="2-2-👍最佳实践"><a href="#2-2-👍最佳实践" class="headerlink" title="2.2. 👍最佳实践"></a>2.2. 👍最佳实践</h2><ul>
 <li><p>如何编写dockerfile: <a class="link" href="https://zhuanlan.zhihu.com/p/26904830">如何编写最佳的Dockerfile - 知乎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <ol>
 <li><code>.dockerignore</code>文件</li>
@@ -6332,7 +6513,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="3-4-docker-compose常用命令👍"><a href="#3-4-docker-compose常用命令👍" class="headerlink" title="3.4. docker-compose常用命令👍"></a>3.4. docker-compose常用命令👍</h2><ul>
+<h2 id="3-4-👍docker-compose常用命令"><a href="#3-4-👍docker-compose常用命令" class="headerlink" title="3.4. 👍docker-compose常用命令"></a>3.4. 👍docker-compose常用命令</h2><ul>
 <li>docker-compose ps<ul>
 <li>和当前compose的yaml文件相关的正在运行的容器</li>
 </ul>
@@ -6409,7 +6590,7 @@
 <p>Node: 安装docker的宿主机，提供容器。<br>Master：管理集群的机器，安装k8s的核心模块。也可以与Node部署在同一台宿主机上。</p>
 <p>kubelet：和Master、本地docker交互。<br>flannel：容器网络的第三方实现，给容器提供虚拟网络。<br>etcd：类似reddis的缓存系统。</p>
 <p>k8s目的：通过多个Node节点，获得更多容器。</p>
-<h1 id="3-k8s资源👍"><a href="#3-k8s资源👍" class="headerlink" title="3. k8s资源👍"></a>3. k8s资源👍</h1><h2 id="3-1-类型"><a href="#3-1-类型" class="headerlink" title="3.1. 类型"></a>3.1. 类型</h2><ul>
+<h1 id="3-👍k8s资源"><a href="#3-👍k8s资源" class="headerlink" title="3. 👍k8s资源"></a>3. 👍k8s资源</h1><h2 id="3-1-类型"><a href="#3-1-类型" class="headerlink" title="3.1. 类型"></a>3.1. 类型</h2><ul>
 <li>namespaces<ul>
 <li>类似java中的package</li>
 <li>可以把不同资源放在不同namespace里，不同namespace里面可以有同名资源</li>
@@ -6518,7 +6699,7 @@
 </li>
 </ul>
 <h3 id="3-2-3-Pod、Container与Node之间的关系"><a href="#3-2-3-Pod、Container与Node之间的关系" class="headerlink" title="3.2.3. Pod、Container与Node之间的关系"></a>3.2.3. Pod、Container与Node之间的关系</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F19-32-11-f9c84bf9f2d585a4e92d0a7a6a7fe85d-20231228193210-1d543b.png" alt="image.png"></p>
-<h2 id="3-3-Service-👍"><a href="#3-3-Service-👍" class="headerlink" title="3.3. Service 👍"></a>3.3. Service 👍</h2><p>不希望让别人直接访问pod，k8s可能会对pod做更改，ip会改变。但<strong>cluster-ip或服务名不会改变</strong>。</p>
+<h2 id="3-3-👍-Service"><a href="#3-3-👍-Service" class="headerlink" title="3.3.👍 Service"></a>3.3.👍 Service</h2><p>不希望让别人直接访问pod，k8s可能会对pod做更改，ip会改变。但<strong>cluster-ip或服务名不会改变</strong>。</p>
 <h3 id="3-3-1-命令"><a href="#3-3-1-命令" class="headerlink" title="3.3.1. 命令"></a>3.3.1. 命令</h3><ul>
 <li><p>创建：kubectl expose</p>
 <ul>
@@ -6536,7 +6717,7 @@
 <li>port-forward</li>
 <li>curl容器</li>
 </ol>
-<h2 id="3-4-Ingress-👍"><a href="#3-4-Ingress-👍" class="headerlink" title="3.4. Ingress 👍"></a>3.4. Ingress 👍</h2><ul>
+<h2 id="3-4-👍Ingress"><a href="#3-4-👍Ingress" class="headerlink" title="3.4. 👍Ingress"></a>3.4. 👍Ingress</h2><ul>
 <li><font color="#c00000">只能路由到service，不能路由到pod</font><ul>
 <li>service有cluseter-ip，不会改变，而pod的ip可能会改变</li>
 </ul>
@@ -6611,7 +6792,7 @@
 <li>函数式编程 FP</li>
 <li>反应式编程 RP</li>
 </ul>
-<h1 id="2-AOP-Aspect-Oriented-Programming"><a href="#2-AOP-Aspect-Oriented-Programming" class="headerlink" title="2. AOP: Aspect Oriented Programming"></a>2. AOP: Aspect Oriented Programming</h1><h2 id="2-1-横切关注点👍"><a href="#2-1-横切关注点👍" class="headerlink" title="2.1. 横切关注点👍"></a>2.1. 横切关注点👍</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2F593c95764eb4ced35052b11e904cb58c_20230921200636.png" alt="image.png"></p>
+<h1 id="2-AOP-Aspect-Oriented-Programming"><a href="#2-AOP-Aspect-Oriented-Programming" class="headerlink" title="2. AOP: Aspect Oriented Programming"></a>2. AOP: Aspect Oriented Programming</h1><h2 id="2-1-👍横切关注点"><a href="#2-1-👍横切关注点" class="headerlink" title="2.1. 👍横切关注点"></a>2.1. 👍横切关注点</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2F593c95764eb4ced35052b11e904cb58c_20230921200636.png" alt="image.png"></p>
 <h3 id="2-1-1-定义"><a href="#2-1-1-定义" class="headerlink" title="2.1.1. 定义"></a>2.1.1. 定义</h3><ul>
 <li>横切关注点：公共性的功能，但需要嵌入到业务代码的许多地方<ul>
 <li>Cross-cutting concern</li>
@@ -6639,7 +6820,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="3-AOP术语👍"><a href="#3-AOP术语👍" class="headerlink" title="3. AOP术语👍"></a>3. AOP术语👍</h1><ol>
+<h1 id="3-👍AOP术语"><a href="#3-👍AOP术语" class="headerlink" title="3. 👍AOP术语"></a>3. 👍AOP术语</h1><ol>
 <li><strong>通知 Advice</strong>：切面要做什么以及何时做<ul>
 <li>时间：方法前/后…</li>
 </ul>
@@ -6678,7 +6859,7 @@
 </li>
 <li>相当于<strong>对比较复杂的切点表达式进行封装</strong>，简单的就可以直接写在Advice里<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2Fe5eb3eb6b02f362f0bdf531c29a71c55_20230921201543.png" alt="image.png"></li>
 </ul>
-<h2 id="3-3-切面-Aspect👍"><a href="#3-3-切面-Aspect👍" class="headerlink" title="3.3. 切面 Aspect👍"></a>3.3. 切面 Aspect👍</h2><ul>
+<h2 id="3-3-👍切面-Aspect"><a href="#3-3-👍切面-Aspect" class="headerlink" title="3.3. 👍切面 Aspect"></a>3.3. 👍切面 Aspect</h2><ul>
 <li>java类上加<code>@Aspect</code>注解，是一个单独的类</li>
 <li>包含切的时间、切点和逻辑</li>
 <li>定义可重用的切点</li>
@@ -6692,7 +6873,7 @@
 </li>
 <li>实例化：在配置类中实例化切面类对应的Bean，或者使用<code>@Component</code></li>
 </ol>
-<h3 id="3-3-2-切点表达式-切点指示器👍"><a href="#3-3-2-切点表达式-切点指示器👍" class="headerlink" title="3.3.2. 切点表达式/切点指示器👍"></a>3.3.2. 切点表达式/切点指示器👍</h3><ol>
+<h3 id="3-3-2-👍切点表达式-切点指示器"><a href="#3-3-2-👍切点表达式-切点指示器" class="headerlink" title="3.3.2. 👍切点表达式/切点指示器"></a>3.3.2. 👍切点表达式/切点指示器</h3><ol>
 <li>借助<code>AspectJ</code>切点指示器的语法</li>
 <li>在方法上加<code>@Before(&lt;expression&gt;)</code>、<code>@Pointercut(&lt;expression)</code></li>
 </ol>
@@ -6753,7 +6934,7 @@
 </ol>
 <h3 id="3-4-2-织入方式"><a href="#3-4-2-织入方式" class="headerlink" title="3.4.2. 织入方式"></a>3.4.2. 织入方式</h3><p>使用代理机制。  </p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F10-35-22-e9d137daf3c4b7f22dc84e135ebdf72f-20231231103521-3027ed.png" alt="image.png"></p>
-<h2 id="3-5-引入-introduction👍"><a href="#3-5-引入-introduction👍" class="headerlink" title="3.5. 引入 introduction👍"></a>3.5. 引入 introduction👍</h2><p>引入新的行为和状态。</p>
+<h2 id="3-5-引入-👍introduction"><a href="#3-5-引入-👍introduction" class="headerlink" title="3.5. 引入 👍introduction"></a>3.5. 引入 👍introduction</h2><p>引入新的行为和状态。</p>
 <h3 id="3-5-1-引入方式"><a href="#3-5-1-引入方式" class="headerlink" title="3.5.1. 引入方式"></a>3.5.1. 引入方式</h3><ol>
 <li>创建需要增加的接口和实现类</li>
 <li>新建一个切面类，加<code>@Aspect</code></li>
@@ -6784,7 +6965,7 @@
   <entry>
     <title>3-Spring MVC</title>
     <url>/posts/c5191f2c/</url>
-    <content><![CDATA[<h1 id="1-基本概念👍"><a href="#1-基本概念👍" class="headerlink" title="1. 基本概念👍"></a>1. 基本概念👍</h1><p><strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller</p>
+    <content><![CDATA[<h1 id="1-👍基本概念"><a href="#1-👍基本概念" class="headerlink" title="1. 👍基本概念"></a>1. 👍基本概念</h1><p><strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller</p>
 <ul>
 <li>模型model：存储内容，指数据、领域类</li>
 <li>控制器controller：处理用户输入，客户端的请求</li>
@@ -6838,7 +7019,7 @@
 <h3 id="2-2-3-默认命名规则"><a href="#2-2-3-默认命名规则" class="headerlink" title="2.2.3. 默认命名规则"></a>2.2.3. 默认命名规则</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
 <p>如果没有指定<code>@ModelAttribute</code>注解的属性名称，Spring MVC会根据参数类型自动推断属性名称，并将其添加到模型中。<br>在上面的示例中，<code>SomeObject</code>类型的参数将使用类名的首字母小写作为属性名称。</p>
-<h1 id="3-MVC请求"><a href="#3-MVC请求" class="headerlink" title="3. MVC请求"></a>3. MVC请求</h1><h2 id="3-1-处理过程👍"><a href="#3-1-处理过程👍" class="headerlink" title="3.1. 处理过程👍"></a>3.1. 处理过程👍</h2><p>客户端请求在<strong>后端的处理过程</strong>，非常重要。<br><strong>核心DispatcherServlet</strong>，是Spring自己实现的Servlet容器。</p>
+<h1 id="3-MVC请求"><a href="#3-MVC请求" class="headerlink" title="3. MVC请求"></a>3. MVC请求</h1><h2 id="3-1-👍处理过程"><a href="#3-1-👍处理过程" class="headerlink" title="3.1. 👍处理过程"></a>3.1. 👍处理过程</h2><p>客户端请求在<strong>后端的处理过程</strong>，非常重要。<br><strong>核心DispatcherServlet</strong>，是Spring自己实现的Servlet容器。</p>
 <ol>
 <li>Web容器开发的基本单元是Servlet，请求先到servlet。</li>
 <li>mapping根据url把请求转到controller，其中spring框架会做参数解析。</li>
@@ -6859,12 +7040,12 @@
 <li><code>PatchMapping</code></li>
 <li><code>PutMapping</code></li>
 </ul>
-<h2 id="3-3-重定向👍"><a href="#3-3-重定向👍" class="headerlink" title="3.3. 重定向👍"></a>3.3. 重定向👍</h2><p>控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url</p>
+<h2 id="3-3-👍重定向"><a href="#3-3-👍重定向" class="headerlink" title="3.3. 👍重定向"></a>3.3. 👍重定向</h2><p>控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url</p>
 <ul>
 <li>http状态码：302</li>
 <li>控制器<code>return redirect:&lt;url&gt;</code></li>
 </ul>
-<h2 id="3-4-Spring-MVC获取参数的集中方式👍"><a href="#3-4-Spring-MVC获取参数的集中方式👍" class="headerlink" title="3.4. Spring MVC获取参数的集中方式👍"></a>3.4. Spring MVC获取参数的集中方式👍</h2><ol>
+<h2 id="3-4-👍Spring-MVC获取参数的集中方式"><a href="#3-4-👍Spring-MVC获取参数的集中方式" class="headerlink" title="3.4. 👍Spring MVC获取参数的集中方式"></a>3.4. 👍Spring MVC获取参数的集中方式</h2><ol>
 <li>表单(form)参数，转成model<ul>
 <li>成员类型可能要自己实现Converter进行转换</li>
 <li>可以用<code>@Valid</code>校验</li>
@@ -6899,7 +7080,7 @@
   <entry>
     <title>4-Spring Data JDBC、JPA</title>
     <url>/posts/12184527/</url>
-    <content><![CDATA[<h1 id="1-数据库访问层的开发👍"><a href="#1-数据库访问层的开发👍" class="headerlink" title="1. 数据库访问层的开发👍"></a>1. 数据库访问层的开发👍</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F14-28-47-548c2ef0125be168f0ca3fc94bf0437e-20231231142846-73f243.png" alt="image.png"></p>
+    <content><![CDATA[<h1 id="1-👍数据库访问层的开发"><a href="#1-👍数据库访问层的开发" class="headerlink" title="1. 👍数据库访问层的开发"></a>1. 👍数据库访问层的开发</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F14-28-47-548c2ef0125be168f0ca3fc94bf0437e-20231231142846-73f243.png" alt="image.png"></p>
 <p>基于接口，可以自己实现也可以让spring实现。</p>
 <ul>
 <li><font color="#c00000">优点</font>：<ol>
@@ -7077,7 +7258,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="5-三种方法区别、相同点👍"><a href="#5-三种方法区别、相同点👍" class="headerlink" title="5. 三种方法区别、相同点👍"></a>5. 三种方法区别、相同点👍</h1><ol>
+<h1 id="5-👍三种方法区别、相同点"><a href="#5-👍三种方法区别、相同点" class="headerlink" title="5. 👍三种方法区别、相同点"></a>5. 👍三种方法区别、相同点</h1><ol>
 <li>数据表生成：1、2需要scheme脚本，3不需要（根据领域类自动生成）</li>
 <li>数据库访问层：1需要自己实现接口，2、3不需要</li>
 <li>领域类注解：1不需要为领域类加注解，2、3要为领域类加注解（提供领域类和表结构的映射关系）<ul>
@@ -7151,7 +7332,7 @@
 <li>Id为String，mongoDB会自动生成</li>
 <li>可以使用mongdb-shell交互</li>
 </ul>
-<h2 id="1-3-Spring-Data-MongoDB👍"><a href="#1-3-Spring-Data-MongoDB👍" class="headerlink" title="1.3. Spring Data MongoDB👍"></a>1.3. Spring Data MongoDB👍</h2><p>业务代码不需要修改</p>
+<h2 id="1-3-👍Spring-Data-MongoDB"><a href="#1-3-👍Spring-Data-MongoDB" class="headerlink" title="1.3. 👍Spring Data MongoDB"></a>1.3. 👍Spring Data MongoDB</h2><p>业务代码不需要修改</p>
 <h3 id="1-3-1-定义存储库"><a href="#1-3-1-定义存储库" class="headerlink" title="1.3.1. 定义存储库"></a>1.3.1. 定义存储库</h3><p>继承<code>CrudRepository&lt;&gt;</code>接口</p>
 <h3 id="1-3-2-领域类"><a href="#1-3-2-领域类" class="headerlink" title="1.3.2. 领域类"></a>1.3.2. 领域类</h3><ol>
 <li>领域类加<code>@Document</code><ul>
@@ -7180,7 +7361,7 @@
 </li>
 </ul>
 <p>Spring插入时会自动创建一个<code>_class</code>字段</p>
-<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-介绍👍"><a href="#2-1-介绍👍" class="headerlink" title="2.1. 介绍👍"></a>2.1. 介绍👍</h2><ul>
+<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-👍介绍"><a href="#2-1-👍介绍" class="headerlink" title="2.1. 👍介绍"></a>2.1. 👍介绍</h2><ul>
 <li>分布式存储</li>
 <li>内存数据库，存在内存里，常用于作<strong>缓存</strong></li>
 <li>可以持久化，但不太重要，不是主要用途</li>
@@ -7192,7 +7373,7 @@
 </ul>
 <h2 id="2-2-Redis命令"><a href="#2-2-Redis命令" class="headerlink" title="2.2. Redis命令"></a>2.2. Redis命令</h2><p>可以设置key的存活时长<br>默认创建16个数据库</p>
 <p>flushdb：deletes the keys in a database<br>flushall：deletes all keys in all databases</p>
-<h2 id="2-3-Redis数据类型👍"><a href="#2-3-Redis数据类型👍" class="headerlink" title="2.3. Redis数据类型👍"></a>2.3. Redis数据类型👍</h2><p>指的是<strong>value类型</strong></p>
+<h2 id="2-3-👍Redis数据类型"><a href="#2-3-👍Redis数据类型" class="headerlink" title="2.3. 👍Redis数据类型"></a>2.3. 👍Redis数据类型</h2><p>指的是<strong>value类型</strong></p>
 <ol>
 <li>String</li>
 <li>List</li>
@@ -7244,7 +7425,7 @@
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BoudListOperations</span> <span class="variable">cart</span> <span class="operator">=</span> redisTemplate.boundListOp(<span class="string">''</span>cart<span class="string">")</span></span><br></pre></td></tr></table></figure></div>
 
 <p><a class="link" href="https://potoyang.gitbook.io/spring-in-action-v4/untitled-6/untitled-1/12.3.2-shi-yong-redis-template">12.3.2　使用 Redis Template - Spring 实战(第四版) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="2-6-序列化👍"><a href="#2-6-序列化👍" class="headerlink" title="2.6. 序列化👍"></a>2.6. 序列化👍</h2><p><font color="#c00000">mongodb没有这个要求，因为它会把所有值都转成json串</font>。<br>redis默认使用JDK序列化，但JSON序列化更常用。</p>
+<h2 id="2-6-👍序列化"><a href="#2-6-👍序列化" class="headerlink" title="2.6. 👍序列化"></a>2.6. 👍序列化</h2><p><font color="#c00000">mongodb没有这个要求，因为它会把所有值都转成json串</font>。<br>redis默认使用JDK序列化，但JSON序列化更常用。</p>
 <h3 id="2-6-1-JDK序列化"><a href="#2-6-1-JDK序列化" class="headerlink" title="2.6.1. JDK序列化"></a>2.6.1. JDK序列化</h3><ul>
 <li>存储java对象需要序列化<ul>
 <li>即持久化</li>
@@ -7276,7 +7457,7 @@
     <content><![CDATA[<ul>
 <li>JAAS: Java Authentication Authorization Service. JDK提供的认证授权服务</li>
 </ul>
-<h1 id="1-Spring-Security👍"><a href="#1-Spring-Security👍" class="headerlink" title="1. Spring Security👍"></a>1. Spring Security👍</h1><ul>
+<h1 id="1-👍Spring-Security"><a href="#1-👍Spring-Security" class="headerlink" title="1. 👍Spring Security"></a>1. 👍Spring Security</h1><ul>
 <li><p>划分为两类：</p>
 <ol>
 <li>针对客户web请求权限控制</li>
@@ -7303,7 +7484,7 @@
 <li>spring data权限认证的原理：使用servlet容器的filter</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F092f577948a6053f598961fe1a329feb_20231026184400.png" alt="image.png"></p>
-<h1 id="4-开发人员还要做什么👍"><a href="#4-开发人员还要做什么👍" class="headerlink" title="4. 开发人员还要做什么👍"></a>4. 开发人员还要做什么👍</h1><p><font color="#ff0000">除了框架提供的，开发人员还需要做什么，很重要</font></p>
+<h1 id="4-👍开发人员还要做什么"><a href="#4-👍开发人员还要做什么" class="headerlink" title="4. 👍开发人员还要做什么"></a>4. 👍开发人员还要做什么</h1><p><font color="#ff0000">除了框架提供的，开发人员还需要做什么，很重要</font></p>
 <ol>
 <li>实现接口<ul>
 <li><code>UserDetailsService</code>接口：给Spring框架提供用户详细信息。用户信息注册存储，需要用到用户信息的时候从数据访问层获取<ul>
@@ -7345,7 +7526,7 @@
 </li>
 <li>通过Filter对用户设定的权限进行权限控制</li>
 </ol>
-<h1 id="6-用户信息存储👍"><a href="#6-用户信息存储👍" class="headerlink" title="6. 用户信息存储👍"></a>6. 用户信息存储👍</h1><p>来自多个渠道，spring security不关心。</p>
+<h1 id="6-👍用户信息存储"><a href="#6-👍用户信息存储" class="headerlink" title="6. 👍用户信息存储"></a>6. 👍用户信息存储</h1><p>来自多个渠道，spring security不关心。</p>
 <ol>
 <li>内存用户数据库</li>
 <li>JDBC用户存储<ul>
@@ -7372,7 +7553,7 @@
 </ul>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">formLogin()</span><br><span class="line">.loginPage(<span class="string">"/login"</span>).usernameParamrter(<span class="string">'username'</span>).passwordParameter(<span class="string">'password'</span>)</span><br></pre></td></tr></table></figure></div>
 
-<h1 id="9-启用HTTP-Basic认证👍"><a href="#9-启用HTTP-Basic认证👍" class="headerlink" title="9. 启用HTTP Basic认证👍"></a>9. 启用HTTP Basic认证👍</h1><p>HTTP协议内容，与Spring框架无关。<br>由于用户 ID 与密码是是以明文的形式在网络中进行传输的（尽管采用了 base64 编码，但是 base64 算法是可逆的），所以基本验证方案并<strong>不安全</strong>。</p>
+<h1 id="9-👍启用HTTP-Basic认证"><a href="#9-👍启用HTTP-Basic认证" class="headerlink" title="9. 👍启用HTTP Basic认证"></a>9. 👍启用HTTP Basic认证</h1><p>HTTP协议内容，与Spring框架无关。<br>由于用户 ID 与密码是是以明文的形式在网络中进行传输的（尽管采用了 base64 编码，但是 base64 算法是可逆的），所以基本验证方案并<strong>不安全</strong>。</p>
 <ul>
 <li>启用HTTP basic认证: <code>httpBasic()</code><ul>
 <li>默认关闭</li>
@@ -7450,7 +7631,7 @@
   <entry>
     <title>7-配置属性</title>
     <url>/posts/c75c265a/</url>
-    <content><![CDATA[<h1 id="1-属性来源👍"><a href="#1-属性来源👍" class="headerlink" title="1. 属性来源👍"></a>1. 属性来源👍</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
+    <content><![CDATA[<h1 id="1-👍属性来源"><a href="#1-👍属性来源" class="headerlink" title="1. 👍属性来源"></a>1. 👍属性来源</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
 <ol>
 <li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
 <li><code>server.port = 8090</code></li>
@@ -7541,7 +7722,7 @@
 </ul>
 <div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">root:</span> <span class="string">WARN</span></span><br><span class="line">    <span class="attr">org:</span></span><br><span class="line">      <span class="attr">Springframework:</span></span><br><span class="line">	    <span class="attr">security:</span> <span class="string">DEBUG</span></span><br></pre></td></tr></table></figure></div>
 
-<h1 id="9-Actuator👍"><a href="#9-Actuator👍" class="headerlink" title="9. Actuator👍"></a>9. Actuator👍</h1><ul>
+<h1 id="9-👍Actuator"><a href="#9-👍Actuator" class="headerlink" title="9. 👍Actuator"></a>9. 👍Actuator</h1><ul>
 <li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
 <li>/actuator，查询所有暴露端点</li>
 <li><strong>/actuator/configprops</strong>，查询配置属性</li>
@@ -7575,7 +7756,7 @@
     <url>/posts/c9789ed0/</url>
     <content><![CDATA[<h1 id="1-不同开发模式"><a href="#1-不同开发模式" class="headerlink" title="1. 不同开发模式"></a>1. 不同开发模式</h1><h2 id="1-1-前后端不分离"><a href="#1-1-前后端不分离" class="headerlink" title="1.1. 前后端不分离"></a>1.1. 前后端不分离</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F5ec4e681073f4e19bdfa388580e8f2ac_20231102185803.png" alt="image.png"></p>
 <h2 id="1-2-前后端分离"><a href="#1-2-前后端分离" class="headerlink" title="1.2. 前后端分离"></a>1.2. 前后端分离</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F458ecc31fe35e9d03f9062f9439a2ff3_20231102185749.png" alt="image.png"></p>
-<h1 id="2-使用Spring-MVC的控制器创建RESTful端点"><a href="#2-使用Spring-MVC的控制器创建RESTful端点" class="headerlink" title="2. 使用Spring MVC的控制器创建RESTful端点"></a>2. 使用Spring MVC的控制器创建RESTful端点</h1><h2 id="2-1-Rest原则👍"><a href="#2-1-Rest原则👍" class="headerlink" title="2.1. Rest原则👍"></a>2.1. Rest原则👍</h2><ul>
+<h1 id="2-使用Spring-MVC的控制器创建RESTful端点"><a href="#2-使用Spring-MVC的控制器创建RESTful端点" class="headerlink" title="2. 使用Spring MVC的控制器创建RESTful端点"></a>2. 使用Spring MVC的控制器创建RESTful端点</h1><h2 id="2-1-👍Rest原则"><a href="#2-1-👍Rest原则" class="headerlink" title="2.1. 👍Rest原则"></a>2.1. 👍Rest原则</h2><ul>
 <li>Representational State Transfer，表现层状态转移<ul>
 <li>表现层（Representation）：json、xml、html、pdf、excel<ul>
 <li>服务端的资源在客户端的表现形式</li>
@@ -7598,7 +7779,7 @@
 </li>
 </ul>
 <p>如果一个架构符合REST原则，就称它为RESTful架构. 请求都是针对资源的操作.</p>
-<h2 id="2-2-RESTful-控制器实现👍"><a href="#2-2-RESTful-控制器实现👍" class="headerlink" title="2.2. RESTful 控制器实现👍"></a>2.2. RESTful 控制器实现👍</h2><ul>
+<h2 id="2-2-👍RESTful-控制器实现"><a href="#2-2-👍RESTful-控制器实现" class="headerlink" title="2.2. 👍RESTful 控制器实现"></a>2.2. 👍RESTful 控制器实现</h2><ul>
 <li>RESR API以面向数据的格式返回, JSON或XML<ul>
 <li>JSON更直观，结构清晰</li>
 </ul>
@@ -7652,7 +7833,7 @@
 <li>application/octet-stream： 二进制流数据（如常见的文件下载）</li>
 <li>application/x-www-form-urlencoded： &lt; form encType=””&gt;中默认的encType，form表单数据被编码为key/value格式发送到服务器（表单默认的提交数据的格式）</li>
 </ul>
-<h2 id="2-4-响应头与响应体👍"><a href="#2-4-响应头与响应体👍" class="headerlink" title="2.4. 响应头与响应体👍"></a>2.4. 响应头与响应体👍</h2><ul>
+<h2 id="2-4-👍响应头与响应体"><a href="#2-4-👍响应头与响应体" class="headerlink" title="2.4. 👍响应头与响应体"></a>2.4. 👍响应头与响应体</h2><ul>
 <li>状态行：由 HTTP 协议版本、状态码、状态码描述三部分构成，它们之间由空格隔开。</li>
 <li><font color="#ff0000">状态码</font>：由 3 位数字组成，<strong>第一位标识响应的类型</strong>，常用的<strong>5大类状态码</strong>如下：<ul>
 <li>1xx：表示服务器已接收了客户端的请求，客户端可以继续发送请求</li>
@@ -7728,7 +7909,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="2-12-Rest-API接口设计👍"><a href="#2-12-Rest-API接口设计👍" class="headerlink" title="2.12. Rest API接口设计👍"></a>2.12. Rest API接口设计👍</h2><p><strong>要求：</strong></p>
+<h2 id="2-12-👍Rest-API接口设计"><a href="#2-12-👍Rest-API接口设计" class="headerlink" title="2.12. 👍Rest API接口设计"></a>2.12. 👍Rest API接口设计</h2><p><strong>要求：</strong></p>
 <ol>
 <li>使用<strong>标准HTTP动词</strong>：GET、PUT、POST、DELETE，映射到CRUD</li>
 <li>使用URL来传达意图<ul>
@@ -7779,7 +7960,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="1-2-OAth2👍"><a href="#1-2-OAth2👍" class="headerlink" title="1.2. OAth2👍"></a>1.2. OAth2👍</h2><p>之前讲了Spring Security的单体应用权限控制</p>
+<h2 id="1-2-👍OAth2"><a href="#1-2-👍OAth2" class="headerlink" title="1.2. 👍OAth2"></a>1.2. 👍OAth2</h2><p>之前讲了Spring Security的单体应用权限控制</p>
 <ul>
 <li>OAth2：<strong>分布式环境</strong>中微服务权限控制，需要把认证和授权集中在一个地方，不需要每个微服务单独做认证授权。<ul>
 <li>是一个与变成语言无关的规范</li>
@@ -7787,7 +7968,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="1-3-授仅码授权（authorization-code-grant）模式👍"><a href="#1-3-授仅码授权（authorization-code-grant）模式👍" class="headerlink" title="1.3. 授仅码授权（authorization code grant）模式👍"></a>1.3. 授仅码授权（authorization code grant）模式👍</h2><h3 id="1-3-1-流程图👍"><a href="#1-3-1-流程图👍" class="headerlink" title="1.3.1. 流程图👍"></a>1.3.1. 流程图👍</h3><ul>
+<h2 id="1-3-👍授仅码授权（authorization-code-grant）模式"><a href="#1-3-👍授仅码授权（authorization-code-grant）模式" class="headerlink" title="1.3. 👍授仅码授权（authorization code grant）模式"></a>1.3. 👍授仅码授权（authorization code grant）模式</h2><h3 id="1-3-1-👍流程图"><a href="#1-3-1-👍流程图" class="headerlink" title="1.3.1. 👍流程图"></a>1.3.1. 👍流程图</h3><ul>
 <li>Client application：客户端（第三方应用程序），消费API提供的资源</li>
 <li>Authorization server：授权服务器</li>
 <li>Resource server：提供API资源</li>
@@ -7797,7 +7978,7 @@
 <li>授权服务器会用<strong>私钥</strong>给token签名，资源服务器用<strong>公钥</strong>验证token是否合法</li>
 <li>token不变时公钥也不变，只有第一次才需要向授权服务器索取公钥</li>
 </ul>
-<h3 id="1-3-2-过程👍"><a href="#1-3-2-过程👍" class="headerlink" title="1.3.2. 过程👍"></a>1.3.2. 过程👍</h3><p>其中使用<strong>授权码授权模式</strong></p>
+<h3 id="1-3-2-👍过程"><a href="#1-3-2-👍过程" class="headerlink" title="1.3.2. 👍过程"></a>1.3.2. 👍过程</h3><p>其中使用<strong>授权码授权模式</strong></p>
 <ol>
 <li>用户使用第三方的应用程序，也就是客户端应用程序</li>
 <li>客户端发现用户未登录，将用户<strong>重定向</strong>到授权服务器<ul>
@@ -8031,187 +8212,6 @@
 <li>在业务逻辑层处理请求，返回响应</li>
 </ol>
 <h2 id="OAuth2基于授权码的授权，系统组成，处理流程"><a href="#OAuth2基于授权码的授权，系统组成，处理流程" class="headerlink" title="OAuth2基于授权码的授权，系统组成，处理流程"></a>OAuth2基于授权码的授权，系统组成，处理流程</h2><h2 id="Spring集成流解决了什么问题"><a href="#Spring集成流解决了什么问题" class="headerlink" title="Spring集成流解决了什么问题"></a>Spring集成流解决了什么问题</h2><h2 id="反应式编程的4个接口"><a href="#反应式编程的4个接口" class="headerlink" title="反应式编程的4个接口"></a>反应式编程的4个接口</h2>]]></content>
-  </entry>
-  <entry>
-    <title>1-依赖注入</title>
-    <url>/posts/a22fb360/</url>
-    <content><![CDATA[<p>Git：分布式版本控制<br>Beam:java中一个对象，Spring负责对象创建、管理这些对象</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png" alt="image.png"></p>
-<p>商品服务需要引用库存服务（依赖），如何知道库存服务的地址/引用？</p>
-<h1 id="1-Spring核心技术"><a href="#1-Spring核心技术" class="headerlink" title="1. Spring核心技术"></a>1. Spring核心技术</h1><ol>
-<li>DI（Dependency Injection）<ul>
-<li>保留抽象接口，让组件（Component）依赖于抽象接口，当组件要与其他实际的对象发生依赖关系时，<strong>由抽象接口来注入依赖的实际对象</strong></li>
-</ul>
-</li>
-<li>AOP（Aspect Oriented Programming）<ul>
-<li>通过<strong>预编译方式</strong>和<strong>运行期间动态代理</strong>实现程序功能的统一维护的一种技术</li>
-<li>利用AOP可以对业务逻辑的各个部分进行隔离， 从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发效率</li>
-</ul>
-</li>
-</ol>
-<h1 id="2-常用注解"><a href="#2-常用注解" class="headerlink" title="2. 常用注解"></a>2. 常用注解</h1><h2 id="2-1-Bean"><a href="#2-1-Bean" class="headerlink" title="2.1. Bean"></a>2.1. Bean</h2><p>==Object=Bean=Component==</p>
-<ul>
-<li><p><code>@Component</code></p>
-<ul>
-<li>普通的Java类加<code>@Component</code>注解，Spring会<strong>实例化</strong>这个类</li>
-<li>Component value属性，指定Bean Id，默认为类名</li>
-</ul>
-</li>
-<li><p><code>@Autowired</code></p>
-<ul>
-<li><strong>自动注入</strong>，Spring从从容器的上下文找实现了某个接口的对象</li>
-<li>找不到对象，注入失败</li>
-<li>找到多个实现了这个接口的对象，也会报错</li>
-</ul>
-</li>
-<li><p>自动装配时歧义：如何解决Bean冲突?</p>
-<ul>
-<li><code>@Qualifier</code>自定义限定符</li>
-<li><code>@Primary</code>在Bean上放指定</li>
-<li>自定义注解</li>
-</ul>
-</li>
-</ul>
-<p>@Profile需要在不同场景下运行不同Bean<br>@Conditional在运行环境下决定Bean是否要创建</p>
-<h2 id="2-2-组件扫描"><a href="#2-2-组件扫描" class="headerlink" title="2.2. 组件扫描"></a>2.2. 组件扫描</h2><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan</span> <span class="comment">//找当前包下加了注解的类并实例化</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CDPlaterConfig</span> {</span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	&lt;function&gt;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li><code>@ComponentScan</code> //找当前包下加了注解的类并实例化<ul>
-<li><code>basePackages</code><ul>
-<li>是数组可以写多个</li>
-<li>但是类型不安全，写错编译器不会报错</li>
-</ul>
-</li>
-<li><code>basePackageClasses</code><ul>
-<li>也是数组</li>
-<li>到类所在的包和子目录下搜索</li>
-<li><strong>类型安全</strong>，但无法保证类一直存在</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>当使用 <code>@ComponentScan</code> 注解时，Spring会自动扫描指定包下的组件，并将其注册为Bean。如果你在配置类中手动定义了相同的Bean，那么就会导致重复定义的问题。</p>
-<h2 id="2-3-Bean三种注入方法👍"><a href="#2-3-Bean三种注入方法👍" class="headerlink" title="2.3. Bean三种注入方法👍"></a>2.3. Bean三种注入方法👍</h2><h3 id="2-3-1-构造方法"><a href="#2-3-1-构造方法" class="headerlink" title="2.3.1. 构造方法"></a>2.3.1. 构造方法</h3><ul>
-<li>在构造函数上使用 @Autowired 注解，用于自动注入构造函数参数所需要的 Bean。<strong>如果构造函数只有一个参数，则可以省略 @Autowired 注解。</strong></li>
-</ul>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">public</span> <span class="title function_">MyService</span><span class="params">(MyDao myDao)</span> {</span><br><span class="line">    <span class="built_in">this</span>.myDao = myDao;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="2-3-2-setter方法"><a href="#2-3-2-setter方法" class="headerlink" title="2.3.2. setter方法"></a>2.3.2. setter方法</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setOrderRepo</span><span class="params">(OrderRepository orderRepo)</span> {</span><br><span class="line">    <span class="built_in">this</span>.orderRepo = orderRepo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>也可以加<code>Autowired</code>自动注入.</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setOrderRepo</span><span class="params">(OrderRepository orderRepo)</span> {</span><br><span class="line">    <span class="built_in">this</span>.orderRepo = orderRepo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="2-3-3-属性字段下加-Autowired"><a href="#2-3-3-属性字段下加-Autowired" class="headerlink" title="2.3.3. 属性字段下加@Autowired"></a>2.3.3. 属性字段下加<code>@Autowired</code></h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> MyBean myBean;</span><br></pre></td></tr></table></figure></div>
-
-<h1 id="3-Spring配置方案👍"><a href="#3-Spring配置方案👍" class="headerlink" title="3. Spring配置方案👍"></a>3. Spring配置方案👍</h1><ol>
-<li>自动配置</li>
-<li>JavaConfig</li>
-<li>XML配置（最早期）</li>
-</ol>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2Fc81a655bf33d1187cac863eabe4a64de_20230914190947.png" alt="image.png"><br><em>SgtPeppers是一张CD</em></p>
-<p>建议基于接口编程</p>
-<h2 id="3-1-自动配置"><a href="#3-1-自动配置" class="headerlink" title="3.1. 自动配置"></a>3.1. 自动配置</h2><ul>
-<li>组件扫描 component scanning<ul>
-<li><code>@Configuration</code> 配置类</li>
-<li><code>@ComponentScan</code></li>
-</ul>
-</li>
-<li>自动装配 autowiring<ul>
-<li><code>@Autowired</code></li>
-<li>构造方法</li>
-<li>字段</li>
-<li>set方法</li>
-<li><code>required=false</code></li>
-</ul>
-</li>
-<li>需要实例化的Bean：<code>@Component</code><ul>
-<li>默认是<strong>单实例模式</strong>，在Spring上下文永远只有一个实例</li>
-<li>可以<strong>参数指定多实例</strong></li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-55-36-ac898cc2918943f139876a34a27f386c-20231231095536-853b20.png" alt="image.png"></p>
-<h2 id="3-2-JavaConfig"><a href="#3-2-JavaConfig" class="headerlink" title="3.2. JavaConfig"></a>3.2. JavaConfig</h2><ul>
-<li>应用场景：自动化配置行不通，如第三方库</li>
-<li>注解<ul>
-<li><code>@Configuration</code></li>
-<li><code>@Bean(name=“..”)</code></li>
-</ul>
-</li>
-<li>注入<ul>
-<li>调用方法</li>
-<li>通过方法参数自动装配（其他配置类，其他方法创建的Bean）</li>
-</ul>
-</li>
-</ul>
-<p>只用于创建，不会把业务逻辑放进来。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-56-16-0ee4f7052c6e564839b82b9a7d299704-20231231095615-a30d06.png" alt="image.png"></p>
-<h2 id="3-3-XML"><a href="#3-3-XML" class="headerlink" title="3.3. XML"></a>3.3. XML</h2><ul>
-<li>格式：<code>&lt;beans&gt;&lt;bean&gt;</code></li>
-<li><strong>无类型检查</strong></li>
-<li>构造器注入<ul>
-<li>constructor-arg</li>
-<li>c-命名空间</li>
-<li>注入字面量值</li>
-<li>注入集合</li>
-</ul>
-</li>
-<li>属性注入<ul>
-<li>p-命名空间</li>
-<li>util-命名空间</li>
-</ul>
-</li>
-</ul>
-<p>建议：强依赖使用构造器注入</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F09-56-42-38e95d9182eff146ef5bd7df0b88a0a3-20231231095641-816334.png" alt="image.png"></p>
-<h2 id="3-4-混合配置"><a href="#3-4-混合配置" class="headerlink" title="3.4. 混合配置"></a>3.4. 混合配置</h2><p>在根配置类中导入其他配置类。</p>
-<ul>
-<li>JavaConfig导入<ul>
-<li><code>@import(配置类,class,...)</code></li>
-<li><code>@importResource(xml文件)</code></li>
-</ul>
-</li>
-<li>XML导入</li>
-</ul>
-<h1 id="4-应用上下文"><a href="#4-应用上下文" class="headerlink" title="4. 应用上下文"></a>4. 应用上下文</h1><ol>
-<li>AnnotationConfigApplicationContext<ul>
-<li>基于注解配置生成</li>
-</ul>
-</li>
-<li>ClassPathXmlApplicationContext</li>
-<li>AnnotationConfigWebApplicationContext</li>
-<li>FileSystemXmlApplicationContext</li>
-<li>XmlWebApplicationContext</li>
-</ol>
-<h1 id="5-Bean作用域"><a href="#5-Bean作用域" class="headerlink" title="5. Bean作用域"></a>5. Bean作用域</h1><p>@Scope与@Component和@Bean一起使用，指定作用域</p>
-<ol>
-<li>Singleton，单例，整个应用之创建一个实例</li>
-<li>Prototype，原型，每次注入或者通过Spring应用上下文获取的时候，都会创建一个新bean实例</li>
-<li>Session，会话，在会话范围内有效</li>
-<li>Request，请求，在Web应用中，为每个请求创建一个bean实例</li>
-</ol>
-<h2 id="5-1-单例"><a href="#5-1-单例" class="headerlink" title="5.1. 单例"></a>5.1. 单例</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F21%2Fbcf741e46f28882a4c83561481669afc_20230921185636.png" alt="image.png"></p>
-<p>通过代理注入给单例对象</p>
-<h1 id="6-运行时注入外部值"><a href="#6-运行时注入外部值" class="headerlink" title="6. 运行时注入外部值"></a>6. 运行时注入外部值</h1><ol>
-<li>使用<code>Environment</code>属性</li>
-<li>使用<code>@PropertySource(/path/to/file)</code>指定文件</li>
-</ol>
-<h2 id="6-1-Environment-getProperty的几种形式"><a href="#6-1-Environment-getProperty的几种形式" class="headerlink" title="6.1. Environment.getProperty的几种形式"></a>6.1. Environment.getProperty的几种形式</h2><ul>
-<li><code>String getProperty（String key)</code></li>
-<li><code>String getProperty（String key, String defaultValue）</code> </li>
-<li><code>T getProperty（String key, Class type）</code> </li>
-<li><code>T getProperty（String key, Class type, T defaultValue</code>）</li>
-</ul>
-<h2 id="6-2-使用占位符"><a href="#6-2-使用占位符" class="headerlink" title="6.2. 使用占位符"></a>6.2. 使用占位符</h2><p><code>${...}</code></p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
   </entry>
   <entry>
     <title>0-机器学习</title>
