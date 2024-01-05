@@ -12,6 +12,7 @@
     "version": "7.0.0"
   },
   "dependencies": {
+    "@node-rs/jieba": "^1.8.1",
     "hexo": "^7.0.0",
     "hexo-abbrlink": "^2.2.1",
     "hexo-all-minifier": "^0.5.7",
