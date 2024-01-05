@@ -8074,7 +8074,7 @@
 <li>数据访问层</li>
 </ol>
 </li>
-<li><p>处理过程：[[3-Spring MVC#3.1. 处理过程👍]]</p>
+<li><p>处理过程：</p>
 <ol>
 <li>Web容器开发的基本单元是Servlet，请求先到servlet。</li>
 <li>mapping根据url把请求转到controller，其中spring框架会做参数解析。</li>
@@ -8087,6 +8087,7 @@
 </ol>
 </li>
 </ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png" alt="Screenshot from 2023-10-07 18-38-55"></p>
 <h2 id="2-2-AOP编程解决什么问题，开发要点"><a href="#2-2-AOP编程解决什么问题，开发要点" class="headerlink" title="2.2. AOP编程解决什么问题，开发要点"></a>2.2. AOP编程解决什么问题，开发要点</h2><ul>
 <li>解决问题<ol>
 <li>分离横切关注点，把非业务逻辑分离出来，减少对业务代码的侵入</li>
@@ -8094,13 +8095,13 @@
 </ol>
 </li>
 <li>开发要点<ol>
-<li>[[2-面向切面编程#3. AOP术语👍]]</li>
+<li>[[2-面向切面编程#3. 👍AOP术语]]</li>
 </ol>
 </li>
 </ul>
 <h2 id="2-3-spring-security-web请求保护"><a href="#2-3-spring-security-web请求保护" class="headerlink" title="2.3. spring security web请求保护"></a>2.3. spring security web请求保护</h2><p>使用servlet容器的filter机制拦截web请求，对请求进行权限控制。</p>
 <h2 id="2-4-web请求开发有哪些步骤"><a href="#2-4-web请求开发有哪些步骤" class="headerlink" title="2.4. web请求开发有哪些步骤"></a>2.4. web请求开发有哪些步骤</h2><ol>
-<li>设计REST API [[8-REST API#2.12. Rest API接口设计👍]]</li>
+<li>设计REST API [[8-REST API#2.12. 👍Rest API接口设计]]</li>
 <li>创建controller，定义请求映射</li>
 <li>在业务逻辑层处理请求，返回响应</li>
 </ol>
