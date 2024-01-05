@@ -8807,92 +8807,6 @@
       </tags>
   </entry>
   <entry>
-    <title>13-考试复习</title>
-    <url>/posts/6b745d1d/</url>
-    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><ul>
-<li>基本概念<ul>
-<li>分类</li>
-<li>回归</li>
-<li>维数灾难</li>
-<li>欠拟合</li>
-<li>过拟合</li>
-<li>…</li>
-</ul>
-</li>
-</ul>
-<p>评价指标[[2023Fall/机器学习/0-introduction#2.2. 评价指标|0-introduction]]<br>距离度量函数<br>计算度量<br>生成式/判别式模型</p>
-<h1 id="2-👍KNN"><a href="#2-👍KNN" class="headerlink" title="2. 👍KNN"></a>2. 👍KNN</h1><p>KNN思想、概念、算法流程</p>
-<p>降低计算复杂度，大概看一下</p>
-<h1 id="3-👍无监督学习"><a href="#3-👍无监督学习" class="headerlink" title="3. 👍无监督学习"></a>3. 👍无监督学习</h1><p>聚类概念<br>聚类准则：聚类好坏判断，度量</p>
-<p>三类聚类方法</p>
-<p><strong>k-means</strong></p>
-<p>评价指标</p>
-<h1 id="4-树学习"><a href="#4-树学习" class="headerlink" title="4. 树学习"></a>4. 树学习</h1><p>概念</p>
-<ul>
-<li><strong>决策树</strong><ul>
-<li>构造</li>
-<li>构造时如何选择节点<ul>
-<li>熵，信息增益</li>
-<li>ID3：熵</li>
-<li>C4.5：信息增益</li>
-<li>CART: Gini指数</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="5-集成学习"><a href="#5-集成学习" class="headerlink" title="5. 集成学习"></a>5. 集成学习</h1><p>集成学习的原理，怎么不同的弱分类器结合成强分类器</p>
-<p>Bias-Variance tradeoff</p>
-<p>基本的集成学习方法原理：Bagging, Boosting<br>比较难的几个看一看就行</p>
-<h1 id="6-概率学习"><a href="#6-概率学习" class="headerlink" title="6. 概率学习"></a>6. 概率学习</h1><p>概率学习</p>
-<ul>
-<li>高斯混合模型</li>
-<li>基本概念<ul>
-<li>带约束的数学优化问题</li>
-<li>不带约束的最小二乘优化问题</li>
-</ul>
-</li>
-</ul>
-<p>最大似然估计，期望最大化<br>理论推导不要求</p>
-<h1 id="7-svm"><a href="#7-svm" class="headerlink" title="7. svm"></a>7. svm</h1><p>传统机器学习里最代表性的算法<br>不会考推导</p>
-<p>除了二分类、线性，非线性也需要了解</p>
-<h1 id="8-神经元"><a href="#8-神经元" class="headerlink" title="8. 神经元"></a>8. 神经元</h1><p>神经元</p>
-<p>一些基本概念</p>
-<p>感知机</p>
-<h1 id="9-神经网络"><a href="#9-神经网络" class="headerlink" title="9. 神经网络"></a>9. 神经网络</h1><p>神经网络需要深入掌握</p>
-<p>输入，隐藏层，输出层</p>
-<p><strong>前向，反向传播计算</strong></p>
-<h1 id="10-深度学习"><a href="#10-深度学习" class="headerlink" title="10. 深度学习"></a>10. 深度学习</h1><p>近现代的<strong>卷积</strong></p>
-<p>核心概念，关键模块</p>
-<h1 id="11-演化学习"><a href="#11-演化学习" class="headerlink" title="11. 演化学习"></a>11. 演化学习</h1><p>典型的遗传算法，</p>
-<p>遗传的变异、选择</p>
-<p>模式理论大概了解即可</p>
-<h1 id="12-维度约简"><a href="#12-维度约简" class="headerlink" title="12. 维度约简"></a>12. 维度约简</h1><ul>
-<li><strong>降维算法</strong><ul>
-<li>LDA</li>
-<li>PCA</li>
-<li>ICA</li>
-</ul>
-</li>
-</ul>
-<h1 id="13-强化学习"><a href="#13-强化学习" class="headerlink" title="13. 强化学习"></a>13. 强化学习</h1><p>一定会出现</p>
-<p><strong>MDP</strong><br>动态规划</p>
-<p>探索<br>值函数、奖赏、测略</p>
-<p>基于模型，不基于模型</p>
-<p>Morte Carle方法<br>时间差分</p>
-<p>Bootsraps<br>Sampling</p>
-<p>Q-learning<br>TD</p>
-<p>epsiode的概念</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_机器学习</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2-无监督学习</title>
     <url>/posts/18c82724/</url>
     <content><![CDATA[<h1 id="1-聚类学习"><a href="#1-聚类学习" class="headerlink" title="1. 聚类学习"></a>1. 聚类学习</h1><h2 id="1-1-相关概念"><a href="#1-1-相关概念" class="headerlink" title="1.1. 相关概念"></a>1.1. 相关概念</h2><ul>
@@ -9079,6 +8993,92 @@
 <h2 id="6-1-前置任务学习"><a href="#6-1-前置任务学习" class="headerlink" title="6.1. 前置任务学习"></a>6.1. 前置任务学习</h2><h3 id="6-1-1-生成式方法-图像着色"><a href="#6-1-1-生成式方法-图像着色" class="headerlink" title="6.1.1. 生成式方法-图像着色"></a>6.1.1. 生成式方法-图像着色</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F19%2Fb88a34e9296c5ce5244cb2d9a0684b25_20230919205843.png" alt="image.png"></p>
 <p>$x \rightarrow CNN \rightarrow \overline{x}^<code>$   输入$(x,\overline{x})$ 即(灰度化后的图像，原本的彩色图像)   $lose=||\overline{x}^</code>-\overline{x}||$，对比生产的彩色图像和原本彩色图像</p>
 <p><strong>数据里没有监督信息，构造假的监督信号</strong></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_机器学习</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>13-考试复习</title>
+    <url>/posts/6b745d1d/</url>
+    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><ul>
+<li>基本概念<ul>
+<li>分类</li>
+<li>回归</li>
+<li>维数灾难</li>
+<li>欠拟合</li>
+<li>过拟合</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<p>评价指标[[2023Fall/机器学习/0-introduction#2.2. 评价指标|0-introduction]]<br>距离度量函数<br>计算度量<br>生成式/判别式模型</p>
+<h1 id="2-👍KNN"><a href="#2-👍KNN" class="headerlink" title="2. 👍KNN"></a>2. 👍KNN</h1><p>KNN思想、概念、算法流程</p>
+<p>降低计算复杂度，大概看一下</p>
+<h1 id="3-👍无监督学习"><a href="#3-👍无监督学习" class="headerlink" title="3. 👍无监督学习"></a>3. 👍无监督学习</h1><p>聚类概念<br>聚类准则：聚类好坏判断，度量</p>
+<p>三类聚类方法</p>
+<p><strong>k-means</strong></p>
+<p>评价指标</p>
+<h1 id="4-树学习"><a href="#4-树学习" class="headerlink" title="4. 树学习"></a>4. 树学习</h1><p>概念</p>
+<ul>
+<li><strong>决策树</strong><ul>
+<li>构造</li>
+<li>构造时如何选择节点<ul>
+<li>熵，信息增益</li>
+<li>ID3：熵</li>
+<li>C4.5：信息增益</li>
+<li>CART: Gini指数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-集成学习"><a href="#5-集成学习" class="headerlink" title="5. 集成学习"></a>5. 集成学习</h1><p>集成学习的原理，怎么不同的弱分类器结合成强分类器</p>
+<p>Bias-Variance tradeoff</p>
+<p>基本的集成学习方法原理：Bagging, Boosting<br>比较难的几个看一看就行</p>
+<h1 id="6-概率学习"><a href="#6-概率学习" class="headerlink" title="6. 概率学习"></a>6. 概率学习</h1><p>概率学习</p>
+<ul>
+<li>高斯混合模型</li>
+<li>基本概念<ul>
+<li>带约束的数学优化问题</li>
+<li>不带约束的最小二乘优化问题</li>
+</ul>
+</li>
+</ul>
+<p>最大似然估计，期望最大化<br>理论推导不要求</p>
+<h1 id="7-svm"><a href="#7-svm" class="headerlink" title="7. svm"></a>7. svm</h1><p>传统机器学习里最代表性的算法<br>不会考推导</p>
+<p>除了二分类、线性，非线性也需要了解</p>
+<h1 id="8-神经元"><a href="#8-神经元" class="headerlink" title="8. 神经元"></a>8. 神经元</h1><p>神经元</p>
+<p>一些基本概念</p>
+<p>感知机</p>
+<h1 id="9-神经网络"><a href="#9-神经网络" class="headerlink" title="9. 神经网络"></a>9. 神经网络</h1><p>神经网络需要深入掌握</p>
+<p>输入，隐藏层，输出层</p>
+<p><strong>前向，反向传播计算</strong></p>
+<h1 id="10-深度学习"><a href="#10-深度学习" class="headerlink" title="10. 深度学习"></a>10. 深度学习</h1><p>近现代的<strong>卷积</strong></p>
+<p>核心概念，关键模块</p>
+<h1 id="11-演化学习"><a href="#11-演化学习" class="headerlink" title="11. 演化学习"></a>11. 演化学习</h1><p>典型的遗传算法，</p>
+<p>遗传的变异、选择</p>
+<p>模式理论大概了解即可</p>
+<h1 id="12-维度约简"><a href="#12-维度约简" class="headerlink" title="12. 维度约简"></a>12. 维度约简</h1><ul>
+<li><strong>降维算法</strong><ul>
+<li>LDA</li>
+<li>PCA</li>
+<li>ICA</li>
+</ul>
+</li>
+</ul>
+<h1 id="13-强化学习"><a href="#13-强化学习" class="headerlink" title="13. 强化学习"></a>13. 强化学习</h1><p>一定会出现</p>
+<p><strong>MDP</strong><br>动态规划</p>
+<p>探索<br>值函数、奖赏、测略</p>
+<p>基于模型，不基于模型</p>
+<p>Morte Carle方法<br>时间差分</p>
+<p>Bootsraps<br>Sampling</p>
+<p>Q-learning<br>TD</p>
+<p>epsiode的概念</p>
 ]]></content>
       <categories>
         <category>2023_Fall_机器学习</category>
