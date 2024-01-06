@@ -5918,7 +5918,10 @@
 <ul>
 <li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
 <li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
-<li>typeId：目的是告诉对方是什么类型，以便于反序列化</li>
+<li>typeId：目的是告诉对方是什么类型，以便于反序列化<ul>
+<li>字符串</li>
+</ul>
+</li>
 <li>Message.setStringProperty，随属性集传输</li>
 <li>消息转换器使用@Configuration定义成Bean</li>
 </ul>
