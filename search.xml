@@ -8079,8 +8079,8 @@
       </tags>
   </entry>
   <entry>
-    <title>服务端考试复习（例题）</title>
-    <url>/posts/ff3b226a/</url>
+    <title>服务端考试复习</title>
+    <url>/posts/9b2534b0/</url>
     <content><![CDATA[<h1 id="1-题型"><a href="#1-题型" class="headerlink" title="1. 题型"></a>1. 题型</h1><p>多选题<br>问答题：5道题</p>
 <h1 id="2-问答题整理"><a href="#2-问答题整理" class="headerlink" title="2. 问答题整理"></a>2. 问答题整理</h1><p>前7个是老师最后一节课讲到，但没给答案。</p>
 <h2 id="2-1-web开发框架分层，请求处理过程"><a href="#2-1-web开发框架分层，请求处理过程" class="headerlink" title="2.1. web开发框架分层，请求处理过程"></a>2.1. web开发框架分层，请求处理过程</h2><ul>
@@ -8235,6 +8235,10 @@
 </li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-48-51-551a7d3c33dd450f7f8dc60d1a6ae29c-20231214184848-94a261.png" alt="image.png"></p>
+<h2 id="2-10-Java的stream与反应式的流区别"><a href="#2-10-Java的stream与反应式的流区别" class="headerlink" title="2.10. Java的stream与反应式的流区别"></a>2.10. Java的stream与反应式的流区别</h2><ol>
+<li><strong>Java的stream通常都是同步的</strong>，并且只能处理有限的数据集，本质上来说，它们只是使用函数来对集合进行迭代的一种方式</li>
+<li>JDK9中的 **Flow API对应反应式流</li>
+</ol>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
