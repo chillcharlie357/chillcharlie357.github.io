@@ -12,7 +12,7 @@ mathjax: true
 comment: true
 title: 14-docker
 date:  2023-12-14 18:12
-modified: 2024-01-02 21:05
+modified: 2024-01-06 14:58
 ---
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png)
@@ -92,6 +92,8 @@ ip a
 docker volume子命令可以管理数据卷
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-49-16-0157f9b342cd970ea85a05734fc2b95d-20231214204914-b94d29.png)
+
+[Docker筆記 - 讓資料遠離Container，使用 Volume、Bind Mount 與 Tmpfs Mount | by Albert Hg | alberthg-docker-notes | Medium](https://medium.com/alberthg-docker-notes/docker%E7%AD%86%E8%A8%98-%E8%AE%93%E8%B3%87%E6%96%99%E9%81%A0%E9%9B%A2container-%E4%BD%BF%E7%94%A8-volume-bind-mount-%E8%88%87-tmpfs-mount-6908da341d11)
 
 # 5. 导入导出镜像
 
