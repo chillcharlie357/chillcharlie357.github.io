@@ -8204,6 +8204,15 @@
 </ul>
 </li>
 </ol>
+<h2 id="2-9-docker的三部分"><a href="#2-9-docker的三部分" class="headerlink" title="2.9. docker的三部分"></a>2.9. docker的三部分</h2><ul>
+<li>哪三部分？<ul>
+<li>docker engine：服务端，管理一系列资源的生命周期</li>
+<li>Client：一个命令行程序</li>
+<li>Registry：镜像仓库，管理镜像</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-48-51-551a7d3c33dd450f7f8dc60d1a6ae29c-20231214184848-94a261.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
