@@ -7763,12 +7763,16 @@
     <content><![CDATA[<h1 id="1-不同开发模式"><a href="#1-不同开发模式" class="headerlink" title="1. 不同开发模式"></a>1. 不同开发模式</h1><h2 id="1-1-前后端不分离"><a href="#1-1-前后端不分离" class="headerlink" title="1.1. 前后端不分离"></a>1.1. 前后端不分离</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F5ec4e681073f4e19bdfa388580e8f2ac_20231102185803.png" alt="image.png"></p>
 <h2 id="1-2-前后端分离"><a href="#1-2-前后端分离" class="headerlink" title="1.2. 前后端分离"></a>1.2. 前后端分离</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F458ecc31fe35e9d03f9062f9439a2ff3_20231102185749.png" alt="image.png"></p>
 <h1 id="2-使用Spring-MVC的控制器创建RESTful端点"><a href="#2-使用Spring-MVC的控制器创建RESTful端点" class="headerlink" title="2. 使用Spring MVC的控制器创建RESTful端点"></a>2. 使用Spring MVC的控制器创建RESTful端点</h1><h2 id="2-1-👍Rest原则"><a href="#2-1-👍Rest原则" class="headerlink" title="2.1. 👍Rest原则"></a>2.1. 👍Rest原则</h2><ul>
-<li>Representational State Transfer，表现层状态转移<ul>
-<li>表现层（Representation）：json、xml、html、pdf、excel<ul>
+<li>Representational State Transfer，表述性状态转移<ul>
+<li>表述性（Representational）：REST 资源实际上可以用各种形式来进行表述，包括json、xml、html、pdf、excel<ul>
 <li>服务端的资源在客户端的表现形式</li>
 </ul>
 </li>
-<li>状态转移（State Transfer）：服务端–客户端, 从一端到另一端</li>
+<li>状态 (State): 当使用 REST 的时候，我们更关注资源的状态而不是对资源采取的行为；</li>
+<li>转移（Transfer）：REST 涉及到转移资源数据，它以某种表述性形式从一个应用转移到另一个应用;<ul>
+<li>服务端–客户端, 从一端到另一端</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><strong>资源（Resources</strong>）：就是网络上的一个实体<ul>
@@ -7784,7 +7788,7 @@
 </ul>
 </li>
 </ul>
-<p>如果一个架构符合REST原则，就称它为RESTful架构. 请求都是针对资源的操作.</p>
+<p>更简洁地讲，REST 就是<strong>将资源的状态以最适合客户端或服务端的形式从服务器端转移到客户端（或者反过来）</strong>。<br>如果一个架构符合REST原则，就称它为RESTful架构. 请求都是针对资源的操作.</p>
 <h2 id="2-2-👍RESTful-控制器实现"><a href="#2-2-👍RESTful-控制器实现" class="headerlink" title="2.2. 👍RESTful 控制器实现"></a>2.2. 👍RESTful 控制器实现</h2><ul>
 <li>RESR API以面向数据的格式返回, JSON或XML<ul>
 <li>JSON更直观，结构清晰</li>
