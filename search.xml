@@ -8078,7 +8078,7 @@
     <title>服务端考试复习（例题）</title>
     <url>/posts/ff3b226a/</url>
     <content><![CDATA[<h1 id="1-题型"><a href="#1-题型" class="headerlink" title="1. 题型"></a>1. 题型</h1><p>多选题<br>问答题：5道题</p>
-<h1 id="2-问答题例题"><a href="#2-问答题例题" class="headerlink" title="2. 问答题例题"></a>2. 问答题例题</h1><p>前7个是老师最后一节课讲到，但没给答案。</p>
+<h1 id="2-问答题整理"><a href="#2-问答题整理" class="headerlink" title="2. 问答题整理"></a>2. 问答题整理</h1><p>前7个是老师最后一节课讲到，但没给答案。</p>
 <h2 id="2-1-web开发框架分层，请求处理过程"><a href="#2-1-web开发框架分层，请求处理过程" class="headerlink" title="2.1. web开发框架分层，请求处理过程"></a>2.1. web开发框架分层，请求处理过程</h2><ul>
 <li><p>分层</p>
 <ol>
@@ -8186,6 +8186,17 @@
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F13%2F19-20-30-a83b91bcb885875b08c329f60f5ac115-msedge_CL3vHC98yN-06bb6b.png"></p>
 <h2 id="2-6-Spring集成流解决了什么问题"><a href="#2-6-Spring集成流解决了什么问题" class="headerlink" title="2.6. Spring集成流解决了什么问题"></a>2.6. Spring集成流解决了什么问题</h2><p>企业级应用程序必须要与其他的系统协作才能完成其目标。Spring集成流可以使应用程序跨越本身的边界，与其他的应用程序和企业级服务实现集成。</p>
+<ul>
+<li>解决问题<ol>
+<li>消息处理</li>
+<li>松耦合</li>
+<li>集成模式实现</li>
+<li>企业服务总线</li>
+<li>系统内外的交互</li>
+<li>消息过滤和转换</li>
+</ol>
+</li>
+</ul>
 <h2 id="2-7-反应式编程的4个接口"><a href="#2-7-反应式编程的4个接口" class="headerlink" title="2.7. 反应式编程的4个接口"></a>2.7. 反应式编程的4个接口</h2><ol>
 <li>Publisher：数据发布者</li>
 <li>Subscriber：数据订阅者</li>
