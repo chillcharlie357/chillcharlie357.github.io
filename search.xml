@@ -1275,167 +1275,6 @@
       </tags>
   </entry>
   <entry>
-    <title>11_冗余磁盘阵列(RAID)</title>
-    <url>/posts/b7ba64ea/</url>
-    <content><![CDATA[<ul>
-<li>冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
-<li>基本思想<ul>
-<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
-<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
-<li>采用<strong>数据冗余</strong>来进行错误恢复以提高系统可靠性</li>
-</ul>
-</li>
-<li>特性<ul>
-<li>由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器</li>
-<li>数据是分布在多个物理磁盘上</li>
-<li>冗余磁盘容量用于存储校验信息，保证磁盘万一损坏时能恢复数据</li>
-</ul>
-</li>
-</ul>
-<h1 id="1-RAID分类"><a href="#1-RAID分类" class="headerlink" title="1.RAID分类"></a>1.RAID分类</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png" alt="68_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="2-RAID-0"><a href="#2-RAID-0" class="headerlink" title="2.RAID 0"></a>2.RAID 0</h1><ul>
-<li>数据以<strong>条带</strong>的形式在可用的磁盘上分布<ul>
-<li>Eg：按照0、1、2、3顺序</li>
-</ul>
-</li>
-<li>不采用冗余来改善性能（不是RAID家族中的真正成员）</li>
-</ul>
-<h2 id="2-1-优点"><a href="#2-1-优点" class="headerlink" title="2.1 优点"></a>2.1 优点</h2><ul>
-<li>高数据传输率</li>
-<li>高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘</li>
-</ul>
-<h2 id="2-2-缺点"><a href="#2-2-缺点" class="headerlink" title="2.2 缺点"></a>2.2 缺点</h2><ul>
-<li>任何一个盘损坏文件就不可用</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png" alt="69_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="3-RAID-1"><a href="#3-RAID-1" class="headerlink" title="3.RAID 1"></a>3.RAID 1</h1><ul>
-<li>采用了数据<strong>条带</strong></li>
-<li>采用简单地<strong>备份所有数据</strong>的方法来实现冗余</li>
-</ul>
-<h2 id="3-1-优点"><a href="#3-1-优点" class="headerlink" title="3.1 优点"></a>3.1 优点</h2><ul>
-<li>高速响应I/O请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应<ul>
-<li><strong>读请求</strong>可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个，<strong>更快</strong></li>
-<li><strong>写请求</strong>需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘，<strong>更慢</strong></li>
-</ul>
-</li>
-<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单</li>
-</ul>
-<h2 id="3-2-缺点"><a href="#3-2-缺点" class="headerlink" title="3.2 缺点"></a>3.2 缺点</h2><ul>
-<li>价格昂贵</li>
-</ul>
-<h2 id="3-3-用途"><a href="#3-3-用途" class="headerlink" title="3.3 用途"></a>3.3 用途</h2><ul>
-<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
-</ul>
-<h2 id="3-4-与RAID-0相比"><a href="#3-4-与RAID-0相比" class="headerlink" title="3.4 与RAID 0相比"></a>3.4 与RAID 0相比</h2><ul>
-<li>如果有大批的读请求，则RAID 1能实现高速的I/O速率，性能可以达到RAID 0的两倍</li>
-<li>如果I/O请求有相当大的部分是写请求，则它不比RAID 0的性能好多少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png" alt="6a_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="3-5RAID-01-vs-RAID-10"><a href="#3-5RAID-01-vs-RAID-10" class="headerlink" title="3.5RAID 01 vs. RAID 10"></a>3.5RAID 01 vs. RAID 10</h2><ul>
-<li>RAID 01 = RAID 0+1：先做RAID 0，再做RAID 1</li>
-<li>RAID 10 = RAID 1+0：先做RAID 1，再做RAID 0</li>
-<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的<strong>容错能力</strong><ul>
-<li>RAID 10容错率更高</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png" alt="6b_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="4-RAID-2"><a href="#4-RAID-2" class="headerlink" title="4.RAID 2"></a>4.RAID 2</h1><ul>
-<li>采用并行存取技术<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/83dee816dc8e78b2e3bcb2354c8497d6_6c_VoIPSCreencastCoverWnd%20-2-.png" alt="6c_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h2><ul>
-<li><strong>所有</strong>磁盘都参与<strong>每</strong>个I/O请求的执行</li>
-</ul>
-<h2 id="4-2-特点"><a href="#4-2-特点" class="headerlink" title="4.2 特点"></a>4.2 特点</h2><ul>
-<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
-<li>采用<strong>数据条带</strong>：<strong>条带非常小</strong>，经常只有一个字节或一个字</li>
-</ul>
-<h2 id="4-3-纠错"><a href="#4-3-纠错" class="headerlink" title="4.3 纠错"></a>4.3 纠错</h2><p>对位于同一条带的各个数据盘上的数据位<strong>计算校验码（通常采用海明码）</strong>，校验码存储在该条带中多个校验盘的对应位置</p>
-<h2 id="4-4-访问"><a href="#4-4-访问" class="headerlink" title="4.4 访问"></a>4.4 访问</h2><ul>
-<li>读取：获取请求的数据和对应的校验码</li>
-<li>写入：所有数据盘和校验盘都被访问</li>
-</ul>
-<h2 id="4-5-缺点"><a href="#4-5-缺点" class="headerlink" title="4.5 缺点"></a>4.5 缺点</h2><ul>
-<li>冗余盘依然比较多，价格较贵</li>
-<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高 可靠性的情况没有意义</li>
-</ul>
-<h1 id="5-RAID-3"><a href="#5-RAID-3" class="headerlink" title="5.RAID 3"></a>5.RAID 3</h1><ul>
-<li>采用并行存取技术<ul>
-<li>各个驱动器的轴同步旋转</li>
-<li>采用<strong>非常小</strong>的数据条带</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-1-校验"><a href="#5-1-校验" class="headerlink" title="5.1 校验"></a>5.1 校验</h2><ul>
-<li>对所有数据盘上<strong>同一位置</strong>的数据计算奇偶校验码<ul>
-<li>当某一磁盘损坏时，可以用于重构数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f7562ab00bdaf086770ab9ba01f78f12_6d_VoIPSCreencastCoverWnd%20-2-.png" alt="6d_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-</ul>
-<h2 id="5-2-优缺点"><a href="#5-2-优缺点" class="headerlink" title="5.2 优缺点"></a>5.2 优缺点</h2><ul>
-<li>优点：能够获得非常高的数据传输率<ul>
-<li>对于大量传送，性能改善特别明显</li>
-</ul>
-</li>
-<li>缺点：一次只能执行一个I/O请求<ul>
-<li>在面向多个IO请求时，性能将受损</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-RAID-4"><a href="#6-RAID-4" class="headerlink" title="6.RAID 4"></a>6.RAID 4</h1><ul>
-<li>采用独立存取技术<ul>
-<li>读可以独立，写无法独立</li>
-<li>每个磁盘成员的操作是独立的，各个I/O请求能够并行处理</li>
-<li>采用相对<strong>较大的数据条带</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="6-1-校验"><a href="#6-1-校验" class="headerlink" title="6.1 校验"></a>6.1 校验</h2><p>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在<strong>奇偶校验盘</strong>的对应条带上<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/521fcea4b354b9de72e3a4c5ffe926bd_6e_VoIPSCreencastCoverWnd%20-2-.png" alt="6e_VoIPSCreencastCoverWnd (2).png"></p>
-<ul>
-<li>优化修改数据时<strong>重新计算校验码</strong>的读写次数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/39de9d867ee7099a563e4d67ea0e97d2_capture-2023-02-06-11-06-09.jpg" alt="capture-2023-02-06-11-06-09.jpg"></li>
-</ul>
-<h2 id="6-2-性能"><a href="#6-2-性能" class="headerlink" title="6.2 性能"></a>6.2 性能</h2><ul>
-<li>当执行<strong>较小规模</strong>的I/O写请求时，RAID 4会遭遇<strong>写损失</strong><ul>
-<li>对于每一次写操作，阵列管理软件不仅要修改用户数据， 而且要修改相应的校验位</li>
-<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/13b04dadc923526ad38ea677a3fd5656_6f_VoIPSCreencastCoverWnd%20-2-.png" alt="6f_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-<li>当涉及所有磁盘的数据条带的较大I/O写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
-<li>每一次写操作必须涉及到<strong>唯一的校验盘</strong>，校验盘会成为瓶颈</li>
-</ul>
-<h1 id="7-RAID-5"><a href="#7-RAID-5" class="headerlink" title="7.RAID 5"></a>7.RAID 5</h1><ul>
-<li>与RAID 4 组织方式相似</li>
-<li>在所有磁盘上都分布了奇偶校验条带<ul>
-<li>避免潜在的I/O瓶颈问题</li>
-</ul>
-</li>
-<li>访问时的“两读两写”<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/c4f46bafa944914cebc6c8989ebaf21f_70_VoIPSCreencastCoverWnd%20-2-.png" alt="70_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="7-1-RAID-50"><a href="#7-1-RAID-50" class="headerlink" title="7.1 RAID 50"></a>7.1 RAID 50</h2><ul>
-<li>先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问</li>
-<li>RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效</li>
-<li>RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低</li>
-</ul>
-<h1 id="8-RAID-6"><a href="#8-RAID-6" class="headerlink" title="8.RAID 6"></a>8.RAID 6</h1><ul>
-<li>采用<strong>两种不同的校验码</strong>，并将校验码以分开的块存于不同的磁盘中</li>
-<li>优点<ul>
-<li>提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>写损失:每次写影响到两个校验块<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png" alt="71_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-</ul>
-<h1 id="9-RAID比较"><a href="#9-RAID比较" class="headerlink" title="9.RAID比较"></a>9.RAID比较</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2d0b20945c49a12772798b2459b890bb_72_VoIPSCreencastCoverWnd%20-2-.png" alt="72_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/927619b8756054d87fa147a66555f92d_73_VoIPSCreencastCoverWnd%20-2-.png" alt="73_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png" alt="74_VoIPSCreencastCoverWnd (2).png"></p>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>12_虚拟存储器</title>
     <url>/posts/7a95209e/</url>
     <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
@@ -1598,6 +1437,167 @@
 <li>优点：程序按段实现共享与保护</li>
 <li>缺点：需要多次查表</li>
 </ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>11_冗余磁盘阵列(RAID)</title>
+    <url>/posts/b7ba64ea/</url>
+    <content><![CDATA[<ul>
+<li>冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
+<li>基本思想<ul>
+<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
+<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
+<li>采用<strong>数据冗余</strong>来进行错误恢复以提高系统可靠性</li>
+</ul>
+</li>
+<li>特性<ul>
+<li>由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器</li>
+<li>数据是分布在多个物理磁盘上</li>
+<li>冗余磁盘容量用于存储校验信息，保证磁盘万一损坏时能恢复数据</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-RAID分类"><a href="#1-RAID分类" class="headerlink" title="1.RAID分类"></a>1.RAID分类</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png" alt="68_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="2-RAID-0"><a href="#2-RAID-0" class="headerlink" title="2.RAID 0"></a>2.RAID 0</h1><ul>
+<li>数据以<strong>条带</strong>的形式在可用的磁盘上分布<ul>
+<li>Eg：按照0、1、2、3顺序</li>
+</ul>
+</li>
+<li>不采用冗余来改善性能（不是RAID家族中的真正成员）</li>
+</ul>
+<h2 id="2-1-优点"><a href="#2-1-优点" class="headerlink" title="2.1 优点"></a>2.1 优点</h2><ul>
+<li>高数据传输率</li>
+<li>高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘</li>
+</ul>
+<h2 id="2-2-缺点"><a href="#2-2-缺点" class="headerlink" title="2.2 缺点"></a>2.2 缺点</h2><ul>
+<li>任何一个盘损坏文件就不可用</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png" alt="69_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="3-RAID-1"><a href="#3-RAID-1" class="headerlink" title="3.RAID 1"></a>3.RAID 1</h1><ul>
+<li>采用了数据<strong>条带</strong></li>
+<li>采用简单地<strong>备份所有数据</strong>的方法来实现冗余</li>
+</ul>
+<h2 id="3-1-优点"><a href="#3-1-优点" class="headerlink" title="3.1 优点"></a>3.1 优点</h2><ul>
+<li>高速响应I/O请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应<ul>
+<li><strong>读请求</strong>可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个，<strong>更快</strong></li>
+<li><strong>写请求</strong>需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘，<strong>更慢</strong></li>
+</ul>
+</li>
+<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单</li>
+</ul>
+<h2 id="3-2-缺点"><a href="#3-2-缺点" class="headerlink" title="3.2 缺点"></a>3.2 缺点</h2><ul>
+<li>价格昂贵</li>
+</ul>
+<h2 id="3-3-用途"><a href="#3-3-用途" class="headerlink" title="3.3 用途"></a>3.3 用途</h2><ul>
+<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
+</ul>
+<h2 id="3-4-与RAID-0相比"><a href="#3-4-与RAID-0相比" class="headerlink" title="3.4 与RAID 0相比"></a>3.4 与RAID 0相比</h2><ul>
+<li>如果有大批的读请求，则RAID 1能实现高速的I/O速率，性能可以达到RAID 0的两倍</li>
+<li>如果I/O请求有相当大的部分是写请求，则它不比RAID 0的性能好多少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png" alt="6a_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="3-5RAID-01-vs-RAID-10"><a href="#3-5RAID-01-vs-RAID-10" class="headerlink" title="3.5RAID 01 vs. RAID 10"></a>3.5RAID 01 vs. RAID 10</h2><ul>
+<li>RAID 01 = RAID 0+1：先做RAID 0，再做RAID 1</li>
+<li>RAID 10 = RAID 1+0：先做RAID 1，再做RAID 0</li>
+<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的<strong>容错能力</strong><ul>
+<li>RAID 10容错率更高</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png" alt="6b_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="4-RAID-2"><a href="#4-RAID-2" class="headerlink" title="4.RAID 2"></a>4.RAID 2</h1><ul>
+<li>采用并行存取技术<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/83dee816dc8e78b2e3bcb2354c8497d6_6c_VoIPSCreencastCoverWnd%20-2-.png" alt="6c_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h2><ul>
+<li><strong>所有</strong>磁盘都参与<strong>每</strong>个I/O请求的执行</li>
+</ul>
+<h2 id="4-2-特点"><a href="#4-2-特点" class="headerlink" title="4.2 特点"></a>4.2 特点</h2><ul>
+<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
+<li>采用<strong>数据条带</strong>：<strong>条带非常小</strong>，经常只有一个字节或一个字</li>
+</ul>
+<h2 id="4-3-纠错"><a href="#4-3-纠错" class="headerlink" title="4.3 纠错"></a>4.3 纠错</h2><p>对位于同一条带的各个数据盘上的数据位<strong>计算校验码（通常采用海明码）</strong>，校验码存储在该条带中多个校验盘的对应位置</p>
+<h2 id="4-4-访问"><a href="#4-4-访问" class="headerlink" title="4.4 访问"></a>4.4 访问</h2><ul>
+<li>读取：获取请求的数据和对应的校验码</li>
+<li>写入：所有数据盘和校验盘都被访问</li>
+</ul>
+<h2 id="4-5-缺点"><a href="#4-5-缺点" class="headerlink" title="4.5 缺点"></a>4.5 缺点</h2><ul>
+<li>冗余盘依然比较多，价格较贵</li>
+<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高 可靠性的情况没有意义</li>
+</ul>
+<h1 id="5-RAID-3"><a href="#5-RAID-3" class="headerlink" title="5.RAID 3"></a>5.RAID 3</h1><ul>
+<li>采用并行存取技术<ul>
+<li>各个驱动器的轴同步旋转</li>
+<li>采用<strong>非常小</strong>的数据条带</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-1-校验"><a href="#5-1-校验" class="headerlink" title="5.1 校验"></a>5.1 校验</h2><ul>
+<li>对所有数据盘上<strong>同一位置</strong>的数据计算奇偶校验码<ul>
+<li>当某一磁盘损坏时，可以用于重构数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f7562ab00bdaf086770ab9ba01f78f12_6d_VoIPSCreencastCoverWnd%20-2-.png" alt="6d_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-优缺点"><a href="#5-2-优缺点" class="headerlink" title="5.2 优缺点"></a>5.2 优缺点</h2><ul>
+<li>优点：能够获得非常高的数据传输率<ul>
+<li>对于大量传送，性能改善特别明显</li>
+</ul>
+</li>
+<li>缺点：一次只能执行一个I/O请求<ul>
+<li>在面向多个IO请求时，性能将受损</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-RAID-4"><a href="#6-RAID-4" class="headerlink" title="6.RAID 4"></a>6.RAID 4</h1><ul>
+<li>采用独立存取技术<ul>
+<li>读可以独立，写无法独立</li>
+<li>每个磁盘成员的操作是独立的，各个I/O请求能够并行处理</li>
+<li>采用相对<strong>较大的数据条带</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-1-校验"><a href="#6-1-校验" class="headerlink" title="6.1 校验"></a>6.1 校验</h2><p>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在<strong>奇偶校验盘</strong>的对应条带上<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/521fcea4b354b9de72e3a4c5ffe926bd_6e_VoIPSCreencastCoverWnd%20-2-.png" alt="6e_VoIPSCreencastCoverWnd (2).png"></p>
+<ul>
+<li>优化修改数据时<strong>重新计算校验码</strong>的读写次数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/39de9d867ee7099a563e4d67ea0e97d2_capture-2023-02-06-11-06-09.jpg" alt="capture-2023-02-06-11-06-09.jpg"></li>
+</ul>
+<h2 id="6-2-性能"><a href="#6-2-性能" class="headerlink" title="6.2 性能"></a>6.2 性能</h2><ul>
+<li>当执行<strong>较小规模</strong>的I/O写请求时，RAID 4会遭遇<strong>写损失</strong><ul>
+<li>对于每一次写操作，阵列管理软件不仅要修改用户数据， 而且要修改相应的校验位</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/13b04dadc923526ad38ea677a3fd5656_6f_VoIPSCreencastCoverWnd%20-2-.png" alt="6f_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+<li>当涉及所有磁盘的数据条带的较大I/O写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
+<li>每一次写操作必须涉及到<strong>唯一的校验盘</strong>，校验盘会成为瓶颈</li>
+</ul>
+<h1 id="7-RAID-5"><a href="#7-RAID-5" class="headerlink" title="7.RAID 5"></a>7.RAID 5</h1><ul>
+<li>与RAID 4 组织方式相似</li>
+<li>在所有磁盘上都分布了奇偶校验条带<ul>
+<li>避免潜在的I/O瓶颈问题</li>
+</ul>
+</li>
+<li>访问时的“两读两写”<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/c4f46bafa944914cebc6c8989ebaf21f_70_VoIPSCreencastCoverWnd%20-2-.png" alt="70_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="7-1-RAID-50"><a href="#7-1-RAID-50" class="headerlink" title="7.1 RAID 50"></a>7.1 RAID 50</h2><ul>
+<li>先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问</li>
+<li>RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效</li>
+<li>RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低</li>
+</ul>
+<h1 id="8-RAID-6"><a href="#8-RAID-6" class="headerlink" title="8.RAID 6"></a>8.RAID 6</h1><ul>
+<li>采用<strong>两种不同的校验码</strong>，并将校验码以分开的块存于不同的磁盘中</li>
+<li>优点<ul>
+<li>提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>写损失:每次写影响到两个校验块<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png" alt="71_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+</ul>
+<h1 id="9-RAID比较"><a href="#9-RAID比较" class="headerlink" title="9.RAID比较"></a>9.RAID比较</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2d0b20945c49a12772798b2459b890bb_72_VoIPSCreencastCoverWnd%20-2-.png" alt="72_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/927619b8756054d87fa147a66555f92d_73_VoIPSCreencastCoverWnd%20-2-.png" alt="73_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png" alt="74_VoIPSCreencastCoverWnd (2).png"></p>
 ]]></content>
       <categories>
         <category>2022Fall_计算机组织与结构</category>
@@ -2270,6 +2270,281 @@
       </tags>
   </entry>
   <entry>
+    <title>16_总线</title>
+    <url>/posts/1badac07/</url>
+    <content><![CDATA[<h1 id="1-总线结构"><a href="#1-总线结构" class="headerlink" title="1. 总线结构"></a>1. 总线结构</h1><ul>
+<li>数据线：在系统组件之间传输数据<ul>
+<li>数据线的数量决定了一次可以传输的数据的大小</li>
+</ul>
+</li>
+<li>地址线：在数据线和地址I/O端口上指定数据的来源和去向<ul>
+<li>地址线的数量决定了寻址空间的大小</li>
+</ul>
+</li>
+<li>控制线：控制对数据线和地址线的存取和使用<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/458801c8257195d5ce9986d3a11be334_msedge_951_547.png" alt="msedge_951_547.png"></li>
+</ul>
+<h1 id="2-总线上数据传输的特点"><a href="#2-总线上数据传输的特点" class="headerlink" title="2. 总线上数据传输的特点"></a>2. 总线上数据传输的特点</h1><ul>
+<li><p>总线可以被多个设备监听，但同一时刻只能由<strong>一个设备</strong>发送数据；如果同一时刻多个设备同时发送数据，会造成数据之间的混淆</p>
+</li>
+<li><p>使用总线进行数据传输</p>
+<ul>
+<li>如果连在总线上的某个设备希望向另一个设备<strong>发送数据</strong>，需要：<ul>
+<li>获得总线的使用权</li>
+<li>通过总线传送数据</li>
+</ul>
+</li>
+<li>如果连在总线上的某个设备希望向另一个组件<strong>请求数据</strong>，需要：<ul>
+<li>获得总线的使用权</li>
+<li>通过总线向另一个设备发送请求，等待另一个设备发送数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>当总线在被使用过程中，其它设备<strong>不可以抢占</strong></p>
+</li>
+</ul>
+<h1 id="3-设计要素"><a href="#3-设计要素" class="headerlink" title="3. 设计要素"></a>3. 设计要素</h1><h2 id="3-1-用途"><a href="#3-1-用途" class="headerlink" title="3.1. 用途"></a>3.1. 用途</h2><ul>
+<li><strong>专用总线dedicated</strong>：始终只负责一项功能，或始终分配给特定的计算机组件<ul>
+<li>优点：高吞吐量，减少总线冲突</li>
+<li>缺点：增加了系统的规模和成本</li>
+</ul>
+</li>
+<li><strong>复用总线multiplexed</strong><ul>
+<li>优点：使用的布线数量少，节省空间和成本</li>
+<li>缺点：每个模块需要更复杂的控制电路，且共享可能会降低性能</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-仲裁"><a href="#3-2-仲裁" class="headerlink" title="3.2. 仲裁"></a>3.2. 仲裁</h2><p><strong>仲裁方案</strong></p>
+<ul>
+<li>集中式：由仲裁器（arbiter）或总线控制器 （bus controller）负责分配总线使用权<ul>
+<li>链式查询 / 菊花链（daisy chain）</li>
+<li>计数器查询（query by a counter）</li>
+<li>独立请求（independently request）</li>
+</ul>
+</li>
+<li>分布式（distributed）：每个设备都包含访问控制逻辑，各设 备共同作用分享总线<ul>
+<li>自举式（self selection）</li>
+<li>冲突检测（collision detection）</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-1-链式查询"><a href="#3-2-1-链式查询" class="headerlink" title="3.2.1. 链式查询"></a>3.2.1. 链式查询</h3><ul>
+<li><p>所有的设备都是串行连接的，并将允许信号从优先级最高的设备下发到优先级最低的设备</p>
+</li>
+<li><p>总线仲裁器收到请求后，在总线不忙的前提下，发起允许信号 </p>
+</li>
+<li><p>如果某个设备收到了允许信号并且发起了总线请求，该设备将总线设置为繁忙状态，允许信号将不再被进一步传递</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>确定优先级简单</li>
+<li>可以更灵活地添加设备</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>不保证公平性</li>
+<li>对电力故障敏感</li>
+<li>限制总线速度</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/83186883301ed17a79330978d2f17dc8_msedge_1071_318.png" alt="msedge_1071_318.png"></p>
+<h3 id="3-2-2-计数器查询"><a href="#3-2-2-计数器查询" class="headerlink" title="3.2.2. 计数器查询"></a>3.2.2. 计数器查询</h3><ul>
+<li><p>将总线允许线替换为设备ID线 </p>
+</li>
+<li><p>如果总线空闲，总线仲裁器通过设备ID线发送计数</p>
+</li>
+<li><p>如果当前发送请求的设备ID等于裁决器当前的计数，裁决器将停止计数，设备将总线设置为忙</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>通过使用不同的初始计数，可以灵活地确定设备优先级<ul>
+<li>强调优先级：从1开始</li>
+<li>强调公平性：从下一个设备的ID开始</li>
+</ul>
+</li>
+<li>对电路故障不敏感</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>需要添加设备ID线</li>
+<li>需要解码和比较设备ID信号</li>
+<li>限制总线的速度</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/e9ef2e6785dfd254c6eaf92489305be2_msedge_1018_314.png" alt="msedge_1018_314.png"></p>
+<h3 id="3-2-3-独立请求"><a href="#3-2-3-独立请求" class="headerlink" title="3.2.3. 独立请求"></a>3.2.3. 独立请求</h3><ul>
+<li>每个设备都有自己的总线请求线和总线允许线</li>
+<li>当一个设备请求总线时，它通过总线请求线将请求信号发送给总线仲裁器</li>
+<li>总线仲裁器决定哪个设备可以使用总线<ul>
+<li>确定策略：固定优先级，公平链式，LRU，FIFO，…</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>快速响应</li>
+<li>可编程的优先级</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>复杂的控制逻辑</li>
+<li>更多的控制线路</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/9f04fa2ce8f4f276554a50cc81a4d8c3_msedge_990_325.png" alt="msedge_990_325.png"></p>
+<h3 id="3-2-4-自举式"><a href="#3-2-4-自举式" class="headerlink" title="3.2.4. 自举式"></a>3.2.4. 自举式</h3><ul>
+<li>固定优先级</li>
+<li>每个设备在其总线请求线上发送请求<ul>
+<li>最低优先级的设备没有请求线，<strong>使用Busy线</strong></li>
+</ul>
+</li>
+<li>每个设备自行判断自己是否在请求总线的设备中优先级最高</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/28e3c188b5b89fe7a04b58c37642a7a3_msedge_1089_331.png" alt="msedge_1089_331.png"><br>优先级：0&lt;1&lt;2&lt;3</p>
+<h3 id="3-2-5-冲突检测"><a href="#3-2-5-冲突检测" class="headerlink" title="3.2.5. 冲突检测"></a>3.2.5. 冲突检测</h3><ul>
+<li>当一个设备想要使用总线时，它会检查总线是否繁忙<ul>
+<li>如果总线空闲，设备使用总线</li>
+</ul>
+</li>
+<li><strong>冲突</strong>：如果两个设备发现总线空闲，它们可能同时使用总线<ul>
+<li>在传输数据时，设备会监听总线，检查是否存在冲突</li>
+<li>如果发生冲突，所有使用总线的设备将停止数据传输，并分别在随机间隔时间后再次请求总线</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-时序"><a href="#3-3-时序" class="headerlink" title="3.3. 时序"></a>3.3. 时序</h2><p>确定每个<strong>总线事务</strong>的开始和结束时间<br>总线事务：地址+数据+…+数据</p>
+<h3 id="3-3-1-同步时序"><a href="#3-3-1-同步时序" class="headerlink" title="3.3.1. 同步时序"></a>3.3.1. 同步时序</h3><ul>
+<li>同步时序：事件的发生由时钟决定</li>
+<li>优点<ul>
+<li>跟容易实现和测试</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>所用设备共享一个时钟</li>
+<li>总线长度受到时钟偏差影响</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bcce0d24cafb9420381c43dabcd0796c_msedge_530_521.png" alt="msedge_530_521.png"></p>
+<h3 id="3-3-2-异步时序"><a href="#3-3-2-异步时序" class="headerlink" title="3.3.2. 异步时序"></a>3.3.2. 异步时序</h3><ul>
+<li><p>异步时序：一个事件的发生取决于前一个事件的发生</p>
+</li>
+<li><p>握手策略<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/40bcd9533a7305a9b11b7c16bb51a28d_msedge_1057_220.png" alt="msedge_1057_220.png"></p>
+</li>
+<li><p>异步数据传输<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bebf2b876047acd859bf275551555d21_msedge_1029_602.png" alt="msedge_1029_602.png"></p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>可以灵活协调不同设备</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>逻辑接口复杂</li>
+<li>对噪声敏感</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-3-半同步时序"><a href="#3-3-3-半同步时序" class="headerlink" title="3.3.3. 半同步时序"></a>3.3.3. 半同步时序</h3><ul>
+<li>半同步：同步时序和异步时序相结合。为了减少噪声的影响，在异步计时中使用时钟<ul>
+<li>准备和响应信号在时钟上升沿有效</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/181e715ae2b4ec3c37082823d2a7e71b_msedge_1094_403.png" alt="msedge_1094_403.png"></p>
+<h3 id="3-3-4-分离事务"><a href="#3-3-4-分离事务" class="headerlink" title="3.3.4. 分离事务"></a>3.3.4. 分离事务</h3><ul>
+<li>分离事务：设备准备数据期间释放总线，将一个总线事件分离为两个过程</li>
+<li>优点<ul>
+<li>增加总线利用率</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>增加每个总线事件的持续时间和系统复杂度</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/36671cd094dbc15b6e0f9a8fdb766130_msedge_830_424.png" alt="msedge_830_424.png"></p>
+<h2 id="3-4-总线带宽和数据传输速率"><a href="#3-4-总线带宽和数据传输速率" class="headerlink" title="3.4. 总线带宽和数据传输速率"></a>3.4. 总线带宽和数据传输速率</h2><ul>
+<li>总线带宽（bus bandwidth）：总线的最大数据传输速率。理想化。</li>
+<li>传输速率：考虑地址传输，握手等。</li>
+<li>总线宽度（bus width）：组成总线的线数<ul>
+<li>数据总线越宽，一次传输的数据位数就越多</li>
+<li>地址总线越宽，一次传输的地址位数就越多</li>
+</ul>
+</li>
+<li><strong>单位</strong>：Mbps <ul>
+<li>M为<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="3.25ex" height="2.005ex" role="img" focusable="false" viewBox="0 -864 1436.6 886"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="mn" transform="translate(1033,393.1) scale(0.707)"><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path></g></g></g></g></svg></mjx-container>，形容bps</li>
+<li>只有在表示存储时才用mb <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container>，kb <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container> </li>
+<li>k m g t p</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-1-例：同步总线和异步总线的数据传输速率"><a href="#3-4-1-例：同步总线和异步总线的数据传输速率" class="headerlink" title="3.4.1. 例：同步总线和异步总线的数据传输速率"></a>3.4.1. 例：同步总线和异步总线的数据传输速率</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/333d5ccb7f292ba52410db663d36439e_msedge_1076_555.png" alt="msedge_1076_555.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/976bf0b3e79e38cabe72f3f1af21755e_msedge_1055_628.png" alt="msedge_1055_628.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/230b844b23d26bbf0b25494b5b1d5312_msedge_1092_515.png" alt="msedge_1092_515.png"></p>
+<h3 id="3-4-2-例：不同数据块大小的数据传输速率"><a href="#3-4-2-例：不同数据块大小的数据传输速率" class="headerlink" title="3.4.2. 例：不同数据块大小的数据传输速率"></a>3.4.2. 例：不同数据块大小的数据传输速率</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/fe2ebc93525bc1e35002c968e5d54157_msedge_1035_608.png" alt="msedge_1035_608.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/81cfefb9dd06b5e4b7e819a3312bafc8_msedge_890_602.png" alt="msedge_890_602.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/7d5bdd896398523ae2db4a3afde86cf6_msedge_1036_606.png" alt="msedge_1036_606.png"></p>
+<h2 id="3-5-提高总线的数据传输率"><a href="#3-5-提高总线的数据传输率" class="headerlink" title="3.5. 提高总线的数据传输率"></a>3.5. 提高总线的数据传输率</h2><ul>
+<li>提高时钟频率</li>
+<li>增加数据总线宽度<ul>
+<li>每次传输更多的数据（成本：更多的总线线路）</li>
+</ul>
+</li>
+<li>块传输<ul>
+<li>传输一次地址就传输一块数据（成本：高复杂性）</li>
+</ul>
+</li>
+<li>分离总线事务<ul>
+<li>减少总线空闲时间（成本：复杂性高，增加每个事务的持续时间）</li>
+</ul>
+</li>
+<li>分离地址线和数据线<ul>
+<li>同时传输地址和数据（成本：更多的总线线路）</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-6-层次结构"><a href="#3-6-层次结构" class="headerlink" title="3.6. 层次结构"></a>3.6. 层次结构</h2><h3 id="3-6-1-单总线结构"><a href="#3-6-1-单总线结构" class="headerlink" title="3.6.1. 单总线结构"></a>3.6.1. 单总线结构</h3><ul>
+<li>CPU、存储器和 I/O 模块都连接到一条系统总线</li>
+<li>优点：简单，易于扩展</li>
+<li>缺点<ul>
+<li>连接的设备越多，总线长度越大，传输延迟也就越大</li>
+<li>聚集的传输请求接近总线容量时，总线成为瓶颈</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/decf98deaffb5849d97761e1a64cd8b1_NVIDIA_Share_962_272.png" alt="NVIDIA_Share_962_272.png"></p>
+<h3 id="3-6-2-双总线结构I"><a href="#3-6-2-双总线结构I" class="headerlink" title="3.6.2. 双总线结构I"></a>3.6.2. 双总线结构I</h3><ul>
+<li>在CPU和存储器中间增加一个存储器总线</li>
+<li>优点：增加CPU和存储器之间的传输效率，同时降低系统总线的负担</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/0f8e17e23b84ee9e2e16d6acced376fd_NVIDIA_Share_968_328.png" alt="NVIDIA_Share_968_328.png"></p>
+<h3 id="3-6-3-双总线结构II"><a href="#3-6-3-双总线结构II" class="headerlink" title="3.6.3. 双总线结构II"></a>3.6.3. 双总线结构II</h3><ul>
+<li>将系统总线分为存储器总线、I/O 总线 和 IOP (input/output processer)</li>
+<li>优点：降低I/O对总线的负担<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/d542c83c260d50e459111969be88a211_NVIDIA_Share_1041_401.png" alt="NVIDIA_Share_1041_401.png"></li>
+</ul>
+<h3 id="3-6-4-多总线结构I"><a href="#3-6-4-多总线结构I" class="headerlink" title="3.6.4. 多总线结构I"></a>3.6.4. 多总线结构I</h3><ul>
+<li>增加一个 <strong>本地总线（local bus）</strong>来连接 CPU 和 cache</li>
+<li>优点：增加 I/O 效率<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/4a5cb8c06ec0ff8f1f3eb7e769b03ce6_NVIDIA_Share_1007_447.png" alt="NVIDIA_Share_1007_447.png"></li>
+</ul>
+<h3 id="3-6-5-多总线结构II"><a href="#3-6-5-多总线结构II" class="headerlink" title="3.6.5. 多总线结构II"></a>3.6.5. 多总线结构II</h3><ul>
+<li>将系统总线分为存储器总线、I/O 总线和 <strong>DMA 总线</strong></li>
+<li>优点：增加 I/O 效率<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/955bae7c66f39b06978d76381dfe24f9_NVIDIA_Share_1025_321.png" alt="NVIDIA_Share_1025_321.png"></li>
+</ul>
+<h3 id="3-6-6-多总线结构III"><a href="#3-6-6-多总线结构III" class="headerlink" title="3.6.6. 多总线结构III"></a>3.6.6. 多总线结构III</h3><ul>
+<li>增加一个 高速 I/O 总线 来连接高速设备</li>
+<li>优点：增加 I/O 交互效率<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/1925f5de97d61216df199455540b18a7_NVIDIA_Share_1032_469.png" alt="NVIDIA_Share_1032_469.png"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>15_控制器</title>
     <url>/posts/404b6c10/</url>
     <content><![CDATA[<h1 id="1-指令周期"><a href="#1-指令周期" class="headerlink" title="1. 指令周期"></a>1. 指令周期</h1><p>处理单个指令的过程</p>
@@ -2564,281 +2839,6 @@
 <li>比采用相同半导体工艺的硬布线控制器慢一些</li>
 </ul>
 </li>
-</ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>16_总线</title>
-    <url>/posts/1badac07/</url>
-    <content><![CDATA[<h1 id="1-总线结构"><a href="#1-总线结构" class="headerlink" title="1. 总线结构"></a>1. 总线结构</h1><ul>
-<li>数据线：在系统组件之间传输数据<ul>
-<li>数据线的数量决定了一次可以传输的数据的大小</li>
-</ul>
-</li>
-<li>地址线：在数据线和地址I/O端口上指定数据的来源和去向<ul>
-<li>地址线的数量决定了寻址空间的大小</li>
-</ul>
-</li>
-<li>控制线：控制对数据线和地址线的存取和使用<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/458801c8257195d5ce9986d3a11be334_msedge_951_547.png" alt="msedge_951_547.png"></li>
-</ul>
-<h1 id="2-总线上数据传输的特点"><a href="#2-总线上数据传输的特点" class="headerlink" title="2. 总线上数据传输的特点"></a>2. 总线上数据传输的特点</h1><ul>
-<li><p>总线可以被多个设备监听，但同一时刻只能由<strong>一个设备</strong>发送数据；如果同一时刻多个设备同时发送数据，会造成数据之间的混淆</p>
-</li>
-<li><p>使用总线进行数据传输</p>
-<ul>
-<li>如果连在总线上的某个设备希望向另一个设备<strong>发送数据</strong>，需要：<ul>
-<li>获得总线的使用权</li>
-<li>通过总线传送数据</li>
-</ul>
-</li>
-<li>如果连在总线上的某个设备希望向另一个组件<strong>请求数据</strong>，需要：<ul>
-<li>获得总线的使用权</li>
-<li>通过总线向另一个设备发送请求，等待另一个设备发送数据</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>当总线在被使用过程中，其它设备<strong>不可以抢占</strong></p>
-</li>
-</ul>
-<h1 id="3-设计要素"><a href="#3-设计要素" class="headerlink" title="3. 设计要素"></a>3. 设计要素</h1><h2 id="3-1-用途"><a href="#3-1-用途" class="headerlink" title="3.1. 用途"></a>3.1. 用途</h2><ul>
-<li><strong>专用总线dedicated</strong>：始终只负责一项功能，或始终分配给特定的计算机组件<ul>
-<li>优点：高吞吐量，减少总线冲突</li>
-<li>缺点：增加了系统的规模和成本</li>
-</ul>
-</li>
-<li><strong>复用总线multiplexed</strong><ul>
-<li>优点：使用的布线数量少，节省空间和成本</li>
-<li>缺点：每个模块需要更复杂的控制电路，且共享可能会降低性能</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-2-仲裁"><a href="#3-2-仲裁" class="headerlink" title="3.2. 仲裁"></a>3.2. 仲裁</h2><p><strong>仲裁方案</strong></p>
-<ul>
-<li>集中式：由仲裁器（arbiter）或总线控制器 （bus controller）负责分配总线使用权<ul>
-<li>链式查询 / 菊花链（daisy chain）</li>
-<li>计数器查询（query by a counter）</li>
-<li>独立请求（independently request）</li>
-</ul>
-</li>
-<li>分布式（distributed）：每个设备都包含访问控制逻辑，各设 备共同作用分享总线<ul>
-<li>自举式（self selection）</li>
-<li>冲突检测（collision detection）</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-2-1-链式查询"><a href="#3-2-1-链式查询" class="headerlink" title="3.2.1. 链式查询"></a>3.2.1. 链式查询</h3><ul>
-<li><p>所有的设备都是串行连接的，并将允许信号从优先级最高的设备下发到优先级最低的设备</p>
-</li>
-<li><p>总线仲裁器收到请求后，在总线不忙的前提下，发起允许信号 </p>
-</li>
-<li><p>如果某个设备收到了允许信号并且发起了总线请求，该设备将总线设置为繁忙状态，允许信号将不再被进一步传递</p>
-</li>
-<li><p>优点</p>
-<ul>
-<li>确定优先级简单</li>
-<li>可以更灵活地添加设备</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>不保证公平性</li>
-<li>对电力故障敏感</li>
-<li>限制总线速度</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/83186883301ed17a79330978d2f17dc8_msedge_1071_318.png" alt="msedge_1071_318.png"></p>
-<h3 id="3-2-2-计数器查询"><a href="#3-2-2-计数器查询" class="headerlink" title="3.2.2. 计数器查询"></a>3.2.2. 计数器查询</h3><ul>
-<li><p>将总线允许线替换为设备ID线 </p>
-</li>
-<li><p>如果总线空闲，总线仲裁器通过设备ID线发送计数</p>
-</li>
-<li><p>如果当前发送请求的设备ID等于裁决器当前的计数，裁决器将停止计数，设备将总线设置为忙</p>
-</li>
-<li><p>优点</p>
-<ul>
-<li>通过使用不同的初始计数，可以灵活地确定设备优先级<ul>
-<li>强调优先级：从1开始</li>
-<li>强调公平性：从下一个设备的ID开始</li>
-</ul>
-</li>
-<li>对电路故障不敏感</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>需要添加设备ID线</li>
-<li>需要解码和比较设备ID信号</li>
-<li>限制总线的速度</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/e9ef2e6785dfd254c6eaf92489305be2_msedge_1018_314.png" alt="msedge_1018_314.png"></p>
-<h3 id="3-2-3-独立请求"><a href="#3-2-3-独立请求" class="headerlink" title="3.2.3. 独立请求"></a>3.2.3. 独立请求</h3><ul>
-<li>每个设备都有自己的总线请求线和总线允许线</li>
-<li>当一个设备请求总线时，它通过总线请求线将请求信号发送给总线仲裁器</li>
-<li>总线仲裁器决定哪个设备可以使用总线<ul>
-<li>确定策略：固定优先级，公平链式，LRU，FIFO，…</li>
-</ul>
-</li>
-<li>优点<ul>
-<li>快速响应</li>
-<li>可编程的优先级</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>复杂的控制逻辑</li>
-<li>更多的控制线路</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/9f04fa2ce8f4f276554a50cc81a4d8c3_msedge_990_325.png" alt="msedge_990_325.png"></p>
-<h3 id="3-2-4-自举式"><a href="#3-2-4-自举式" class="headerlink" title="3.2.4. 自举式"></a>3.2.4. 自举式</h3><ul>
-<li>固定优先级</li>
-<li>每个设备在其总线请求线上发送请求<ul>
-<li>最低优先级的设备没有请求线，<strong>使用Busy线</strong></li>
-</ul>
-</li>
-<li>每个设备自行判断自己是否在请求总线的设备中优先级最高</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/28e3c188b5b89fe7a04b58c37642a7a3_msedge_1089_331.png" alt="msedge_1089_331.png"><br>优先级：0&lt;1&lt;2&lt;3</p>
-<h3 id="3-2-5-冲突检测"><a href="#3-2-5-冲突检测" class="headerlink" title="3.2.5. 冲突检测"></a>3.2.5. 冲突检测</h3><ul>
-<li>当一个设备想要使用总线时，它会检查总线是否繁忙<ul>
-<li>如果总线空闲，设备使用总线</li>
-</ul>
-</li>
-<li><strong>冲突</strong>：如果两个设备发现总线空闲，它们可能同时使用总线<ul>
-<li>在传输数据时，设备会监听总线，检查是否存在冲突</li>
-<li>如果发生冲突，所有使用总线的设备将停止数据传输，并分别在随机间隔时间后再次请求总线</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-时序"><a href="#3-3-时序" class="headerlink" title="3.3. 时序"></a>3.3. 时序</h2><p>确定每个<strong>总线事务</strong>的开始和结束时间<br>总线事务：地址+数据+…+数据</p>
-<h3 id="3-3-1-同步时序"><a href="#3-3-1-同步时序" class="headerlink" title="3.3.1. 同步时序"></a>3.3.1. 同步时序</h3><ul>
-<li>同步时序：事件的发生由时钟决定</li>
-<li>优点<ul>
-<li>跟容易实现和测试</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>所用设备共享一个时钟</li>
-<li>总线长度受到时钟偏差影响</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bcce0d24cafb9420381c43dabcd0796c_msedge_530_521.png" alt="msedge_530_521.png"></p>
-<h3 id="3-3-2-异步时序"><a href="#3-3-2-异步时序" class="headerlink" title="3.3.2. 异步时序"></a>3.3.2. 异步时序</h3><ul>
-<li><p>异步时序：一个事件的发生取决于前一个事件的发生</p>
-</li>
-<li><p>握手策略<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/40bcd9533a7305a9b11b7c16bb51a28d_msedge_1057_220.png" alt="msedge_1057_220.png"></p>
-</li>
-<li><p>异步数据传输<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/bebf2b876047acd859bf275551555d21_msedge_1029_602.png" alt="msedge_1029_602.png"></p>
-</li>
-<li><p>优点</p>
-<ul>
-<li>可以灵活协调不同设备</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>逻辑接口复杂</li>
-<li>对噪声敏感</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-3-3-半同步时序"><a href="#3-3-3-半同步时序" class="headerlink" title="3.3.3. 半同步时序"></a>3.3.3. 半同步时序</h3><ul>
-<li>半同步：同步时序和异步时序相结合。为了减少噪声的影响，在异步计时中使用时钟<ul>
-<li>准备和响应信号在时钟上升沿有效</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/181e715ae2b4ec3c37082823d2a7e71b_msedge_1094_403.png" alt="msedge_1094_403.png"></p>
-<h3 id="3-3-4-分离事务"><a href="#3-3-4-分离事务" class="headerlink" title="3.3.4. 分离事务"></a>3.3.4. 分离事务</h3><ul>
-<li>分离事务：设备准备数据期间释放总线，将一个总线事件分离为两个过程</li>
-<li>优点<ul>
-<li>增加总线利用率</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>增加每个总线事件的持续时间和系统复杂度</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/36671cd094dbc15b6e0f9a8fdb766130_msedge_830_424.png" alt="msedge_830_424.png"></p>
-<h2 id="3-4-总线带宽和数据传输速率"><a href="#3-4-总线带宽和数据传输速率" class="headerlink" title="3.4. 总线带宽和数据传输速率"></a>3.4. 总线带宽和数据传输速率</h2><ul>
-<li>总线带宽（bus bandwidth）：总线的最大数据传输速率。理想化。</li>
-<li>传输速率：考虑地址传输，握手等。</li>
-<li>总线宽度（bus width）：组成总线的线数<ul>
-<li>数据总线越宽，一次传输的数据位数就越多</li>
-<li>地址总线越宽，一次传输的地址位数就越多</li>
-</ul>
-</li>
-<li><strong>单位</strong>：Mbps <ul>
-<li>M为<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="3.25ex" height="2.005ex" role="img" focusable="false" viewBox="0 -864 1436.6 886"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="mn" transform="translate(1033,393.1) scale(0.707)"><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path></g></g></g></g></svg></mjx-container>，形容bps</li>
-<li>只有在表示存储时才用mb <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container>，kb <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container> </li>
-<li>k m g t p</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-4-1-例：同步总线和异步总线的数据传输速率"><a href="#3-4-1-例：同步总线和异步总线的数据传输速率" class="headerlink" title="3.4.1. 例：同步总线和异步总线的数据传输速率"></a>3.4.1. 例：同步总线和异步总线的数据传输速率</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/333d5ccb7f292ba52410db663d36439e_msedge_1076_555.png" alt="msedge_1076_555.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/976bf0b3e79e38cabe72f3f1af21755e_msedge_1055_628.png" alt="msedge_1055_628.png"></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/230b844b23d26bbf0b25494b5b1d5312_msedge_1092_515.png" alt="msedge_1092_515.png"></p>
-<h3 id="3-4-2-例：不同数据块大小的数据传输速率"><a href="#3-4-2-例：不同数据块大小的数据传输速率" class="headerlink" title="3.4.2. 例：不同数据块大小的数据传输速率"></a>3.4.2. 例：不同数据块大小的数据传输速率</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/fe2ebc93525bc1e35002c968e5d54157_msedge_1035_608.png" alt="msedge_1035_608.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/81cfefb9dd06b5e4b7e819a3312bafc8_msedge_890_602.png" alt="msedge_890_602.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/7d5bdd896398523ae2db4a3afde86cf6_msedge_1036_606.png" alt="msedge_1036_606.png"></p>
-<h2 id="3-5-提高总线的数据传输率"><a href="#3-5-提高总线的数据传输率" class="headerlink" title="3.5. 提高总线的数据传输率"></a>3.5. 提高总线的数据传输率</h2><ul>
-<li>提高时钟频率</li>
-<li>增加数据总线宽度<ul>
-<li>每次传输更多的数据（成本：更多的总线线路）</li>
-</ul>
-</li>
-<li>块传输<ul>
-<li>传输一次地址就传输一块数据（成本：高复杂性）</li>
-</ul>
-</li>
-<li>分离总线事务<ul>
-<li>减少总线空闲时间（成本：复杂性高，增加每个事务的持续时间）</li>
-</ul>
-</li>
-<li>分离地址线和数据线<ul>
-<li>同时传输地址和数据（成本：更多的总线线路）</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-6-层次结构"><a href="#3-6-层次结构" class="headerlink" title="3.6. 层次结构"></a>3.6. 层次结构</h2><h3 id="3-6-1-单总线结构"><a href="#3-6-1-单总线结构" class="headerlink" title="3.6.1. 单总线结构"></a>3.6.1. 单总线结构</h3><ul>
-<li>CPU、存储器和 I/O 模块都连接到一条系统总线</li>
-<li>优点：简单，易于扩展</li>
-<li>缺点<ul>
-<li>连接的设备越多，总线长度越大，传输延迟也就越大</li>
-<li>聚集的传输请求接近总线容量时，总线成为瓶颈</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/decf98deaffb5849d97761e1a64cd8b1_NVIDIA_Share_962_272.png" alt="NVIDIA_Share_962_272.png"></p>
-<h3 id="3-6-2-双总线结构I"><a href="#3-6-2-双总线结构I" class="headerlink" title="3.6.2. 双总线结构I"></a>3.6.2. 双总线结构I</h3><ul>
-<li>在CPU和存储器中间增加一个存储器总线</li>
-<li>优点：增加CPU和存储器之间的传输效率，同时降低系统总线的负担</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/0f8e17e23b84ee9e2e16d6acced376fd_NVIDIA_Share_968_328.png" alt="NVIDIA_Share_968_328.png"></p>
-<h3 id="3-6-3-双总线结构II"><a href="#3-6-3-双总线结构II" class="headerlink" title="3.6.3. 双总线结构II"></a>3.6.3. 双总线结构II</h3><ul>
-<li>将系统总线分为存储器总线、I/O 总线 和 IOP (input/output processer)</li>
-<li>优点：降低I/O对总线的负担<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/d542c83c260d50e459111969be88a211_NVIDIA_Share_1041_401.png" alt="NVIDIA_Share_1041_401.png"></li>
-</ul>
-<h3 id="3-6-4-多总线结构I"><a href="#3-6-4-多总线结构I" class="headerlink" title="3.6.4. 多总线结构I"></a>3.6.4. 多总线结构I</h3><ul>
-<li>增加一个 <strong>本地总线（local bus）</strong>来连接 CPU 和 cache</li>
-<li>优点：增加 I/O 效率<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/4a5cb8c06ec0ff8f1f3eb7e769b03ce6_NVIDIA_Share_1007_447.png" alt="NVIDIA_Share_1007_447.png"></li>
-</ul>
-<h3 id="3-6-5-多总线结构II"><a href="#3-6-5-多总线结构II" class="headerlink" title="3.6.5. 多总线结构II"></a>3.6.5. 多总线结构II</h3><ul>
-<li>将系统总线分为存储器总线、I/O 总线和 <strong>DMA 总线</strong></li>
-<li>优点：增加 I/O 效率<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/955bae7c66f39b06978d76381dfe24f9_NVIDIA_Share_1025_321.png" alt="NVIDIA_Share_1025_321.png"></li>
-</ul>
-<h3 id="3-6-6-多总线结构III"><a href="#3-6-6-多总线结构III" class="headerlink" title="3.6.6. 多总线结构III"></a>3.6.6. 多总线结构III</h3><ul>
-<li>增加一个 高速 I/O 总线 来连接高速设备</li>
-<li>优点：增加 I/O 交互效率<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/1925f5de97d61216df199455540b18a7_NVIDIA_Share_1032_469.png" alt="NVIDIA_Share_1032_469.png"></li>
 </ul>
 ]]></content>
       <categories>
@@ -5439,6 +5439,74 @@
       </tags>
   </entry>
   <entry>
+    <title>0-服务端开发</title>
+    <url>/posts/19f5250f/</url>
+    <content><![CDATA[<h1 id="1-Spring"><a href="#1-Spring" class="headerlink" title="1. Spring"></a>1. Spring</h1><ul>
+<li><p>Spring</p>
+<ul>
+<li>Spring的核心是提供一个容器（container）</li>
+<li>管理Bean的生命周期，组装Bean形成一个可用的系统</li>
+<li>Application Context上下文运行环境</li>
+</ul>
+</li>
+<li><p>Bean</p>
+<ul>
+<li>一个object<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png" alt="image.png"></li>
+</ul>
+</li>
+<li><p>核心技术</p>
+<ul>
+<li>依赖注入</li>
+<li>AOP面向切面的编程</li>
+</ul>
+</li>
+<li><p>持久层</p>
+<ul>
+<li>简化，只需要关注业务</li>
+<li>JDBC、事务管理、ORM工具整合</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-Spring衍生"><a href="#2-Spring衍生" class="headerlink" title="2. Spring衍生"></a>2. Spring衍生</h1><ul>
+<li>Spring：基本框架</li>
+<li>Spring Boot：自动配置，简化Spring开发<ul>
+<li>开发单个微服务（可执行程序）</li>
+</ul>
+</li>
+<li>Spring Cloud：解决分布式系统中特有的问题</li>
+</ul>
+<h2 id="2-1-spring-boot"><a href="#2-1-spring-boot" class="headerlink" title="2.1. spring boot"></a>2.1. spring boot</h2><ol>
+<li>可以创建独立的Spring应用程序，并且基于其Maven或Gradle插件，可以创建可执行的JARs和WARs</li>
+<li>内嵌Tomcat或Jetty等<strong>Servlet容器</strong>（Web容器，有很多可运行的web组件）</li>
+<li>提供自动配置的“<strong>starter</strong>”项目对象模型（POMS）以简化Maven配置</li>
+<li>尽可能自动配置<strong>Spring容器</strong></li>
+<li>提供准备好的特性，如指标、健康检查和外部化配置</li>
+<li>绝对没有代码生成，不需要XML配置</li>
+</ol>
+<p>war包小，不能独立运行<br>Jar包大，内嵌tomcat容器，本身可以独立运行</p>
+<h2 id="2-2-常用依赖"><a href="#2-2-常用依赖" class="headerlink" title="2.2. 常用依赖"></a>2.2. 常用依赖</h2><p>devtools：开发时候用于调试<br>web：MVC开发框架<br>thymeleaf：动态组装html页面</p>
+<h1 id="3-👍Spring-Web开发框架的分层"><a href="#3-👍Spring-Web开发框架的分层" class="headerlink" title="3. 👍Spring Web开发框架的分层"></a>3. 👍Spring Web开发框架的分层</h1><ul>
+<li>在服务端一侧的划分：</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2Faa30cd55d3482bfd4228c3f361bba520_20230907204339.png" alt="image.png"></p>
+<h1 id="4-使用JUnit写测试用例"><a href="#4-使用JUnit写测试用例" class="headerlink" title="4. 使用JUnit写测试用例"></a>4. 使用JUnit写测试用例</h1><ul>
+<li><code>@Test</code>注解</li>
+<li><code>void</code>返回值，<code>public</code>可选</li>
+<li>无参数</li>
+</ul>
+<p>-方法命名随意</p>
+<h2 id="4-1-断言"><a href="#4-1-断言" class="headerlink" title="4.1. 断言"></a>4.1. 断言</h2><p>测试代码中对预期结果的断定</p>
+<h1 id="5-Spring模块组成"><a href="#5-Spring模块组成" class="headerlink" title="5. Spring模块组成"></a>5. Spring模块组成</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2F4df50c54d812c48ff73dfeac3b4008cc_20230914185434.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>13-期末复习</title>
     <url>/posts/20e7e86a/</url>
     <content><![CDATA[<h1 id="1-内容组织"><a href="#1-内容组织" class="headerlink" title="1. 内容组织"></a>1. 内容组织</h1><p>软件主导硬件<br>以应用为中心</p>
@@ -5608,74 +5676,6 @@
       <tags>
         <tag>课程</tag>
         <tag>2023_Fall_嵌入式系统概论</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>0-服务端开发</title>
-    <url>/posts/19f5250f/</url>
-    <content><![CDATA[<h1 id="1-Spring"><a href="#1-Spring" class="headerlink" title="1. Spring"></a>1. Spring</h1><ul>
-<li><p>Spring</p>
-<ul>
-<li>Spring的核心是提供一个容器（container）</li>
-<li>管理Bean的生命周期，组装Bean形成一个可用的系统</li>
-<li>Application Context上下文运行环境</li>
-</ul>
-</li>
-<li><p>Bean</p>
-<ul>
-<li>一个object<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png" alt="image.png"></li>
-</ul>
-</li>
-<li><p>核心技术</p>
-<ul>
-<li>依赖注入</li>
-<li>AOP面向切面的编程</li>
-</ul>
-</li>
-<li><p>持久层</p>
-<ul>
-<li>简化，只需要关注业务</li>
-<li>JDBC、事务管理、ORM工具整合</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-Spring衍生"><a href="#2-Spring衍生" class="headerlink" title="2. Spring衍生"></a>2. Spring衍生</h1><ul>
-<li>Spring：基本框架</li>
-<li>Spring Boot：自动配置，简化Spring开发<ul>
-<li>开发单个微服务（可执行程序）</li>
-</ul>
-</li>
-<li>Spring Cloud：解决分布式系统中特有的问题</li>
-</ul>
-<h2 id="2-1-spring-boot"><a href="#2-1-spring-boot" class="headerlink" title="2.1. spring boot"></a>2.1. spring boot</h2><ol>
-<li>可以创建独立的Spring应用程序，并且基于其Maven或Gradle插件，可以创建可执行的JARs和WARs</li>
-<li>内嵌Tomcat或Jetty等<strong>Servlet容器</strong>（Web容器，有很多可运行的web组件）</li>
-<li>提供自动配置的“<strong>starter</strong>”项目对象模型（POMS）以简化Maven配置</li>
-<li>尽可能自动配置<strong>Spring容器</strong></li>
-<li>提供准备好的特性，如指标、健康检查和外部化配置</li>
-<li>绝对没有代码生成，不需要XML配置</li>
-</ol>
-<p>war包小，不能独立运行<br>Jar包大，内嵌tomcat容器，本身可以独立运行</p>
-<h2 id="2-2-常用依赖"><a href="#2-2-常用依赖" class="headerlink" title="2.2. 常用依赖"></a>2.2. 常用依赖</h2><p>devtools：开发时候用于调试<br>web：MVC开发框架<br>thymeleaf：动态组装html页面</p>
-<h1 id="3-👍Spring-Web开发框架的分层"><a href="#3-👍Spring-Web开发框架的分层" class="headerlink" title="3. 👍Spring Web开发框架的分层"></a>3. 👍Spring Web开发框架的分层</h1><ul>
-<li>在服务端一侧的划分：</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2Faa30cd55d3482bfd4228c3f361bba520_20230907204339.png" alt="image.png"></p>
-<h1 id="4-使用JUnit写测试用例"><a href="#4-使用JUnit写测试用例" class="headerlink" title="4. 使用JUnit写测试用例"></a>4. 使用JUnit写测试用例</h1><ul>
-<li><code>@Test</code>注解</li>
-<li><code>void</code>返回值，<code>public</code>可选</li>
-<li>无参数</li>
-</ul>
-<p>-方法命名随意</p>
-<h2 id="4-1-断言"><a href="#4-1-断言" class="headerlink" title="4.1. 断言"></a>4.1. 断言</h2><p>测试代码中对预期结果的断定</p>
-<h1 id="5-Spring模块组成"><a href="#5-Spring模块组成" class="headerlink" title="5. Spring模块组成"></a>5. Spring模块组成</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2F4df50c54d812c48ff73dfeac3b4008cc_20230914185434.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -6151,6 +6151,7 @@
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F30%2F20-49-26-5285b7a6ede0772dea032de105737181-20231130204925-7ab7ac.png" alt="image.png"></p>
 <p><strong>如果map返回流会怎么样</strong>？没有下游订阅者驱动，流是死的(流不被订阅就不会发送任何事情)。</p>
+<p><a class="link" href="https://www.geeksforgeeks.org/difference-between-map-and-flatmap-in-java-stream/">Difference Between map() And flatMap() In Java Stream - GeeksforGeeks <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h3 id="7-4-2-缓冲"><a href="#7-4-2-缓冲" class="headerlink" title="7.4.2. 缓冲"></a>7.4.2. 缓冲</h3><ul>
 <li>buffer，缓冲数据，bufferAndFlatMap</li>
 <li>collectList，同：buffer不带参数则缓冲所有数据到列表</li>
