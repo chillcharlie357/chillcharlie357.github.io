@@ -93,6 +93,11 @@ docker volume子命令可以管理数据卷
 
 ![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-49-16-0157f9b342cd970ea85a05734fc2b95d-20231214204914-b94d29.png)
 
+![image.png](https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F06%2F15-00-36-510c7d3cd929abe64d8077e5e16f543e-20240106150036-6cef4d.png)
+
+
+[Volumes | Docker Docs](https://docs.docker.com/storage/volumes/)
+
 [Docker筆記 - 讓資料遠離Container，使用 Volume、Bind Mount 與 Tmpfs Mount | by Albert Hg | alberthg-docker-notes | Medium](https://medium.com/alberthg-docker-notes/docker%E7%AD%86%E8%A8%98-%E8%AE%93%E8%B3%87%E6%96%99%E9%81%A0%E9%9B%A2container-%E4%BD%BF%E7%94%A8-volume-bind-mount-%E8%88%87-tmpfs-mount-6908da341d11)
 
 # 5. 导入导出镜像
