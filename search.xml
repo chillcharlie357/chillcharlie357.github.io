@@ -6152,6 +6152,7 @@
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F30%2F20-49-26-5285b7a6ede0772dea032de105737181-20231130204925-7ab7ac.png" alt="image.png"></p>
 <p><strong>如果map返回流会怎么样</strong>？没有下游订阅者驱动，流是死的(流不被订阅就不会发送任何事情)。</p>
 <p><a class="link" href="https://stackoverflow.com/questions/49115135/map-vs-flatmap-in-reactor">java - map vs flatMap in reactor - Stack Overflow <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link" href="https://segmentfault.com/a/1190000013229461">segmentfault.com/a/1190000013229461 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h3 id="7-4-2-缓冲"><a href="#7-4-2-缓冲" class="headerlink" title="7.4.2. 缓冲"></a>7.4.2. 缓冲</h3><ul>
 <li>buffer，缓冲数据，bufferAndFlatMap</li>
 <li>collectList，同：buffer不带参数则缓冲所有数据到列表</li>
