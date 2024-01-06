@@ -6524,6 +6524,7 @@
 <li>docker-compose images</li>
 <li><strong>docker-compose up</strong><ul>
 <li>该命令十分强大，它将尝试自动完成包括构建镜像，（重新）创建服务，启动服务，并关联服务相关容器的一系列操作</li>
+<li>如果镜像不存在，会自动构建</li>
 </ul>
 </li>
 <li><strong>docker-compose stop</strong> <ul>
@@ -6538,7 +6539,10 @@
 <li>查看容器的输出日志</li>
 </ul>
 </li>
-<li>docker-compose build [SERVICE…] </li>
+<li>docker-compose build [SERVICE…] <ul>
+<li>构建镜像，但是不启动容器</li>
+</ul>
+</li>
 <li>docker-compose rm nginx <ul>
 <li>移除指定的容器</li>
 </ul>
