@@ -6362,12 +6362,16 @@
 <h1 id="8-👍容器网络"><a href="#8-👍容器网络" class="headerlink" title="8. 👍容器网络"></a>8. 👍容器网络</h1><p>不同Network Driver的区别：<a class="link" href="https://docs.docker.com/network/drivers/">Network drivers overview | Docker Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p><a class="link" href="https://zhuanlan.zhihu.com/p/212772001">Docker 网络模式详解及容器间网络通信 - 知乎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <ul>
-<li>none网络， <code>--net=none</code></li>
+<li>none网络， <code>--net=none</code><ul>
+<li>不为 Docker Container 创建任何的网络环境，容器内部就只能使用 loopback 网络设备，不会再有其他的网络资源。</li>
+</ul>
+</li>
 <li>host网络，<code>--net=host</code><ul>
 <li>共享宿主机的网络</li>
 </ul>
 </li>
 <li><strong>bridge网络</strong>, <code>--net=bridge</code><ul>
+<li>Docker 守护进程创建了一个虚拟以太网桥 <code>docker0</code>，新建的容器会自动桥接到这个接口，附加在其上的任何网卡之间都能自动转发数据包。</li>
 <li>例：docker0的linux bridge</li>
 </ul>
 </li>
