@@ -1275,6 +1275,167 @@
       </tags>
   </entry>
   <entry>
+    <title>11_冗余磁盘阵列(RAID)</title>
+    <url>/posts/b7ba64ea/</url>
+    <content><![CDATA[<ul>
+<li>冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
+<li>基本思想<ul>
+<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
+<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
+<li>采用<strong>数据冗余</strong>来进行错误恢复以提高系统可靠性</li>
+</ul>
+</li>
+<li>特性<ul>
+<li>由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器</li>
+<li>数据是分布在多个物理磁盘上</li>
+<li>冗余磁盘容量用于存储校验信息，保证磁盘万一损坏时能恢复数据</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-RAID分类"><a href="#1-RAID分类" class="headerlink" title="1.RAID分类"></a>1.RAID分类</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png" alt="68_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="2-RAID-0"><a href="#2-RAID-0" class="headerlink" title="2.RAID 0"></a>2.RAID 0</h1><ul>
+<li>数据以<strong>条带</strong>的形式在可用的磁盘上分布<ul>
+<li>Eg：按照0、1、2、3顺序</li>
+</ul>
+</li>
+<li>不采用冗余来改善性能（不是RAID家族中的真正成员）</li>
+</ul>
+<h2 id="2-1-优点"><a href="#2-1-优点" class="headerlink" title="2.1 优点"></a>2.1 优点</h2><ul>
+<li>高数据传输率</li>
+<li>高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘</li>
+</ul>
+<h2 id="2-2-缺点"><a href="#2-2-缺点" class="headerlink" title="2.2 缺点"></a>2.2 缺点</h2><ul>
+<li>任何一个盘损坏文件就不可用</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png" alt="69_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="3-RAID-1"><a href="#3-RAID-1" class="headerlink" title="3.RAID 1"></a>3.RAID 1</h1><ul>
+<li>采用了数据<strong>条带</strong></li>
+<li>采用简单地<strong>备份所有数据</strong>的方法来实现冗余</li>
+</ul>
+<h2 id="3-1-优点"><a href="#3-1-优点" class="headerlink" title="3.1 优点"></a>3.1 优点</h2><ul>
+<li>高速响应I/O请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应<ul>
+<li><strong>读请求</strong>可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个，<strong>更快</strong></li>
+<li><strong>写请求</strong>需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘，<strong>更慢</strong></li>
+</ul>
+</li>
+<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单</li>
+</ul>
+<h2 id="3-2-缺点"><a href="#3-2-缺点" class="headerlink" title="3.2 缺点"></a>3.2 缺点</h2><ul>
+<li>价格昂贵</li>
+</ul>
+<h2 id="3-3-用途"><a href="#3-3-用途" class="headerlink" title="3.3 用途"></a>3.3 用途</h2><ul>
+<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
+</ul>
+<h2 id="3-4-与RAID-0相比"><a href="#3-4-与RAID-0相比" class="headerlink" title="3.4 与RAID 0相比"></a>3.4 与RAID 0相比</h2><ul>
+<li>如果有大批的读请求，则RAID 1能实现高速的I/O速率，性能可以达到RAID 0的两倍</li>
+<li>如果I/O请求有相当大的部分是写请求，则它不比RAID 0的性能好多少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png" alt="6a_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="3-5RAID-01-vs-RAID-10"><a href="#3-5RAID-01-vs-RAID-10" class="headerlink" title="3.5RAID 01 vs. RAID 10"></a>3.5RAID 01 vs. RAID 10</h2><ul>
+<li>RAID 01 = RAID 0+1：先做RAID 0，再做RAID 1</li>
+<li>RAID 10 = RAID 1+0：先做RAID 1，再做RAID 0</li>
+<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的<strong>容错能力</strong><ul>
+<li>RAID 10容错率更高</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png" alt="6b_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="4-RAID-2"><a href="#4-RAID-2" class="headerlink" title="4.RAID 2"></a>4.RAID 2</h1><ul>
+<li>采用并行存取技术<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/83dee816dc8e78b2e3bcb2354c8497d6_6c_VoIPSCreencastCoverWnd%20-2-.png" alt="6c_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h2><ul>
+<li><strong>所有</strong>磁盘都参与<strong>每</strong>个I/O请求的执行</li>
+</ul>
+<h2 id="4-2-特点"><a href="#4-2-特点" class="headerlink" title="4.2 特点"></a>4.2 特点</h2><ul>
+<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
+<li>采用<strong>数据条带</strong>：<strong>条带非常小</strong>，经常只有一个字节或一个字</li>
+</ul>
+<h2 id="4-3-纠错"><a href="#4-3-纠错" class="headerlink" title="4.3 纠错"></a>4.3 纠错</h2><p>对位于同一条带的各个数据盘上的数据位<strong>计算校验码（通常采用海明码）</strong>，校验码存储在该条带中多个校验盘的对应位置</p>
+<h2 id="4-4-访问"><a href="#4-4-访问" class="headerlink" title="4.4 访问"></a>4.4 访问</h2><ul>
+<li>读取：获取请求的数据和对应的校验码</li>
+<li>写入：所有数据盘和校验盘都被访问</li>
+</ul>
+<h2 id="4-5-缺点"><a href="#4-5-缺点" class="headerlink" title="4.5 缺点"></a>4.5 缺点</h2><ul>
+<li>冗余盘依然比较多，价格较贵</li>
+<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高 可靠性的情况没有意义</li>
+</ul>
+<h1 id="5-RAID-3"><a href="#5-RAID-3" class="headerlink" title="5.RAID 3"></a>5.RAID 3</h1><ul>
+<li>采用并行存取技术<ul>
+<li>各个驱动器的轴同步旋转</li>
+<li>采用<strong>非常小</strong>的数据条带</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-1-校验"><a href="#5-1-校验" class="headerlink" title="5.1 校验"></a>5.1 校验</h2><ul>
+<li>对所有数据盘上<strong>同一位置</strong>的数据计算奇偶校验码<ul>
+<li>当某一磁盘损坏时，可以用于重构数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f7562ab00bdaf086770ab9ba01f78f12_6d_VoIPSCreencastCoverWnd%20-2-.png" alt="6d_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-优缺点"><a href="#5-2-优缺点" class="headerlink" title="5.2 优缺点"></a>5.2 优缺点</h2><ul>
+<li>优点：能够获得非常高的数据传输率<ul>
+<li>对于大量传送，性能改善特别明显</li>
+</ul>
+</li>
+<li>缺点：一次只能执行一个I/O请求<ul>
+<li>在面向多个IO请求时，性能将受损</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-RAID-4"><a href="#6-RAID-4" class="headerlink" title="6.RAID 4"></a>6.RAID 4</h1><ul>
+<li>采用独立存取技术<ul>
+<li>读可以独立，写无法独立</li>
+<li>每个磁盘成员的操作是独立的，各个I/O请求能够并行处理</li>
+<li>采用相对<strong>较大的数据条带</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-1-校验"><a href="#6-1-校验" class="headerlink" title="6.1 校验"></a>6.1 校验</h2><p>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在<strong>奇偶校验盘</strong>的对应条带上<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/521fcea4b354b9de72e3a4c5ffe926bd_6e_VoIPSCreencastCoverWnd%20-2-.png" alt="6e_VoIPSCreencastCoverWnd (2).png"></p>
+<ul>
+<li>优化修改数据时<strong>重新计算校验码</strong>的读写次数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/39de9d867ee7099a563e4d67ea0e97d2_capture-2023-02-06-11-06-09.jpg" alt="capture-2023-02-06-11-06-09.jpg"></li>
+</ul>
+<h2 id="6-2-性能"><a href="#6-2-性能" class="headerlink" title="6.2 性能"></a>6.2 性能</h2><ul>
+<li>当执行<strong>较小规模</strong>的I/O写请求时，RAID 4会遭遇<strong>写损失</strong><ul>
+<li>对于每一次写操作，阵列管理软件不仅要修改用户数据， 而且要修改相应的校验位</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/13b04dadc923526ad38ea677a3fd5656_6f_VoIPSCreencastCoverWnd%20-2-.png" alt="6f_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+<li>当涉及所有磁盘的数据条带的较大I/O写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
+<li>每一次写操作必须涉及到<strong>唯一的校验盘</strong>，校验盘会成为瓶颈</li>
+</ul>
+<h1 id="7-RAID-5"><a href="#7-RAID-5" class="headerlink" title="7.RAID 5"></a>7.RAID 5</h1><ul>
+<li>与RAID 4 组织方式相似</li>
+<li>在所有磁盘上都分布了奇偶校验条带<ul>
+<li>避免潜在的I/O瓶颈问题</li>
+</ul>
+</li>
+<li>访问时的“两读两写”<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/c4f46bafa944914cebc6c8989ebaf21f_70_VoIPSCreencastCoverWnd%20-2-.png" alt="70_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="7-1-RAID-50"><a href="#7-1-RAID-50" class="headerlink" title="7.1 RAID 50"></a>7.1 RAID 50</h2><ul>
+<li>先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问</li>
+<li>RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效</li>
+<li>RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低</li>
+</ul>
+<h1 id="8-RAID-6"><a href="#8-RAID-6" class="headerlink" title="8.RAID 6"></a>8.RAID 6</h1><ul>
+<li>采用<strong>两种不同的校验码</strong>，并将校验码以分开的块存于不同的磁盘中</li>
+<li>优点<ul>
+<li>提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>写损失:每次写影响到两个校验块<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png" alt="71_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+</ul>
+<h1 id="9-RAID比较"><a href="#9-RAID比较" class="headerlink" title="9.RAID比较"></a>9.RAID比较</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2d0b20945c49a12772798b2459b890bb_72_VoIPSCreencastCoverWnd%20-2-.png" alt="72_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/927619b8756054d87fa147a66555f92d_73_VoIPSCreencastCoverWnd%20-2-.png" alt="73_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png" alt="74_VoIPSCreencastCoverWnd (2).png"></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>12_虚拟存储器</title>
     <url>/posts/7a95209e/</url>
     <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
@@ -1945,167 +2106,6 @@
 </ul>
 </li>
 </ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>11_冗余磁盘阵列(RAID)</title>
-    <url>/posts/b7ba64ea/</url>
-    <content><![CDATA[<ul>
-<li>冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
-<li>基本思想<ul>
-<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
-<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
-<li>采用<strong>数据冗余</strong>来进行错误恢复以提高系统可靠性</li>
-</ul>
-</li>
-<li>特性<ul>
-<li>由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器</li>
-<li>数据是分布在多个物理磁盘上</li>
-<li>冗余磁盘容量用于存储校验信息，保证磁盘万一损坏时能恢复数据</li>
-</ul>
-</li>
-</ul>
-<h1 id="1-RAID分类"><a href="#1-RAID分类" class="headerlink" title="1.RAID分类"></a>1.RAID分类</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png" alt="68_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="2-RAID-0"><a href="#2-RAID-0" class="headerlink" title="2.RAID 0"></a>2.RAID 0</h1><ul>
-<li>数据以<strong>条带</strong>的形式在可用的磁盘上分布<ul>
-<li>Eg：按照0、1、2、3顺序</li>
-</ul>
-</li>
-<li>不采用冗余来改善性能（不是RAID家族中的真正成员）</li>
-</ul>
-<h2 id="2-1-优点"><a href="#2-1-优点" class="headerlink" title="2.1 优点"></a>2.1 优点</h2><ul>
-<li>高数据传输率</li>
-<li>高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘</li>
-</ul>
-<h2 id="2-2-缺点"><a href="#2-2-缺点" class="headerlink" title="2.2 缺点"></a>2.2 缺点</h2><ul>
-<li>任何一个盘损坏文件就不可用</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png" alt="69_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="3-RAID-1"><a href="#3-RAID-1" class="headerlink" title="3.RAID 1"></a>3.RAID 1</h1><ul>
-<li>采用了数据<strong>条带</strong></li>
-<li>采用简单地<strong>备份所有数据</strong>的方法来实现冗余</li>
-</ul>
-<h2 id="3-1-优点"><a href="#3-1-优点" class="headerlink" title="3.1 优点"></a>3.1 优点</h2><ul>
-<li>高速响应I/O请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应<ul>
-<li><strong>读请求</strong>可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个，<strong>更快</strong></li>
-<li><strong>写请求</strong>需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘，<strong>更慢</strong></li>
-</ul>
-</li>
-<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单</li>
-</ul>
-<h2 id="3-2-缺点"><a href="#3-2-缺点" class="headerlink" title="3.2 缺点"></a>3.2 缺点</h2><ul>
-<li>价格昂贵</li>
-</ul>
-<h2 id="3-3-用途"><a href="#3-3-用途" class="headerlink" title="3.3 用途"></a>3.3 用途</h2><ul>
-<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
-</ul>
-<h2 id="3-4-与RAID-0相比"><a href="#3-4-与RAID-0相比" class="headerlink" title="3.4 与RAID 0相比"></a>3.4 与RAID 0相比</h2><ul>
-<li>如果有大批的读请求，则RAID 1能实现高速的I/O速率，性能可以达到RAID 0的两倍</li>
-<li>如果I/O请求有相当大的部分是写请求，则它不比RAID 0的性能好多少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png" alt="6a_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="3-5RAID-01-vs-RAID-10"><a href="#3-5RAID-01-vs-RAID-10" class="headerlink" title="3.5RAID 01 vs. RAID 10"></a>3.5RAID 01 vs. RAID 10</h2><ul>
-<li>RAID 01 = RAID 0+1：先做RAID 0，再做RAID 1</li>
-<li>RAID 10 = RAID 1+0：先做RAID 1，再做RAID 0</li>
-<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的<strong>容错能力</strong><ul>
-<li>RAID 10容错率更高</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png" alt="6b_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="4-RAID-2"><a href="#4-RAID-2" class="headerlink" title="4.RAID 2"></a>4.RAID 2</h1><ul>
-<li>采用并行存取技术<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/83dee816dc8e78b2e3bcb2354c8497d6_6c_VoIPSCreencastCoverWnd%20-2-.png" alt="6c_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h2><ul>
-<li><strong>所有</strong>磁盘都参与<strong>每</strong>个I/O请求的执行</li>
-</ul>
-<h2 id="4-2-特点"><a href="#4-2-特点" class="headerlink" title="4.2 特点"></a>4.2 特点</h2><ul>
-<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
-<li>采用<strong>数据条带</strong>：<strong>条带非常小</strong>，经常只有一个字节或一个字</li>
-</ul>
-<h2 id="4-3-纠错"><a href="#4-3-纠错" class="headerlink" title="4.3 纠错"></a>4.3 纠错</h2><p>对位于同一条带的各个数据盘上的数据位<strong>计算校验码（通常采用海明码）</strong>，校验码存储在该条带中多个校验盘的对应位置</p>
-<h2 id="4-4-访问"><a href="#4-4-访问" class="headerlink" title="4.4 访问"></a>4.4 访问</h2><ul>
-<li>读取：获取请求的数据和对应的校验码</li>
-<li>写入：所有数据盘和校验盘都被访问</li>
-</ul>
-<h2 id="4-5-缺点"><a href="#4-5-缺点" class="headerlink" title="4.5 缺点"></a>4.5 缺点</h2><ul>
-<li>冗余盘依然比较多，价格较贵</li>
-<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高 可靠性的情况没有意义</li>
-</ul>
-<h1 id="5-RAID-3"><a href="#5-RAID-3" class="headerlink" title="5.RAID 3"></a>5.RAID 3</h1><ul>
-<li>采用并行存取技术<ul>
-<li>各个驱动器的轴同步旋转</li>
-<li>采用<strong>非常小</strong>的数据条带</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-1-校验"><a href="#5-1-校验" class="headerlink" title="5.1 校验"></a>5.1 校验</h2><ul>
-<li>对所有数据盘上<strong>同一位置</strong>的数据计算奇偶校验码<ul>
-<li>当某一磁盘损坏时，可以用于重构数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f7562ab00bdaf086770ab9ba01f78f12_6d_VoIPSCreencastCoverWnd%20-2-.png" alt="6d_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-</ul>
-<h2 id="5-2-优缺点"><a href="#5-2-优缺点" class="headerlink" title="5.2 优缺点"></a>5.2 优缺点</h2><ul>
-<li>优点：能够获得非常高的数据传输率<ul>
-<li>对于大量传送，性能改善特别明显</li>
-</ul>
-</li>
-<li>缺点：一次只能执行一个I/O请求<ul>
-<li>在面向多个IO请求时，性能将受损</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-RAID-4"><a href="#6-RAID-4" class="headerlink" title="6.RAID 4"></a>6.RAID 4</h1><ul>
-<li>采用独立存取技术<ul>
-<li>读可以独立，写无法独立</li>
-<li>每个磁盘成员的操作是独立的，各个I/O请求能够并行处理</li>
-<li>采用相对<strong>较大的数据条带</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="6-1-校验"><a href="#6-1-校验" class="headerlink" title="6.1 校验"></a>6.1 校验</h2><p>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在<strong>奇偶校验盘</strong>的对应条带上<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/521fcea4b354b9de72e3a4c5ffe926bd_6e_VoIPSCreencastCoverWnd%20-2-.png" alt="6e_VoIPSCreencastCoverWnd (2).png"></p>
-<ul>
-<li>优化修改数据时<strong>重新计算校验码</strong>的读写次数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/39de9d867ee7099a563e4d67ea0e97d2_capture-2023-02-06-11-06-09.jpg" alt="capture-2023-02-06-11-06-09.jpg"></li>
-</ul>
-<h2 id="6-2-性能"><a href="#6-2-性能" class="headerlink" title="6.2 性能"></a>6.2 性能</h2><ul>
-<li>当执行<strong>较小规模</strong>的I/O写请求时，RAID 4会遭遇<strong>写损失</strong><ul>
-<li>对于每一次写操作，阵列管理软件不仅要修改用户数据， 而且要修改相应的校验位</li>
-<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/13b04dadc923526ad38ea677a3fd5656_6f_VoIPSCreencastCoverWnd%20-2-.png" alt="6f_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-<li>当涉及所有磁盘的数据条带的较大I/O写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
-<li>每一次写操作必须涉及到<strong>唯一的校验盘</strong>，校验盘会成为瓶颈</li>
-</ul>
-<h1 id="7-RAID-5"><a href="#7-RAID-5" class="headerlink" title="7.RAID 5"></a>7.RAID 5</h1><ul>
-<li>与RAID 4 组织方式相似</li>
-<li>在所有磁盘上都分布了奇偶校验条带<ul>
-<li>避免潜在的I/O瓶颈问题</li>
-</ul>
-</li>
-<li>访问时的“两读两写”<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/c4f46bafa944914cebc6c8989ebaf21f_70_VoIPSCreencastCoverWnd%20-2-.png" alt="70_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="7-1-RAID-50"><a href="#7-1-RAID-50" class="headerlink" title="7.1 RAID 50"></a>7.1 RAID 50</h2><ul>
-<li>先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问</li>
-<li>RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效</li>
-<li>RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低</li>
-</ul>
-<h1 id="8-RAID-6"><a href="#8-RAID-6" class="headerlink" title="8.RAID 6"></a>8.RAID 6</h1><ul>
-<li>采用<strong>两种不同的校验码</strong>，并将校验码以分开的块存于不同的磁盘中</li>
-<li>优点<ul>
-<li>提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>写损失:每次写影响到两个校验块<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png" alt="71_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-</ul>
-<h1 id="9-RAID比较"><a href="#9-RAID比较" class="headerlink" title="9.RAID比较"></a>9.RAID比较</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2d0b20945c49a12772798b2459b890bb_72_VoIPSCreencastCoverWnd%20-2-.png" alt="72_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/927619b8756054d87fa147a66555f92d_73_VoIPSCreencastCoverWnd%20-2-.png" alt="73_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png" alt="74_VoIPSCreencastCoverWnd (2).png"></p>
 ]]></content>
       <categories>
         <category>2022Fall_计算机组织与结构</category>
@@ -8235,7 +8235,8 @@
 </ul>
 </li>
 </ol>
-<h2 id="2-9-docker的三部分"><a href="#2-9-docker的三部分" class="headerlink" title="2.9. docker的三部分"></a>2.9. docker的三部分</h2><ul>
+<h2 id="2-9-docker的三部分"><a href="#2-9-docker的三部分" class="headerlink" title="2.9. docker的三部分"></a>2.9. docker的三部分</h2><p>本题由<a class="link" href="https://github.com/liuyaoli12345">liuyaoli12345 (小希波克拉底号) · GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>添加。</p>
+<ul>
 <li>哪三部分？<ul>
 <li>docker engine：服务端，管理一系列资源的生命周期</li>
 <li>Client：一个命令行程序</li>
