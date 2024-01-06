@@ -5860,6 +5860,192 @@
       </tags>
   </entry>
   <entry>
+    <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
+    <url>/posts/b48e71af/</url>
+    <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
+<li>提供消息服务的应用程序</li>
+<li>主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然</li>
+</ul>
+<h1 id="2-👍JMS"><a href="#2-👍JMS" class="headerlink" title="2. 👍JMS"></a>2. 👍JMS</h1><ul>
+<li>Java Message Service<ul>
+<li>Jms规定了ConnectionFactory、Connection、Session等接口/类</li>
+</ul>
+</li>
+<li>JMS是一个Java标准，使用消息代理（message broker）的统一API</li>
+<li>JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持</li>
+</ul>
+<p>消息代理 broker：</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png" alt="image.png"></p>
+<h1 id="3-ActiveMQ-Artemis"><a href="#3-ActiveMQ-Artemis" class="headerlink" title="3. ActiveMQ Artemis"></a>3. ActiveMQ Artemis</h1><ul>
+<li>支持协议<ul>
+<li>JMS</li>
+<li>AMQP: Advanced Message Queueing Protocol</li>
+<li>MQTT: Message Queuing Telemetry Transport</li>
+</ul>
+</li>
+<li>支持Native内存模式和JVM内存模式<ul>
+<li>Native可以绕过JVM，加快访问</li>
+</ul>
+</li>
+<li>消息持久化</li>
+</ul>
+<h2 id="3-1-直接使用JMS接口发送与接受消息"><a href="#3-1-直接使用JMS接口发送与接受消息" class="headerlink" title="3.1. 直接使用JMS接口发送与接受消息"></a>3.1. 直接使用JMS接口发送与接受消息</h2><ol>
+<li>JMS规范：jakarta.jms-api-2.0.3.jar</li>
+<li>atemis客户端：artemis-jms-client-2.17.0.jar<ul>
+<li>与Spring无关</li>
+</ul>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ConnectionFactory</span> <span class="variable">connectionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ActiveMQConnectionFactory</span>(BROKER_URL, USERNAME, PASSWORD);</span><br><span class="line"><span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> connectionFactory.createConnection();</span><br><span class="line">connection.start();</span><br><span class="line"><span class="type">Session</span> <span class="variable">session</span> <span class="operator">=</span> connection.createSession(<span class="literal">false</span>, Session.AUTO_ACKNOWLEDGE);</span><br><span class="line"><span class="type">Destination</span> <span class="variable">destination</span> <span class="operator">=</span> session.createQueue(<span class="string">"queue.example"</span>);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="3-2-👍关键概念"><a href="#3-2-👍关键概念" class="headerlink" title="3.2. 👍关键概念"></a>3.2. 👍关键概念</h2><ul>
+<li>Message：类似广播, 生产端</li>
+<li>Destination：队列或主题。消费端<ul>
+<li>三种指定方式：<ol>
+<li>application.yml（default-destination）</li>
+<li>@Bean（Destination对象）</li>
+<li>直接String指定</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-JmsTemplate"><a href="#3-3-JmsTemplate" class="headerlink" title="3.3. JmsTemplate"></a>3.3. JmsTemplate</h2><ul>
+<li>JmsTemplate是Spring对JMS集成支持的核心</li>
+<li>发送的两个方法：send、convertAndSend</li>
+</ul>
+<h2 id="3-4-👍消息转换器-MessageConverter"><a href="#3-4-👍消息转换器-MessageConverter" class="headerlink" title="3.4. 👍消息转换器 MessageConverter"></a>3.4. 👍消息转换器 MessageConverter</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
+<ul>
+<li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
+<li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
+<li>typeId：目的是告诉对方是什么类型，以便于反序列化<ul>
+<li>字符串</li>
+</ul>
+</li>
+<li>Message.setStringProperty，随属性集传输</li>
+<li>消息转换器使用@Configuration定义成Bean</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F17-02-28-148a7c245eb17542de98c2c91efe9929-20231231170228-794f8b.png" alt="image.png"></p>
+<h2 id="3-5-接收模式"><a href="#3-5-接收模式" class="headerlink" title="3.5. 接收模式"></a>3.5. 接收模式</h2><p><strong>拉取和推送都需要消息转换器做反序列化。</strong></p>
+<h3 id="3-5-1-拉取模式-pull-model"><a href="#3-5-1-拉取模式-pull-model" class="headerlink" title="3.5.1. 拉取模式 pull model"></a>3.5.1. 拉取模式 pull model</h3><p>JmsTemplate支持<br>访问URL</p>
+<h3 id="3-5-2-推送模式-push-model"><a href="#3-5-2-推送模式-push-model" class="headerlink" title="3.5.2. 推送模式 push model"></a>3.5.2. 推送模式 push model</h3><p>需要定义消息监听器<br>@JmsListener</p>
+<h1 id="4-RabbitMQ"><a href="#4-RabbitMQ" class="headerlink" title="4. RabbitMQ"></a>4. RabbitMQ</h1><p><strong>实现AMQP协议</strong>。<br>RabbitMQ基础概念详细介绍：<a class="link" href="https://www.cnblogs.com/williamjie/p/9481774.html">RabbitMQ基础概念详细介绍 - 割肉机 - 博客园 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>也需要消息转换器，虽然包路径不一样，但是功能一样。</p>
+<h2 id="4-1-👍概念"><a href="#4-1-👍概念" class="headerlink" title="4.1. 👍概念"></a>4.1. 👍概念</h2><ul>
+<li>ConnectionFactory、Connection、Channel</li>
+<li>Exchange：<ul>
+<li>Default、Direct、Topic、Fanout、Headers、Dead letter</li>
+</ul>
+</li>
+<li>Queue</li>
+<li>Routing key：exchange根据routing key确定消息发往哪个队列<ul>
+<li><strong>JMS里没有这个概念</strong></li>
+</ul>
+</li>
+<li>Binding key</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F20-31-55-d57a847ec3e2d2ed48f59f6b49ec2e0c-20231116203155-0bdbb4.png" alt="image.png"></p>
+<h2 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2. 使用"></a>4.2. 使用</h2><ol>
+<li>添加依赖</li>
+<li>配置文件</li>
+<li>需要到控制台创建exchange，queue，binding</li>
+</ol>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">rabbitmq:</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">template:</span></span><br><span class="line"><span class="attr">exchange:</span> <span class="string">tacocloud.order</span></span><br></pre></td></tr></table></figure></div>
+
+<p>生产放指定exchange、routing key<br>消费方只需关注队列名字</p>
+<p>也有拉取模式和推送模式，也需要消息的转换</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>11-Spring Inergration</title>
+    <url>/posts/b564c0a/</url>
+    <content><![CDATA[<p>做不同系统集成</p>
+<h1 id="1-集成流-Intergration-FLow"><a href="#1-集成流-Intergration-FLow" class="headerlink" title="1. 集成流 Intergration FLow"></a>1. 集成流 Intergration FLow</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-00-32-18ab4ec2735aac2ccea5b42e91078cdf-20231123190031-d3597c.png" alt="image.png"></p>
+<p>gateway：流的入口<br>transformer：<strong>消息</strong>处理、转换</p>
+<p>outbound adapter：用于输出<br>inbound adapter：用于输入</p>
+<h2 id="1-1-Gateway"><a href="#1-1-Gateway" class="headerlink" title="1.1. Gateway"></a>1.1. Gateway</h2><p>只需要定义接口，类似JPA</p>
+<p>定义数据从哪来</p>
+<h2 id="1-2-Transformer"><a href="#1-2-Transformer" class="headerlink" title="1.2. Transformer"></a>1.2. Transformer</h2><p><code>@Transformer</code>注解</p>
+<h2 id="1-3-Adapter"><a href="#1-3-Adapter" class="headerlink" title="1.3. Adapter"></a>1.3. Adapter</h2><p>把message放到另外一个系统里去，如输出文件到文件系统</p>
+<h1 id="2-集成流配置"><a href="#2-集成流配置" class="headerlink" title="2. 集成流配置"></a>2. 集成流配置</h1><ol>
+<li>XML配置</li>
+<li>Java配置</li>
+<li>使用DSL的Java配置</li>
+</ol>
+<p>类似依赖注入</p>
+<h2 id="2-1-XML"><a href="#2-1-XML" class="headerlink" title="2.1. XML"></a>2.1. XML</h2><ol>
+<li>定义一个GateWay接口：获取消息数据</li>
+<li>定义一个集成流xml：定义有哪些Channel、Transformer</li>
+</ol>
+<h2 id="2-2-Java"><a href="#2-2-Java" class="headerlink" title="2.2. Java"></a>2.2. Java</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-37-20-5a24358a2e8ff6ef8db47e3bc36c8989-20231123193719-f55088.png" alt="image.png"></p>
+<h2 id="2-3-DSL"><a href="#2-3-DSL" class="headerlink" title="2.3. DSL"></a>2.3. DSL</h2><p>IntergrationFlow对象</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-40-43-b0218d8cb35748ff7d09c2f2e8d81d41-20231123194042-b1beb5.png" alt="image.png"></p>
+<h1 id="3-👍集成流组件"><a href="#3-👍集成流组件" class="headerlink" title="3. 👍集成流组件"></a>3. 👍集成流组件</h1><ul>
+<li>Channels：消息通道，传递消息</li>
+<li>Filters：过滤器，基于条件判断要不要在流上继续流下去</li>
+<li>Transformers：转换器，消息的内容/类型做转换</li>
+<li>Routers：路由器，决定消息要放到接下来的哪个管道</li>
+<li>Splitters：切分器，把单个消息切分成多个消息</li>
+<li>Aggregators：聚合器，多个消息聚合成一个消息</li>
+<li>Service activators：服务激活器，激活处理消息的方法的调用<ul>
+<li>结束之后可能给下一个通道继续发消息</li>
+</ul>
+</li>
+<li>Channel adapters：适配器，外部系统的边界</li>
+<li>Gateways：网关，构建消息放到集成流上</li>
+</ul>
+<h2 id="3-1-Channels"><a href="#3-1-Channels" class="headerlink" title="3.1. Channels"></a>3.1. Channels</h2><p><strong>DirectChannel：默认</strong><br>PublishSubscribeChannel：1对多，1个发布多个订阅<br>QueueChannel：FIFO<br>PriorityChannel：优先级队列，不按照FIFO出队<br>RendezvousChannel</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-52-20-550033b89ec4a7f0e1abf90cf2d6decf-20231123195220-2e4b63.png" alt="image.png"></p>
+<h2 id="3-2-Filters"><a href="#3-2-Filters" class="headerlink" title="3.2. Filters"></a>3.2. Filters</h2><p>在方法上加<code>@Filter</code>注解，返回<code>boolean</code>决定消息要不要往下走</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-53-49-31d3375a6337ac01c8edbbf4f9089194-20231123195348-52eb90.png" alt="image.png"></p>
+<h2 id="3-3-Transformers"><a href="#3-3-Transformers" class="headerlink" title="3.3. Transformers"></a>3.3. Transformers</h2><p>方法加<code>@Transformer</code>注解<br>通过类型参数指定source type和to type<br>返回转换逻辑</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-55-28-8a87e0604e93c520bf876d1a6a585d58-20231123195527-beae6b.png" alt="image.png"></p>
+<h2 id="3-4-Routers"><a href="#3-4-Routers" class="headerlink" title="3.4. Routers"></a>3.4. Routers</h2><p><code>@Router</code>注解</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-56-06-37f0c1b140d7b9dd709f1b71cc8c2a80-20231123195605-a9b7af.png" alt="image.png"></p>
+<h2 id="3-5-Splitters"><a href="#3-5-Splitters" class="headerlink" title="3.5. Splitters"></a>3.5. Splitters</h2><p>切分消息</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-59-15-e9e403edfab61e437342fa71836a8113-20231123195914-c81166.png" alt="image.png"></p>
+<h2 id="3-6-Service-activators"><a href="#3-6-Service-activators" class="headerlink" title="3.6. Service activators"></a>3.6. Service activators</h2><ul>
+<li>MessageHandler<ul>
+<li>处理完流就截止</li>
+</ul>
+</li>
+<li>GenericHandler<ul>
+<li>有返回值</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F20-08-05-a5083f9ec2d27fb4eca0fffa5635e15a-20231123200804-89e408.png" alt="image.png"></p>
+<h2 id="3-7-Gateways"><a href="#3-7-Gateways" class="headerlink" title="3.7. Gateways"></a>3.7. Gateways</h2><p>只需要写一个接口。<br>Gateways 是<strong>应用程序代码和消息系统之间的桥梁</strong>。它们抽象了消息发送和接收的细节，使得应用程序代码可以通过方法调用的方式与消息系统交互，而无需直接使用消息API。这样可以使应用程序代码保持简洁，同时也便于测试。</p>
+<ul>
+<li>单向网关</li>
+<li>双向网关<ul>
+<li>requets channel 输入</li>
+<li>repley channel 获得返回值（Spring会在这个管道上一直等，同步）</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F20-12-01-e1f7a60e7156af19a94a54aaa98aec8c-20231123201200-615caa.png" alt="image.png"></p>
+<h2 id="3-8-Channel-adapters"><a href="#3-8-Channel-adapters" class="headerlink" title="3.8. Channel adapters"></a>3.8. Channel adapters</h2><p>Adapters 则是用于将<strong>消息从一种格式转换为另一种格式</strong>，或者从一种传输协议转换为另一种传输协议。Inbound把外部系统的消息格式转为spring integration消息，outbound把spring integration消息转为外部系统消息。<br>例如，JMS适配器可以将JMS消息转换为Spring Integration通用消息，HTTP适配器可以将HTTP请求和响应转换为Spring Integration消息。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F20-14-53-3423606ae480b57609abc38987c77384-20231123201453-e17b91.png" alt="image.png"></p>
+<h2 id="3-9-Endpoint-modules"><a href="#3-9-Endpoint-modules" class="headerlink" title="3.9. Endpoint modules"></a>3.9. Endpoint modules</h2><p>Spring已经提供了很多中Endpoint<br>AMQP、Filesystems、FTP、Email…</p>
+<h1 id="4-电子邮件集成流"><a href="#4-电子邮件集成流" class="headerlink" title="4. 电子邮件集成流"></a>4. 电子邮件集成流</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F21-08-14-37a3cf11926c438aa0ff8c40edb1591f-20231123210813-33a283.png" alt="image.png"></p>
+<p>IMAP协议需要授权码</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>12-反应式编程</title>
     <url>/posts/d938b74e/</url>
     <content><![CDATA[<h1 id="1-使用场景"><a href="#1-使用场景" class="headerlink" title="1. 使用场景"></a>1. 使用场景</h1><ul>
@@ -5965,6 +6151,7 @@
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F30%2F20-49-26-5285b7a6ede0772dea032de105737181-20231130204925-7ab7ac.png" alt="image.png"></p>
 <p><strong>如果map返回流会怎么样</strong>？没有下游订阅者驱动，流是死的(流不被订阅就不会发送任何事情)。</p>
+<p><a class="link" href="https://stackoverflow.com/questions/49115135/map-vs-flatmap-in-reactor">java - map vs flatMap in reactor - Stack Overflow <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h3 id="7-4-2-缓冲"><a href="#7-4-2-缓冲" class="headerlink" title="7.4.2. 缓冲"></a>7.4.2. 缓冲</h3><ul>
 <li>buffer，缓冲数据，bufferAndFlatMap</li>
 <li>collectList，同：buffer不带参数则缓冲所有数据到列表</li>
@@ -6004,89 +6191,6 @@
 </ul>
 </li>
 </ul>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>11-Spring Inergration</title>
-    <url>/posts/b564c0a/</url>
-    <content><![CDATA[<p>做不同系统集成</p>
-<h1 id="1-集成流-Intergration-FLow"><a href="#1-集成流-Intergration-FLow" class="headerlink" title="1. 集成流 Intergration FLow"></a>1. 集成流 Intergration FLow</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-00-32-18ab4ec2735aac2ccea5b42e91078cdf-20231123190031-d3597c.png" alt="image.png"></p>
-<p>gateway：流的入口<br>transformer：<strong>消息</strong>处理、转换</p>
-<p>outbound adapter：用于输出<br>inbound adapter：用于输入</p>
-<h2 id="1-1-Gateway"><a href="#1-1-Gateway" class="headerlink" title="1.1. Gateway"></a>1.1. Gateway</h2><p>只需要定义接口，类似JPA</p>
-<p>定义数据从哪来</p>
-<h2 id="1-2-Transformer"><a href="#1-2-Transformer" class="headerlink" title="1.2. Transformer"></a>1.2. Transformer</h2><p><code>@Transformer</code>注解</p>
-<h2 id="1-3-Adapter"><a href="#1-3-Adapter" class="headerlink" title="1.3. Adapter"></a>1.3. Adapter</h2><p>把message放到另外一个系统里去，如输出文件到文件系统</p>
-<h1 id="2-集成流配置"><a href="#2-集成流配置" class="headerlink" title="2. 集成流配置"></a>2. 集成流配置</h1><ol>
-<li>XML配置</li>
-<li>Java配置</li>
-<li>使用DSL的Java配置</li>
-</ol>
-<p>类似依赖注入</p>
-<h2 id="2-1-XML"><a href="#2-1-XML" class="headerlink" title="2.1. XML"></a>2.1. XML</h2><ol>
-<li>定义一个GateWay接口：获取消息数据</li>
-<li>定义一个集成流xml：定义有哪些Channel、Transformer</li>
-</ol>
-<h2 id="2-2-Java"><a href="#2-2-Java" class="headerlink" title="2.2. Java"></a>2.2. Java</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-37-20-5a24358a2e8ff6ef8db47e3bc36c8989-20231123193719-f55088.png" alt="image.png"></p>
-<h2 id="2-3-DSL"><a href="#2-3-DSL" class="headerlink" title="2.3. DSL"></a>2.3. DSL</h2><p>IntergrationFlow对象</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-40-43-b0218d8cb35748ff7d09c2f2e8d81d41-20231123194042-b1beb5.png" alt="image.png"></p>
-<h1 id="3-👍集成流组件"><a href="#3-👍集成流组件" class="headerlink" title="3. 👍集成流组件"></a>3. 👍集成流组件</h1><ul>
-<li>Channels：消息通道，传递消息</li>
-<li>Filters：过滤器，基于条件判断要不要在流上继续流下去</li>
-<li>Transformers：转换器，消息的内容/类型做转换</li>
-<li>Routers：路由器，决定消息要放到接下来的哪个管道</li>
-<li>Splitters：切分器，把单个消息切分成多个消息</li>
-<li>Aggregators：聚合器，多个消息聚合成一个消息</li>
-<li>Service activators：服务激活器，激活处理消息的方法的调用<ul>
-<li>结束之后可能给下一个通道继续发消息</li>
-</ul>
-</li>
-<li>Channel adapters：适配器，外部系统的边界</li>
-<li>Gateways：网关，构建消息放到集成流上</li>
-</ul>
-<h2 id="3-1-Channels"><a href="#3-1-Channels" class="headerlink" title="3.1. Channels"></a>3.1. Channels</h2><p><strong>DirectChannel：默认</strong><br>PublishSubscribeChannel：1对多，1个发布多个订阅<br>QueueChannel：FIFO<br>PriorityChannel：优先级队列，不按照FIFO出队<br>RendezvousChannel</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-52-20-550033b89ec4a7f0e1abf90cf2d6decf-20231123195220-2e4b63.png" alt="image.png"></p>
-<h2 id="3-2-Filters"><a href="#3-2-Filters" class="headerlink" title="3.2. Filters"></a>3.2. Filters</h2><p>在方法上加<code>@Filter</code>注解，返回<code>boolean</code>决定消息要不要往下走</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-53-49-31d3375a6337ac01c8edbbf4f9089194-20231123195348-52eb90.png" alt="image.png"></p>
-<h2 id="3-3-Transformers"><a href="#3-3-Transformers" class="headerlink" title="3.3. Transformers"></a>3.3. Transformers</h2><p>方法加<code>@Transformer</code>注解<br>通过类型参数指定source type和to type<br>返回转换逻辑</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-55-28-8a87e0604e93c520bf876d1a6a585d58-20231123195527-beae6b.png" alt="image.png"></p>
-<h2 id="3-4-Routers"><a href="#3-4-Routers" class="headerlink" title="3.4. Routers"></a>3.4. Routers</h2><p><code>@Router</code>注解</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-56-06-37f0c1b140d7b9dd709f1b71cc8c2a80-20231123195605-a9b7af.png" alt="image.png"></p>
-<h2 id="3-5-Splitters"><a href="#3-5-Splitters" class="headerlink" title="3.5. Splitters"></a>3.5. Splitters</h2><p>切分消息</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F19-59-15-e9e403edfab61e437342fa71836a8113-20231123195914-c81166.png" alt="image.png"></p>
-<h2 id="3-6-Service-activators"><a href="#3-6-Service-activators" class="headerlink" title="3.6. Service activators"></a>3.6. Service activators</h2><ul>
-<li>MessageHandler<ul>
-<li>处理完流就截止</li>
-</ul>
-</li>
-<li>GenericHandler<ul>
-<li>有返回值</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F20-08-05-a5083f9ec2d27fb4eca0fffa5635e15a-20231123200804-89e408.png" alt="image.png"></p>
-<h2 id="3-7-Gateways"><a href="#3-7-Gateways" class="headerlink" title="3.7. Gateways"></a>3.7. Gateways</h2><p>只需要写一个接口。<br>Gateways 是<strong>应用程序代码和消息系统之间的桥梁</strong>。它们抽象了消息发送和接收的细节，使得应用程序代码可以通过方法调用的方式与消息系统交互，而无需直接使用消息API。这样可以使应用程序代码保持简洁，同时也便于测试。</p>
-<ul>
-<li>单向网关</li>
-<li>双向网关<ul>
-<li>requets channel 输入</li>
-<li>repley channel 获得返回值（Spring会在这个管道上一直等，同步）</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F20-12-01-e1f7a60e7156af19a94a54aaa98aec8c-20231123201200-615caa.png" alt="image.png"></p>
-<h2 id="3-8-Channel-adapters"><a href="#3-8-Channel-adapters" class="headerlink" title="3.8. Channel adapters"></a>3.8. Channel adapters</h2><p>Adapters 则是用于将<strong>消息从一种格式转换为另一种格式</strong>，或者从一种传输协议转换为另一种传输协议。Inbound把外部系统的消息格式转为spring integration消息，outbound把spring integration消息转为外部系统消息。<br>例如，JMS适配器可以将JMS消息转换为Spring Integration通用消息，HTTP适配器可以将HTTP请求和响应转换为Spring Integration消息。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F20-14-53-3423606ae480b57609abc38987c77384-20231123201453-e17b91.png" alt="image.png"></p>
-<h2 id="3-9-Endpoint-modules"><a href="#3-9-Endpoint-modules" class="headerlink" title="3.9. Endpoint modules"></a>3.9. Endpoint modules</h2><p>Spring已经提供了很多中Endpoint<br>AMQP、Filesystems、FTP、Email…</p>
-<h1 id="4-电子邮件集成流"><a href="#4-电子邮件集成流" class="headerlink" title="4. 电子邮件集成流"></a>4. 电子邮件集成流</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F23%2F21-08-14-37a3cf11926c438aa0ff8c40edb1591f-20231123210813-33a283.png" alt="image.png"></p>
-<p>IMAP协议需要授权码</p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -6156,109 +6260,6 @@
 </ul>
 <p>WebClient：相当于RestTemplate</p>
 <h1 id="5-R2DBC"><a href="#5-R2DBC" class="headerlink" title="5. R2DBC"></a>5. R2DBC</h1><p>反应式关系型数据库链接<br>JDBC的替代方案</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
-    <url>/posts/b48e71af/</url>
-    <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
-<li>提供消息服务的应用程序</li>
-<li>主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然</li>
-</ul>
-<h1 id="2-👍JMS"><a href="#2-👍JMS" class="headerlink" title="2. 👍JMS"></a>2. 👍JMS</h1><ul>
-<li>Java Message Service<ul>
-<li>Jms规定了ConnectionFactory、Connection、Session等接口/类</li>
-</ul>
-</li>
-<li>JMS是一个Java标准，使用消息代理（message broker）的统一API</li>
-<li>JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持</li>
-</ul>
-<p>消息代理 broker：</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png" alt="image.png"></p>
-<h1 id="3-ActiveMQ-Artemis"><a href="#3-ActiveMQ-Artemis" class="headerlink" title="3. ActiveMQ Artemis"></a>3. ActiveMQ Artemis</h1><ul>
-<li>支持协议<ul>
-<li>JMS</li>
-<li>AMQP: Advanced Message Queueing Protocol</li>
-<li>MQTT: Message Queuing Telemetry Transport</li>
-</ul>
-</li>
-<li>支持Native内存模式和JVM内存模式<ul>
-<li>Native可以绕过JVM，加快访问</li>
-</ul>
-</li>
-<li>消息持久化</li>
-</ul>
-<h2 id="3-1-直接使用JMS接口发送与接受消息"><a href="#3-1-直接使用JMS接口发送与接受消息" class="headerlink" title="3.1. 直接使用JMS接口发送与接受消息"></a>3.1. 直接使用JMS接口发送与接受消息</h2><ol>
-<li>JMS规范：jakarta.jms-api-2.0.3.jar</li>
-<li>atemis客户端：artemis-jms-client-2.17.0.jar<ul>
-<li>与Spring无关</li>
-</ul>
-</li>
-</ol>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ConnectionFactory</span> <span class="variable">connectionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ActiveMQConnectionFactory</span>(BROKER_URL, USERNAME, PASSWORD);</span><br><span class="line"><span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> connectionFactory.createConnection();</span><br><span class="line">connection.start();</span><br><span class="line"><span class="type">Session</span> <span class="variable">session</span> <span class="operator">=</span> connection.createSession(<span class="literal">false</span>, Session.AUTO_ACKNOWLEDGE);</span><br><span class="line"><span class="type">Destination</span> <span class="variable">destination</span> <span class="operator">=</span> session.createQueue(<span class="string">"queue.example"</span>);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="3-2-👍关键概念"><a href="#3-2-👍关键概念" class="headerlink" title="3.2. 👍关键概念"></a>3.2. 👍关键概念</h2><ul>
-<li>Message：类似广播, 生产端</li>
-<li>Destination：队列或主题。消费端<ul>
-<li>三种指定方式：<ol>
-<li>application.yml（default-destination）</li>
-<li>@Bean（Destination对象）</li>
-<li>直接String指定</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-JmsTemplate"><a href="#3-3-JmsTemplate" class="headerlink" title="3.3. JmsTemplate"></a>3.3. JmsTemplate</h2><ul>
-<li>JmsTemplate是Spring对JMS集成支持的核心</li>
-<li>发送的两个方法：send、convertAndSend</li>
-</ul>
-<h2 id="3-4-👍消息转换器-MessageConverter"><a href="#3-4-👍消息转换器-MessageConverter" class="headerlink" title="3.4. 👍消息转换器 MessageConverter"></a>3.4. 👍消息转换器 MessageConverter</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
-<ul>
-<li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
-<li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
-<li>typeId：目的是告诉对方是什么类型，以便于反序列化<ul>
-<li>字符串</li>
-</ul>
-</li>
-<li>Message.setStringProperty，随属性集传输</li>
-<li>消息转换器使用@Configuration定义成Bean</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F17-02-28-148a7c245eb17542de98c2c91efe9929-20231231170228-794f8b.png" alt="image.png"></p>
-<h2 id="3-5-接收模式"><a href="#3-5-接收模式" class="headerlink" title="3.5. 接收模式"></a>3.5. 接收模式</h2><p><strong>拉取和推送都需要消息转换器做反序列化。</strong></p>
-<h3 id="3-5-1-拉取模式-pull-model"><a href="#3-5-1-拉取模式-pull-model" class="headerlink" title="3.5.1. 拉取模式 pull model"></a>3.5.1. 拉取模式 pull model</h3><p>JmsTemplate支持<br>访问URL</p>
-<h3 id="3-5-2-推送模式-push-model"><a href="#3-5-2-推送模式-push-model" class="headerlink" title="3.5.2. 推送模式 push model"></a>3.5.2. 推送模式 push model</h3><p>需要定义消息监听器<br>@JmsListener</p>
-<h1 id="4-RabbitMQ"><a href="#4-RabbitMQ" class="headerlink" title="4. RabbitMQ"></a>4. RabbitMQ</h1><p><strong>实现AMQP协议</strong>。<br>RabbitMQ基础概念详细介绍：<a class="link" href="https://www.cnblogs.com/williamjie/p/9481774.html">RabbitMQ基础概念详细介绍 - 割肉机 - 博客园 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>也需要消息转换器，虽然包路径不一样，但是功能一样。</p>
-<h2 id="4-1-👍概念"><a href="#4-1-👍概念" class="headerlink" title="4.1. 👍概念"></a>4.1. 👍概念</h2><ul>
-<li>ConnectionFactory、Connection、Channel</li>
-<li>Exchange：<ul>
-<li>Default、Direct、Topic、Fanout、Headers、Dead letter</li>
-</ul>
-</li>
-<li>Queue</li>
-<li>Routing key：exchange根据routing key确定消息发往哪个队列<ul>
-<li><strong>JMS里没有这个概念</strong></li>
-</ul>
-</li>
-<li>Binding key</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F20-31-55-d57a847ec3e2d2ed48f59f6b49ec2e0c-20231116203155-0bdbb4.png" alt="image.png"></p>
-<h2 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2. 使用"></a>4.2. 使用</h2><ol>
-<li>添加依赖</li>
-<li>配置文件</li>
-<li>需要到控制台创建exchange，queue，binding</li>
-</ol>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">rabbitmq:</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">template:</span></span><br><span class="line"><span class="attr">exchange:</span> <span class="string">tacocloud.order</span></span><br></pre></td></tr></table></figure></div>
-
-<p>生产放指定exchange、routing key<br>消费方只需关注队列名字</p>
-<p>也有拉取模式和推送模式，也需要消息的转换</p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
