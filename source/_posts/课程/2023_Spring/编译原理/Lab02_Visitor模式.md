@@ -2,7 +2,7 @@
 aliases: 
 title: Lab02_Visitor模式
 tags: 2023_Spring编译原理  课程
-categories: 2023_Spring编译原理
+categories: 2023_Spring_编译原理
 date:  2023-06-01 00:06
 modified:  2024-01-05 19:01
 sticky:
