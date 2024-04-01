@@ -204,60 +204,6 @@
       </tags>
   </entry>
   <entry>
-    <title>01_计算机顶层视图</title>
-    <url>/posts/c6f8f26e/</url>
-    <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
-<li>组织：可见</li>
-<li>结构：不可见<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png" alt="NVIDIA_Share_nwCw64dafh.png"></li>
-</ul>
-<h1 id="2-计算机工作原理"><a href="#2-计算机工作原理" class="headerlink" title="2.计算机工作原理"></a>2.计算机工作原理</h1><ul>
-<li>指令和数据存储在单个读写存储器中</li>
-<li>主存中的内容按位置访问，无需考虑其中包含的类型</li>
-<li>CPU从一条指令到下一条指令以顺序方式执行（除非明确修改）</li>
-<li>I/O模块与 CPU、主存交换 算机系统外部的数据</li>
-</ul>
-<h1 id="3-计算机组件"><a href="#3-计算机组件" class="headerlink" title="3.计算机组件"></a>3.计算机组件</h1><h2 id="3-1CPU"><a href="#3-1CPU" class="headerlink" title="3.1CPU"></a>3.1CPU</h2><ul>
-<li><strong>问题1</strong>：CPU的频率不能无限提高<ul>
-<li><strong>解决</strong>：改进CPU芯片结构</li>
-</ul>
-</li>
-<li><strong>问题2</strong>：内存墙的存在<br>  主存和CPU之间传输数据的速度跟不上CPU的速度。<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_E0pwIAZkDi.png" alt="NVIDIA_Share_E0pwIAZkDi.png"><ul>
-<li><strong>解决</strong>：采用高速缓存cache</li>
-</ul>
-</li>
-<li><strong>问题3</strong>：CPU在等待 I/O 设备时保持空闲<ul>
-<li><strong>解决</strong>：采用中断机制</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-2存储器"><a href="#3-2存储器" class="headerlink" title="3.2存储器"></a>3.2存储器</h2><ul>
-<li><strong>问题1</strong>：兼顾存储容量、速度和成本<ul>
-<li><strong>解决</strong>：使用存储器层次结构而不是依赖单个存储器组件<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_yalT0gaea2.png" alt="NVIDIA_Share_yalT0gaea2.png"></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3I-O"><a href="#3-3I-O" class="headerlink" title="3.3I/O"></a>3.3I/O</h2><ul>
-<li><strong>问题1</strong>：不同I/O设备的传输速度差异大<ul>
-<li><strong>解决</strong>：设立缓冲区，新的接口技术，不同I/O操作</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-4总线"><a href="#3-4总线" class="headerlink" title="3.4总线"></a>3.4总线</h2><ul>
-<li><strong>问题</strong>：计算机部件互连复杂<ul>
-<li><strong>解决</strong>：采用总线<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_WkoYiClJtv.png" alt="NVIDIA_Share_WkoYiClJtv.png"></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构</tag>
-        <tag>课程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>02_计算机系统概述</title>
     <url>/posts/75f7a7d2/</url>
     <content><![CDATA[<h1 id="1-什么是计算机"><a href="#1-什么是计算机" class="headerlink" title="1.什么是计算机"></a>1.什么是计算机</h1><p><strong>通用电子数字计算机</strong>：</p>
@@ -321,6 +267,60 @@
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_GO8FiL37LH.png" alt="NVIDIA_Share_GO8FiL37LH.png"></p>
 <h2 id="4-3基准程序"><a href="#4-3基准程序" class="headerlink" title="4.3基准程序"></a>4.3基准程序</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_jqZIiZj9bL.png" alt="NVIDIA_Share_jqZIiZj9bL.png"></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01_计算机顶层视图</title>
+    <url>/posts/c6f8f26e/</url>
+    <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
+<li>组织：可见</li>
+<li>结构：不可见<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png" alt="NVIDIA_Share_nwCw64dafh.png"></li>
+</ul>
+<h1 id="2-计算机工作原理"><a href="#2-计算机工作原理" class="headerlink" title="2.计算机工作原理"></a>2.计算机工作原理</h1><ul>
+<li>指令和数据存储在单个读写存储器中</li>
+<li>主存中的内容按位置访问，无需考虑其中包含的类型</li>
+<li>CPU从一条指令到下一条指令以顺序方式执行（除非明确修改）</li>
+<li>I/O模块与 CPU、主存交换 算机系统外部的数据</li>
+</ul>
+<h1 id="3-计算机组件"><a href="#3-计算机组件" class="headerlink" title="3.计算机组件"></a>3.计算机组件</h1><h2 id="3-1CPU"><a href="#3-1CPU" class="headerlink" title="3.1CPU"></a>3.1CPU</h2><ul>
+<li><strong>问题1</strong>：CPU的频率不能无限提高<ul>
+<li><strong>解决</strong>：改进CPU芯片结构</li>
+</ul>
+</li>
+<li><strong>问题2</strong>：内存墙的存在<br>  主存和CPU之间传输数据的速度跟不上CPU的速度。<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_E0pwIAZkDi.png" alt="NVIDIA_Share_E0pwIAZkDi.png"><ul>
+<li><strong>解决</strong>：采用高速缓存cache</li>
+</ul>
+</li>
+<li><strong>问题3</strong>：CPU在等待 I/O 设备时保持空闲<ul>
+<li><strong>解决</strong>：采用中断机制</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2存储器"><a href="#3-2存储器" class="headerlink" title="3.2存储器"></a>3.2存储器</h2><ul>
+<li><strong>问题1</strong>：兼顾存储容量、速度和成本<ul>
+<li><strong>解决</strong>：使用存储器层次结构而不是依赖单个存储器组件<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_yalT0gaea2.png" alt="NVIDIA_Share_yalT0gaea2.png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3I-O"><a href="#3-3I-O" class="headerlink" title="3.3I/O"></a>3.3I/O</h2><ul>
+<li><strong>问题1</strong>：不同I/O设备的传输速度差异大<ul>
+<li><strong>解决</strong>：设立缓冲区，新的接口技术，不同I/O操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4总线"><a href="#3-4总线" class="headerlink" title="3.4总线"></a>3.4总线</h2><ul>
+<li><strong>问题</strong>：计算机部件互连复杂<ul>
+<li><strong>解决</strong>：采用总线<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_WkoYiClJtv.png" alt="NVIDIA_Share_WkoYiClJtv.png"></li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>2022Fall_计算机组织与结构</category>
@@ -686,23 +686,6 @@
       </tags>
   </entry>
   <entry>
-    <title>07_二进制编码的十进制数运算</title>
-    <url>/posts/fb20164/</url>
-    <content><![CDATA[<h1 id="1-加法"><a href="#1-加法" class="headerlink" title="1.加法"></a>1.加法</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/aa14a6ec0dc75fe08c29d86f6be70bd2_38_NVIDIA_GeForce_Overlay_DT.png" alt="38_NVIDIA_GeForce_Overlay_DT.png"><br><strong>调整</strong></p>
-<ul>
-<li>超过16（有进位），个位消耗了16，多消耗了6，要补回去</li>
-<li>超过10（无进位），但未消耗16，额外补6来产生进位。个位只消耗了10，产生正确进位。</li>
-</ul>
-<h1 id="2-减法"><a href="#2-减法" class="headerlink" title="2.减法"></a>2.减法</h1><p><strong>反转</strong><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/695cd34174bec02ac6a830af5c254fcd_39_NVIDIA_GeForce_Overlay_DT.png" alt="39_NVIDIA_GeForce_Overlay_DT.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/f75e643d4a1a621718a531e95d799f03_3a_NVIDIA_GeForce_Overlay_DT.png" alt="3a_NVIDIA_GeForce_Overlay_DT.png"></p>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>08_内部存储器</title>
     <url>/posts/bacc272a/</url>
     <content><![CDATA[<ul>
@@ -883,6 +866,23 @@
 </ul>
 </li>
 </ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>07_二进制编码的十进制数运算</title>
+    <url>/posts/fb20164/</url>
+    <content><![CDATA[<h1 id="1-加法"><a href="#1-加法" class="headerlink" title="1.加法"></a>1.加法</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/aa14a6ec0dc75fe08c29d86f6be70bd2_38_NVIDIA_GeForce_Overlay_DT.png" alt="38_NVIDIA_GeForce_Overlay_DT.png"><br><strong>调整</strong></p>
+<ul>
+<li>超过16（有进位），个位消耗了16，多消耗了6，要补回去</li>
+<li>超过10（无进位），但未消耗16，额外补6来产生进位。个位只消耗了10，产生正确进位。</li>
+</ul>
+<h1 id="2-减法"><a href="#2-减法" class="headerlink" title="2.减法"></a>2.减法</h1><p><strong>反转</strong><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/695cd34174bec02ac6a830af5c254fcd_39_NVIDIA_GeForce_Overlay_DT.png" alt="39_NVIDIA_GeForce_Overlay_DT.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/f75e643d4a1a621718a531e95d799f03_3a_NVIDIA_GeForce_Overlay_DT.png" alt="3a_NVIDIA_GeForce_Overlay_DT.png"></p>
 ]]></content>
       <categories>
         <category>2022Fall_计算机组织与结构</category>
@@ -1265,6 +1265,177 @@
 <li>与硬磁盘存储器相比：抗振性好，无噪声，能耗低，发热量低</li>
 </ul>
 </li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>12_虚拟存储器</title>
+    <url>/posts/7a95209e/</url>
+    <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h1 id="2-存取器管理"><a href="#2-存取器管理" class="headerlink" title="2.存取器管理"></a>2.存取器管理</h1><p>在多道程序系统中，主存需要进一步划分给<strong>多个任务</strong>，划分的任务由操作系统动态执行。</p>
+<h2 id="2-1-如何将更多任务装进主存"><a href="#2-1-如何将更多任务装进主存" class="headerlink" title="2.1 如何将更多任务装进主存"></a>2.1 如何将更多任务装进主存</h2><ul>
+<li>增大主存容量</li>
+<li>使用交换（exchange）技术<ul>
+<li>当主存中没有处于就绪的任务时，操作系统调入其他任务来执行</li>
+<li>分区（partitioning）和分页（paging）</li>
+</ul>
+</li>
+<li>虚拟存储器<ul>
+<li><strong>请求分页</strong>：每次访问仅将当前需要的页面调入主存，而其他不活跃的页面放在外存磁盘</li>
+<li>虚拟地址</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-分区方式"><a href="#2-2-分区方式" class="headerlink" title="2.2 分区方式"></a>2.2 分区方式</h2><ul>
+<li>主存划分<ul>
+<li>系统区：固定的地址范围内，存放操作系统</li>
+<li>用户区：存放所有用户程序</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-1-简单固定分区"><a href="#2-2-1-简单固定分区" class="headerlink" title="2.2.1 简单固定分区"></a>2.2.1 简单固定分区</h3><ul>
+<li>基本思想：<ul>
+<li>用户区划分成<strong>长度不等的固定长</strong>的分区</li>
+<li>当一个任务调入主存时，分配一个<strong>可用</strong>的、 能容纳它的、<strong>最小</strong>的分区</li>
+</ul>
+</li>
+<li>优点：简单</li>
+<li>缺点：浪费空间，产生“<strong>内碎片</strong>”</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/17583f0623a3d0b59911835f22715509_5c_NVIDIA_GeForce_Overlay_DT.png" alt="5c_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ul>
+<h3 id="2-2-2-可变长分区"><a href="#2-2-2-可变长分区" class="headerlink" title="2.2.2 可变长分区"></a>2.2.2 可变长分区</h3><ul>
+<li>基本思想<ul>
+<li>用户区按每个任务所需要的内存大小进行分配</li>
+</ul>
+</li>
+<li>优点：提高了主存的利用率</li>
+<li>缺点：时间越长，存储器中的<strong>碎片</strong>就会越多<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/0619006da4805046e4a5bd63e162b6c6_5d_NVIDIA_GeForce_Overlay_DT.png" alt="5d_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ul>
+<h2 id="2-3-分页方式"><a href="#2-3-分页方式" class="headerlink" title="2.3 分页方式"></a>2.3 分页方式</h2><ul>
+<li>基本思想<ul>
+<li>把<strong>主存</strong>分成固定长且比较小的存储块，称为<strong>页框（page frame）</strong>，每个任务也被划分成固定长的<strong>程序块</strong>，称为<strong>页（page）</strong></li>
+<li>将页装入页框中，且<strong>无需采用连续的页框来存放一个任务中所有的页</strong></li>
+</ul>
+</li>
+<li>逻辑地址/虚拟地址：指令中的地址</li>
+<li>物理地址：实际的<strong>主存地址</strong></li>
+<li>页表（page table）:建立页和页框的映射关系，每个进程都有一个页表，实现虚拟地址和物理地址的转换<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/73031fda94faa13ea99841808700ec22_73031fda94faa13ea99841808700ec22_5e_NVIDIA_GeForce_Overlay_DT.png" alt="5e_NVIDIA_GeForce_Overlay_DT.png"></li>
+</ul>
+<h1 id="3-虚拟存储器"><a href="#3-虚拟存储器" class="headerlink" title="3.虚拟存储器"></a>3.虚拟存储器</h1><ul>
+<li><p>基本思想</p>
+<ul>
+<li><strong>请求分页</strong>：仅将当前需要的的页面从磁盘调入主存</li>
+<li>通过<strong>硬件</strong>将逻辑地址转换为物理地址</li>
+<li>未命中时在主存和硬盘之间交换信息（类似cache）</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>在不扩大物理内存的前提下，可以载入更多的任务</li>
+<li>编写程序时不需要考虑可用物理内存的状态<ul>
+<li>程序员认为可以独享一个连续的、很大的内存</li>
+</ul>
+</li>
+<li>可以在大于物理内存的逻辑地址空间中编程</li>
+</ul>
+</li>
+<li><p><strong>设计要素</strong></p>
+<ul>
+<li>页大小</li>
+<li>映射算法<ul>
+<li>Cache比主存块10倍，主存比硬盘块100000多倍，<strong>缺页代价非常大</strong>，因此主存页框和虚拟页之间采用<strong>全关联映射</strong></li>
+</ul>
+</li>
+<li>写策略<ul>
+<li><strong>写回法</strong>，减少访问硬盘次数</li>
+</ul>
+</li>
+<li>类型<ul>
+<li>分页式虚拟存储器</li>
+<li>分段式虚拟存储器</li>
+<li>段页式虚拟存储器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-1-流程"><a href="#3-1-流程" class="headerlink" title="3.1 流程"></a>3.1 流程</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/ccab8fbb228724bd01085ee263452bfe_5f_NVIDIA_GeForce_Overlay_DT.png" alt="5f_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h2 id="3-2-分页式"><a href="#3-2-分页式" class="headerlink" title="3.2 分页式"></a>3.2 分页式</h2><ul>
+<li>主存储器和虚拟地址空间都被划分为大小相等的页面<ul>
+<li>虚拟页（virtual page，VP）/ 逻辑页（logical page）：<strong>虚拟地址空间</strong>中的页面</li>
+<li>物理页（physical page，PP）/ 页框（page frame）：<strong>主存空间</strong>中的页面</li>
+</ul>
+</li>
+<li>页表<ul>
+<li>页表中包含了<strong>所有虚拟页</strong>的信息，包括虚拟页的存放位置、装入位（valid）、修改位（dirty）、存取权限位等等</li>
+<li>保存在主存中</li>
+<li>虚拟地址：虚拟页号+页内偏移量</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-1-页表"><a href="#3-2-1-页表" class="headerlink" title="3.2.1 页表"></a>3.2.1 页表</h3><ul>
+<li>根据页表中记录的物理页存放位置，可以将虚拟地址转化为物理地址<ul>
+<li>高位直接替换</li>
+</ul>
+</li>
+<li>页表大小由虚拟内存地址空间大小决定</li>
+<li>装入位/有效位<ul>
+<li>1：对应页在主存，是缓存页，存放位置指向主存页框号（物理页号）</li>
+<li>0：未调入主存，若存放位置为null则是为分配页；否则是为缓存页，给出虚拟页在磁盘上的起始地址</li>
+</ul>
+</li>
+</ul>
+<p><font color="#ff0000">虚拟页号</font>+<font color="#f79646">页内偏移量</font>-&gt;<font color="#4bacc6">物理页号</font>+<font color="#f79646">页内偏移量</font><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/52e6d25b19098e8682fb825f9c188f20_60_NVIDIA_GeForce_Overlay_DT.png" alt="60_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h3 id="3-2-2-快表（Translation-Lookaside-Buffer，-TLB）"><a href="#3-2-2-快表（Translation-Lookaside-Buffer，-TLB）" class="headerlink" title="3.2.2 快表（Translation Lookaside Buffer， TLB）"></a>3.2.2 快表（Translation Lookaside Buffer， TLB）</h3><p>页表的使用增加了主存的访问次数，为了<strong>减少访存次数</strong>，把页表中最活跃的几个页表项复制到<strong>高速缓存</strong>中</p>
+<ul>
+<li>后备转换缓冲器（简称“快表”）：将页表项放入高速缓存中<ul>
+<li>映射：全关联映射，组关联映射</li>
+<li>替换：随机替换</li>
+<li>主存中的页表相应地称之为“慢表”</li>
+</ul>
+</li>
+<li>TLB标记<ul>
+<li>该表项对应页表中哪个虚拟页的表项</li>
+<li>全关联：虚拟页号</li>
+<li>组关联：虚拟页号的高位（低位用于选择TLB组的组号）</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-3-CPU访存过程"><a href="#3-2-3-CPU访存过程" class="headerlink" title="3.2.3 CPU访存过程"></a>3.2.3 CPU访存过程</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/d2f860ed41f335178208d7c2e8dff11b_61_NVIDIA_GeForce_Overlay_DT.png" alt="61_NVIDIA_GeForce_Overlay_DT.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/c7705c8b487da9c22ff5f500efd4d7f4_62_NVIDIA_GeForce_Overlay_DT.png" alt="62_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h3 id="3-2-4-TLB、页表、cache的缺失组合"><a href="#3-2-4-TLB、页表、cache的缺失组合" class="headerlink" title="3.2.4 TLB、页表、cache的缺失组合"></a>3.2.4 TLB、页表、cache的缺失组合</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/0131beb6267258138204707408b125bf_63_NVIDIA_GeForce_Overlay_DT.png" alt="63_NVIDIA_GeForce_Overlay_DT.png"></p>
+<h3 id="3-2-5-缓存关系"><a href="#3-2-5-缓存关系" class="headerlink" title="3.2.5 缓存关系"></a>3.2.5 缓存关系</h3><ul>
+<li>TLB&lt;-页表</li>
+<li>cache&lt;-主存</li>
+<li>主存&lt;-硬盘</li>
+</ul>
+<h2 id="3-3-分段式"><a href="#3-3-分段式" class="headerlink" title="3.3 分段式"></a>3.3 分段式</h2><p>将程序和数据分成<strong>不同长度的段</strong>，将所需的段加载到主存中</p>
+<ul>
+<li>虚拟地址：段号 + 段内偏移量</li>
+<li>与分页式虚拟存储器相比<ul>
+<li>分页式虚拟存储器<ul>
+<li>优点：实现简单、开销少</li>
+<li>缺点：一个数据或一条指令可能会分跨在两个页面</li>
+</ul>
+</li>
+<li>分段式虚拟存储器<ul>
+<li>优点：段的分界与程序的自然分界相对应，易于编译、管理、修改和保护</li>
+<li>缺点：段的长度不固定</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4-段页式"><a href="#3-4-段页式" class="headerlink" title="3.4 段页式"></a>3.4 段页式</h2><p>将程序和数据分段，段内再进行分页，<strong>每个分段都有一个页表</strong></p>
+<ul>
+<li>虚拟地址：段号 + 页号 + 页内偏移量</li>
+<li>优点：程序按段实现共享与保护</li>
+<li>缺点：需要多次查表</li>
 </ul>
 ]]></content>
       <categories>
@@ -1934,177 +2105,6 @@
 <li>下一条指令地址的确定：通常通过PC寄存器实现</li>
 </ul>
 </li>
-</ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>12_虚拟存储器</title>
-    <url>/posts/7a95209e/</url>
-    <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
-<h1 id="2-存取器管理"><a href="#2-存取器管理" class="headerlink" title="2.存取器管理"></a>2.存取器管理</h1><p>在多道程序系统中，主存需要进一步划分给<strong>多个任务</strong>，划分的任务由操作系统动态执行。</p>
-<h2 id="2-1-如何将更多任务装进主存"><a href="#2-1-如何将更多任务装进主存" class="headerlink" title="2.1 如何将更多任务装进主存"></a>2.1 如何将更多任务装进主存</h2><ul>
-<li>增大主存容量</li>
-<li>使用交换（exchange）技术<ul>
-<li>当主存中没有处于就绪的任务时，操作系统调入其他任务来执行</li>
-<li>分区（partitioning）和分页（paging）</li>
-</ul>
-</li>
-<li>虚拟存储器<ul>
-<li><strong>请求分页</strong>：每次访问仅将当前需要的页面调入主存，而其他不活跃的页面放在外存磁盘</li>
-<li>虚拟地址</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-2-分区方式"><a href="#2-2-分区方式" class="headerlink" title="2.2 分区方式"></a>2.2 分区方式</h2><ul>
-<li>主存划分<ul>
-<li>系统区：固定的地址范围内，存放操作系统</li>
-<li>用户区：存放所有用户程序</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-2-1-简单固定分区"><a href="#2-2-1-简单固定分区" class="headerlink" title="2.2.1 简单固定分区"></a>2.2.1 简单固定分区</h3><ul>
-<li>基本思想：<ul>
-<li>用户区划分成<strong>长度不等的固定长</strong>的分区</li>
-<li>当一个任务调入主存时，分配一个<strong>可用</strong>的、 能容纳它的、<strong>最小</strong>的分区</li>
-</ul>
-</li>
-<li>优点：简单</li>
-<li>缺点：浪费空间，产生“<strong>内碎片</strong>”</li>
-<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/17583f0623a3d0b59911835f22715509_5c_NVIDIA_GeForce_Overlay_DT.png" alt="5c_NVIDIA_GeForce_Overlay_DT.png"></li>
-</ul>
-<h3 id="2-2-2-可变长分区"><a href="#2-2-2-可变长分区" class="headerlink" title="2.2.2 可变长分区"></a>2.2.2 可变长分区</h3><ul>
-<li>基本思想<ul>
-<li>用户区按每个任务所需要的内存大小进行分配</li>
-</ul>
-</li>
-<li>优点：提高了主存的利用率</li>
-<li>缺点：时间越长，存储器中的<strong>碎片</strong>就会越多<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/0619006da4805046e4a5bd63e162b6c6_5d_NVIDIA_GeForce_Overlay_DT.png" alt="5d_NVIDIA_GeForce_Overlay_DT.png"></li>
-</ul>
-<h2 id="2-3-分页方式"><a href="#2-3-分页方式" class="headerlink" title="2.3 分页方式"></a>2.3 分页方式</h2><ul>
-<li>基本思想<ul>
-<li>把<strong>主存</strong>分成固定长且比较小的存储块，称为<strong>页框（page frame）</strong>，每个任务也被划分成固定长的<strong>程序块</strong>，称为<strong>页（page）</strong></li>
-<li>将页装入页框中，且<strong>无需采用连续的页框来存放一个任务中所有的页</strong></li>
-</ul>
-</li>
-<li>逻辑地址/虚拟地址：指令中的地址</li>
-<li>物理地址：实际的<strong>主存地址</strong></li>
-<li>页表（page table）:建立页和页框的映射关系，每个进程都有一个页表，实现虚拟地址和物理地址的转换<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/73031fda94faa13ea99841808700ec22_73031fda94faa13ea99841808700ec22_5e_NVIDIA_GeForce_Overlay_DT.png" alt="5e_NVIDIA_GeForce_Overlay_DT.png"></li>
-</ul>
-<h1 id="3-虚拟存储器"><a href="#3-虚拟存储器" class="headerlink" title="3.虚拟存储器"></a>3.虚拟存储器</h1><ul>
-<li><p>基本思想</p>
-<ul>
-<li><strong>请求分页</strong>：仅将当前需要的的页面从磁盘调入主存</li>
-<li>通过<strong>硬件</strong>将逻辑地址转换为物理地址</li>
-<li>未命中时在主存和硬盘之间交换信息（类似cache）</li>
-</ul>
-</li>
-<li><p>优点</p>
-<ul>
-<li>在不扩大物理内存的前提下，可以载入更多的任务</li>
-<li>编写程序时不需要考虑可用物理内存的状态<ul>
-<li>程序员认为可以独享一个连续的、很大的内存</li>
-</ul>
-</li>
-<li>可以在大于物理内存的逻辑地址空间中编程</li>
-</ul>
-</li>
-<li><p><strong>设计要素</strong></p>
-<ul>
-<li>页大小</li>
-<li>映射算法<ul>
-<li>Cache比主存块10倍，主存比硬盘块100000多倍，<strong>缺页代价非常大</strong>，因此主存页框和虚拟页之间采用<strong>全关联映射</strong></li>
-</ul>
-</li>
-<li>写策略<ul>
-<li><strong>写回法</strong>，减少访问硬盘次数</li>
-</ul>
-</li>
-<li>类型<ul>
-<li>分页式虚拟存储器</li>
-<li>分段式虚拟存储器</li>
-<li>段页式虚拟存储器</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-1-流程"><a href="#3-1-流程" class="headerlink" title="3.1 流程"></a>3.1 流程</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/ccab8fbb228724bd01085ee263452bfe_5f_NVIDIA_GeForce_Overlay_DT.png" alt="5f_NVIDIA_GeForce_Overlay_DT.png"></p>
-<h2 id="3-2-分页式"><a href="#3-2-分页式" class="headerlink" title="3.2 分页式"></a>3.2 分页式</h2><ul>
-<li>主存储器和虚拟地址空间都被划分为大小相等的页面<ul>
-<li>虚拟页（virtual page，VP）/ 逻辑页（logical page）：<strong>虚拟地址空间</strong>中的页面</li>
-<li>物理页（physical page，PP）/ 页框（page frame）：<strong>主存空间</strong>中的页面</li>
-</ul>
-</li>
-<li>页表<ul>
-<li>页表中包含了<strong>所有虚拟页</strong>的信息，包括虚拟页的存放位置、装入位（valid）、修改位（dirty）、存取权限位等等</li>
-<li>保存在主存中</li>
-<li>虚拟地址：虚拟页号+页内偏移量</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-2-1-页表"><a href="#3-2-1-页表" class="headerlink" title="3.2.1 页表"></a>3.2.1 页表</h3><ul>
-<li>根据页表中记录的物理页存放位置，可以将虚拟地址转化为物理地址<ul>
-<li>高位直接替换</li>
-</ul>
-</li>
-<li>页表大小由虚拟内存地址空间大小决定</li>
-<li>装入位/有效位<ul>
-<li>1：对应页在主存，是缓存页，存放位置指向主存页框号（物理页号）</li>
-<li>0：未调入主存，若存放位置为null则是为分配页；否则是为缓存页，给出虚拟页在磁盘上的起始地址</li>
-</ul>
-</li>
-</ul>
-<p><font color="#ff0000">虚拟页号</font>+<font color="#f79646">页内偏移量</font>-&gt;<font color="#4bacc6">物理页号</font>+<font color="#f79646">页内偏移量</font><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/52e6d25b19098e8682fb825f9c188f20_60_NVIDIA_GeForce_Overlay_DT.png" alt="60_NVIDIA_GeForce_Overlay_DT.png"></p>
-<h3 id="3-2-2-快表（Translation-Lookaside-Buffer，-TLB）"><a href="#3-2-2-快表（Translation-Lookaside-Buffer，-TLB）" class="headerlink" title="3.2.2 快表（Translation Lookaside Buffer， TLB）"></a>3.2.2 快表（Translation Lookaside Buffer， TLB）</h3><p>页表的使用增加了主存的访问次数，为了<strong>减少访存次数</strong>，把页表中最活跃的几个页表项复制到<strong>高速缓存</strong>中</p>
-<ul>
-<li>后备转换缓冲器（简称“快表”）：将页表项放入高速缓存中<ul>
-<li>映射：全关联映射，组关联映射</li>
-<li>替换：随机替换</li>
-<li>主存中的页表相应地称之为“慢表”</li>
-</ul>
-</li>
-<li>TLB标记<ul>
-<li>该表项对应页表中哪个虚拟页的表项</li>
-<li>全关联：虚拟页号</li>
-<li>组关联：虚拟页号的高位（低位用于选择TLB组的组号）</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-2-3-CPU访存过程"><a href="#3-2-3-CPU访存过程" class="headerlink" title="3.2.3 CPU访存过程"></a>3.2.3 CPU访存过程</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/d2f860ed41f335178208d7c2e8dff11b_61_NVIDIA_GeForce_Overlay_DT.png" alt="61_NVIDIA_GeForce_Overlay_DT.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/c7705c8b487da9c22ff5f500efd4d7f4_62_NVIDIA_GeForce_Overlay_DT.png" alt="62_NVIDIA_GeForce_Overlay_DT.png"></p>
-<h3 id="3-2-4-TLB、页表、cache的缺失组合"><a href="#3-2-4-TLB、页表、cache的缺失组合" class="headerlink" title="3.2.4 TLB、页表、cache的缺失组合"></a>3.2.4 TLB、页表、cache的缺失组合</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/0131beb6267258138204707408b125bf_63_NVIDIA_GeForce_Overlay_DT.png" alt="63_NVIDIA_GeForce_Overlay_DT.png"></p>
-<h3 id="3-2-5-缓存关系"><a href="#3-2-5-缓存关系" class="headerlink" title="3.2.5 缓存关系"></a>3.2.5 缓存关系</h3><ul>
-<li>TLB&lt;-页表</li>
-<li>cache&lt;-主存</li>
-<li>主存&lt;-硬盘</li>
-</ul>
-<h2 id="3-3-分段式"><a href="#3-3-分段式" class="headerlink" title="3.3 分段式"></a>3.3 分段式</h2><p>将程序和数据分成<strong>不同长度的段</strong>，将所需的段加载到主存中</p>
-<ul>
-<li>虚拟地址：段号 + 段内偏移量</li>
-<li>与分页式虚拟存储器相比<ul>
-<li>分页式虚拟存储器<ul>
-<li>优点：实现简单、开销少</li>
-<li>缺点：一个数据或一条指令可能会分跨在两个页面</li>
-</ul>
-</li>
-<li>分段式虚拟存储器<ul>
-<li>优点：段的分界与程序的自然分界相对应，易于编译、管理、修改和保护</li>
-<li>缺点：段的长度不固定</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-4-段页式"><a href="#3-4-段页式" class="headerlink" title="3.4 段页式"></a>3.4 段页式</h2><p>将程序和数据分段，段内再进行分页，<strong>每个分段都有一个页表</strong></p>
-<ul>
-<li>虚拟地址：段号 + 页号 + 页内偏移量</li>
-<li>优点：程序按段实现共享与保护</li>
-<li>缺点：需要多次查表</li>
 </ul>
 ]]></content>
       <categories>
@@ -3340,199 +3340,6 @@
       </tags>
   </entry>
   <entry>
-    <title>12-人机交互复习</title>
-    <url>/posts/6a061927/</url>
-    <content><![CDATA[<h1 id="1-知识点"><a href="#1-知识点" class="headerlink" title="1. 知识点"></a>1. 知识点</h1><h2 id="1-1-什么是人机交互"><a href="#1-1-什么是人机交互" class="headerlink" title="1.1. 什么是人机交互"></a>1.1. 什么是人机交互</h2><ul>
-<li>重要性</li>
-<li>相关领域</li>
-<li>人机交发展历史<ul>
-<li>旧的交互形式作为特例保存下来——为什么图形化取代命令行</li>
-<li>人机交互与软件工程（不好考）<ul>
-<li>前者是对后者的促进和补充，二者结合存在许多困难</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-2-基础知识"><a href="#1-2-基础知识" class="headerlink" title="1.2. 基础知识"></a>1.2. 基础知识</h2><ul>
-<li>交互框架<ul>
-<li>EEC执行评估/活动周期</li>
-</ul>
-</li>
-<li><font color="#c00000">交互形式</font>——需要留意<ul>
-<li>手势、VR、触觉</li>
-<li>直接操纵、隐喻、问答</li>
-</ul>
-</li>
-<li>信息处理模型<ul>
-<li><font color="#c00000">人类处理机模型</font></li>
-<li>格式塔心理学——分析案例</li>
-<li>记忆特征——三个阶段用在哪里</li>
-</ul>
-</li>
-<li>交互设备——今年不重复</li>
-</ul>
-<h2 id="1-3-交互设计目标与原则"><a href="#1-3-交互设计目标与原则" class="headerlink" title="1.3. 交互设计目标与原则"></a>1.3. 交互设计目标与原则</h2><ul>
-<li>可用性目标<ul>
-<li>五个属性</li>
-</ul>
-</li>
-<li>用户体验目标</li>
-<li>简易的可用性工程<ul>
-<li>可用性度量</li>
-<li>四种主要技术</li>
-</ul>
-</li>
-<li>交互设计原则<ul>
-<li><font color="#c00000">启发式原则</font></li>
-<li>黄金原则</li>
-<li>七项原则</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-4-交互设计过程"><a href="#1-4-交互设计过程" class="headerlink" title="1.4. 交互设计过程"></a>1.4. 交互设计过程</h2><ul>
-<li>设计过程的基本活动和特征</li>
-<li>主要问题<ul>
-<li>用户、需求、候选方案、决策</li>
-</ul>
-</li>
-<li>交互设计生命周期<ul>
-<li>星型模型</li>
-<li>可用性工程生命周期模型</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-5-交互式系统的需求"><a href="#1-5-交互式系统的需求" class="headerlink" title="1.5. 交互式系统的需求"></a>1.5. 交互式系统的需求</h2><ul>
-<li><p>产品特性  </p>
-</li>
-<li><p>用户特性  </p>
-</li>
-<li><p>人物角色——别人的设计有什么问题</p>
-</li>
-<li><p>需求分析获取</p>
-<ul>
-<li>场景观察  </li>
-<li><strong>HTA 层次化考核——好考</strong><ul>
-<li>文字和图形描述</li>
-</ul>
-</li>
-<li>原型</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-6-交互式系统设计"><a href="#1-6-交互式系统设计" class="headerlink" title="1.6. 交互式系统设计"></a>1.6. 交互式系统设计</h2><ul>
-<li><strong>简化策略</strong>：删除、组织、隐藏、转移</li>
-<li>设计框架</li>
-<li>设计中的折中</li>
-<li>细节<ul>
-<li>让软件体贴</li>
-<li>加快响应时间</li>
-<li>减轻记忆负担</li>
-<li>减少等待感</li>
-<li>设计模式</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-7-交互设计模型"><a href="#1-7-交互设计模型" class="headerlink" title="1.7. 交互设计模型"></a>1.7. 交互设计模型</h2><ul>
-<li><font color="#c00000">预测模型</font><ul>
-<li>GOMS  </li>
-<li>kLM——大题  </li>
-<li>FITTS——会算</li>
-</ul>
-</li>
-<li>状态转移网络</li>
-<li>语言模型<ul>
-<li>BNF表达式</li>
-</ul>
-</li>
-<li>系统模型<ul>
-<li>Z标记法</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-8-评估"><a href="#1-8-评估" class="headerlink" title="1.8. 评估"></a>1.8. <font color="#c00000">评估</font></h2><p>一定会考怎么评估</p>
-<ul>
-<li>评估泛型和方法<ul>
-<li>快速评估</li>
-<li>可用性测试</li>
-<li>实地研究</li>
-<li>预测性评估</li>
-</ul>
-</li>
-<li>评估方法的选择<ul>
-<li>不同方法的适用阶段</li>
-<li>评估方法的组合</li>
-</ul>
-</li>
-<li>DECIDE评估框架</li>
-<li><font color="#c00000">小规模实验的重要性</font>——必有</li>
-</ul>
-<p><font color="#c00000">用户测试、启发式评估必考大题</font></p>
-<h2 id="1-9-观察用户"><a href="#1-9-观察用户" class="headerlink" title="1.9. 观察用户"></a>1.9. 观察用户</h2><ul>
-<li>观察方式<ul>
-<li>实验室vs实地</li>
-</ul>
-</li>
-<li>观察框架<ul>
-<li>减少干扰、完成目标</li>
-</ul>
-</li>
-<li>数据记录方式<ul>
-<li>纸笔</li>
-<li>音视频</li>
-<li>日志</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-10-询问用户和专家"><a href="#1-10-询问用户和专家" class="headerlink" title="1.10. 询问用户和专家"></a>1.10. 询问用户和专家</h2><ul>
-<li>访谈<ul>
-<li>分类和技巧</li>
-<li>焦点小组</li>
-</ul>
-</li>
-<li>问卷调查<ul>
-<li>问卷设计与组织</li>
-</ul>
-</li>
-<li>认知走查</li>
-<li><font color="#c00000">启发式评估</font><ul>
-<li>评估原则</li>
-<li>评估步骤</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-11-用户测试"><a href="#1-11-用户测试" class="headerlink" title="1.11. 用户测试"></a>1.11. 用户测试</h2><ul>
-<li><font color="#c00000">复习DECIDE评估框架</font><ul>
-<li>定义目标和问题</li>
-<li>选择参与者</li>
-<li>设计测试任务</li>
-<li>明确测试步骤</li>
-<li>数据搜集与分析</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-12-以用户为中心"><a href="#1-12-以用户为中心" class="headerlink" title="1.12. 以用户为中心"></a>1.12. 以用户为中心</h2><p>就考一些概念，对应的英文是什么</p>
-<ul>
-<li>以用户为中心：<ul>
-<li>UCD，英文怎么写</li>
-<li>User Center Design</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-试卷"><a href="#2-试卷" class="headerlink" title="2. 试卷"></a>2. 试卷</h1><h2 id="2-1-选择"><a href="#2-1-选择" class="headerlink" title="2.1. 选择"></a>2.1. 选择</h2><p>选择题40分<br>20题<br>从慕课上出<br>少量题目可能没见过</p>
-<h2 id="2-2-填空题"><a href="#2-2-填空题" class="headerlink" title="2.2. 填空题"></a>2.2. 填空题</h2><p>概念题</p>
-<p>UCD、GOMS</p>
-<h2 id="2-3-简答题"><a href="#2-3-简答题" class="headerlink" title="2.3. 简答题"></a>2.3. 简答题</h2><p>实验设计一定会考察</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_人机交互</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>11-交互模型与理论</title>
     <url>/posts/93e1d4e7/</url>
     <content><![CDATA[<h1 id="1-交互设计领域的模型"><a href="#1-交互设计领域的模型" class="headerlink" title="1. 交互设计领域的模型"></a>1. 交互设计领域的模型</h1><ol>
@@ -3720,6 +3527,199 @@
 </ul>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>12-人机交互复习</title>
+    <url>/posts/6a061927/</url>
+    <content><![CDATA[<h1 id="1-知识点"><a href="#1-知识点" class="headerlink" title="1. 知识点"></a>1. 知识点</h1><h2 id="1-1-什么是人机交互"><a href="#1-1-什么是人机交互" class="headerlink" title="1.1. 什么是人机交互"></a>1.1. 什么是人机交互</h2><ul>
+<li>重要性</li>
+<li>相关领域</li>
+<li>人机交发展历史<ul>
+<li>旧的交互形式作为特例保存下来——为什么图形化取代命令行</li>
+<li>人机交互与软件工程（不好考）<ul>
+<li>前者是对后者的促进和补充，二者结合存在许多困难</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-基础知识"><a href="#1-2-基础知识" class="headerlink" title="1.2. 基础知识"></a>1.2. 基础知识</h2><ul>
+<li>交互框架<ul>
+<li>EEC执行评估/活动周期</li>
+</ul>
+</li>
+<li><font color="#c00000">交互形式</font>——需要留意<ul>
+<li>手势、VR、触觉</li>
+<li>直接操纵、隐喻、问答</li>
+</ul>
+</li>
+<li>信息处理模型<ul>
+<li><font color="#c00000">人类处理机模型</font></li>
+<li>格式塔心理学——分析案例</li>
+<li>记忆特征——三个阶段用在哪里</li>
+</ul>
+</li>
+<li>交互设备——今年不重复</li>
+</ul>
+<h2 id="1-3-交互设计目标与原则"><a href="#1-3-交互设计目标与原则" class="headerlink" title="1.3. 交互设计目标与原则"></a>1.3. 交互设计目标与原则</h2><ul>
+<li>可用性目标<ul>
+<li>五个属性</li>
+</ul>
+</li>
+<li>用户体验目标</li>
+<li>简易的可用性工程<ul>
+<li>可用性度量</li>
+<li>四种主要技术</li>
+</ul>
+</li>
+<li>交互设计原则<ul>
+<li><font color="#c00000">启发式原则</font></li>
+<li>黄金原则</li>
+<li>七项原则</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4-交互设计过程"><a href="#1-4-交互设计过程" class="headerlink" title="1.4. 交互设计过程"></a>1.4. 交互设计过程</h2><ul>
+<li>设计过程的基本活动和特征</li>
+<li>主要问题<ul>
+<li>用户、需求、候选方案、决策</li>
+</ul>
+</li>
+<li>交互设计生命周期<ul>
+<li>星型模型</li>
+<li>可用性工程生命周期模型</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-5-交互式系统的需求"><a href="#1-5-交互式系统的需求" class="headerlink" title="1.5. 交互式系统的需求"></a>1.5. 交互式系统的需求</h2><ul>
+<li><p>产品特性  </p>
+</li>
+<li><p>用户特性  </p>
+</li>
+<li><p>人物角色——别人的设计有什么问题</p>
+</li>
+<li><p>需求分析获取</p>
+<ul>
+<li>场景观察  </li>
+<li><strong>HTA 层次化考核——好考</strong><ul>
+<li>文字和图形描述</li>
+</ul>
+</li>
+<li>原型</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-6-交互式系统设计"><a href="#1-6-交互式系统设计" class="headerlink" title="1.6. 交互式系统设计"></a>1.6. 交互式系统设计</h2><ul>
+<li><strong>简化策略</strong>：删除、组织、隐藏、转移</li>
+<li>设计框架</li>
+<li>设计中的折中</li>
+<li>细节<ul>
+<li>让软件体贴</li>
+<li>加快响应时间</li>
+<li>减轻记忆负担</li>
+<li>减少等待感</li>
+<li>设计模式</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-7-交互设计模型"><a href="#1-7-交互设计模型" class="headerlink" title="1.7. 交互设计模型"></a>1.7. 交互设计模型</h2><ul>
+<li><font color="#c00000">预测模型</font><ul>
+<li>GOMS  </li>
+<li>kLM——大题  </li>
+<li>FITTS——会算</li>
+</ul>
+</li>
+<li>状态转移网络</li>
+<li>语言模型<ul>
+<li>BNF表达式</li>
+</ul>
+</li>
+<li>系统模型<ul>
+<li>Z标记法</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-8-评估"><a href="#1-8-评估" class="headerlink" title="1.8. 评估"></a>1.8. <font color="#c00000">评估</font></h2><p>一定会考怎么评估</p>
+<ul>
+<li>评估泛型和方法<ul>
+<li>快速评估</li>
+<li>可用性测试</li>
+<li>实地研究</li>
+<li>预测性评估</li>
+</ul>
+</li>
+<li>评估方法的选择<ul>
+<li>不同方法的适用阶段</li>
+<li>评估方法的组合</li>
+</ul>
+</li>
+<li>DECIDE评估框架</li>
+<li><font color="#c00000">小规模实验的重要性</font>——必有</li>
+</ul>
+<p><font color="#c00000">用户测试、启发式评估必考大题</font></p>
+<h2 id="1-9-观察用户"><a href="#1-9-观察用户" class="headerlink" title="1.9. 观察用户"></a>1.9. 观察用户</h2><ul>
+<li>观察方式<ul>
+<li>实验室vs实地</li>
+</ul>
+</li>
+<li>观察框架<ul>
+<li>减少干扰、完成目标</li>
+</ul>
+</li>
+<li>数据记录方式<ul>
+<li>纸笔</li>
+<li>音视频</li>
+<li>日志</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-10-询问用户和专家"><a href="#1-10-询问用户和专家" class="headerlink" title="1.10. 询问用户和专家"></a>1.10. 询问用户和专家</h2><ul>
+<li>访谈<ul>
+<li>分类和技巧</li>
+<li>焦点小组</li>
+</ul>
+</li>
+<li>问卷调查<ul>
+<li>问卷设计与组织</li>
+</ul>
+</li>
+<li>认知走查</li>
+<li><font color="#c00000">启发式评估</font><ul>
+<li>评估原则</li>
+<li>评估步骤</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-11-用户测试"><a href="#1-11-用户测试" class="headerlink" title="1.11. 用户测试"></a>1.11. 用户测试</h2><ul>
+<li><font color="#c00000">复习DECIDE评估框架</font><ul>
+<li>定义目标和问题</li>
+<li>选择参与者</li>
+<li>设计测试任务</li>
+<li>明确测试步骤</li>
+<li>数据搜集与分析</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-12-以用户为中心"><a href="#1-12-以用户为中心" class="headerlink" title="1.12. 以用户为中心"></a>1.12. 以用户为中心</h2><p>就考一些概念，对应的英文是什么</p>
+<ul>
+<li>以用户为中心：<ul>
+<li>UCD，英文怎么写</li>
+<li>User Center Design</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-试卷"><a href="#2-试卷" class="headerlink" title="2. 试卷"></a>2. 试卷</h1><h2 id="2-1-选择"><a href="#2-1-选择" class="headerlink" title="2.1. 选择"></a>2.1. 选择</h2><p>选择题40分<br>20题<br>从慕课上出<br>少量题目可能没见过</p>
+<h2 id="2-2-填空题"><a href="#2-2-填空题" class="headerlink" title="2.2. 填空题"></a>2.2. 填空题</h2><p>概念题</p>
+<p>UCD、GOMS</p>
+<h2 id="2-3-简答题"><a href="#2-3-简答题" class="headerlink" title="2.3. 简答题"></a>2.3. 简答题</h2><p>实验设计一定会考察</p>
 ]]></content>
       <categories>
         <category>2023_Fall_人机交互</category>
@@ -5219,178 +5219,6 @@
       </tags>
   </entry>
   <entry>
-    <title>13-期末复习</title>
-    <url>/posts/20e7e86a/</url>
-    <content><![CDATA[<h1 id="1-内容组织"><a href="#1-内容组织" class="headerlink" title="1. 内容组织"></a>1. 内容组织</h1><p>软件主导硬件<br>以应用为中心</p>
-<ul>
-<li><strong>重要</strong> ，+</li>
-<li><em>不重要</em>，-</li>
-</ul>
-<h1 id="2-嵌入式系统概述"><a href="#2-嵌入式系统概述" class="headerlink" title="2. 嵌入式系统概述"></a>2. 嵌入式系统概述</h1><ol>
-<li>定义、术语</li>
-<li>组成</li>
-<li>特点</li>
-<li>分类</li>
-<li>典型应用</li>
-</ol>
-<h1 id="3-设计方法"><a href="#3-设计方法" class="headerlink" title="3. 设计方法"></a>3. 设计方法</h1><ol>
-<li>嵌入式系统设计的挑战</li>
-<li>设计目标</li>
-<li>传统的设计过程</li>
-<li><em>软硬件协同设计</em></li>
-<li><em>原型</em></li>
-</ol>
-<h1 id="4-嵌入式微处理器"><a href="#4-嵌入式微处理器" class="headerlink" title="4. 嵌入式微处理器"></a>4. 嵌入式微处理器</h1><ol>
-<li>分类</li>
-<li>特点</li>
-<li>流水线清空，分支预测技术</li>
-<li>选择微处理器的准则、步骤</li>
-</ol>
-<p>更关注那些可能会影响上层软件开发的部分<br>偏向集成/板级开发</p>
-<p><strong>考试一定会涉及，但是量不大</strong></p>
-<h1 id="5-存储器架构"><a href="#5-存储器架构" class="headerlink" title="5. 存储器架构"></a>5. 存储器架构</h1><ol>
-<li>复杂</li>
-<li><em>易失性存储器</em></li>
-<li><em>非易失性存储器</em></li>
-<li>固件、可固化（ROMable）</li>
-<li>存储器系统的层次架构</li>
-<li><em>flash</em></li>
-</ol>
-<h1 id="6-总线"><a href="#6-总线" class="headerlink" title="6. 总线"></a>6. 总线</h1><ol>
-<li>可重入</li>
-<li>竞态条件</li>
-<li>总线，常用</li>
-</ol>
-<h1 id="7-硬件部分总结与实例"><a href="#7-硬件部分总结与实例" class="headerlink" title="7. 硬件部分总结与实例+"></a>7. 硬件部分总结与实例+</h1><ol>
-<li>感知决策控制</li>
-<li>根据能力和性能，设备分类</li>
-<li>车载为例，计算平台</li>
-<li>环境感知，常用传感器</li>
-</ol>
-<h1 id="8-嵌入式软件概述"><a href="#8-嵌入式软件概述" class="headerlink" title="8. 嵌入式软件概述"></a>8. 嵌入式软件概述</h1><p>嵌入式软件和桌面软件对比<br>有关硬件的决策会对软件产生持久的影响，软件主导硬件<br>嵌入式软件系统层次架构<br><strong>为什么要对实时系统建模</strong><br><strong>实时系统</strong></p>
-<h1 id="9-嵌入式软件架构综述"><a href="#9-嵌入式软件架构综述" class="headerlink" title="9. 嵌入式软件架构综述+"></a>9. 嵌入式软件架构综述+</h1><ol>
-<li>嵌入式软件架构</li>
-<li>实时嵌入式软件常用的设计模式</li>
-<li>获取数据的设计模式</li>
-<li>RTOS应用程序中的同步（资源，活动），不同方式/设计模式</li>
-</ol>
-<h1 id="10-建模"><a href="#10-建模" class="headerlink" title="10. 建模+"></a>10. 建模+</h1><ol>
-<li>建模，设计，分析</li>
-<li>模型，特征</li>
-<li>常见的建模技术，建模语言</li>
-<li>嵌入式系统模型的用途</li>
-<li>何时对嵌入式系统建模</li>
-<li><strong>反应式系统</strong>，模型，特征<ul>
-<li>对机器人很重要</li>
-</ul>
-</li>
-<li><strong>FSM</strong>有限状态机<ul>
-<li>所有的示例都要看一下</li>
-</ul>
-</li>
-<li>层次FSM<ul>
-<li>补充常规有限状态机的局限</li>
-</ul>
-</li>
-</ol>
-<p>CPS</p>
-<h1 id="11-嵌入式操作系统概述"><a href="#11-嵌入式操作系统概述" class="headerlink" title="11. 嵌入式操作系统概述+"></a>11. 嵌入式操作系统概述+</h1><ol>
-<li>实时系统，术语，分类</li>
-<li>RTOS &amp; GPOS</li>
-<li>RTOS关键要求</li>
-<li>为何使用RTOS</li>
-<li>RTOS类别</li>
-<li><strong>物联网操作系统</strong>，要求，通用架构<ul>
-<li>与以往的嵌入式系统有一些差异</li>
-</ul>
-</li>
-</ol>
-<h1 id="12-实时调度"><a href="#12-实时调度" class="headerlink" title="12. 实时调度+"></a>12. 实时调度+</h1><ol>
-<li>实时系统所需的调度策略</li>
-<li>调度决策</li>
-<li>任务模型</li>
-<li>时限约束</li>
-<li>调度程序的度量</li>
-<li><strong>RMS、EDF及其改进</strong></li>
-<li><em>实时调度异常</em></li>
-<li><em>优先级反转，优先级继承，优先级天花板</em></li>
-</ol>
-<h1 id="13-嵌入式实时内核（结合ucOS-II和freertos）"><a href="#13-嵌入式实时内核（结合ucOS-II和freertos）" class="headerlink" title="13. 嵌入式实时内核（结合ucOS-II和freertos）-"></a>13. 嵌入式实时内核（结合ucOS-II和freertos）-</h1><ol>
-<li>实时任务调度</li>
-<li>中断时钟</li>
-<li>同步与通信</li>
-<li>存储管理（静态、动态</li>
-</ol>
-<h1 id="14-bsp-bootloader"><a href="#14-bsp-bootloader" class="headerlink" title="14. bsp,bootloader -"></a>14. bsp,bootloader -</h1><ol>
-<li>嵌入式系统启动过程</li>
-<li>bsp,特点，与bios区别</li>
-<li>引导模式</li>
-<li>bootloader及其启动过程</li>
-</ol>
-<h1 id="15-物联网概述"><a href="#15-物联网概述" class="headerlink" title="15. 物联网概述 +"></a>15. 物联网概述 +</h1><ol>
-<li>定义，术语</li>
-<li>IOT特征</li>
-<li>IOT的优势和不足</li>
-<li>应用</li>
-</ol>
-<h1 id="16-IoT技术"><a href="#16-IoT技术" class="headerlink" title="16. IoT技术 +"></a>16. IoT技术 +</h1><ol>
-<li>IoT的多样化技术环境</li>
-<li>物联网软件、硬件、连接<ul>
-<li>介绍了一些比较成熟的技术</li>
-</ul>
-</li>
-<li>进步最快的技术</li>
-<li>IoT面临的挑战</li>
-</ol>
-<h1 id="17-IoT平台"><a href="#17-IoT平台" class="headerlink" title="17. IoT平台"></a>17. IoT平台</h1><ol>
-<li>概念</li>
-<li>功能领域</li>
-</ol>
-<p>管理平台，中间件<br>纯后端系统</p>
-<h1 id="18-IoT平台关键技术"><a href="#18-IoT平台关键技术" class="headerlink" title="18. IoT平台关键技术+"></a>18. IoT平台关键技术+</h1><p>设备影子，物模型<br>边缘计算</p>
-<ol>
-<li>设备管理：主要功能，<strong>物模型</strong>、<strong>设备影子</strong>、数字孪生（概念，价值）</li>
-<li>边缘计算：基于云的IoT解决方案不足，边缘/边缘计算计算概念，优势，用途<ul>
-<li>CDN是边缘计算的落地</li>
-</ul>
-</li>
-<li>通信协议：主流技术，多协议接入方案</li>
-</ol>
-<h1 id="19-ROS"><a href="#19-ROS" class="headerlink" title="19. ROS"></a>19. ROS</h1><ol>
-<li>相关概念</li>
-<li>为何使用</li>
-</ol>
-<p>作业用到的</p>
-<h1 id="20-自动紧急制动-AEB"><a href="#20-自动紧急制动-AEB" class="headerlink" title="20. 自动紧急制动 AEB"></a>20. 自动紧急制动 AEB</h1><ol>
-<li>意义</li>
-<li>难点</li>
-<li>功能</li>
-<li>流程</li>
-<li>策略</li>
-</ol>
-<h1 id="21-PID算法及其应用"><a href="#21-PID算法及其应用" class="headerlink" title="21. PID算法及其应用"></a>21. PID算法及其应用</h1><ol>
-<li>反馈控制</li>
-<li><strong>开环控制</strong></li>
-<li><strong>闭环控制</strong></li>
-<li>PID算法</li>
-</ol>
-<h1 id="22-关键词提示"><a href="#22-关键词提示" class="headerlink" title="22. 关键词提示 +"></a>22. 关键词提示 +</h1><ol>
-<li>嵌入式：受限（资源，成本），专用，实时，可靠</li>
-<li>物联：网络连接，节能，多样/异构，安全<ul>
-<li>通信的能耗不弱于计算</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2023_Fall_嵌入式系统概论</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_嵌入式系统概论</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>9-交互式系统设计</title>
     <url>/posts/8a8cdc35/</url>
     <content><![CDATA[<h1 id="1-设计框架"><a href="#1-设计框架" class="headerlink" title="1. 设计框架"></a>1. 设计框架</h1><p>定义高层次上的屏幕布局，放置过早把重点放在小细节上。</p>
@@ -5679,106 +5507,175 @@
       </tags>
   </entry>
   <entry>
-    <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
-    <url>/posts/b48e71af/</url>
-    <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
-<li>提供消息服务的应用程序</li>
-<li>主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然</li>
-</ul>
-<h1 id="2-👍JMS"><a href="#2-👍JMS" class="headerlink" title="2. 👍JMS"></a>2. 👍JMS</h1><ul>
-<li>Java Message Service<ul>
-<li>Jms规定了ConnectionFactory、Connection、Session等接口/类</li>
-</ul>
-</li>
-<li>JMS是一个Java标准，使用消息代理（message broker）的统一API</li>
-<li>JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持</li>
-</ul>
-<p>消息代理 broker：</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png" alt="image.png"></p>
-<h1 id="3-ActiveMQ-Artemis"><a href="#3-ActiveMQ-Artemis" class="headerlink" title="3. ActiveMQ Artemis"></a>3. ActiveMQ Artemis</h1><ul>
-<li>支持协议<ul>
-<li>JMS</li>
-<li>AMQP: Advanced Message Queueing Protocol</li>
-<li>MQTT: Message Queuing Telemetry Transport</li>
-</ul>
-</li>
-<li>支持Native内存模式和JVM内存模式<ul>
-<li>Native可以绕过JVM，加快访问</li>
-</ul>
-</li>
-<li>消息持久化</li>
-</ul>
-<h2 id="3-1-直接使用JMS接口发送与接受消息"><a href="#3-1-直接使用JMS接口发送与接受消息" class="headerlink" title="3.1. 直接使用JMS接口发送与接受消息"></a>3.1. 直接使用JMS接口发送与接受消息</h2><ol>
-<li>JMS规范：jakarta.jms-api-2.0.3.jar</li>
-<li>atemis客户端：artemis-jms-client-2.17.0.jar<ul>
-<li>与Spring无关</li>
-</ul>
-</li>
-</ol>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ConnectionFactory</span> <span class="variable">connectionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ActiveMQConnectionFactory</span>(BROKER_URL, USERNAME, PASSWORD);</span><br><span class="line"><span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> connectionFactory.createConnection();</span><br><span class="line">connection.start();</span><br><span class="line"><span class="type">Session</span> <span class="variable">session</span> <span class="operator">=</span> connection.createSession(<span class="literal">false</span>, Session.AUTO_ACKNOWLEDGE);</span><br><span class="line"><span class="type">Destination</span> <span class="variable">destination</span> <span class="operator">=</span> session.createQueue(<span class="string">"queue.example"</span>);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="3-2-👍关键概念"><a href="#3-2-👍关键概念" class="headerlink" title="3.2. 👍关键概念"></a>3.2. 👍关键概念</h2><ul>
-<li>Message：类似广播, 生产端</li>
-<li>Destination：队列或主题。消费端<ul>
-<li>三种指定方式：<ol>
-<li>application.yml（default-destination）</li>
-<li>@Bean（Destination对象）</li>
-<li>直接String指定</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-JmsTemplate"><a href="#3-3-JmsTemplate" class="headerlink" title="3.3. JmsTemplate"></a>3.3. JmsTemplate</h2><ul>
-<li>JmsTemplate是Spring对JMS集成支持的核心</li>
-<li>发送的两个方法：send、convertAndSend</li>
-</ul>
-<h2 id="3-4-👍消息转换器-MessageConverter"><a href="#3-4-👍消息转换器-MessageConverter" class="headerlink" title="3.4. 👍消息转换器 MessageConverter"></a>3.4. 👍消息转换器 MessageConverter</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
+    <title>13-期末复习</title>
+    <url>/posts/20e7e86a/</url>
+    <content><![CDATA[<h1 id="1-内容组织"><a href="#1-内容组织" class="headerlink" title="1. 内容组织"></a>1. 内容组织</h1><p>软件主导硬件<br>以应用为中心</p>
 <ul>
-<li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
-<li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
-<li>typeId：目的是告诉对方是什么类型，以便于反序列化<ul>
-<li>字符串</li>
+<li><strong>重要</strong> ，+</li>
+<li><em>不重要</em>，-</li>
 </ul>
-</li>
-<li>Message.setStringProperty，随属性集传输</li>
-<li>消息转换器使用@Configuration定义成Bean</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F17-02-28-148a7c245eb17542de98c2c91efe9929-20231231170228-794f8b.png" alt="image.png"></p>
-<h2 id="3-5-接收模式"><a href="#3-5-接收模式" class="headerlink" title="3.5. 接收模式"></a>3.5. 接收模式</h2><p><strong>拉取和推送都需要消息转换器做反序列化。</strong></p>
-<h3 id="3-5-1-拉取模式-pull-model"><a href="#3-5-1-拉取模式-pull-model" class="headerlink" title="3.5.1. 拉取模式 pull model"></a>3.5.1. 拉取模式 pull model</h3><p>JmsTemplate支持<br>访问URL</p>
-<h3 id="3-5-2-推送模式-push-model"><a href="#3-5-2-推送模式-push-model" class="headerlink" title="3.5.2. 推送模式 push model"></a>3.5.2. 推送模式 push model</h3><p>需要定义消息监听器<br>@JmsListener</p>
-<h1 id="4-RabbitMQ"><a href="#4-RabbitMQ" class="headerlink" title="4. RabbitMQ"></a>4. RabbitMQ</h1><p><strong>实现AMQP协议</strong>。<br>RabbitMQ基础概念详细介绍：<a class="link" href="https://www.cnblogs.com/williamjie/p/9481774.html">RabbitMQ基础概念详细介绍 - 割肉机 - 博客园 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>也需要消息转换器，虽然包路径不一样，但是功能一样。</p>
-<h2 id="4-1-👍概念"><a href="#4-1-👍概念" class="headerlink" title="4.1. 👍概念"></a>4.1. 👍概念</h2><ul>
-<li>ConnectionFactory、Connection、Channel</li>
-<li>Exchange：<ul>
-<li>Default、Direct、Topic、Fanout、Headers、Dead letter</li>
-</ul>
-</li>
-<li>Queue</li>
-<li>Routing key：exchange根据routing key确定消息发往哪个队列<ul>
-<li><strong>JMS里没有这个概念</strong></li>
-</ul>
-</li>
-<li>Binding key</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F20-31-55-d57a847ec3e2d2ed48f59f6b49ec2e0c-20231116203155-0bdbb4.png" alt="image.png"></p>
-<h2 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2. 使用"></a>4.2. 使用</h2><ol>
-<li>添加依赖</li>
-<li>配置文件</li>
-<li>需要到控制台创建exchange，queue，binding</li>
+<h1 id="2-嵌入式系统概述"><a href="#2-嵌入式系统概述" class="headerlink" title="2. 嵌入式系统概述"></a>2. 嵌入式系统概述</h1><ol>
+<li>定义、术语</li>
+<li>组成</li>
+<li>特点</li>
+<li>分类</li>
+<li>典型应用</li>
 </ol>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">rabbitmq:</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">template:</span></span><br><span class="line"><span class="attr">exchange:</span> <span class="string">tacocloud.order</span></span><br></pre></td></tr></table></figure></div>
-
-<p>生产放指定exchange、routing key<br>消费方只需关注队列名字</p>
-<p>也有拉取模式和推送模式，也需要消息的转换</p>
+<h1 id="3-设计方法"><a href="#3-设计方法" class="headerlink" title="3. 设计方法"></a>3. 设计方法</h1><ol>
+<li>嵌入式系统设计的挑战</li>
+<li>设计目标</li>
+<li>传统的设计过程</li>
+<li><em>软硬件协同设计</em></li>
+<li><em>原型</em></li>
+</ol>
+<h1 id="4-嵌入式微处理器"><a href="#4-嵌入式微处理器" class="headerlink" title="4. 嵌入式微处理器"></a>4. 嵌入式微处理器</h1><ol>
+<li>分类</li>
+<li>特点</li>
+<li>流水线清空，分支预测技术</li>
+<li>选择微处理器的准则、步骤</li>
+</ol>
+<p>更关注那些可能会影响上层软件开发的部分<br>偏向集成/板级开发</p>
+<p><strong>考试一定会涉及，但是量不大</strong></p>
+<h1 id="5-存储器架构"><a href="#5-存储器架构" class="headerlink" title="5. 存储器架构"></a>5. 存储器架构</h1><ol>
+<li>复杂</li>
+<li><em>易失性存储器</em></li>
+<li><em>非易失性存储器</em></li>
+<li>固件、可固化（ROMable）</li>
+<li>存储器系统的层次架构</li>
+<li><em>flash</em></li>
+</ol>
+<h1 id="6-总线"><a href="#6-总线" class="headerlink" title="6. 总线"></a>6. 总线</h1><ol>
+<li>可重入</li>
+<li>竞态条件</li>
+<li>总线，常用</li>
+</ol>
+<h1 id="7-硬件部分总结与实例"><a href="#7-硬件部分总结与实例" class="headerlink" title="7. 硬件部分总结与实例+"></a>7. 硬件部分总结与实例+</h1><ol>
+<li>感知决策控制</li>
+<li>根据能力和性能，设备分类</li>
+<li>车载为例，计算平台</li>
+<li>环境感知，常用传感器</li>
+</ol>
+<h1 id="8-嵌入式软件概述"><a href="#8-嵌入式软件概述" class="headerlink" title="8. 嵌入式软件概述"></a>8. 嵌入式软件概述</h1><p>嵌入式软件和桌面软件对比<br>有关硬件的决策会对软件产生持久的影响，软件主导硬件<br>嵌入式软件系统层次架构<br><strong>为什么要对实时系统建模</strong><br><strong>实时系统</strong></p>
+<h1 id="9-嵌入式软件架构综述"><a href="#9-嵌入式软件架构综述" class="headerlink" title="9. 嵌入式软件架构综述+"></a>9. 嵌入式软件架构综述+</h1><ol>
+<li>嵌入式软件架构</li>
+<li>实时嵌入式软件常用的设计模式</li>
+<li>获取数据的设计模式</li>
+<li>RTOS应用程序中的同步（资源，活动），不同方式/设计模式</li>
+</ol>
+<h1 id="10-建模"><a href="#10-建模" class="headerlink" title="10. 建模+"></a>10. 建模+</h1><ol>
+<li>建模，设计，分析</li>
+<li>模型，特征</li>
+<li>常见的建模技术，建模语言</li>
+<li>嵌入式系统模型的用途</li>
+<li>何时对嵌入式系统建模</li>
+<li><strong>反应式系统</strong>，模型，特征<ul>
+<li>对机器人很重要</li>
+</ul>
+</li>
+<li><strong>FSM</strong>有限状态机<ul>
+<li>所有的示例都要看一下</li>
+</ul>
+</li>
+<li>层次FSM<ul>
+<li>补充常规有限状态机的局限</li>
+</ul>
+</li>
+</ol>
+<p>CPS</p>
+<h1 id="11-嵌入式操作系统概述"><a href="#11-嵌入式操作系统概述" class="headerlink" title="11. 嵌入式操作系统概述+"></a>11. 嵌入式操作系统概述+</h1><ol>
+<li>实时系统，术语，分类</li>
+<li>RTOS &amp; GPOS</li>
+<li>RTOS关键要求</li>
+<li>为何使用RTOS</li>
+<li>RTOS类别</li>
+<li><strong>物联网操作系统</strong>，要求，通用架构<ul>
+<li>与以往的嵌入式系统有一些差异</li>
+</ul>
+</li>
+</ol>
+<h1 id="12-实时调度"><a href="#12-实时调度" class="headerlink" title="12. 实时调度+"></a>12. 实时调度+</h1><ol>
+<li>实时系统所需的调度策略</li>
+<li>调度决策</li>
+<li>任务模型</li>
+<li>时限约束</li>
+<li>调度程序的度量</li>
+<li><strong>RMS、EDF及其改进</strong></li>
+<li><em>实时调度异常</em></li>
+<li><em>优先级反转，优先级继承，优先级天花板</em></li>
+</ol>
+<h1 id="13-嵌入式实时内核（结合ucOS-II和freertos）"><a href="#13-嵌入式实时内核（结合ucOS-II和freertos）" class="headerlink" title="13. 嵌入式实时内核（结合ucOS-II和freertos）-"></a>13. 嵌入式实时内核（结合ucOS-II和freertos）-</h1><ol>
+<li>实时任务调度</li>
+<li>中断时钟</li>
+<li>同步与通信</li>
+<li>存储管理（静态、动态</li>
+</ol>
+<h1 id="14-bsp-bootloader"><a href="#14-bsp-bootloader" class="headerlink" title="14. bsp,bootloader -"></a>14. bsp,bootloader -</h1><ol>
+<li>嵌入式系统启动过程</li>
+<li>bsp,特点，与bios区别</li>
+<li>引导模式</li>
+<li>bootloader及其启动过程</li>
+</ol>
+<h1 id="15-物联网概述"><a href="#15-物联网概述" class="headerlink" title="15. 物联网概述 +"></a>15. 物联网概述 +</h1><ol>
+<li>定义，术语</li>
+<li>IOT特征</li>
+<li>IOT的优势和不足</li>
+<li>应用</li>
+</ol>
+<h1 id="16-IoT技术"><a href="#16-IoT技术" class="headerlink" title="16. IoT技术 +"></a>16. IoT技术 +</h1><ol>
+<li>IoT的多样化技术环境</li>
+<li>物联网软件、硬件、连接<ul>
+<li>介绍了一些比较成熟的技术</li>
+</ul>
+</li>
+<li>进步最快的技术</li>
+<li>IoT面临的挑战</li>
+</ol>
+<h1 id="17-IoT平台"><a href="#17-IoT平台" class="headerlink" title="17. IoT平台"></a>17. IoT平台</h1><ol>
+<li>概念</li>
+<li>功能领域</li>
+</ol>
+<p>管理平台，中间件<br>纯后端系统</p>
+<h1 id="18-IoT平台关键技术"><a href="#18-IoT平台关键技术" class="headerlink" title="18. IoT平台关键技术+"></a>18. IoT平台关键技术+</h1><p>设备影子，物模型<br>边缘计算</p>
+<ol>
+<li>设备管理：主要功能，<strong>物模型</strong>、<strong>设备影子</strong>、数字孪生（概念，价值）</li>
+<li>边缘计算：基于云的IoT解决方案不足，边缘/边缘计算计算概念，优势，用途<ul>
+<li>CDN是边缘计算的落地</li>
+</ul>
+</li>
+<li>通信协议：主流技术，多协议接入方案</li>
+</ol>
+<h1 id="19-ROS"><a href="#19-ROS" class="headerlink" title="19. ROS"></a>19. ROS</h1><ol>
+<li>相关概念</li>
+<li>为何使用</li>
+</ol>
+<p>作业用到的</p>
+<h1 id="20-自动紧急制动-AEB"><a href="#20-自动紧急制动-AEB" class="headerlink" title="20. 自动紧急制动 AEB"></a>20. 自动紧急制动 AEB</h1><ol>
+<li>意义</li>
+<li>难点</li>
+<li>功能</li>
+<li>流程</li>
+<li>策略</li>
+</ol>
+<h1 id="21-PID算法及其应用"><a href="#21-PID算法及其应用" class="headerlink" title="21. PID算法及其应用"></a>21. PID算法及其应用</h1><ol>
+<li>反馈控制</li>
+<li><strong>开环控制</strong></li>
+<li><strong>闭环控制</strong></li>
+<li>PID算法</li>
+</ol>
+<h1 id="22-关键词提示"><a href="#22-关键词提示" class="headerlink" title="22. 关键词提示 +"></a>22. 关键词提示 +</h1><ol>
+<li>嵌入式：受限（资源，成本），专用，实时，可靠</li>
+<li>物联：网络连接，节能，多样/异构，安全<ul>
+<li>通信的能耗不弱于计算</li>
+</ul>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>2023_Fall_服务端开发</category>
+        <category>2023_Fall_嵌入式系统概论</category>
       </categories>
       <tags>
         <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
+        <tag>2023_Fall_嵌入式系统概论</tag>
       </tags>
   </entry>
   <entry>
@@ -5953,6 +5850,109 @@
 <li><code>T getProperty（String key, Class type, T defaultValue</code>）</li>
 </ul>
 <h2 id="6-2-使用占位符"><a href="#6-2-使用占位符" class="headerlink" title="6.2. 使用占位符"></a>6.2. 使用占位符</h2><p><code>${...}</code></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
+    <url>/posts/b48e71af/</url>
+    <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
+<li>提供消息服务的应用程序</li>
+<li>主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然</li>
+</ul>
+<h1 id="2-👍JMS"><a href="#2-👍JMS" class="headerlink" title="2. 👍JMS"></a>2. 👍JMS</h1><ul>
+<li>Java Message Service<ul>
+<li>Jms规定了ConnectionFactory、Connection、Session等接口/类</li>
+</ul>
+</li>
+<li>JMS是一个Java标准，使用消息代理（message broker）的统一API</li>
+<li>JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持</li>
+</ul>
+<p>消息代理 broker：</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png" alt="image.png"></p>
+<h1 id="3-ActiveMQ-Artemis"><a href="#3-ActiveMQ-Artemis" class="headerlink" title="3. ActiveMQ Artemis"></a>3. ActiveMQ Artemis</h1><ul>
+<li>支持协议<ul>
+<li>JMS</li>
+<li>AMQP: Advanced Message Queueing Protocol</li>
+<li>MQTT: Message Queuing Telemetry Transport</li>
+</ul>
+</li>
+<li>支持Native内存模式和JVM内存模式<ul>
+<li>Native可以绕过JVM，加快访问</li>
+</ul>
+</li>
+<li>消息持久化</li>
+</ul>
+<h2 id="3-1-直接使用JMS接口发送与接受消息"><a href="#3-1-直接使用JMS接口发送与接受消息" class="headerlink" title="3.1. 直接使用JMS接口发送与接受消息"></a>3.1. 直接使用JMS接口发送与接受消息</h2><ol>
+<li>JMS规范：jakarta.jms-api-2.0.3.jar</li>
+<li>atemis客户端：artemis-jms-client-2.17.0.jar<ul>
+<li>与Spring无关</li>
+</ul>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ConnectionFactory</span> <span class="variable">connectionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ActiveMQConnectionFactory</span>(BROKER_URL, USERNAME, PASSWORD);</span><br><span class="line"><span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> connectionFactory.createConnection();</span><br><span class="line">connection.start();</span><br><span class="line"><span class="type">Session</span> <span class="variable">session</span> <span class="operator">=</span> connection.createSession(<span class="literal">false</span>, Session.AUTO_ACKNOWLEDGE);</span><br><span class="line"><span class="type">Destination</span> <span class="variable">destination</span> <span class="operator">=</span> session.createQueue(<span class="string">"queue.example"</span>);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="3-2-👍关键概念"><a href="#3-2-👍关键概念" class="headerlink" title="3.2. 👍关键概念"></a>3.2. 👍关键概念</h2><ul>
+<li>Message：类似广播, 生产端</li>
+<li>Destination：队列或主题。消费端<ul>
+<li>三种指定方式：<ol>
+<li>application.yml（default-destination）</li>
+<li>@Bean（Destination对象）</li>
+<li>直接String指定</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-JmsTemplate"><a href="#3-3-JmsTemplate" class="headerlink" title="3.3. JmsTemplate"></a>3.3. JmsTemplate</h2><ul>
+<li>JmsTemplate是Spring对JMS集成支持的核心</li>
+<li>发送的两个方法：send、convertAndSend</li>
+</ul>
+<h2 id="3-4-👍消息转换器-MessageConverter"><a href="#3-4-👍消息转换器-MessageConverter" class="headerlink" title="3.4. 👍消息转换器 MessageConverter"></a>3.4. 👍消息转换器 MessageConverter</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
+<ul>
+<li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
+<li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
+<li>typeId：目的是告诉对方是什么类型，以便于反序列化<ul>
+<li>字符串</li>
+</ul>
+</li>
+<li>Message.setStringProperty，随属性集传输</li>
+<li>消息转换器使用@Configuration定义成Bean</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F17-02-28-148a7c245eb17542de98c2c91efe9929-20231231170228-794f8b.png" alt="image.png"></p>
+<h2 id="3-5-接收模式"><a href="#3-5-接收模式" class="headerlink" title="3.5. 接收模式"></a>3.5. 接收模式</h2><p><strong>拉取和推送都需要消息转换器做反序列化。</strong></p>
+<h3 id="3-5-1-拉取模式-pull-model"><a href="#3-5-1-拉取模式-pull-model" class="headerlink" title="3.5.1. 拉取模式 pull model"></a>3.5.1. 拉取模式 pull model</h3><p>JmsTemplate支持<br>访问URL</p>
+<h3 id="3-5-2-推送模式-push-model"><a href="#3-5-2-推送模式-push-model" class="headerlink" title="3.5.2. 推送模式 push model"></a>3.5.2. 推送模式 push model</h3><p>需要定义消息监听器<br>@JmsListener</p>
+<h1 id="4-RabbitMQ"><a href="#4-RabbitMQ" class="headerlink" title="4. RabbitMQ"></a>4. RabbitMQ</h1><p><strong>实现AMQP协议</strong>。<br>RabbitMQ基础概念详细介绍：<a class="link" href="https://www.cnblogs.com/williamjie/p/9481774.html">RabbitMQ基础概念详细介绍 - 割肉机 - 博客园 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>也需要消息转换器，虽然包路径不一样，但是功能一样。</p>
+<h2 id="4-1-👍概念"><a href="#4-1-👍概念" class="headerlink" title="4.1. 👍概念"></a>4.1. 👍概念</h2><ul>
+<li>ConnectionFactory、Connection、Channel</li>
+<li>Exchange：<ul>
+<li>Default、Direct、Topic、Fanout、Headers、Dead letter</li>
+</ul>
+</li>
+<li>Queue</li>
+<li>Routing key：exchange根据routing key确定消息发往哪个队列<ul>
+<li><strong>JMS里没有这个概念</strong></li>
+</ul>
+</li>
+<li>Binding key</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F20-31-55-d57a847ec3e2d2ed48f59f6b49ec2e0c-20231116203155-0bdbb4.png" alt="image.png"></p>
+<h2 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2. 使用"></a>4.2. 使用</h2><ol>
+<li>添加依赖</li>
+<li>配置文件</li>
+<li>需要到控制台创建exchange，queue，binding</li>
+</ol>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">rabbitmq:</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">template:</span></span><br><span class="line"><span class="attr">exchange:</span> <span class="string">tacocloud.order</span></span><br></pre></td></tr></table></figure></div>
+
+<p>生产放指定exchange、routing key<br>消费方只需关注队列名字</p>
+<p>也有拉取模式和推送模式，也需要消息的转换</p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -6799,6 +6799,121 @@
       </tags>
   </entry>
   <entry>
+    <title>3-Spring MVC</title>
+    <url>/posts/c5191f2c/</url>
+    <content><![CDATA[<h1 id="1-👍基本概念"><a href="#1-👍基本概念" class="headerlink" title="1. 👍基本概念"></a>1. 👍基本概念</h1><p><strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller</p>
+<ul>
+<li>模型model：存储内容，指数据、领域类</li>
+<li>控制器controller：处理用户输入，客户端的请求</li>
+<li>视图view：显示内容</li>
+</ul>
+<p>lombok在编译器自动生成一些样板代码，运行期没用。<br><code>@Slf4j</code>是lombok提供的注解。<br><code>slf4j</code>是一个日志标准，具体实现有很多，如logback,log4j等。<br><code>lombok</code>插件<code>@Data</code>注解</p>
+<p>目前主流的是前后端分离开发。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F11-21-23-58e755321af999ee54aaca9812997e0a-20231231112122-1cafd2.png" alt="image.png"></p>
+<h1 id="2-Model-领域类"><a href="#2-Model-领域类" class="headerlink" title="2. Model 领域类"></a>2. Model 领域类</h1><p>为视图提供数据。</p>
+<ul>
+<li><code>@ModelAttribute</code></li>
+<li><code>@SessionAttributes</code><ul>
+<li>Model属性会复制到<strong>Servlet Request</strong>属性中，这样视图中就可以使用它们用于渲染页面</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-1-Servlet规范"><a href="#2-1-Servlet规范" class="headerlink" title="2.1. Servlet规范"></a>2.1. Servlet规范</h2><ul>
+<li>最小开发单元</li>
+<li><strong>Web容器的实现规范</strong>，与Spring无关<ul>
+<li>Web容器/服务器，里面放Servlet对象</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>tomcat</li>
+<li>jetty</li>
+</ul>
+</li>
+</ul>
+<p><strong>thymeleaf</strong>与<strong>Servlet request</strong>属性协作，<font color="#ff0000">与spring model解耦</font></p>
+<h3 id="2-1-1-Servlet对象"><a href="#2-1-1-Servlet对象" class="headerlink" title="2.1.1. Servlet对象"></a>2.1.1. Servlet对象</h3><ul>
+<li>类型<ul>
+<li>Request</li>
+<li>Response</li>
+</ul>
+</li>
+<li>Servlet对象带有属性(property即<strong>key-value</strong>)</li>
+</ul>
+<h2 id="2-2-ModelAttribute"><a href="#2-2-ModelAttribute" class="headerlink" title="2.2. ModelAttribute"></a>2.2. ModelAttribute</h2><ul>
+<li><code>@ModelAttribute(name = &lt;key&gt;)</code><ul>
+<li>注解返回值为<code>value</code></li>
+</ul>
+</li>
+<li>方法被Spring自动调用</li>
+</ul>
+<h3 id="2-2-1-方法级别"><a href="#2-2-1-方法级别" class="headerlink" title="2.2.1. 方法级别"></a>2.2.1. 方法级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ModelAttribute("attributeName")</span></span><br><span class="line"><span class="keyword">public</span> SomeObject <span class="title function_">methodName</span><span class="params">()</span> {</span><br><span class="line">    <span class="comment">// 创建并返回 SomeObject 对象</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>方法的返回值将被添加到模型中，并使用指定的属性名作为key。在控制器处理请求之前，该方法会先被调用。</p>
+<h3 id="2-2-2-参数级别"><a href="#2-2-2-参数级别" class="headerlink" title="2.2.2. 参数级别"></a>2.2.2. 参数级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute("attributeName")</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>在这种写法中，<code>@ModelAttribute</code>注解标记在方法的参数上，指定了要从模型中获取的属性的名称。参数将被自动绑定到模型中的相应属性，以便在方法内部使用。</p>
+<h3 id="2-2-3-默认命名规则"><a href="#2-2-3-默认命名规则" class="headerlink" title="2.2.3. 默认命名规则"></a>2.2.3. 默认命名规则</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>如果没有指定<code>@ModelAttribute</code>注解的属性名称，Spring MVC会根据参数类型自动推断属性名称，并将其添加到模型中。<br>在上面的示例中，<code>SomeObject</code>类型的参数将使用类名的首字母小写作为属性名称。</p>
+<h1 id="3-MVC请求"><a href="#3-MVC请求" class="headerlink" title="3. MVC请求"></a>3. MVC请求</h1><h2 id="3-1-👍处理过程"><a href="#3-1-👍处理过程" class="headerlink" title="3.1. 👍处理过程"></a>3.1. 👍处理过程</h2><p>客户端请求在<strong>后端的处理过程</strong>，非常重要。<br><strong>核心DispatcherServlet</strong>，是Spring自己实现的Servlet容器。</p>
+<ol>
+<li>Web容器开发的基本单元是Servlet，请求先到servlet。</li>
+<li>mapping根据url把请求转到controller，其中spring框架会做参数解析。</li>
+<li>controller拿到请求和请求参数，把请求和请求参数传给业务层</li>
+<li>业务层处理业务逻辑，可能会做数据持久化访问DAO层</li>
+<li>业务层把处理结构返回控制器</li>
+<li>控制器把结果放回给servlet</li>
+<li>servlet拿到了数据和逻辑视图名，找到视图解析器的第三方库</li>
+<li>视图解析器渲染视图</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png" alt="Screenshot from 2023-10-07 18-38-55"></p>
+<h2 id="3-2-MVC请求映射"><a href="#3-2-MVC请求映射" class="headerlink" title="3.2. MVC请求映射"></a>3.2. MVC请求映射</h2><p>来自http协议的标准。<br>注解可以放在类定义上方，也可以放在方法上方。</p>
+<ul>
+<li><code>Requestmapping</code></li>
+<li><code>GetMapping</code></li>
+<li><code>PostMapping</code></li>
+<li><code>DeleteMapping</code></li>
+<li><code>PatchMapping</code></li>
+<li><code>PutMapping</code></li>
+</ul>
+<h2 id="3-3-👍重定向"><a href="#3-3-👍重定向" class="headerlink" title="3.3. 👍重定向"></a>3.3. 👍重定向</h2><p>控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url</p>
+<ul>
+<li>http状态码：302</li>
+<li>控制器<code>return redirect:&lt;url&gt;</code></li>
+</ul>
+<h2 id="3-4-👍Spring-MVC获取参数的集中方式"><a href="#3-4-👍Spring-MVC获取参数的集中方式" class="headerlink" title="3.4. 👍Spring MVC获取参数的集中方式"></a>3.4. 👍Spring MVC获取参数的集中方式</h2><ol>
+<li>表单(form)参数，转成model<ul>
+<li>成员类型可能要自己实现Converter进行转换</li>
+<li>可以用<code>@Valid</code>校验</li>
+<li>form是html里定义的</li>
+</ul>
+</li>
+<li>路径参数<ul>
+<li><code>@PathVariable</code></li>
+<li>例：<code>/book/{id}</code></li>
+</ul>
+</li>
+<li>请求参数/查询参数<ul>
+<li><code>@RequestParam</code></li>
+<li>例：<code>/challenge?model=2</code></li>
+</ul>
+</li>
+<li>json请求体<ul>
+<li><code>@RequestBody</code>，会用到HttpMessageConverter消息转换器</li>
+<li>Rest API</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2-面向切面编程</title>
     <url>/posts/e2853af6/</url>
     <content><![CDATA[<h1 id="1-软件编程方法"><a href="#1-软件编程方法" class="headerlink" title="1. 软件编程方法"></a>1. 软件编程方法</h1><ul>
@@ -7196,121 +7311,6 @@
         <tag>2023_Fall_服务端开发</tag>
         <tag>关系型数据库</tag>
         <tag>Spring_Data</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3-Spring MVC</title>
-    <url>/posts/c5191f2c/</url>
-    <content><![CDATA[<h1 id="1-👍基本概念"><a href="#1-👍基本概念" class="headerlink" title="1. 👍基本概念"></a>1. 👍基本概念</h1><p><strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller</p>
-<ul>
-<li>模型model：存储内容，指数据、领域类</li>
-<li>控制器controller：处理用户输入，客户端的请求</li>
-<li>视图view：显示内容</li>
-</ul>
-<p>lombok在编译器自动生成一些样板代码，运行期没用。<br><code>@Slf4j</code>是lombok提供的注解。<br><code>slf4j</code>是一个日志标准，具体实现有很多，如logback,log4j等。<br><code>lombok</code>插件<code>@Data</code>注解</p>
-<p>目前主流的是前后端分离开发。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F11-21-23-58e755321af999ee54aaca9812997e0a-20231231112122-1cafd2.png" alt="image.png"></p>
-<h1 id="2-Model-领域类"><a href="#2-Model-领域类" class="headerlink" title="2. Model 领域类"></a>2. Model 领域类</h1><p>为视图提供数据。</p>
-<ul>
-<li><code>@ModelAttribute</code></li>
-<li><code>@SessionAttributes</code><ul>
-<li>Model属性会复制到<strong>Servlet Request</strong>属性中，这样视图中就可以使用它们用于渲染页面</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-1-Servlet规范"><a href="#2-1-Servlet规范" class="headerlink" title="2.1. Servlet规范"></a>2.1. Servlet规范</h2><ul>
-<li>最小开发单元</li>
-<li><strong>Web容器的实现规范</strong>，与Spring无关<ul>
-<li>Web容器/服务器，里面放Servlet对象</li>
-</ul>
-</li>
-<li>实现<ul>
-<li>tomcat</li>
-<li>jetty</li>
-</ul>
-</li>
-</ul>
-<p><strong>thymeleaf</strong>与<strong>Servlet request</strong>属性协作，<font color="#ff0000">与spring model解耦</font></p>
-<h3 id="2-1-1-Servlet对象"><a href="#2-1-1-Servlet对象" class="headerlink" title="2.1.1. Servlet对象"></a>2.1.1. Servlet对象</h3><ul>
-<li>类型<ul>
-<li>Request</li>
-<li>Response</li>
-</ul>
-</li>
-<li>Servlet对象带有属性(property即<strong>key-value</strong>)</li>
-</ul>
-<h2 id="2-2-ModelAttribute"><a href="#2-2-ModelAttribute" class="headerlink" title="2.2. ModelAttribute"></a>2.2. ModelAttribute</h2><ul>
-<li><code>@ModelAttribute(name = &lt;key&gt;)</code><ul>
-<li>注解返回值为<code>value</code></li>
-</ul>
-</li>
-<li>方法被Spring自动调用</li>
-</ul>
-<h3 id="2-2-1-方法级别"><a href="#2-2-1-方法级别" class="headerlink" title="2.2.1. 方法级别"></a>2.2.1. 方法级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ModelAttribute("attributeName")</span></span><br><span class="line"><span class="keyword">public</span> SomeObject <span class="title function_">methodName</span><span class="params">()</span> {</span><br><span class="line">    <span class="comment">// 创建并返回 SomeObject 对象</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>方法的返回值将被添加到模型中，并使用指定的属性名作为key。在控制器处理请求之前，该方法会先被调用。</p>
-<h3 id="2-2-2-参数级别"><a href="#2-2-2-参数级别" class="headerlink" title="2.2.2. 参数级别"></a>2.2.2. 参数级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute("attributeName")</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>在这种写法中，<code>@ModelAttribute</code>注解标记在方法的参数上，指定了要从模型中获取的属性的名称。参数将被自动绑定到模型中的相应属性，以便在方法内部使用。</p>
-<h3 id="2-2-3-默认命名规则"><a href="#2-2-3-默认命名规则" class="headerlink" title="2.2.3. 默认命名规则"></a>2.2.3. 默认命名规则</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>如果没有指定<code>@ModelAttribute</code>注解的属性名称，Spring MVC会根据参数类型自动推断属性名称，并将其添加到模型中。<br>在上面的示例中，<code>SomeObject</code>类型的参数将使用类名的首字母小写作为属性名称。</p>
-<h1 id="3-MVC请求"><a href="#3-MVC请求" class="headerlink" title="3. MVC请求"></a>3. MVC请求</h1><h2 id="3-1-👍处理过程"><a href="#3-1-👍处理过程" class="headerlink" title="3.1. 👍处理过程"></a>3.1. 👍处理过程</h2><p>客户端请求在<strong>后端的处理过程</strong>，非常重要。<br><strong>核心DispatcherServlet</strong>，是Spring自己实现的Servlet容器。</p>
-<ol>
-<li>Web容器开发的基本单元是Servlet，请求先到servlet。</li>
-<li>mapping根据url把请求转到controller，其中spring框架会做参数解析。</li>
-<li>controller拿到请求和请求参数，把请求和请求参数传给业务层</li>
-<li>业务层处理业务逻辑，可能会做数据持久化访问DAO层</li>
-<li>业务层把处理结构返回控制器</li>
-<li>控制器把结果放回给servlet</li>
-<li>servlet拿到了数据和逻辑视图名，找到视图解析器的第三方库</li>
-<li>视图解析器渲染视图</li>
-</ol>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png" alt="Screenshot from 2023-10-07 18-38-55"></p>
-<h2 id="3-2-MVC请求映射"><a href="#3-2-MVC请求映射" class="headerlink" title="3.2. MVC请求映射"></a>3.2. MVC请求映射</h2><p>来自http协议的标准。<br>注解可以放在类定义上方，也可以放在方法上方。</p>
-<ul>
-<li><code>Requestmapping</code></li>
-<li><code>GetMapping</code></li>
-<li><code>PostMapping</code></li>
-<li><code>DeleteMapping</code></li>
-<li><code>PatchMapping</code></li>
-<li><code>PutMapping</code></li>
-</ul>
-<h2 id="3-3-👍重定向"><a href="#3-3-👍重定向" class="headerlink" title="3.3. 👍重定向"></a>3.3. 👍重定向</h2><p>控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url</p>
-<ul>
-<li>http状态码：302</li>
-<li>控制器<code>return redirect:&lt;url&gt;</code></li>
-</ul>
-<h2 id="3-4-👍Spring-MVC获取参数的集中方式"><a href="#3-4-👍Spring-MVC获取参数的集中方式" class="headerlink" title="3.4. 👍Spring MVC获取参数的集中方式"></a>3.4. 👍Spring MVC获取参数的集中方式</h2><ol>
-<li>表单(form)参数，转成model<ul>
-<li>成员类型可能要自己实现Converter进行转换</li>
-<li>可以用<code>@Valid</code>校验</li>
-<li>form是html里定义的</li>
-</ul>
-</li>
-<li>路径参数<ul>
-<li><code>@PathVariable</code></li>
-<li>例：<code>/book/{id}</code></li>
-</ul>
-</li>
-<li>请求参数/查询参数<ul>
-<li><code>@RequestParam</code></li>
-<li>例：<code>/challenge?model=2</code></li>
-</ul>
-</li>
-<li>json请求体<ul>
-<li><code>@RequestBody</code>，会用到HttpMessageConverter消息转换器</li>
-<li>Rest API</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -8593,92 +8593,6 @@
       </tags>
   </entry>
   <entry>
-    <title>13-考试复习</title>
-    <url>/posts/6b745d1d/</url>
-    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><ul>
-<li>基本概念<ul>
-<li>分类</li>
-<li>回归</li>
-<li>维数灾难</li>
-<li>欠拟合</li>
-<li>过拟合</li>
-<li>…</li>
-</ul>
-</li>
-</ul>
-<p>评价指标[[2023Fall/机器学习/0-introduction#2.2. 评价指标|0-introduction]]<br>距离度量函数<br>计算度量<br>生成式/判别式模型</p>
-<h1 id="2-👍KNN"><a href="#2-👍KNN" class="headerlink" title="2. 👍KNN"></a>2. 👍KNN</h1><p>KNN思想、概念、算法流程</p>
-<p>降低计算复杂度，大概看一下</p>
-<h1 id="3-👍无监督学习"><a href="#3-👍无监督学习" class="headerlink" title="3. 👍无监督学习"></a>3. 👍无监督学习</h1><p>聚类概念<br>聚类准则：聚类好坏判断，度量</p>
-<p>三类聚类方法</p>
-<p><strong>k-means</strong></p>
-<p>评价指标</p>
-<h1 id="4-树学习"><a href="#4-树学习" class="headerlink" title="4. 树学习"></a>4. 树学习</h1><p>概念</p>
-<ul>
-<li><strong>决策树</strong><ul>
-<li>构造</li>
-<li>构造时如何选择节点<ul>
-<li>熵，信息增益</li>
-<li>ID3：熵</li>
-<li>C4.5：信息增益</li>
-<li>CART: Gini指数</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="5-集成学习"><a href="#5-集成学习" class="headerlink" title="5. 集成学习"></a>5. 集成学习</h1><p>集成学习的原理，怎么不同的弱分类器结合成强分类器</p>
-<p>Bias-Variance tradeoff</p>
-<p>基本的集成学习方法原理：Bagging, Boosting<br>比较难的几个看一看就行</p>
-<h1 id="6-概率学习"><a href="#6-概率学习" class="headerlink" title="6. 概率学习"></a>6. 概率学习</h1><p>概率学习</p>
-<ul>
-<li>高斯混合模型</li>
-<li>基本概念<ul>
-<li>带约束的数学优化问题</li>
-<li>不带约束的最小二乘优化问题</li>
-</ul>
-</li>
-</ul>
-<p>最大似然估计，期望最大化<br>理论推导不要求</p>
-<h1 id="7-svm"><a href="#7-svm" class="headerlink" title="7. svm"></a>7. svm</h1><p>传统机器学习里最代表性的算法<br>不会考推导</p>
-<p>除了二分类、线性，非线性也需要了解</p>
-<h1 id="8-神经元"><a href="#8-神经元" class="headerlink" title="8. 神经元"></a>8. 神经元</h1><p>神经元</p>
-<p>一些基本概念</p>
-<p>感知机</p>
-<h1 id="9-神经网络"><a href="#9-神经网络" class="headerlink" title="9. 神经网络"></a>9. 神经网络</h1><p>神经网络需要深入掌握</p>
-<p>输入，隐藏层，输出层</p>
-<p><strong>前向，反向传播计算</strong></p>
-<h1 id="10-深度学习"><a href="#10-深度学习" class="headerlink" title="10. 深度学习"></a>10. 深度学习</h1><p>近现代的<strong>卷积</strong></p>
-<p>核心概念，关键模块</p>
-<h1 id="11-演化学习"><a href="#11-演化学习" class="headerlink" title="11. 演化学习"></a>11. 演化学习</h1><p>典型的遗传算法，</p>
-<p>遗传的变异、选择</p>
-<p>模式理论大概了解即可</p>
-<h1 id="12-维度约简"><a href="#12-维度约简" class="headerlink" title="12. 维度约简"></a>12. 维度约简</h1><ul>
-<li><strong>降维算法</strong><ul>
-<li>LDA</li>
-<li>PCA</li>
-<li>ICA</li>
-</ul>
-</li>
-</ul>
-<h1 id="13-强化学习"><a href="#13-强化学习" class="headerlink" title="13. 强化学习"></a>13. 强化学习</h1><p>一定会出现</p>
-<p><strong>MDP</strong><br>动态规划</p>
-<p>探索<br>值函数、奖赏、测略</p>
-<p>基于模型，不基于模型</p>
-<p>Morte Carle方法<br>时间差分</p>
-<p>Bootsraps<br>Sampling</p>
-<p>Q-learning<br>TD</p>
-<p>epsiode的概念</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_机器学习</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>12-强化学习</title>
     <url>/posts/133f1f9d/</url>
     <content><![CDATA[<h1 id="1-起源"><a href="#1-起源" class="headerlink" title="1. 起源"></a>1. 起源</h1><p>强化学习：不是数据驱动而是和环境的交互驱动，奖惩和试错(Trial and Error）</p>
@@ -8929,6 +8843,92 @@
 </ul>
 <h2 id="4-6-N步回退学习"><a href="#4-6-N步回退学习" class="headerlink" title="4.6. N步回退学习"></a>4.6. N步回退学习</h2><p>可以将多个R平均，形成新的R</p>
 <h2 id="4-7-TD-λ"><a href="#4-7-TD-λ" class="headerlink" title="4.7. TD(λ)"></a>4.7. TD(λ)</h2><p>对历史上的s更新</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_机器学习</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>13-考试复习</title>
+    <url>/posts/6b745d1d/</url>
+    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><ul>
+<li>基本概念<ul>
+<li>分类</li>
+<li>回归</li>
+<li>维数灾难</li>
+<li>欠拟合</li>
+<li>过拟合</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<p>评价指标[[2023Fall/机器学习/0-introduction#2.2. 评价指标|0-introduction]]<br>距离度量函数<br>计算度量<br>生成式/判别式模型</p>
+<h1 id="2-👍KNN"><a href="#2-👍KNN" class="headerlink" title="2. 👍KNN"></a>2. 👍KNN</h1><p>KNN思想、概念、算法流程</p>
+<p>降低计算复杂度，大概看一下</p>
+<h1 id="3-👍无监督学习"><a href="#3-👍无监督学习" class="headerlink" title="3. 👍无监督学习"></a>3. 👍无监督学习</h1><p>聚类概念<br>聚类准则：聚类好坏判断，度量</p>
+<p>三类聚类方法</p>
+<p><strong>k-means</strong></p>
+<p>评价指标</p>
+<h1 id="4-树学习"><a href="#4-树学习" class="headerlink" title="4. 树学习"></a>4. 树学习</h1><p>概念</p>
+<ul>
+<li><strong>决策树</strong><ul>
+<li>构造</li>
+<li>构造时如何选择节点<ul>
+<li>熵，信息增益</li>
+<li>ID3：熵</li>
+<li>C4.5：信息增益</li>
+<li>CART: Gini指数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-集成学习"><a href="#5-集成学习" class="headerlink" title="5. 集成学习"></a>5. 集成学习</h1><p>集成学习的原理，怎么不同的弱分类器结合成强分类器</p>
+<p>Bias-Variance tradeoff</p>
+<p>基本的集成学习方法原理：Bagging, Boosting<br>比较难的几个看一看就行</p>
+<h1 id="6-概率学习"><a href="#6-概率学习" class="headerlink" title="6. 概率学习"></a>6. 概率学习</h1><p>概率学习</p>
+<ul>
+<li>高斯混合模型</li>
+<li>基本概念<ul>
+<li>带约束的数学优化问题</li>
+<li>不带约束的最小二乘优化问题</li>
+</ul>
+</li>
+</ul>
+<p>最大似然估计，期望最大化<br>理论推导不要求</p>
+<h1 id="7-svm"><a href="#7-svm" class="headerlink" title="7. svm"></a>7. svm</h1><p>传统机器学习里最代表性的算法<br>不会考推导</p>
+<p>除了二分类、线性，非线性也需要了解</p>
+<h1 id="8-神经元"><a href="#8-神经元" class="headerlink" title="8. 神经元"></a>8. 神经元</h1><p>神经元</p>
+<p>一些基本概念</p>
+<p>感知机</p>
+<h1 id="9-神经网络"><a href="#9-神经网络" class="headerlink" title="9. 神经网络"></a>9. 神经网络</h1><p>神经网络需要深入掌握</p>
+<p>输入，隐藏层，输出层</p>
+<p><strong>前向，反向传播计算</strong></p>
+<h1 id="10-深度学习"><a href="#10-深度学习" class="headerlink" title="10. 深度学习"></a>10. 深度学习</h1><p>近现代的<strong>卷积</strong></p>
+<p>核心概念，关键模块</p>
+<h1 id="11-演化学习"><a href="#11-演化学习" class="headerlink" title="11. 演化学习"></a>11. 演化学习</h1><p>典型的遗传算法，</p>
+<p>遗传的变异、选择</p>
+<p>模式理论大概了解即可</p>
+<h1 id="12-维度约简"><a href="#12-维度约简" class="headerlink" title="12. 维度约简"></a>12. 维度约简</h1><ul>
+<li><strong>降维算法</strong><ul>
+<li>LDA</li>
+<li>PCA</li>
+<li>ICA</li>
+</ul>
+</li>
+</ul>
+<h1 id="13-强化学习"><a href="#13-强化学习" class="headerlink" title="13. 强化学习"></a>13. 强化学习</h1><p>一定会出现</p>
+<p><strong>MDP</strong><br>动态规划</p>
+<p>探索<br>值函数、奖赏、测略</p>
+<p>基于模型，不基于模型</p>
+<p>Morte Carle方法<br>时间差分</p>
+<p>Bootsraps<br>Sampling</p>
+<p>Q-learning<br>TD</p>
+<p>epsiode的概念</p>
 ]]></content>
       <categories>
         <category>2023_Fall_机器学习</category>
@@ -11416,70 +11416,6 @@
       </tags>
   </entry>
   <entry>
-    <title>期末组成</title>
-    <url>/posts/eb28109d/</url>
-    <content><![CDATA[<h1 id="商业模式部分期末考核（50分）"><a href="#商业模式部分期末考核（50分）" class="headerlink" title="商业模式部分期末考核（50分）"></a>商业模式部分期末考核（50分）</h1><ul>
-<li><p>概述：基于给定背景和题目的知识点运用</p>
-</li>
-<li><p>商业模式画布绘制+需求类型 – 20</p>
-</li>
-<li><p>商业模式类型讨论 – 10</p>
-<ul>
-<li>优先考察与互联网最相关的三个</li>
-</ul>
-</li>
-<li><p>商业模式设计 – 10</p>
-<ul>
-<li>六种设计手段选一个考核</li>
-</ul>
-</li>
-<li><p>商业模式评估 – 10</p>
-<ul>
-<li>四种评估手段选一个考核（复杂的手段会被适当地提示和约减）</li>
-</ul>
-</li>
-</ul>
-<h1 id="需求部分"><a href="#需求部分" class="headerlink" title="需求部分"></a>需求部分</h1><ul>
-<li>需求获取（30分）<ul>
-<li>需求获取上半段（20分）<ul>
-<li>确定项目前景与范围（10分） – 目标模型</li>
-<li>涉众分析（10分） – <del>涉众识别之ADM模型</del>、涉众评估之Power-Interest、Power-Attitude模型</li>
-<li>涉众共赢之Stakeholder-Issue模型</li>
-</ul>
-</li>
-<li>需求获取下半段（10分）<ul>
-<li>面谈、原型、观察三大获取手段的联系与区别</li>
-<li>面谈问题的设计</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>需求分析（10分）<ul>
-<li>需求分析根本任务与活动</li>
-<li><del>基于UML软件建模的需求细化 – 概念类图、顺序图、状态图</del></li>
-</ul>
-</li>
-<li>需求规格说明</li>
-<li>需求验证与管理（10分）<ul>
-<li>需求验证基本活动</li>
-<li>需求管理任务与活动</li>
-<li>需求变更控制过程、组织与注意事项</li>
-</ul>
-</li>
-</ul>
-<h1 id="去年需求题目"><a href="#去年需求题目" class="headerlink" title="去年需求题目"></a>去年需求题目</h1><p>以open AI为背景的材料。 </p>
-<p>1 老规矩，画商业模式画布。给出一个相关的业务需求和用户需求，并简述它们之间的区别。 </p>
-<p>2 平台模式，长尾模式，免费模式，任选一个，给出核心资源和关键业务（默写教材），并结合材料分析（特别的，如果选择免费模式的话，要给出免费模式的三个可能子类，并选择其中一个来分析）</p>
-<p>3 考的模型构建。要求给出模型构建的四个规模。另外指定局部材料出现了一些变更，要求将这些变更归类入商业模式画布的某些元素，并指出这些变动对其他商业模式画布中的元素的影响。 </p>
-<p>4 考了SWOT分析，要求给出SWOT的定义，并结合材料对SWOT四个方向任取商业模式画布中的任一个元素进行分析。 </p>
-<p>5 结合指定局部材料，考察目标模型（画图），指出哪些目标冲突？哪些目标支持？</p>
-<p>6 题给材料，考察power interest和power Attitude的模型，先默上教材上的模型，然后结合题给材料分析。</p>
-<p>7 题给材料，根据题给材料设计面谈问卷，逐步对问题，目标，解决问题进行验证。 </p>
-<p>8 题给材料，要求先默写需求变更的五大注意事项，然后结合提给材料和前面的材料，谈谈你对大模型的某一发展方向（具体来说是降本增效，开发规模相对小但针对性更强的模型）的看法（感觉主要是空话，应该是送分的）。</p>
-<p>9 题给材料，内容是关于GPT的按token计费方式，根据题给材料画出系统顺序图</p>
-]]></content>
-  </entry>
-  <entry>
     <title>商业模式部分复习</title>
     <url>/posts/a8a21419/</url>
     <content><![CDATA[<ul>
@@ -11642,6 +11578,70 @@
         <tag>2023_Fall_需求与商业模式创新</tag>
         <tag>ikuang</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>期末组成</title>
+    <url>/posts/eb28109d/</url>
+    <content><![CDATA[<h1 id="商业模式部分期末考核（50分）"><a href="#商业模式部分期末考核（50分）" class="headerlink" title="商业模式部分期末考核（50分）"></a>商业模式部分期末考核（50分）</h1><ul>
+<li><p>概述：基于给定背景和题目的知识点运用</p>
+</li>
+<li><p>商业模式画布绘制+需求类型 – 20</p>
+</li>
+<li><p>商业模式类型讨论 – 10</p>
+<ul>
+<li>优先考察与互联网最相关的三个</li>
+</ul>
+</li>
+<li><p>商业模式设计 – 10</p>
+<ul>
+<li>六种设计手段选一个考核</li>
+</ul>
+</li>
+<li><p>商业模式评估 – 10</p>
+<ul>
+<li>四种评估手段选一个考核（复杂的手段会被适当地提示和约减）</li>
+</ul>
+</li>
+</ul>
+<h1 id="需求部分"><a href="#需求部分" class="headerlink" title="需求部分"></a>需求部分</h1><ul>
+<li>需求获取（30分）<ul>
+<li>需求获取上半段（20分）<ul>
+<li>确定项目前景与范围（10分） – 目标模型</li>
+<li>涉众分析（10分） – <del>涉众识别之ADM模型</del>、涉众评估之Power-Interest、Power-Attitude模型</li>
+<li>涉众共赢之Stakeholder-Issue模型</li>
+</ul>
+</li>
+<li>需求获取下半段（10分）<ul>
+<li>面谈、原型、观察三大获取手段的联系与区别</li>
+<li>面谈问题的设计</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>需求分析（10分）<ul>
+<li>需求分析根本任务与活动</li>
+<li><del>基于UML软件建模的需求细化 – 概念类图、顺序图、状态图</del></li>
+</ul>
+</li>
+<li>需求规格说明</li>
+<li>需求验证与管理（10分）<ul>
+<li>需求验证基本活动</li>
+<li>需求管理任务与活动</li>
+<li>需求变更控制过程、组织与注意事项</li>
+</ul>
+</li>
+</ul>
+<h1 id="去年需求题目"><a href="#去年需求题目" class="headerlink" title="去年需求题目"></a>去年需求题目</h1><p>以open AI为背景的材料。 </p>
+<p>1 老规矩，画商业模式画布。给出一个相关的业务需求和用户需求，并简述它们之间的区别。 </p>
+<p>2 平台模式，长尾模式，免费模式，任选一个，给出核心资源和关键业务（默写教材），并结合材料分析（特别的，如果选择免费模式的话，要给出免费模式的三个可能子类，并选择其中一个来分析）</p>
+<p>3 考的模型构建。要求给出模型构建的四个规模。另外指定局部材料出现了一些变更，要求将这些变更归类入商业模式画布的某些元素，并指出这些变动对其他商业模式画布中的元素的影响。 </p>
+<p>4 考了SWOT分析，要求给出SWOT的定义，并结合材料对SWOT四个方向任取商业模式画布中的任一个元素进行分析。 </p>
+<p>5 结合指定局部材料，考察目标模型（画图），指出哪些目标冲突？哪些目标支持？</p>
+<p>6 题给材料，考察power interest和power Attitude的模型，先默上教材上的模型，然后结合题给材料分析。</p>
+<p>7 题给材料，根据题给材料设计面谈问卷，逐步对问题，目标，解决问题进行验证。 </p>
+<p>8 题给材料，要求先默写需求变更的五大注意事项，然后结合提给材料和前面的材料，谈谈你对大模型的某一发展方向（具体来说是降本增效，开发规模相对小但针对性更强的模型）的看法（感觉主要是空话，应该是送分的）。</p>
+<p>9 题给材料，内容是关于GPT的按token计费方式，根据题给材料画出系统顺序图</p>
+]]></content>
   </entry>
   <entry>
     <title>需求部分复习</title>
@@ -13163,130 +13163,6 @@ static data放全局变量
       </tags>
   </entry>
   <entry>
-    <title>00-软件系统设计</title>
-    <url>/posts/243aaa51/</url>
-    <content><![CDATA[<h1 id="1-软件设计"><a href="#1-软件设计" class="headerlink" title="1. 软件设计"></a>1. 软件设计</h1><ol>
-<li>需求<ul>
-<li>系统需要满足的目标</li>
-<li>非规范化的描述</li>
-</ul>
-</li>
-<li>规约<ul>
-<li>系统外部可观察到的行为</li>
-<li>规范化的描述</li>
-</ul>
-</li>
-<li>架构<ul>
-<li>系统一级的主要组织部分</li>
-<li>各部分的交互方式</li>
-<li>使用的技术</li>
-</ul>
-</li>
-<li>设计<ul>
-<li>如何完成任务（算法）</li>
-<li>需要写的代码</li>
-<li>关注OO设计</li>
-</ul>
-</li>
-</ol>
-<p>大部分非功能需求都在架构阶段考虑<br>详细设计关注<span style="background:rgba(3, 135, 102, 0.2)">可维护、可复用</span></p>
-<h1 id="2-面向对象设计原则概述"><a href="#2-面向对象设计原则概述" class="headerlink" title="2. 面向对象设计原则概述"></a>2. 面向对象设计原则概述</h1><ul>
-<li>软件的可维护和可复用</li>
-<li>好的设计需要具备：<ul>
-<li>可扩展性</li>
-<li>灵活性</li>
-<li>可插入性</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-1-单一职责原则"><a href="#2-1-单一职责原则" class="headerlink" title="2.1. 单一职责原则"></a>2.1. 单一职责原则</h2><ul>
-<li>一个对象应该只包含单一职责，并且完整封装在一个类里<ul>
-<li>就一个类而言，应该只有一个引起变化的原因</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-2-开闭原则"><a href="#2-2-开闭原则" class="headerlink" title="2.2. 开闭原则"></a>2.2. 开闭原则</h2><ul>
-<li>对扩展开放，对修改关闭。<ul>
-<li><span style="background:rgba(3, 135, 102, 0.2)">对可变性封装原则</span>：稳定的中间层把变化的信息封装在<strong>模块内部</strong>，对外部不可见</li>
-<li><span style="background:rgba(3, 135, 102, 0.2)">抽象化</span>是开闭原则的关键</li>
-</ul>
-</li>
-</ul>
-<p>开闭原则是面向对象设计的一个目标</p>
-<p>例：抽象类AbstractButton封装了变化，修改或增加子类，LoginForm都不需要变化。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F02%2F29%2F10-47-42-e81cd84406e6ae65d52091b3dda29c12-20240229104740-3b6e0e.png" alt="image.png"></p>
-<h2 id="2-3-里氏代换原则"><a href="#2-3-里氏代换原则" class="headerlink" title="2.3. 里氏代换原则"></a>2.3. 里氏代换原则</h2><ul>
-<li>父类支持的性质，子类也必须支持。任何地方用到父类，都可以换成子类。<ul>
-<li>扩展行为可以作为私有函数。重现要保证父类稳定性。</li>
-<li>错误：子类不能重写父类方法</li>
-</ul>
-</li>
-<li>继承要谨慎使用</li>
-</ul>
-<h2 id="2-4-依赖倒置原则"><a href="#2-4-依赖倒置原则" class="headerlink" title="2.4. 依赖倒置原则"></a>2.4. 依赖倒置原则</h2><ul>
-<li>抽象不应该依赖细节，细节应该依赖抽象<ul>
-<li><strong>在编程时应该首先定义好抽象层，并尽量保持稳定-&gt;开闭原则，抽象层隔绝底层的变化</strong></li>
-</ul>
-</li>
-<li>常见实现方式：元数据编程，把抽象放进代码，把细节放进数据</li>
-<li>面向接口，而不是面向实现编程</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F02%2F29%2F11-40-01-3bafd08bad3f6f3a5eca0dbcf5352752-20240229114000-1fd093.png" alt="image.png"></p>
-<h2 id="2-5-接口隔离原则"><a href="#2-5-接口隔离原则" class="headerlink" title="2.5. 接口隔离原则"></a>2.5. 接口隔离原则</h2><ul>
-<li>客户端不应该依赖那些不需要的接口<ul>
-<li>如果接口太大，就可以分割成更细的接口</li>
-</ul>
-</li>
-</ul>
-<p>例：定制化，使得一些用户无法访问某些方法。控制接口的粒度。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F02%2F29%2F11-53-39-72d2cb59d4bb53b0b9aa1348a2693b2f-20240229115338-604541.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F02%2F29%2F11-54-30-782a7683437c57b86f1c74c9803a0ef3-20240229115429-5f57b3.png" alt="image.png"></p>
-<h2 id="2-6-合成复用原则"><a href="#2-6-合成复用原则" class="headerlink" title="2.6. 合成复用原则"></a>2.6. 合成复用原则</h2><ul>
-<li>尽量使用<span style="background:rgba(3, 135, 102, 0.2)">对象组合</span>，而不是继承<ul>
-<li>我们不希望知道被依赖者的细节，不被被依赖者的变化影响</li>
-<li>一般和依赖倒置原则一起使用</li>
-</ul>
-</li>
-<li>前提/假设：被合成的对象会发生变化</li>
-</ul>
-<p><span style="background:rgba(3, 135, 102, 0.2)">抽象依赖</span>：依赖关系的两侧有一个是抽象的，并且最好是被依赖的</p>
-<h2 id="2-7-迪米特法则-最小知识原则"><a href="#2-7-迪米特法则-最小知识原则" class="headerlink" title="2.7. 迪米特法则/最小知识原则"></a>2.7. 迪米特法则/最小知识原则</h2><ul>
-<li><span style="background:rgba(3, 135, 102, 0.2)">封装</span></li>
-<li>每一个软件单位应当尽可能少得与其他实体发生作用<ul>
-<li>为了减少模块之间的影响，扩展更容易</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-7-1-狭义"><a href="#2-7-1-狭义" class="headerlink" title="2.7.1. 狭义"></a>2.7.1. 狭义</h3><ul>
-<li><p>狭义：两个类之间不必彼此直接通信，那两个类就不应该发生直接的相互作用</p>
-</li>
-<li><p>例子：在a对象中需要调用c的功能</p>
-<ul>
-<li>不遵守迪米特法则：b.getC.getTemp()<ul>
-<li>若B不使用C，则A也需要修改</li>
-</ul>
-</li>
-<li>遵守迪米特法则：使用<span style="background:rgba(3, 135, 102, 0.2)">Wrapper Method</span>:， b.getTemp()<ul>
-<li>若B不使用C，而是用其他类，变化对A不可见</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F15-11-13-ee4d6dc34b31bbe538835acd28612a73-20240305151112-e89cea.png" alt="image.png"></p>
-<ul>
-<li>分析：降低类的耦合，但是造成模块之间通信效率降低（大量Wrapper</li>
-</ul>
-<h3 id="2-7-2-广义"><a href="#2-7-2-广义" class="headerlink" title="2.7.2. 广义"></a>2.7.2. 广义</h3><ul>
-<li><p>指对对象之间的信息<span style="background:rgba(3, 135, 102, 0.2)">流量</span>、<span style="background:rgba(3, 135, 102, 0.2)">流向</span>以及<span style="background:rgba(3, 135, 102, 0.2)">信息的影响</span>的控制，主要是对信息隐藏的控制</p>
-</li>
-<li><p>例子：使用控制器封装系统局部的复杂性</p>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F15-21-12-32269d9fa2650c9b2d789211d7b46681-20240305152111-5c9663.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F15-21-29-c9a45b5f512d1ef39fe690ce1f78e435-20240305152128-179f56.png" alt="image.png"></p>
-<p>在 JDK 中，java.util.Stack是 java.util.Vector类的子类，该设计合理吗？若不合理，请分析解释该设计存在的问题。</p>
-<p>违反里氏代换原则，使用Vector的地方不能替换成Stack。</p>
-<h2 id="2-8-封装可变性原则"><a href="#2-8-封装可变性原则" class="headerlink" title="2.8. 封装可变性原则"></a>2.8. 封装可变性原则</h2><p>识别出变化，把变化的部分和不变的部分分离</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Lab02_Visitor模式</title>
     <url>/posts/5a39ddc7/</url>
     <content><![CDATA[<h1 id="SysYParser和ParseTree"><a href="#SysYParser和ParseTree" class="headerlink" title="SysYParser和ParseTree"></a>SysYParser和ParseTree</h1><p>ParseTree、ProgramContext、RuleNode都是从同一个类继承下来的，所以下面这行代码可以正确运行。</p>
@@ -13416,6 +13292,130 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
+    <title>00-软件系统设计</title>
+    <url>/posts/243aaa51/</url>
+    <content><![CDATA[<h1 id="1-软件设计"><a href="#1-软件设计" class="headerlink" title="1. 软件设计"></a>1. 软件设计</h1><ol>
+<li>需求<ul>
+<li>系统需要满足的目标</li>
+<li>非规范化的描述</li>
+</ul>
+</li>
+<li>规约<ul>
+<li>系统外部可观察到的行为</li>
+<li>规范化的描述</li>
+</ul>
+</li>
+<li>架构<ul>
+<li>系统一级的主要组织部分</li>
+<li>各部分的交互方式</li>
+<li>使用的技术</li>
+</ul>
+</li>
+<li>设计<ul>
+<li>如何完成任务（算法）</li>
+<li>需要写的代码</li>
+<li>关注OO设计</li>
+</ul>
+</li>
+</ol>
+<p>大部分非功能需求都在架构阶段考虑<br>详细设计关注<span style="background:rgba(3, 135, 102, 0.2)">可维护、可复用</span></p>
+<h1 id="2-面向对象设计原则概述"><a href="#2-面向对象设计原则概述" class="headerlink" title="2. 面向对象设计原则概述"></a>2. 面向对象设计原则概述</h1><ul>
+<li>软件的可维护和可复用</li>
+<li>好的设计需要具备：<ul>
+<li>可扩展性</li>
+<li>灵活性</li>
+<li>可插入性</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-1-单一职责原则"><a href="#2-1-单一职责原则" class="headerlink" title="2.1. 单一职责原则"></a>2.1. 单一职责原则</h2><ul>
+<li>一个对象应该只包含单一职责，并且完整封装在一个类里<ul>
+<li>就一个类而言，应该只有一个引起变化的原因</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-开闭原则"><a href="#2-2-开闭原则" class="headerlink" title="2.2. 开闭原则"></a>2.2. 开闭原则</h2><ul>
+<li>对扩展开放，对修改关闭。<ul>
+<li><span style="background:rgba(3, 135, 102, 0.2)">对可变性封装原则</span>：稳定的中间层把变化的信息封装在<strong>模块内部</strong>，对外部不可见</li>
+<li><span style="background:rgba(3, 135, 102, 0.2)">抽象化</span>是开闭原则的关键</li>
+</ul>
+</li>
+</ul>
+<p>开闭原则是面向对象设计的一个目标</p>
+<p>例：抽象类AbstractButton封装了变化，修改或增加子类，LoginForm都不需要变化。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F02%2F29%2F10-47-42-e81cd84406e6ae65d52091b3dda29c12-20240229104740-3b6e0e.png" alt="image.png"></p>
+<h2 id="2-3-里氏代换原则"><a href="#2-3-里氏代换原则" class="headerlink" title="2.3. 里氏代换原则"></a>2.3. 里氏代换原则</h2><ul>
+<li>父类支持的性质，子类也必须支持。任何地方用到父类，都可以换成子类。<ul>
+<li>扩展行为可以作为私有函数。重现要保证父类稳定性。</li>
+<li>错误：子类不能重写父类方法</li>
+</ul>
+</li>
+<li>继承要谨慎使用</li>
+</ul>
+<h2 id="2-4-依赖倒置原则"><a href="#2-4-依赖倒置原则" class="headerlink" title="2.4. 依赖倒置原则"></a>2.4. 依赖倒置原则</h2><ul>
+<li>抽象不应该依赖细节，细节应该依赖抽象<ul>
+<li><strong>在编程时应该首先定义好抽象层，并尽量保持稳定-&gt;开闭原则，抽象层隔绝底层的变化</strong></li>
+</ul>
+</li>
+<li>常见实现方式：元数据编程，把抽象放进代码，把细节放进数据</li>
+<li>面向接口，而不是面向实现编程</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F02%2F29%2F11-40-01-3bafd08bad3f6f3a5eca0dbcf5352752-20240229114000-1fd093.png" alt="image.png"></p>
+<h2 id="2-5-接口隔离原则"><a href="#2-5-接口隔离原则" class="headerlink" title="2.5. 接口隔离原则"></a>2.5. 接口隔离原则</h2><ul>
+<li>客户端不应该依赖那些不需要的接口<ul>
+<li>如果接口太大，就可以分割成更细的接口</li>
+</ul>
+</li>
+</ul>
+<p>例：定制化，使得一些用户无法访问某些方法。控制接口的粒度。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F02%2F29%2F11-53-39-72d2cb59d4bb53b0b9aa1348a2693b2f-20240229115338-604541.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F02%2F29%2F11-54-30-782a7683437c57b86f1c74c9803a0ef3-20240229115429-5f57b3.png" alt="image.png"></p>
+<h2 id="2-6-合成复用原则"><a href="#2-6-合成复用原则" class="headerlink" title="2.6. 合成复用原则"></a>2.6. 合成复用原则</h2><ul>
+<li>尽量使用<span style="background:rgba(3, 135, 102, 0.2)">对象组合</span>，而不是继承<ul>
+<li>我们不希望知道被依赖者的细节，不被被依赖者的变化影响</li>
+<li>一般和依赖倒置原则一起使用</li>
+</ul>
+</li>
+<li>前提/假设：被合成的对象会发生变化</li>
+</ul>
+<p><span style="background:rgba(3, 135, 102, 0.2)">抽象依赖</span>：依赖关系的两侧有一个是抽象的，并且最好是被依赖的</p>
+<h2 id="2-7-迪米特法则-最小知识原则"><a href="#2-7-迪米特法则-最小知识原则" class="headerlink" title="2.7. 迪米特法则/最小知识原则"></a>2.7. 迪米特法则/最小知识原则</h2><ul>
+<li><span style="background:rgba(3, 135, 102, 0.2)">封装</span></li>
+<li>每一个软件单位应当尽可能少得与其他实体发生作用<ul>
+<li>为了减少模块之间的影响，扩展更容易</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-7-1-狭义"><a href="#2-7-1-狭义" class="headerlink" title="2.7.1. 狭义"></a>2.7.1. 狭义</h3><ul>
+<li><p>狭义：两个类之间不必彼此直接通信，那两个类就不应该发生直接的相互作用</p>
+</li>
+<li><p>例子：在a对象中需要调用c的功能</p>
+<ul>
+<li>不遵守迪米特法则：b.getC.getTemp()<ul>
+<li>若B不使用C，则A也需要修改</li>
+</ul>
+</li>
+<li>遵守迪米特法则：使用<span style="background:rgba(3, 135, 102, 0.2)">Wrapper Method</span>:， b.getTemp()<ul>
+<li>若B不使用C，而是用其他类，变化对A不可见</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F15-11-13-ee4d6dc34b31bbe538835acd28612a73-20240305151112-e89cea.png" alt="image.png"></p>
+<ul>
+<li>分析：降低类的耦合，但是造成模块之间通信效率降低（大量Wrapper</li>
+</ul>
+<h3 id="2-7-2-广义"><a href="#2-7-2-广义" class="headerlink" title="2.7.2. 广义"></a>2.7.2. 广义</h3><ul>
+<li><p>指对对象之间的信息<span style="background:rgba(3, 135, 102, 0.2)">流量</span>、<span style="background:rgba(3, 135, 102, 0.2)">流向</span>以及<span style="background:rgba(3, 135, 102, 0.2)">信息的影响</span>的控制，主要是对信息隐藏的控制</p>
+</li>
+<li><p>例子：使用控制器封装系统局部的复杂性</p>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F15-21-12-32269d9fa2650c9b2d789211d7b46681-20240305152111-5c9663.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F15-21-29-c9a45b5f512d1ef39fe690ce1f78e435-20240305152128-179f56.png" alt="image.png"></p>
+<p>在 JDK 中，java.util.Stack是 java.util.Vector类的子类，该设计合理吗？若不合理，请分析解释该设计存在的问题。</p>
+<p>违反里氏代换原则，使用Vector的地方不能替换成Stack。</p>
+<h2 id="2-8-封装可变性原则"><a href="#2-8-封装可变性原则" class="headerlink" title="2.8. 封装可变性原则"></a>2.8. 封装可变性原则</h2><p>识别出变化，把变化的部分和不变的部分分离</p>
+]]></content>
+  </entry>
+  <entry>
     <title>01-设计模式</title>
     <url>/posts/946442dc/</url>
     <content><![CDATA[<p>现有设计经验的总结</p>
@@ -13449,7 +13449,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li>算法封装不同数据结构</li>
 <li>一个类定义了有很多行为，使用条件判断觉得使用哪个行为（一个类里有多种行为）</li>
 </ol>
-<h2 id="1-3-影响"><a href="#1-3-影响" class="headerlink" title="1.3. 影响"></a>1.3. 影响</h2><p>原来不需要知道类的细节，但使用策略模式之后需要暴露细节，客户必须理解每一种策略的差异和哪些任务适合哪些细节</p>
+<h2 id="1-3-影响"><a href="#1-3-影响" class="headerlink" title="1.3. 影响"></a>1.3. 影响</h2><p>原来不需要知道类的细节，但使用策略模式之后<strong>需要暴露细节</strong>，客户必须理解每一种策略的差异和哪些任务适合哪些细节</p>
 <p>Design Pattern比Framework更高层</p>
 <h1 id="2-简单工厂模式"><a href="#2-简单工厂模式" class="headerlink" title="2. 简单工厂模式"></a>2. 简单工厂模式</h1><h2 id="2-1-👍定义"><a href="#2-1-👍定义" class="headerlink" title="2.1. 👍定义"></a>2.1. 👍定义</h2><ul>
 <li><p>Simple Factory Pattern/<strong>Static</strong> Factory Pattern</p>
@@ -13543,8 +13543,8 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h1 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h1><p>一个复杂对象有许多成员对象</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<h1 id="5-建造者模式"><a href="#5-建造者模式" class="headerlink" title="5. 建造者模式"></a>5. 建造者模式</h1><p>一个复杂对象有许多成员对象</p>
+<h2 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1. 定义"></a>5.1. 定义</h2><ul>
 <li>**建造者模式(Builder Pattern)**：将一个<font color="#c00000">复杂对象的构建</font>与它的<font color="#c00000">表示</font>分离，使得<font color="#c00000">同样的构建过程可以创建不同的表示</font><ul>
 <li>表示：对象的静态内容</li>
 <li>构建过程可以复用，组件的表示可以分离</li>
@@ -13553,7 +13553,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ul>
 <p>封装变化，复用不变</p>
-<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><ol>
+<h2 id="5-2-结构"><a href="#5-2-结构" class="headerlink" title="5.2. 结构"></a>5.2. 结构</h2><ol>
 <li>Product</li>
 <li>Builder：抽象建造者</li>
 <li>ConcreteBuilder：负责A, B, C等对象的创建</li>
@@ -13573,7 +13573,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F19%2F14-43-12-ac7b7e0ba9a7705b31be81bbe5db75b9-20240319144311-cecf0a.png" alt="image.png"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ul>
+<h2 id="5-3-分析"><a href="#5-3-分析" class="headerlink" title="5.3. 分析"></a>5.3. 分析</h2><ul>
 <li><p>Director</p>
 <ol>
 <li>隔离客户与生产过程</li>
@@ -13586,26 +13586,26 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h2 id="适用性"><a href="#适用性" class="headerlink" title="适用性"></a>适用性</h2><ol>
+<h2 id="5-4-适用性"><a href="#5-4-适用性" class="headerlink" title="5.4. 适用性"></a>5.4. 适用性</h2><ol>
 <li>隔离复杂对象的创建和使用，并使得<font color="#c00000">相同的创建过程</font>可以<font color="#c00000">创建不同的产品</font>。</li>
 <li><font color="#c00000">需要生成的产品对象有复杂的内部结构</font>，这些产品对象通常包含多个成员属性。</li>
 <li><font color="#c00000">需要生成的产品对象的属性相互依赖</font>，需要指定其生成顺序。</li>
 <li><font color="#c00000">对象的创建过程独立于创建该对象的类</font>。</li>
 </ol>
 <p>2，3，4是为了分解复杂性；<br>1是为了封装变化</p>
-<h2 id="化简"><a href="#化简" class="headerlink" title="化简"></a>化简</h2><ol>
+<h2 id="5-5-化简"><a href="#5-5-化简" class="headerlink" title="5.5. 化简"></a>5.5. 化简</h2><ol>
 <li><font color="#c00000">省略抽象建造者</font>：如果系统中只需要一个具体建造者的话，可以省略掉抽象建造者。</li>
 <li><font color="#c00000">省略指挥者</font>：在具体建造者只有一个的情况下，如果抽象建造者角色已经被省略掉，那么还可以省略指挥者角色，让Builder角色扮演指挥者与建造者双重角色。</li>
 </ol>
-<h2 id="建造者模式与抽象工厂模式的比较"><a href="#建造者模式与抽象工厂模式的比较" class="headerlink" title="建造者模式与抽象工厂模式的比较"></a>建造者模式与抽象工厂模式的比较</h2><p>• 与抽象工厂模式相比，建造者模式返回一个组装好的完整产品，而抽象工<br>厂模式返回一系列相关的产品，这些产品位于不同的产品等级结构，构成<br>了一个产品族。<br>• 在抽象工厂模式中，客户端实例化工厂类，然后调用工厂方法获取所需产<br>品对象，而在建造者模式中，客户端可以不直接调用建造者的相关方法，<br>而是通过指挥者类来指导如何生成对象，包括对象的组装过程和建造步骤，<br>它侧重于一步步构造一个复杂对象，返回一个完整的对象。<br>• 如果将抽象工厂模式看成汽车配件生产工厂，生产一个产品族的产品，那<br>么建造者模式就是一个汽车组装工厂，通过对部件的组装可以返回一辆完<br>整的汽车。</p>
-<h1 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h1><p>创建型模式<br>在面向对象系统中，使用原型模式来复制一个对象自身， 从而<font color="#c00000">克隆出多个与原型对象一模一样的对象。</font></p>
-<h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><ul>
+<h2 id="5-6-建造者模式与抽象工厂模式的比较"><a href="#5-6-建造者模式与抽象工厂模式的比较" class="headerlink" title="5.6. 建造者模式与抽象工厂模式的比较"></a>5.6. 建造者模式与抽象工厂模式的比较</h2><p>• 与抽象工厂模式相比，建造者模式返回一个组装好的完整产品，而抽象工<br>厂模式返回一系列相关的产品，这些产品位于不同的产品等级结构，构成<br>了一个产品族。<br>• 在抽象工厂模式中，客户端实例化工厂类，然后调用工厂方法获取所需产<br>品对象，而在建造者模式中，客户端可以不直接调用建造者的相关方法，<br>而是通过指挥者类来指导如何生成对象，包括对象的组装过程和建造步骤，<br>它侧重于一步步构造一个复杂对象，返回一个完整的对象。<br>• 如果将抽象工厂模式看成汽车配件生产工厂，生产一个产品族的产品，那<br>么建造者模式就是一个汽车组装工厂，通过对部件的组装可以返回一辆完<br>整的汽车。</p>
+<h1 id="6-原型模式"><a href="#6-原型模式" class="headerlink" title="6. 原型模式"></a>6. 原型模式</h1><p>创建型模式<br>在面向对象系统中，使用原型模式来复制一个对象自身， 从而<font color="#c00000">克隆出多个与原型对象一模一样的对象。</font></p>
+<h2 id="6-1-定义"><a href="#6-1-定义" class="headerlink" title="6.1. 定义"></a>6.1. 定义</h2><ul>
 <li>原型模式(Prototype Pattern)：<font color="#c00000">用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象</font>。允许一个对象再创建一个可定制的对象，无需知道任何创建的细节。<ul>
 <li>对象创建型模式</li>
 </ul>
 </li>
 </ul>
-<h2 id="结构-1"><a href="#结构-1" class="headerlink" title="结构"></a>结构</h2><ol>
+<h2 id="6-2-结构"><a href="#6-2-结构" class="headerlink" title="6.2. 结构"></a>6.2. 结构</h2><ol>
 <li>Prototype：抽象原型类<ul>
 <li>原型类有一个clone接口</li>
 </ul>
@@ -13614,30 +13614,203 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li>Client：客户类</li>
 </ol>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F19%2F15-08-16-f94443c7fc61699de677266696f588da-20240319150815-35dbb3.png" alt="image.png"></p>
-<h2 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h2><p><font color="#c00000">抽象类：IS A关系，主职责</font><br><font color="#c00000">接口：非功能主职责的职责</font></p>
+<h2 id="6-3-分析"><a href="#6-3-分析" class="headerlink" title="6.3. 分析"></a>6.3. 分析</h2><p><font color="#c00000">抽象类：IS A关系，主职责</font><br><font color="#c00000">接口：非功能主职责的职责</font></p>
 <p>copy需要根据具体类来执行，而且不是IS A关系</p>
 <ul>
-<li>在原型模式结构中定义了一个抽象原型类，所有的Java  类都继承自java.lang.Object，而Object类提供一个  clone()方法，可以将一个Java对象复制一份。因此在  Java中可以直接使用Object提供的clone()方法来实现对象的克隆，Java语言中的原型模式实现很简单。</li>
-<li>能够实现克隆的Java类必须实现一个<font color="#c00000">标识接口Cloneable</font>， 表示这个Java类支持复制。如果一个类没有实现这个接口但是调用了clone()方法，Java编译器将抛出一个  <font color="#c00000">CloneNotSupportedException异常</font><ul>
+<li>在原型模式结构中定义了一个抽象原型类，所有的Java 类都继承自java.lang.Object，而Object类提供一个 clone()方法，可以将一个Java对象复制一份。因此在 Java中可以直接使用Object提供的clone()方法来实现对象的克隆，Java语言中的原型模式实现很简单。</li>
+<li>能够实现克隆的Java类必须实现一个<font color="#c00000">标识接口Cloneable</font>， 表示这个Java类支持复制。如果一个类没有实现这个接口但是调用了clone()方法，Java编译器将抛出一个 <font color="#c00000">CloneNotSupportedException异常</font><ul>
 <li>把一些工作交给编译器</li>
 </ul>
 </li>
 </ul>
-<h2 id="适用性-1"><a href="#适用性-1" class="headerlink" title="适用性"></a>适用性</h2><ol>
+<h2 id="6-4-适用性"><a href="#6-4-适用性" class="headerlink" title="6.4. 适用性"></a>6.4. 适用性</h2><ol>
 <li>创建新对象成本较大</li>
 <li>系统要保存对象的状态</li>
 <li><font color="#c00000">避免使用分层次的工厂类来创建分层次的对象</font>，并且类的实例对象只有一个或很少的几个组合状态，通过复制原型对象得到新实例可能比使用构造函数创建一个新实例更加方便</li>
 </ol>
-<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><ul>
+<h2 id="6-5-扩展"><a href="#6-5-扩展" class="headerlink" title="6.5. 扩展"></a>6.5. 扩展</h2><ul>
 <li><strong>原型管理器</strong>：带管理器的原型模式，系统中有大量相似的对象</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F19%2F15-34-45-9120fbfffca49360fe1e4d6178ba9d39-20240319153444-86ed37.png" alt="image.png"></p>
 <ul>
 <li><strong>相似对象的复制</strong>：通过原型模式获得相同对象后可以再对其属性进行修改，从而获取所需对象。</li>
 </ul>
-<h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p>状态：一个或多个变化的属性<br><strong>有状态的对象</strong>：有这样属性的对象，这样的对象状态是从事先定义好的一系列值中取出的。当一个这样的对象与外部事件产生互动时，其内部状态就会改变，从而使得系统的行为也随之发生变化。</p>
+<h1 id="7-状态模式"><a href="#7-状态模式" class="headerlink" title="7. 状态模式"></a>7. 状态模式</h1><h2 id="7-1-动机"><a href="#7-1-动机" class="headerlink" title="7.1. 动机"></a>7.1. 动机</h2><ul>
+<li>状态：一个或多个变化的属性  </li>
+<li><strong>有状态的对象</strong>：有这样属性的对象，这样的对象状态是从事先定义好的一系列值中取出的。当一个这样的对象与外部事件产生互动时，其内部状态就会改变，从而使得系统的行为也随之发生变化。</li>
+</ul>
 <p>UML中使用<font color="#c00000">状态图</font>来描述有状态对象的变化，<font color="#c00000">一张图只能描述一个对象</font></p>
-<h2 id="结构-2"><a href="#结构-2" class="headerlink" title="结构"></a>结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F19%2F15-49-06-babcc93ad8f241d034c57c9ff7295208-20240319154906-9275be.png" alt="image.png"></p>
+<p><del>如果写很多if来判断状态，不符合开闭模式</del></p>
+<h2 id="7-2-结构"><a href="#7-2-结构" class="headerlink" title="7.2. 结构"></a>7.2. 结构</h2><ol>
+<li>Context: 环境类</li>
+<li>State: 抽象状态类</li>
+<li>ConcreteState: 具体状态类</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F19%2F15-49-06-babcc93ad8f241d034c57c9ff7295208-20240319154906-9275be.png" alt="image.png"></p>
+<h2 id="7-3-定义"><a href="#7-3-定义" class="headerlink" title="7.3. 定义"></a>7.3. 定义</h2><ul>
+<li>允许一个对象在其内部状态改变时改变它的行为，对象看起来似乎修改了它的类<ul>
+<li><strong>通过对象组合来减少类型定</strong>义</li>
+</ul>
+</li>
+<li><strong>行为模式</strong></li>
+</ul>
+<h2 id="7-4-分析"><a href="#7-4-分析" class="headerlink" title="7.4. 分析"></a>7.4. 分析</h2><ol>
+<li>引入一个抽象类，专门表示对象的状态变化，以及对象如何在每一种状态中表现出的行为</li>
+<li>Context应当尽量承担数据职责，State承担行为职责<ul>
+<li>可能相互持有引用：State类持有Context类的引用是为了访问数据，Context类持有State类是为了执行行为</li>
+</ul>
+</li>
+<li>封装了状态转换规则<ul>
+<li>自已完成行为切换，行为是具体的，会产生具体耦合。开闭原则支持不好，增加新的状态要修改负责状态转换的源代码。</li>
+<li>与策略模式区别：策略模式中策略的切换在Client中，由使用者切换。开闭原则支持好。</li>
+</ul>
+</li>
+<li><font color="#c00000">状态转换的触发者</font><ol>
+<li>Context类</li>
+<li>Concrete State类</li>
+</ol>
+</li>
+</ol>
+<h2 id="7-5-适用性"><a href="#7-5-适用性" class="headerlink" title="7.5. 适用性"></a>7.5. 适用性</h2><ol>
+<li>对象的行为依赖于状态属性，并且随着属性改变</li>
+<li>代码中由大量与状态有关的条件判断</li>
+</ol>
+<h2 id="7-6-例子"><a href="#7-6-例子" class="headerlink" title="7.6. 例子"></a>7.6. 例子</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F26%2F14-24-19-4828e272dc663a768946504747954cda-20240326142419-cf50ab.png" alt="image.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F26%2F14-30-36-1d676ecf3e6a6e10c883afff7f6cafd5-20240326143035-12f246.png" alt="image.png"></p>
+<ul>
+<li>不使用状态模式：</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(state==<span class="string">"空闲"</span>)</span><br><span class="line">{</span><br><span class="line"><span class="keyword">if</span>(预订房间)</span><br><span class="line">{</span><br><span class="line">预订操作;</span><br><span class="line">state=<span class="string">"已预订"</span>;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(住进房间)</span><br><span class="line">{</span><br><span class="line">入住操作;</span><br><span class="line">state=<span class="string">"已入住"</span>;</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(state==<span class="string">"已预订"</span>)</span><br><span class="line">{</span><br><span class="line"><span class="keyword">if</span>(住进房间)</span><br><span class="line">{</span><br><span class="line">入住操作;</span><br><span class="line">state=<span class="string">"已入住"</span>;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(取消预订)</span><br><span class="line">{</span><br><span class="line">取消操作;</span><br><span class="line">state=<span class="string">"空闲"</span>;</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line">……</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>使用状态模式：</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重构之后的“空闲状态类”示例代码</span></span><br><span class="line">……</span><br><span class="line"><span class="keyword">if</span>(预订房间)</span><br><span class="line">{</span><br><span class="line">预订操作;</span><br><span class="line">context.setState(<span class="keyword">new</span> 已预订状态类());</span><br><span class="line">}</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(住进房间)</span><br><span class="line">{</span><br><span class="line">入住操作;</span><br><span class="line">context.setState(<span class="keyword">new</span> 已入住状态类());</span><br><span class="line">}</span><br><span class="line">…… </span><br></pre></td></tr></table></figure></div>
+
+<h2 id="7-7-扩展"><a href="#7-7-扩展" class="headerlink" title="7.7. 扩展"></a>7.7. 扩展</h2><ul>
+<li><strong>共享状态</strong><ul>
+<li>在有些情况下多个环境对象需要共享同一个状态，如果希望在系统中实现多个环境对象实例共享一个或多个状态对象，那么需要将这些状态对象定义为环境的静态成员对象。</li>
+</ul>
+</li>
+<li><strong>简单状态模式</strong><ul>
+<li>所有状态相互独立，无需转换。可以在<strong>客户端直接实例化状态类</strong>，然后设置到环境类中。</li>
+<li>遵循开闭原则，和策略模式只是含义不一样，设计完全相同。</li>
+</ul>
+</li>
+</ul>
+<h1 id="8-命令模式"><a href="#8-命令模式" class="headerlink" title="8. 命令模式"></a>8. 命令模式</h1><h2 id="8-1-动机"><a href="#8-1-动机" class="headerlink" title="8.1. 动机"></a>8.1. 动机</h2><ul>
+<li>我们经常<strong>需要向某些对象发送请求</strong>，但是<strong>并不知道请求的接收者是谁</strong>，也<strong>不知道被请求的操作是哪个</strong>，我们只需在程序运行时指定具体的请求接收者即可。</li>
+<li>让发送者和接收者完全解耦，发送者完全不知道接收者是谁<ul>
+<li>如果无法抽象，可以用wrapper</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-2-定义"><a href="#8-2-定义" class="headerlink" title="8.2. 定义"></a>8.2. 定义</h2><ul>
+<li>命令模式(Command Pattern)：将一个请求封装为一个对象，从而使我们可用不同的请求<strong>对客户进行参数化</strong>；<strong>对请求排队或者记录请求日志(队列)<strong>，以及支持</strong>可撤销的操作</strong>。</li>
+<li>命令模式是一种<strong>对象行为型模式</strong>，其别名为动作(Action)模式或事务(Transaction)模式</li>
+</ul>
+<h2 id="8-3-结构"><a href="#8-3-结构" class="headerlink" title="8.3. 结构"></a>8.3. 结构</h2><ol>
+<li>Invoker<ul>
+<li><strong>被参数化</strong></li>
+</ul>
+</li>
+<li>Command</li>
+<li>Receiver</li>
+</ol>
+<p>Invoker只知道Command类，不知道调用的是Receiver，也不知道命令具体怎么执行。<br>execute()是receiver.action()的wrapper方法。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F26%2F15-35-45-54c47b67dc8ae1d4527f2b3c04c57512-20240326153545-9b30b4.png" alt="image.png"></p>
+<p>线程池：同一个线程对象，传入不同Command，让它执行不同的命令</p>
+<h2 id="8-4-分析"><a href="#8-4-分析" class="headerlink" title="8.4. 分析"></a>8.4. 分析</h2><ol>
+<li>命令模式使<strong>请求本身成为一个对象</strong>，这个对象和其他对象一样可以被<strong>存储和传递</strong>。<ul>
+<li>行为数据化，同一个行为可以在不同时间/空间执行</li>
+<li>参数化</li>
+<li>行为封装成对象，可以存储成队列</li>
+</ul>
+</li>
+<li><strong>命令模式的关键在于引入了抽象命令接口</strong>，且发送者针对抽象命令接口编程，只有实现了抽象命令接口的具体命令才能与接收者相关联。</li>
+<li>本质：是<font color="#c00000">对命令进行封装，将发出命令的责任和执行命令的责任分割开。</font></li>
+<li>每个命令都是一个操作：请求方发出请求，要求执行一个操作；接收方接收请求，执行操作</li>
+<li>请求方和接收方解耦，使得Invoker和Command都可以被复用</li>
+</ol>
+<ul>
+<li>优点<ol>
+<li>降低耦合</li>
+<li>容易加入新的命令</li>
+<li>容易设计一个命令队列和宏命令（组合命令）</li>
+<li>实现undo和redo<ul>
+<li>在Command接口里除了execute()还可以有undo()</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-5-例子"><a href="#8-5-例子" class="headerlink" title="8.5. 例子"></a>8.5. 例子</h2><p>Invoker: Contoller<br>Receiver: Television</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F10-44-47-7c8cb2fbe709d1cda34b7b5191261fe6-20240328104446-d6362d.png" alt="image.png"></p>
+<h2 id="8-6-适用场景"><a href="#8-6-适用场景" class="headerlink" title="8.6. 适用场景"></a>8.6. 适用场景</h2><ol>
+<li>系统需要将请求调用者和请求接收者解耦，使得调用者和接收者不直接交互</li>
+<li>系统需要在不同的时间指定请求，将请求排队和执行请求</li>
+<li>支持命令的Undo和Redo</li>
+<li>需要将一组操作在一起，即支持<strong>宏命令</strong></li>
+</ol>
+<h2 id="8-7-扩展：宏命令"><a href="#8-7-扩展：宏命令" class="headerlink" title="8.7. 扩展：宏命令"></a>8.7. 扩展：宏命令</h2><ol>
+<li>宏命令又称为组合命令，它是<font color="#c00000">命令模式和组合模式联用</font>的产物。</li>
+<li>宏命令也是一个具体命令，不过它包含了对其他命令对象的引用，<font color="#c00000">在调用宏命令的execute()方法时，将递归调用它所包含的每个成员命令的execute()方法</font></li>
+<li><strong>宏命令的成员对象</strong>可以是简单命令，还可以继续是宏命令。执行 一个宏命令将执行多个具体命令，从而实现对命令的批处理</li>
+<li>宏命令的undo：从ArrayList的尾到头做undo</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-17-04-e41a86e36cd9f4ce35d3b8904055ad9c-20240328111703-b3a33f.png" alt="image.png"></p>
+<h1 id="9-中介者模式"><a href="#9-中介者模式" class="headerlink" title="9. 中介者模式"></a>9. 中介者模式</h1><h2 id="9-1-动机"><a href="#9-1-动机" class="headerlink" title="9.1. 动机"></a>9.1. 动机</h2><ul>
+<li>多个用户之间的群聊，引入中间层，减少对象两两之间复杂的引用关系<ul>
+<li>迪米特法则</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-2-定义"><a href="#9-2-定义" class="headerlink" title="9.2. 定义"></a>9.2. 定义</h2><ul>
+<li><strong>中介者模式(Mediator Pattern)</strong> 定义：用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之 间的交互。</li>
+<li>中介者模式又称为调停者模式</li>
+<li>对象行为型模式。</li>
+</ul>
+<h2 id="9-3-结构"><a href="#9-3-结构" class="headerlink" title="9.3. 结构"></a>9.3. 结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-36-53-aeee2e6ab429a908ae3f4c379895461f-20240328113652-4036e3.png" alt="image.png"></p>
+<ol>
+<li>Mediator：抽象中介类</li>
+<li>ConcreteMediator: 具体中介类</li>
+<li>Colleague: 抽象同事类</li>
+<li>ConcreteColleague: 具体同事类</li>
+</ol>
+<h2 id="9-4-分析"><a href="#9-4-分析" class="headerlink" title="9.4. 分析"></a>9.4. 分析</h2><ol>
+<li>中介者模式使得对象之间的关系数量急剧减少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-38-27-a38dec931517331863e003b8638680d8-20240328113826-c03b00.png" alt="image.png"></li>
+<li>为什么要多个中介者？<ul>
+<li>修改对象交互关系时，不需要修改原来的中介关系，可以新增中介关系替换原有的关系。</li>
+</ul>
+</li>
+</ol>
+<h2 id="9-5-分析"><a href="#9-5-分析" class="headerlink" title="9.5. 分析"></a>9.5. 分析</h2><ul>
+<li>中介者承担两方面的职责：<ol>
+<li>中转作用（结构）：通过中介的中转作用，各个同时不需要显示引用其他同时</li>
+<li>协调作用（行为）：中介者可以进一步对同事之间的关系进行封装，同事可以一致地与中介者进行交互，而不需要指明中方接着需要具体则么做，中介者根据内部的逻辑对同事的请求进行进一步处理，将同事成员的关系和行为进行分离和封装</li>
+</ol>
+</li>
+</ul>
+<h2 id="9-6-例子"><a href="#9-6-例子" class="headerlink" title="9.6. 例子"></a>9.6. 例子</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-49-19-ec4f28c95fd031c66d08a16c34c297fc-20240328114919-31418a.png" alt="image.png"></p>
+<h2 id="9-7-适用环境"><a href="#9-7-适用环境" class="headerlink" title="9.7. 适用环境"></a>9.7. 适用环境</h2><ol>
+<li>系统中对象之间的<font color="#c00000">引用关系很复杂</font>，相互依赖关系混乱，难以复用</li>
+<li>对象的交互行为很复杂。<font color="#c00000">想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。可以通过引入中介者类来实现</font>，在中介者中定义对象交互的公共行为，如果需要改变行为则可以增加新的中介者类。</li>
+</ol>
+<h2 id="9-8-扩展"><a href="#9-8-扩展" class="headerlink" title="9.8. 扩展"></a>9.8. 扩展</h2><ol>
+<li><p>中介者模式与迪米特法则</p>
+<ul>
+<li>在中介者模式中，通过创造出一个中介者对象，将系统中有关的对象所引用的其他对象数目减少到最少，使得一个对象与其同事之间的相互作用被这个对象与中介者对象之间的相互作用所取代。因此，中介者模式就是迪米特法则的一个典型应用。</li>
+</ul>
+</li>
+<li><p>图形界面</p>
+<ol>
+<li>工厂，抽象工厂</li>
+<li>命令模式</li>
+<li>建造者模式</li>
+<li>中介者模式</li>
+</ol>
+</li>
+</ol>
 ]]></content>
   </entry>
 </search>
