@@ -204,6 +204,60 @@
       </tags>
   </entry>
   <entry>
+    <title>01_计算机顶层视图</title>
+    <url>/posts/c6f8f26e/</url>
+    <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
+<li>组织：可见</li>
+<li>结构：不可见<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png" alt="NVIDIA_Share_nwCw64dafh.png"></li>
+</ul>
+<h1 id="2-计算机工作原理"><a href="#2-计算机工作原理" class="headerlink" title="2.计算机工作原理"></a>2.计算机工作原理</h1><ul>
+<li>指令和数据存储在单个读写存储器中</li>
+<li>主存中的内容按位置访问，无需考虑其中包含的类型</li>
+<li>CPU从一条指令到下一条指令以顺序方式执行（除非明确修改）</li>
+<li>I/O模块与 CPU、主存交换 算机系统外部的数据</li>
+</ul>
+<h1 id="3-计算机组件"><a href="#3-计算机组件" class="headerlink" title="3.计算机组件"></a>3.计算机组件</h1><h2 id="3-1CPU"><a href="#3-1CPU" class="headerlink" title="3.1CPU"></a>3.1CPU</h2><ul>
+<li><strong>问题1</strong>：CPU的频率不能无限提高<ul>
+<li><strong>解决</strong>：改进CPU芯片结构</li>
+</ul>
+</li>
+<li><strong>问题2</strong>：内存墙的存在<br>  主存和CPU之间传输数据的速度跟不上CPU的速度。<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_E0pwIAZkDi.png" alt="NVIDIA_Share_E0pwIAZkDi.png"><ul>
+<li><strong>解决</strong>：采用高速缓存cache</li>
+</ul>
+</li>
+<li><strong>问题3</strong>：CPU在等待 I/O 设备时保持空闲<ul>
+<li><strong>解决</strong>：采用中断机制</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2存储器"><a href="#3-2存储器" class="headerlink" title="3.2存储器"></a>3.2存储器</h2><ul>
+<li><strong>问题1</strong>：兼顾存储容量、速度和成本<ul>
+<li><strong>解决</strong>：使用存储器层次结构而不是依赖单个存储器组件<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_yalT0gaea2.png" alt="NVIDIA_Share_yalT0gaea2.png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3I-O"><a href="#3-3I-O" class="headerlink" title="3.3I/O"></a>3.3I/O</h2><ul>
+<li><strong>问题1</strong>：不同I/O设备的传输速度差异大<ul>
+<li><strong>解决</strong>：设立缓冲区，新的接口技术，不同I/O操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4总线"><a href="#3-4总线" class="headerlink" title="3.4总线"></a>3.4总线</h2><ul>
+<li><strong>问题</strong>：计算机部件互连复杂<ul>
+<li><strong>解决</strong>：采用总线<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_WkoYiClJtv.png" alt="NVIDIA_Share_WkoYiClJtv.png"></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>02_计算机系统概述</title>
     <url>/posts/75f7a7d2/</url>
     <content><![CDATA[<h1 id="1-什么是计算机"><a href="#1-什么是计算机" class="headerlink" title="1.什么是计算机"></a>1.什么是计算机</h1><p><strong>通用电子数字计算机</strong>：</p>
@@ -267,60 +321,6 @@
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_GO8FiL37LH.png" alt="NVIDIA_Share_GO8FiL37LH.png"></p>
 <h2 id="4-3基准程序"><a href="#4-3基准程序" class="headerlink" title="4.3基准程序"></a>4.3基准程序</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_jqZIiZj9bL.png" alt="NVIDIA_Share_jqZIiZj9bL.png"></p>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构</tag>
-        <tag>课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>01_计算机顶层视图</title>
-    <url>/posts/c6f8f26e/</url>
-    <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
-<li>组织：可见</li>
-<li>结构：不可见<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png" alt="NVIDIA_Share_nwCw64dafh.png"></li>
-</ul>
-<h1 id="2-计算机工作原理"><a href="#2-计算机工作原理" class="headerlink" title="2.计算机工作原理"></a>2.计算机工作原理</h1><ul>
-<li>指令和数据存储在单个读写存储器中</li>
-<li>主存中的内容按位置访问，无需考虑其中包含的类型</li>
-<li>CPU从一条指令到下一条指令以顺序方式执行（除非明确修改）</li>
-<li>I/O模块与 CPU、主存交换 算机系统外部的数据</li>
-</ul>
-<h1 id="3-计算机组件"><a href="#3-计算机组件" class="headerlink" title="3.计算机组件"></a>3.计算机组件</h1><h2 id="3-1CPU"><a href="#3-1CPU" class="headerlink" title="3.1CPU"></a>3.1CPU</h2><ul>
-<li><strong>问题1</strong>：CPU的频率不能无限提高<ul>
-<li><strong>解决</strong>：改进CPU芯片结构</li>
-</ul>
-</li>
-<li><strong>问题2</strong>：内存墙的存在<br>  主存和CPU之间传输数据的速度跟不上CPU的速度。<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_E0pwIAZkDi.png" alt="NVIDIA_Share_E0pwIAZkDi.png"><ul>
-<li><strong>解决</strong>：采用高速缓存cache</li>
-</ul>
-</li>
-<li><strong>问题3</strong>：CPU在等待 I/O 设备时保持空闲<ul>
-<li><strong>解决</strong>：采用中断机制</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-2存储器"><a href="#3-2存储器" class="headerlink" title="3.2存储器"></a>3.2存储器</h2><ul>
-<li><strong>问题1</strong>：兼顾存储容量、速度和成本<ul>
-<li><strong>解决</strong>：使用存储器层次结构而不是依赖单个存储器组件<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_yalT0gaea2.png" alt="NVIDIA_Share_yalT0gaea2.png"></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3I-O"><a href="#3-3I-O" class="headerlink" title="3.3I/O"></a>3.3I/O</h2><ul>
-<li><strong>问题1</strong>：不同I/O设备的传输速度差异大<ul>
-<li><strong>解决</strong>：设立缓冲区，新的接口技术，不同I/O操作</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-4总线"><a href="#3-4总线" class="headerlink" title="3.4总线"></a>3.4总线</h2><ul>
-<li><strong>问题</strong>：计算机部件互连复杂<ul>
-<li><strong>解决</strong>：采用总线<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_WkoYiClJtv.png" alt="NVIDIA_Share_WkoYiClJtv.png"></li>
-</ul>
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>2022Fall_计算机组织与结构</category>
@@ -686,6 +686,23 @@
       </tags>
   </entry>
   <entry>
+    <title>07_二进制编码的十进制数运算</title>
+    <url>/posts/fb20164/</url>
+    <content><![CDATA[<h1 id="1-加法"><a href="#1-加法" class="headerlink" title="1.加法"></a>1.加法</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/aa14a6ec0dc75fe08c29d86f6be70bd2_38_NVIDIA_GeForce_Overlay_DT.png" alt="38_NVIDIA_GeForce_Overlay_DT.png"><br><strong>调整</strong></p>
+<ul>
+<li>超过16（有进位），个位消耗了16，多消耗了6，要补回去</li>
+<li>超过10（无进位），但未消耗16，额外补6来产生进位。个位只消耗了10，产生正确进位。</li>
+</ul>
+<h1 id="2-减法"><a href="#2-减法" class="headerlink" title="2.减法"></a>2.减法</h1><p><strong>反转</strong><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/695cd34174bec02ac6a830af5c254fcd_39_NVIDIA_GeForce_Overlay_DT.png" alt="39_NVIDIA_GeForce_Overlay_DT.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/f75e643d4a1a621718a531e95d799f03_3a_NVIDIA_GeForce_Overlay_DT.png" alt="3a_NVIDIA_GeForce_Overlay_DT.png"></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>08_内部存储器</title>
     <url>/posts/bacc272a/</url>
     <content><![CDATA[<ul>
@@ -866,23 +883,6 @@
 </ul>
 </li>
 </ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>07_二进制编码的十进制数运算</title>
-    <url>/posts/fb20164/</url>
-    <content><![CDATA[<h1 id="1-加法"><a href="#1-加法" class="headerlink" title="1.加法"></a>1.加法</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/aa14a6ec0dc75fe08c29d86f6be70bd2_38_NVIDIA_GeForce_Overlay_DT.png" alt="38_NVIDIA_GeForce_Overlay_DT.png"><br><strong>调整</strong></p>
-<ul>
-<li>超过16（有进位），个位消耗了16，多消耗了6，要补回去</li>
-<li>超过10（无进位），但未消耗16，额外补6来产生进位。个位只消耗了10，产生正确进位。</li>
-</ul>
-<h1 id="2-减法"><a href="#2-减法" class="headerlink" title="2.减法"></a>2.减法</h1><p><strong>反转</strong><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/695cd34174bec02ac6a830af5c254fcd_39_NVIDIA_GeForce_Overlay_DT.png" alt="39_NVIDIA_GeForce_Overlay_DT.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/28/f75e643d4a1a621718a531e95d799f03_3a_NVIDIA_GeForce_Overlay_DT.png" alt="3a_NVIDIA_GeForce_Overlay_DT.png"></p>
 ]]></content>
       <categories>
         <category>2022Fall_计算机组织与结构</category>
@@ -1275,6 +1275,167 @@
       </tags>
   </entry>
   <entry>
+    <title>11_冗余磁盘阵列(RAID)</title>
+    <url>/posts/b7ba64ea/</url>
+    <content><![CDATA[<ul>
+<li>冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
+<li>基本思想<ul>
+<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
+<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
+<li>采用<strong>数据冗余</strong>来进行错误恢复以提高系统可靠性</li>
+</ul>
+</li>
+<li>特性<ul>
+<li>由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器</li>
+<li>数据是分布在多个物理磁盘上</li>
+<li>冗余磁盘容量用于存储校验信息，保证磁盘万一损坏时能恢复数据</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-RAID分类"><a href="#1-RAID分类" class="headerlink" title="1.RAID分类"></a>1.RAID分类</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png" alt="68_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="2-RAID-0"><a href="#2-RAID-0" class="headerlink" title="2.RAID 0"></a>2.RAID 0</h1><ul>
+<li>数据以<strong>条带</strong>的形式在可用的磁盘上分布<ul>
+<li>Eg：按照0、1、2、3顺序</li>
+</ul>
+</li>
+<li>不采用冗余来改善性能（不是RAID家族中的真正成员）</li>
+</ul>
+<h2 id="2-1-优点"><a href="#2-1-优点" class="headerlink" title="2.1 优点"></a>2.1 优点</h2><ul>
+<li>高数据传输率</li>
+<li>高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘</li>
+</ul>
+<h2 id="2-2-缺点"><a href="#2-2-缺点" class="headerlink" title="2.2 缺点"></a>2.2 缺点</h2><ul>
+<li>任何一个盘损坏文件就不可用</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png" alt="69_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="3-RAID-1"><a href="#3-RAID-1" class="headerlink" title="3.RAID 1"></a>3.RAID 1</h1><ul>
+<li>采用了数据<strong>条带</strong></li>
+<li>采用简单地<strong>备份所有数据</strong>的方法来实现冗余</li>
+</ul>
+<h2 id="3-1-优点"><a href="#3-1-优点" class="headerlink" title="3.1 优点"></a>3.1 优点</h2><ul>
+<li>高速响应I/O请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应<ul>
+<li><strong>读请求</strong>可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个，<strong>更快</strong></li>
+<li><strong>写请求</strong>需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘，<strong>更慢</strong></li>
+</ul>
+</li>
+<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单</li>
+</ul>
+<h2 id="3-2-缺点"><a href="#3-2-缺点" class="headerlink" title="3.2 缺点"></a>3.2 缺点</h2><ul>
+<li>价格昂贵</li>
+</ul>
+<h2 id="3-3-用途"><a href="#3-3-用途" class="headerlink" title="3.3 用途"></a>3.3 用途</h2><ul>
+<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
+</ul>
+<h2 id="3-4-与RAID-0相比"><a href="#3-4-与RAID-0相比" class="headerlink" title="3.4 与RAID 0相比"></a>3.4 与RAID 0相比</h2><ul>
+<li>如果有大批的读请求，则RAID 1能实现高速的I/O速率，性能可以达到RAID 0的两倍</li>
+<li>如果I/O请求有相当大的部分是写请求，则它不比RAID 0的性能好多少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png" alt="6a_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="3-5RAID-01-vs-RAID-10"><a href="#3-5RAID-01-vs-RAID-10" class="headerlink" title="3.5RAID 01 vs. RAID 10"></a>3.5RAID 01 vs. RAID 10</h2><ul>
+<li>RAID 01 = RAID 0+1：先做RAID 0，再做RAID 1</li>
+<li>RAID 10 = RAID 1+0：先做RAID 1，再做RAID 0</li>
+<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的<strong>容错能力</strong><ul>
+<li>RAID 10容错率更高</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png" alt="6b_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="4-RAID-2"><a href="#4-RAID-2" class="headerlink" title="4.RAID 2"></a>4.RAID 2</h1><ul>
+<li>采用并行存取技术<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/83dee816dc8e78b2e3bcb2354c8497d6_6c_VoIPSCreencastCoverWnd%20-2-.png" alt="6c_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h2><ul>
+<li><strong>所有</strong>磁盘都参与<strong>每</strong>个I/O请求的执行</li>
+</ul>
+<h2 id="4-2-特点"><a href="#4-2-特点" class="headerlink" title="4.2 特点"></a>4.2 特点</h2><ul>
+<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
+<li>采用<strong>数据条带</strong>：<strong>条带非常小</strong>，经常只有一个字节或一个字</li>
+</ul>
+<h2 id="4-3-纠错"><a href="#4-3-纠错" class="headerlink" title="4.3 纠错"></a>4.3 纠错</h2><p>对位于同一条带的各个数据盘上的数据位<strong>计算校验码（通常采用海明码）</strong>，校验码存储在该条带中多个校验盘的对应位置</p>
+<h2 id="4-4-访问"><a href="#4-4-访问" class="headerlink" title="4.4 访问"></a>4.4 访问</h2><ul>
+<li>读取：获取请求的数据和对应的校验码</li>
+<li>写入：所有数据盘和校验盘都被访问</li>
+</ul>
+<h2 id="4-5-缺点"><a href="#4-5-缺点" class="headerlink" title="4.5 缺点"></a>4.5 缺点</h2><ul>
+<li>冗余盘依然比较多，价格较贵</li>
+<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高 可靠性的情况没有意义</li>
+</ul>
+<h1 id="5-RAID-3"><a href="#5-RAID-3" class="headerlink" title="5.RAID 3"></a>5.RAID 3</h1><ul>
+<li>采用并行存取技术<ul>
+<li>各个驱动器的轴同步旋转</li>
+<li>采用<strong>非常小</strong>的数据条带</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-1-校验"><a href="#5-1-校验" class="headerlink" title="5.1 校验"></a>5.1 校验</h2><ul>
+<li>对所有数据盘上<strong>同一位置</strong>的数据计算奇偶校验码<ul>
+<li>当某一磁盘损坏时，可以用于重构数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f7562ab00bdaf086770ab9ba01f78f12_6d_VoIPSCreencastCoverWnd%20-2-.png" alt="6d_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-优缺点"><a href="#5-2-优缺点" class="headerlink" title="5.2 优缺点"></a>5.2 优缺点</h2><ul>
+<li>优点：能够获得非常高的数据传输率<ul>
+<li>对于大量传送，性能改善特别明显</li>
+</ul>
+</li>
+<li>缺点：一次只能执行一个I/O请求<ul>
+<li>在面向多个IO请求时，性能将受损</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-RAID-4"><a href="#6-RAID-4" class="headerlink" title="6.RAID 4"></a>6.RAID 4</h1><ul>
+<li>采用独立存取技术<ul>
+<li>读可以独立，写无法独立</li>
+<li>每个磁盘成员的操作是独立的，各个I/O请求能够并行处理</li>
+<li>采用相对<strong>较大的数据条带</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-1-校验"><a href="#6-1-校验" class="headerlink" title="6.1 校验"></a>6.1 校验</h2><p>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在<strong>奇偶校验盘</strong>的对应条带上<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/521fcea4b354b9de72e3a4c5ffe926bd_6e_VoIPSCreencastCoverWnd%20-2-.png" alt="6e_VoIPSCreencastCoverWnd (2).png"></p>
+<ul>
+<li>优化修改数据时<strong>重新计算校验码</strong>的读写次数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/39de9d867ee7099a563e4d67ea0e97d2_capture-2023-02-06-11-06-09.jpg" alt="capture-2023-02-06-11-06-09.jpg"></li>
+</ul>
+<h2 id="6-2-性能"><a href="#6-2-性能" class="headerlink" title="6.2 性能"></a>6.2 性能</h2><ul>
+<li>当执行<strong>较小规模</strong>的I/O写请求时，RAID 4会遭遇<strong>写损失</strong><ul>
+<li>对于每一次写操作，阵列管理软件不仅要修改用户数据， 而且要修改相应的校验位</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/13b04dadc923526ad38ea677a3fd5656_6f_VoIPSCreencastCoverWnd%20-2-.png" alt="6f_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+<li>当涉及所有磁盘的数据条带的较大I/O写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
+<li>每一次写操作必须涉及到<strong>唯一的校验盘</strong>，校验盘会成为瓶颈</li>
+</ul>
+<h1 id="7-RAID-5"><a href="#7-RAID-5" class="headerlink" title="7.RAID 5"></a>7.RAID 5</h1><ul>
+<li>与RAID 4 组织方式相似</li>
+<li>在所有磁盘上都分布了奇偶校验条带<ul>
+<li>避免潜在的I/O瓶颈问题</li>
+</ul>
+</li>
+<li>访问时的“两读两写”<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/c4f46bafa944914cebc6c8989ebaf21f_70_VoIPSCreencastCoverWnd%20-2-.png" alt="70_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="7-1-RAID-50"><a href="#7-1-RAID-50" class="headerlink" title="7.1 RAID 50"></a>7.1 RAID 50</h2><ul>
+<li>先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问</li>
+<li>RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效</li>
+<li>RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低</li>
+</ul>
+<h1 id="8-RAID-6"><a href="#8-RAID-6" class="headerlink" title="8.RAID 6"></a>8.RAID 6</h1><ul>
+<li>采用<strong>两种不同的校验码</strong>，并将校验码以分开的块存于不同的磁盘中</li>
+<li>优点<ul>
+<li>提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>写损失:每次写影响到两个校验块<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png" alt="71_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+</ul>
+<h1 id="9-RAID比较"><a href="#9-RAID比较" class="headerlink" title="9.RAID比较"></a>9.RAID比较</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2d0b20945c49a12772798b2459b890bb_72_VoIPSCreencastCoverWnd%20-2-.png" alt="72_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/927619b8756054d87fa147a66555f92d_73_VoIPSCreencastCoverWnd%20-2-.png" alt="73_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png" alt="74_VoIPSCreencastCoverWnd (2).png"></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>12_虚拟存储器</title>
     <url>/posts/7a95209e/</url>
     <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
@@ -1437,167 +1598,6 @@
 <li>优点：程序按段实现共享与保护</li>
 <li>缺点：需要多次查表</li>
 </ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>11_冗余磁盘阵列(RAID)</title>
-    <url>/posts/b7ba64ea/</url>
-    <content><![CDATA[<ul>
-<li>冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
-<li>基本思想<ul>
-<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
-<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
-<li>采用<strong>数据冗余</strong>来进行错误恢复以提高系统可靠性</li>
-</ul>
-</li>
-<li>特性<ul>
-<li>由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器</li>
-<li>数据是分布在多个物理磁盘上</li>
-<li>冗余磁盘容量用于存储校验信息，保证磁盘万一损坏时能恢复数据</li>
-</ul>
-</li>
-</ul>
-<h1 id="1-RAID分类"><a href="#1-RAID分类" class="headerlink" title="1.RAID分类"></a>1.RAID分类</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png" alt="68_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="2-RAID-0"><a href="#2-RAID-0" class="headerlink" title="2.RAID 0"></a>2.RAID 0</h1><ul>
-<li>数据以<strong>条带</strong>的形式在可用的磁盘上分布<ul>
-<li>Eg：按照0、1、2、3顺序</li>
-</ul>
-</li>
-<li>不采用冗余来改善性能（不是RAID家族中的真正成员）</li>
-</ul>
-<h2 id="2-1-优点"><a href="#2-1-优点" class="headerlink" title="2.1 优点"></a>2.1 优点</h2><ul>
-<li>高数据传输率</li>
-<li>高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘</li>
-</ul>
-<h2 id="2-2-缺点"><a href="#2-2-缺点" class="headerlink" title="2.2 缺点"></a>2.2 缺点</h2><ul>
-<li>任何一个盘损坏文件就不可用</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png" alt="69_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="3-RAID-1"><a href="#3-RAID-1" class="headerlink" title="3.RAID 1"></a>3.RAID 1</h1><ul>
-<li>采用了数据<strong>条带</strong></li>
-<li>采用简单地<strong>备份所有数据</strong>的方法来实现冗余</li>
-</ul>
-<h2 id="3-1-优点"><a href="#3-1-优点" class="headerlink" title="3.1 优点"></a>3.1 优点</h2><ul>
-<li>高速响应I/O请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应<ul>
-<li><strong>读请求</strong>可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个，<strong>更快</strong></li>
-<li><strong>写请求</strong>需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘，<strong>更慢</strong></li>
-</ul>
-</li>
-<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单</li>
-</ul>
-<h2 id="3-2-缺点"><a href="#3-2-缺点" class="headerlink" title="3.2 缺点"></a>3.2 缺点</h2><ul>
-<li>价格昂贵</li>
-</ul>
-<h2 id="3-3-用途"><a href="#3-3-用途" class="headerlink" title="3.3 用途"></a>3.3 用途</h2><ul>
-<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
-</ul>
-<h2 id="3-4-与RAID-0相比"><a href="#3-4-与RAID-0相比" class="headerlink" title="3.4 与RAID 0相比"></a>3.4 与RAID 0相比</h2><ul>
-<li>如果有大批的读请求，则RAID 1能实现高速的I/O速率，性能可以达到RAID 0的两倍</li>
-<li>如果I/O请求有相当大的部分是写请求，则它不比RAID 0的性能好多少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png" alt="6a_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="3-5RAID-01-vs-RAID-10"><a href="#3-5RAID-01-vs-RAID-10" class="headerlink" title="3.5RAID 01 vs. RAID 10"></a>3.5RAID 01 vs. RAID 10</h2><ul>
-<li>RAID 01 = RAID 0+1：先做RAID 0，再做RAID 1</li>
-<li>RAID 10 = RAID 1+0：先做RAID 1，再做RAID 0</li>
-<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的<strong>容错能力</strong><ul>
-<li>RAID 10容错率更高</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png" alt="6b_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="4-RAID-2"><a href="#4-RAID-2" class="headerlink" title="4.RAID 2"></a>4.RAID 2</h1><ul>
-<li>采用并行存取技术<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/83dee816dc8e78b2e3bcb2354c8497d6_6c_VoIPSCreencastCoverWnd%20-2-.png" alt="6c_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h2><ul>
-<li><strong>所有</strong>磁盘都参与<strong>每</strong>个I/O请求的执行</li>
-</ul>
-<h2 id="4-2-特点"><a href="#4-2-特点" class="headerlink" title="4.2 特点"></a>4.2 特点</h2><ul>
-<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
-<li>采用<strong>数据条带</strong>：<strong>条带非常小</strong>，经常只有一个字节或一个字</li>
-</ul>
-<h2 id="4-3-纠错"><a href="#4-3-纠错" class="headerlink" title="4.3 纠错"></a>4.3 纠错</h2><p>对位于同一条带的各个数据盘上的数据位<strong>计算校验码（通常采用海明码）</strong>，校验码存储在该条带中多个校验盘的对应位置</p>
-<h2 id="4-4-访问"><a href="#4-4-访问" class="headerlink" title="4.4 访问"></a>4.4 访问</h2><ul>
-<li>读取：获取请求的数据和对应的校验码</li>
-<li>写入：所有数据盘和校验盘都被访问</li>
-</ul>
-<h2 id="4-5-缺点"><a href="#4-5-缺点" class="headerlink" title="4.5 缺点"></a>4.5 缺点</h2><ul>
-<li>冗余盘依然比较多，价格较贵</li>
-<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高 可靠性的情况没有意义</li>
-</ul>
-<h1 id="5-RAID-3"><a href="#5-RAID-3" class="headerlink" title="5.RAID 3"></a>5.RAID 3</h1><ul>
-<li>采用并行存取技术<ul>
-<li>各个驱动器的轴同步旋转</li>
-<li>采用<strong>非常小</strong>的数据条带</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-1-校验"><a href="#5-1-校验" class="headerlink" title="5.1 校验"></a>5.1 校验</h2><ul>
-<li>对所有数据盘上<strong>同一位置</strong>的数据计算奇偶校验码<ul>
-<li>当某一磁盘损坏时，可以用于重构数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f7562ab00bdaf086770ab9ba01f78f12_6d_VoIPSCreencastCoverWnd%20-2-.png" alt="6d_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-</ul>
-<h2 id="5-2-优缺点"><a href="#5-2-优缺点" class="headerlink" title="5.2 优缺点"></a>5.2 优缺点</h2><ul>
-<li>优点：能够获得非常高的数据传输率<ul>
-<li>对于大量传送，性能改善特别明显</li>
-</ul>
-</li>
-<li>缺点：一次只能执行一个I/O请求<ul>
-<li>在面向多个IO请求时，性能将受损</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-RAID-4"><a href="#6-RAID-4" class="headerlink" title="6.RAID 4"></a>6.RAID 4</h1><ul>
-<li>采用独立存取技术<ul>
-<li>读可以独立，写无法独立</li>
-<li>每个磁盘成员的操作是独立的，各个I/O请求能够并行处理</li>
-<li>采用相对<strong>较大的数据条带</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="6-1-校验"><a href="#6-1-校验" class="headerlink" title="6.1 校验"></a>6.1 校验</h2><p>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在<strong>奇偶校验盘</strong>的对应条带上<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/521fcea4b354b9de72e3a4c5ffe926bd_6e_VoIPSCreencastCoverWnd%20-2-.png" alt="6e_VoIPSCreencastCoverWnd (2).png"></p>
-<ul>
-<li>优化修改数据时<strong>重新计算校验码</strong>的读写次数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/39de9d867ee7099a563e4d67ea0e97d2_capture-2023-02-06-11-06-09.jpg" alt="capture-2023-02-06-11-06-09.jpg"></li>
-</ul>
-<h2 id="6-2-性能"><a href="#6-2-性能" class="headerlink" title="6.2 性能"></a>6.2 性能</h2><ul>
-<li>当执行<strong>较小规模</strong>的I/O写请求时，RAID 4会遭遇<strong>写损失</strong><ul>
-<li>对于每一次写操作，阵列管理软件不仅要修改用户数据， 而且要修改相应的校验位</li>
-<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/13b04dadc923526ad38ea677a3fd5656_6f_VoIPSCreencastCoverWnd%20-2-.png" alt="6f_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-<li>当涉及所有磁盘的数据条带的较大I/O写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
-<li>每一次写操作必须涉及到<strong>唯一的校验盘</strong>，校验盘会成为瓶颈</li>
-</ul>
-<h1 id="7-RAID-5"><a href="#7-RAID-5" class="headerlink" title="7.RAID 5"></a>7.RAID 5</h1><ul>
-<li>与RAID 4 组织方式相似</li>
-<li>在所有磁盘上都分布了奇偶校验条带<ul>
-<li>避免潜在的I/O瓶颈问题</li>
-</ul>
-</li>
-<li>访问时的“两读两写”<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/c4f46bafa944914cebc6c8989ebaf21f_70_VoIPSCreencastCoverWnd%20-2-.png" alt="70_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="7-1-RAID-50"><a href="#7-1-RAID-50" class="headerlink" title="7.1 RAID 50"></a>7.1 RAID 50</h2><ul>
-<li>先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问</li>
-<li>RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效</li>
-<li>RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低</li>
-</ul>
-<h1 id="8-RAID-6"><a href="#8-RAID-6" class="headerlink" title="8.RAID 6"></a>8.RAID 6</h1><ul>
-<li>采用<strong>两种不同的校验码</strong>，并将校验码以分开的块存于不同的磁盘中</li>
-<li>优点<ul>
-<li>提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>写损失:每次写影响到两个校验块<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png" alt="71_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-</ul>
-<h1 id="9-RAID比较"><a href="#9-RAID比较" class="headerlink" title="9.RAID比较"></a>9.RAID比较</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2d0b20945c49a12772798b2459b890bb_72_VoIPSCreencastCoverWnd%20-2-.png" alt="72_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/927619b8756054d87fa147a66555f92d_73_VoIPSCreencastCoverWnd%20-2-.png" alt="73_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png" alt="74_VoIPSCreencastCoverWnd (2).png"></p>
 ]]></content>
       <categories>
         <category>2022Fall_计算机组织与结构</category>
@@ -5439,74 +5439,6 @@
       </tags>
   </entry>
   <entry>
-    <title>0-服务端开发</title>
-    <url>/posts/19f5250f/</url>
-    <content><![CDATA[<h1 id="1-Spring"><a href="#1-Spring" class="headerlink" title="1. Spring"></a>1. Spring</h1><ul>
-<li><p>Spring</p>
-<ul>
-<li>Spring的核心是提供一个容器（container）</li>
-<li>管理Bean的生命周期，组装Bean形成一个可用的系统</li>
-<li>Application Context上下文运行环境</li>
-</ul>
-</li>
-<li><p>Bean</p>
-<ul>
-<li>一个object<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png" alt="image.png"></li>
-</ul>
-</li>
-<li><p>核心技术</p>
-<ul>
-<li>依赖注入</li>
-<li>AOP面向切面的编程</li>
-</ul>
-</li>
-<li><p>持久层</p>
-<ul>
-<li>简化，只需要关注业务</li>
-<li>JDBC、事务管理、ORM工具整合</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-Spring衍生"><a href="#2-Spring衍生" class="headerlink" title="2. Spring衍生"></a>2. Spring衍生</h1><ul>
-<li>Spring：基本框架</li>
-<li>Spring Boot：自动配置，简化Spring开发<ul>
-<li>开发单个微服务（可执行程序）</li>
-</ul>
-</li>
-<li>Spring Cloud：解决分布式系统中特有的问题</li>
-</ul>
-<h2 id="2-1-spring-boot"><a href="#2-1-spring-boot" class="headerlink" title="2.1. spring boot"></a>2.1. spring boot</h2><ol>
-<li>可以创建独立的Spring应用程序，并且基于其Maven或Gradle插件，可以创建可执行的JARs和WARs</li>
-<li>内嵌Tomcat或Jetty等<strong>Servlet容器</strong>（Web容器，有很多可运行的web组件）</li>
-<li>提供自动配置的“<strong>starter</strong>”项目对象模型（POMS）以简化Maven配置</li>
-<li>尽可能自动配置<strong>Spring容器</strong></li>
-<li>提供准备好的特性，如指标、健康检查和外部化配置</li>
-<li>绝对没有代码生成，不需要XML配置</li>
-</ol>
-<p>war包小，不能独立运行<br>Jar包大，内嵌tomcat容器，本身可以独立运行</p>
-<h2 id="2-2-常用依赖"><a href="#2-2-常用依赖" class="headerlink" title="2.2. 常用依赖"></a>2.2. 常用依赖</h2><p>devtools：开发时候用于调试<br>web：MVC开发框架<br>thymeleaf：动态组装html页面</p>
-<h1 id="3-👍Spring-Web开发框架的分层"><a href="#3-👍Spring-Web开发框架的分层" class="headerlink" title="3. 👍Spring Web开发框架的分层"></a>3. 👍Spring Web开发框架的分层</h1><ul>
-<li>在服务端一侧的划分：</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2Faa30cd55d3482bfd4228c3f361bba520_20230907204339.png" alt="image.png"></p>
-<h1 id="4-使用JUnit写测试用例"><a href="#4-使用JUnit写测试用例" class="headerlink" title="4. 使用JUnit写测试用例"></a>4. 使用JUnit写测试用例</h1><ul>
-<li><code>@Test</code>注解</li>
-<li><code>void</code>返回值，<code>public</code>可选</li>
-<li>无参数</li>
-</ul>
-<p>-方法命名随意</p>
-<h2 id="4-1-断言"><a href="#4-1-断言" class="headerlink" title="4.1. 断言"></a>4.1. 断言</h2><p>测试代码中对预期结果的断定</p>
-<h1 id="5-Spring模块组成"><a href="#5-Spring模块组成" class="headerlink" title="5. Spring模块组成"></a>5. Spring模块组成</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2F4df50c54d812c48ff73dfeac3b4008cc_20230914185434.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>13-期末复习</title>
     <url>/posts/20e7e86a/</url>
     <content><![CDATA[<h1 id="1-内容组织"><a href="#1-内容组织" class="headerlink" title="1. 内容组织"></a>1. 内容组织</h1><p>软件主导硬件<br>以应用为中心</p>
@@ -5676,6 +5608,74 @@
       <tags>
         <tag>课程</tag>
         <tag>2023_Fall_嵌入式系统概论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0-服务端开发</title>
+    <url>/posts/19f5250f/</url>
+    <content><![CDATA[<h1 id="1-Spring"><a href="#1-Spring" class="headerlink" title="1. Spring"></a>1. Spring</h1><ul>
+<li><p>Spring</p>
+<ul>
+<li>Spring的核心是提供一个容器（container）</li>
+<li>管理Bean的生命周期，组装Bean形成一个可用的系统</li>
+<li>Application Context上下文运行环境</li>
+</ul>
+</li>
+<li><p>Bean</p>
+<ul>
+<li>一个object<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2F27a33f228b702e3362eab03541d8c21e_20230907191141.png" alt="image.png"></li>
+</ul>
+</li>
+<li><p>核心技术</p>
+<ul>
+<li>依赖注入</li>
+<li>AOP面向切面的编程</li>
+</ul>
+</li>
+<li><p>持久层</p>
+<ul>
+<li>简化，只需要关注业务</li>
+<li>JDBC、事务管理、ORM工具整合</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-Spring衍生"><a href="#2-Spring衍生" class="headerlink" title="2. Spring衍生"></a>2. Spring衍生</h1><ul>
+<li>Spring：基本框架</li>
+<li>Spring Boot：自动配置，简化Spring开发<ul>
+<li>开发单个微服务（可执行程序）</li>
+</ul>
+</li>
+<li>Spring Cloud：解决分布式系统中特有的问题</li>
+</ul>
+<h2 id="2-1-spring-boot"><a href="#2-1-spring-boot" class="headerlink" title="2.1. spring boot"></a>2.1. spring boot</h2><ol>
+<li>可以创建独立的Spring应用程序，并且基于其Maven或Gradle插件，可以创建可执行的JARs和WARs</li>
+<li>内嵌Tomcat或Jetty等<strong>Servlet容器</strong>（Web容器，有很多可运行的web组件）</li>
+<li>提供自动配置的“<strong>starter</strong>”项目对象模型（POMS）以简化Maven配置</li>
+<li>尽可能自动配置<strong>Spring容器</strong></li>
+<li>提供准备好的特性，如指标、健康检查和外部化配置</li>
+<li>绝对没有代码生成，不需要XML配置</li>
+</ol>
+<p>war包小，不能独立运行<br>Jar包大，内嵌tomcat容器，本身可以独立运行</p>
+<h2 id="2-2-常用依赖"><a href="#2-2-常用依赖" class="headerlink" title="2.2. 常用依赖"></a>2.2. 常用依赖</h2><p>devtools：开发时候用于调试<br>web：MVC开发框架<br>thymeleaf：动态组装html页面</p>
+<h1 id="3-👍Spring-Web开发框架的分层"><a href="#3-👍Spring-Web开发框架的分层" class="headerlink" title="3. 👍Spring Web开发框架的分层"></a>3. 👍Spring Web开发框架的分层</h1><ul>
+<li>在服务端一侧的划分：</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F07%2Faa30cd55d3482bfd4228c3f361bba520_20230907204339.png" alt="image.png"></p>
+<h1 id="4-使用JUnit写测试用例"><a href="#4-使用JUnit写测试用例" class="headerlink" title="4. 使用JUnit写测试用例"></a>4. 使用JUnit写测试用例</h1><ul>
+<li><code>@Test</code>注解</li>
+<li><code>void</code>返回值，<code>public</code>可选</li>
+<li>无参数</li>
+</ul>
+<p>-方法命名随意</p>
+<h2 id="4-1-断言"><a href="#4-1-断言" class="headerlink" title="4.1. 断言"></a>4.1. 断言</h2><p>测试代码中对预期结果的断定</p>
+<h1 id="5-Spring模块组成"><a href="#5-Spring模块组成" class="headerlink" title="5. Spring模块组成"></a>5. Spring模块组成</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F14%2F4df50c54d812c48ff73dfeac3b4008cc_20230914185434.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -6799,121 +6799,6 @@
       </tags>
   </entry>
   <entry>
-    <title>3-Spring MVC</title>
-    <url>/posts/c5191f2c/</url>
-    <content><![CDATA[<h1 id="1-👍基本概念"><a href="#1-👍基本概念" class="headerlink" title="1. 👍基本概念"></a>1. 👍基本概念</h1><p><strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller</p>
-<ul>
-<li>模型model：存储内容，指数据、领域类</li>
-<li>控制器controller：处理用户输入，客户端的请求</li>
-<li>视图view：显示内容</li>
-</ul>
-<p>lombok在编译器自动生成一些样板代码，运行期没用。<br><code>@Slf4j</code>是lombok提供的注解。<br><code>slf4j</code>是一个日志标准，具体实现有很多，如logback,log4j等。<br><code>lombok</code>插件<code>@Data</code>注解</p>
-<p>目前主流的是前后端分离开发。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F11-21-23-58e755321af999ee54aaca9812997e0a-20231231112122-1cafd2.png" alt="image.png"></p>
-<h1 id="2-Model-领域类"><a href="#2-Model-领域类" class="headerlink" title="2. Model 领域类"></a>2. Model 领域类</h1><p>为视图提供数据。</p>
-<ul>
-<li><code>@ModelAttribute</code></li>
-<li><code>@SessionAttributes</code><ul>
-<li>Model属性会复制到<strong>Servlet Request</strong>属性中，这样视图中就可以使用它们用于渲染页面</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-1-Servlet规范"><a href="#2-1-Servlet规范" class="headerlink" title="2.1. Servlet规范"></a>2.1. Servlet规范</h2><ul>
-<li>最小开发单元</li>
-<li><strong>Web容器的实现规范</strong>，与Spring无关<ul>
-<li>Web容器/服务器，里面放Servlet对象</li>
-</ul>
-</li>
-<li>实现<ul>
-<li>tomcat</li>
-<li>jetty</li>
-</ul>
-</li>
-</ul>
-<p><strong>thymeleaf</strong>与<strong>Servlet request</strong>属性协作，<font color="#ff0000">与spring model解耦</font></p>
-<h3 id="2-1-1-Servlet对象"><a href="#2-1-1-Servlet对象" class="headerlink" title="2.1.1. Servlet对象"></a>2.1.1. Servlet对象</h3><ul>
-<li>类型<ul>
-<li>Request</li>
-<li>Response</li>
-</ul>
-</li>
-<li>Servlet对象带有属性(property即<strong>key-value</strong>)</li>
-</ul>
-<h2 id="2-2-ModelAttribute"><a href="#2-2-ModelAttribute" class="headerlink" title="2.2. ModelAttribute"></a>2.2. ModelAttribute</h2><ul>
-<li><code>@ModelAttribute(name = &lt;key&gt;)</code><ul>
-<li>注解返回值为<code>value</code></li>
-</ul>
-</li>
-<li>方法被Spring自动调用</li>
-</ul>
-<h3 id="2-2-1-方法级别"><a href="#2-2-1-方法级别" class="headerlink" title="2.2.1. 方法级别"></a>2.2.1. 方法级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ModelAttribute("attributeName")</span></span><br><span class="line"><span class="keyword">public</span> SomeObject <span class="title function_">methodName</span><span class="params">()</span> {</span><br><span class="line">    <span class="comment">// 创建并返回 SomeObject 对象</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>方法的返回值将被添加到模型中，并使用指定的属性名作为key。在控制器处理请求之前，该方法会先被调用。</p>
-<h3 id="2-2-2-参数级别"><a href="#2-2-2-参数级别" class="headerlink" title="2.2.2. 参数级别"></a>2.2.2. 参数级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute("attributeName")</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>在这种写法中，<code>@ModelAttribute</code>注解标记在方法的参数上，指定了要从模型中获取的属性的名称。参数将被自动绑定到模型中的相应属性，以便在方法内部使用。</p>
-<h3 id="2-2-3-默认命名规则"><a href="#2-2-3-默认命名规则" class="headerlink" title="2.2.3. 默认命名规则"></a>2.2.3. 默认命名规则</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>如果没有指定<code>@ModelAttribute</code>注解的属性名称，Spring MVC会根据参数类型自动推断属性名称，并将其添加到模型中。<br>在上面的示例中，<code>SomeObject</code>类型的参数将使用类名的首字母小写作为属性名称。</p>
-<h1 id="3-MVC请求"><a href="#3-MVC请求" class="headerlink" title="3. MVC请求"></a>3. MVC请求</h1><h2 id="3-1-👍处理过程"><a href="#3-1-👍处理过程" class="headerlink" title="3.1. 👍处理过程"></a>3.1. 👍处理过程</h2><p>客户端请求在<strong>后端的处理过程</strong>，非常重要。<br><strong>核心DispatcherServlet</strong>，是Spring自己实现的Servlet容器。</p>
-<ol>
-<li>Web容器开发的基本单元是Servlet，请求先到servlet。</li>
-<li>mapping根据url把请求转到controller，其中spring框架会做参数解析。</li>
-<li>controller拿到请求和请求参数，把请求和请求参数传给业务层</li>
-<li>业务层处理业务逻辑，可能会做数据持久化访问DAO层</li>
-<li>业务层把处理结构返回控制器</li>
-<li>控制器把结果放回给servlet</li>
-<li>servlet拿到了数据和逻辑视图名，找到视图解析器的第三方库</li>
-<li>视图解析器渲染视图</li>
-</ol>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png" alt="Screenshot from 2023-10-07 18-38-55"></p>
-<h2 id="3-2-MVC请求映射"><a href="#3-2-MVC请求映射" class="headerlink" title="3.2. MVC请求映射"></a>3.2. MVC请求映射</h2><p>来自http协议的标准。<br>注解可以放在类定义上方，也可以放在方法上方。</p>
-<ul>
-<li><code>Requestmapping</code></li>
-<li><code>GetMapping</code></li>
-<li><code>PostMapping</code></li>
-<li><code>DeleteMapping</code></li>
-<li><code>PatchMapping</code></li>
-<li><code>PutMapping</code></li>
-</ul>
-<h2 id="3-3-👍重定向"><a href="#3-3-👍重定向" class="headerlink" title="3.3. 👍重定向"></a>3.3. 👍重定向</h2><p>控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url</p>
-<ul>
-<li>http状态码：302</li>
-<li>控制器<code>return redirect:&lt;url&gt;</code></li>
-</ul>
-<h2 id="3-4-👍Spring-MVC获取参数的集中方式"><a href="#3-4-👍Spring-MVC获取参数的集中方式" class="headerlink" title="3.4. 👍Spring MVC获取参数的集中方式"></a>3.4. 👍Spring MVC获取参数的集中方式</h2><ol>
-<li>表单(form)参数，转成model<ul>
-<li>成员类型可能要自己实现Converter进行转换</li>
-<li>可以用<code>@Valid</code>校验</li>
-<li>form是html里定义的</li>
-</ul>
-</li>
-<li>路径参数<ul>
-<li><code>@PathVariable</code></li>
-<li>例：<code>/book/{id}</code></li>
-</ul>
-</li>
-<li>请求参数/查询参数<ul>
-<li><code>@RequestParam</code></li>
-<li>例：<code>/challenge?model=2</code></li>
-</ul>
-</li>
-<li>json请求体<ul>
-<li><code>@RequestBody</code>，会用到HttpMessageConverter消息转换器</li>
-<li>Rest API</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2-面向切面编程</title>
     <url>/posts/e2853af6/</url>
     <content><![CDATA[<h1 id="1-软件编程方法"><a href="#1-软件编程方法" class="headerlink" title="1. 软件编程方法"></a>1. 软件编程方法</h1><ul>
@@ -7087,6 +6972,121 @@
 <li><code>main</code>和测试</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F28%2F786a0319e1f1f5d0d8e5422f97265926_20230928185355.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3-Spring MVC</title>
+    <url>/posts/c5191f2c/</url>
+    <content><![CDATA[<h1 id="1-👍基本概念"><a href="#1-👍基本概念" class="headerlink" title="1. 👍基本概念"></a>1. 👍基本概念</h1><p><strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller</p>
+<ul>
+<li>模型model：存储内容，指数据、领域类</li>
+<li>控制器controller：处理用户输入，客户端的请求</li>
+<li>视图view：显示内容</li>
+</ul>
+<p>lombok在编译器自动生成一些样板代码，运行期没用。<br><code>@Slf4j</code>是lombok提供的注解。<br><code>slf4j</code>是一个日志标准，具体实现有很多，如logback,log4j等。<br><code>lombok</code>插件<code>@Data</code>注解</p>
+<p>目前主流的是前后端分离开发。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F11-21-23-58e755321af999ee54aaca9812997e0a-20231231112122-1cafd2.png" alt="image.png"></p>
+<h1 id="2-Model-领域类"><a href="#2-Model-领域类" class="headerlink" title="2. Model 领域类"></a>2. Model 领域类</h1><p>为视图提供数据。</p>
+<ul>
+<li><code>@ModelAttribute</code></li>
+<li><code>@SessionAttributes</code><ul>
+<li>Model属性会复制到<strong>Servlet Request</strong>属性中，这样视图中就可以使用它们用于渲染页面</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-1-Servlet规范"><a href="#2-1-Servlet规范" class="headerlink" title="2.1. Servlet规范"></a>2.1. Servlet规范</h2><ul>
+<li>最小开发单元</li>
+<li><strong>Web容器的实现规范</strong>，与Spring无关<ul>
+<li>Web容器/服务器，里面放Servlet对象</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>tomcat</li>
+<li>jetty</li>
+</ul>
+</li>
+</ul>
+<p><strong>thymeleaf</strong>与<strong>Servlet request</strong>属性协作，<font color="#ff0000">与spring model解耦</font></p>
+<h3 id="2-1-1-Servlet对象"><a href="#2-1-1-Servlet对象" class="headerlink" title="2.1.1. Servlet对象"></a>2.1.1. Servlet对象</h3><ul>
+<li>类型<ul>
+<li>Request</li>
+<li>Response</li>
+</ul>
+</li>
+<li>Servlet对象带有属性(property即<strong>key-value</strong>)</li>
+</ul>
+<h2 id="2-2-ModelAttribute"><a href="#2-2-ModelAttribute" class="headerlink" title="2.2. ModelAttribute"></a>2.2. ModelAttribute</h2><ul>
+<li><code>@ModelAttribute(name = &lt;key&gt;)</code><ul>
+<li>注解返回值为<code>value</code></li>
+</ul>
+</li>
+<li>方法被Spring自动调用</li>
+</ul>
+<h3 id="2-2-1-方法级别"><a href="#2-2-1-方法级别" class="headerlink" title="2.2.1. 方法级别"></a>2.2.1. 方法级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ModelAttribute("attributeName")</span></span><br><span class="line"><span class="keyword">public</span> SomeObject <span class="title function_">methodName</span><span class="params">()</span> {</span><br><span class="line">    <span class="comment">// 创建并返回 SomeObject 对象</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>方法的返回值将被添加到模型中，并使用指定的属性名作为key。在控制器处理请求之前，该方法会先被调用。</p>
+<h3 id="2-2-2-参数级别"><a href="#2-2-2-参数级别" class="headerlink" title="2.2.2. 参数级别"></a>2.2.2. 参数级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute("attributeName")</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>在这种写法中，<code>@ModelAttribute</code>注解标记在方法的参数上，指定了要从模型中获取的属性的名称。参数将被自动绑定到模型中的相应属性，以便在方法内部使用。</p>
+<h3 id="2-2-3-默认命名规则"><a href="#2-2-3-默认命名规则" class="headerlink" title="2.2.3. 默认命名规则"></a>2.2.3. 默认命名规则</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>如果没有指定<code>@ModelAttribute</code>注解的属性名称，Spring MVC会根据参数类型自动推断属性名称，并将其添加到模型中。<br>在上面的示例中，<code>SomeObject</code>类型的参数将使用类名的首字母小写作为属性名称。</p>
+<h1 id="3-MVC请求"><a href="#3-MVC请求" class="headerlink" title="3. MVC请求"></a>3. MVC请求</h1><h2 id="3-1-👍处理过程"><a href="#3-1-👍处理过程" class="headerlink" title="3.1. 👍处理过程"></a>3.1. 👍处理过程</h2><p>客户端请求在<strong>后端的处理过程</strong>，非常重要。<br><strong>核心DispatcherServlet</strong>，是Spring自己实现的Servlet容器。</p>
+<ol>
+<li>Web容器开发的基本单元是Servlet，请求先到servlet。</li>
+<li>mapping根据url把请求转到controller，其中spring框架会做参数解析。</li>
+<li>controller拿到请求和请求参数，把请求和请求参数传给业务层</li>
+<li>业务层处理业务逻辑，可能会做数据持久化访问DAO层</li>
+<li>业务层把处理结构返回控制器</li>
+<li>控制器把结果放回给servlet</li>
+<li>servlet拿到了数据和逻辑视图名，找到视图解析器的第三方库</li>
+<li>视图解析器渲染视图</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png" alt="Screenshot from 2023-10-07 18-38-55"></p>
+<h2 id="3-2-MVC请求映射"><a href="#3-2-MVC请求映射" class="headerlink" title="3.2. MVC请求映射"></a>3.2. MVC请求映射</h2><p>来自http协议的标准。<br>注解可以放在类定义上方，也可以放在方法上方。</p>
+<ul>
+<li><code>Requestmapping</code></li>
+<li><code>GetMapping</code></li>
+<li><code>PostMapping</code></li>
+<li><code>DeleteMapping</code></li>
+<li><code>PatchMapping</code></li>
+<li><code>PutMapping</code></li>
+</ul>
+<h2 id="3-3-👍重定向"><a href="#3-3-👍重定向" class="headerlink" title="3.3. 👍重定向"></a>3.3. 👍重定向</h2><p>控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url</p>
+<ul>
+<li>http状态码：302</li>
+<li>控制器<code>return redirect:&lt;url&gt;</code></li>
+</ul>
+<h2 id="3-4-👍Spring-MVC获取参数的集中方式"><a href="#3-4-👍Spring-MVC获取参数的集中方式" class="headerlink" title="3.4. 👍Spring MVC获取参数的集中方式"></a>3.4. 👍Spring MVC获取参数的集中方式</h2><ol>
+<li>表单(form)参数，转成model<ul>
+<li>成员类型可能要自己实现Converter进行转换</li>
+<li>可以用<code>@Valid</code>校验</li>
+<li>form是html里定义的</li>
+</ul>
+</li>
+<li>路径参数<ul>
+<li><code>@PathVariable</code></li>
+<li>例：<code>/book/{id}</code></li>
+</ul>
+</li>
+<li>请求参数/查询参数<ul>
+<li><code>@RequestParam</code></li>
+<li>例：<code>/challenge?model=2</code></li>
+</ul>
+</li>
+<li>json请求体<ul>
+<li><code>@RequestBody</code>，会用到HttpMessageConverter消息转换器</li>
+<li>Rest API</li>
+</ul>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -13812,5 +13812,706 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>0-软件质量与管理</title>
+    <url>/posts/5882e132/</url>
+    <content><![CDATA[<h1 id="十个问题"><a href="#十个问题" class="headerlink" title="十个问题"></a>十个问题</h1><ol>
+<li>什么是过程管理和项目管理？</li>
+<li>软件估算过程中，项目经历/历史数据的作用是什么？如何把历史数据转化成估算结果？隔了3个月，能否保证估算结果一致？</li>
+<li>？</li>
+<li>什么叫做XX管理？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>01-概述</title>
+    <url>/posts/58d2b339/</url>
+    <content><![CDATA[<p><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>02-历史与演变</title>
+    <url>/posts/5e3ee645/</url>
+    <content><![CDATA[<h1 id="1-软件开发三大阶段"><a href="#1-软件开发三大阶段" class="headerlink" title="1. 软件开发三大阶段"></a>1. 软件开发三大阶段</h1><ol>
+<li>软硬件一体化阶段（50年代~70年代）<ol>
+<li>软件完全依附于硬件</li>
+<li>软件作坊</li>
+</ol>
+</li>
+<li>软件成为独立的产品（70年代~90年代）</li>
+<li>网络化和服务化（90年代中期迄今）</li>
+</ol>
+<p><font color="#c00000">软件开发方法=软件过程</font></p>
+<h1 id="2-软硬件一体化"><a href="#2-软硬件一体化" class="headerlink" title="2. 软硬件一体化"></a>2. 软硬件一体化</h1><h2 id="2-1-典型特征"><a href="#2-1-典型特征" class="headerlink" title="2.1. 典型特征"></a>2.1. 典型特征</h2><h2 id="2-2-典型的软件过程和实践"><a href="#2-2-典型的软件过程和实践" class="headerlink" title="2.2. 典型的软件过程和实践"></a>2.2. 典型的软件过程和实践</h2><ol>
+<li>“<font color="#c00000">Measure twice, cut once</font>“：对应<span style="background:rgba(3, 135, 102, 0.2)">代码审查</span>，因为早期开发过程中机器很贵/人力资源便宜</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F10-31-39-29ca6a8d313198dbe4561784f77f99c5-20240305103137-772dc3.png" alt="image.png"></p>
+<h1 id="3-软件作坊-软硬件一体化后期"><a href="#3-软件作坊-软硬件一体化后期" class="headerlink" title="3. 软件作坊/软硬件一体化后期"></a>3. 软件作坊/软硬件一体化后期</h1><h2 id="3-1-典型特征"><a href="#3-1-典型特征" class="headerlink" title="3.1. 典型特征"></a>3.1. 典型特征</h2><ul>
+<li>软件应用典型特征<ol>
+<li>功能简单</li>
+<li>规模小</li>
+</ol>
+</li>
+<li>软件开发的典型特征<ol>
+<li>很多非专业领域的人员涌入软件开发领域</li>
+<li>高级程序设计语言的出现</li>
+<li>质疑权威文化的盛行</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-2-典型软件过程和实践"><a href="#3-2-典型软件过程和实践" class="headerlink" title="3.2. 典型软件过程和实践"></a>3.2. 典型软件过程和实践</h2><ol>
+<li><span style="background:rgba(3, 135, 102, 0.2)">code and fix</span>：非常适合小规模团队</li>
+<li>软件工程和<span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：code and fix不适合大型软件开发</li>
+</ol>
+<h1 id="4-软件成为独立产品"><a href="#4-软件成为独立产品" class="headerlink" title="4. 软件成为独立产品"></a>4. 软件成为独立产品</h1><h2 id="4-1-典型特征"><a href="#4-1-典型特征" class="headerlink" title="4.1. 典型特征"></a>4.1. 典型特征</h2><ol>
+<li>摆脱了硬件束缚（OS）</li>
+<li>功能强大</li>
+<li>规模和复杂度剧增</li>
+<li>个人电脑出现 =&gt; 普通人成为软件用户<ol>
+<li>需求多变</li>
+<li>兼容性要求</li>
+</ol>
+</li>
+<li>来自市场的压力</li>
+</ol>
+<h2 id="4-2-典型软件过程和实践"><a href="#4-2-典型软件过程和实践" class="headerlink" title="4.2. 典型软件过程和实践"></a>4.2. 典型软件过程和实践</h2><h3 id="4-2-1-瀑布"><a href="#4-2-1-瀑布" class="headerlink" title="4.2.1. 瀑布"></a>4.2.1. 瀑布</h3><ol>
+<li>形式化方法</li>
+<li>结构化程序设计和<span style="background:rgba(3, 135, 102, 0.2)">瀑布模型</span><ul>
+<li>最早期的瀑布模型(Royce Waterfall Model)其实可以回溯，有试错过程</li>
+<li>但后来的瀑布模型不能往回</li>
+</ul>
+</li>
+</ol>
+<p><span style="background:rgba(163, 67, 31, 0.2)">左边才是真正的瀑布模型</span></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F11-21-53-71b18599d32010fc1b873fcbbdb93eee-20240305112152-b43dd0.png" alt="image.png"></p>
+<h3 id="4-2-2-成熟度模型"><a href="#4-2-2-成熟度模型" class="headerlink" title="4.2.2. 成熟度模型"></a>4.2.2. 成熟度模型</h3><ul>
+<li><p><span style="background:rgba(3, 135, 102, 0.2)">成熟度模型</span>：列出很多最佳实践，划分为5个等级，<span style="background:rgba(3, 135, 102, 0.2)">123低等级（眼前），45高等级（未来）</span></p>
+<ul>
+<li>几乎可以描述所有“可以用过程描述”的事情</li>
+<li>level 1 粗放</li>
+<li>level 2 管理：以项目小组为单位，每个小组都有自己的规范</li>
+<li>level 3 裁剪组织的规范</li>
+<li>level 4 要收集很多数据，剔除异常点，使用统计方法，有预测模型</li>
+<li>level 5 发现之前的模型有问题，会做根本性变化（去掉/增加一些过程），重新构建模型</li>
+</ul>
+</li>
+<li><p><span style="background:rgba(3, 135, 102, 0.2)">管理特征</span></p>
+<ol>
+<li>目标</li>
+<li>状态</li>
+<li>纠偏</li>
+</ol>
+</li>
+<li><p>“项目进度落后20%，就要加班”是 level1/2/3，<span style="background:rgba(3, 135, 102, 0.2)"> 只根据已经发生的事情来决策，没有模型只有数据，属于低等级的管理</span>。</p>
+<ul>
+<li>这里的20%是指团队整体觉得进度整体落后，只是感觉</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F11-38-09-6f1b39d6c60675925d8546cdac256dc4-Characteristics_of_Capability_Maturity_Model-a3bdd5.svg" alt="Characteristics_of_Capability_Maturity_Model.svg"></p>
+<h3 id="4-2-3-讨论"><a href="#4-2-3-讨论" class="headerlink" title="4.2.3. 讨论"></a>4.2.3. 讨论</h3><ol>
+<li>CMMI是<span style="background:rgba(3, 135, 102, 0.2)">过程改进模型</span>而不是软件过程或软件过程模型</li>
+<li><font color="#c00000">CMMI不是过程优劣的标准，也不适合用作公司之间的能力比较。</font>CMMI表示的不是公司的绝对能力，刻画的是公司再满足它自己的业务目标的能力。<ul>
+<li>一线大公司很可能是CMMI一级。而初创公司可能比起大公司更能满足自己的商业目标。</li>
+<li>虽然可以为了提高等级降低商业目标，但是招标时CMMI等级不是唯一标准。</li>
+<li>商业目标相同时，可以使用等级比较，如选择供应商</li>
+</ul>
+</li>
+<li>为什么CMMI VS. Agile 是个伪命题？<ul>
+<li><a class="link" href="https://www.jianshu.com/p/b7407257eedb">试论CMM/CMMI不适合在当前软件开发当中应用的原因 - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</li>
+</ol>
+<h1 id="5-服务化和网格化"><a href="#5-服务化和网格化" class="headerlink" title="5. 服务化和网格化"></a>5. 服务化和网格化</h1><h2 id="5-1-典型特征"><a href="#5-1-典型特征" class="headerlink" title="5.1. 典型特征"></a>5.1. 典型特征</h2><ol>
+<li>功能复杂，规模更大</li>
+<li>用户数量急剧增加(这会带来什么问题)</li>
+<li>快速演化和需求不确定</li>
+<li>分发方式的变化(SaaS)<ul>
+<li>功能上线到发布时间很短，对质量要求更高</li>
+</ul>
+</li>
+</ol>
+<h2 id="5-2-典型软件过程和实践"><a href="#5-2-典型软件过程和实践" class="headerlink" title="5.2. 典型软件过程和实践"></a>5.2. 典型软件过程和实践</h2><h3 id="5-2-1-迭代式开发"><a href="#5-2-1-迭代式开发" class="headerlink" title="5.2.1. 迭代式开发"></a>5.2.1. 迭代式开发</h3><ul>
+<li>迭代式开发：<font color="#c00000">大型软件开发系统的开发过程也是一个逐步学习和交流的过程</font>，软件系统的交付不是一次完成，而是通过多个迭代周期，逐步完成交付。<ul>
+<li>学习和交流：甲方迭代开发的过程中越来越熟悉软件系统，乙方越来越理解甲方的需求</li>
+</ul>
+</li>
+</ul>
+<p>迭代和增量的区别：迭代重点在学习和交流</p>
+<p>TDD：测试驱动开发</p>
+<h3 id="5-2-2-敏捷开发"><a href="#5-2-2-敏捷开发" class="headerlink" title="5.2.2. 敏捷开发"></a>5.2.2. 敏捷开发</h3><ul>
+<li>XP(eXtreme Programing)<ul>
+<li><a class="link" href="https://zh.wikipedia.org/zh-cn/%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B">极限编程 - 维基百科，自由的百科全书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>偏重与一些工程实践的描述</li>
+</ul>
+</li>
+<li><a class="link" href="https://zh.wikipedia.org/wiki/Scrum">Scrum <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ul>
+<li>管理框架和管理实践</li>
+<li>只有管理，没有技术</li>
+</ul>
+</li>
+<li>Kanban<ul>
+<li>精益生产的具体体验</li>
+<li>可视化工作流，限定WIP，管理周期时间</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-3-开源软件开发方法"><a href="#5-3-开源软件开发方法" class="headerlink" title="5.3. 开源软件开发方法"></a>5.3. 开源软件开发方法</h2><ul>
+<li><p>一种基于并行开发模式的软件开发的组织与管理方式</p>
+</li>
+<li><p>Linus定律：只要有足够的开发者和测试者，几乎所有问题都会被发现</p>
+</li>
+<li><p>代码管理：严格的代码提供社区审核制度</p>
+<ul>
+<li><font color="#c00000">真正能对系统建立信心的是评审而不是测试</font></li>
+</ul>
+</li>
+<li><p>演化</p>
+<ul>
+<li>内部开源：早期公司项目没那么多，时间没那么紧张</li>
+<li>众包</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-4-软件应用的典型特征"><a href="#5-4-软件应用的典型特征" class="headerlink" title="5.4. 软件应用的典型特征"></a>5.4. 软件应用的典型特征</h2><ol>
+<li>进一步服务化和网格化（移动是主流）</li>
+<li>用户需求的多样性进一步凸显</li>
+<li>软件产品和服务的地位变化</li>
+<li>错综复杂的部署环境<ul>
+<li>解决了数量的问题，但是有新的困难如容量预测</li>
+</ul>
+</li>
+</ol>
+<h1 id="6-问题"><a href="#6-问题" class="headerlink" title="6. 问题"></a>6. 问题</h1><ol>
+<li><p>不属于软件开发的本质难题？</p>
+<ul>
+<li>不可见性、复杂性、一致性、可变性</li>
+<li>没有<del>质量</del></li>
+</ul>
+</li>
+<li><p>软硬件一体化阶段的典型实践</p>
+<ul>
+<li>Code and fix</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>03-团队动力学</title>
+    <url>/posts/9a91727d/</url>
+    <content><![CDATA[<p>软件质量：</p>
+<h1 id="1-TSP"><a href="#1-TSP" class="headerlink" title="1. TSP"></a>1. TSP</h1><p>软件开发方法</p>
+<ol>
+<li>PSP：个人技能培养<ol>
+<li>提出了个人如何培养能力，成为一个优秀的团队成员</li>
+<li>团队成员</li>
+</ol>
+</li>
+<li>TSP：团队组件过程<ol>
+<li>团队规范</li>
+</ol>
+</li>
+<li>TSP：团队工作工程<ol>
+<li>团队管理</li>
+</ol>
+</li>
+</ol>
+<h2 id="1-1-启动会议"><a href="#1-1-启动会议" class="headerlink" title="1.1. 启动会议"></a>1.1. 启动会议</h2><ol>
+<li>第一次会议：建立产品目标和业务目标<ol>
+<li>产品目标：要做什么？</li>
+<li>业务目标：要做得怎么样，更困难</li>
+</ol>
+</li>
+<li>第二次会议：角色分配和小组目标定义<ol>
+<li>角色对应职责-目标</li>
+</ol>
+</li>
+<li>第三次会议：开发流程定义与策略选择<ol>
+<li>开发流程：迭代式，但是比较自由可以自定义</li>
+<li>开发策略：分为几个迭代，每个迭代做什么，组件如何获取</li>
+</ol>
+</li>
+<li>第四次会议：整体计划<ol>
+<li>估算+计划。需要明确做哪些事情？产出物有哪些？产出物规模如何？需要多少资源？团队给出的资源够不够？</li>
+</ol>
+</li>
+<li>第五次会议：质量计划<ol>
+<li>有哪些质量实践？做到什么程度？需要投入多少资源</li>
+</ol>
+</li>
+<li>第六次会议：个人计划以及计划平衡<ol>
+<li>个人计划：个人要做哪些事情</li>
+<li>计划平衡：如何寻求一个最早完成项目的时间</li>
+</ol>
+</li>
+<li>第七次会议：风险评估<ol>
+<li>风险：有可能发生也可能不会发生</li>
+<li>What if?</li>
+<li>保护团队</li>
+</ol>
+</li>
+<li>第八次会议：准备向管理层计划<ol>
+<li>写给领导看的PPT，表现出方案时经过充分思考的</li>
+</ol>
+</li>
+</ol>
+<h2 id="1-2-典型的TSP角色"><a href="#1-2-典型的TSP角色" class="headerlink" title="1.2. 典型的TSP角色"></a>1.2. 典型的TSP角色</h2><ol>
+<li>项目组长</li>
+<li>计划经理：保证实际进展与计划一致</li>
+<li>开发经理：技术带头人</li>
+<li>质量经理</li>
+<li>过程经理：确保项目按照定义好的过程工作</li>
+<li>支持经理</li>
+<li>开发人员</li>
+</ol>
+<h3 id="1-2-1-TL"><a href="#1-2-1-TL" class="headerlink" title="1.2.1. TL"></a>1.2.1. TL</h3><h1 id="2-SCRUM团队"><a href="#2-SCRUM团队" class="headerlink" title="2. SCRUM团队"></a>2. SCRUM团队</h1><p>组成：产品负责人，开发团队，SCRUM Master<br>跨职能的自主团队</p>
+<h1 id="3-TSP和SCRUM的团队组成有哪些共性？这些共性对于高效团队有哪些帮助？"><a href="#3-TSP和SCRUM的团队组成有哪些共性？这些共性对于高效团队有哪些帮助？" class="headerlink" title="3. TSP和SCRUM的团队组成有哪些共性？这些共性对于高效团队有哪些帮助？"></a>3. TSP和SCRUM的团队组成有哪些共性？这些共性对于高效团队有哪些帮助？</h1>]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>04-估算、计划和跟踪</title>
+    <url>/posts/d5102dd3/</url>
+    <content><![CDATA[<h1 id="1-估算"><a href="#1-估算" class="headerlink" title="1. 估算"></a>1. 估算</h1><h2 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1. 概述"></a>1.1. 概述</h2><ul>
+<li>目的：给各类计划提供决策依据</li>
+<li>对象：规模，时间，日程</li>
+<li>常见问题：<ol>
+<li><strong>人月是资源/时间的单位，而不是规模单位</strong>。人和月不能互换</li>
+<li>项目交互日期、团队都确定了，估算的意义在哪里？</li>
+<li>哪种估算方法？</li>
+<li>哪种估算结果更好？</li>
+</ol>
+</li>
+</ul>
+<p>估算只能给自己估算，给别人估算没有意义</p>
+<h2 id="1-2-关于估算的事实"><a href="#1-2-关于估算的事实" class="headerlink" title="1.2. 关于估算的事实"></a>1.2. 关于估算的事实</h2><ol>
+<li>估算是主观猜测</li>
+<li>估算能力很难提升</li>
+<li>没有任何人知道准确的数字是什么</li>
+<li>实验表明，是否使用估算模型，并没有显著提示</li>
+</ol>
+<h2 id="1-3-期望理论"><a href="#1-3-期望理论" class="headerlink" title="1.3. 期望理论"></a>1.3. 期望理论</h2><p>软件开发是知识工作，可重复性不高<br>软件工程师是知识工作者，需要被激励</p>
+<p>激励程度=V*E<br>V: 价值（基本确定）<br><font color="#c00000">E: 期望/把握</font>，<strong>估算结果会影响E</strong></p>
+<h2 id="1-4-PROBE估算方法"><a href="#1-4-PROBE估算方法" class="headerlink" title="1.4. PROBE估算方法"></a>1.4. PROBE估算方法</h2><ul>
+<li><p>规模度量/估算的困境</p>
+<ul>
+<li>以LOC vs. FP为例<ol>
+<li><strong>精确度量</strong>往往不便于<strong>早期规划</strong>的估算</li>
+<li>有助于<strong>早期规划</strong>/估算的度量往往难以产生精确度量结果</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>PROBE(PROxy Based)</p>
+<ul>
+<li>可以给出相对精确的估算</li>
+</ul>
+</li>
+<li><p>流程</p>
+<ol>
+<li>概要设计</li>
+<li>代理识别和代理规模(E)</li>
+</ol>
+</li>
+</ul>
+<h3 id="1-4-1-概要设计"><a href="#1-4-1-概要设计" class="headerlink" title="1.4.1. 概要设计"></a>1.4.1. 概要设计</h3><ol>
+<li>和已有的产品/组件相关联</li>
+<li>定义能够产生期望功能的产品元素</li>
+<li>估算你计划构造之物的规模</li>
+</ol>
+<h3 id="1-4-2-整合多个估算结果"><a href="#1-4-2-整合多个估算结果" class="headerlink" title="1.4.2. 整合多个估算结果"></a>1.4.2. 整合多个估算结果</h3><ol>
+<li>整合一个开发人员做的多个估算</li>
+<li>多个开发人员可以整合<strong>独立</strong>进行的估算</li>
+</ol>
+<ul>
+<li><font color="#c00000">估算要点1：估算时尽可能划分详细一些</font><ul>
+<li>当估算多个部件时，总的误差会比各个部件误差的综合要小</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-5-SCRUM中的Story-point"><a href="#1-5-SCRUM中的Story-point" class="headerlink" title="1.5. SCRUM中的Story point"></a>1.5. SCRUM中的Story point</h2><ol>
+<li>抽象：混合了对于开发特征所要付出的努力，开发复杂度，个中分享以及类似东西</li>
+<li>相对：设定标准之后，考虑其他特性与标准之间的相对大小关系<ol>
+<li>拆分</li>
+</ol>
+</li>
+</ol>
+<p>团队需要定义<strong>单位故事点</strong>：规模、优先级等，抽象</p>
+<ul>
+<li><font color="#c00000">估算要点2：目标是建立在对结果的信心上的</font></li>
+<li><font color="#c00000">估算要点3：尽量依赖数据</font></li>
+</ul>
+<h2 id="1-6-估算方法的反思"><a href="#1-6-估算方法的反思" class="headerlink" title="1.6. 估算方法的反思"></a>1.6. 估算方法的反思</h2><ol>
+<li>估算目标<ul>
+<li>规模估算S比较稳定，时间估算T=S/P。但生产力P可能有1<del>26倍的偏差。1</del>26倍的P算出来的时间都可以接受。</li>
+<li><strong>实际生产中让大家认可估算结果</strong>，<strong>反过来提高生产效率P</strong></li>
+</ul>
+</li>
+<li>到底怎么做估算：<ol>
+<li>达成共识</li>
+<li>建立信心<ol>
+<li>足够详细</li>
+<li>依赖数据</li>
+<li>最好的猜测，注意检验假设条件的合理性</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><font color="#c00000">估算要点4：估算要的是过程，而非结果；估算的过程是相关干系人达成一致共识的过程。</font></li>
+</ul>
+<h2 id="1-7-估算要点"><a href="#1-7-估算要点" class="headerlink" title="1.7. 估算要点"></a>1.7. 估算要点</h2><ul>
+<li><font color="#c00000">估算要点1：估算时尽可能划分详细一些</font><ul>
+<li>当估算多个部件时，总的误差会比各个部件误差的综合要小</li>
+</ul>
+</li>
+<li><font color="#c00000">估算要点2：目标是建立在对结果的信心上的</font></li>
+<li><font color="#c00000">估算要点3：尽量依赖数据</font></li>
+<li><font color="#c00000">估算要点4：估算要的是过程，而非结果；估算的过程是相关干系人达成一致共识的过程。</font><ul>
+<li>团队达成共识，提高生产力</li>
+<li>如果估算结果有问题，应该去和管理层或客户沟通，而不是提高估算结果</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-8-度量"><a href="#1-8-度量" class="headerlink" title="1.8. 度量"></a>1.8. 度量</h2><ul>
+<li><p>关于度量的争议：需否需要度量取决于是否在意结果</p>
+</li>
+<li><p>GQM(Goal Question Metric)：数据治理</p>
+<ul>
+<li>从目标出发，只关心单个项目组</li>
+</ul>
+</li>
+<li><p>GQM+：关心整个组织，</p>
+</li>
+</ul>
+<p>实际上估算可能要在项目启动之前就开始，而不是等到需求完成</p>
+<h2 id="1-9-过程框架-生命周期模型"><a href="#1-9-过程框架-生命周期模型" class="headerlink" title="1.9. 过程框架-生命周期模型"></a>1.9. 过程框架-生命周期模型</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F14-09-03-e5bc1f40f94fceeb64028a442f84d704-20240425140903-a0ecd0.png" alt="image.png"></p>
+<p>指导开发的是软件过程，而不是生命周期模型，所以至少要把里面一些部分展开</p>
+<h2 id="1-10-通用计算框架"><a href="#1-10-通用计算框架" class="headerlink" title="1.10. 通用计算框架"></a>1.10. 通用计算框架</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F14-13-41-1319d1449b44d195fd7f9d9b0c6e28ba-20240425141340-aa6558.png" alt="image.png"></p>
+<p>倒推式估算不准确</p>
+<p>要先做估算，然后正推<br>管理层和估算值都知道“估算不准确”这一前提</p>
+<p>攻击点：规模估算代码行数太多，资源估算不需要那没多资源<br>反驳：PROBE<strong>只讨论需求</strong>不讨论具体数字，而需求到具体数字是自动计算的过程（基于相对大小矩阵和历史数据）</p>
+<h2 id="1-11-风险识别"><a href="#1-11-风险识别" class="headerlink" title="1.11. 风险识别"></a>1.11. 风险识别</h2><p>头脑风暴是因为无法系统识别风险</p>
+<p>风险是可能性还未发生，问题是已经发生的。但如果风险超过某些阈值，也可以认为变成了问题。</p>
+<h2 id="1-12-风险应对"><a href="#1-12-风险应对" class="headerlink" title="1.12. 风险应对"></a>1.12. 风险应对</h2><ul>
+<li>识别风险之后，就应当制定响应的风险管理策略，以及应对各类风险</li>
+<li>策略<ol>
+<li>风险转嫁：付费给另一个团队，让他们帮你解决风险，但是你的收益会降低</li>
+<li>风险解决：比较困难，很难彻底解决风险</li>
+<li>风险缓解：共存，容忍</li>
+</ol>
+</li>
+</ul>
+<h1 id="2-计划和跟踪"><a href="#2-计划和跟踪" class="headerlink" title="2. 计划和跟踪"></a>2. 计划和跟踪</h1><p>为什么要跟踪：跟踪的目的在于了解项目的进度，以便在项目实际进度与计划产生严重偏离时，可采取适当的纠正措施；</p>
+<p>项目进度滞后与否需要参照物，即项目计划</p>
+<p>项目跟踪需要管理针对偏差而采取的纠偏措施</p>
+<h2 id="2-1-挣值管理方法"><a href="#2-1-挣值管理方法" class="headerlink" title="2.1. 挣值管理方法"></a>2.1. 挣值管理方法</h2><h3 id="2-1-1-概念"><a href="#2-1-1-概念" class="headerlink" title="2.1.1. 概念"></a>2.1.1. 概念</h3><ul>
+<li><p>挣值管理(Earnd Value Management，EVM)是用来客观度量项目进度的一种项目管理方法。</p>
+<ul>
+<li>每项任务实现附以一定价值(credit)</li>
+<li><strong>100%完成该项任务，才能获取相应价值</strong></li>
+<li>非常保守的策略，只承认100%完成的任务，适合知识工作。</li>
+</ul>
+</li>
+<li><p>支持动态随时变化</p>
+</li>
+<li><p>采用<strong>进度计划</strong>、<strong>成本预算</strong>和<strong>实际成本</strong>相关联的三个独立变量，进行项目绩效测量</p>
+</li>
+</ul>
+<h3 id="2-1-2-规则"><a href="#2-1-2-规则" class="headerlink" title="2.1.2. 规则"></a>2.1.2. 规则</h3><ul>
+<li><p>获取挣值规则：</p>
+<ol>
+<li>0-100，完成了就是100，差一行代码都是0</li>
+<li>50-50：打算做这件事就拿到50，全部做完了再给50</li>
+</ol>
+</li>
+<li><p>解释：提早给出反馈，可以让进度数据更好看，利于激励团队</p>
+</li>
+<li><p>例子：</p>
+<ul>
+<li>价值是百分比，经常省略%<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F10-27-31-8aea22469f933f20f0888b30836df0b6-20240430102728-0bf644.png" alt="image.png"></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-3-图示"><a href="#2-1-3-图示" class="headerlink" title="2.1.3. 图示"></a>2.1.3. 图示</h3><p>PV：激化值<br>EV：挣值，从计划来，与实际投入时间无关<br>SV：进度差异，PV-EV</p>
+<p>AC：实际成本，工时<br>BAC：项目总预算<br>CV：成本差异</p>
+<p>画延长线可以预测项目进度<br>如果项目进度预期会延期，加人提高未来的EV，或砍功能提高已经完成的EV</p>
+<h3 id="2-1-4-实现等级"><a href="#2-1-4-实现等级" class="headerlink" title="2.1.4. 实现等级"></a>2.1.4. 实现等级</h3><p>初级实现：只分析到现在为止的PV，EV<br>中级实现：根据PV,EV做预测分析<br>高级实现：加入成本线</p>
+<h3 id="2-1-5-变形-燃尽图"><a href="#2-1-5-变形-燃尽图" class="headerlink" title="2.1.5. 变形-燃尽图"></a>2.1.5. 变形-燃尽图</h3><p>Ideal<br>Actual</p>
+<h3 id="2-1-6-局限性"><a href="#2-1-6-局限性" class="headerlink" title="2.1.6. 局限性"></a>2.1.6. 局限性</h3><ol>
+<li>只能跟踪进度、成本，而无法跟踪质量等目标</li>
+<li>需要定量化的管理机制，在探索型项目以及部分敏捷开发方法中的应用收到限制</li>
+<li>完全依赖于项目的准确估算（价值体系），然而在项目早期，很难对项目进行非常准确的估算</li>
+</ol>
+<h2 id="2-2-里程碑评审"><a href="#2-2-里程碑评审" class="headerlink" title="2.2. 里程碑评审"></a>2.2. 里程碑评审</h2><h3 id="2-2-1-概念"><a href="#2-2-1-概念" class="headerlink" title="2.2.1. 概念"></a>2.2.1. 概念</h3><ul>
+<li>往往指的是某个时间点，用以标记某项工作的完成或阶段的结束</li>
+<li>内容<ol>
+<li>项目相关的承诺，如日期、规格、质量</li>
+<li>项目计划的执行情况</li>
+<li>项目目前的状态讨论</li>
+<li>项目面临的风险讨论</li>
+</ol>
+</li>
+</ul>
+<p>比周会等进度评审更加正式，需要高层、客户参与</p>
+<p><strong>回答项目能不能进入下一个阶段</strong>，如需求完成但是质量很差被高层否决</p>
+<h2 id="2-3-其他计划跟踪"><a href="#2-3-其他计划跟踪" class="headerlink" title="2.3. 其他计划跟踪"></a>2.3. 其他计划跟踪</h2><ol>
+<li>日程计划跟踪</li>
+<li>承诺计划跟踪</li>
+<li>风险计划跟踪</li>
+<li>数据收集计划跟踪</li>
+<li>沟通计划跟踪</li>
+</ol>
+<h2 id="2-4-纠偏活动管理"><a href="#2-4-纠偏活动管理" class="headerlink" title="2.4. 纠偏活动管理"></a>2.4. 纠偏活动管理</h2><ul>
+<li>典型活动<ol>
+<li>偏差原因分析</li>
+<li>纠偏措施定义</li>
+<li>纠偏措施管理</li>
+</ol>
+</li>
+</ul>
+<h1 id="3-项目总结"><a href="#3-项目总结" class="headerlink" title="3. 项目总结"></a>3. 项目总结</h1><ul>
+<li>软件项目的特点决定了持续改善对于软件工程师的重要性</li>
+<li>提供一个系统化方法总计</li>
+</ul>
+<h2 id="3-1-过程"><a href="#3-1-过程" class="headerlink" title="3.1. 过程"></a>3.1. 过程</h2><p>准备阶段<br>总结阶段</p>
+<h2 id="3-2-基于PMBOK的总结"><a href="#3-2-基于PMBOK的总结" class="headerlink" title="3.2. 基于PMBOK的总结"></a>3.2. 基于PMBOK的总结</h2><p>9大知识领域</p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>05-质量管理</title>
+    <url>/posts/8294aeb9/</url>
+    <content><![CDATA[<p><font color="#c00000">管理定义：目标定义，状态跟踪，纠偏</font></p>
+<h1 id="1-质量策略"><a href="#1-质量策略" class="headerlink" title="1. 质量策略"></a>1. 质量策略</h1><h2 id="1-1-质量概念"><a href="#1-1-质量概念" class="headerlink" title="1.1. 质量概念"></a>1.1. 质量概念</h2><ol>
+<li>软件质量为“与软件产品满足规定的和隐含的需求能力有关的特征或者特性的全体”。[ANSI/IEEE STd 729]</li>
+<li>软件质量为内外两部分的特性：其外部质量特性面向软件产品的最终用户，其内部质量特性则不直接面向最终用户。 《代码大全》</li>
+<li>软件质量为软件产品可以改变世界，使世界更加美好的程度。从用户的角度考察软件质量，用户满意度是最为重要的判断标准。 [Tom Demarco]</li>
+<li>软件质量为对人（用户）的价值。这一定义强调了质量的主观性，即对同一款软件而言，不同的用户对其质量有不同的体验。 [Gerald Weinberg]</li>
+</ol>
+<p>内部，外部，主观</p>
+<h2 id="1-2-面向用户的质量观"><a href="#1-2-面向用户的质量观" class="headerlink" title="1.2. 面向用户的质量观"></a>1.2. 面向用户的质量观</h2><ul>
+<li>定义质量为满足用户需求的程度<ol>
+<li>用户是谁？<ul>
+<li>客户不一定是用户</li>
+</ul>
+</li>
+<li>用户需求是否有优先级？<ul>
+<li>很用户对软件的期望有关</li>
+</ul>
+</li>
+<li>这种用户优先级对软件产品的开发过程产生什么样的影响？</li>
+<li>怎样来度量这种质量观下的质量水平？</li>
+</ol>
+</li>
+</ul>
+<p>软件可工作，可度量：优先级高</p>
+<h2 id="1-3-PSP质量策略"><a href="#1-3-PSP质量策略" class="headerlink" title="1.3. PSP质量策略"></a>1.3. PSP质量策略</h2><ol>
+<li><font color="#c00000">用缺陷管理代替质量管理</font><ol>
+<li><strong>缺陷管理的正当性</strong>：如果软件没有缺陷，其他质量属性也会比较好。</li>
+<li>安全，隐私，交互友好等几乎都无法有效管理</li>
+</ol>
+</li>
+<li>高质量产品也就意味着要求组成软件产品的各个组件基本无缺陷</li>
+<li>各组件的高质量是通过<strong>高质量评审</strong>来实现的<ol>
+<li><strong>测试是获取质量状态的手段</strong>，而不是提高质量的手段</li>
+<li>经验数据：假设项目缺陷综述确定（但我们不知道），测试团队的消除缺陷能力稳定，测试的时候发现一个错误就有一个没发现的错误，所以<strong>希望暴露出来的错误越少越好</strong></li>
+</ol>
+</li>
+</ol>
+<p>重视Code Review<br>一旦缺陷到了系统级，消除成本会很高，所以要在早期消除</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F11-30-25-59455ef6704a5fcaf74d7e6dfb12abdb-20240507113024-e75a5a.png" alt="image.png"></p>
+<h2 id="1-4-测试消除缺陷的典型流程"><a href="#1-4-测试消除缺陷的典型流程" class="headerlink" title="1.4. 测试消除缺陷的典型流程"></a>1.4. 测试消除缺陷的典型流程</h2><ol>
+<li>发现待测程序的一个异常行为</li>
+<li>理解程序的工作方式<ul>
+<li>Measure twice, cut once</li>
+</ul>
+</li>
+<li>调试程序，找出出错的位置，确定出错原因</li>
+<li>确定修改方案，修改缺陷</li>
+<li>回归测试，以确认修改有效</li>
+</ol>
+<h2 id="1-5-质量指标"><a href="#1-5-质量指标" class="headerlink" title="1.5. 质量指标"></a>1.5. 质量指标</h2><p>过程度量：在过程中度量出来数值，根据这个数值还有机会在过程中修正<br>结果度量：算出来就没法修改</p>
+<h3 id="1-5-1-Yield"><a href="#1-5-1-Yield" class="headerlink" title="1.5.1. Yield"></a>1.5.1. Yield</h3><p>缺陷消除的效率，度量每个阶段在消除缺陷方面的效率，<strong>结果度量</strong></p>
+<p>Phase Yield = 100 * 某阶段发现的缺陷个数 / （某阶段注入缺陷个数 + 进入该阶段前遗留的缺陷个数）<br>Process Yield = 100 * 第一次编译前发现的缺陷个数 / 第一次编译前注入的缺陷个数</p>
+<p>问题：知道分子，但是不知道分母</p>
+<p>设计、编码注入缺陷<br>评审、测试消除缺陷</p>
+<h3 id="1-5-2-A-FR"><a href="#1-5-2-A-FR" class="headerlink" title="1.5.2. A/FR"></a>1.5.2. A/FR</h3><p><strong>质检失效时间比</strong>，过程度量</p>
+<p>A/FR = PSP质检成本/PSP失效成本<br>设计评审时间 / 测试时间</p>
+<p>理论上 A/FR越大，意味着质量越高，说明评审越充分<br>2.0是比较理想的值</p>
+<h3 id="1-5-3-PQI"><a href="#1-5-3-PQI" class="headerlink" title="1.5.3. PQI"></a>1.5.3. PQI</h3><p><font color="#c00000">最全面</font></p>
+<ul>
+<li>5个数据的<strong>乘积</strong>，每个分量都在[0,1]内<ol>
+<li>设计质量：设计时间应该大于编码时间<ul>
+<li>min{设计时间/编码时间, 1}</li>
+</ul>
+</li>
+<li>设计评审质量：设计评审的时间应该大于设计时间的50%<ul>
+<li>min{(2 * 设计评审时间 / 设计时间), 1}</li>
+</ul>
+</li>
+<li>代码评审质量：代码评审时间应该大于编码时间的50%<ul>
+<li>min{(2 * 代码评审时间)/编码时间 , 1}</li>
+</ul>
+</li>
+<li>代码质量：代码的编译缺陷密度应该小于10个/千行<ul>
+<li>min{20/(编译缺陷密度 + 10), 1}</li>
+</ul>
+</li>
+<li>程序质量：代码单元测试的缺陷密度应该小于5个/千行<ul>
+<li>min{10/(单元测试缺陷密度 + 5), 1}</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p>123过程，45结果，在一个指标里<strong>包含了过程和结果</strong></p>
+<p>PQI达到0.4，说明模块很不错<br>大部分人的PQI都是0</p>
+<h3 id="1-5-4-Review-Rate"><a href="#1-5-4-Review-Rate" class="headerlink" title="1.5.4. Review Rate"></a>1.5.4. Review Rate</h3><p>评审速度：一个用于指导软件工程师有效评审的指标，<strong>过程度量</strong></p>
+<p>高质量的评审需要软件工程师投入足够的时间进行评审</p>
+<p>在PSP的实践中，代码评审速度小于200LOC/H，文档评审速度小于4 Page/H</p>
+<h3 id="1-5-5-DRL"><a href="#1-5-5-DRL" class="headerlink" title="1.5.5. DRL"></a>1.5.5. DRL</h3><p>缺陷消除效率比值：不同缺陷消除手段消除缺陷的效率，<strong>结果度量</strong></p>
+<p>计算：某个阶段每小时消除缺陷个数 / 单元测试每小时消除个数</p>
+<p>期望：所有DRL都大于1，即单元测试缺陷个数最少</p>
+<h3 id="1-5-6-其他质量"><a href="#1-5-6-其他质量" class="headerlink" title="1.5.6. 其他质量"></a>1.5.6. 其他质量</h3><p>个人评审和小组评审（标志重捕法）</p>
+<p>Z：总缺陷<br>a 评审者1独立发现的缺陷<br>b 评审者2发现缺陷<br>c 评审者2发现的1发现的缺陷</p>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -1.738ex;" xmlns="http://www.w3.org/2000/svg" width="15.322ex" height="4.267ex" role="img" focusable="false" viewBox="0 -1118 6772.4 1886"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mi" transform="translate(1192.7,676)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mi"><path data-c="1D44D" d="M58 8Q58 23 64 35Q64 36 329 334T596 635L586 637Q575 637 512 637H500H476Q442 637 420 635T365 624T311 598T266 548T228 469Q227 466 226 463T224 458T223 453T222 450L221 448Q218 443 202 443Q185 443 182 453L214 561Q228 606 241 651Q249 679 253 681Q256 683 487 683H718Q723 678 723 675Q723 673 717 649Q189 54 188 52L185 49H274Q369 50 377 51Q452 60 500 100T579 247Q587 272 590 277T603 282H607Q628 282 628 271Q547 5 541 2Q538 0 300 0H124Q58 0 58 8Z"></path></g><g data-mml-node="mo" transform="translate(945.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(1945.4,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g><rect width="2674.4" height="60" x="120" y="220"></rect></g><g data-mml-node="mo" transform="translate(3192.2,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mfrac" transform="translate(4248,0)"><g data-mml-node="mi" transform="translate(1045.7,676)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mi"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(651.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(1651.4,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g></g><rect width="2284.4" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container></p>
+<p>先评审再单元测试：先评审解决一些问题，测试时需要修复的问题少一些，需要的时间也少</p>
+<h3 id="1-5-7-质量路径"><a href="#1-5-7-质量路径" class="headerlink" title="1.5.7. 质量路径"></a>1.5.7. 质量路径</h3><p>为了追求高质量的手段：</p>
+<ol>
+<li>各种测试</li>
+<li>进入测试之前的产物质量提升<ul>
+<li>各种评审</li>
+</ul>
+</li>
+<li>评审过程度量和稳定<ul>
+<li>评审阶段yield稳定</li>
+</ul>
+</li>
+<li>质量意识和主人翁意识</li>
+<li>个体Review的态度和稳定</li>
+<li>诉诸设计<ul>
+<li>终极手段，review测试都用上了还是没达到质量要求</li>
+</ul>
+</li>
+<li>缺陷预防<ul>
+<li>从这一步开始不是针对特定项目</li>
+<li>根据历史项目制定checklist</li>
+</ul>
+</li>
+<li>用户质量观——其他质量属性<ul>
+<li>前面都是解决缺陷问题，从8开始解决用户质量观的其他质量问题</li>
+</ul>
+</li>
+</ol>
+<h1 id="2-设计与质量的关系"><a href="#2-设计与质量的关系" class="headerlink" title="2. 设计与质量的关系"></a>2. 设计与质量的关系</h1><h2 id="2-1-设计的内容"><a href="#2-1-设计的内容" class="headerlink" title="2.1. 设计的内容"></a>2.1. 设计的内容</h2><p>完整设计（可评审设计）包含以下4个方面</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left">动态信息</th>
+<th>静态信息</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>外部信息</td>
+<td align="left">交互信息（服务、消息等）</td>
+<td>功能（继承、类结构等）</td>
+</tr>
+<tr>
+<td>内部信息</td>
+<td align="left">行为信息（状态机）</td>
+<td>结构信息（属性、业务逻辑等）</td>
+</tr>
+</tbody></table>
+<h2 id="2-2-UML常用图"><a href="#2-2-UML常用图" class="headerlink" title="2.2. UML常用图"></a>2.2. UML常用图</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>动态信息</th>
+<th>静态信息</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>外部信息</td>
+<td>用例图，时序图</td>
+<td>类图（只有signature，没有实现）</td>
+</tr>
+<tr>
+<td>内部信息</td>
+<td>状态机图</td>
+<td><strong>缺失</strong></td>
+</tr>
+</tbody></table>
+<h2 id="2-3-设计的层次：PSP模板"><a href="#2-3-设计的层次：PSP模板" class="headerlink" title="2.3. 设计的层次：PSP模板"></a>2.3. 设计的层次：PSP模板</h2><ol>
+<li>操作规格模板</li>
+<li>功能规则模板</li>
+<li>状态规则模板</li>
+<li>逻辑规则模板</li>
+</ol>
+<h2 id="2-4-设计验证方法"><a href="#2-4-设计验证方法" class="headerlink" title="2.4. 设计验证方法"></a>2.4. 设计验证方法</h2><ul>
+<li>意义<ul>
+<li>简单评审不足以发现复杂缺陷</li>
+</ul>
+</li>
+<li>方法<ol>
+<li>状态机验证</li>
+<li>符号化执行验证</li>
+<li>执行表验证</li>
+<li>跟踪表验证</li>
+<li>正确性验证</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-4-1-状态机验证"><a href="#2-4-1-状态机验证" class="headerlink" title="2.4.1. 状态机验证"></a>2.4.1. 状态机验证</h3><p>PSP的状态机用文本描述</p>
+<h2 id="2-5-符号化执行"><a href="#2-5-符号化执行" class="headerlink" title="2.5. 符号化执行"></a>2.5. 符号化执行</h2><p>用符号替换关键的变量</p>
+<p>可以用来验证复杂算法，但不适合有复杂逻辑的场景</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F23%2F15-38-07-974e78db785a3ca75c18e9f637815699-20240523153806-fe65a9.png" alt="image.png"></p>
+<h2 id="2-6-执行表验证"><a href="#2-6-执行表验证" class="headerlink" title="2.6. 执行表验证"></a>2.6. 执行表验证</h2><ul>
+<li>主要争对伪代码：<ol>
+<li>识别伪码程序的关键变量；</li>
+<li>构建表格，表格左侧填入主要程序步骤，右侧填入关键变量；</li>
+<li>初始化被选定的变量；</li>
+<li>跟踪被选择的关键变量的变化情况，从而判断程序行为。</li>
+</ol>
+</li>
+</ul>
+<p>伪代码+关键变量<br><strong>问题：只能检验一个样例</strong><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F23%2F15-41-05-d96a2bf74aac7c649fddb16cf2d896a8-20240523154105-9e1e9c.png" alt="image.png"></p>
+<h2 id="2-7-跟踪表"><a href="#2-7-跟踪表" class="headerlink" title="2.7. 跟踪表"></a>2.7. 跟踪表</h2><p>伪代码+关键变量</p>
+<ol>
+<li>识别伪码程序的关键变量；</li>
+<li>构建表格，表格左侧填入主要程序步骤（伪代码），右侧填入关键变量；</li>
+<li>初始化被选定的变量；</li>
+<li><strong>识别将伪码程序符号化的机会，并加以符号化</strong>；</li>
+<li><strong>定义并且优化用例组合</strong>；</li>
+<li>跟踪被选择的关键变量的变化情况，从而判断程序行为。</li>
+</ol>
+<h2 id="2-8-正确性检验"><a href="#2-8-正确性检验" class="headerlink" title="2.8. 正确性检验"></a>2.8. 正确性检验</h2><ul>
+<li>用形式化语言描述程序，加以验证和推理<ol>
+<li>分析和识别用例；</li>
+<li>对于复杂伪码程序的结构，应用正确性检验的标准问题逐项加以验证；</li>
+<li>对于不能明确判断的复杂程序结构，使用跟踪表等辅助验证</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
   </entry>
 </search>
