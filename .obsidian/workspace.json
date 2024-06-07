@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md",
+                "file": "source/_posts/课程/2024_Spring/数据库开发/SQL-期末.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
@@ -94,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md"
+                "file": "source/_posts/课程/2024_Spring/数据库开发/SQL-期末.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md",
+                "file": "source/_posts/课程/2024_Spring/数据库开发/SQL-期末.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md",
+                "file": "source/_posts/课程/2024_Spring/数据库开发/SQL-期末.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +156,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md"
+                "file": "source/_posts/课程/2024_Spring/数据库开发/SQL-期末.md"
               }
             }
           }
@@ -183,6 +183,7 @@
   },
   "active": "9107b6f02f7a72cf",
   "lastOpenFiles": [
+    "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md",
     "source/_posts/课程/2024_Spring/数据库开发/SQL-期末.md",
     "source/_posts/课程/2024_Spring/Linux系统编程/07-Linux期末总结.md",
     "source/_posts/课程/2024_Spring/数据库开发/Drawing 2024-05-06 14.34.02.excalidraw.md",
@@ -190,7 +191,6 @@
     "source/_posts/课程/2024_Spring/数据库开发/0-数据库开发.md",
     "source/_posts/课程/2024_Spring/数据库开发/Drawing 2024-05-13 14.33.50.excalidraw.md",
     "source/_posts/课程/2024_Spring/数据库开发/Drawing 2024-05-08 10.32.39.excalidraw.md",
-    "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md",
     "source/_posts/课程/2024_Spring/数据库开发/07-SQL优化的基础.md",
     "source/_posts/课程/2024_Spring/数据库开发/06-数据库设计（一致性保障）.md",
     "source/_posts/课程/2024_Spring/数据库开发/05-事务.md",
