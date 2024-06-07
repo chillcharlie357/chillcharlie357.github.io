@@ -11,8 +11,13 @@
             "id": "9107b6f02f7a72cf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
             }
           },
           {
@@ -88,7 +93,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md"
+              }
             }
           },
           {
@@ -97,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,8 +149,19 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "5dd39344e9331102",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -163,33 +183,35 @@
   },
   "active": "9107b6f02f7a72cf",
   "lastOpenFiles": [
+    "source/_posts/课程/2024_Spring/数据库开发/SQL-期末.md",
+    "source/_posts/课程/2024_Spring/Linux系统编程/07-Linux期末总结.md",
+    "source/_posts/课程/2024_Spring/数据库开发/Drawing 2024-05-06 14.34.02.excalidraw.md",
+    "source/_posts/课程/2024_Spring/数据库开发/Drawing 2024-05-06 14.32.36.excalidraw.md",
+    "source/_posts/课程/2024_Spring/数据库开发/0-数据库开发.md",
+    "source/_posts/课程/2024_Spring/数据库开发/Drawing 2024-05-13 14.33.50.excalidraw.md",
+    "source/_posts/课程/2024_Spring/数据库开发/Drawing 2024-05-08 10.32.39.excalidraw.md",
+    "source/_posts/课程/2024_Spring/数据库开发/08-SQL常识.md",
+    "source/_posts/课程/2024_Spring/数据库开发/07-SQL优化的基础.md",
+    "source/_posts/课程/2024_Spring/数据库开发/06-数据库设计（一致性保障）.md",
+    "source/_posts/课程/2024_Spring/数据库开发/05-事务.md",
+    "source/_posts/课程/2024_Spring/数据库开发/04-B树结构的物理实现.md",
+    "source/_posts/课程/2024_Spring/数据库开发/03-索引结构、实现及使用.md",
+    "source/_posts/课程/2024_Spring/数据库开发/01-开发成功数据库要点.md",
+    "source/_posts/课程/2024_Spring/数据库开发",
+    "source/_posts/课程/2024_Spring/Linux系统编程/Drawing 2024-05-13 10.12.34.excalidraw.md",
+    "source/_posts/课程/2024_Spring/Linux系统编程/06-Linux内核.md",
+    "source/_posts/课程/2024_Spring/Linux系统编程/05-Linux MultiCore Programming.md",
+    "source/_posts/课程/2024_Spring/Linux系统编程/04-File System.md",
+    "source/_posts/课程/2024_Spring/Linux系统编程/03-Programming Prerequisite.md",
+    "source/_posts/课程/2024_Spring/Linux系统编程/02-SHELL 编程.md",
+    "source/_posts/课程/2024_Spring/Linux系统编程/0-Linux Basic.md",
+    "source/_posts/课程/2024_Spring/Linux系统编程",
     "source/_posts/课程/2024_Spring/软件质量管理/05-质量管理.md",
     "source/_posts/课程/2024_Spring/软件质量管理/04-估算、计划和跟踪.md",
     "source/_posts/课程/2024_Spring/软件质量管理/03-团队动力学.md",
     "source/_posts/课程/2024_Spring/软件质量管理/02-历史与演变.md",
     "source/_posts/课程/2024_Spring/软件质量管理/01-概述.md",
-    "source/_posts/课程/2024_Spring/软件质量管理/0-软件质量与管理.md",
     "source/_posts/课程/2024_Spring/软件质量管理",
-    "2024Spring/软件系统设计/04-架构模式.md",
-    "2024Spring/软件系统设计/03-质量属性.md",
-    "2024Spring/软件系统设计/软件系统设计-期末.md",
-    "README.md",
-    "2024Spring/数据库开发/SQL-期末.md",
-    "2024Spring/数据库开发/09-常见SQL连接模式.md",
-    "2024Spring/软件质量与管理/05-质量管理.md",
-    "2024Spring/软件质量与管理/04-估算、计划和跟踪.md",
-    "2024Spring/软件质量与管理/03-团队动力学.md",
-    "2024Spring/软件质量与管理/02-历史与演变.md",
-    "2024Spring/软件质量与管理/06-团队工程开发.md",
-    "2024Spring/Linux系统编程/07-Linux期末总结.md",
-    "2024Spring/软件系统设计/05-架构设计.md",
-    "2024Spring/Linux系统编程/07-.md",
-    "2024Spring/软件系统设计/06-微服务架构.md",
-    "2024Spring/软件系统设计/07-Documenting architecture.md",
-    "2024Spring/软件系统设计/00-软件系统设计.md",
-    "2024Spring/软件质量与管理/07-项目支持活动.md",
-    "2024Spring/数据库开发/08-SQL常识.md",
-    "conflict-files-obsidian-git.md",
     "2024Spring/数据库开发/07-SQL优化的基础.pdf"
   ]
 }
