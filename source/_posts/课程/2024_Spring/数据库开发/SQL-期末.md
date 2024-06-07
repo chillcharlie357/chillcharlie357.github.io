@@ -10,9 +10,9 @@ cover:
 excerpt: false
 mathjax: true
 comment: true
-title: Untitled
+title: SQL-期末
 date:  2024-06-03 14:06
-modified:  2024-06-03 14:06
+modified:  2024-06-07 16:06
 ---
 
 # 编程
@@ -29,10 +29,7 @@ SQL 3选2，标注使用哪个数据库
 
 结构合理、关键字、函数都有分
 
-
-
-
-# 论述：
+# 论述
 
 1. 索引的叶节点
 	- 结构：N个节点，N+1个link
