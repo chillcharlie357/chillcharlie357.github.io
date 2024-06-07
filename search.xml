@@ -6,6 +6,60 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>01_计算机顶层视图</title>
+    <url>/posts/c6f8f26e/</url>
+    <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
+<li>组织：可见</li>
+<li>结构：不可见<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png" alt="NVIDIA_Share_nwCw64dafh.png"></li>
+</ul>
+<h1 id="2-计算机工作原理"><a href="#2-计算机工作原理" class="headerlink" title="2.计算机工作原理"></a>2.计算机工作原理</h1><ul>
+<li>指令和数据存储在单个读写存储器中</li>
+<li>主存中的内容按位置访问，无需考虑其中包含的类型</li>
+<li>CPU从一条指令到下一条指令以顺序方式执行（除非明确修改）</li>
+<li>I/O模块与 CPU、主存交换 算机系统外部的数据</li>
+</ul>
+<h1 id="3-计算机组件"><a href="#3-计算机组件" class="headerlink" title="3.计算机组件"></a>3.计算机组件</h1><h2 id="3-1CPU"><a href="#3-1CPU" class="headerlink" title="3.1CPU"></a>3.1CPU</h2><ul>
+<li><strong>问题1</strong>：CPU的频率不能无限提高<ul>
+<li><strong>解决</strong>：改进CPU芯片结构</li>
+</ul>
+</li>
+<li><strong>问题2</strong>：内存墙的存在<br>  主存和CPU之间传输数据的速度跟不上CPU的速度。<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_E0pwIAZkDi.png" alt="NVIDIA_Share_E0pwIAZkDi.png"><ul>
+<li><strong>解决</strong>：采用高速缓存cache</li>
+</ul>
+</li>
+<li><strong>问题3</strong>：CPU在等待 I/O 设备时保持空闲<ul>
+<li><strong>解决</strong>：采用中断机制</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2存储器"><a href="#3-2存储器" class="headerlink" title="3.2存储器"></a>3.2存储器</h2><ul>
+<li><strong>问题1</strong>：兼顾存储容量、速度和成本<ul>
+<li><strong>解决</strong>：使用存储器层次结构而不是依赖单个存储器组件<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_yalT0gaea2.png" alt="NVIDIA_Share_yalT0gaea2.png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3I-O"><a href="#3-3I-O" class="headerlink" title="3.3I/O"></a>3.3I/O</h2><ul>
+<li><strong>问题1</strong>：不同I/O设备的传输速度差异大<ul>
+<li><strong>解决</strong>：设立缓冲区，新的接口技术，不同I/O操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-4总线"><a href="#3-4总线" class="headerlink" title="3.4总线"></a>3.4总线</h2><ul>
+<li><strong>问题</strong>：计算机部件互连复杂<ul>
+<li><strong>解决</strong>：采用总线<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_WkoYiClJtv.png" alt="NVIDIA_Share_WkoYiClJtv.png"></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>12.17 Linux使用分享</title>
     <url>/posts/cecaafa4/</url>
     <content><![CDATA[<h1 id="1-Linux概述"><a href="#1-Linux概述" class="headerlink" title="1. Linux概述"></a>1. Linux概述</h1><h2 id="1-1-发展历史"><a href="#1-1-发展历史" class="headerlink" title="1.1. 发展历史"></a>1.1. 发展历史</h2><p><strong>Linux</strong>是一种<a class="link" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6">自由和开放源码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E7%B1%BBUnix%E7%B3%BB%E7%BB%9F">类UNIX <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1">操作系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。该操作系统的<a class="link" href="https://zh.wikipedia.org/wiki/%E5%86%85%E6%A0%B8">内核 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>由Linus_Torvalds在1991年10月5日首次发布，再加上<a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%BF%E7%94%A8%E8%80%85%E7%A9%BA%E9%96%93">用户空间 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F">应用程序 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>之后，就成为了Linux操作系统。除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like。</p>
@@ -201,60 +255,6 @@
       <tags>
         <tag>技术分享</tag>
         <tag>Linux使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>01_计算机顶层视图</title>
-    <url>/posts/c6f8f26e/</url>
-    <content><![CDATA[<h1 id="1-计算机顶层结构"><a href="#1-计算机顶层结构" class="headerlink" title="1.计算机顶层结构"></a>1.计算机顶层结构</h1><ul>
-<li>组织：可见</li>
-<li>结构：不可见<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_nwCw64dafh.png" alt="NVIDIA_Share_nwCw64dafh.png"></li>
-</ul>
-<h1 id="2-计算机工作原理"><a href="#2-计算机工作原理" class="headerlink" title="2.计算机工作原理"></a>2.计算机工作原理</h1><ul>
-<li>指令和数据存储在单个读写存储器中</li>
-<li>主存中的内容按位置访问，无需考虑其中包含的类型</li>
-<li>CPU从一条指令到下一条指令以顺序方式执行（除非明确修改）</li>
-<li>I/O模块与 CPU、主存交换 算机系统外部的数据</li>
-</ul>
-<h1 id="3-计算机组件"><a href="#3-计算机组件" class="headerlink" title="3.计算机组件"></a>3.计算机组件</h1><h2 id="3-1CPU"><a href="#3-1CPU" class="headerlink" title="3.1CPU"></a>3.1CPU</h2><ul>
-<li><strong>问题1</strong>：CPU的频率不能无限提高<ul>
-<li><strong>解决</strong>：改进CPU芯片结构</li>
-</ul>
-</li>
-<li><strong>问题2</strong>：内存墙的存在<br>  主存和CPU之间传输数据的速度跟不上CPU的速度。<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_E0pwIAZkDi.png" alt="NVIDIA_Share_E0pwIAZkDi.png"><ul>
-<li><strong>解决</strong>：采用高速缓存cache</li>
-</ul>
-</li>
-<li><strong>问题3</strong>：CPU在等待 I/O 设备时保持空闲<ul>
-<li><strong>解决</strong>：采用中断机制</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-2存储器"><a href="#3-2存储器" class="headerlink" title="3.2存储器"></a>3.2存储器</h2><ul>
-<li><strong>问题1</strong>：兼顾存储容量、速度和成本<ul>
-<li><strong>解决</strong>：使用存储器层次结构而不是依赖单个存储器组件<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_yalT0gaea2.png" alt="NVIDIA_Share_yalT0gaea2.png"></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3I-O"><a href="#3-3I-O" class="headerlink" title="3.3I/O"></a>3.3I/O</h2><ul>
-<li><strong>问题1</strong>：不同I/O设备的传输速度差异大<ul>
-<li><strong>解决</strong>：设立缓冲区，新的接口技术，不同I/O操作</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-4总线"><a href="#3-4总线" class="headerlink" title="3.4总线"></a>3.4总线</h2><ul>
-<li><strong>问题</strong>：计算机部件互连复杂<ul>
-<li><strong>解决</strong>：采用总线<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_WkoYiClJtv.png" alt="NVIDIA_Share_WkoYiClJtv.png"></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构</tag>
-        <tag>课程</tag>
       </tags>
   </entry>
   <entry>
@@ -6271,132 +6271,6 @@
       </tags>
   </entry>
   <entry>
-    <title>14-docker</title>
-    <url>/posts/33399bea/</url>
-    <content><![CDATA[<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png" alt="image.png"></p>
-<h1 id="1-👍docker的三部分"><a href="#1-👍docker的三部分" class="headerlink" title="1. 👍docker的三部分"></a>1. 👍docker的三部分</h1><p>容器：一个轻量化的虚拟机</p>
-<ul>
-<li>哪三部分？<ul>
-<li>docker engine：服务端，管理一系列资源的生命周期</li>
-<li>Client：一个命令行程序</li>
-<li>Registry：镜像仓库，管理镜像</li>
-</ul>
-</li>
-<li>每一部分有哪些部分构成？</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-48-51-551a7d3c33dd450f7f8dc60d1a6ae29c-20231214184848-94a261.png" alt="image.png"></p>
-<h1 id="2-docker子命令"><a href="#2-docker子命令" class="headerlink" title="2. docker子命令"></a>2. docker子命令</h1><h2 id="2-1-👍run"><a href="#2-1-👍run" class="headerlink" title="2.1. 👍run"></a>2.1. 👍run</h2><p>文件：写时复制，不修改就用底层linux的文件，修改复制一份就放到上一层</p>
-<ul>
-<li><code>--rm</code>: 退出时删除容器</li>
-<li><code>--it</code>: 进入命令行终端</li>
-<li><code>-d</code>: 后台运行容器，并返回容器 ID</li>
-<li><code>-i</code>: 交互模式运行容器，通常与 -t 同时使用</li>
-<li><code>-t</code>: 为容器重新分配一个伪输入终端，通常与 -i 同时使用</li>
-<li><code>-p</code>: <strong>指定（发布）端口映射</strong><ul>
-<li>格式为：主机（宿主）端口：容器端口</li>
-</ul>
-</li>
-<li><code>-P</code>: 随机端口映射，容器内部端口随机映射到主机的高端口</li>
-<li><code>--name="nginx-lb"</code>: 为容器指定一个名称</li>
-<li><code>-e username="ritchie"</code>: <strong>设置环境变量</strong><ul>
-<li>可以用环境变量给容器初始化/传入特定参数，在微服务中很常用</li>
-<li>例：给mysql容器传<code>MYSQL_ROOT_PASSWORD</code></li>
-</ul>
-</li>
-<li><code>--env-file=c:/templ /tl .txt</code>: 从指定文件读入环境变量</li>
-<li><code>--expose = 2000-2002</code>: 开放（暴露）一个端口或一组端口，用于指出容器内可能对外暴露的端(不一定映射)<ul>
-<li>如果加上-P则会建立外部端口映射</li>
-</ul>
-</li>
-<li><code>--link &lt;name or id&gt;:alias</code>：链接两个容器，使得他们可以相互通信<ul>
-<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="0.629ex" height="0.973ex" role="img" focusable="false" viewBox="0 -430 278 430"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g></g></g></svg></mjx-container>右边可以写在本地属性文件，可以在不修改命令的情况下把远程容器映射到本地容器</li>
-</ul>
-</li>
-<li><code>-v c:/templ :/data</code>: 绑定一个卷<ul>
-<li>左边时本机路径，右边是容器路径</li>
-</ul>
-</li>
-<li><code>--rm</code>: 退出时自动删除容器</li>
-</ul>
-<p><font color="#c00000">如何在镜像中查看网卡信息和ip地址？</font></p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">docker run --rm -it busybox</span><br><span class="line">cat /etc/hosts</span><br><span class="line">ip a</span><br></pre></td></tr></table></figure></div>
-
-<p><a class="link" href="https://www.jianshu.com/p/21d66ca6115e">关于对docker run –link的理解 - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<ul>
-<li><code>--link</code>的例子：<code>docker run -d --name node --link selenium_hub:hub selenium/node-chrome-debug</code>。创建并启动名为node的容器，并把该容器和名为selenium_hub的容器链接起来。hub是该容器在link下的别名（alias），通俗易懂的讲，站在node容器的角度，selenium_hub和hub都是1cbbf6f07804容器的名字，并且作为容器的hostname，node用这2个名字中的哪一个都可以访问到1cbbf6f07804容器并与之通信（docker通过DNS自动解析）。</li>
-</ul>
-<h2 id="2-2-inspect"><a href="#2-2-inspect" class="headerlink" title="2.2. inspect"></a>2.2. inspect</h2><p>查看详细信息</p>
-<p><code>docker image</code>和<code>docker container</code>都有<code>inspect</code>子命令</p>
-<h1 id="3-👍镜像分层"><a href="#3-👍镜像分层" class="headerlink" title="3. 👍镜像分层"></a>3. 👍镜像分层</h1><ul>
-<li><strong>写时复制 COW</strong>(Copy-On-Write)<ul>
-<li>需要修改底层文件时才会复制一份到上层，然后进行修改</li>
-</ul>
-</li>
-<li>否则一直共享底层文件</li>
-<li>docker history &lt;image name&gt; 查看镜像的层</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-16-50-cef8d6cc91e64be46d5afa44e9e97583-20231214201648-b1c6b2.png" alt="image.png"></p>
-<h1 id="4-数据的存储方式"><a href="#4-数据的存储方式" class="headerlink" title="4. 数据的存储方式"></a>4. 数据的存储方式</h1><ol>
-<li>数据卷 Volume：docker自管理</li>
-<li>bind mounts：存储在宿主机的任意位置</li>
-<li>临时文件系统 tmpfs(temporary file system)：存储在宿主机内存中</li>
-</ol>
-<p>docker volume子命令可以管理数据卷</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-49-16-0157f9b342cd970ea85a05734fc2b95d-20231214204914-b94d29.png" alt="image.png"></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F06%2F15-00-36-510c7d3cd929abe64d8077e5e16f543e-20240106150036-6cef4d.png" alt="image.png"></p>
-<p><a class="link" href="https://docs.docker.com/storage/volumes/">Volumes | Docker Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link" href="https://medium.com/alberthg-docker-notes/docker%E7%AD%86%E8%A8%98-%E8%AE%93%E8%B3%87%E6%96%99%E9%81%A0%E9%9B%A2container-%E4%BD%BF%E7%94%A8-volume-bind-mount-%E8%88%87-tmpfs-mount-6908da341d11">Docker筆記 - 讓資料遠離Container，使用 Volume、Bind Mount 與 Tmpfs Mount | by Albert Hg | alberthg-docker-notes | Medium <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="5-导入导出镜像"><a href="#5-导入导出镜像" class="headerlink" title="5. 导入导出镜像"></a>5. 导入导出镜像</h1><ul>
-<li>备份镜像<ul>
-<li>保存：docker save -o 文件名.tar 镜像</li>
-<li>导入</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-dangling镜像"><a href="#6-dangling镜像" class="headerlink" title="6. dangling镜像"></a>6. dangling镜像</h1><p>dangling镜像：没有tag的镜像<br>查看：<code>docker image ls -f dangling=true</code><br>删除dangling镜像：<code>docker image prune -f</code></p>
-<h1 id="7-Docker-System"><a href="#7-Docker-System" class="headerlink" title="7. Docker System"></a>7. Docker System</h1><ul>
-<li>docker system df 命令，类似于 Linux上的 df 命令，用于查看 Docker 的磁盘使用情况</li>
-<li>RECLAIMABLE 指可回收的，对 image, 指的是没有被容器使用的镜像</li>
-<li>查看系统日志：docker system events</li>
-</ul>
-<h1 id="8-👍容器网络"><a href="#8-👍容器网络" class="headerlink" title="8. 👍容器网络"></a>8. 👍容器网络</h1><p>不同Network Driver的区别：<a class="link" href="https://docs.docker.com/network/drivers/">Network drivers overview | Docker Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link" href="https://zhuanlan.zhihu.com/p/212772001">Docker 网络模式详解及容器间网络通信 - 知乎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<ul>
-<li>none网络， <code>--net=none</code><ul>
-<li>不为 Docker Container 创建任何的网络环境，容器内部就只能使用 loopback 网络设备，不会再有其他的网络资源。</li>
-</ul>
-</li>
-<li>host网络，<code>--net=host</code><ul>
-<li>共享宿主机的网络</li>
-</ul>
-</li>
-<li><strong>bridge网络</strong>, <code>--net=bridge</code><ul>
-<li>Docker 守护进程创建了一个虚拟以太网桥 <code>docker0</code>，新建的容器会自动桥接到这个接口，附加在其上的任何网卡之间都能自动转发数据包。</li>
-<li>例：docker0的linux bridge</li>
-</ul>
-</li>
-<li>container网络, <code>--net=container:NAME_or_ID</code><ul>
-<li>新创建的容器共享其他容器的网络</li>
-<li>共享相同的ip地址和端口号，类似k8s的pod</li>
-</ul>
-</li>
-</ul>
-<p><code>docker run --network=my-net</code>：在同一个network里的多个容器可以相互通信<br><code>docker network connect &lt;network&gt; &lt;container&gt;</code></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-47-39-95ea83a90dd44b9bcaeacda307e0cb5c-20231214204737-dcac1b.png" alt="image.png"></p>
-<p>上图中host为宿主机，docker0为网关，docker1和docker2为容器<br>host eth0：宿主机网卡</p>
-<h1 id="9-Vscode中基于docker容器开发"><a href="#9-Vscode中基于docker容器开发" class="headerlink" title="9. Vscode中基于docker容器开发"></a>9. Vscode中基于docker容器开发</h1><p>C/C++：底层开发，嵌入式，性能要求高<br>Java：<br>Python<br>JS：前端开发，服务端，基于JS的测试工具</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F19-50-53-30b0928d69d9e80c0c19e469f102cdb6-20231214195051-9c2274.png" alt="image.png"></p>
-<p>Gadle：并发构建，性能优于maven</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>15-容器镜像构建和编排</title>
     <url>/posts/70e6ad8c/</url>
     <content><![CDATA[<h1 id="1-由Dockerfile构建镜像"><a href="#1-由Dockerfile构建镜像" class="headerlink" title="1. 由Dockerfile构建镜像"></a>1. 由Dockerfile构建镜像</h1><h2 id="1-1-过程"><a href="#1-1-过程" class="headerlink" title="1.1. 过程"></a>1.1. 过程</h2><p>Image：静态的压缩包<br>Container：运行的容器，轻量级的虚拟机</p>
@@ -6575,6 +6449,132 @@
 </li>
 <li>更多驱动：fluentd、splunk、awslogs</li>
 </ul>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>14-docker</title>
+    <url>/posts/33399bea/</url>
+    <content><![CDATA[<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-46-26-eb3906fceb86ed0e9c6f826e521b0ab0-20231214184623-83585b.png" alt="image.png"></p>
+<h1 id="1-👍docker的三部分"><a href="#1-👍docker的三部分" class="headerlink" title="1. 👍docker的三部分"></a>1. 👍docker的三部分</h1><p>容器：一个轻量化的虚拟机</p>
+<ul>
+<li>哪三部分？<ul>
+<li>docker engine：服务端，管理一系列资源的生命周期</li>
+<li>Client：一个命令行程序</li>
+<li>Registry：镜像仓库，管理镜像</li>
+</ul>
+</li>
+<li>每一部分有哪些部分构成？</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F18-48-51-551a7d3c33dd450f7f8dc60d1a6ae29c-20231214184848-94a261.png" alt="image.png"></p>
+<h1 id="2-docker子命令"><a href="#2-docker子命令" class="headerlink" title="2. docker子命令"></a>2. docker子命令</h1><h2 id="2-1-👍run"><a href="#2-1-👍run" class="headerlink" title="2.1. 👍run"></a>2.1. 👍run</h2><p>文件：写时复制，不修改就用底层linux的文件，修改复制一份就放到上一层</p>
+<ul>
+<li><code>--rm</code>: 退出时删除容器</li>
+<li><code>--it</code>: 进入命令行终端</li>
+<li><code>-d</code>: 后台运行容器，并返回容器 ID</li>
+<li><code>-i</code>: 交互模式运行容器，通常与 -t 同时使用</li>
+<li><code>-t</code>: 为容器重新分配一个伪输入终端，通常与 -i 同时使用</li>
+<li><code>-p</code>: <strong>指定（发布）端口映射</strong><ul>
+<li>格式为：主机（宿主）端口：容器端口</li>
+</ul>
+</li>
+<li><code>-P</code>: 随机端口映射，容器内部端口随机映射到主机的高端口</li>
+<li><code>--name="nginx-lb"</code>: 为容器指定一个名称</li>
+<li><code>-e username="ritchie"</code>: <strong>设置环境变量</strong><ul>
+<li>可以用环境变量给容器初始化/传入特定参数，在微服务中很常用</li>
+<li>例：给mysql容器传<code>MYSQL_ROOT_PASSWORD</code></li>
+</ul>
+</li>
+<li><code>--env-file=c:/templ /tl .txt</code>: 从指定文件读入环境变量</li>
+<li><code>--expose = 2000-2002</code>: 开放（暴露）一个端口或一组端口，用于指出容器内可能对外暴露的端(不一定映射)<ul>
+<li>如果加上-P则会建立外部端口映射</li>
+</ul>
+</li>
+<li><code>--link &lt;name or id&gt;:alias</code>：链接两个容器，使得他们可以相互通信<ul>
+<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="0.629ex" height="0.973ex" role="img" focusable="false" viewBox="0 -430 278 430"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g></g></g></svg></mjx-container>右边可以写在本地属性文件，可以在不修改命令的情况下把远程容器映射到本地容器</li>
+</ul>
+</li>
+<li><code>-v c:/templ :/data</code>: 绑定一个卷<ul>
+<li>左边时本机路径，右边是容器路径</li>
+</ul>
+</li>
+<li><code>--rm</code>: 退出时自动删除容器</li>
+</ul>
+<p><font color="#c00000">如何在镜像中查看网卡信息和ip地址？</font></p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">docker run --rm -it busybox</span><br><span class="line">cat /etc/hosts</span><br><span class="line">ip a</span><br></pre></td></tr></table></figure></div>
+
+<p><a class="link" href="https://www.jianshu.com/p/21d66ca6115e">关于对docker run –link的理解 - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li><code>--link</code>的例子：<code>docker run -d --name node --link selenium_hub:hub selenium/node-chrome-debug</code>。创建并启动名为node的容器，并把该容器和名为selenium_hub的容器链接起来。hub是该容器在link下的别名（alias），通俗易懂的讲，站在node容器的角度，selenium_hub和hub都是1cbbf6f07804容器的名字，并且作为容器的hostname，node用这2个名字中的哪一个都可以访问到1cbbf6f07804容器并与之通信（docker通过DNS自动解析）。</li>
+</ul>
+<h2 id="2-2-inspect"><a href="#2-2-inspect" class="headerlink" title="2.2. inspect"></a>2.2. inspect</h2><p>查看详细信息</p>
+<p><code>docker image</code>和<code>docker container</code>都有<code>inspect</code>子命令</p>
+<h1 id="3-👍镜像分层"><a href="#3-👍镜像分层" class="headerlink" title="3. 👍镜像分层"></a>3. 👍镜像分层</h1><ul>
+<li><strong>写时复制 COW</strong>(Copy-On-Write)<ul>
+<li>需要修改底层文件时才会复制一份到上层，然后进行修改</li>
+</ul>
+</li>
+<li>否则一直共享底层文件</li>
+<li>docker history &lt;image name&gt; 查看镜像的层</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-16-50-cef8d6cc91e64be46d5afa44e9e97583-20231214201648-b1c6b2.png" alt="image.png"></p>
+<h1 id="4-数据的存储方式"><a href="#4-数据的存储方式" class="headerlink" title="4. 数据的存储方式"></a>4. 数据的存储方式</h1><ol>
+<li>数据卷 Volume：docker自管理</li>
+<li>bind mounts：存储在宿主机的任意位置</li>
+<li>临时文件系统 tmpfs(temporary file system)：存储在宿主机内存中</li>
+</ol>
+<p>docker volume子命令可以管理数据卷</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-49-16-0157f9b342cd970ea85a05734fc2b95d-20231214204914-b94d29.png" alt="image.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F06%2F15-00-36-510c7d3cd929abe64d8077e5e16f543e-20240106150036-6cef4d.png" alt="image.png"></p>
+<p><a class="link" href="https://docs.docker.com/storage/volumes/">Volumes | Docker Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link" href="https://medium.com/alberthg-docker-notes/docker%E7%AD%86%E8%A8%98-%E8%AE%93%E8%B3%87%E6%96%99%E9%81%A0%E9%9B%A2container-%E4%BD%BF%E7%94%A8-volume-bind-mount-%E8%88%87-tmpfs-mount-6908da341d11">Docker筆記 - 讓資料遠離Container，使用 Volume、Bind Mount 與 Tmpfs Mount | by Albert Hg | alberthg-docker-notes | Medium <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="5-导入导出镜像"><a href="#5-导入导出镜像" class="headerlink" title="5. 导入导出镜像"></a>5. 导入导出镜像</h1><ul>
+<li>备份镜像<ul>
+<li>保存：docker save -o 文件名.tar 镜像</li>
+<li>导入</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-dangling镜像"><a href="#6-dangling镜像" class="headerlink" title="6. dangling镜像"></a>6. dangling镜像</h1><p>dangling镜像：没有tag的镜像<br>查看：<code>docker image ls -f dangling=true</code><br>删除dangling镜像：<code>docker image prune -f</code></p>
+<h1 id="7-Docker-System"><a href="#7-Docker-System" class="headerlink" title="7. Docker System"></a>7. Docker System</h1><ul>
+<li>docker system df 命令，类似于 Linux上的 df 命令，用于查看 Docker 的磁盘使用情况</li>
+<li>RECLAIMABLE 指可回收的，对 image, 指的是没有被容器使用的镜像</li>
+<li>查看系统日志：docker system events</li>
+</ul>
+<h1 id="8-👍容器网络"><a href="#8-👍容器网络" class="headerlink" title="8. 👍容器网络"></a>8. 👍容器网络</h1><p>不同Network Driver的区别：<a class="link" href="https://docs.docker.com/network/drivers/">Network drivers overview | Docker Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link" href="https://zhuanlan.zhihu.com/p/212772001">Docker 网络模式详解及容器间网络通信 - 知乎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li>none网络， <code>--net=none</code><ul>
+<li>不为 Docker Container 创建任何的网络环境，容器内部就只能使用 loopback 网络设备，不会再有其他的网络资源。</li>
+</ul>
+</li>
+<li>host网络，<code>--net=host</code><ul>
+<li>共享宿主机的网络</li>
+</ul>
+</li>
+<li><strong>bridge网络</strong>, <code>--net=bridge</code><ul>
+<li>Docker 守护进程创建了一个虚拟以太网桥 <code>docker0</code>，新建的容器会自动桥接到这个接口，附加在其上的任何网卡之间都能自动转发数据包。</li>
+<li>例：docker0的linux bridge</li>
+</ul>
+</li>
+<li>container网络, <code>--net=container:NAME_or_ID</code><ul>
+<li>新创建的容器共享其他容器的网络</li>
+<li>共享相同的ip地址和端口号，类似k8s的pod</li>
+</ul>
+</li>
+</ul>
+<p><code>docker run --network=my-net</code>：在同一个network里的多个容器可以相互通信<br><code>docker network connect &lt;network&gt; &lt;container&gt;</code></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F20-47-39-95ea83a90dd44b9bcaeacda307e0cb5c-20231214204737-dcac1b.png" alt="image.png"></p>
+<p>上图中host为宿主机，docker0为网关，docker1和docker2为容器<br>host eth0：宿主机网卡</p>
+<h1 id="9-Vscode中基于docker容器开发"><a href="#9-Vscode中基于docker容器开发" class="headerlink" title="9. Vscode中基于docker容器开发"></a>9. Vscode中基于docker容器开发</h1><p>C/C++：底层开发，嵌入式，性能要求高<br>Java：<br>Python<br>JS：前端开发，服务端，基于JS的测试工具</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F14%2F19-50-53-30b0928d69d9e80c0c19e469f102cdb6-20231214195051-9c2274.png" alt="image.png"></p>
+<p>Gadle：并发构建，性能优于maven</p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -8420,79 +8420,6 @@
       </tags>
   </entry>
   <entry>
-    <title>11-维度约简</title>
-    <url>/posts/fcf58edf/</url>
-    <content><![CDATA[<h1 id="1-特征选择和降维"><a href="#1-特征选择和降维" class="headerlink" title="1. 特征选择和降维"></a>1. 特征选择和降维</h1><ul>
-<li>维度约简<ul>
-<li>特征选择</li>
-<li>特征变化/诱导</li>
-</ul>
-</li>
-<li>目的<ul>
-<li>降维，减少over-fitting风险</li>
-<li>增加解释性</li>
-<li>去除冗余特征</li>
-</ul>
-</li>
-</ul>
-<h2 id="1-1-特征选则"><a href="#1-1-特征选则" class="headerlink" title="1.1. 特征选则"></a>1.1. 特征选则</h2><ul>
-<li>搜索问题<ul>
-<li>N个原始特征，<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="6.637ex" height="2.099ex" role="img" focusable="false" viewBox="0 -846 2933.4 928"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g><g data-mml-node="mo" transform="translate(1433.1,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(2433.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container>非空特征空间，搜索最优的特征子集</li>
-</ul>
-</li>
-<li>搜索起点和方向<ul>
-<li>前向（起点为空集）</li>
-<li>后向（起点为全集）</li>
-<li>双向</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-线性判别分析-LDA"><a href="#2-线性判别分析-LDA" class="headerlink" title="2. 线性判别分析 LDA"></a>2. 线性判别分析 LDA</h1><ul>
-<li>给定标注了类别的高维数据集，投影到高维的超平面，使得样本点按照类别尽可能最大区分开</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F12%2F19-00-19-ce756b9b3984654e5776c026b3eff5c2-20231212190017-65425d.png" alt="image.png"></p>
-<h2 id="2-1-算法流程"><a href="#2-1-算法流程" class="headerlink" title="2.1. 算法流程"></a>2.1. 算法流程</h2><ol>
-<li>计算每个类别的均值<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="2.104ex" height="1.489ex" role="img" focusable="false" viewBox="0 -442 930 658"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D707" d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"></path></g><g data-mml-node="TeXAtom" transform="translate(636,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></g></svg></mjx-container>, 全局样本均值<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="1.364ex" height="1.489ex" role="img" focusable="false" viewBox="0 -442 603 658"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D707" d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"></path></g></g></g></svg></mjx-container>  </li>
-<li>计算类内散度矩阵<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.375ex;" xmlns="http://www.w3.org/2000/svg" width="3.251ex" height="1.97ex" role="img" focusable="false" viewBox="0 -705 1437 870.6"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mi" transform="translate(646,-150) scale(0.707)"><path data-c="1D44A" d="M436 683Q450 683 486 682T553 680Q604 680 638 681T677 682Q695 682 695 674Q695 670 692 659Q687 641 683 639T661 637Q636 636 621 632T600 624T597 615Q597 603 613 377T629 138L631 141Q633 144 637 151T649 170T666 200T690 241T720 295T759 362Q863 546 877 572T892 604Q892 619 873 628T831 637Q817 637 817 647Q817 650 819 660Q823 676 825 679T839 682Q842 682 856 682T895 682T949 681Q1015 681 1034 683Q1048 683 1048 672Q1048 666 1045 655T1038 640T1028 637Q1006 637 988 631T958 617T939 600T927 584L923 578L754 282Q586 -14 585 -15Q579 -22 561 -22Q546 -22 542 -17Q539 -14 523 229T506 480L494 462Q472 425 366 239Q222 -13 220 -15T215 -19Q210 -22 197 -22Q178 -22 176 -15Q176 -12 154 304T131 622Q129 631 121 633T82 637H58Q51 644 51 648Q52 671 64 683H76Q118 680 176 680Q301 680 313 683H323Q329 677 329 674T327 656Q322 641 318 637H297Q236 634 232 620Q262 160 266 136L501 550L499 587Q496 629 489 632Q483 636 447 637Q428 637 422 639T416 648Q416 650 418 660Q419 664 420 669T421 676T424 680T428 682T436 683Z"></path></g></g></g></g></svg></mjx-container>，类间散度矩阵<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.789ex" height="1.934ex" role="img" focusable="false" viewBox="0 -705 1232.7 855"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mi" transform="translate(646,-150) scale(0.707)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g></g></g></g></svg></mjx-container>  </li>
-<li>对矩阵<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.735ex;" xmlns="http://www.w3.org/2000/svg" width="6.597ex" height="2.732ex" role="img" focusable="false" viewBox="0 -882.5 2916 1207.4"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msubsup"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="TeXAtom" transform="translate(729.6,411.6) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="TeXAtom" transform="translate(646,-309.4) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D44A" d="M436 683Q450 683 486 682T553 680Q604 680 638 681T677 682Q695 682 695 674Q695 670 692 659Q687 641 683 639T661 637Q636 636 621 632T600 624T597 615Q597 603 613 377T629 138L631 141Q633 144 637 151T649 170T666 200T690 241T720 295T759 362Q863 546 877 572T892 604Q892 619 873 628T831 637Q817 637 817 647Q817 650 819 660Q823 676 825 679T839 682Q842 682 856 682T895 682T949 681Q1015 681 1034 683Q1048 683 1048 672Q1048 666 1045 655T1038 640T1028 637Q1006 637 988 631T958 617T939 600T927 584L923 578L754 282Q586 -14 585 -15Q579 -22 561 -22Q546 -22 542 -17Q539 -14 523 229T506 480L494 462Q472 425 366 239Q222 -13 220 -15T215 -19Q210 -22 197 -22Q178 -22 176 -15Q176 -12 154 304T131 622Q129 631 121 633T82 637H58Q51 644 51 648Q52 671 64 683H76Q118 680 176 680Q301 680 313 683H323Q329 677 329 674T327 656Q322 641 318 637H297Q236 634 232 620Q262 160 266 136L501 550L499 587Q496 629 489 632Q483 636 447 637Q428 637 422 639T416 648Q416 650 418 660Q419 664 420 669T421 676T424 680T428 682T436 683Z"></path></g></g></g><g data-mml-node="msub" transform="translate(1683.3,0)"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mi" transform="translate(646,-150) scale(0.707)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g></g></g></g></svg></mjx-container>做特征值分解  </li>
-<li>取最大的几个特征值所对应的特征向量  </li>
-<li>计算投影矩阵</li>
-</ol>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F04%2F09-13-00-c9e519e8f613c18c498a4c9246fefdbf-20240104091259-16d2c2.png" alt="image.png"></p>
-<h1 id="主成分分析-PCA"><a href="#主成分分析-PCA" class="headerlink" title="主成分分析 PCA"></a>主成分分析 PCA</h1><p>找到数据中的主要成分，并为之表征数据。</p>
-<h2 id="主成分特点"><a href="#主成分特点" class="headerlink" title="主成分特点"></a>主成分特点</h2><ol>
-<li>最大可分性：样本点在第一主成分上的投影离散程度大于其在第二主成分上的离散程度</li>
-<li>最近可重构性：样本点到第一主成分线的平均距离都要小于其到第二主成分线的距离</li>
-</ol>
-<ul>
-<li>最大可分性理论的目标函数<ul>
-<li>最大化样本点在主成分上投影的方差</li>
-</ul>
-</li>
-</ul>
-<h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><ol>
-<li>样本去中心化<ul>
-<li>每一行减去这一行的均值</li>
-</ul>
-</li>
-<li>计算样本的协方差矩阵</li>
-<li>对<strong>协方差矩阵</strong>做特征值分解</li>
-<li>取最大的数个特征值所对应的特征向量</li>
-<li>计算投影矩阵</li>
-</ol>
-<h1 id="ICA"><a href="#ICA" class="headerlink" title="ICA"></a>ICA</h1><p>ICA是一个解混的过程，认为矩阵是由多个矩阵线性组合构成。认为数据源都不符合高斯分布，因为要独立，然后混合的数据要符合高斯分布。</p>
-<p>假设一个信号S，经过混和矩阵变换为了X=AS。</p>
-<p>对X求解混矩阵W，Y=WX</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_机器学习</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1-概率与学习-KNN</title>
     <url>/posts/76a34f21/</url>
     <content><![CDATA[<h1 id="1-回顾"><a href="#1-回顾" class="headerlink" title="1. 回顾"></a>1. 回顾</h1><h2 id="1-1-特征和属性"><a href="#1-1-特征和属性" class="headerlink" title="1.1. 特征和属性"></a>1.1. 特征和属性</h2><p><strong>统计学角度</strong>看机器学习：得到映射函数<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="5.922ex" height="1.62ex" role="img" focusable="false" viewBox="0 -511 2617.6 716"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(849.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2127.6,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></p>
@@ -8583,6 +8510,79 @@
 <li>把任意长度的输入映射成固定长度的输入</li>
 </ul>
 <p>概率化的k-NN</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_机器学习</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>11-维度约简</title>
+    <url>/posts/fcf58edf/</url>
+    <content><![CDATA[<h1 id="1-特征选择和降维"><a href="#1-特征选择和降维" class="headerlink" title="1. 特征选择和降维"></a>1. 特征选择和降维</h1><ul>
+<li>维度约简<ul>
+<li>特征选择</li>
+<li>特征变化/诱导</li>
+</ul>
+</li>
+<li>目的<ul>
+<li>降维，减少over-fitting风险</li>
+<li>增加解释性</li>
+<li>去除冗余特征</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-1-特征选则"><a href="#1-1-特征选则" class="headerlink" title="1.1. 特征选则"></a>1.1. 特征选则</h2><ul>
+<li>搜索问题<ul>
+<li>N个原始特征，<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="6.637ex" height="2.099ex" role="img" focusable="false" viewBox="0 -846 2933.4 928"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g><g data-mml-node="mo" transform="translate(1433.1,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(2433.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container>非空特征空间，搜索最优的特征子集</li>
+</ul>
+</li>
+<li>搜索起点和方向<ul>
+<li>前向（起点为空集）</li>
+<li>后向（起点为全集）</li>
+<li>双向</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-线性判别分析-LDA"><a href="#2-线性判别分析-LDA" class="headerlink" title="2. 线性判别分析 LDA"></a>2. 线性判别分析 LDA</h1><ul>
+<li>给定标注了类别的高维数据集，投影到高维的超平面，使得样本点按照类别尽可能最大区分开</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F12%2F19-00-19-ce756b9b3984654e5776c026b3eff5c2-20231212190017-65425d.png" alt="image.png"></p>
+<h2 id="2-1-算法流程"><a href="#2-1-算法流程" class="headerlink" title="2.1. 算法流程"></a>2.1. 算法流程</h2><ol>
+<li>计算每个类别的均值<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="2.104ex" height="1.489ex" role="img" focusable="false" viewBox="0 -442 930 658"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D707" d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"></path></g><g data-mml-node="TeXAtom" transform="translate(636,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></g></svg></mjx-container>, 全局样本均值<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="1.364ex" height="1.489ex" role="img" focusable="false" viewBox="0 -442 603 658"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D707" d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"></path></g></g></g></svg></mjx-container>  </li>
+<li>计算类内散度矩阵<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.375ex;" xmlns="http://www.w3.org/2000/svg" width="3.251ex" height="1.97ex" role="img" focusable="false" viewBox="0 -705 1437 870.6"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mi" transform="translate(646,-150) scale(0.707)"><path data-c="1D44A" d="M436 683Q450 683 486 682T553 680Q604 680 638 681T677 682Q695 682 695 674Q695 670 692 659Q687 641 683 639T661 637Q636 636 621 632T600 624T597 615Q597 603 613 377T629 138L631 141Q633 144 637 151T649 170T666 200T690 241T720 295T759 362Q863 546 877 572T892 604Q892 619 873 628T831 637Q817 637 817 647Q817 650 819 660Q823 676 825 679T839 682Q842 682 856 682T895 682T949 681Q1015 681 1034 683Q1048 683 1048 672Q1048 666 1045 655T1038 640T1028 637Q1006 637 988 631T958 617T939 600T927 584L923 578L754 282Q586 -14 585 -15Q579 -22 561 -22Q546 -22 542 -17Q539 -14 523 229T506 480L494 462Q472 425 366 239Q222 -13 220 -15T215 -19Q210 -22 197 -22Q178 -22 176 -15Q176 -12 154 304T131 622Q129 631 121 633T82 637H58Q51 644 51 648Q52 671 64 683H76Q118 680 176 680Q301 680 313 683H323Q329 677 329 674T327 656Q322 641 318 637H297Q236 634 232 620Q262 160 266 136L501 550L499 587Q496 629 489 632Q483 636 447 637Q428 637 422 639T416 648Q416 650 418 660Q419 664 420 669T421 676T424 680T428 682T436 683Z"></path></g></g></g></g></svg></mjx-container>，类间散度矩阵<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.789ex" height="1.934ex" role="img" focusable="false" viewBox="0 -705 1232.7 855"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mi" transform="translate(646,-150) scale(0.707)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g></g></g></g></svg></mjx-container>  </li>
+<li>对矩阵<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.735ex;" xmlns="http://www.w3.org/2000/svg" width="6.597ex" height="2.732ex" role="img" focusable="false" viewBox="0 -882.5 2916 1207.4"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msubsup"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="TeXAtom" transform="translate(729.6,411.6) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="TeXAtom" transform="translate(646,-309.4) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D44A" d="M436 683Q450 683 486 682T553 680Q604 680 638 681T677 682Q695 682 695 674Q695 670 692 659Q687 641 683 639T661 637Q636 636 621 632T600 624T597 615Q597 603 613 377T629 138L631 141Q633 144 637 151T649 170T666 200T690 241T720 295T759 362Q863 546 877 572T892 604Q892 619 873 628T831 637Q817 637 817 647Q817 650 819 660Q823 676 825 679T839 682Q842 682 856 682T895 682T949 681Q1015 681 1034 683Q1048 683 1048 672Q1048 666 1045 655T1038 640T1028 637Q1006 637 988 631T958 617T939 600T927 584L923 578L754 282Q586 -14 585 -15Q579 -22 561 -22Q546 -22 542 -17Q539 -14 523 229T506 480L494 462Q472 425 366 239Q222 -13 220 -15T215 -19Q210 -22 197 -22Q178 -22 176 -15Q176 -12 154 304T131 622Q129 631 121 633T82 637H58Q51 644 51 648Q52 671 64 683H76Q118 680 176 680Q301 680 313 683H323Q329 677 329 674T327 656Q322 641 318 637H297Q236 634 232 620Q262 160 266 136L501 550L499 587Q496 629 489 632Q483 636 447 637Q428 637 422 639T416 648Q416 650 418 660Q419 664 420 669T421 676T424 680T428 682T436 683Z"></path></g></g></g><g data-mml-node="msub" transform="translate(1683.3,0)"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mi" transform="translate(646,-150) scale(0.707)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g></g></g></g></svg></mjx-container>做特征值分解  </li>
+<li>取最大的几个特征值所对应的特征向量  </li>
+<li>计算投影矩阵</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F04%2F09-13-00-c9e519e8f613c18c498a4c9246fefdbf-20240104091259-16d2c2.png" alt="image.png"></p>
+<h1 id="主成分分析-PCA"><a href="#主成分分析-PCA" class="headerlink" title="主成分分析 PCA"></a>主成分分析 PCA</h1><p>找到数据中的主要成分，并为之表征数据。</p>
+<h2 id="主成分特点"><a href="#主成分特点" class="headerlink" title="主成分特点"></a>主成分特点</h2><ol>
+<li>最大可分性：样本点在第一主成分上的投影离散程度大于其在第二主成分上的离散程度</li>
+<li>最近可重构性：样本点到第一主成分线的平均距离都要小于其到第二主成分线的距离</li>
+</ol>
+<ul>
+<li>最大可分性理论的目标函数<ul>
+<li>最大化样本点在主成分上投影的方差</li>
+</ul>
+</li>
+</ul>
+<h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><ol>
+<li>样本去中心化<ul>
+<li>每一行减去这一行的均值</li>
+</ul>
+</li>
+<li>计算样本的协方差矩阵</li>
+<li>对<strong>协方差矩阵</strong>做特征值分解</li>
+<li>取最大的数个特征值所对应的特征向量</li>
+<li>计算投影矩阵</li>
+</ol>
+<h1 id="ICA"><a href="#ICA" class="headerlink" title="ICA"></a>ICA</h1><p>ICA是一个解混的过程，认为矩阵是由多个矩阵线性组合构成。认为数据源都不符合高斯分布，因为要独立，然后混合的数据要符合高斯分布。</p>
+<p>假设一个信号S，经过混和矩阵变换为了X=AS。</p>
+<p>对X求解混矩阵W，Y=WX</p>
 ]]></content>
       <categories>
         <category>2023_Fall_机器学习</category>
@@ -12478,78 +12478,6 @@
       </tags>
   </entry>
   <entry>
-    <title>04_语义分析</title>
-    <url>/posts/f92c8329/</url>
-    <content><![CDATA[<h1 id="1-符号表"><a href="#1-符号表" class="headerlink" title="1. 符号表"></a>1. 符号表</h1><h1 id="2-属性文法"><a href="#2-属性文法" class="headerlink" title="2. 属性文法"></a>2. 属性文法</h1><ul>
-<li>作用：为上下文无关文法赋予<strong>语义</strong>（你关心的东西）。</li>
-</ul>
-<h2 id="2-1-属性-动作"><a href="#2-1-属性-动作" class="headerlink" title="2.1. 属性+动作"></a>2.1. 属性+动作</h2><ul>
-<li><strong>基本思想</strong>：动作嵌入展开式右部，一个动作在它左边的所有文法符号都处理过之后立刻执行</li>
-</ul>
-<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="10.087ex" height="1.57ex" role="img" focusable="false" viewBox="0 -683 4458.6 694"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(1036.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2314.6,0)"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(3166.6,0)"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g><g data-mml-node="mi" transform="translate(3695.6,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g></g></g></svg></mjx-container></p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">B</span><span class="params">()</span> {</span><br><span class="line">	X</span><br><span class="line">	a <span class="comment">// X处理完后执行a</span></span><br><span class="line">	Y</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>Listener无返回值，属性文法可以实现让非终结符有返回值</p>
-<h2 id="2-2-综合属性和继承属性"><a href="#2-2-综合属性和继承属性" class="headerlink" title="2.2. 综合属性和继承属性"></a>2.2. 综合属性和继承属性</h2><ul>
-<li><strong>综合属性</strong>：依赖自己、子节点，依赖自下而上，把动作放在产生式的最后<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="9.856ex" height="1.645ex" role="img" focusable="false" viewBox="0 -716 4356.6 727"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(1027.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2305.6,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(3064.6,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(3827.6,0)"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g></g></g></svg></mjx-container><ul>
-<li>在antlr4中使用返回值传递</li>
-</ul>
-</li>
-<li><strong>继承属性</strong>：依赖父节点、兄弟节点(左，右)、自身的属性来定义<ul>
-<li>在antlr4中使用参数传递</li>
-</ul>
-</li>
-</ul>
-<p>往往在属性结构与树的结构<font color="#ff0000">不匹配</font>时，才会采用继承属性。</p>
-<p>antlr4底层会改写左递归，在属性文法中若有参数会改写失败</p>
-<p><font color="#ff0000">依赖图</font>用于确定一棵给定的语法分析树中各个属性实例之间的依赖关系<br><font color="#ff0000">信息流向</font>: 先从左向右、从上到下传递信息, 再从下到上传递信息</p>
-<h2 id="2-3-语法制导定义"><a href="#2-3-语法制导定义" class="headerlink" title="2.3. 语法制导定义"></a>2.3. 语法制导定义</h2><ul>
-<li><code>Syntax Directed Defination</code>：是一个上下文无关文法和<strong>属性及规则</strong>的结合。<ul>
-<li>唯一确定了语法分析树上每个<strong>非终结符</strong>节点的属性值</li>
-<li>SDD没有规定以什么方式、顺序计算属性</li>
-</ul>
-</li>
-</ul>
-
-
-<h2 id="2-4-S-属性定义"><a href="#2-4-S-属性定义" class="headerlink" title="2.4. S-属性定义"></a>2.4. S-属性定义</h2><ul>
-<li>如果一个 SDD 的每个属性都是综合属性, 则它是 S 属性定义。</li>
-</ul>
-<h2 id="2-5-L-属性定义"><a href="#2-5-L-属性定义" class="headerlink" title="2.5. L-属性定义"></a>2.5. L-属性定义</h2><h2 id="2-6-后缀表示-Postfix-Notation"><a href="#2-6-后缀表示-Postfix-Notation" class="headerlink" title="2.6. 后缀表示 (Postfix Notation)"></a>2.6. 后缀表示 (Postfix Notation)</h2><ol>
-<li>如果E是变量或常量，则E的后缀就是E本身。</li>
-<li>如果E是形如<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="7.55ex" height="1.977ex" role="img" focusable="false" viewBox="0 -680 3337.1 874"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mi" transform="translate(1174.6,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(1659.6,0)"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="msub" transform="translate(2162.6,0)"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container>的表达式，则E的后缀表示是$E_1^<code>  E_2^</code>op<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="6.787ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 3000 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">，</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">其</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">中</text></g></g></g></svg></mjx-container>E_1^<code> E_2^</code><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 1000 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">是</text></g></g></g></svg></mjx-container>E_1 E_2$的后缀表达式。  </li>
-<li>如果E是形如<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.418ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1952.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msub" transform="translate(389,0)"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mo" transform="translate(1563.6,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>的表达式，则E的后缀表示是<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.657ex" height="1.878ex" role="img" focusable="false" viewBox="0 -680 1174.6 830"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></svg></mjx-container>的后缀表示。</li>
-</ol>
-<h1 id="3-类型检查"><a href="#3-类型检查" class="headerlink" title="3. 类型检查"></a>3. 类型检查</h1><p>比较简单</p>
-<p>《编程语言实现模式》第八章：静态类型检查</p>
-<ul>
-<li>Offline：先有完整的语法树，再去遍历<ul>
-<li>ParseTreeWalker</li>
-</ul>
-</li>
-<li>Online：在语法分析树构建的过程中嵌入<ul>
-<li>Attribute Grammar（手动在g4中嵌入）</li>
-<li>addParseListener（把语法文件和java文件分开，antlr4自动嵌入）</li>
-</ul>
-</li>
-</ul>
-<h1 id="4-语法制导的翻译方案SDT"><a href="#4-语法制导的翻译方案SDT" class="headerlink" title="4. 语法制导的翻译方案SDT"></a>4. 语法制导的翻译方案SDT</h1><ul>
-<li>syntax-directed translation scheme</li>
-</ul>
-<p>例：<br>    有小数点的二进制数<code>-101.101</code>，怎么翻译成十进制？</p>
-<p>设定属性</p>
-<p>龙书2.3、5.4</p>
-<p>与SDD的主要区别：显示指定了语义片段执行的顺序</p>
-]]></content>
-      <categories>
-        <category>2023_Spring_编译原理</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Spring编译原理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>03_语法分析</title>
     <url>/posts/83a9eb1d/</url>
     <content><![CDATA[<p>语法分析部分最困难:解析表达式</p>
@@ -13070,6 +12998,78 @@
 <p>注意区分文法和语言。</p>
 <p>语言L，如果能写出LR1文法，一定可以写成SLR1文法（但可能很复杂）</p>
 </p></p>]]></content>
+      <categories>
+        <category>2023_Spring_编译原理</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Spring编译原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>04_语义分析</title>
+    <url>/posts/f92c8329/</url>
+    <content><![CDATA[<h1 id="1-符号表"><a href="#1-符号表" class="headerlink" title="1. 符号表"></a>1. 符号表</h1><h1 id="2-属性文法"><a href="#2-属性文法" class="headerlink" title="2. 属性文法"></a>2. 属性文法</h1><ul>
+<li>作用：为上下文无关文法赋予<strong>语义</strong>（你关心的东西）。</li>
+</ul>
+<h2 id="2-1-属性-动作"><a href="#2-1-属性-动作" class="headerlink" title="2.1. 属性+动作"></a>2.1. 属性+动作</h2><ul>
+<li><strong>基本思想</strong>：动作嵌入展开式右部，一个动作在它左边的所有文法符号都处理过之后立刻执行</li>
+</ul>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="10.087ex" height="1.57ex" role="img" focusable="false" viewBox="0 -683 4458.6 694"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(1036.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2314.6,0)"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(3166.6,0)"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g><g data-mml-node="mi" transform="translate(3695.6,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g></g></g></svg></mjx-container></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">B</span><span class="params">()</span> {</span><br><span class="line">	X</span><br><span class="line">	a <span class="comment">// X处理完后执行a</span></span><br><span class="line">	Y</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>Listener无返回值，属性文法可以实现让非终结符有返回值</p>
+<h2 id="2-2-综合属性和继承属性"><a href="#2-2-综合属性和继承属性" class="headerlink" title="2.2. 综合属性和继承属性"></a>2.2. 综合属性和继承属性</h2><ul>
+<li><strong>综合属性</strong>：依赖自己、子节点，依赖自下而上，把动作放在产生式的最后<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="9.856ex" height="1.645ex" role="img" focusable="false" viewBox="0 -716 4356.6 727"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(1027.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2305.6,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(3064.6,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(3827.6,0)"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g></g></g></svg></mjx-container><ul>
+<li>在antlr4中使用返回值传递</li>
+</ul>
+</li>
+<li><strong>继承属性</strong>：依赖父节点、兄弟节点(左，右)、自身的属性来定义<ul>
+<li>在antlr4中使用参数传递</li>
+</ul>
+</li>
+</ul>
+<p>往往在属性结构与树的结构<font color="#ff0000">不匹配</font>时，才会采用继承属性。</p>
+<p>antlr4底层会改写左递归，在属性文法中若有参数会改写失败</p>
+<p><font color="#ff0000">依赖图</font>用于确定一棵给定的语法分析树中各个属性实例之间的依赖关系<br><font color="#ff0000">信息流向</font>: 先从左向右、从上到下传递信息, 再从下到上传递信息</p>
+<h2 id="2-3-语法制导定义"><a href="#2-3-语法制导定义" class="headerlink" title="2.3. 语法制导定义"></a>2.3. 语法制导定义</h2><ul>
+<li><code>Syntax Directed Defination</code>：是一个上下文无关文法和<strong>属性及规则</strong>的结合。<ul>
+<li>唯一确定了语法分析树上每个<strong>非终结符</strong>节点的属性值</li>
+<li>SDD没有规定以什么方式、顺序计算属性</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="2-4-S-属性定义"><a href="#2-4-S-属性定义" class="headerlink" title="2.4. S-属性定义"></a>2.4. S-属性定义</h2><ul>
+<li>如果一个 SDD 的每个属性都是综合属性, 则它是 S 属性定义。</li>
+</ul>
+<h2 id="2-5-L-属性定义"><a href="#2-5-L-属性定义" class="headerlink" title="2.5. L-属性定义"></a>2.5. L-属性定义</h2><h2 id="2-6-后缀表示-Postfix-Notation"><a href="#2-6-后缀表示-Postfix-Notation" class="headerlink" title="2.6. 后缀表示 (Postfix Notation)"></a>2.6. 后缀表示 (Postfix Notation)</h2><ol>
+<li>如果E是变量或常量，则E的后缀就是E本身。</li>
+<li>如果E是形如<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="7.55ex" height="1.977ex" role="img" focusable="false" viewBox="0 -680 3337.1 874"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mi" transform="translate(1174.6,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(1659.6,0)"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="msub" transform="translate(2162.6,0)"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container>的表达式，则E的后缀表示是$E_1^<code>  E_2^</code>op<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="6.787ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 3000 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">，</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">其</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">中</text></g></g></g></svg></mjx-container>E_1^<code> E_2^</code><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 1000 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">是</text></g></g></g></svg></mjx-container>E_1 E_2$的后缀表达式。  </li>
+<li>如果E是形如<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.418ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1952.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msub" transform="translate(389,0)"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mo" transform="translate(1563.6,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>的表达式，则E的后缀表示是<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.657ex" height="1.878ex" role="img" focusable="false" viewBox="0 -680 1174.6 830"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></svg></mjx-container>的后缀表示。</li>
+</ol>
+<h1 id="3-类型检查"><a href="#3-类型检查" class="headerlink" title="3. 类型检查"></a>3. 类型检查</h1><p>比较简单</p>
+<p>《编程语言实现模式》第八章：静态类型检查</p>
+<ul>
+<li>Offline：先有完整的语法树，再去遍历<ul>
+<li>ParseTreeWalker</li>
+</ul>
+</li>
+<li>Online：在语法分析树构建的过程中嵌入<ul>
+<li>Attribute Grammar（手动在g4中嵌入）</li>
+<li>addParseListener（把语法文件和java文件分开，antlr4自动嵌入）</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-语法制导的翻译方案SDT"><a href="#4-语法制导的翻译方案SDT" class="headerlink" title="4. 语法制导的翻译方案SDT"></a>4. 语法制导的翻译方案SDT</h1><ul>
+<li>syntax-directed translation scheme</li>
+</ul>
+<p>例：<br>    有小数点的二进制数<code>-101.101</code>，怎么翻译成十进制？</p>
+<p>设定属性</p>
+<p>龙书2.3、5.4</p>
+<p>与SDD的主要区别：显示指定了语义片段执行的顺序</p>
+]]></content>
       <categories>
         <category>2023_Spring_编译原理</category>
       </categories>
@@ -13814,15 +13814,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 ]]></content>
   </entry>
   <entry>
-    <title>01-概述</title>
-    <url>/posts/58d2b339/</url>
-    <content><![CDATA[<p><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</p>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件质量管理</category>
-      </categories>
-  </entry>
-  <entry>
     <title>0-软件质量与管理</title>
     <url>/posts/5882e132/</url>
     <content><![CDATA[<h1 id="十个问题"><a href="#十个问题" class="headerlink" title="十个问题"></a>十个问题</h1><ol>
@@ -13831,6 +13822,15 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li>？</li>
 <li>什么叫做XX管理？</li>
 </ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>01-概述</title>
+    <url>/posts/58d2b339/</url>
+    <content><![CDATA[<p><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</p>
 ]]></content>
       <categories>
         <category>2024_Spring_软件质量管理</category>
