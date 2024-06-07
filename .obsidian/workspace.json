@@ -1,0 +1,195 @@
+{
+  "main": {
+    "id": "d7386fb63df1bc72",
+    "type": "split",
+    "children": [
+      {
+        "id": "a0b55b90ec053b2e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9107b6f02f7a72cf",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "d3c9942b6f8e1387",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a8bf68d1a644f2af",
+    "type": "split",
+    "children": [
+      {
+        "id": "6cbc9582eda3d3ae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a6a6ecd92ce58e0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8eee8b3d650695ce",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9fcce83feb7bafb5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1d728e82bddef201",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3c48636c042d400",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a1d821e098029021",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "3219c82eb63d29ce",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "610116cddbfd338c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6f5e0b3ae44feb95",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e08de64846ad52e3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "audio-recorder:Start/stop recording": false,
+      "workspaces:Manage workspace layouts": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "9107b6f02f7a72cf",
+  "lastOpenFiles": [
+    "source/_posts/课程/2024_Spring/软件质量管理/05-质量管理.md",
+    "source/_posts/课程/2024_Spring/软件质量管理/04-估算、计划和跟踪.md",
+    "source/_posts/课程/2024_Spring/软件质量管理/03-团队动力学.md",
+    "source/_posts/课程/2024_Spring/软件质量管理/02-历史与演变.md",
+    "source/_posts/课程/2024_Spring/软件质量管理/01-概述.md",
+    "source/_posts/课程/2024_Spring/软件质量管理/0-软件质量与管理.md",
+    "source/_posts/课程/2024_Spring/软件质量管理",
+    "2024Spring/软件系统设计/04-架构模式.md",
+    "2024Spring/软件系统设计/03-质量属性.md",
+    "2024Spring/软件系统设计/软件系统设计-期末.md",
+    "README.md",
+    "2024Spring/数据库开发/SQL-期末.md",
+    "2024Spring/数据库开发/09-常见SQL连接模式.md",
+    "2024Spring/软件质量与管理/05-质量管理.md",
+    "2024Spring/软件质量与管理/04-估算、计划和跟踪.md",
+    "2024Spring/软件质量与管理/03-团队动力学.md",
+    "2024Spring/软件质量与管理/02-历史与演变.md",
+    "2024Spring/软件质量与管理/06-团队工程开发.md",
+    "2024Spring/Linux系统编程/07-Linux期末总结.md",
+    "2024Spring/软件系统设计/05-架构设计.md",
+    "2024Spring/Linux系统编程/07-.md",
+    "2024Spring/软件系统设计/06-微服务架构.md",
+    "2024Spring/软件系统设计/07-Documenting architecture.md",
+    "2024Spring/软件系统设计/00-软件系统设计.md",
+    "2024Spring/软件质量与管理/07-项目支持活动.md",
+    "2024Spring/数据库开发/08-SQL常识.md",
+    "conflict-files-obsidian-git.md",
+    "2024Spring/数据库开发/07-SQL优化的基础.pdf"
+  ]
+}
