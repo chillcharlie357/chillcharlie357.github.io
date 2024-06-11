@@ -60,6 +60,142 @@
       </tags>
   </entry>
   <entry>
+    <title>02_计算机系统概述</title>
+    <url>/posts/75f7a7d2/</url>
+    <content><![CDATA[<h1 id="1-什么是计算机"><a href="#1-什么是计算机" class="headerlink" title="1.什么是计算机"></a>1.什么是计算机</h1><p><strong>通用电子数字计算机</strong>：</p>
+<ul>
+<li>通用：不是一种专用设备</li>
+<li>电子：非机械，采用电子元件</li>
+<li>数字：非模拟，信息采用数字化的形式表</li>
+</ul>
+<p><strong>计算机系统</strong>：</p>
+<ul>
+<li>软件</li>
+<li>硬件</li>
+</ul>
+<h1 id="2-冯·诺伊曼结构"><a href="#2-冯·诺伊曼结构" class="headerlink" title="2.冯·诺伊曼结构"></a>2.冯·诺伊曼结构</h1><ul>
+<li><p><strong>组成</strong>：运算器、存储器、控制器、输入设备、输出设备</p>
+<ul>
+<li>主存储器：地址和存储的内容</li>
+<li>算术逻辑单元 / 处理单元：执行信息的实际处理</li>
+<li>程序控制单元 / 控制单元：指挥信息的处理</li>
+<li>输入设备：将信息送入计算机中</li>
+<li>输出设备：将处理结果以某种形式显示在计算机外</li>
+</ul>
+</li>
+<li><p><strong>存储程序思想</strong>：</p>
+<ul>
+<li>指令和数据以同等地位存放在存储器内，并可按地址访问</li>
+<li>指令和数据均用二进制表示</li>
+</ul>
+</li>
+<li><p>CPU区分指令和数据的<strong>依据</strong></p>
+<ul>
+<li>指令周期中取指令和取数据是在不同阶段</li>
+<li>指令和数据的存储位置、寻址方式是没有本质区别的</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-计算机性能"><a href="#3-计算机性能" class="headerlink" title="3.计算机性能"></a>3.计算机性能</h1><p><strong>性能评价标准</strong>：</p>
+<ul>
+<li>CPU:速度</li>
+<li>存储器：速度、容量</li>
+<li>I/O:速度、容量<br><font color="#ff0000"><font color="#ff0000">计算机设计的主要目标是：提高CPU性能</font></font></li>
+</ul>
+<h1 id="4-CPU性能"><a href="#4-CPU性能" class="headerlink" title="4.CPU性能"></a>4.CPU性能</h1><h2 id="4-0CPU时间"><a href="#4-0CPU时间" class="headerlink" title="4.0CPU时间"></a>4.0CPU时间</h2><p>CPU用于执行程序的时间，可分为两部分：</p>
+<ul>
+<li>用户CPU时间：真正用于执行用户代码的时间</li>
+<li>系统CPU时间：为了执行用户程序而需要CPU操作系统程序的时间<br>一般<font color="#ff0000">只考虑用户CPU时间</font>，因为系统CPU时间测量不准确</li>
+</ul>
+<h2 id="4-1系统时钟"><a href="#4-1系统时钟" class="headerlink" title="4.1系统时钟"></a>4.1系统时钟</h2><p><strong>时钟频率</strong>:</p>
+<ul>
+<li>时钟速度</li>
+<li>单位：Hz</li>
+<li>计算机在单位时间内（例如1秒钟）执行最基本操作的次数<br><strong>时钟周期</strong>：</li>
+<li>周期时间/时钟滴答</li>
+<li>单位：s</li>
+<li><strong>执行每次最基本操作的时间</strong>。CPU中用于同步执行最基本操作的单个电子脉冲。因此，周期时间即为<strong>两个电子脉冲之间的时间</strong><br><font color="#ff0000">两者互为倒数</font></li>
+</ul>
+<h2 id="4-2指令执行"><a href="#4-2指令执行" class="headerlink" title="4.2指令执行"></a>4.2指令执行</h2><ul>
+<li>CPI(Cycles Per Instruction):一条指令所需的时钟周期</li>
+<li>MIPS(Million Instruction Per Second):平均每秒执行多少百万条指令</li>
+<li>MFLOPS(Million Floating-point Operation Per Second):浮点数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_arAHthsIcb.png" alt="NVIDIA_Share_arAHthsIcb.png"></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_GO8FiL37LH.png" alt="NVIDIA_Share_GO8FiL37LH.png"></p>
+<h2 id="4-3基准程序"><a href="#4-3基准程序" class="headerlink" title="4.3基准程序"></a>4.3基准程序</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_jqZIiZj9bL.png" alt="NVIDIA_Share_jqZIiZj9bL.png"></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>03_数据的机器级表示</title>
+    <url>/posts/4480f5fc/</url>
+    <content><![CDATA[<h1 id="1-信息的二进制编码"><a href="#1-信息的二进制编码" class="headerlink" title="1.信息的二进制编码"></a>1.信息的二进制编码</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_kM0hbupCGD.png" alt="NVIDIA_Share_kM0hbupCGD.png"></p>
+<ul>
+<li><strong>编码</strong>：用少量简单的<font color="#ff0000">基本符号</font>对复杂多样的信息进行一定<font color="#ff0000">规律</font>的组合</li>
+<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g></g></g></svg></mjx-container>位的二进制编码至多表示<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.741ex" height="1.914ex" role="img" focusable="false" viewBox="0 -846 1211.6 846"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mi" transform="translate(533,363) scale(0.707)"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g></g></g></g></svg></mjx-container>个不同的值</li>
+</ul>
+<h1 id="2-整数的二进制表示"><a href="#2-整数的二进制表示" class="headerlink" title="2.整数的二进制表示"></a>2.整数的二进制表示</h1><p>原码、反码、移码在进行加法运算时都会造成不必要的硬件需求，因此目前计算机中普遍使用补码。<br><font color="#ff0000">补码</font>可以实现不同符号统一的加减运算，即可以用加法实现减法。</p>
+<h2 id="2-1补码表示"><a href="#2-1补码表示" class="headerlink" title="2.1补码表示"></a>2.1补码表示</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Ru7MCmvL93.png" alt="NVIDIA_Share_Ru7MCmvL93.png"><br><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g></g></g></svg></mjx-container>位补码可以表示<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="15.885ex" height="2.117ex" role="img" focusable="false" viewBox="0 -853.7 7021 935.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="msup" transform="translate(778,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g><g data-mml-node="mo" transform="translate(889,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(1667,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(2167,0)"><path data-c="223C" d="M55 166Q55 241 101 304T222 367Q260 367 296 349T362 304T421 252T484 208T554 189Q616 189 655 236T694 338Q694 350 698 358T708 367Q722 367 722 334Q722 260 677 197T562 134H554Q517 134 481 152T414 196T355 248T292 293T223 311Q179 311 145 286Q109 257 96 218T80 156T69 133Q55 133 55 166Z"></path></g></g></g><g data-mml-node="msup" transform="translate(3443.4,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g><g data-mml-node="mo" transform="translate(521,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(1299,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mo" transform="translate(5520.7,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(6521,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container></p>
+<h2 id="2-2补码的真值"><a href="#2-2补码的真值" class="headerlink" title="2.2补码的真值"></a>2.2补码的真值</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_mFleHVLRCl.png" alt="NVIDIA_Share_mFleHVLRCl.png"></p>
+<h2 id="2-3不同的整数编码"><a href="#2-3不同的整数编码" class="headerlink" title="2.3不同的整数编码"></a>2.3不同的整数编码</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_ncgsju1w2b.png" alt="NVIDIA_Share_ncgsju1w2b.png"></p>
+<h1 id="3-浮点数的二进制表示"><a href="#3-浮点数的二进制表示" class="headerlink" title="3.浮点数的二进制表示"></a>3.浮点数的二进制表示</h1><ul>
+<li><strong>浮点数</strong>：小数点的位置不固定<ul>
+<li>越大的数精度越低，但可表示数的范围比定点数大</li>
+<li>可<font color="#ff0000">表示数的个数不变</font>，k位浮点数可表示的数仍是<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.152ex" height="1.932ex" role="img" focusable="false" viewBox="0 -853.7 951.4 853.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mi" transform="translate(533,363) scale(0.707)"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></g></svg></mjx-container>个（类比插旗，🚩总数不变）<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_epSSsbGIzF.png" alt="NVIDIA_Share_epSSsbGIzF.png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-1规格化数"><a href="#3-1规格化数" class="headerlink" title="3.1规格化数"></a>3.1规格化数</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_520rTpHmZE.png" alt="NVIDIA_Share_520rTpHmZE.png"></p>
+<ul>
+<li>尾数第一位总是1，因此可以隐藏。多表示一位增加了精度，但可表示的数不会增加。</li>
+<li>尾数为<strong>原码</strong>，指数为<strong>移码</strong></li>
+</ul>
+<h3 id="3-1-1规格化数的范围"><a href="#3-1-1规格化数的范围" class="headerlink" title="3.1.1规格化数的范围"></a>3.1.1规格化数的范围</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_r4zn8tV3XX.png" alt="NVIDIA_Share_r4zn8tV3XX.png"></p>
+<h3 id="3-1-2规格化数的变化"><a href="#3-1-2规格化数的变化" class="headerlink" title="3.1.2规格化数的变化"></a>3.1.2规格化数的变化</h3><ul>
+<li>增加阶码（E）位数：扩大表示范围，降低表示精度</li>
+<li>增加尾数（S）位数：提高表示精度，减少表示范围</li>
+<li>采用更大的底（B）：实现更大的范围，提高/降低表示精度</li>
+</ul>
+<h2 id="3-2非规格化数"><a href="#3-2非规格化数" class="headerlink" title="3.2非规格化数"></a>3.2非规格化数</h2><ul>
+<li>处理<font color="#ff0000">规格化数下溢</font>的情况</li>
+<li>当结果的阶值太小时，通过右移进行非规格化；每次右移阶值增，直到阶值落在可表示范围内<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_IJKCm8FGWX.png" alt="NVIDIA_Share_IJKCm8FGWX.png"></li>
+</ul>
+<h2 id="3-3-IEEE-754标准"><a href="#3-3-IEEE-754标准" class="headerlink" title="3.3 IEEE 754标准"></a>3.3 IEEE 754标准</h2><ul>
+<li>分为32位单精度和32位双精度<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Kx5Jix6JSe.png" alt="NVIDIA_Share_Kx5Jix6JSe.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_eDmDKAt9CZ.png" alt="NVIDIA_Share_eDmDKAt9CZ.png"><br><strong>分类</strong>：</li>
+</ul>
+<ol>
+<li>全0阶码全0尾数：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="7.92ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3500.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1278,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mo" transform="translate(2000.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(3000.4,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></svg></mjx-container></li>
+<li>全0阶码非0尾数：非规格化数<ul>
+<li>单精度指数为-126，双精度指数为-1022</li>
+<li>隐藏位为0</li>
+</ul>
+</li>
+<li>全1阶码全0尾数：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="10.182ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4500.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(778,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1778,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mo" transform="translate(2500.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(3500.4,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg></mjx-container><ul>
+<li>操作数为<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 1000 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg></mjx-container>时运算结果可能为NaN也可能为<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 1000 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg></mjx-container></li>
+</ul>
+</li>
+<li>全1阶码非全0尾数：NaN</li>
+<li>阶码非全0且非全1：规格化数且非0</li>
+</ol>
+<h1 id="4-二进制编码的十进制数表示"><a href="#4-二进制编码的十进制数表示" class="headerlink" title="4.二进制编码的十进制数表示"></a>4.二进制编码的十进制数表示</h1><ul>
+<li>用4位<font color="#ff0000">二进制编码十进制（BCD）</font>表示0，1，…，9。</li>
+<li>**<font color="#ff0000">问题</font>**：4位二进制有16种可能，而0-9只有十个数。运算时如何处理进位问题。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_lEdaUYmBvx.png" alt="NVIDIA_Share_lEdaUYmBvx.png"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>12.17 Linux使用分享</title>
     <url>/posts/cecaafa4/</url>
     <content><![CDATA[<h1 id="1-Linux概述"><a href="#1-Linux概述" class="headerlink" title="1. Linux概述"></a>1. Linux概述</h1><h2 id="1-1-发展历史"><a href="#1-1-发展历史" class="headerlink" title="1.1. 发展历史"></a>1.1. 发展历史</h2><p><strong>Linux</strong>是一种<a class="link" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6">自由和开放源码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E7%B1%BBUnix%E7%B3%BB%E7%BB%9F">类UNIX <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1">操作系统 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。该操作系统的<a class="link" href="https://zh.wikipedia.org/wiki/%E5%86%85%E6%A0%B8">内核 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>由Linus_Torvalds在1991年10月5日首次发布，再加上<a class="link" href="https://zh.wikipedia.org/wiki/%E4%BD%BF%E7%94%A8%E8%80%85%E7%A9%BA%E9%96%93">用户空间 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的<a class="link" href="https://zh.wikipedia.org/wiki/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F">应用程序 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>之后，就成为了Linux操作系统。除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like。</p>
@@ -255,142 +391,6 @@
       <tags>
         <tag>技术分享</tag>
         <tag>Linux使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>02_计算机系统概述</title>
-    <url>/posts/75f7a7d2/</url>
-    <content><![CDATA[<h1 id="1-什么是计算机"><a href="#1-什么是计算机" class="headerlink" title="1.什么是计算机"></a>1.什么是计算机</h1><p><strong>通用电子数字计算机</strong>：</p>
-<ul>
-<li>通用：不是一种专用设备</li>
-<li>电子：非机械，采用电子元件</li>
-<li>数字：非模拟，信息采用数字化的形式表</li>
-</ul>
-<p><strong>计算机系统</strong>：</p>
-<ul>
-<li>软件</li>
-<li>硬件</li>
-</ul>
-<h1 id="2-冯·诺伊曼结构"><a href="#2-冯·诺伊曼结构" class="headerlink" title="2.冯·诺伊曼结构"></a>2.冯·诺伊曼结构</h1><ul>
-<li><p><strong>组成</strong>：运算器、存储器、控制器、输入设备、输出设备</p>
-<ul>
-<li>主存储器：地址和存储的内容</li>
-<li>算术逻辑单元 / 处理单元：执行信息的实际处理</li>
-<li>程序控制单元 / 控制单元：指挥信息的处理</li>
-<li>输入设备：将信息送入计算机中</li>
-<li>输出设备：将处理结果以某种形式显示在计算机外</li>
-</ul>
-</li>
-<li><p><strong>存储程序思想</strong>：</p>
-<ul>
-<li>指令和数据以同等地位存放在存储器内，并可按地址访问</li>
-<li>指令和数据均用二进制表示</li>
-</ul>
-</li>
-<li><p>CPU区分指令和数据的<strong>依据</strong></p>
-<ul>
-<li>指令周期中取指令和取数据是在不同阶段</li>
-<li>指令和数据的存储位置、寻址方式是没有本质区别的</li>
-</ul>
-</li>
-</ul>
-<h1 id="3-计算机性能"><a href="#3-计算机性能" class="headerlink" title="3.计算机性能"></a>3.计算机性能</h1><p><strong>性能评价标准</strong>：</p>
-<ul>
-<li>CPU:速度</li>
-<li>存储器：速度、容量</li>
-<li>I/O:速度、容量<br><font color="#ff0000"><font color="#ff0000">计算机设计的主要目标是：提高CPU性能</font></font></li>
-</ul>
-<h1 id="4-CPU性能"><a href="#4-CPU性能" class="headerlink" title="4.CPU性能"></a>4.CPU性能</h1><h2 id="4-0CPU时间"><a href="#4-0CPU时间" class="headerlink" title="4.0CPU时间"></a>4.0CPU时间</h2><p>CPU用于执行程序的时间，可分为两部分：</p>
-<ul>
-<li>用户CPU时间：真正用于执行用户代码的时间</li>
-<li>系统CPU时间：为了执行用户程序而需要CPU操作系统程序的时间<br>一般<font color="#ff0000">只考虑用户CPU时间</font>，因为系统CPU时间测量不准确</li>
-</ul>
-<h2 id="4-1系统时钟"><a href="#4-1系统时钟" class="headerlink" title="4.1系统时钟"></a>4.1系统时钟</h2><p><strong>时钟频率</strong>:</p>
-<ul>
-<li>时钟速度</li>
-<li>单位：Hz</li>
-<li>计算机在单位时间内（例如1秒钟）执行最基本操作的次数<br><strong>时钟周期</strong>：</li>
-<li>周期时间/时钟滴答</li>
-<li>单位：s</li>
-<li><strong>执行每次最基本操作的时间</strong>。CPU中用于同步执行最基本操作的单个电子脉冲。因此，周期时间即为<strong>两个电子脉冲之间的时间</strong><br><font color="#ff0000">两者互为倒数</font></li>
-</ul>
-<h2 id="4-2指令执行"><a href="#4-2指令执行" class="headerlink" title="4.2指令执行"></a>4.2指令执行</h2><ul>
-<li>CPI(Cycles Per Instruction):一条指令所需的时钟周期</li>
-<li>MIPS(Million Instruction Per Second):平均每秒执行多少百万条指令</li>
-<li>MFLOPS(Million Floating-point Operation Per Second):浮点数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_arAHthsIcb.png" alt="NVIDIA_Share_arAHthsIcb.png"></li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_GO8FiL37LH.png" alt="NVIDIA_Share_GO8FiL37LH.png"></p>
-<h2 id="4-3基准程序"><a href="#4-3基准程序" class="headerlink" title="4.3基准程序"></a>4.3基准程序</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_jqZIiZj9bL.png" alt="NVIDIA_Share_jqZIiZj9bL.png"></p>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构</tag>
-        <tag>课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>03_数据的机器级表示</title>
-    <url>/posts/4480f5fc/</url>
-    <content><![CDATA[<h1 id="1-信息的二进制编码"><a href="#1-信息的二进制编码" class="headerlink" title="1.信息的二进制编码"></a>1.信息的二进制编码</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_kM0hbupCGD.png" alt="NVIDIA_Share_kM0hbupCGD.png"></p>
-<ul>
-<li><strong>编码</strong>：用少量简单的<font color="#ff0000">基本符号</font>对复杂多样的信息进行一定<font color="#ff0000">规律</font>的组合</li>
-<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g></g></g></svg></mjx-container>位的二进制编码至多表示<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.741ex" height="1.914ex" role="img" focusable="false" viewBox="0 -846 1211.6 846"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mi" transform="translate(533,363) scale(0.707)"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g></g></g></g></svg></mjx-container>个不同的值</li>
-</ul>
-<h1 id="2-整数的二进制表示"><a href="#2-整数的二进制表示" class="headerlink" title="2.整数的二进制表示"></a>2.整数的二进制表示</h1><p>原码、反码、移码在进行加法运算时都会造成不必要的硬件需求，因此目前计算机中普遍使用补码。<br><font color="#ff0000">补码</font>可以实现不同符号统一的加减运算，即可以用加法实现减法。</p>
-<h2 id="2-1补码表示"><a href="#2-1补码表示" class="headerlink" title="2.1补码表示"></a>2.1补码表示</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Ru7MCmvL93.png" alt="NVIDIA_Share_Ru7MCmvL93.png"><br><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g></g></g></svg></mjx-container>位补码可以表示<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="15.885ex" height="2.117ex" role="img" focusable="false" viewBox="0 -853.7 7021 935.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="msup" transform="translate(778,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g><g data-mml-node="mo" transform="translate(889,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(1667,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(2167,0)"><path data-c="223C" d="M55 166Q55 241 101 304T222 367Q260 367 296 349T362 304T421 252T484 208T554 189Q616 189 655 236T694 338Q694 350 698 358T708 367Q722 367 722 334Q722 260 677 197T562 134H554Q517 134 481 152T414 196T355 248T292 293T223 311Q179 311 145 286Q109 257 96 218T80 156T69 133Q55 133 55 166Z"></path></g></g></g><g data-mml-node="msup" transform="translate(3443.4,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g><g data-mml-node="mo" transform="translate(521,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(1299,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mo" transform="translate(5520.7,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(6521,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container></p>
-<h2 id="2-2补码的真值"><a href="#2-2补码的真值" class="headerlink" title="2.2补码的真值"></a>2.2补码的真值</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_mFleHVLRCl.png" alt="NVIDIA_Share_mFleHVLRCl.png"></p>
-<h2 id="2-3不同的整数编码"><a href="#2-3不同的整数编码" class="headerlink" title="2.3不同的整数编码"></a>2.3不同的整数编码</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_ncgsju1w2b.png" alt="NVIDIA_Share_ncgsju1w2b.png"></p>
-<h1 id="3-浮点数的二进制表示"><a href="#3-浮点数的二进制表示" class="headerlink" title="3.浮点数的二进制表示"></a>3.浮点数的二进制表示</h1><ul>
-<li><strong>浮点数</strong>：小数点的位置不固定<ul>
-<li>越大的数精度越低，但可表示数的范围比定点数大</li>
-<li>可<font color="#ff0000">表示数的个数不变</font>，k位浮点数可表示的数仍是<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.152ex" height="1.932ex" role="img" focusable="false" viewBox="0 -853.7 951.4 853.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mi" transform="translate(533,363) scale(0.707)"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></g></svg></mjx-container>个（类比插旗，🚩总数不变）<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_epSSsbGIzF.png" alt="NVIDIA_Share_epSSsbGIzF.png"></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-1规格化数"><a href="#3-1规格化数" class="headerlink" title="3.1规格化数"></a>3.1规格化数</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_520rTpHmZE.png" alt="NVIDIA_Share_520rTpHmZE.png"></p>
-<ul>
-<li>尾数第一位总是1，因此可以隐藏。多表示一位增加了精度，但可表示的数不会增加。</li>
-<li>尾数为<strong>原码</strong>，指数为<strong>移码</strong></li>
-</ul>
-<h3 id="3-1-1规格化数的范围"><a href="#3-1-1规格化数的范围" class="headerlink" title="3.1.1规格化数的范围"></a>3.1.1规格化数的范围</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_r4zn8tV3XX.png" alt="NVIDIA_Share_r4zn8tV3XX.png"></p>
-<h3 id="3-1-2规格化数的变化"><a href="#3-1-2规格化数的变化" class="headerlink" title="3.1.2规格化数的变化"></a>3.1.2规格化数的变化</h3><ul>
-<li>增加阶码（E）位数：扩大表示范围，降低表示精度</li>
-<li>增加尾数（S）位数：提高表示精度，减少表示范围</li>
-<li>采用更大的底（B）：实现更大的范围，提高/降低表示精度</li>
-</ul>
-<h2 id="3-2非规格化数"><a href="#3-2非规格化数" class="headerlink" title="3.2非规格化数"></a>3.2非规格化数</h2><ul>
-<li>处理<font color="#ff0000">规格化数下溢</font>的情况</li>
-<li>当结果的阶值太小时，通过右移进行非规格化；每次右移阶值增，直到阶值落在可表示范围内<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_IJKCm8FGWX.png" alt="NVIDIA_Share_IJKCm8FGWX.png"></li>
-</ul>
-<h2 id="3-3-IEEE-754标准"><a href="#3-3-IEEE-754标准" class="headerlink" title="3.3 IEEE 754标准"></a>3.3 IEEE 754标准</h2><ul>
-<li>分为32位单精度和32位双精度<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_Kx5Jix6JSe.png" alt="NVIDIA_Share_Kx5Jix6JSe.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_eDmDKAt9CZ.png" alt="NVIDIA_Share_eDmDKAt9CZ.png"><br><strong>分类</strong>：</li>
-</ul>
-<ol>
-<li>全0阶码全0尾数：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="7.92ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3500.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1278,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mo" transform="translate(2000.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(3000.4,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></svg></mjx-container></li>
-<li>全0阶码非0尾数：非规格化数<ul>
-<li>单精度指数为-126，双精度指数为-1022</li>
-<li>隐藏位为0</li>
-</ul>
-</li>
-<li>全1阶码全0尾数：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="10.182ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4500.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(778,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1778,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mo" transform="translate(2500.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(3500.4,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg></mjx-container><ul>
-<li>操作数为<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 1000 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg></mjx-container>时运算结果可能为NaN也可能为<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 1000 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg></mjx-container></li>
-</ul>
-</li>
-<li>全1阶码非全0尾数：NaN</li>
-<li>阶码非全0且非全1：规格化数且非0</li>
-</ol>
-<h1 id="4-二进制编码的十进制数表示"><a href="#4-二进制编码的十进制数表示" class="headerlink" title="4.二进制编码的十进制数表示"></a>4.二进制编码的十进制数表示</h1><ul>
-<li>用4位<font color="#ff0000">二进制编码十进制（BCD）</font>表示0，1，…，9。</li>
-<li>**<font color="#ff0000">问题</font>**：4位二进制有16种可能，而0-9只有十个数。运算时如何处理进位问题。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/img/NVIDIA_Share_lEdaUYmBvx.png" alt="NVIDIA_Share_lEdaUYmBvx.png"></li>
-</ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
       </tags>
   </entry>
   <entry>
@@ -1275,6 +1275,167 @@
       </tags>
   </entry>
   <entry>
+    <title>11_冗余磁盘阵列(RAID)</title>
+    <url>/posts/b7ba64ea/</url>
+    <content><![CDATA[<ul>
+<li>冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
+<li>基本思想<ul>
+<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
+<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
+<li>采用<strong>数据冗余</strong>来进行错误恢复以提高系统可靠性</li>
+</ul>
+</li>
+<li>特性<ul>
+<li>由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器</li>
+<li>数据是分布在多个物理磁盘上</li>
+<li>冗余磁盘容量用于存储校验信息，保证磁盘万一损坏时能恢复数据</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-RAID分类"><a href="#1-RAID分类" class="headerlink" title="1.RAID分类"></a>1.RAID分类</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png" alt="68_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="2-RAID-0"><a href="#2-RAID-0" class="headerlink" title="2.RAID 0"></a>2.RAID 0</h1><ul>
+<li>数据以<strong>条带</strong>的形式在可用的磁盘上分布<ul>
+<li>Eg：按照0、1、2、3顺序</li>
+</ul>
+</li>
+<li>不采用冗余来改善性能（不是RAID家族中的真正成员）</li>
+</ul>
+<h2 id="2-1-优点"><a href="#2-1-优点" class="headerlink" title="2.1 优点"></a>2.1 优点</h2><ul>
+<li>高数据传输率</li>
+<li>高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘</li>
+</ul>
+<h2 id="2-2-缺点"><a href="#2-2-缺点" class="headerlink" title="2.2 缺点"></a>2.2 缺点</h2><ul>
+<li>任何一个盘损坏文件就不可用</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png" alt="69_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="3-RAID-1"><a href="#3-RAID-1" class="headerlink" title="3.RAID 1"></a>3.RAID 1</h1><ul>
+<li>采用了数据<strong>条带</strong></li>
+<li>采用简单地<strong>备份所有数据</strong>的方法来实现冗余</li>
+</ul>
+<h2 id="3-1-优点"><a href="#3-1-优点" class="headerlink" title="3.1 优点"></a>3.1 优点</h2><ul>
+<li>高速响应I/O请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应<ul>
+<li><strong>读请求</strong>可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个，<strong>更快</strong></li>
+<li><strong>写请求</strong>需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘，<strong>更慢</strong></li>
+</ul>
+</li>
+<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单</li>
+</ul>
+<h2 id="3-2-缺点"><a href="#3-2-缺点" class="headerlink" title="3.2 缺点"></a>3.2 缺点</h2><ul>
+<li>价格昂贵</li>
+</ul>
+<h2 id="3-3-用途"><a href="#3-3-用途" class="headerlink" title="3.3 用途"></a>3.3 用途</h2><ul>
+<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
+</ul>
+<h2 id="3-4-与RAID-0相比"><a href="#3-4-与RAID-0相比" class="headerlink" title="3.4 与RAID 0相比"></a>3.4 与RAID 0相比</h2><ul>
+<li>如果有大批的读请求，则RAID 1能实现高速的I/O速率，性能可以达到RAID 0的两倍</li>
+<li>如果I/O请求有相当大的部分是写请求，则它不比RAID 0的性能好多少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png" alt="6a_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="3-5RAID-01-vs-RAID-10"><a href="#3-5RAID-01-vs-RAID-10" class="headerlink" title="3.5RAID 01 vs. RAID 10"></a>3.5RAID 01 vs. RAID 10</h2><ul>
+<li>RAID 01 = RAID 0+1：先做RAID 0，再做RAID 1</li>
+<li>RAID 10 = RAID 1+0：先做RAID 1，再做RAID 0</li>
+<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的<strong>容错能力</strong><ul>
+<li>RAID 10容错率更高</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png" alt="6b_VoIPSCreencastCoverWnd (2).png"></p>
+<h1 id="4-RAID-2"><a href="#4-RAID-2" class="headerlink" title="4.RAID 2"></a>4.RAID 2</h1><ul>
+<li>采用并行存取技术<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/83dee816dc8e78b2e3bcb2354c8497d6_6c_VoIPSCreencastCoverWnd%20-2-.png" alt="6c_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h2><ul>
+<li><strong>所有</strong>磁盘都参与<strong>每</strong>个I/O请求的执行</li>
+</ul>
+<h2 id="4-2-特点"><a href="#4-2-特点" class="headerlink" title="4.2 特点"></a>4.2 特点</h2><ul>
+<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
+<li>采用<strong>数据条带</strong>：<strong>条带非常小</strong>，经常只有一个字节或一个字</li>
+</ul>
+<h2 id="4-3-纠错"><a href="#4-3-纠错" class="headerlink" title="4.3 纠错"></a>4.3 纠错</h2><p>对位于同一条带的各个数据盘上的数据位<strong>计算校验码（通常采用海明码）</strong>，校验码存储在该条带中多个校验盘的对应位置</p>
+<h2 id="4-4-访问"><a href="#4-4-访问" class="headerlink" title="4.4 访问"></a>4.4 访问</h2><ul>
+<li>读取：获取请求的数据和对应的校验码</li>
+<li>写入：所有数据盘和校验盘都被访问</li>
+</ul>
+<h2 id="4-5-缺点"><a href="#4-5-缺点" class="headerlink" title="4.5 缺点"></a>4.5 缺点</h2><ul>
+<li>冗余盘依然比较多，价格较贵</li>
+<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高 可靠性的情况没有意义</li>
+</ul>
+<h1 id="5-RAID-3"><a href="#5-RAID-3" class="headerlink" title="5.RAID 3"></a>5.RAID 3</h1><ul>
+<li>采用并行存取技术<ul>
+<li>各个驱动器的轴同步旋转</li>
+<li>采用<strong>非常小</strong>的数据条带</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-1-校验"><a href="#5-1-校验" class="headerlink" title="5.1 校验"></a>5.1 校验</h2><ul>
+<li>对所有数据盘上<strong>同一位置</strong>的数据计算奇偶校验码<ul>
+<li>当某一磁盘损坏时，可以用于重构数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f7562ab00bdaf086770ab9ba01f78f12_6d_VoIPSCreencastCoverWnd%20-2-.png" alt="6d_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-优缺点"><a href="#5-2-优缺点" class="headerlink" title="5.2 优缺点"></a>5.2 优缺点</h2><ul>
+<li>优点：能够获得非常高的数据传输率<ul>
+<li>对于大量传送，性能改善特别明显</li>
+</ul>
+</li>
+<li>缺点：一次只能执行一个I/O请求<ul>
+<li>在面向多个IO请求时，性能将受损</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-RAID-4"><a href="#6-RAID-4" class="headerlink" title="6.RAID 4"></a>6.RAID 4</h1><ul>
+<li>采用独立存取技术<ul>
+<li>读可以独立，写无法独立</li>
+<li>每个磁盘成员的操作是独立的，各个I/O请求能够并行处理</li>
+<li>采用相对<strong>较大的数据条带</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-1-校验"><a href="#6-1-校验" class="headerlink" title="6.1 校验"></a>6.1 校验</h2><p>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在<strong>奇偶校验盘</strong>的对应条带上<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/521fcea4b354b9de72e3a4c5ffe926bd_6e_VoIPSCreencastCoverWnd%20-2-.png" alt="6e_VoIPSCreencastCoverWnd (2).png"></p>
+<ul>
+<li>优化修改数据时<strong>重新计算校验码</strong>的读写次数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/39de9d867ee7099a563e4d67ea0e97d2_capture-2023-02-06-11-06-09.jpg" alt="capture-2023-02-06-11-06-09.jpg"></li>
+</ul>
+<h2 id="6-2-性能"><a href="#6-2-性能" class="headerlink" title="6.2 性能"></a>6.2 性能</h2><ul>
+<li>当执行<strong>较小规模</strong>的I/O写请求时，RAID 4会遭遇<strong>写损失</strong><ul>
+<li>对于每一次写操作，阵列管理软件不仅要修改用户数据， 而且要修改相应的校验位</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/13b04dadc923526ad38ea677a3fd5656_6f_VoIPSCreencastCoverWnd%20-2-.png" alt="6f_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+<li>当涉及所有磁盘的数据条带的较大I/O写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
+<li>每一次写操作必须涉及到<strong>唯一的校验盘</strong>，校验盘会成为瓶颈</li>
+</ul>
+<h1 id="7-RAID-5"><a href="#7-RAID-5" class="headerlink" title="7.RAID 5"></a>7.RAID 5</h1><ul>
+<li>与RAID 4 组织方式相似</li>
+<li>在所有磁盘上都分布了奇偶校验条带<ul>
+<li>避免潜在的I/O瓶颈问题</li>
+</ul>
+</li>
+<li>访问时的“两读两写”<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/c4f46bafa944914cebc6c8989ebaf21f_70_VoIPSCreencastCoverWnd%20-2-.png" alt="70_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+<h2 id="7-1-RAID-50"><a href="#7-1-RAID-50" class="headerlink" title="7.1 RAID 50"></a>7.1 RAID 50</h2><ul>
+<li>先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问</li>
+<li>RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效</li>
+<li>RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低</li>
+</ul>
+<h1 id="8-RAID-6"><a href="#8-RAID-6" class="headerlink" title="8.RAID 6"></a>8.RAID 6</h1><ul>
+<li>采用<strong>两种不同的校验码</strong>，并将校验码以分开的块存于不同的磁盘中</li>
+<li>优点<ul>
+<li>提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>写损失:每次写影响到两个校验块<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png" alt="71_VoIPSCreencastCoverWnd (2).png"></li>
+</ul>
+</li>
+</ul>
+<h1 id="9-RAID比较"><a href="#9-RAID比较" class="headerlink" title="9.RAID比较"></a>9.RAID比较</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2d0b20945c49a12772798b2459b890bb_72_VoIPSCreencastCoverWnd%20-2-.png" alt="72_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/927619b8756054d87fa147a66555f92d_73_VoIPSCreencastCoverWnd%20-2-.png" alt="73_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png" alt="74_VoIPSCreencastCoverWnd (2).png"></p>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>12_虚拟存储器</title>
     <url>/posts/7a95209e/</url>
     <content><![CDATA[<h1 id="1-操作系统的出现"><a href="#1-操作系统的出现" class="headerlink" title="1.操作系统的出现"></a>1.操作系统的出现</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/01/31/6d3406bb2a970a4dce05bb9036e66ce1_5b_NVIDIA_GeForce_Overlay_DT.png" alt="5b_NVIDIA_GeForce_Overlay_DT.png"></p>
@@ -1437,167 +1598,6 @@
 <li>优点：程序按段实现共享与保护</li>
 <li>缺点：需要多次查表</li>
 </ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>11_冗余磁盘阵列(RAID)</title>
-    <url>/posts/b7ba64ea/</url>
-    <content><![CDATA[<ul>
-<li>冗余磁盘阵列 / 独立磁盘冗余阵列：Redundant Arrays of Independent Disks (RAID)</li>
-<li>基本思想<ul>
-<li>将多个独立操作的磁盘按某种方式组织成磁盘阵列，以增加容量</li>
-<li>将数据存储在多个盘体上，通过这些盘并行工作来提高数据传输率</li>
-<li>采用<strong>数据冗余</strong>来进行错误恢复以提高系统可靠性</li>
-</ul>
-</li>
-<li>特性<ul>
-<li>由一组物理磁盘驱动器组成，被视为单个的逻辑驱动器</li>
-<li>数据是分布在多个物理磁盘上</li>
-<li>冗余磁盘容量用于存储校验信息，保证磁盘万一损坏时能恢复数据</li>
-</ul>
-</li>
-</ul>
-<h1 id="1-RAID分类"><a href="#1-RAID分类" class="headerlink" title="1.RAID分类"></a>1.RAID分类</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/87e4653208861ea242570d11e7e4233f_68_VoIPSCreencastCoverWnd%20-2-.png" alt="68_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="2-RAID-0"><a href="#2-RAID-0" class="headerlink" title="2.RAID 0"></a>2.RAID 0</h1><ul>
-<li>数据以<strong>条带</strong>的形式在可用的磁盘上分布<ul>
-<li>Eg：按照0、1、2、3顺序</li>
-</ul>
-</li>
-<li>不采用冗余来改善性能（不是RAID家族中的真正成员）</li>
-</ul>
-<h2 id="2-1-优点"><a href="#2-1-优点" class="headerlink" title="2.1 优点"></a>2.1 优点</h2><ul>
-<li>高数据传输率</li>
-<li>高速响应I/O请求：两个I/O请求所需要的数据块可能在不同的磁盘</li>
-</ul>
-<h2 id="2-2-缺点"><a href="#2-2-缺点" class="headerlink" title="2.2 缺点"></a>2.2 缺点</h2><ul>
-<li>任何一个盘损坏文件就不可用</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/cc4bd9bbc260174a4216ee4074ae214e_69_VoIPSCreencastCoverWnd%20-2-.png" alt="69_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="3-RAID-1"><a href="#3-RAID-1" class="headerlink" title="3.RAID 1"></a>3.RAID 1</h1><ul>
-<li>采用了数据<strong>条带</strong></li>
-<li>采用简单地<strong>备份所有数据</strong>的方法来实现冗余</li>
-</ul>
-<h2 id="3-1-优点"><a href="#3-1-优点" class="headerlink" title="3.1 优点"></a>3.1 优点</h2><ul>
-<li>高速响应I/O请求：即便是同一个磁盘上的数据块，也可以由两组硬盘分别响应<ul>
-<li><strong>读请求</strong>可以由包含请求数据的两个对应磁盘中的某一个提供服务，可以选择寻道时间较小的那个，<strong>更快</strong></li>
-<li><strong>写请求</strong>需要更新两个对应的条带：可以并行完成，但受限于写入较慢的磁盘，<strong>更慢</strong></li>
-</ul>
-</li>
-<li>单个磁盘损坏时不会影响数据访问，恢复受损磁盘简单</li>
-</ul>
-<h2 id="3-2-缺点"><a href="#3-2-缺点" class="headerlink" title="3.2 缺点"></a>3.2 缺点</h2><ul>
-<li>价格昂贵</li>
-</ul>
-<h2 id="3-3-用途"><a href="#3-3-用途" class="headerlink" title="3.3 用途"></a>3.3 用途</h2><ul>
-<li>只限于用在存储系统软件、数据和其他关键文件的驱动器中</li>
-</ul>
-<h2 id="3-4-与RAID-0相比"><a href="#3-4-与RAID-0相比" class="headerlink" title="3.4 与RAID 0相比"></a>3.4 与RAID 0相比</h2><ul>
-<li>如果有大批的读请求，则RAID 1能实现高速的I/O速率，性能可以达到RAID 0的两倍</li>
-<li>如果I/O请求有相当大的部分是写请求，则它不比RAID 0的性能好多少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/1797eeb27985b87c4119e3b481de7c33_6a_VoIPSCreencastCoverWnd%20-2-.png" alt="6a_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="3-5RAID-01-vs-RAID-10"><a href="#3-5RAID-01-vs-RAID-10" class="headerlink" title="3.5RAID 01 vs. RAID 10"></a>3.5RAID 01 vs. RAID 10</h2><ul>
-<li>RAID 01 = RAID 0+1：先做RAID 0，再做RAID 1</li>
-<li>RAID 10 = RAID 1+0：先做RAID 1，再做RAID 0</li>
-<li>两者在数据传输率和磁盘利用率上没有明显区别，主要区别是对磁盘损坏的<strong>容错能力</strong><ul>
-<li>RAID 10容错率更高</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/32b5edd92194b0423e9afced26069f4a_6b_VoIPSCreencastCoverWnd%20-2-.png" alt="6b_VoIPSCreencastCoverWnd (2).png"></p>
-<h1 id="4-RAID-2"><a href="#4-RAID-2" class="headerlink" title="4.RAID 2"></a>4.RAID 2</h1><ul>
-<li>采用并行存取技术<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/83dee816dc8e78b2e3bcb2354c8497d6_6c_VoIPSCreencastCoverWnd%20-2-.png" alt="6c_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="4-1-目标"><a href="#4-1-目标" class="headerlink" title="4.1 目标"></a>4.1 目标</h2><ul>
-<li><strong>所有</strong>磁盘都参与<strong>每</strong>个I/O请求的执行</li>
-</ul>
-<h2 id="4-2-特点"><a href="#4-2-特点" class="headerlink" title="4.2 特点"></a>4.2 特点</h2><ul>
-<li>各个驱动器的轴是同步旋转的，因此每个磁盘上的每个磁头在任何时刻都位于同一位置</li>
-<li>采用<strong>数据条带</strong>：<strong>条带非常小</strong>，经常只有一个字节或一个字</li>
-</ul>
-<h2 id="4-3-纠错"><a href="#4-3-纠错" class="headerlink" title="4.3 纠错"></a>4.3 纠错</h2><p>对位于同一条带的各个数据盘上的数据位<strong>计算校验码（通常采用海明码）</strong>，校验码存储在该条带中多个校验盘的对应位置</p>
-<h2 id="4-4-访问"><a href="#4-4-访问" class="headerlink" title="4.4 访问"></a>4.4 访问</h2><ul>
-<li>读取：获取请求的数据和对应的校验码</li>
-<li>写入：所有数据盘和校验盘都被访问</li>
-</ul>
-<h2 id="4-5-缺点"><a href="#4-5-缺点" class="headerlink" title="4.5 缺点"></a>4.5 缺点</h2><ul>
-<li>冗余盘依然比较多，价格较贵</li>
-<li>适用于多磁盘易出错环境，对于单个磁盘和磁盘驱动器已经具备高 可靠性的情况没有意义</li>
-</ul>
-<h1 id="5-RAID-3"><a href="#5-RAID-3" class="headerlink" title="5.RAID 3"></a>5.RAID 3</h1><ul>
-<li>采用并行存取技术<ul>
-<li>各个驱动器的轴同步旋转</li>
-<li>采用<strong>非常小</strong>的数据条带</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-1-校验"><a href="#5-1-校验" class="headerlink" title="5.1 校验"></a>5.1 校验</h2><ul>
-<li>对所有数据盘上<strong>同一位置</strong>的数据计算奇偶校验码<ul>
-<li>当某一磁盘损坏时，可以用于重构数据<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/f7562ab00bdaf086770ab9ba01f78f12_6d_VoIPSCreencastCoverWnd%20-2-.png" alt="6d_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-</ul>
-<h2 id="5-2-优缺点"><a href="#5-2-优缺点" class="headerlink" title="5.2 优缺点"></a>5.2 优缺点</h2><ul>
-<li>优点：能够获得非常高的数据传输率<ul>
-<li>对于大量传送，性能改善特别明显</li>
-</ul>
-</li>
-<li>缺点：一次只能执行一个I/O请求<ul>
-<li>在面向多个IO请求时，性能将受损</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-RAID-4"><a href="#6-RAID-4" class="headerlink" title="6.RAID 4"></a>6.RAID 4</h1><ul>
-<li>采用独立存取技术<ul>
-<li>读可以独立，写无法独立</li>
-<li>每个磁盘成员的操作是独立的，各个I/O请求能够并行处理</li>
-<li>采用相对<strong>较大的数据条带</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="6-1-校验"><a href="#6-1-校验" class="headerlink" title="6.1 校验"></a>6.1 校验</h2><p>根据各个数据盘上的数据来逐位计算奇偶校验条带，奇偶校验位存储在<strong>奇偶校验盘</strong>的对应条带上<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/521fcea4b354b9de72e3a4c5ffe926bd_6e_VoIPSCreencastCoverWnd%20-2-.png" alt="6e_VoIPSCreencastCoverWnd (2).png"></p>
-<ul>
-<li>优化修改数据时<strong>重新计算校验码</strong>的读写次数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/39de9d867ee7099a563e4d67ea0e97d2_capture-2023-02-06-11-06-09.jpg" alt="capture-2023-02-06-11-06-09.jpg"></li>
-</ul>
-<h2 id="6-2-性能"><a href="#6-2-性能" class="headerlink" title="6.2 性能"></a>6.2 性能</h2><ul>
-<li>当执行<strong>较小规模</strong>的I/O写请求时，RAID 4会遭遇<strong>写损失</strong><ul>
-<li>对于每一次写操作，阵列管理软件不仅要修改用户数据， 而且要修改相应的校验位</li>
-<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/13b04dadc923526ad38ea677a3fd5656_6f_VoIPSCreencastCoverWnd%20-2-.png" alt="6f_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-<li>当涉及所有磁盘的数据条带的较大I/O写操作时，只要用新的数据位来进行简单的计算即可得到奇偶校验位</li>
-<li>每一次写操作必须涉及到<strong>唯一的校验盘</strong>，校验盘会成为瓶颈</li>
-</ul>
-<h1 id="7-RAID-5"><a href="#7-RAID-5" class="headerlink" title="7.RAID 5"></a>7.RAID 5</h1><ul>
-<li>与RAID 4 组织方式相似</li>
-<li>在所有磁盘上都分布了奇偶校验条带<ul>
-<li>避免潜在的I/O瓶颈问题</li>
-</ul>
-</li>
-<li>访问时的“两读两写”<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/c4f46bafa944914cebc6c8989ebaf21f_70_VoIPSCreencastCoverWnd%20-2-.png" alt="70_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-<h2 id="7-1-RAID-50"><a href="#7-1-RAID-50" class="headerlink" title="7.1 RAID 50"></a>7.1 RAID 50</h2><ul>
-<li>先作RAID 5，再作RAID 0,也就 是对多组RAID 5彼此构成条带访问</li>
-<li>RAID 50在底层的任一组或多组RAID 5中出现1颗硬盘损坏时，仍能维持运作；如果任一组RAID 5中出现2颗或2颗以上硬盘 损毁，整组RAID 50就会失效</li>
-<li>RAID 50由于在上层把多组RAID 5进行条带化，性能比起单纯的RAID 5高，但容量利用率比RAID5要低</li>
-</ul>
-<h1 id="8-RAID-6"><a href="#8-RAID-6" class="headerlink" title="8.RAID 6"></a>8.RAID 6</h1><ul>
-<li>采用<strong>两种不同的校验码</strong>，并将校验码以分开的块存于不同的磁盘中</li>
-<li>优点<ul>
-<li>提升数据可用性：只有在平均修复时间间隔内3个磁盘都出了故障，才会造成数据丢失</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>写损失:每次写影响到两个校验块<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/81ceda6a5d81fd50326e531d313bac7d_71_VoIPSCreencastCoverWnd%20-2-.png" alt="71_VoIPSCreencastCoverWnd (2).png"></li>
-</ul>
-</li>
-</ul>
-<h1 id="9-RAID比较"><a href="#9-RAID比较" class="headerlink" title="9.RAID比较"></a>9.RAID比较</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/2d0b20945c49a12772798b2459b890bb_72_VoIPSCreencastCoverWnd%20-2-.png" alt="72_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/927619b8756054d87fa147a66555f92d_73_VoIPSCreencastCoverWnd%20-2-.png" alt="73_VoIPSCreencastCoverWnd (2).png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/06/051c92a3b2c43309c2ec65cf9f4d14eb_74_VoIPSCreencastCoverWnd%20-2-.png" alt="74_VoIPSCreencastCoverWnd (2).png"></p>
 ]]></content>
       <categories>
         <category>2022Fall_计算机组织与结构</category>
@@ -4312,6 +4312,284 @@
       </tags>
   </entry>
   <entry>
+    <title>4-实验设计</title>
+    <url>/posts/276b8acd/</url>
+    <content><![CDATA[<h1 id="1-研究假设"><a href="#1-研究假设" class="headerlink" title="1. 研究假设"></a>1. 研究假设</h1><h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><ul>
+<li>实验通常从研究假设开始</li>
+<li>假设类型<ul>
+<li><strong>零假设</strong>Null Hypothesis<ul>
+<li>假设不同实验条件不会产生差异</li>
+</ul>
+</li>
+<li><strong>备择假设</strong><ul>
+<li>存在差异，往往是一个与零假设相反的陈述。</li>
+</ul>
+</li>
+<li>两者应该互斥</li>
+</ul>
+</li>
+<li><font color="#c00000">实验的目标</font>是找到统计学证据来反驳或否定零假设，以支持备择假设</li>
+</ul>
+<p>一个成功的实验，从一个或多个好的假设开始</p>
+<h2 id="1-2-自变量和应变量"><a href="#1-2-自变量和应变量" class="headerlink" title="1.2. 自变量和应变量"></a>1.2. 自变量和应变量</h2><ul>
+<li><p>自变量 Independent Variables</p>
+<ul>
+<li>指的是研究者感兴趣的因素或因变量<strong>变化的可能原因</strong></li>
+<li>实验条件：一个自变量至少需要2个不同取值，这些取值被称为实验条件test conditions</li>
+<li>如：不同技术和设备，不同类型设计</li>
+</ul>
+</li>
+<li><p>因变量 Dependent Variables</p>
+<ul>
+<li>指的是研究者感兴趣的<strong>结果或效果</strong></li>
+<li>如：任务完成事件、速度、准确性、错误率…</li>
+<li><strong>应变量必须明确定义</strong></li>
+</ul>
+</li>
+</ul>
+<p>研究者希望找出自变量的变化是否会引起因变量的变化（<strong>实验必须可复现</strong>）</p>
+<ul>
+<li><p>如何区分</p>
+<ul>
+<li>自变量时实验人员可以控制的实验条件</li>
+<li>因变量时研究者需要测量的实验结果</li>
+</ul>
+</li>
+<li><p>例子：零假设，下拉式菜单和弹出式菜单在定位界面的时间上没有开销差异。</p>
+<ul>
+<li>自变量：菜单类型</li>
+<li>因变量：定位时间</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-实验构成"><a href="#2-实验构成" class="headerlink" title="2. 实验构成"></a>2. 实验构成</h1><ul>
+<li><p><strong>实验条件</strong></p>
+<ul>
+<li>指我们需要比较不同技术、设备和程序</li>
+</ul>
+</li>
+<li><p><strong>实验单位</strong></p>
+<ul>
+<li>指的是我们<strong>应用实验条件的对象</strong></li>
+<li>在人机交互研究领域，通常指具有特定特征的人类受试者。特征指年龄、性别等</li>
+</ul>
+</li>
+<li><p><strong>分配方式</strong></p>
+<ul>
+<li>实验单位分配到不同实验条件的方式</li>
+</ul>
+</li>
+<li><p>例子：</p>
+<ul>
+<li>比较QWERTY键盘和DVORAK键盘打字速度</li>
+<li>假设：没有差异</li>
+<li>实验条件：键盘类型</li>
+<li>自变量：键盘类型</li>
+<li>为了公平，找受试者之前都没有使用这两种键盘的经验</li>
+<li>分配：随机选择</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-实验设计"><a href="#3-实验设计" class="headerlink" title="3. 实验设计"></a>3. 实验设计</h1><ul>
+<li><p>特点:</p>
+<ol>
+<li>至少两种条件或组（实验组，对照组）</li>
+<li>以至少一个可检验的研究假设为基础，并旨在验证他们</li>
+<li>因变量通常<strong>定量</strong>测量</li>
+<li>通过各种统计显著性检验对结果进行分析, 以消除潜在偏差为目标来设计和进行</li>
+<li>具备不同的参与者样本, 在不同的时间，不同的地点，由不同的参与者进行复现</li>
+</ol>
+</li>
+<li><p>注意事项</p>
+<ol>
+<li>需要定义明确的、合理范围内的研究假设</li>
+<li>自变量的数量和值直接决定了实验有多少条件</li>
+<li>需要确定自变量是谁，如何取值？因变量是谁，如何度量？</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-1-减小疲劳和学习影响"><a href="#3-1-减小疲劳和学习影响" class="headerlink" title="3.1. 减小疲劳和学习影响"></a>3.1. 减小疲劳和学习影响</h2><p>假设有4种实验条件“ABCD”和4个测试用户“甲乙丙丁”，如何应 用拉丁方设计实验过程，尽量减小学习和疲劳的影响</p>
+<p>左边有三个都是BC任务连在一起，如果B很累或者BC有学习效应就会对实验数据造成影响。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F02%2F11-28-00-0184dd9e49ffc8ac54f8082059f47c3a-20240102112800-ec64f7.png" alt="image.png"></p>
+<h1 id="4-实验结构"><a href="#4-实验结构" class="headerlink" title="4. 实验结构"></a>4. 实验结构</h1><ul>
+<li>实验中要研究多少自变量？<ul>
+<li>基本设计 or 析因设计</li>
+</ul>
+</li>
+<li>每个自变量有多少个不同的值？<ul>
+<li>条件数 =&gt; 组间设计、组内设计、列区设计</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-49-54-c37836752e3882a28f8f113090983520-20231229104952-d45df8.png" alt="image.png"></p>
+<h1 id="5-组间设计与组内设计"><a href="#5-组间设计与组内设计" class="headerlink" title="5. 组间设计与组内设计"></a>5. 组间设计与组内设计</h1><p>理想情况下组件设计更好，但实际上可能因为用户数量不够选择组内设计。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-52-02-609e737bc6785c764a56a5ad0634a91b-20231229105201-7ebdbc.png" alt="image.png"></p>
+<h2 id="5-1-组间设计"><a href="#5-1-组间设计" class="headerlink" title="5.1. 组间设计"></a>5.1. 组间设计</h2><ul>
+<li><p><strong>每个参与者只暴露在一种实验条件下</strong></p>
+</li>
+<li><p>参与组的数量直接对应于实验条件的数量</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>设计更简洁</li>
+<li>避免学习效应</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>结果受个体差异大</li>
+<li>样本大</li>
+</ul>
+</li>
+</ul>
+<p>对于简单任务，个体差异小，有条件时可以使用组间设计</p>
+<h2 id="5-2-组内设计"><a href="#5-2-组内设计" class="headerlink" title="5.2. 组内设计"></a>5.2. 组内设计</h2><ul>
+<li><p><strong>一个参与者暴露在多个条件下</strong></p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>样本小</li>
+<li>隔离个体差异</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>疲劳问题</li>
+<li>存在学习效应</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-3-选择设计方法"><a href="#5-3-选择设计方法" class="headerlink" title="5.3. 选择设计方法"></a>5.3. 选择设计方法</h2><ul>
+<li><p>组间设计</p>
+<ul>
+<li>任务简单，个体差异有限</li>
+<li>受学习效应影响大</li>
+<li>一些任务不可能使用组内（例：不可能既是新手又是老手）</li>
+</ul>
+</li>
+<li><p>组内设计</p>
+<ul>
+<li>个体差异大的任务，学习效果不容易受到影响的任务</li>
+<li>或目标与群体很小的任务</li>
+<li>需要考虑控制于组内设计相关的学习效果、疲劳和其他潜在问题的负面因素</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-多自变量的实验"><a href="#6-多自变量的实验" class="headerlink" title="6. 多自变量的实验"></a>6. 多自变量的实验</h1><h2 id="6-1-析因设计-Factorial-Design"><a href="#6-1-析因设计-Factorial-Design" class="headerlink" title="6.1. 析因设计 Factorial Design"></a>6.1. 析因设计 Factorial Design</h2><ul>
+<li><strong>优点</strong>：允许在一个实验中研究两个或两个以上自变量之间的相互作用的影响</li>
+<li>相互作用可以被描述为“一个自变量对因变量的不同影响，取决于另一个自变量的特定取值”</li>
+<li>析因设计中条件的数量由自变量的总数和每个自变量的取值决定</li>
+</ul>
+<p>举例：比较使用三种类型键盘(QWERTY键盘、DVORAK键盘和字母键盘)时的打字速度，且调查不同的任务(写作和抄写)对打字速度的影响。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-38-80c0c6ba4faee72ea0da3341882db425-20231229110137-3fd385.png" alt="image.png"></p>
+<p>条件数： <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="5.028ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 2222.4 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(722.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(1722.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></svg></mjx-container></p>
+<h2 id="6-2-裂区设计split-plot-design"><a href="#6-2-裂区设计split-plot-design" class="headerlink" title="6.2. 裂区设计split-plot design"></a>6.2. 裂区设计split-plot design</h2><p>析因研究中的一种设计，既有组间成分，也有组内成分。</p>
+<p>举例：</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-21-71cba743181699807fe45ed3cc184d3f-20231229110120-4709e9.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6-评估之观察用户</title>
+    <url>/posts/907ea608/</url>
+    <content><![CDATA[<h1 id="1-观察用户"><a href="#1-观察用户" class="headerlink" title="1. 观察用户"></a>1. 观察用户</h1><ul>
+<li>观察用户怎样工作是极其重要的可用性方法<ul>
+<li>用户并不总是客观和完整地描述产品的使用情况</li>
+<li>用户可能忽略一些细节</li>
+</ul>
+</li>
+<li>观察法是所有可用性方法中最简单的方法<br>观察高度依赖经验</li>
+</ul>
+<h1 id="2-不同时期观察"><a href="#2-不同时期观察" class="headerlink" title="2. 不同时期观察"></a>2. 不同时期观察</h1><p>初期：理解用户需求<br>开发期：原型<br>后期：评价</p>
+<h1 id="3-观察方式"><a href="#3-观察方式" class="headerlink" title="3. 观察方式"></a>3. 观察方式</h1><ul>
+<li><strong>方法</strong>：<ol>
+<li>真实环境中的观察<ol>
+<li>观察者既是旁观者也是参与者</li>
+</ol>
+</li>
+<li>可控环境观察<ol>
+<li>观察者不能作为参与者</li>
+<li>重点是研究用户执行任务的细节</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-1-实验室观察"><a href="#3-1-实验室观察" class="headerlink" title="3.1. 实验室观察"></a>3.1. 实验室观察</h2><p>在专门为可用性测试而安装配置的固定设备的环境下进行的观察。</p>
+<ul>
+<li>优点<ol>
+<li>提供可控且一致的评估环境，易于分析</li>
+</ol>
+</li>
+<li>缺点<ol>
+<li>可控且一致的评估环境，人为环境不自然，可能降低结论都普遍性和一致性</li>
+<li>不利于观察多人之间的协作</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-2-实地观察"><a href="#3-2-实地观察" class="headerlink" title="3.2. 实地观察"></a>3.2. 实地观察</h2><ul>
+<li>指在用户的实际环境中观察用户在使用软件时的情况<ul>
+<li>是发现同使用环境有关的问题的最佳手段</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-观察框架"><a href="#4-观察框架" class="headerlink" title="4. 观察框架"></a>4. 观察框架</h1><p>减少干扰、完成目标。<br>观察过程发生的事件都非常复杂且变化迅速，观察框架用于组织观察活动和明确观察重点。</p>
+<h2 id="4-1-Goetz-and-Lecomfte框架"><a href="#4-1-Goetz-and-Lecomfte框架" class="headerlink" title="4.1. Goetz and Lecomfte框架"></a>4.1. Goetz and Lecomfte框架</h2><p>关注事件的上下文、涉及的人员和技术。</p>
+<ul>
+<li>人员：哪些人员在场，有何特征，承担什么角色</li>
+<li>行为：人们说了什么，做了什么，举止如何，是否存在规律性的行为，语调和肢体语言如何</li>
+<li>时间：行为何时发生，是否与其他行为想关联</li>
+<li>地点：行为发生于何处？是否受物理条件的影响？</li>
+<li>原因：行为为何发生？事件或交互的促成因素是什么？不同的人是否有不同的看法？</li>
+<li>方式：行为是如何组织的？受哪些规则或标准的影响？</li>
+</ul>
+<h2 id="4-2-Robson框架"><a href="#4-2-Robson框架" class="headerlink" title="4.2. Robson框架"></a>4.2. Robson框架</h2><p>有助于组织观察和数据搜集活动</p>
+<ul>
+<li>空间：物理空间及其布局如何？</li>
+<li>行为者：涉及哪些人员？人员详情？</li>
+<li>活动：行为者的活动及其原因？</li>
+<li>物体：存在哪些实际物体？</li>
+<li>举止：具体成员的举止如何？</li>
+<li>事件：所观察的是不是特定事件的一部分？</li>
+<li>目标：行为者希望达成什么目标？</li>
+<li>感觉：用户组及个别成员的情绪如何？</li>
+</ul>
+<h1 id="5-难题"><a href="#5-难题" class="headerlink" title="5. 难题"></a>5. 难题</h1><p>观察多久</p>
+<p>降低存在感</p>
+<ul>
+<li>在观察时不知道用户在干什么？（能看到现象，但不知道原因）<ul>
+<li>边做边说</li>
+<li>合作评估：两位用户共同合作，以便他们互相讨论、相互帮助</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-观察和访谈相结合"><a href="#6-观察和访谈相结合" class="headerlink" title="6. 观察和访谈相结合"></a>6. 观察和访谈相结合</h1><p>观察：减少用户被监视的感觉</p>
+<p>访谈：在做了一些任务后再问用户问题</p>
+<p><strong>集体访谈</strong>：一次抓好几个人访谈，<strong>焦点小组</strong>（不同背景的人都有）</p>
+<h1 id="7-数据记录"><a href="#7-数据记录" class="headerlink" title="7. 数据记录"></a>7. 数据记录</h1><p>记录行为，不要带入研究人员主观推测。<br>根据实验环境实际条件选择记录方式。</p>
+<ul>
+<li>类型<ul>
+<li>纸笔</li>
+<li>音视频</li>
+<li>日志和交互记录</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5-评估之用户测试</title>
     <url>/posts/cbd5957b/</url>
     <content><![CDATA[<h1 id="1-DECIDE评估框架👍"><a href="#1-DECIDE评估框架👍" class="headerlink" title="1. DECIDE评估框架👍"></a>1. DECIDE评估框架👍</h1><p><strong>步骤</strong>：</p>
@@ -4521,101 +4799,6 @@
       </tags>
   </entry>
   <entry>
-    <title>6-评估之观察用户</title>
-    <url>/posts/907ea608/</url>
-    <content><![CDATA[<h1 id="1-观察用户"><a href="#1-观察用户" class="headerlink" title="1. 观察用户"></a>1. 观察用户</h1><ul>
-<li>观察用户怎样工作是极其重要的可用性方法<ul>
-<li>用户并不总是客观和完整地描述产品的使用情况</li>
-<li>用户可能忽略一些细节</li>
-</ul>
-</li>
-<li>观察法是所有可用性方法中最简单的方法<br>观察高度依赖经验</li>
-</ul>
-<h1 id="2-不同时期观察"><a href="#2-不同时期观察" class="headerlink" title="2. 不同时期观察"></a>2. 不同时期观察</h1><p>初期：理解用户需求<br>开发期：原型<br>后期：评价</p>
-<h1 id="3-观察方式"><a href="#3-观察方式" class="headerlink" title="3. 观察方式"></a>3. 观察方式</h1><ul>
-<li><strong>方法</strong>：<ol>
-<li>真实环境中的观察<ol>
-<li>观察者既是旁观者也是参与者</li>
-</ol>
-</li>
-<li>可控环境观察<ol>
-<li>观察者不能作为参与者</li>
-<li>重点是研究用户执行任务的细节</li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-1-实验室观察"><a href="#3-1-实验室观察" class="headerlink" title="3.1. 实验室观察"></a>3.1. 实验室观察</h2><p>在专门为可用性测试而安装配置的固定设备的环境下进行的观察。</p>
-<ul>
-<li>优点<ol>
-<li>提供可控且一致的评估环境，易于分析</li>
-</ol>
-</li>
-<li>缺点<ol>
-<li>可控且一致的评估环境，人为环境不自然，可能降低结论都普遍性和一致性</li>
-<li>不利于观察多人之间的协作</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-2-实地观察"><a href="#3-2-实地观察" class="headerlink" title="3.2. 实地观察"></a>3.2. 实地观察</h2><ul>
-<li>指在用户的实际环境中观察用户在使用软件时的情况<ul>
-<li>是发现同使用环境有关的问题的最佳手段</li>
-</ul>
-</li>
-</ul>
-<h1 id="4-观察框架"><a href="#4-观察框架" class="headerlink" title="4. 观察框架"></a>4. 观察框架</h1><p>减少干扰、完成目标。<br>观察过程发生的事件都非常复杂且变化迅速，观察框架用于组织观察活动和明确观察重点。</p>
-<h2 id="4-1-Goetz-and-Lecomfte框架"><a href="#4-1-Goetz-and-Lecomfte框架" class="headerlink" title="4.1. Goetz and Lecomfte框架"></a>4.1. Goetz and Lecomfte框架</h2><p>关注事件的上下文、涉及的人员和技术。</p>
-<ul>
-<li>人员：哪些人员在场，有何特征，承担什么角色</li>
-<li>行为：人们说了什么，做了什么，举止如何，是否存在规律性的行为，语调和肢体语言如何</li>
-<li>时间：行为何时发生，是否与其他行为想关联</li>
-<li>地点：行为发生于何处？是否受物理条件的影响？</li>
-<li>原因：行为为何发生？事件或交互的促成因素是什么？不同的人是否有不同的看法？</li>
-<li>方式：行为是如何组织的？受哪些规则或标准的影响？</li>
-</ul>
-<h2 id="4-2-Robson框架"><a href="#4-2-Robson框架" class="headerlink" title="4.2. Robson框架"></a>4.2. Robson框架</h2><p>有助于组织观察和数据搜集活动</p>
-<ul>
-<li>空间：物理空间及其布局如何？</li>
-<li>行为者：涉及哪些人员？人员详情？</li>
-<li>活动：行为者的活动及其原因？</li>
-<li>物体：存在哪些实际物体？</li>
-<li>举止：具体成员的举止如何？</li>
-<li>事件：所观察的是不是特定事件的一部分？</li>
-<li>目标：行为者希望达成什么目标？</li>
-<li>感觉：用户组及个别成员的情绪如何？</li>
-</ul>
-<h1 id="5-难题"><a href="#5-难题" class="headerlink" title="5. 难题"></a>5. 难题</h1><p>观察多久</p>
-<p>降低存在感</p>
-<ul>
-<li>在观察时不知道用户在干什么？（能看到现象，但不知道原因）<ul>
-<li>边做边说</li>
-<li>合作评估：两位用户共同合作，以便他们互相讨论、相互帮助</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-观察和访谈相结合"><a href="#6-观察和访谈相结合" class="headerlink" title="6. 观察和访谈相结合"></a>6. 观察和访谈相结合</h1><p>观察：减少用户被监视的感觉</p>
-<p>访谈：在做了一些任务后再问用户问题</p>
-<p><strong>集体访谈</strong>：一次抓好几个人访谈，<strong>焦点小组</strong>（不同背景的人都有）</p>
-<h1 id="7-数据记录"><a href="#7-数据记录" class="headerlink" title="7. 数据记录"></a>7. 数据记录</h1><p>记录行为，不要带入研究人员主观推测。<br>根据实验环境实际条件选择记录方式。</p>
-<ul>
-<li>类型<ul>
-<li>纸笔</li>
-<li>音视频</li>
-<li>日志和交互记录</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_人机交互</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>7-询问专家和用户</title>
     <url>/posts/a17d59f2/</url>
     <content><![CDATA[<h1 id="1-查询用户-访谈"><a href="#1-查询用户-访谈" class="headerlink" title="1. 查询用户-访谈"></a>1. 查询用户-访谈</h1><p>访谈：有目的的对话过程</p>
@@ -4772,189 +4955,6 @@
 </li>
 </ul>
 <h2 id="4-5-提醒"><a href="#4-5-提醒" class="headerlink" title="4.5. 提醒"></a>4.5. 提醒</h2><p>邀请多个专家，推荐3-5<br>使用用户测试代替启发式评估<br>观察人员可以帮助评估专家，但对用户测试不合适</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_人机交互</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4-实验设计</title>
-    <url>/posts/276b8acd/</url>
-    <content><![CDATA[<h1 id="1-研究假设"><a href="#1-研究假设" class="headerlink" title="1. 研究假设"></a>1. 研究假设</h1><h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><ul>
-<li>实验通常从研究假设开始</li>
-<li>假设类型<ul>
-<li><strong>零假设</strong>Null Hypothesis<ul>
-<li>假设不同实验条件不会产生差异</li>
-</ul>
-</li>
-<li><strong>备择假设</strong><ul>
-<li>存在差异，往往是一个与零假设相反的陈述。</li>
-</ul>
-</li>
-<li>两者应该互斥</li>
-</ul>
-</li>
-<li><font color="#c00000">实验的目标</font>是找到统计学证据来反驳或否定零假设，以支持备择假设</li>
-</ul>
-<p>一个成功的实验，从一个或多个好的假设开始</p>
-<h2 id="1-2-自变量和应变量"><a href="#1-2-自变量和应变量" class="headerlink" title="1.2. 自变量和应变量"></a>1.2. 自变量和应变量</h2><ul>
-<li><p>自变量 Independent Variables</p>
-<ul>
-<li>指的是研究者感兴趣的因素或因变量<strong>变化的可能原因</strong></li>
-<li>实验条件：一个自变量至少需要2个不同取值，这些取值被称为实验条件test conditions</li>
-<li>如：不同技术和设备，不同类型设计</li>
-</ul>
-</li>
-<li><p>因变量 Dependent Variables</p>
-<ul>
-<li>指的是研究者感兴趣的<strong>结果或效果</strong></li>
-<li>如：任务完成事件、速度、准确性、错误率…</li>
-<li><strong>应变量必须明确定义</strong></li>
-</ul>
-</li>
-</ul>
-<p>研究者希望找出自变量的变化是否会引起因变量的变化（<strong>实验必须可复现</strong>）</p>
-<ul>
-<li><p>如何区分</p>
-<ul>
-<li>自变量时实验人员可以控制的实验条件</li>
-<li>因变量时研究者需要测量的实验结果</li>
-</ul>
-</li>
-<li><p>例子：零假设，下拉式菜单和弹出式菜单在定位界面的时间上没有开销差异。</p>
-<ul>
-<li>自变量：菜单类型</li>
-<li>因变量：定位时间</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-实验构成"><a href="#2-实验构成" class="headerlink" title="2. 实验构成"></a>2. 实验构成</h1><ul>
-<li><p><strong>实验条件</strong></p>
-<ul>
-<li>指我们需要比较不同技术、设备和程序</li>
-</ul>
-</li>
-<li><p><strong>实验单位</strong></p>
-<ul>
-<li>指的是我们<strong>应用实验条件的对象</strong></li>
-<li>在人机交互研究领域，通常指具有特定特征的人类受试者。特征指年龄、性别等</li>
-</ul>
-</li>
-<li><p><strong>分配方式</strong></p>
-<ul>
-<li>实验单位分配到不同实验条件的方式</li>
-</ul>
-</li>
-<li><p>例子：</p>
-<ul>
-<li>比较QWERTY键盘和DVORAK键盘打字速度</li>
-<li>假设：没有差异</li>
-<li>实验条件：键盘类型</li>
-<li>自变量：键盘类型</li>
-<li>为了公平，找受试者之前都没有使用这两种键盘的经验</li>
-<li>分配：随机选择</li>
-</ul>
-</li>
-</ul>
-<h1 id="3-实验设计"><a href="#3-实验设计" class="headerlink" title="3. 实验设计"></a>3. 实验设计</h1><ul>
-<li><p>特点:</p>
-<ol>
-<li>至少两种条件或组（实验组，对照组）</li>
-<li>以至少一个可检验的研究假设为基础，并旨在验证他们</li>
-<li>因变量通常<strong>定量</strong>测量</li>
-<li>通过各种统计显著性检验对结果进行分析, 以消除潜在偏差为目标来设计和进行</li>
-<li>具备不同的参与者样本, 在不同的时间，不同的地点，由不同的参与者进行复现</li>
-</ol>
-</li>
-<li><p>注意事项</p>
-<ol>
-<li>需要定义明确的、合理范围内的研究假设</li>
-<li>自变量的数量和值直接决定了实验有多少条件</li>
-<li>需要确定自变量是谁，如何取值？因变量是谁，如何度量？</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-1-减小疲劳和学习影响"><a href="#3-1-减小疲劳和学习影响" class="headerlink" title="3.1. 减小疲劳和学习影响"></a>3.1. 减小疲劳和学习影响</h2><p>假设有4种实验条件“ABCD”和4个测试用户“甲乙丙丁”，如何应 用拉丁方设计实验过程，尽量减小学习和疲劳的影响</p>
-<p>左边有三个都是BC任务连在一起，如果B很累或者BC有学习效应就会对实验数据造成影响。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F01%2F02%2F11-28-00-0184dd9e49ffc8ac54f8082059f47c3a-20240102112800-ec64f7.png" alt="image.png"></p>
-<h1 id="4-实验结构"><a href="#4-实验结构" class="headerlink" title="4. 实验结构"></a>4. 实验结构</h1><ul>
-<li>实验中要研究多少自变量？<ul>
-<li>基本设计 or 析因设计</li>
-</ul>
-</li>
-<li>每个自变量有多少个不同的值？<ul>
-<li>条件数 =&gt; 组间设计、组内设计、列区设计</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-49-54-c37836752e3882a28f8f113090983520-20231229104952-d45df8.png" alt="image.png"></p>
-<h1 id="5-组间设计与组内设计"><a href="#5-组间设计与组内设计" class="headerlink" title="5. 组间设计与组内设计"></a>5. 组间设计与组内设计</h1><p>理想情况下组件设计更好，但实际上可能因为用户数量不够选择组内设计。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F10-52-02-609e737bc6785c764a56a5ad0634a91b-20231229105201-7ebdbc.png" alt="image.png"></p>
-<h2 id="5-1-组间设计"><a href="#5-1-组间设计" class="headerlink" title="5.1. 组间设计"></a>5.1. 组间设计</h2><ul>
-<li><p><strong>每个参与者只暴露在一种实验条件下</strong></p>
-</li>
-<li><p>参与组的数量直接对应于实验条件的数量</p>
-</li>
-<li><p>优点</p>
-<ul>
-<li>设计更简洁</li>
-<li>避免学习效应</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>结果受个体差异大</li>
-<li>样本大</li>
-</ul>
-</li>
-</ul>
-<p>对于简单任务，个体差异小，有条件时可以使用组间设计</p>
-<h2 id="5-2-组内设计"><a href="#5-2-组内设计" class="headerlink" title="5.2. 组内设计"></a>5.2. 组内设计</h2><ul>
-<li><p><strong>一个参与者暴露在多个条件下</strong></p>
-</li>
-<li><p>优点</p>
-<ul>
-<li>样本小</li>
-<li>隔离个体差异</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>疲劳问题</li>
-<li>存在学习效应</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-3-选择设计方法"><a href="#5-3-选择设计方法" class="headerlink" title="5.3. 选择设计方法"></a>5.3. 选择设计方法</h2><ul>
-<li><p>组间设计</p>
-<ul>
-<li>任务简单，个体差异有限</li>
-<li>受学习效应影响大</li>
-<li>一些任务不可能使用组内（例：不可能既是新手又是老手）</li>
-</ul>
-</li>
-<li><p>组内设计</p>
-<ul>
-<li>个体差异大的任务，学习效果不容易受到影响的任务</li>
-<li>或目标与群体很小的任务</li>
-<li>需要考虑控制于组内设计相关的学习效果、疲劳和其他潜在问题的负面因素</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-多自变量的实验"><a href="#6-多自变量的实验" class="headerlink" title="6. 多自变量的实验"></a>6. 多自变量的实验</h1><h2 id="6-1-析因设计-Factorial-Design"><a href="#6-1-析因设计-Factorial-Design" class="headerlink" title="6.1. 析因设计 Factorial Design"></a>6.1. 析因设计 Factorial Design</h2><ul>
-<li><strong>优点</strong>：允许在一个实验中研究两个或两个以上自变量之间的相互作用的影响</li>
-<li>相互作用可以被描述为“一个自变量对因变量的不同影响，取决于另一个自变量的特定取值”</li>
-<li>析因设计中条件的数量由自变量的总数和每个自变量的取值决定</li>
-</ul>
-<p>举例：比较使用三种类型键盘(QWERTY键盘、DVORAK键盘和字母键盘)时的打字速度，且调查不同的任务(写作和抄写)对打字速度的影响。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-38-80c0c6ba4faee72ea0da3341882db425-20231229110137-3fd385.png" alt="image.png"></p>
-<p>条件数： <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="5.028ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 2222.4 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(722.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(1722.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></svg></mjx-container></p>
-<h2 id="6-2-裂区设计split-plot-design"><a href="#6-2-裂区设计split-plot-design" class="headerlink" title="6.2. 裂区设计split-plot design"></a>6.2. 裂区设计split-plot design</h2><p>析因研究中的一种设计，既有组间成分，也有组内成分。</p>
-<p>举例：</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F29%2F11-01-21-71cba743181699807fe45ed3cc184d3f-20231229110120-4709e9.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2023_Fall_人机交互</category>
@@ -7097,6 +7097,163 @@
       </tags>
   </entry>
   <entry>
+    <title>5-Spring Data MongoDB、Redis</title>
+    <url>/posts/c56b76c9/</url>
+    <content><![CDATA[<h1 id="1-MongoDB"><a href="#1-MongoDB" class="headerlink" title="1. MongoDB"></a>1. MongoDB</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1. 介绍"></a>1.1. 介绍</h2><p>文档数据库，存储类Json文件。<br>可以分布式存储。</p>
+<table>
+<thead>
+<tr>
+<th>SQL</th>
+<th>MongoDB</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>database</td>
+<td>database</td>
+<td>数据库</td>
+</tr>
+<tr>
+<td>table</td>
+<td>collection</td>
+<td>数据库表/集合</td>
+</tr>
+<tr>
+<td>row</td>
+<td>document</td>
+<td>数据库记录行/文档</td>
+</tr>
+<tr>
+<td>column</td>
+<td>field</td>
+<td>数据字段/域</td>
+</tr>
+</tbody></table>
+<p>数据库document可以直接包含子document（在关系型数据库中只能创建子表），不同的document包含字段可能不一样。</p>
+<h2 id="1-2-使用"><a href="#1-2-使用" class="headerlink" title="1.2. 使用"></a>1.2. 使用</h2><ul>
+<li>Id为String，mongoDB会自动生成</li>
+<li>可以使用mongdb-shell交互</li>
+</ul>
+<h2 id="1-3-👍Spring-Data-MongoDB"><a href="#1-3-👍Spring-Data-MongoDB" class="headerlink" title="1.3. 👍Spring Data MongoDB"></a>1.3. 👍Spring Data MongoDB</h2><p>业务代码不需要修改</p>
+<h3 id="1-3-1-定义存储库"><a href="#1-3-1-定义存储库" class="headerlink" title="1.3.1. 定义存储库"></a>1.3.1. 定义存储库</h3><p>继承<code>CrudRepository&lt;&gt;</code>接口</p>
+<h3 id="1-3-2-领域类"><a href="#1-3-2-领域类" class="headerlink" title="1.3.2. 领域类"></a>1.3.2. 领域类</h3><ol>
+<li>领域类加<code>@Document</code><ul>
+<li>Collection默认名：类名，第一个字母改成小写</li>
+</ul>
+</li>
+<li>Id字段加<code>@Id</code>，需要定义为<strong>String</strong>类型<ul>
+<li>因为String类型MongoDB可以自动创建并唯一赋值</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><font color="#ff0000">和关系型数据库主要区别</font><ol>
+<li>List，可以把原来关系型数据库的子表放到同一个Collection里。document可以直接包含子document。</li>
+<li>可能会导致重复存储，但可以通过加索引等方法解决</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-4-在Spring中配置"><a href="#1-4-在Spring中配置" class="headerlink" title="1.4. 在Spring中配置"></a>1.4. 在Spring中配置</h2><p>在Appication配置文件中指定</p>
+<p><code>spring.data.mongodb.url=&lt;url&gt;</code></p>
+<h2 id="1-5-性能对比"><a href="#1-5-性能对比" class="headerlink" title="1.5. 性能对比"></a>1.5. 性能对比</h2><ul>
+<li>批量插入数据<ul>
+<li>直接从client插入</li>
+<li>Spring Data Mongodb插入</li>
+</ul>
+</li>
+</ul>
+<p>Spring插入时会自动创建一个<code>_class</code>字段</p>
+<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-👍介绍"><a href="#2-1-👍介绍" class="headerlink" title="2.1. 👍介绍"></a>2.1. 👍介绍</h2><ul>
+<li>分布式存储</li>
+<li>内存数据库，存在内存里，常用于作<strong>缓存</strong></li>
+<li>可以持久化，但不太重要，不是主要用途</li>
+<li>可以集群式部署<ul>
+<li><font color="#c00000">主从复制</font>，主机写，从机并发读</li>
+</ul>
+</li>
+<li><font color="#c00000">key-value的Hash表结构，区分大小写</font></li>
+</ul>
+<h2 id="2-2-Redis命令"><a href="#2-2-Redis命令" class="headerlink" title="2.2. Redis命令"></a>2.2. Redis命令</h2><p>可以设置key的存活时长<br>默认创建16个数据库</p>
+<p>flushdb：deletes the keys in a database<br>flushall：deletes all keys in all databases</p>
+<h2 id="2-3-👍Redis数据类型"><a href="#2-3-👍Redis数据类型" class="headerlink" title="2.3. 👍Redis数据类型"></a>2.3. 👍Redis数据类型</h2><p>指的是<strong>value类型</strong></p>
+<ol>
+<li>String</li>
+<li>List</li>
+<li>Hash</li>
+<li>Set</li>
+<li>……</li>
+</ol>
+<p>在cilent内：<br><code>type</code>查看value类型<br><code>lrang mylist 0 -1</code>：查看list内容<br><code>lpush</code>,<code>rpush</code>插入数据<br><code>sadd mysqet 1 2 3 4</code>：add set<br><code>smember myset</code>：查看set内容</p>
+<h2 id="2-4-Redis客户端"><a href="#2-4-Redis客户端" class="headerlink" title="2.4. Redis客户端"></a>2.4. Redis客户端</h2><ul>
+<li>Jedis：早期Spring集成</li>
+<li>Lettuce：目前Spring采用的客户端</li>
+</ul>
+<h2 id="2-5-Spring-Data-Redis"><a href="#2-5-Spring-Data-Redis" class="headerlink" title="2.5. Spring Data Redis"></a>2.5. Spring Data Redis</h2><ul>
+<li><p><strong>RedisConnectionFactory接口</strong></p>
+<ul>
+<li>Spring Boot会自动创建，直接注入即可。</li>
+<li>连接需要提供Redis Server的地址、端口、用户和密码等信息<ul>
+<li>这些信息在Application文件配置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>通过<code>RedisTemplate</code>模板对象访问Redis</strong></p>
+<ul>
+<li>RedisTemplate&lt;Key,Value&gt;</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> RedisTemplate&lt;String, Product&gt; <span class="title function_">redisTemplate</span><span class="params">(RedisConnectionFactory cf)</span>{</span><br><span class="line">	RedisTemplate&lt;String,Product&gt; redis = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>();</span><br><span class="line">	redis.setFactory(cf);</span><br><span class="line">	<span class="keyword">return</span> redis;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>RedisTemplate的子API: 对应不同的value类型<ul>
+<li>使用简单的值： opForValue()</li>
+<li>lIst类型的值：opForList()<ul>
+<li>rigjtPush, leftPop(), range</li>
+</ul>
+</li>
+<li>Set上的操作: opForSet()<ul>
+<li>add, union,</li>
+</ul>
+</li>
+<li>绑定到某个key上<ul>
+<li>BoudListOperations绑定key，不需要每个操作都写一遍</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BoudListOperations</span> <span class="variable">cart</span> <span class="operator">=</span> redisTemplate.boundListOp(<span class="string">''</span>cart<span class="string">")</span></span><br></pre></td></tr></table></figure></div>
+
+<p><a class="link" href="https://potoyang.gitbook.io/spring-in-action-v4/untitled-6/untitled-1/12.3.2-shi-yong-redis-template">12.3.2　使用 Redis Template - Spring 实战(第四版) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="2-6-👍序列化"><a href="#2-6-👍序列化" class="headerlink" title="2.6. 👍序列化"></a>2.6. 👍序列化</h2><p><font color="#c00000">mongodb没有这个要求，因为它会把所有值都转成json串</font>。<br>redis默认使用JDK序列化，但JSON序列化更常用。</p>
+<h3 id="2-6-1-JDK序列化"><a href="#2-6-1-JDK序列化" class="headerlink" title="2.6.1. JDK序列化"></a>2.6.1. JDK序列化</h3><ul>
+<li>存储java对象需要序列化<ul>
+<li>即持久化</li>
+</ul>
+</li>
+<li><strong>必须需要实现<code>Serializable</code>接口</strong></li>
+<li>把java对象通过key-value读出来，反序列化</li>
+</ul>
+<p>做得很失败，性能也不好</p>
+<h3 id="2-6-2-JSON序列化"><a href="#2-6-2-JSON序列化" class="headerlink" title="2.6.2. JSON序列化"></a>2.6.2. JSON序列化</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">redis.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>())</span><br><span class="line">redis.setVAlueSerializer(<span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;Product.class&gt;)</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>Key比较简单，可以直接用String序列化</li>
+<li>指定Value使用<code>Jackson2JsonRedisSerializer</code>进行序列化</li>
+</ol>
+<p>对数据存取操作的代码没有影响。<br><font color="#c00000">可读性更好。 </font><br>直接使用<strong>RedisTemplate</strong>获取的Value会经过反序列化，仍然为Java对象<br>如果想要获取String，可以使用<strong>StringRedisTemplate</strong>读取Value。</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>4-Spring Data JDBC、JPA</title>
     <url>/posts/12184527/</url>
     <content><![CDATA[<h1 id="1-👍数据库访问层的开发"><a href="#1-👍数据库访问层的开发" class="headerlink" title="1. 👍数据库访问层的开发"></a>1. 👍数据库访问层的开发</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F14-28-47-548c2ef0125be168f0ca3fc94bf0437e-20231231142846-73f243.png" alt="image.png"></p>
@@ -7311,163 +7468,6 @@
         <tag>2023_Fall_服务端开发</tag>
         <tag>关系型数据库</tag>
         <tag>Spring_Data</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>5-Spring Data MongoDB、Redis</title>
-    <url>/posts/c56b76c9/</url>
-    <content><![CDATA[<h1 id="1-MongoDB"><a href="#1-MongoDB" class="headerlink" title="1. MongoDB"></a>1. MongoDB</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1. 介绍"></a>1.1. 介绍</h2><p>文档数据库，存储类Json文件。<br>可以分布式存储。</p>
-<table>
-<thead>
-<tr>
-<th>SQL</th>
-<th>MongoDB</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>database</td>
-<td>database</td>
-<td>数据库</td>
-</tr>
-<tr>
-<td>table</td>
-<td>collection</td>
-<td>数据库表/集合</td>
-</tr>
-<tr>
-<td>row</td>
-<td>document</td>
-<td>数据库记录行/文档</td>
-</tr>
-<tr>
-<td>column</td>
-<td>field</td>
-<td>数据字段/域</td>
-</tr>
-</tbody></table>
-<p>数据库document可以直接包含子document（在关系型数据库中只能创建子表），不同的document包含字段可能不一样。</p>
-<h2 id="1-2-使用"><a href="#1-2-使用" class="headerlink" title="1.2. 使用"></a>1.2. 使用</h2><ul>
-<li>Id为String，mongoDB会自动生成</li>
-<li>可以使用mongdb-shell交互</li>
-</ul>
-<h2 id="1-3-👍Spring-Data-MongoDB"><a href="#1-3-👍Spring-Data-MongoDB" class="headerlink" title="1.3. 👍Spring Data MongoDB"></a>1.3. 👍Spring Data MongoDB</h2><p>业务代码不需要修改</p>
-<h3 id="1-3-1-定义存储库"><a href="#1-3-1-定义存储库" class="headerlink" title="1.3.1. 定义存储库"></a>1.3.1. 定义存储库</h3><p>继承<code>CrudRepository&lt;&gt;</code>接口</p>
-<h3 id="1-3-2-领域类"><a href="#1-3-2-领域类" class="headerlink" title="1.3.2. 领域类"></a>1.3.2. 领域类</h3><ol>
-<li>领域类加<code>@Document</code><ul>
-<li>Collection默认名：类名，第一个字母改成小写</li>
-</ul>
-</li>
-<li>Id字段加<code>@Id</code>，需要定义为<strong>String</strong>类型<ul>
-<li>因为String类型MongoDB可以自动创建并唯一赋值</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><font color="#ff0000">和关系型数据库主要区别</font><ol>
-<li>List，可以把原来关系型数据库的子表放到同一个Collection里。document可以直接包含子document。</li>
-<li>可能会导致重复存储，但可以通过加索引等方法解决</li>
-</ol>
-</li>
-</ul>
-<h2 id="1-4-在Spring中配置"><a href="#1-4-在Spring中配置" class="headerlink" title="1.4. 在Spring中配置"></a>1.4. 在Spring中配置</h2><p>在Appication配置文件中指定</p>
-<p><code>spring.data.mongodb.url=&lt;url&gt;</code></p>
-<h2 id="1-5-性能对比"><a href="#1-5-性能对比" class="headerlink" title="1.5. 性能对比"></a>1.5. 性能对比</h2><ul>
-<li>批量插入数据<ul>
-<li>直接从client插入</li>
-<li>Spring Data Mongodb插入</li>
-</ul>
-</li>
-</ul>
-<p>Spring插入时会自动创建一个<code>_class</code>字段</p>
-<h1 id="2-Redis"><a href="#2-Redis" class="headerlink" title="2. Redis"></a>2. Redis</h1><h2 id="2-1-👍介绍"><a href="#2-1-👍介绍" class="headerlink" title="2.1. 👍介绍"></a>2.1. 👍介绍</h2><ul>
-<li>分布式存储</li>
-<li>内存数据库，存在内存里，常用于作<strong>缓存</strong></li>
-<li>可以持久化，但不太重要，不是主要用途</li>
-<li>可以集群式部署<ul>
-<li><font color="#c00000">主从复制</font>，主机写，从机并发读</li>
-</ul>
-</li>
-<li><font color="#c00000">key-value的Hash表结构，区分大小写</font></li>
-</ul>
-<h2 id="2-2-Redis命令"><a href="#2-2-Redis命令" class="headerlink" title="2.2. Redis命令"></a>2.2. Redis命令</h2><p>可以设置key的存活时长<br>默认创建16个数据库</p>
-<p>flushdb：deletes the keys in a database<br>flushall：deletes all keys in all databases</p>
-<h2 id="2-3-👍Redis数据类型"><a href="#2-3-👍Redis数据类型" class="headerlink" title="2.3. 👍Redis数据类型"></a>2.3. 👍Redis数据类型</h2><p>指的是<strong>value类型</strong></p>
-<ol>
-<li>String</li>
-<li>List</li>
-<li>Hash</li>
-<li>Set</li>
-<li>……</li>
-</ol>
-<p>在cilent内：<br><code>type</code>查看value类型<br><code>lrang mylist 0 -1</code>：查看list内容<br><code>lpush</code>,<code>rpush</code>插入数据<br><code>sadd mysqet 1 2 3 4</code>：add set<br><code>smember myset</code>：查看set内容</p>
-<h2 id="2-4-Redis客户端"><a href="#2-4-Redis客户端" class="headerlink" title="2.4. Redis客户端"></a>2.4. Redis客户端</h2><ul>
-<li>Jedis：早期Spring集成</li>
-<li>Lettuce：目前Spring采用的客户端</li>
-</ul>
-<h2 id="2-5-Spring-Data-Redis"><a href="#2-5-Spring-Data-Redis" class="headerlink" title="2.5. Spring Data Redis"></a>2.5. Spring Data Redis</h2><ul>
-<li><p><strong>RedisConnectionFactory接口</strong></p>
-<ul>
-<li>Spring Boot会自动创建，直接注入即可。</li>
-<li>连接需要提供Redis Server的地址、端口、用户和密码等信息<ul>
-<li>这些信息在Application文件配置</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>通过<code>RedisTemplate</code>模板对象访问Redis</strong></p>
-<ul>
-<li>RedisTemplate&lt;Key,Value&gt;</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> RedisTemplate&lt;String, Product&gt; <span class="title function_">redisTemplate</span><span class="params">(RedisConnectionFactory cf)</span>{</span><br><span class="line">	RedisTemplate&lt;String,Product&gt; redis = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>();</span><br><span class="line">	redis.setFactory(cf);</span><br><span class="line">	<span class="keyword">return</span> redis;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li>RedisTemplate的子API: 对应不同的value类型<ul>
-<li>使用简单的值： opForValue()</li>
-<li>lIst类型的值：opForList()<ul>
-<li>rigjtPush, leftPop(), range</li>
-</ul>
-</li>
-<li>Set上的操作: opForSet()<ul>
-<li>add, union,</li>
-</ul>
-</li>
-<li>绑定到某个key上<ul>
-<li>BoudListOperations绑定key，不需要每个操作都写一遍</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BoudListOperations</span> <span class="variable">cart</span> <span class="operator">=</span> redisTemplate.boundListOp(<span class="string">''</span>cart<span class="string">")</span></span><br></pre></td></tr></table></figure></div>
-
-<p><a class="link" href="https://potoyang.gitbook.io/spring-in-action-v4/untitled-6/untitled-1/12.3.2-shi-yong-redis-template">12.3.2　使用 Redis Template - Spring 实战(第四版) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="2-6-👍序列化"><a href="#2-6-👍序列化" class="headerlink" title="2.6. 👍序列化"></a>2.6. 👍序列化</h2><p><font color="#c00000">mongodb没有这个要求，因为它会把所有值都转成json串</font>。<br>redis默认使用JDK序列化，但JSON序列化更常用。</p>
-<h3 id="2-6-1-JDK序列化"><a href="#2-6-1-JDK序列化" class="headerlink" title="2.6.1. JDK序列化"></a>2.6.1. JDK序列化</h3><ul>
-<li>存储java对象需要序列化<ul>
-<li>即持久化</li>
-</ul>
-</li>
-<li><strong>必须需要实现<code>Serializable</code>接口</strong></li>
-<li>把java对象通过key-value读出来，反序列化</li>
-</ul>
-<p>做得很失败，性能也不好</p>
-<h3 id="2-6-2-JSON序列化"><a href="#2-6-2-JSON序列化" class="headerlink" title="2.6.2. JSON序列化"></a>2.6.2. JSON序列化</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">redis.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>())</span><br><span class="line">redis.setVAlueSerializer(<span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;Product.class&gt;)</span><br></pre></td></tr></table></figure></div>
-
-<ol>
-<li>Key比较简单，可以直接用String序列化</li>
-<li>指定Value使用<code>Jackson2JsonRedisSerializer</code>进行序列化</li>
-</ol>
-<p>对数据存取操作的代码没有影响。<br><font color="#c00000">可读性更好。 </font><br>直接使用<strong>RedisTemplate</strong>获取的Value会经过反序列化，仍然为Java对象<br>如果想要获取String，可以使用<strong>StringRedisTemplate</strong>读取Value。</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -11644,6 +11644,105 @@
 ]]></content>
   </entry>
   <entry>
+    <title>01_编译原理概述</title>
+    <url>/posts/72bcb781/</url>
+    <content><![CDATA[<h1 id="1-历史"><a href="#1-历史" class="headerlink" title="1. 历史"></a>1. 历史</h1><p>Donald E.Knuth </p>
+<ul>
+<li>算法分析之父</li>
+<li>the Art of Computer Programming</li>
+<li>Tex<ul>
+<li>后来出现LaTex (Lamport Tex)在Tex的基础上增加了宏包的支持</li>
+</ul>
+</li>
+<li>LR Parser语法分析算法</li>
+<li>Attribute Grammer属性文法 语义分析</li>
+</ul>
+<h1 id="2-编译器"><a href="#2-编译器" class="headerlink" title="2. 编译器"></a>2. 编译器</h1><ul>
+<li>工作：高级语言=&gt;低级语言（如，汇编语言）</li>
+<li>注意：汇编语言经过<strong>汇编器</strong>变成机器语言<br>![A][<a class="link" href="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-01%2020-35-54.png]">https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-01%2020-35-54.png] <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>机器语言是如何跑起来的？<br><a class="link" href="https://www.bilibili.com/video/BV1EW411u7th/?spm_id_from=333.337.search-card.all.click">【计算机科学速成课】[40集全/精校] - Crash Course Computer Science_哔哩哔哩_bilibili <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<h2 id="2-1-名词"><a href="#2-1-名词" class="headerlink" title="2.1. 名词"></a>2.1. 名词</h2><ul>
+<li>LR Parser (语法)</li>
+<li>Attribute Grammar (语义)</li>
+<li>IR: Intermediate Representation (中间表示)</li>
+</ul>
+<h1 id="3-语言类的应用程序"><a href="#3-语言类的应用程序" class="headerlink" title="3. 语言类的应用程序"></a>3. 语言类的应用程序</h1><ol>
+<li>配置文件</li>
+<li>CSV</li>
+<li>JSON</li>
+<li>SQL引擎</li>
+<li>TLA+/TLAPS （数学逻辑）</li>
+<li>（java）字节码解释器</li>
+<li>C/C++解释器</li>
+<li>排版工具Latex</li>
+<li>绘图工具TikZ</li>
+<li>L-System</li>
+</ol>
+<h1 id="4-编译系统结构"><a href="#4-编译系统结构" class="headerlink" title="4. 编译系统结构"></a>4. 编译系统结构</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/15/8e7b8c9abd387a8cf5f9abdab33bc3c8_1676446801.png" alt="1676446801.png"></p>
+<ul>
+<li>前端 (分析阶段): 分析源语言程序, 收集所有必要的信息</li>
+<li>中端：<strong>中间表示IR</strong><ul>
+<li>加一层兼容层，减少工作量</li>
+<li>方便前端后端协作</li>
+<li>优化中间语言（与后端优化无关）</li>
+<li><strong>机器无关</strong>的中间表示优化</li>
+</ul>
+</li>
+<li>后端(综合阶段)：和特定的硬件平台有关</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/01/b836e4b293f39d80d66bb3e8bce10ebf_NVIDIA_Share_1152_559.png" alt="NVIDIA_Share_1152_559.png"></p>
+<ul>
+<li>Clang: a C language family frontend for LLVM<ul>
+<li> / klæŋ/</li>
+</ul>
+</li>
+<li>在设计实际生产环境中的编译器时, <strong>优化</strong>通常占用了大多数时间</li>
+<li>代码在编译器视角都是<strong>字符串</strong></li>
+</ul>
+<h2 id="4-1-具体组成"><a href="#4-1-具体组成" class="headerlink" title="4.1. 具体组成"></a>4.1. 具体组成</h2><h3 id="4-1-1-词法分析器-Lexer-Scanner"><a href="#4-1-1-词法分析器-Lexer-Scanner" class="headerlink" title="4.1.1. 词法分析器 (Lexer/Scanner)"></a>4.1.1. 词法分析器 (Lexer/Scanner)</h3><ul>
+<li>词法分析器 (Lexer/Scanner): 将字符流转化为<strong>词法单元 (token) 流</strong></li>
+<li><code>token: &lt;token-class,attribute-value&gt;</code></li>
+</ul>
+<h3 id="4-1-2-语法分析器-Parser"><a href="#4-1-2-语法分析器-Parser" class="headerlink" title="4.1.2. 语法分析器 (Parser)"></a>4.1.2. 语法分析器 (Parser)</h3><ul>
+<li>语法分析器 (Parser): 构建词法单元之间的语法结构, 生成<strong>语法树</strong></li>
+</ul>
+<h3 id="4-1-3-语义分析器"><a href="#4-1-3-语义分析器" class="headerlink" title="4.1.3. 语义分析器"></a>4.1.3. 语义分析器</h3><ul>
+<li>语义分析器: 语义检查, 如类型检查、“先声明后使用” 约束检查<ul>
+<li>通过遍历语法树完成</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-1-4-中间代码生成器"><a href="#4-1-4-中间代码生成器" class="headerlink" title="4.1.4. 中间代码生成器"></a>4.1.4. 中间代码生成器</h3><ul>
+<li>中间代码生成器: 生成中间代码, 如 “三地址代码”<ul>
+<li>与硬件无关</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-1-5-中间代码优化器"><a href="#4-1-5-中间代码优化器" class="headerlink" title="4.1.5. 中间代码优化器"></a>4.1.5. 中间代码优化器</h3><ul>
+<li>中间代码优化器</li>
+</ul>
+<h3 id="4-1-6-代码生成器"><a href="#4-1-6-代码生成器" class="headerlink" title="4.1.6. 代码生成器"></a>4.1.6. 代码生成器</h3><ul>
+<li>代码生成器: 生成目标代码, 主要任务包括<strong>指令选择、寄存器分配</strong></li>
+</ul>
+<h3 id="4-1-7-符号表"><a href="#4-1-7-符号表" class="headerlink" title="4.1.7. 符号表"></a>4.1.7. 符号表</h3><ul>
+<li>符号表: 收集并管理<strong>变量名/函数名</strong>相关的信息<ul>
+<li>变量名：类型、寄存器、内存地址、行号</li>
+<li>函数名：参数个数、参数类型、返回值类型</li>
+</ul>
+</li>
+<li>为了方便表达嵌套结构与作用域, 可能需要维护多个符号表</li>
+</ul>
+<h2 id="4-2-过程"><a href="#4-2-过程" class="headerlink" title="4.2. 过程"></a>4.2. 过程</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/01/d2b65110e3b3d244508f4c30e8e977c7_NVIDIA_Share_548_691.png" alt="NVIDIA_Share_548_691.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Spring_编译原理</category>
+      </categories>
+      <tags>
+        <tag>2023_Spring编译原理  课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>需求部分复习</title>
     <url>/posts/e27123b2/</url>
     <content><![CDATA[<ul>
@@ -11933,105 +12032,6 @@
       <tags>
         <tag>课程</tag>
         <tag>2023_Fall_需求与商业模式创新</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>01_编译原理概述</title>
-    <url>/posts/72bcb781/</url>
-    <content><![CDATA[<h1 id="1-历史"><a href="#1-历史" class="headerlink" title="1. 历史"></a>1. 历史</h1><p>Donald E.Knuth </p>
-<ul>
-<li>算法分析之父</li>
-<li>the Art of Computer Programming</li>
-<li>Tex<ul>
-<li>后来出现LaTex (Lamport Tex)在Tex的基础上增加了宏包的支持</li>
-</ul>
-</li>
-<li>LR Parser语法分析算法</li>
-<li>Attribute Grammer属性文法 语义分析</li>
-</ul>
-<h1 id="2-编译器"><a href="#2-编译器" class="headerlink" title="2. 编译器"></a>2. 编译器</h1><ul>
-<li>工作：高级语言=&gt;低级语言（如，汇编语言）</li>
-<li>注意：汇编语言经过<strong>汇编器</strong>变成机器语言<br>![A][<a class="link" href="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-01%2020-35-54.png]">https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-01%2020-35-54.png] <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>机器语言是如何跑起来的？<br><a class="link" href="https://www.bilibili.com/video/BV1EW411u7th/?spm_id_from=333.337.search-card.all.click">【计算机科学速成课】[40集全/精校] - Crash Course Computer Science_哔哩哔哩_bilibili <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-<h2 id="2-1-名词"><a href="#2-1-名词" class="headerlink" title="2.1. 名词"></a>2.1. 名词</h2><ul>
-<li>LR Parser (语法)</li>
-<li>Attribute Grammar (语义)</li>
-<li>IR: Intermediate Representation (中间表示)</li>
-</ul>
-<h1 id="3-语言类的应用程序"><a href="#3-语言类的应用程序" class="headerlink" title="3. 语言类的应用程序"></a>3. 语言类的应用程序</h1><ol>
-<li>配置文件</li>
-<li>CSV</li>
-<li>JSON</li>
-<li>SQL引擎</li>
-<li>TLA+/TLAPS （数学逻辑）</li>
-<li>（java）字节码解释器</li>
-<li>C/C++解释器</li>
-<li>排版工具Latex</li>
-<li>绘图工具TikZ</li>
-<li>L-System</li>
-</ol>
-<h1 id="4-编译系统结构"><a href="#4-编译系统结构" class="headerlink" title="4. 编译系统结构"></a>4. 编译系统结构</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/15/8e7b8c9abd387a8cf5f9abdab33bc3c8_1676446801.png" alt="1676446801.png"></p>
-<ul>
-<li>前端 (分析阶段): 分析源语言程序, 收集所有必要的信息</li>
-<li>中端：<strong>中间表示IR</strong><ul>
-<li>加一层兼容层，减少工作量</li>
-<li>方便前端后端协作</li>
-<li>优化中间语言（与后端优化无关）</li>
-<li><strong>机器无关</strong>的中间表示优化</li>
-</ul>
-</li>
-<li>后端(综合阶段)：和特定的硬件平台有关</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/01/b836e4b293f39d80d66bb3e8bce10ebf_NVIDIA_Share_1152_559.png" alt="NVIDIA_Share_1152_559.png"></p>
-<ul>
-<li>Clang: a C language family frontend for LLVM<ul>
-<li> / klæŋ/</li>
-</ul>
-</li>
-<li>在设计实际生产环境中的编译器时, <strong>优化</strong>通常占用了大多数时间</li>
-<li>代码在编译器视角都是<strong>字符串</strong></li>
-</ul>
-<h2 id="4-1-具体组成"><a href="#4-1-具体组成" class="headerlink" title="4.1. 具体组成"></a>4.1. 具体组成</h2><h3 id="4-1-1-词法分析器-Lexer-Scanner"><a href="#4-1-1-词法分析器-Lexer-Scanner" class="headerlink" title="4.1.1. 词法分析器 (Lexer/Scanner)"></a>4.1.1. 词法分析器 (Lexer/Scanner)</h3><ul>
-<li>词法分析器 (Lexer/Scanner): 将字符流转化为<strong>词法单元 (token) 流</strong></li>
-<li><code>token: &lt;token-class,attribute-value&gt;</code></li>
-</ul>
-<h3 id="4-1-2-语法分析器-Parser"><a href="#4-1-2-语法分析器-Parser" class="headerlink" title="4.1.2. 语法分析器 (Parser)"></a>4.1.2. 语法分析器 (Parser)</h3><ul>
-<li>语法分析器 (Parser): 构建词法单元之间的语法结构, 生成<strong>语法树</strong></li>
-</ul>
-<h3 id="4-1-3-语义分析器"><a href="#4-1-3-语义分析器" class="headerlink" title="4.1.3. 语义分析器"></a>4.1.3. 语义分析器</h3><ul>
-<li>语义分析器: 语义检查, 如类型检查、“先声明后使用” 约束检查<ul>
-<li>通过遍历语法树完成</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-1-4-中间代码生成器"><a href="#4-1-4-中间代码生成器" class="headerlink" title="4.1.4. 中间代码生成器"></a>4.1.4. 中间代码生成器</h3><ul>
-<li>中间代码生成器: 生成中间代码, 如 “三地址代码”<ul>
-<li>与硬件无关</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-1-5-中间代码优化器"><a href="#4-1-5-中间代码优化器" class="headerlink" title="4.1.5. 中间代码优化器"></a>4.1.5. 中间代码优化器</h3><ul>
-<li>中间代码优化器</li>
-</ul>
-<h3 id="4-1-6-代码生成器"><a href="#4-1-6-代码生成器" class="headerlink" title="4.1.6. 代码生成器"></a>4.1.6. 代码生成器</h3><ul>
-<li>代码生成器: 生成目标代码, 主要任务包括<strong>指令选择、寄存器分配</strong></li>
-</ul>
-<h3 id="4-1-7-符号表"><a href="#4-1-7-符号表" class="headerlink" title="4.1.7. 符号表"></a>4.1.7. 符号表</h3><ul>
-<li>符号表: 收集并管理<strong>变量名/函数名</strong>相关的信息<ul>
-<li>变量名：类型、寄存器、内存地址、行号</li>
-<li>函数名：参数个数、参数类型、返回值类型</li>
-</ul>
-</li>
-<li>为了方便表达嵌套结构与作用域, 可能需要维护多个符号表</li>
-</ul>
-<h2 id="4-2-过程"><a href="#4-2-过程" class="headerlink" title="4.2. 过程"></a>4.2. 过程</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/01/d2b65110e3b3d244508f4c30e8e977c7_NVIDIA_Share_548_691.png" alt="NVIDIA_Share_548_691.png"></p>
-]]></content>
-      <categories>
-        <category>2023_Spring_编译原理</category>
-      </categories>
-      <tags>
-        <tag>2023_Spring编译原理  课程</tag>
       </tags>
   </entry>
   <entry>
@@ -13163,135 +13163,6 @@ static data放全局变量
       </tags>
   </entry>
   <entry>
-    <title>Lab02_Visitor模式</title>
-    <url>/posts/5a39ddc7/</url>
-    <content><![CDATA[<h1 id="SysYParser和ParseTree"><a href="#SysYParser和ParseTree" class="headerlink" title="SysYParser和ParseTree"></a>SysYParser和ParseTree</h1><p>ParseTree、ProgramContext、RuleNode都是从同一个类继承下来的，所以下面这行代码可以正确运行。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ParseTree</span> <span class="variable">tree</span> <span class="operator">=</span> sysYParser.program();</span><br></pre></td></tr></table></figure></div>
-
-<p>其中<code>sysYParser.program()</code>返回了一个<code>ProgramContext</code>对象，也就是语法分析器得到的抽象语法树的<code>Program</code>节点，与我们所写的词法规则对应。</p>
-<p><code>ParseTree</code>是抽象语法树的节点，<code>sysYParser</code>是词法分析器，两个并不具备包含关系。</p>
-<div style="page-break-after: always;"></div>
-
-<p>调用图如下：</p>
-<ul>
-<li>ProgramContext</li>
-</ul>
-<pre class="mermaid">classDiagram
-direction BT
-class ParseTree {
-&lt;<interface>&gt;
-
-}
-class ParserRuleContext
-class ProgramContext
-class RuleContext
-class RuleNode {
-&lt;<interface>&gt;
-
-}
-class SyntaxTree {
-&lt;<interface>&gt;
-
-}
-class Tree {
-&lt;<interface>&gt;
-
-}
-
-ParseTree  --&gt;  SyntaxTree 
-ParserRuleContext  --&gt;  RuleContext 
-ProgramContext  --&gt;  ParserRuleContext 
-RuleContext  ..&gt;  RuleNode 
-RuleNode  --&gt;  ParseTree 
-SyntaxTree  --&gt;  Tree</interface></interface></interface></interface></pre>
-
-<div style="page-break-after: always;"></div>
-
-<ul>
-<li>CompUnitContext</li>
-</ul>
-<pre class="mermaid">classDiagram
-direction BT
-class CompUnitContext
-class ParseTree {
-&lt;<interface>&gt;
-
-}
-class ParserRuleContext
-class RuleContext
-class RuleNode {
-&lt;<interface>&gt;
-
-}
-class SyntaxTree {
-&lt;<interface>&gt;
-
-}
-class Tree {
-&lt;<interface>&gt;
-
-}
-
-CompUnitContext  --&gt;  ParserRuleContext 
-ParseTree  --&gt;  SyntaxTree 
-ParserRuleContext  --&gt;  RuleContext 
-RuleContext  ..&gt;  RuleNode 
-RuleNode  --&gt;  ParseTree 
-SyntaxTree  --&gt;  Tree</interface></interface></interface></interface></pre>
-
-<div style="page-break-after: always;"></div>
-
-<h1 id="Visitor的运行机制"><a href="#Visitor的运行机制" class="headerlink" title="Visitor的运行机制"></a>Visitor的运行机制</h1><ul>
-<li>SysYParserVisitor</li>
-</ul>
-<pre class="mermaid">classDiagram
-direction BT
-class ParseTreeVisitor~T~ {
-&lt;<interface>&gt;
-
-}
-class SysYParserVisitor~T~ {
-&lt;<interface>&gt;
-
-}
-
-SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
-
-<ul>
-<li>Visitor模式需要定义两个类层次<ul>
-<li>Node层次：接受操作的元素（即第一部分的<code>Parsertree</code>）</li>
-<li>Visitor层次：定义对元素的操作</li>
-</ul>
-</li>
-</ul>
-<p>在<code>Main</code>中我们通过这行命令调用<code>Visitor</code>遍历抽象语法树，<code>visitor</code>确实只是一个入口。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">visitor.visit(tree);</span><br></pre></td></tr></table></figure></div>
-
-<p>这个<code>tree</code>的声明类型是<code>ParseTree</code>，但显然它的实际类型是<code>ProgramContext</code>，所以这个语句会调用<code>SysyParser.ProgramContext</code>类中的<code>accept</code>。</p>
-<p>注意：<code>ProgramContext</code>、<code>CompUnitContext</code>等类都是<code>SysyParser</code>内部的<code>static</code>类，因此<code>accept</code>方法并不能是<code>SysyParser</code>中的，而是每个抽象语法树的节点里的。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span>  </span><br><span class="line"><span class="keyword">public</span> &lt;T&gt; T <span class="title function_">accept</span><span class="params">(ParseTreeVisitor&lt;? extends T&gt; visitor)</span> {  </span><br><span class="line">	<span class="keyword">if</span> ( visitor <span class="keyword">instanceof</span> SysYParserVisitor ) </span><br><span class="line">		<span class="keyword">return</span> ((SysYParserVisitor&lt;? <span class="keyword">extends</span> <span class="title class_">T</span>&gt;)visitor).visitProgram(<span class="built_in">this</span>);  </span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		<span class="keyword">return</span> visitor.visitChildren(<span class="built_in">this</span>);  </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>这里的<code>if</code>判断<code>visitor</code>是否是<code>SysYParserVisitor</code>的实例，若是则进行类型转换，然后调用对应的<code>visit</code>方法。这里的<code>this</code>是<code>ProgramContext</code>，也就是抽象语法树的节点。这符合Visitor设计模式：accept以visitor为参数，节点内部实现accept时会回调visitor的的成员函数（以this为参数）。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/30/b2f707ed3df21a402d5dd1b2dbe9630d_202303302123676.png"></p>
-<p><code>visitProgram</code>的原始定义在接口<code>SysYParserVisitor</code>中，<code>Antlr4</code>自动生成的类<code>SysYParserBaseVisitor</code>对其给出了默认实现。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SysYParserBaseVisitor</span>&lt;T&gt; <span class="keyword">extends</span> <span class="title class_">AbstractParseTreeVisitor</span>&lt;T&gt; <span class="keyword">implements</span> <span class="title class_">SysYParserVisitor</span>&lt;T&gt;</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> T <span class="title function_">visitProgram</span><span class="params">(SysYParser.ProgramContext ctx)</span> { <span class="keyword">return</span> visitChildren(ctx); }</span><br></pre></td></tr></table></figure></div>
-
-<p><code>SysYParserBaseVisitor</code>中每个节点的<code>visitXXX</code>函数默认实现都是<code>visitChildren(ctx)</code>。</p>
-<p>如果我们在本次Lab中使用Visitor模式，我们需要继承<code>SysYParserBaseVisitor</code>，所有这些方法都可以修改。因为本次Lab不需要对每个节点做特定处理，所以我们不需要修改每个节点的默认实现，只需要修改<code>visitChildren</code>就可以实现抽象语法树的打印。</p>
-<p><code>visitChildren</code>方法的存在只是为了具体实现时更方便，与Visitor设计模式关系不大。Visitor模式的核心应该是accept和visit的多分派，根据实际类型而不是声明类型来选择调用的方法（和C++中的虚函数类似）。</p>
-<p>至于怎么打印语法树，也就是如何深度优先遍历，只要在我们自己的<code>visitChildren</code>中实现递归即可。其实可以参考<code>AbstractParseTreeVisitor</code>中的<code>visitChildren</code>，其中的<code>for</code>循环就实现了深度优先遍历，这里的<code>accept</code>也会根据<code>c</code>的实际类型动态选择实现，由于没有修改默认实现，最后一定会调用到<code>visitChildren</code>方法。<br>我们只需要做一些修改，在适当的位置打印节点的相关信息就可以了。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> T <span class="title function_">visitChildren</span><span class="params">(RuleNode node)</span> {  </span><br><span class="line">	<span class="type">T</span> <span class="variable">result</span> <span class="operator">=</span> <span class="built_in">this</span>.defaultResult();  </span><br><span class="line">	<span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> node.getChildCount();  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n &amp;&amp; <span class="built_in">this</span>.shouldVisitNextChild(node, result); ++i) {  </span><br><span class="line">	<span class="type">ParseTree</span> <span class="variable">c</span> <span class="operator">=</span> node.getChild(i);  </span><br><span class="line">	<span class="type">T</span> <span class="variable">childResult</span> <span class="operator">=</span> c.accept(<span class="built_in">this</span>);  </span><br><span class="line">	result = <span class="built_in">this</span>.aggregateResult(result, childResult);  </span><br><span class="line">}  </span><br><span class="line">  </span><br><span class="line">	<span class="keyword">return</span> result;  </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>2023_Spring_编译原理</category>
-      </categories>
-      <tags>
-        <tag>2023_Spring编译原理  课程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>0-Linux Basic</title>
     <url>/posts/409326db/</url>
     <content><![CDATA[<h1 id="1-Linux"><a href="#1-Linux" class="headerlink" title="1. Linux"></a>1. Linux</h1><p>GPL许可证：可以随便用，但不能拿去卖钱</p>
@@ -13751,6 +13622,135 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       <tags>
         <tag>课程</tag>
         <tag>2024_Spring_Linux系统编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lab02_Visitor模式</title>
+    <url>/posts/5a39ddc7/</url>
+    <content><![CDATA[<h1 id="SysYParser和ParseTree"><a href="#SysYParser和ParseTree" class="headerlink" title="SysYParser和ParseTree"></a>SysYParser和ParseTree</h1><p>ParseTree、ProgramContext、RuleNode都是从同一个类继承下来的，所以下面这行代码可以正确运行。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ParseTree</span> <span class="variable">tree</span> <span class="operator">=</span> sysYParser.program();</span><br></pre></td></tr></table></figure></div>
+
+<p>其中<code>sysYParser.program()</code>返回了一个<code>ProgramContext</code>对象，也就是语法分析器得到的抽象语法树的<code>Program</code>节点，与我们所写的词法规则对应。</p>
+<p><code>ParseTree</code>是抽象语法树的节点，<code>sysYParser</code>是词法分析器，两个并不具备包含关系。</p>
+<div style="page-break-after: always;"></div>
+
+<p>调用图如下：</p>
+<ul>
+<li>ProgramContext</li>
+</ul>
+<pre class="mermaid">classDiagram
+direction BT
+class ParseTree {
+&lt;<interface>&gt;
+
+}
+class ParserRuleContext
+class ProgramContext
+class RuleContext
+class RuleNode {
+&lt;<interface>&gt;
+
+}
+class SyntaxTree {
+&lt;<interface>&gt;
+
+}
+class Tree {
+&lt;<interface>&gt;
+
+}
+
+ParseTree  --&gt;  SyntaxTree 
+ParserRuleContext  --&gt;  RuleContext 
+ProgramContext  --&gt;  ParserRuleContext 
+RuleContext  ..&gt;  RuleNode 
+RuleNode  --&gt;  ParseTree 
+SyntaxTree  --&gt;  Tree</interface></interface></interface></interface></pre>
+
+<div style="page-break-after: always;"></div>
+
+<ul>
+<li>CompUnitContext</li>
+</ul>
+<pre class="mermaid">classDiagram
+direction BT
+class CompUnitContext
+class ParseTree {
+&lt;<interface>&gt;
+
+}
+class ParserRuleContext
+class RuleContext
+class RuleNode {
+&lt;<interface>&gt;
+
+}
+class SyntaxTree {
+&lt;<interface>&gt;
+
+}
+class Tree {
+&lt;<interface>&gt;
+
+}
+
+CompUnitContext  --&gt;  ParserRuleContext 
+ParseTree  --&gt;  SyntaxTree 
+ParserRuleContext  --&gt;  RuleContext 
+RuleContext  ..&gt;  RuleNode 
+RuleNode  --&gt;  ParseTree 
+SyntaxTree  --&gt;  Tree</interface></interface></interface></interface></pre>
+
+<div style="page-break-after: always;"></div>
+
+<h1 id="Visitor的运行机制"><a href="#Visitor的运行机制" class="headerlink" title="Visitor的运行机制"></a>Visitor的运行机制</h1><ul>
+<li>SysYParserVisitor</li>
+</ul>
+<pre class="mermaid">classDiagram
+direction BT
+class ParseTreeVisitor~T~ {
+&lt;<interface>&gt;
+
+}
+class SysYParserVisitor~T~ {
+&lt;<interface>&gt;
+
+}
+
+SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
+
+<ul>
+<li>Visitor模式需要定义两个类层次<ul>
+<li>Node层次：接受操作的元素（即第一部分的<code>Parsertree</code>）</li>
+<li>Visitor层次：定义对元素的操作</li>
+</ul>
+</li>
+</ul>
+<p>在<code>Main</code>中我们通过这行命令调用<code>Visitor</code>遍历抽象语法树，<code>visitor</code>确实只是一个入口。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">visitor.visit(tree);</span><br></pre></td></tr></table></figure></div>
+
+<p>这个<code>tree</code>的声明类型是<code>ParseTree</code>，但显然它的实际类型是<code>ProgramContext</code>，所以这个语句会调用<code>SysyParser.ProgramContext</code>类中的<code>accept</code>。</p>
+<p>注意：<code>ProgramContext</code>、<code>CompUnitContext</code>等类都是<code>SysyParser</code>内部的<code>static</code>类，因此<code>accept</code>方法并不能是<code>SysyParser</code>中的，而是每个抽象语法树的节点里的。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span>  </span><br><span class="line"><span class="keyword">public</span> &lt;T&gt; T <span class="title function_">accept</span><span class="params">(ParseTreeVisitor&lt;? extends T&gt; visitor)</span> {  </span><br><span class="line">	<span class="keyword">if</span> ( visitor <span class="keyword">instanceof</span> SysYParserVisitor ) </span><br><span class="line">		<span class="keyword">return</span> ((SysYParserVisitor&lt;? <span class="keyword">extends</span> <span class="title class_">T</span>&gt;)visitor).visitProgram(<span class="built_in">this</span>);  </span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		<span class="keyword">return</span> visitor.visitChildren(<span class="built_in">this</span>);  </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>这里的<code>if</code>判断<code>visitor</code>是否是<code>SysYParserVisitor</code>的实例，若是则进行类型转换，然后调用对应的<code>visit</code>方法。这里的<code>this</code>是<code>ProgramContext</code>，也就是抽象语法树的节点。这符合Visitor设计模式：accept以visitor为参数，节点内部实现accept时会回调visitor的的成员函数（以this为参数）。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/30/b2f707ed3df21a402d5dd1b2dbe9630d_202303302123676.png"></p>
+<p><code>visitProgram</code>的原始定义在接口<code>SysYParserVisitor</code>中，<code>Antlr4</code>自动生成的类<code>SysYParserBaseVisitor</code>对其给出了默认实现。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SysYParserBaseVisitor</span>&lt;T&gt; <span class="keyword">extends</span> <span class="title class_">AbstractParseTreeVisitor</span>&lt;T&gt; <span class="keyword">implements</span> <span class="title class_">SysYParserVisitor</span>&lt;T&gt;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> T <span class="title function_">visitProgram</span><span class="params">(SysYParser.ProgramContext ctx)</span> { <span class="keyword">return</span> visitChildren(ctx); }</span><br></pre></td></tr></table></figure></div>
+
+<p><code>SysYParserBaseVisitor</code>中每个节点的<code>visitXXX</code>函数默认实现都是<code>visitChildren(ctx)</code>。</p>
+<p>如果我们在本次Lab中使用Visitor模式，我们需要继承<code>SysYParserBaseVisitor</code>，所有这些方法都可以修改。因为本次Lab不需要对每个节点做特定处理，所以我们不需要修改每个节点的默认实现，只需要修改<code>visitChildren</code>就可以实现抽象语法树的打印。</p>
+<p><code>visitChildren</code>方法的存在只是为了具体实现时更方便，与Visitor设计模式关系不大。Visitor模式的核心应该是accept和visit的多分派，根据实际类型而不是声明类型来选择调用的方法（和C++中的虚函数类似）。</p>
+<p>至于怎么打印语法树，也就是如何深度优先遍历，只要在我们自己的<code>visitChildren</code>中实现递归即可。其实可以参考<code>AbstractParseTreeVisitor</code>中的<code>visitChildren</code>，其中的<code>for</code>循环就实现了深度优先遍历，这里的<code>accept</code>也会根据<code>c</code>的实际类型动态选择实现，由于没有修改默认实现，最后一定会调用到<code>visitChildren</code>方法。<br>我们只需要做一些修改，在适当的位置打印节点的相关信息就可以了。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> T <span class="title function_">visitChildren</span><span class="params">(RuleNode node)</span> {  </span><br><span class="line">	<span class="type">T</span> <span class="variable">result</span> <span class="operator">=</span> <span class="built_in">this</span>.defaultResult();  </span><br><span class="line">	<span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> node.getChildCount();  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n &amp;&amp; <span class="built_in">this</span>.shouldVisitNextChild(node, result); ++i) {  </span><br><span class="line">	<span class="type">ParseTree</span> <span class="variable">c</span> <span class="operator">=</span> node.getChild(i);  </span><br><span class="line">	<span class="type">T</span> <span class="variable">childResult</span> <span class="operator">=</span> c.accept(<span class="built_in">this</span>);  </span><br><span class="line">	result = <span class="built_in">this</span>.aggregateResult(result, childResult);  </span><br><span class="line">}  </span><br><span class="line">  </span><br><span class="line">	<span class="keyword">return</span> result;  </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>2023_Spring_编译原理</category>
+      </categories>
+      <tags>
+        <tag>2023_Spring编译原理  课程</tag>
       </tags>
   </entry>
   <entry>
@@ -14588,125 +14588,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
-    <title>06-Linux内核</title>
-    <url>/posts/612388c4/</url>
-    <content><![CDATA[<h1 id="1-编译内核"><a href="#1-编译内核" class="headerlink" title="1. 编译内核"></a>1. 编译内核</h1><p>有很多复杂的configure</p>
-<ol>
-<li>配置</li>
-<li>make</li>
-<li>启用内核</li>
-</ol>
-<h2 id="1-1-编译选项"><a href="#1-1-编译选项" class="headerlink" title="1.1. 编译选项"></a>1.1. 编译选项</h2><ul>
-<li>config模式<ol>
-<li>Y：加入内核</li>
-<li>N：不加入内核</li>
-<li>M：模块形式，先留一个地址，<code>.ko</code>文件。需要功能的时候可以去加载。</li>
-</ol>
-</li>
-</ul>
-<h2 id="1-2-启用新内核"><a href="#1-2-启用新内核" class="headerlink" title="1.2. 启用新内核"></a>1.2. 启用新内核</h2><ul>
-<li>make install：把内核复制到\boot目录下<ul>
-<li><font color="#c00000">慎用</font>，一般手动做这个操作</li>
-</ul>
-</li>
-</ul>
-<p>grub的引导菜单会多一个刚编译的内核</p>
-<h2 id="1-3-初始化程序的建立"><a href="#1-3-初始化程序的建立" class="headerlink" title="1.3. 初始化程序的建立"></a>1.3. 初始化程序的建立</h2><ul>
-<li>initrd<ul>
-<li>系统启动时的第一个用户态程序，没有父进程的进程</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-驱动"><a href="#2-驱动" class="headerlink" title="2. 驱动"></a>2. 驱动</h1><p>常见驱动的源代码集成在内核源码中</p>
-<p>也有第三方驱动的开发，可以单独编译成模块<code>.ko</code></p>
-<p>编译需要内核头文件的支持</p>
-<h2 id="2-1-加载模块"><a href="#2-1-加载模块" class="headerlink" title="2.1. 加载模块"></a>2.1. 加载模块</h2><p>系统开机时没有加载，但可以在运行的时候加载模块</p>
-<p>e.g. U盘驱动</p>
-<ul>
-<li>底层命令<ol>
-<li><font color="#c00000">insmod</font>：<strong>把模块装载到内核里</strong></li>
-<li>rmmod：从内核里释放模块</li>
-</ol>
-</li>
-<li>高层命令<ol>
-<li>modprobe：装载</li>
-<li>modprobe -r：释放</li>
-</ol>
-</li>
-</ul>
-<h2 id="2-2-模块依赖"><a href="#2-2-模块依赖" class="headerlink" title="2.2. 模块依赖"></a>2.2. 模块依赖</h2><ul>
-<li>lsmod：看当前已经装载到内核的模块<ul>
-<li>和<code>cat /proc/modules</code>等价</li>
-</ul>
-</li>
-<li>modinfo</li>
-<li>moddep</li>
-</ul>
-<p>模块依赖：模块A引用模块B导出的符号，即模块B被模块A引用。如果要装载模块A，就要先装载模块B。</p>
-<p>高层命令会解决依赖关系，而底层命令不会。</p>
-<h2 id="2-3-模块通信"><a href="#2-3-模块通信" class="headerlink" title="2.3. 模块通信"></a>2.3. 模块通信</h2><p>共享变量</p>
-<h2 id="2-4-👍Linux内核模块与应用程序模块的区别"><a href="#2-4-👍Linux内核模块与应用程序模块的区别" class="headerlink" title="2.4. 👍Linux内核模块与应用程序模块的区别"></a>2.4. 👍Linux内核模块与应用程序模块的区别</h2><table>
-<thead>
-<tr>
-<th></th>
-<th>C</th>
-<th>Linux内核模块</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>运行</td>
-<td>用户空间</td>
-<td>内核空间</td>
-</tr>
-<tr>
-<td>入口</td>
-<td>main()</td>
-<td>module_init()指定</td>
-</tr>
-<tr>
-<td>出口</td>
-<td>无</td>
-<td>module_exit()指定</td>
-</tr>
-<tr>
-<td>运行</td>
-<td>直接指定</td>
-<td>insmod</td>
-</tr>
-<tr>
-<td>调试</td>
-<td>gdb</td>
-<td>kdbug,kdb,kgdb等</td>
-</tr>
-</tbody></table>
-<ol>
-<li>内核模块其实并不存在入口出口，init做初始化，exit做释放，加载后一直在内存里待命</li>
-<li>内核模块真正执行的时候是用户态程序调用相关功能<ul>
-<li>e.g. 内核加载了一段打印机的驱动，一直在内存里待命，在用户态程序（如Word）里点了打印，这段驱动才会被调用（通过系统调用）</li>
-<li>要考虑并行会出现的问题，可能有多个用户同时打印</li>
-</ul>
-</li>
-</ol>
-<h2 id="2-5-内核程序注意事项"><a href="#2-5-内核程序注意事项" class="headerlink" title="2.5. 内核程序注意事项"></a>2.5. 内核程序注意事项</h2><ol>
-<li>不能调用C库来开发驱动程序</li>
-<li>没有内存保护机制</li>
-<li>小内核栈<ul>
-<li>内核一般不用递归否则会占用大量内存空间</li>
-</ul>
-</li>
-<li>并发考虑</li>
-</ol>
-<h2 id="2-6-编译"><a href="#2-6-编译" class="headerlink" title="2.6. 编译"></a>2.6. 编译</h2><p>内核Makefile和一般的不一样，而且经常更新</p>
-]]></content>
-      <categories>
-        <category>2024_Spring_Linux系统编程</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2024_Spring_Linux系统编程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>07-Linux期末总结</title>
     <url>/posts/60504a0c/</url>
     <content><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><ol>
@@ -14910,6 +14791,125 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
+    <title>06-Linux内核</title>
+    <url>/posts/612388c4/</url>
+    <content><![CDATA[<h1 id="1-编译内核"><a href="#1-编译内核" class="headerlink" title="1. 编译内核"></a>1. 编译内核</h1><p>有很多复杂的configure</p>
+<ol>
+<li>配置</li>
+<li>make</li>
+<li>启用内核</li>
+</ol>
+<h2 id="1-1-编译选项"><a href="#1-1-编译选项" class="headerlink" title="1.1. 编译选项"></a>1.1. 编译选项</h2><ul>
+<li>config模式<ol>
+<li>Y：加入内核</li>
+<li>N：不加入内核</li>
+<li>M：模块形式，先留一个地址，<code>.ko</code>文件。需要功能的时候可以去加载。</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-2-启用新内核"><a href="#1-2-启用新内核" class="headerlink" title="1.2. 启用新内核"></a>1.2. 启用新内核</h2><ul>
+<li>make install：把内核复制到\boot目录下<ul>
+<li><font color="#c00000">慎用</font>，一般手动做这个操作</li>
+</ul>
+</li>
+</ul>
+<p>grub的引导菜单会多一个刚编译的内核</p>
+<h2 id="1-3-初始化程序的建立"><a href="#1-3-初始化程序的建立" class="headerlink" title="1.3. 初始化程序的建立"></a>1.3. 初始化程序的建立</h2><ul>
+<li>initrd<ul>
+<li>系统启动时的第一个用户态程序，没有父进程的进程</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-驱动"><a href="#2-驱动" class="headerlink" title="2. 驱动"></a>2. 驱动</h1><p>常见驱动的源代码集成在内核源码中</p>
+<p>也有第三方驱动的开发，可以单独编译成模块<code>.ko</code></p>
+<p>编译需要内核头文件的支持</p>
+<h2 id="2-1-加载模块"><a href="#2-1-加载模块" class="headerlink" title="2.1. 加载模块"></a>2.1. 加载模块</h2><p>系统开机时没有加载，但可以在运行的时候加载模块</p>
+<p>e.g. U盘驱动</p>
+<ul>
+<li>底层命令<ol>
+<li><font color="#c00000">insmod</font>：<strong>把模块装载到内核里</strong></li>
+<li>rmmod：从内核里释放模块</li>
+</ol>
+</li>
+<li>高层命令<ol>
+<li>modprobe：装载</li>
+<li>modprobe -r：释放</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-2-模块依赖"><a href="#2-2-模块依赖" class="headerlink" title="2.2. 模块依赖"></a>2.2. 模块依赖</h2><ul>
+<li>lsmod：看当前已经装载到内核的模块<ul>
+<li>和<code>cat /proc/modules</code>等价</li>
+</ul>
+</li>
+<li>modinfo</li>
+<li>moddep</li>
+</ul>
+<p>模块依赖：模块A引用模块B导出的符号，即模块B被模块A引用。如果要装载模块A，就要先装载模块B。</p>
+<p>高层命令会解决依赖关系，而底层命令不会。</p>
+<h2 id="2-3-模块通信"><a href="#2-3-模块通信" class="headerlink" title="2.3. 模块通信"></a>2.3. 模块通信</h2><p>共享变量</p>
+<h2 id="2-4-👍Linux内核模块与应用程序模块的区别"><a href="#2-4-👍Linux内核模块与应用程序模块的区别" class="headerlink" title="2.4. 👍Linux内核模块与应用程序模块的区别"></a>2.4. 👍Linux内核模块与应用程序模块的区别</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>C</th>
+<th>Linux内核模块</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>运行</td>
+<td>用户空间</td>
+<td>内核空间</td>
+</tr>
+<tr>
+<td>入口</td>
+<td>main()</td>
+<td>module_init()指定</td>
+</tr>
+<tr>
+<td>出口</td>
+<td>无</td>
+<td>module_exit()指定</td>
+</tr>
+<tr>
+<td>运行</td>
+<td>直接指定</td>
+<td>insmod</td>
+</tr>
+<tr>
+<td>调试</td>
+<td>gdb</td>
+<td>kdbug,kdb,kgdb等</td>
+</tr>
+</tbody></table>
+<ol>
+<li>内核模块其实并不存在入口出口，init做初始化，exit做释放，加载后一直在内存里待命</li>
+<li>内核模块真正执行的时候是用户态程序调用相关功能<ul>
+<li>e.g. 内核加载了一段打印机的驱动，一直在内存里待命，在用户态程序（如Word）里点了打印，这段驱动才会被调用（通过系统调用）</li>
+<li>要考虑并行会出现的问题，可能有多个用户同时打印</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-5-内核程序注意事项"><a href="#2-5-内核程序注意事项" class="headerlink" title="2.5. 内核程序注意事项"></a>2.5. 内核程序注意事项</h2><ol>
+<li>不能调用C库来开发驱动程序</li>
+<li>没有内存保护机制</li>
+<li>小内核栈<ul>
+<li>内核一般不用递归否则会占用大量内存空间</li>
+</ul>
+</li>
+<li>并发考虑</li>
+</ol>
+<h2 id="2-6-编译"><a href="#2-6-编译" class="headerlink" title="2.6. 编译"></a>2.6. 编译</h2><p>内核Makefile和一般的不一样，而且经常更新</p>
+]]></content>
+      <categories>
+        <category>2024_Spring_Linux系统编程</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_Linux系统编程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>0-数据库开发</title>
     <url>/posts/a97c1df5/</url>
     <content><![CDATA[<h1 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h1><ol>
@@ -15075,7 +15075,9 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li>相邻叶节点之间有指针-&gt;为了方便范围查询</li>
 </ol>
 </li>
-<li><p>每个节点刚好放在一个块里（硬盘存储最小单元）</p>
+<li><p>每个节点刚好放在一个Page里（硬盘存储最小单元）</p>
+</li>
+<li><p>每个节点最多N个键和N+1个指向节点的指针</p>
 </li>
 <li><p>占用率：节点容量和实际持有键的数量之间的关系</p>
 <ul>
@@ -15086,6 +15088,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li><p>为什么不用BST：适合内存搜索，但不适合磁盘搜索</p>
 </li>
 </ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image/2024/06/11/23-21-14-7fca77e85ab3ed94687e32ab2b57c72e-Screenshotundefinedfromundefined2024-06-11undefined23-20-15-effd76.png"></p>
 <h1 id="3-B树查找算法"><a href="#3-B树查找算法" class="headerlink" title="3. B树查找算法"></a>3. B树查找算法</h1><ul>
 <li><p>算法复杂度从两个角度讨论：<strong>块传输</strong>，<strong>键比较</strong></p>
 </li>
@@ -15105,35 +15108,61 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ul>
 <h1 id="4-👍B树的分裂"><a href="#4-👍B树的分裂" class="headerlink" title="4. 👍B树的分裂"></a>4. 👍B树的分裂</h1><p>插入节点，可能导致分裂</p>
-<ul>
-<li>叶节点分裂：把value复制到下一块<ol>
-<li>先以叶节点中心分裂</li>
-<li>构建上层节点</li>
-<li>插入，改变link</li>
+<ol>
+<li>分配一个新节点</li>
+<li>:一半元素从分裂节点复制到新节点</li>
+<li>新元素放入相应的节点</li>
+<li>在分裂节点的父节点处，添加一个分割键和指向新节点的指针</li>
+</ol>
+<h2 id="4-1-叶节点分裂"><a href="#4-1-叶节点分裂" class="headerlink" title="4.1. 叶节点分裂"></a>4.1. 叶节点分裂</h2><ul>
+<li>叶节点分裂：把value复制到下一块，向上传递<ol>
+<li>查找算法定位目标叶节点，并将新值关联</li>
+<li>有空就插⼊，没空就叫“<strong>节点溢出</strong>”overflow，必须分裂<ul>
+<li>C1:叶节点：超过Max（N）最多容纳N个键值对</li>
+<li>C2:非叶节点：指针超过Max（N+1）</li>
+</ul>
+</li>
+<li>分裂：分配新节点，将⼀半元素从原分裂节点传输给它，并添加它的第⼀个键和指向⽗节点的指针，这时候，键被提升了（promote）。执⾏分裂的数组下标称之为分裂点（也叫中点），分裂点之后的所有元素被传输到新创建的兄弟节点</li>
 </ol>
 </li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image/2024/06/11/23-25-18-9406503c8d9f5034a4010ea99fd0da67-202406112325420-65e842.png"></p>
+<h2 id="4-2-非叶节点分裂"><a href="#4-2-非叶节点分裂" class="headerlink" title="4.2. 非叶节点分裂"></a>4.2. 非叶节点分裂</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F23-36-29-68c65e316480a432c8e973c92a3aafef-20240611233629-7e26c5.png" alt="image.png"></p>
+<ul>
 <li>非叶节点分裂：直接把Key分割点放到上层<ol>
 <li>创造新节点</li>
 <li>把原节点<strong>N/2 + 1</strong>移到下一节点</li>
+<li>分裂点的键被提升到⽗⼀级</li>
+<li>插⼊要插⼊的节点</li>
+<li>⽣成额外指针，指向新裂变的节点</li>
 </ol>
 </li>
 </ul>
 <p>保证50%占用率</p>
 <h1 id="5-👍B树的合并"><a href="#5-👍B树的合并" class="headerlink" title="5. 👍B树的合并"></a>5. 👍B树的合并</h1><p>删除节点，可能导致合并</p>
-<ul>
-<li><p>节点最大容量N个key-value，N+1个指针</p>
-<ul>
-<li>叶节点：key-value的数量是否小于N，把上面的key删除  </li>
-<li>非叶节点：指针数量是否小于N+1，把上面的key下移</li>
+<h2 id="5-1-叶节点合并"><a href="#5-1-叶节点合并" class="headerlink" title="5.1. 叶节点合并"></a>5.1. 叶节点合并</h2><ul>
+<li><span style="background:rgba(3, 135, 102, 0.2)">判定条件</span>：节点最大容量N个key-value，N+1个指针<ul>
+<li>叶节点：key-value的数量是否小于等于N，把上面的key删除  </li>
+<li>非叶节点：指针数量是否小于等于N+1，把上面的key下移</li>
 </ul>
 </li>
-<li><p><span style="background:rgba(3, 135, 102, 0.2)">问题：分裂合并导致IO过于频繁</span></p>
+</ul>
+<p>⼀般50%是树状结构节点占用率的阈值N</p>
+<p>e.g.删除16<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F23-39-44-6b28bffe80ce45ea1b21afa578423b90-20240611233944-69a29d.png" alt="image.png"></p>
+<h2 id="5-2-非叶节点合并"><a href="#5-2-非叶节点合并" class="headerlink" title="5.2. 非叶节点合并"></a>5.2. 非叶节点合并</h2><ul>
+<li>假设元素已经删除，则合并步骤：<ol>
+<li>从右节点复制所有元素去左节点，删除右节点</li>
+<li>从父节点删除右节点指针（非叶节点则降级）</li>
+</ol>
+</li>
+</ul>
+<p>e.g.删除10<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F23-42-35-f8fdb162a098f784a3348027b8870631-20240611234235-ba800a.png" alt="image.png"></p>
 <ul>
+<li><span style="background:rgba(3, 135, 102, 0.2)">问题：分裂合并导致IO过于频繁</span><ul>
 <li>不同公司在分裂时一致，但合并有不同优化策略</li>
 </ul>
 </li>
-<li><p>解决思路：</p>
-<ol>
+<li>解决思路：<ol>
 <li>按照存储空间的占比设置阈值，而不是key-value/指针的数量</li>
 <li>再平衡，控制平衡的个数</li>
 </ol>
@@ -15976,6 +16005,71 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
+    <title>08-SQL常识</title>
+    <url>/posts/2243eb0e/</url>
+    <content><![CDATA[<h1 id="1-Group-by"><a href="#1-Group-by" class="headerlink" title="1. Group by"></a>1. Group by</h1><p>group by是一个过程化操作</p>
+<ol>
+<li>筛选分组用having，</li>
+<li>count(*)只要rowid存在都会算，count(name)会忽略NULL</li>
+</ol>
+<h1 id="2-字符串处理"><a href="#2-字符串处理" class="headerlink" title="2. 字符串处理"></a>2. 字符串处理</h1><p>清洗数据在数据库里处理的代价比在应用程序里处理的代价低</p>
+<h2 id="2-1-遍历字符串"><a href="#2-1-遍历字符串" class="headerlink" title="2.1. 遍历字符串"></a>2.1. 遍历字符串</h2><p>数据透视表(T1,T10,T100,…)</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> substr(e.ename,iter.pos, <span class="number">1</span>) <span class="keyword">as</span> C</span><br><span class="line"><span class="keyword">from</span> (<span class="keyword">select</span> ename)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="2-2-内嵌引号"><a href="#2-2-内嵌引号" class="headerlink" title="2.2. 内嵌引号"></a>2.2. 内嵌引号</h2><div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="string">' " '</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="2-3-统计字符出现的个数"><a href="#2-3-统计字符出现的个数" class="headerlink" title="2.3. 统计字符出现的个数"></a>2.3. 统计字符出现的个数</h2><p>问题：出现多少个逗号</p>
+<p><strong>repalce</strong>+<strong>length</strong></p>
+<p>len(replace) / len(‘,’)</p>
+<h2 id="2-4-删除不想要的字符"><a href="#2-4-删除不想要的字符" class="headerlink" title="2.4. 删除不想要的字符"></a>2.4. 删除不想要的字符</h2><p>oracle：<code>translate</code><br>mysql：嵌套<code>replace</code></p>
+<h2 id="2-5-分离数字和字符"><a href="#2-5-分离数字和字符" class="headerlink" title="2.5. 分离数字和字符"></a>2.5. 分离数字和字符</h2><p>oracle: translate对原来的字段处理两次<br>mysql：正则表达式<code>REGEXP_REPLACE</code></p>
+<h2 id="2-6-判断含有数字和字母的数值"><a href="#2-6-判断含有数字和字母的数值" class="headerlink" title="2.6. 判断含有数字和字母的数值"></a>2.6. 判断含有数字和字母的数值</h2><p>mysql: 正则表达式，regexp</p>
+<h2 id="2-7-提取姓名首字母"><a href="#2-7-提取姓名首字母" class="headerlink" title="2.7. 提取姓名首字母"></a>2.7. 提取姓名首字母</h2><p>需要找到空格的位置或大写的位置，然后把那个位置的字母提出来</p>
+<h1 id="3-数值操作"><a href="#3-数值操作" class="headerlink" title="3. 数值操作"></a>3. 数值操作</h1><h2 id="3-1-计算平均值"><a href="#3-1-计算平均值" class="headerlink" title="3.1. 计算平均值"></a>3.1. 计算平均值</h2><p>难点在于空值</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">%</span><span class="operator">%</span> 统计空值 <span class="operator">%</span><span class="operator">%</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">avg</span>(<span class="built_in">coalesce</span>(sal,<span class="number">0</span>))</span><br><span class="line"><span class="keyword">from</span> t2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="operator">%</span><span class="operator">%</span> 不统计空值 <span class="operator">%</span><span class="operator">%</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">avg</span>(sal)</span><br><span class="line"><span class="keyword">from</span> t2</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="3-2-累计求和"><a href="#3-2-累计求和" class="headerlink" title="3.2. 累计求和"></a>3.2. 累计求和</h2><p>sum over</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="built_in">sum</span>(sal) <span class="keyword">over</span> (<span class="keyword">order</span> <span class="keyword">by</span> sal,empno)</span><br><span class="line">	<span class="keyword">as</span> running_total</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="number">2</span> <span class="operator">/</span><span class="operator">/</span><span class="keyword">select</span>中的第二个字段</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="3-3-计算众数"><a href="#3-3-计算众数" class="headerlink" title="3.3. 计算众数"></a>3.3. 计算众数</h2><p>group by<br>count</p>
+<h2 id="3-4-计算中位数"><a href="#3-4-计算中位数" class="headerlink" title="3.4. 计算中位数"></a>3.4. 计算中位数</h2><p>oracle: median()<br>mysql：分组，记录个数，找到中间位置的值</p>
+<h2 id="3-5-去掉最大值最小值，然后计算平均值"><a href="#3-5-去掉最大值最小值，然后计算平均值" class="headerlink" title="3.5. 去掉最大值最小值，然后计算平均值"></a>3.5. 去掉最大值最小值，然后计算平均值</h2><p>where sal not in (min_sal, max_sal)</p>
+<h1 id="4-日期处理"><a href="#4-日期处理" class="headerlink" title="4. 日期处理"></a>4. 日期处理</h1><h2 id="4-1-年月日加减法"><a href="#4-1-年月日加减法" class="headerlink" title="4.1. 年月日加减法"></a>4.1. 年月日加减法</h2><p>oracle: add_mounths()<br>mysql: date_add()</p>
+<h2 id="4-2-两个日期之间的天数"><a href="#4-2-两个日期之间的天数" class="headerlink" title="4.2. 两个日期之间的天数"></a>4.2. 两个日期之间的天数</h2><p>mysql: datediff<br>oracle：两个日期直接相减</p>
+<h2 id="4-3-两个日期之间的工作日天数"><a href="#4-3-两个日期之间的工作日天数" class="headerlink" title="4.3. 两个日期之间的工作日天数"></a>4.3. 两个日期之间的工作日天数</h2><p>需要获取日期是星期几，然后把星期六星期天去掉<br>date_format,date_add</p>
+<h2 id="4-4-判断闰年"><a href="#4-4-判断闰年" class="headerlink" title="4.4. 判断闰年"></a>4.4. 判断闰年</h2><p>加一年，然后判断时间差是多少天；<br>判断二月份第一天到最后一天是几天</p>
+<h1 id="5-常见SQL连接模式"><a href="#5-常见SQL连接模式" class="headerlink" title="5. 常见SQL连接模式"></a>5. 常见SQL连接模式</h1><h2 id="5-1-叠加行集（Union-Union-all）"><a href="#5-1-叠加行集（Union-Union-all）" class="headerlink" title="5.1. 叠加行集（Union & Union all）"></a>5.1. 叠加行集（Union &amp; Union all）</h2><p>不是关系代数</p>
+<ul>
+<li>约束：上下的select字段要一样，字段数量要一样</li>
+<li>区别：<ul>
+<li>Union：等同于针对Union all的输出再进行一次distinct操作</li>
+<li>Union all：不去重</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-查找只存在于一张表的数据（差）"><a href="#5-2-查找只存在于一张表的数据（差）" class="headerlink" title="5.2. 查找只存在于一张表的数据（差）"></a>5.2. 查找只存在于一张表的数据（差）</h2><p>MySQL: not in<br>Oracle: minus</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">select deptno</span><br><span class="line">from dept</span><br><span class="line">where deptno not in (</span><br><span class="line">	select deptno in emp</span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+
+<p>如果<code>deptno</code>不是主键：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">select distinct deptno</span><br><span class="line">from dept</span><br><span class="line">where deptno not in (</span><br><span class="line">	select deptno in emp</span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+
+<p>如果<code>not in</code>嵌套查询里有空值:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">select deptno</span><br><span class="line">from dept</span><br><span class="line">where deptno not in (10, 50, null)</span><br></pre></td></tr></table></figure></div>
+
+<p>no=20 not in (10, 50, null)-&gt;(F or F or null)=null，查询结果为空</p>
+<h2 id="5-3-从一个表检索另一个不相关的行（外连接）"><a href="#5-3-从一个表检索另一个不相关的行（外连接）" class="headerlink" title="5.3. 从一个表检索另一个不相关的行（外连接）"></a>5.3. 从一个表检索另一个不相关的行（外连接）</h2><p>左外连接<br>右外连接</p>
+<h2 id="5-4-确定两个表是否有相同的数据"><a href="#5-4-确定两个表是否有相同的数据" class="headerlink" title="5.4. 确定两个表是否有相同的数据"></a>5.4. 确定两个表是否有相同的数据</h2><p>很复杂</p>
+<h2 id="5-5-从多个表种返回缺失的值"><a href="#5-5-从多个表种返回缺失的值" class="headerlink" title="5.5. 从多个表种返回缺失的值"></a>5.5. 从多个表种返回缺失的值</h2><p>全外连接</p>
+<h2 id="5-6-连接和聚合函数的使用"><a href="#5-6-连接和聚合函数的使用" class="headerlink" title="5.6. 连接和聚合函数的使用"></a>5.6. 连接和聚合函数的使用</h2>]]></content>
+      <categories>
+        <category>2024_Spring_数据库开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_数据库开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>07-SQL优化的基础</title>
     <url>/posts/b68ed7c/</url>
     <content><![CDATA[<p><strong>关系代数核心</strong>：等价变换-&gt;可以自动对表达式做等价变换，做查询路径优化</p>
@@ -16138,71 +16232,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ul>
 <h1 id="2-SQL优化的其他问题"><a href="#2-SQL优化的其他问题" class="headerlink" title="2. SQL优化的其他问题"></a>2. SQL优化的其他问题</h1>]]></content>
-      <categories>
-        <category>2024_Spring_数据库开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2024_Spring_数据库开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>08-SQL常识</title>
-    <url>/posts/2243eb0e/</url>
-    <content><![CDATA[<h1 id="1-Group-by"><a href="#1-Group-by" class="headerlink" title="1. Group by"></a>1. Group by</h1><p>group by是一个过程化操作</p>
-<ol>
-<li>筛选分组用having，</li>
-<li>count(*)只要rowid存在都会算，count(name)会忽略NULL</li>
-</ol>
-<h1 id="2-字符串处理"><a href="#2-字符串处理" class="headerlink" title="2. 字符串处理"></a>2. 字符串处理</h1><p>清洗数据在数据库里处理的代价比在应用程序里处理的代价低</p>
-<h2 id="2-1-遍历字符串"><a href="#2-1-遍历字符串" class="headerlink" title="2.1. 遍历字符串"></a>2.1. 遍历字符串</h2><p>数据透视表(T1,T10,T100,…)</p>
-<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> substr(e.ename,iter.pos, <span class="number">1</span>) <span class="keyword">as</span> C</span><br><span class="line"><span class="keyword">from</span> (<span class="keyword">select</span> ename)</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="2-2-内嵌引号"><a href="#2-2-内嵌引号" class="headerlink" title="2.2. 内嵌引号"></a>2.2. 内嵌引号</h2><div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="string">' " '</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="2-3-统计字符出现的个数"><a href="#2-3-统计字符出现的个数" class="headerlink" title="2.3. 统计字符出现的个数"></a>2.3. 统计字符出现的个数</h2><p>问题：出现多少个逗号</p>
-<p><strong>repalce</strong>+<strong>length</strong></p>
-<p>len(replace) / len(‘,’)</p>
-<h2 id="2-4-删除不想要的字符"><a href="#2-4-删除不想要的字符" class="headerlink" title="2.4. 删除不想要的字符"></a>2.4. 删除不想要的字符</h2><p>oracle：<code>translate</code><br>mysql：嵌套<code>replace</code></p>
-<h2 id="2-5-分离数字和字符"><a href="#2-5-分离数字和字符" class="headerlink" title="2.5. 分离数字和字符"></a>2.5. 分离数字和字符</h2><p>oracle: translate对原来的字段处理两次<br>mysql：正则表达式<code>REGEXP_REPLACE</code></p>
-<h2 id="2-6-判断含有数字和字母的数值"><a href="#2-6-判断含有数字和字母的数值" class="headerlink" title="2.6. 判断含有数字和字母的数值"></a>2.6. 判断含有数字和字母的数值</h2><p>mysql: 正则表达式，regexp</p>
-<h2 id="2-7-提取姓名首字母"><a href="#2-7-提取姓名首字母" class="headerlink" title="2.7. 提取姓名首字母"></a>2.7. 提取姓名首字母</h2><p>需要找到空格的位置或大写的位置，然后把那个位置的字母提出来</p>
-<h1 id="3-数值操作"><a href="#3-数值操作" class="headerlink" title="3. 数值操作"></a>3. 数值操作</h1><h2 id="3-1-计算平均值"><a href="#3-1-计算平均值" class="headerlink" title="3.1. 计算平均值"></a>3.1. 计算平均值</h2><p>难点在于空值</p>
-<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">%</span><span class="operator">%</span> 统计空值 <span class="operator">%</span><span class="operator">%</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">avg</span>(<span class="built_in">coalesce</span>(sal,<span class="number">0</span>))</span><br><span class="line"><span class="keyword">from</span> t2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="operator">%</span><span class="operator">%</span> 不统计空值 <span class="operator">%</span><span class="operator">%</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">avg</span>(sal)</span><br><span class="line"><span class="keyword">from</span> t2</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="3-2-累计求和"><a href="#3-2-累计求和" class="headerlink" title="3.2. 累计求和"></a>3.2. 累计求和</h2><p>sum over</p>
-<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="built_in">sum</span>(sal) <span class="keyword">over</span> (<span class="keyword">order</span> <span class="keyword">by</span> sal,empno)</span><br><span class="line">	<span class="keyword">as</span> running_total</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="number">2</span> <span class="operator">/</span><span class="operator">/</span><span class="keyword">select</span>中的第二个字段</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="3-3-计算众数"><a href="#3-3-计算众数" class="headerlink" title="3.3. 计算众数"></a>3.3. 计算众数</h2><p>group by<br>count</p>
-<h2 id="3-4-计算中位数"><a href="#3-4-计算中位数" class="headerlink" title="3.4. 计算中位数"></a>3.4. 计算中位数</h2><p>oracle: median()<br>mysql：分组，记录个数，找到中间位置的值</p>
-<h2 id="3-5-去掉最大值最小值，然后计算平均值"><a href="#3-5-去掉最大值最小值，然后计算平均值" class="headerlink" title="3.5. 去掉最大值最小值，然后计算平均值"></a>3.5. 去掉最大值最小值，然后计算平均值</h2><p>where sal not in (min_sal, max_sal)</p>
-<h1 id="4-日期处理"><a href="#4-日期处理" class="headerlink" title="4. 日期处理"></a>4. 日期处理</h1><h2 id="4-1-年月日加减法"><a href="#4-1-年月日加减法" class="headerlink" title="4.1. 年月日加减法"></a>4.1. 年月日加减法</h2><p>oracle: add_mounths()<br>mysql: date_add()</p>
-<h2 id="4-2-两个日期之间的天数"><a href="#4-2-两个日期之间的天数" class="headerlink" title="4.2. 两个日期之间的天数"></a>4.2. 两个日期之间的天数</h2><p>mysql: datediff<br>oracle：两个日期直接相减</p>
-<h2 id="4-3-两个日期之间的工作日天数"><a href="#4-3-两个日期之间的工作日天数" class="headerlink" title="4.3. 两个日期之间的工作日天数"></a>4.3. 两个日期之间的工作日天数</h2><p>需要获取日期是星期几，然后把星期六星期天去掉<br>date_format,date_add</p>
-<h2 id="4-4-判断闰年"><a href="#4-4-判断闰年" class="headerlink" title="4.4. 判断闰年"></a>4.4. 判断闰年</h2><p>加一年，然后判断时间差是多少天；<br>判断二月份第一天到最后一天是几天</p>
-<h1 id="5-常见SQL连接模式"><a href="#5-常见SQL连接模式" class="headerlink" title="5. 常见SQL连接模式"></a>5. 常见SQL连接模式</h1><h2 id="5-1-叠加行集（Union-Union-all）"><a href="#5-1-叠加行集（Union-Union-all）" class="headerlink" title="5.1. 叠加行集（Union & Union all）"></a>5.1. 叠加行集（Union &amp; Union all）</h2><p>不是关系代数</p>
-<ul>
-<li>约束：上下的select字段要一样，字段数量要一样</li>
-<li>区别：<ul>
-<li>Union：等同于针对Union all的输出再进行一次distinct操作</li>
-<li>Union all：不去重</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-2-查找只存在于一张表的数据（差）"><a href="#5-2-查找只存在于一张表的数据（差）" class="headerlink" title="5.2. 查找只存在于一张表的数据（差）"></a>5.2. 查找只存在于一张表的数据（差）</h2><p>MySQL: not in<br>Oracle: minus</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">select deptno</span><br><span class="line">from dept</span><br><span class="line">where deptno not in (</span><br><span class="line">	select deptno in emp</span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
-
-<p>如果<code>deptno</code>不是主键：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">select distinct deptno</span><br><span class="line">from dept</span><br><span class="line">where deptno not in (</span><br><span class="line">	select deptno in emp</span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
-
-<p>如果<code>not in</code>嵌套查询里有空值:</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">select deptno</span><br><span class="line">from dept</span><br><span class="line">where deptno not in (10, 50, null)</span><br></pre></td></tr></table></figure></div>
-
-<p>no=20 not in (10, 50, null)-&gt;(F or F or null)=null，查询结果为空</p>
-<h2 id="5-3-从一个表检索另一个不相关的行（外连接）"><a href="#5-3-从一个表检索另一个不相关的行（外连接）" class="headerlink" title="5.3. 从一个表检索另一个不相关的行（外连接）"></a>5.3. 从一个表检索另一个不相关的行（外连接）</h2><p>左外连接<br>右外连接</p>
-<h2 id="5-4-确定两个表是否有相同的数据"><a href="#5-4-确定两个表是否有相同的数据" class="headerlink" title="5.4. 确定两个表是否有相同的数据"></a>5.4. 确定两个表是否有相同的数据</h2><p>很复杂</p>
-<h2 id="5-5-从多个表种返回缺失的值"><a href="#5-5-从多个表种返回缺失的值" class="headerlink" title="5.5. 从多个表种返回缺失的值"></a>5.5. 从多个表种返回缺失的值</h2><p>全外连接</p>
-<h2 id="5-6-连接和聚合函数的使用"><a href="#5-6-连接和聚合函数的使用" class="headerlink" title="5.6. 连接和聚合函数的使用"></a>5.6. 连接和聚合函数的使用</h2>]]></content>
       <categories>
         <category>2024_Spring_数据库开发</category>
       </categories>
@@ -16394,6 +16423,29 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <p>违反里氏代换原则，使用Vector的地方不能替换成Stack。</p>
 <h2 id="2-8-封装可变性原则"><a href="#2-8-封装可变性原则" class="headerlink" title="2.8. 封装可变性原则"></a>2.8. 封装可变性原则</h2><p>识别出变化，把变化的部分和不变的部分分离</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>0-软件质量与管理</title>
+    <url>/posts/5882e132/</url>
+    <content><![CDATA[<h1 id="十个问题"><a href="#十个问题" class="headerlink" title="十个问题"></a>十个问题</h1><ol>
+<li>什么是过程管理和项目管理？</li>
+<li>软件估算过程中，项目经历/历史数据的作用是什么？如何把历史数据转化成估算结果？隔了3个月，能否保证估算结果一致？</li>
+<li>？</li>
+<li>什么叫做XX管理？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>01-概述</title>
+    <url>/posts/58d2b339/</url>
+    <content><![CDATA[<p><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
   </entry>
   <entry>
     <title>01-设计模式</title>
@@ -16792,29 +16844,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>01-概述</title>
-    <url>/posts/58d2b339/</url>
-    <content><![CDATA[<p><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</p>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件质量管理</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>0-软件质量与管理</title>
-    <url>/posts/5882e132/</url>
-    <content><![CDATA[<h1 id="十个问题"><a href="#十个问题" class="headerlink" title="十个问题"></a>十个问题</h1><ol>
-<li>什么是过程管理和项目管理？</li>
-<li>软件估算过程中，项目经历/历史数据的作用是什么？如何把历史数据转化成估算结果？隔了3个月，能否保证估算结果一致？</li>
-<li>？</li>
-<li>什么叫做XX管理？</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件质量管理</category>
-      </categories>
   </entry>
   <entry>
     <title>02-历史与演变</title>
