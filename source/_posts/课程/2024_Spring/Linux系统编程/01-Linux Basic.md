@@ -10,9 +10,9 @@ cover:
 excerpt: false
 mathjax: true
 comment: true
-title: 0-Linux Basic
-date: 2024-02-26 09:02
-modified: 2024-03-25 10:03
+title: 01-Linux Basic
+date:  2024-02-26 09:02
+modified:  2024-06-13 20:06
 ---
 
 # 1. Linux
@@ -20,8 +20,6 @@ modified: 2024-03-25 10:03
 GPL许可证：可以随便用，但不能拿去卖钱
 
 # 2. 安装系统
-
- .
 
 ## 2.1. 硬盘分区
 
@@ -56,6 +54,9 @@ GPL许可证：可以随便用，但不能拿去卖钱
 # 3. 安装软件
 
 1. 从源码安装，make/cmake
+	1. cmake： 用于生成makefile
+	2. make：编译
+	3. make install：从Makefile中读取指令，将编译好的文件复制到指定的安装目录中
 2. 安装包
 
 tar：打包  
@@ -63,27 +64,36 @@ gz：压缩，只压缩单个文件
 
 # 4. 👍文件类型
 
-LInux下的文件类型：
+Linux下的文件类型：
 
 1. regular file
+	- 普通文件
 	- text, code data, video;
 	- 没有特定的内部结构
-2. character special file
-	- 字符设备
-	- /dev
-3. block special file
-	- 块设备
-	- 位于/dev目录
-4. socket
-	- 网络接口
-5. symbolic file
-	- 符号连接
-6. directory
+2. directory
 	- 目录
 	- 会存放该目录下的文件列表
+3. character special file
+	- 字符设备
+	- /dev
+4. block special file
+	- 块设备
+	- 位于/dev目录
+5. socket
+	- 网络接口
+6. symbolic link
+	- 符号链接
 7. pipe
+	- 管道文件
+	- FIFO
 
 *字符设备和块设备的驱动不同*
+
+- hard link只能给regular file创建，不能跨分区和文件系统
+	- 硬链接依赖于inode号（索引节点号），而在不同的文件系统中，inode号是重新计算的
+	- 不同的磁盘分区有独立的文件系统
+
+[Hard links and soft links in Linux explained | Enable Sysadmin](https://www.redhat.com/sysadmin/linking-linux-explained)
 
 # 5. 目录结构
 
@@ -107,23 +117,23 @@ LInux下的文件类型：
 
 # 6. 👍基本命令
 
-1. ls
+1. ls：list the contents of directories
 	- -l：长列表格式显示
 	- -a：显示隐藏文件
 	- -R：递归显示子目录
 2. cd：change directory
 3. pwd：print work directory
-4. mkdir: make directo 
+4. mkdir: make directory 
 5. rmdir：remove a empty directory
 6. touch：只修改文件的更新时间为当前时间
 7. cp：copy files
 8. mv：move and rename files
 9. ln：link files
-	1. 硬：一个文件有两个名字，需要文件系统支持，不能跨分区
-	2. 软：快捷方式
+	1. hard link：一个文件有两个名字，需要文件系统支持，不能跨分区
+	2. symbolic link：快捷方式
 10. rm: remove files
 11. cat: print file contents
-12. more/less: display files page-by page
+12. more/less: display files page by page
 
 # 7. 文件权限
 
@@ -175,6 +185,9 @@ LInux下的文件类型：
 3. jobs, fg, bg, <\ctrl-z>: job controlling
 4. <span style="background:rgba(3, 135, 102, 0.2)">kill: Send </span><span style="background:rgba(3, 135, 102, 0.2)">the processes</span> identified by PID or JOBSPEC the <span style="background:rgba(3, 135, 102, 0.2)">signal</span> named by  
     SIGSPEC or SIGNUM.
+	1. `kill {{process_id}}`，默认发送SIGTERM，终止进程
+	2. `kill -{{9|KILL}} {{process_id}}`，发送SIGTERM
+	3. `kill -{{17|STOP}} {{process_id}}`，停止进程，知道收到SIGCONT信号
 5. nohup: run a command, ignoring hangup signals
 6. nice, renice: 调整进程优先级
 	- nice: 修改默认优先级
@@ -183,10 +196,14 @@ LInux下的文件类型：
 8. 列出文件: ls
 9. 创建特殊文件: mkdir
 10. 文件操作:cp, mv, rm
-11. 修改文件熟悉: chmod, chown, chgrp, touch
+11. 修改文件: chmod, chown, chgrp, touch
 12. 查找文件: locate, find
+	- find / -name "\*.txt "
+	- find / -type f -exec ls -lh {} \\;
 13. 字符串匹配: grep, egrep
+	- grep "{{search_pattern}}" {{path/to/file}}
 14. 其他: who, whoami, passwd, uname
+	- who: 用于显示当前登录到系统的所有用户的信息
 
 # 9. 系统层次
 
@@ -200,9 +217,14 @@ LInux下的文件类型：
 # 10. 重定向
 
 - 标准输入，标准输出，标准错误
-	- shell提供发功能，不是命令提供
+	- shell提供的功能，不是命令提供
 	- 对应文件描述符：0,1,2
 	- C语言变量：stdin, stdout, stderr
+
+```shell
+kill –HUP 1234 > killout.txt 2> killerr.txt
+kill –HUP 1234 > killout.txt 2>& 1
+```
 
 # 11. 管道
 
@@ -225,7 +247,12 @@ PATH里的目录下的可执行文件都能直接在shell中调用
 # 13. 高级命令和正则表达式
 
 1. find
+	- `find {{root_path}} -name '{{*.ext}}'`
+	- `find / -type f -exec ls -lh {} \;`
 2. grep
 	- 在文件里查找字符串
+	- `grep "{{search_pattern}}" {{path/to/file}}`
 3. sed
 	- 可以用来替换
+	- `sed 's/apple/mango/g'`
+
