@@ -1,18 +1,16 @@
 ---
 aliases: 
-tags:
-  - 2024_Spring_数据库开发
-  - 课程
-categories: 2024_Spring_数据库开发
+tags: 
+categories:
 sticky:
 thumbnail:
 cover: 
 excerpt: false
 mathjax: true
 comment: true
-title: SQL-期末
+title: Untitled
 date:  2024-06-03 14:06
-modified:  2024-06-07 16:06
+modified:  2024-06-03 14:06
 ---
 
 # 编程
@@ -29,7 +27,10 @@ SQL 3选2，标注使用哪个数据库
 
 结构合理、关键字、函数都有分
 
-# 论述
+
+
+
+# 论述：
 
 1. 索引的叶节点
 	- 结构：N个节点，N+1个link
@@ -47,6 +48,6 @@ SQL 3选2，标注使用哪个数据库
 	- 带来新的问题
 4. SQL解释器：**可能会考一个基于成本优化器的成本计算方式**
 	1. 优化的基本逻辑
-	2. 集成成本的优化器
+	2. 基于成本的优化器
 	3. 基于规则的优化器
 5. 建议和想法
