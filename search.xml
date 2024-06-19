@@ -4495,101 +4495,6 @@
       </tags>
   </entry>
   <entry>
-    <title>6-评估之观察用户</title>
-    <url>/posts/907ea608/</url>
-    <content><![CDATA[<h1 id="1-观察用户"><a href="#1-观察用户" class="headerlink" title="1. 观察用户"></a>1. 观察用户</h1><ul>
-<li>观察用户怎样工作是极其重要的可用性方法<ul>
-<li>用户并不总是客观和完整地描述产品的使用情况</li>
-<li>用户可能忽略一些细节</li>
-</ul>
-</li>
-<li>观察法是所有可用性方法中最简单的方法<br>观察高度依赖经验</li>
-</ul>
-<h1 id="2-不同时期观察"><a href="#2-不同时期观察" class="headerlink" title="2. 不同时期观察"></a>2. 不同时期观察</h1><p>初期：理解用户需求<br>开发期：原型<br>后期：评价</p>
-<h1 id="3-观察方式"><a href="#3-观察方式" class="headerlink" title="3. 观察方式"></a>3. 观察方式</h1><ul>
-<li><strong>方法</strong>：<ol>
-<li>真实环境中的观察<ol>
-<li>观察者既是旁观者也是参与者</li>
-</ol>
-</li>
-<li>可控环境观察<ol>
-<li>观察者不能作为参与者</li>
-<li>重点是研究用户执行任务的细节</li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-1-实验室观察"><a href="#3-1-实验室观察" class="headerlink" title="3.1. 实验室观察"></a>3.1. 实验室观察</h2><p>在专门为可用性测试而安装配置的固定设备的环境下进行的观察。</p>
-<ul>
-<li>优点<ol>
-<li>提供可控且一致的评估环境，易于分析</li>
-</ol>
-</li>
-<li>缺点<ol>
-<li>可控且一致的评估环境，人为环境不自然，可能降低结论都普遍性和一致性</li>
-<li>不利于观察多人之间的协作</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-2-实地观察"><a href="#3-2-实地观察" class="headerlink" title="3.2. 实地观察"></a>3.2. 实地观察</h2><ul>
-<li>指在用户的实际环境中观察用户在使用软件时的情况<ul>
-<li>是发现同使用环境有关的问题的最佳手段</li>
-</ul>
-</li>
-</ul>
-<h1 id="4-观察框架"><a href="#4-观察框架" class="headerlink" title="4. 观察框架"></a>4. 观察框架</h1><p>减少干扰、完成目标。<br>观察过程发生的事件都非常复杂且变化迅速，观察框架用于组织观察活动和明确观察重点。</p>
-<h2 id="4-1-Goetz-and-Lecomfte框架"><a href="#4-1-Goetz-and-Lecomfte框架" class="headerlink" title="4.1. Goetz and Lecomfte框架"></a>4.1. Goetz and Lecomfte框架</h2><p>关注事件的上下文、涉及的人员和技术。</p>
-<ul>
-<li>人员：哪些人员在场，有何特征，承担什么角色</li>
-<li>行为：人们说了什么，做了什么，举止如何，是否存在规律性的行为，语调和肢体语言如何</li>
-<li>时间：行为何时发生，是否与其他行为想关联</li>
-<li>地点：行为发生于何处？是否受物理条件的影响？</li>
-<li>原因：行为为何发生？事件或交互的促成因素是什么？不同的人是否有不同的看法？</li>
-<li>方式：行为是如何组织的？受哪些规则或标准的影响？</li>
-</ul>
-<h2 id="4-2-Robson框架"><a href="#4-2-Robson框架" class="headerlink" title="4.2. Robson框架"></a>4.2. Robson框架</h2><p>有助于组织观察和数据搜集活动</p>
-<ul>
-<li>空间：物理空间及其布局如何？</li>
-<li>行为者：涉及哪些人员？人员详情？</li>
-<li>活动：行为者的活动及其原因？</li>
-<li>物体：存在哪些实际物体？</li>
-<li>举止：具体成员的举止如何？</li>
-<li>事件：所观察的是不是特定事件的一部分？</li>
-<li>目标：行为者希望达成什么目标？</li>
-<li>感觉：用户组及个别成员的情绪如何？</li>
-</ul>
-<h1 id="5-难题"><a href="#5-难题" class="headerlink" title="5. 难题"></a>5. 难题</h1><p>观察多久</p>
-<p>降低存在感</p>
-<ul>
-<li>在观察时不知道用户在干什么？（能看到现象，但不知道原因）<ul>
-<li>边做边说</li>
-<li>合作评估：两位用户共同合作，以便他们互相讨论、相互帮助</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-观察和访谈相结合"><a href="#6-观察和访谈相结合" class="headerlink" title="6. 观察和访谈相结合"></a>6. 观察和访谈相结合</h1><p>观察：减少用户被监视的感觉</p>
-<p>访谈：在做了一些任务后再问用户问题</p>
-<p><strong>集体访谈</strong>：一次抓好几个人访谈，<strong>焦点小组</strong>（不同背景的人都有）</p>
-<h1 id="7-数据记录"><a href="#7-数据记录" class="headerlink" title="7. 数据记录"></a>7. 数据记录</h1><p>记录行为，不要带入研究人员主观推测。<br>根据实验环境实际条件选择记录方式。</p>
-<ul>
-<li>类型<ul>
-<li>纸笔</li>
-<li>音视频</li>
-<li>日志和交互记录</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_人机交互</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5-评估之用户测试</title>
     <url>/posts/cbd5957b/</url>
     <content><![CDATA[<h1 id="1-DECIDE评估框架👍"><a href="#1-DECIDE评估框架👍" class="headerlink" title="1. DECIDE评估框架👍"></a>1. DECIDE评估框架👍</h1><p><strong>步骤</strong>：</p>
@@ -4789,6 +4694,101 @@
 </li>
 </ul>
 <h2 id="3-3-总结报告"><a href="#3-3-总结报告" class="headerlink" title="3.3. 总结报告"></a>3.3. 总结报告</h2><p>将测试的结果以书面形式反馈给产品的设计人员，以便于他们对设计进一步的分析和改进。</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6-评估之观察用户</title>
+    <url>/posts/907ea608/</url>
+    <content><![CDATA[<h1 id="1-观察用户"><a href="#1-观察用户" class="headerlink" title="1. 观察用户"></a>1. 观察用户</h1><ul>
+<li>观察用户怎样工作是极其重要的可用性方法<ul>
+<li>用户并不总是客观和完整地描述产品的使用情况</li>
+<li>用户可能忽略一些细节</li>
+</ul>
+</li>
+<li>观察法是所有可用性方法中最简单的方法<br>观察高度依赖经验</li>
+</ul>
+<h1 id="2-不同时期观察"><a href="#2-不同时期观察" class="headerlink" title="2. 不同时期观察"></a>2. 不同时期观察</h1><p>初期：理解用户需求<br>开发期：原型<br>后期：评价</p>
+<h1 id="3-观察方式"><a href="#3-观察方式" class="headerlink" title="3. 观察方式"></a>3. 观察方式</h1><ul>
+<li><strong>方法</strong>：<ol>
+<li>真实环境中的观察<ol>
+<li>观察者既是旁观者也是参与者</li>
+</ol>
+</li>
+<li>可控环境观察<ol>
+<li>观察者不能作为参与者</li>
+<li>重点是研究用户执行任务的细节</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-1-实验室观察"><a href="#3-1-实验室观察" class="headerlink" title="3.1. 实验室观察"></a>3.1. 实验室观察</h2><p>在专门为可用性测试而安装配置的固定设备的环境下进行的观察。</p>
+<ul>
+<li>优点<ol>
+<li>提供可控且一致的评估环境，易于分析</li>
+</ol>
+</li>
+<li>缺点<ol>
+<li>可控且一致的评估环境，人为环境不自然，可能降低结论都普遍性和一致性</li>
+<li>不利于观察多人之间的协作</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-2-实地观察"><a href="#3-2-实地观察" class="headerlink" title="3.2. 实地观察"></a>3.2. 实地观察</h2><ul>
+<li>指在用户的实际环境中观察用户在使用软件时的情况<ul>
+<li>是发现同使用环境有关的问题的最佳手段</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-观察框架"><a href="#4-观察框架" class="headerlink" title="4. 观察框架"></a>4. 观察框架</h1><p>减少干扰、完成目标。<br>观察过程发生的事件都非常复杂且变化迅速，观察框架用于组织观察活动和明确观察重点。</p>
+<h2 id="4-1-Goetz-and-Lecomfte框架"><a href="#4-1-Goetz-and-Lecomfte框架" class="headerlink" title="4.1. Goetz and Lecomfte框架"></a>4.1. Goetz and Lecomfte框架</h2><p>关注事件的上下文、涉及的人员和技术。</p>
+<ul>
+<li>人员：哪些人员在场，有何特征，承担什么角色</li>
+<li>行为：人们说了什么，做了什么，举止如何，是否存在规律性的行为，语调和肢体语言如何</li>
+<li>时间：行为何时发生，是否与其他行为想关联</li>
+<li>地点：行为发生于何处？是否受物理条件的影响？</li>
+<li>原因：行为为何发生？事件或交互的促成因素是什么？不同的人是否有不同的看法？</li>
+<li>方式：行为是如何组织的？受哪些规则或标准的影响？</li>
+</ul>
+<h2 id="4-2-Robson框架"><a href="#4-2-Robson框架" class="headerlink" title="4.2. Robson框架"></a>4.2. Robson框架</h2><p>有助于组织观察和数据搜集活动</p>
+<ul>
+<li>空间：物理空间及其布局如何？</li>
+<li>行为者：涉及哪些人员？人员详情？</li>
+<li>活动：行为者的活动及其原因？</li>
+<li>物体：存在哪些实际物体？</li>
+<li>举止：具体成员的举止如何？</li>
+<li>事件：所观察的是不是特定事件的一部分？</li>
+<li>目标：行为者希望达成什么目标？</li>
+<li>感觉：用户组及个别成员的情绪如何？</li>
+</ul>
+<h1 id="5-难题"><a href="#5-难题" class="headerlink" title="5. 难题"></a>5. 难题</h1><p>观察多久</p>
+<p>降低存在感</p>
+<ul>
+<li>在观察时不知道用户在干什么？（能看到现象，但不知道原因）<ul>
+<li>边做边说</li>
+<li>合作评估：两位用户共同合作，以便他们互相讨论、相互帮助</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-观察和访谈相结合"><a href="#6-观察和访谈相结合" class="headerlink" title="6. 观察和访谈相结合"></a>6. 观察和访谈相结合</h1><p>观察：减少用户被监视的感觉</p>
+<p>访谈：在做了一些任务后再问用户问题</p>
+<p><strong>集体访谈</strong>：一次抓好几个人访谈，<strong>焦点小组</strong>（不同背景的人都有）</p>
+<h1 id="7-数据记录"><a href="#7-数据记录" class="headerlink" title="7. 数据记录"></a>7. 数据记录</h1><p>记录行为，不要带入研究人员主观推测。<br>根据实验环境实际条件选择记录方式。</p>
+<ul>
+<li>类型<ul>
+<li>纸笔</li>
+<li>音视频</li>
+<li>日志和交互记录</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>2023_Fall_人机交互</category>
@@ -6799,121 +6799,6 @@
       </tags>
   </entry>
   <entry>
-    <title>3-Spring MVC</title>
-    <url>/posts/c5191f2c/</url>
-    <content><![CDATA[<h1 id="1-👍基本概念"><a href="#1-👍基本概念" class="headerlink" title="1. 👍基本概念"></a>1. 👍基本概念</h1><p><strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller</p>
-<ul>
-<li>模型model：存储内容，指数据、领域类</li>
-<li>控制器controller：处理用户输入，客户端的请求</li>
-<li>视图view：显示内容</li>
-</ul>
-<p>lombok在编译器自动生成一些样板代码，运行期没用。<br><code>@Slf4j</code>是lombok提供的注解。<br><code>slf4j</code>是一个日志标准，具体实现有很多，如logback,log4j等。<br><code>lombok</code>插件<code>@Data</code>注解</p>
-<p>目前主流的是前后端分离开发。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F11-21-23-58e755321af999ee54aaca9812997e0a-20231231112122-1cafd2.png" alt="image.png"></p>
-<h1 id="2-Model-领域类"><a href="#2-Model-领域类" class="headerlink" title="2. Model 领域类"></a>2. Model 领域类</h1><p>为视图提供数据。</p>
-<ul>
-<li><code>@ModelAttribute</code></li>
-<li><code>@SessionAttributes</code><ul>
-<li>Model属性会复制到<strong>Servlet Request</strong>属性中，这样视图中就可以使用它们用于渲染页面</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-1-Servlet规范"><a href="#2-1-Servlet规范" class="headerlink" title="2.1. Servlet规范"></a>2.1. Servlet规范</h2><ul>
-<li>最小开发单元</li>
-<li><strong>Web容器的实现规范</strong>，与Spring无关<ul>
-<li>Web容器/服务器，里面放Servlet对象</li>
-</ul>
-</li>
-<li>实现<ul>
-<li>tomcat</li>
-<li>jetty</li>
-</ul>
-</li>
-</ul>
-<p><strong>thymeleaf</strong>与<strong>Servlet request</strong>属性协作，<font color="#ff0000">与spring model解耦</font></p>
-<h3 id="2-1-1-Servlet对象"><a href="#2-1-1-Servlet对象" class="headerlink" title="2.1.1. Servlet对象"></a>2.1.1. Servlet对象</h3><ul>
-<li>类型<ul>
-<li>Request</li>
-<li>Response</li>
-</ul>
-</li>
-<li>Servlet对象带有属性(property即<strong>key-value</strong>)</li>
-</ul>
-<h2 id="2-2-ModelAttribute"><a href="#2-2-ModelAttribute" class="headerlink" title="2.2. ModelAttribute"></a>2.2. ModelAttribute</h2><ul>
-<li><code>@ModelAttribute(name = &lt;key&gt;)</code><ul>
-<li>注解返回值为<code>value</code></li>
-</ul>
-</li>
-<li>方法被Spring自动调用</li>
-</ul>
-<h3 id="2-2-1-方法级别"><a href="#2-2-1-方法级别" class="headerlink" title="2.2.1. 方法级别"></a>2.2.1. 方法级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ModelAttribute("attributeName")</span></span><br><span class="line"><span class="keyword">public</span> SomeObject <span class="title function_">methodName</span><span class="params">()</span> {</span><br><span class="line">    <span class="comment">// 创建并返回 SomeObject 对象</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>方法的返回值将被添加到模型中，并使用指定的属性名作为key。在控制器处理请求之前，该方法会先被调用。</p>
-<h3 id="2-2-2-参数级别"><a href="#2-2-2-参数级别" class="headerlink" title="2.2.2. 参数级别"></a>2.2.2. 参数级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute("attributeName")</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>在这种写法中，<code>@ModelAttribute</code>注解标记在方法的参数上，指定了要从模型中获取的属性的名称。参数将被自动绑定到模型中的相应属性，以便在方法内部使用。</p>
-<h3 id="2-2-3-默认命名规则"><a href="#2-2-3-默认命名规则" class="headerlink" title="2.2.3. 默认命名规则"></a>2.2.3. 默认命名规则</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>如果没有指定<code>@ModelAttribute</code>注解的属性名称，Spring MVC会根据参数类型自动推断属性名称，并将其添加到模型中。<br>在上面的示例中，<code>SomeObject</code>类型的参数将使用类名的首字母小写作为属性名称。</p>
-<h1 id="3-MVC请求"><a href="#3-MVC请求" class="headerlink" title="3. MVC请求"></a>3. MVC请求</h1><h2 id="3-1-👍处理过程"><a href="#3-1-👍处理过程" class="headerlink" title="3.1. 👍处理过程"></a>3.1. 👍处理过程</h2><p>客户端请求在<strong>后端的处理过程</strong>，非常重要。<br><strong>核心DispatcherServlet</strong>，是Spring自己实现的Servlet容器。</p>
-<ol>
-<li>Web容器开发的基本单元是Servlet，请求先到servlet。</li>
-<li>mapping根据url把请求转到controller，其中spring框架会做参数解析。</li>
-<li>controller拿到请求和请求参数，把请求和请求参数传给业务层</li>
-<li>业务层处理业务逻辑，可能会做数据持久化访问DAO层</li>
-<li>业务层把处理结构返回控制器</li>
-<li>控制器把结果放回给servlet</li>
-<li>servlet拿到了数据和逻辑视图名，找到视图解析器的第三方库</li>
-<li>视图解析器渲染视图</li>
-</ol>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png" alt="Screenshot from 2023-10-07 18-38-55"></p>
-<h2 id="3-2-MVC请求映射"><a href="#3-2-MVC请求映射" class="headerlink" title="3.2. MVC请求映射"></a>3.2. MVC请求映射</h2><p>来自http协议的标准。<br>注解可以放在类定义上方，也可以放在方法上方。</p>
-<ul>
-<li><code>Requestmapping</code></li>
-<li><code>GetMapping</code></li>
-<li><code>PostMapping</code></li>
-<li><code>DeleteMapping</code></li>
-<li><code>PatchMapping</code></li>
-<li><code>PutMapping</code></li>
-</ul>
-<h2 id="3-3-👍重定向"><a href="#3-3-👍重定向" class="headerlink" title="3.3. 👍重定向"></a>3.3. 👍重定向</h2><p>控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url</p>
-<ul>
-<li>http状态码：302</li>
-<li>控制器<code>return redirect:&lt;url&gt;</code></li>
-</ul>
-<h2 id="3-4-👍Spring-MVC获取参数的集中方式"><a href="#3-4-👍Spring-MVC获取参数的集中方式" class="headerlink" title="3.4. 👍Spring MVC获取参数的集中方式"></a>3.4. 👍Spring MVC获取参数的集中方式</h2><ol>
-<li>表单(form)参数，转成model<ul>
-<li>成员类型可能要自己实现Converter进行转换</li>
-<li>可以用<code>@Valid</code>校验</li>
-<li>form是html里定义的</li>
-</ul>
-</li>
-<li>路径参数<ul>
-<li><code>@PathVariable</code></li>
-<li>例：<code>/book/{id}</code></li>
-</ul>
-</li>
-<li>请求参数/查询参数<ul>
-<li><code>@RequestParam</code></li>
-<li>例：<code>/challenge?model=2</code></li>
-</ul>
-</li>
-<li>json请求体<ul>
-<li><code>@RequestBody</code>，会用到HttpMessageConverter消息转换器</li>
-<li>Rest API</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2-面向切面编程</title>
     <url>/posts/e2853af6/</url>
     <content><![CDATA[<h1 id="1-软件编程方法"><a href="#1-软件编程方法" class="headerlink" title="1. 软件编程方法"></a>1. 软件编程方法</h1><ul>
@@ -7087,6 +6972,121 @@
 <li><code>main</code>和测试</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F28%2F786a0319e1f1f5d0d8e5422f97265926_20230928185355.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3-Spring MVC</title>
+    <url>/posts/c5191f2c/</url>
+    <content><![CDATA[<h1 id="1-👍基本概念"><a href="#1-👍基本概念" class="headerlink" title="1. 👍基本概念"></a>1. 👍基本概念</h1><p><strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller</p>
+<ul>
+<li>模型model：存储内容，指数据、领域类</li>
+<li>控制器controller：处理用户输入，客户端的请求</li>
+<li>视图view：显示内容</li>
+</ul>
+<p>lombok在编译器自动生成一些样板代码，运行期没用。<br><code>@Slf4j</code>是lombok提供的注解。<br><code>slf4j</code>是一个日志标准，具体实现有很多，如logback,log4j等。<br><code>lombok</code>插件<code>@Data</code>注解</p>
+<p>目前主流的是前后端分离开发。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F11-21-23-58e755321af999ee54aaca9812997e0a-20231231112122-1cafd2.png" alt="image.png"></p>
+<h1 id="2-Model-领域类"><a href="#2-Model-领域类" class="headerlink" title="2. Model 领域类"></a>2. Model 领域类</h1><p>为视图提供数据。</p>
+<ul>
+<li><code>@ModelAttribute</code></li>
+<li><code>@SessionAttributes</code><ul>
+<li>Model属性会复制到<strong>Servlet Request</strong>属性中，这样视图中就可以使用它们用于渲染页面</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-1-Servlet规范"><a href="#2-1-Servlet规范" class="headerlink" title="2.1. Servlet规范"></a>2.1. Servlet规范</h2><ul>
+<li>最小开发单元</li>
+<li><strong>Web容器的实现规范</strong>，与Spring无关<ul>
+<li>Web容器/服务器，里面放Servlet对象</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>tomcat</li>
+<li>jetty</li>
+</ul>
+</li>
+</ul>
+<p><strong>thymeleaf</strong>与<strong>Servlet request</strong>属性协作，<font color="#ff0000">与spring model解耦</font></p>
+<h3 id="2-1-1-Servlet对象"><a href="#2-1-1-Servlet对象" class="headerlink" title="2.1.1. Servlet对象"></a>2.1.1. Servlet对象</h3><ul>
+<li>类型<ul>
+<li>Request</li>
+<li>Response</li>
+</ul>
+</li>
+<li>Servlet对象带有属性(property即<strong>key-value</strong>)</li>
+</ul>
+<h2 id="2-2-ModelAttribute"><a href="#2-2-ModelAttribute" class="headerlink" title="2.2. ModelAttribute"></a>2.2. ModelAttribute</h2><ul>
+<li><code>@ModelAttribute(name = &lt;key&gt;)</code><ul>
+<li>注解返回值为<code>value</code></li>
+</ul>
+</li>
+<li>方法被Spring自动调用</li>
+</ul>
+<h3 id="2-2-1-方法级别"><a href="#2-2-1-方法级别" class="headerlink" title="2.2.1. 方法级别"></a>2.2.1. 方法级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ModelAttribute("attributeName")</span></span><br><span class="line"><span class="keyword">public</span> SomeObject <span class="title function_">methodName</span><span class="params">()</span> {</span><br><span class="line">    <span class="comment">// 创建并返回 SomeObject 对象</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>方法的返回值将被添加到模型中，并使用指定的属性名作为key。在控制器处理请求之前，该方法会先被调用。</p>
+<h3 id="2-2-2-参数级别"><a href="#2-2-2-参数级别" class="headerlink" title="2.2.2. 参数级别"></a>2.2.2. 参数级别</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute("attributeName")</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>在这种写法中，<code>@ModelAttribute</code>注解标记在方法的参数上，指定了要从模型中获取的属性的名称。参数将被自动绑定到模型中的相应属性，以便在方法内部使用。</p>
+<h3 id="2-2-3-默认命名规则"><a href="#2-2-3-默认命名规则" class="headerlink" title="2.2.3. 默认命名规则"></a>2.2.3. 默认命名规则</h3><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping("/path")</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">methodName</span><span class="params">(<span class="meta">@ModelAttribute</span> SomeObject object)</span> {</span><br><span class="line">    <span class="comment">// 处理请求</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>如果没有指定<code>@ModelAttribute</code>注解的属性名称，Spring MVC会根据参数类型自动推断属性名称，并将其添加到模型中。<br>在上面的示例中，<code>SomeObject</code>类型的参数将使用类名的首字母小写作为属性名称。</p>
+<h1 id="3-MVC请求"><a href="#3-MVC请求" class="headerlink" title="3. MVC请求"></a>3. MVC请求</h1><h2 id="3-1-👍处理过程"><a href="#3-1-👍处理过程" class="headerlink" title="3.1. 👍处理过程"></a>3.1. 👍处理过程</h2><p>客户端请求在<strong>后端的处理过程</strong>，非常重要。<br><strong>核心DispatcherServlet</strong>，是Spring自己实现的Servlet容器。</p>
+<ol>
+<li>Web容器开发的基本单元是Servlet，请求先到servlet。</li>
+<li>mapping根据url把请求转到controller，其中spring框架会做参数解析。</li>
+<li>controller拿到请求和请求参数，把请求和请求参数传给业务层</li>
+<li>业务层处理业务逻辑，可能会做数据持久化访问DAO层</li>
+<li>业务层把处理结构返回控制器</li>
+<li>控制器把结果放回给servlet</li>
+<li>servlet拿到了数据和逻辑视图名，找到视图解析器的第三方库</li>
+<li>视图解析器渲染视图</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F18%2F10-13-42-ca4167c94583a1706c06fdd1405e61c3-Screenshotundefinedfromundefined2023-10-07undefined18-38-55-eb0c99.png" alt="Screenshot from 2023-10-07 18-38-55"></p>
+<h2 id="3-2-MVC请求映射"><a href="#3-2-MVC请求映射" class="headerlink" title="3.2. MVC请求映射"></a>3.2. MVC请求映射</h2><p>来自http协议的标准。<br>注解可以放在类定义上方，也可以放在方法上方。</p>
+<ul>
+<li><code>Requestmapping</code></li>
+<li><code>GetMapping</code></li>
+<li><code>PostMapping</code></li>
+<li><code>DeleteMapping</code></li>
+<li><code>PatchMapping</code></li>
+<li><code>PutMapping</code></li>
+</ul>
+<h2 id="3-3-👍重定向"><a href="#3-3-👍重定向" class="headerlink" title="3.3. 👍重定向"></a>3.3. 👍重定向</h2><p>控制器处理完成后可以返回逻辑视图名，也可以重定向到其他url</p>
+<ul>
+<li>http状态码：302</li>
+<li>控制器<code>return redirect:&lt;url&gt;</code></li>
+</ul>
+<h2 id="3-4-👍Spring-MVC获取参数的集中方式"><a href="#3-4-👍Spring-MVC获取参数的集中方式" class="headerlink" title="3.4. 👍Spring MVC获取参数的集中方式"></a>3.4. 👍Spring MVC获取参数的集中方式</h2><ol>
+<li>表单(form)参数，转成model<ul>
+<li>成员类型可能要自己实现Converter进行转换</li>
+<li>可以用<code>@Valid</code>校验</li>
+<li>form是html里定义的</li>
+</ul>
+</li>
+<li>路径参数<ul>
+<li><code>@PathVariable</code></li>
+<li>例：<code>/book/{id}</code></li>
+</ul>
+</li>
+<li>请求参数/查询参数<ul>
+<li><code>@RequestParam</code></li>
+<li>例：<code>/challenge?model=2</code></li>
+</ul>
+</li>
+<li>json请求体<ul>
+<li><code>@RequestBody</code>，会用到HttpMessageConverter消息转换器</li>
+<li>Rest API</li>
+</ul>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -7651,6 +7651,129 @@
       </tags>
   </entry>
   <entry>
+    <title>7-配置属性</title>
+    <url>/posts/c75c265a/</url>
+    <content><![CDATA[<h1 id="1-👍属性来源"><a href="#1-👍属性来源" class="headerlink" title="1. 👍属性来源"></a>1. 👍属性来源</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
+<ol>
+<li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
+<li><code>server.port = 8090</code></li>
+</ul>
+</li>
+<li><strong>命令行参数</strong><code>commandLineArgs</code>，在程序中直接获取<ul>
+<li><code>java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar -- server.port=8081</code></li>
+</ul>
+</li>
+<li><strong>JVM系统参数</strong> <code>-D</code><ul>
+<li><code>java -Dserver.port=8091 -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
+</ul>
+</li>
+<li><strong>操作系统环境变量</strong><ul>
+<li><code>set SERVER_PORT=8082、java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
+</ul>
+</li>
+</ol>
+<h1 id="2-YAML文件"><a href="#2-YAML文件" class="headerlink" title="2. YAML文件"></a>2. YAML文件</h1><ul>
+<li>使用缩进表示层级关系，不允许使用Tab建，<strong>只能使用空格</strong>(一般2个空格)</li>
+<li># 表示注释</li>
+<li>对象：键值对，使用冒号结构表示<ul>
+<li>冒号后面加空格</li>
+<li><code>animal: pets</code></li>
+<li><code>hash: {name: Steve, foo: bar}</code></li>
+</ul>
+</li>
+<li>一般数组：一组连线开头的行，构成一个数组</li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Cat</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Dog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Goldfish</span></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>行内数组：<code>animal: [Cat, Dog]</code></li>
+</ul>
+<h1 id="3-配置数据源"><a href="#3-配置数据源" class="headerlink" title="3. 配置数据源"></a>3. 配置数据源</h1><ul>
+<li>org.h2.Driver</li>
+<li>com.mysql.cj.jdbc.Driver</li>
+</ul>
+<p>不一定要在application.yaml里显式指定，只添加对应依赖spring也能识别</p>
+<h1 id="4-建立HTTPS安全通道"><a href="#4-建立HTTPS安全通道" class="headerlink" title="4. 建立HTTPS安全通道"></a>4. 建立HTTPS安全通道</h1><ul>
+<li>解决客户端和服务端传输数据时的加密问题<ul>
+<li>HTTP明文传输数据，不安全</li>
+<li>TLS/SSL具有身份认证、信息加密和完整性校验</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F609986015a78cfd18e72b154942d8f25_20231026200319.png" alt="image.png"></p>
+<p><strong>SSL(Secure Sockets Layer 安全套接字协议 )<strong>，及其继任者</strong>传输层安全（Transport Layer Security ， TLS）</strong> 是为网络通信提供安全及数据完整性的一种安全协议。TLS 与SSL在传输层与应用层之间对网 络连接进行加密。</p>
+<h2 id="4-1-单向认证"><a href="#4-1-单向认证" class="headerlink" title="4.1. 单向认证"></a>4.1. 单向认证</h2><ul>
+<li>客户端校验服务端证书的合法性，服务端不需要校验客户端</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fb843eb927502da6e44df35255de08531_20231026200909.png" alt="image.png"></p>
+<h2 id="4-2-双向认证"><a href="#4-2-双向认证" class="headerlink" title="4.2. 双向认证"></a>4.2. 双向认证</h2><ul>
+<li>客户端要校验服务端，服务端要校验客户端的证书</li>
+</ul>
+<p>相对复杂</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fc877b90370c978ce90e18d403f7c8f2f_20231026201330.png" alt="image.png"></p>
+<h1 id="5-keytool"><a href="#5-keytool" class="headerlink" title="5. keytool"></a>5. keytool</h1><ul>
+<li>是JDK自带的一个密钥库管理工具，我们可以用它生产密钥库、管理证书</li>
+</ul>
+<h1 id="6-从配置属性获取值-自定义属性"><a href="#6-从配置属性获取值-自定义属性" class="headerlink" title="6. 从配置属性获取值/自定义属性"></a>6. 从配置属性获取值/自定义属性</h1><p><code>@ConfigurationProperties(prefix=&lt;&gt;)</code>从<code>yaml</code>中加载属性值</p>
+<p>通过application.yml文件提供值<br>环境变量：taco_orders_pageSize=12<br>程序参数：–taco.orders.pageSize=13<br>访问：<a class="link" href="http://localhost:8080/orders">http://localhost:8080/orders <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="7-多个Profile文件"><a href="#7-多个Profile文件" class="headerlink" title="7. 多个Profile文件"></a>7. 多个Profile文件</h1><h2 id="7-1-命名规则"><a href="#7-1-命名规则" class="headerlink" title="7.1. 命名规则"></a>7.1. 命名规则</h2><p>Profile文件命名有固定规则</p>
+<ul>
+<li>定义特定profile的属性，通过使用不同的YAML或属性文件  <ul>
+<li>application-{profile名}.properties  </li>
+<li>application-{profile名}.yml</li>
+</ul>
+</li>
+<li>也可以将不同profile属性放到同一个YAML文件中，使用3个短线进行分隔，并且使用spring.profiles属性来命名profile</li>
+</ul>
+<h2 id="7-2-激活Profile"><a href="#7-2-激活Profile" class="headerlink" title="7.2. 激活Profile"></a>7.2. 激活Profile</h2><ul>
+<li>环境变量：spring_profiles_active=prod</li>
+<li>命令行参数：java -jar &lt;&gt;.jar –spring.profiles.active=prod</li>
+<li>JVM系统属性：java -Dspring.profiles.active=prod -jar &lt;&gt;.jar</li>
+<li>使用注解<code>@Profile</code>条<strong>件化地创建Bean</strong>，可以加到<code>@Configuration</code>或<code>@Bean</code>上<ul>
+<li>场景：测试环境下初始化数据库填充测试数据，但是在生产环境下不能乱初始化</li>
+</ul>
+</li>
+</ul>
+<h1 id="8-配置日志"><a href="#8-配置日志" class="headerlink" title="8. 配置日志"></a>8. 配置日志</h1><ul>
+<li>默认Logback,配置文件logback.xml</li>
+<li>默认日志级别: INFO</li>
+<li>日志配置(application.yml)<ul>
+<li>可以根据不同包路径设置不同日志级别</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">root:</span> <span class="string">WARN</span></span><br><span class="line">    <span class="attr">org:</span></span><br><span class="line">      <span class="attr">Springframework:</span></span><br><span class="line">	    <span class="attr">security:</span> <span class="string">DEBUG</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="9-👍Actuator"><a href="#9-👍Actuator" class="headerlink" title="9. 👍Actuator"></a>9. 👍Actuator</h1><ul>
+<li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
+<li>/actuator，查询所有暴露端点</li>
+<li><strong>/actuator/configprops</strong>，查询配置属性</li>
+<li>/actuator/health，健康检查</li>
+<li>/actuator/beans，包含bean依赖关系</li>
+</ul>
+</li>
+<li>想要获得更多端点如何配置：<code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">"*"</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="10-分布式系统配置数据的获取"><a href="#10-分布式系统配置数据的获取" class="headerlink" title="10. 分布式系统配置数据的获取"></a>10. 分布式系统配置数据的获取</h1><ul>
+<li>配置服务： Config Server<ul>
+<li>给所有微服务提供配置数据</li>
+<li>配置可能来自文件系统，git仓库等</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F16-29-03-ac42f08cd7916e48e1cfabe5ef89772e-20231231162903-1ef9fd.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>8-REST API</title>
     <url>/posts/c9789ed0/</url>
     <content><![CDATA[<h1 id="1-不同开发模式"><a href="#1-不同开发模式" class="headerlink" title="1. 不同开发模式"></a>1. 不同开发模式</h1><h2 id="1-1-前后端不分离"><a href="#1-1-前后端不分离" class="headerlink" title="1.1. 前后端不分离"></a>1.1. 前后端不分离</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F02%2F5ec4e681073f4e19bdfa388580e8f2ac_20231102185803.png" alt="image.png"></p>
@@ -7844,129 +7967,6 @@
 <p>getForObject：只获取body<br>getForEntity：获取完整responseEntity，可以获取headers</p>
 <h2 id="4-2-使用Feign调用REST-API"><a href="#4-2-使用Feign调用REST-API" class="headerlink" title="4.2. 使用Feign调用REST API"></a>4.2. 使用Feign调用REST API</h2><p>用得更多，实现调用远程API就像调用本地对象。</p>
 <div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-feign<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></div>]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>7-配置属性</title>
-    <url>/posts/c75c265a/</url>
-    <content><![CDATA[<h1 id="1-👍属性来源"><a href="#1-👍属性来源" class="headerlink" title="1. 👍属性来源"></a>1. 👍属性来源</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
-<ol>
-<li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
-<li><code>server.port = 8090</code></li>
-</ul>
-</li>
-<li><strong>命令行参数</strong><code>commandLineArgs</code>，在程序中直接获取<ul>
-<li><code>java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar -- server.port=8081</code></li>
-</ul>
-</li>
-<li><strong>JVM系统参数</strong> <code>-D</code><ul>
-<li><code>java -Dserver.port=8091 -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
-</ul>
-</li>
-<li><strong>操作系统环境变量</strong><ul>
-<li><code>set SERVER_PORT=8082、java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
-</ul>
-</li>
-</ol>
-<h1 id="2-YAML文件"><a href="#2-YAML文件" class="headerlink" title="2. YAML文件"></a>2. YAML文件</h1><ul>
-<li>使用缩进表示层级关系，不允许使用Tab建，<strong>只能使用空格</strong>(一般2个空格)</li>
-<li># 表示注释</li>
-<li>对象：键值对，使用冒号结构表示<ul>
-<li>冒号后面加空格</li>
-<li><code>animal: pets</code></li>
-<li><code>hash: {name: Steve, foo: bar}</code></li>
-</ul>
-</li>
-<li>一般数组：一组连线开头的行，构成一个数组</li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Cat</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Dog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Goldfish</span></span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li>行内数组：<code>animal: [Cat, Dog]</code></li>
-</ul>
-<h1 id="3-配置数据源"><a href="#3-配置数据源" class="headerlink" title="3. 配置数据源"></a>3. 配置数据源</h1><ul>
-<li>org.h2.Driver</li>
-<li>com.mysql.cj.jdbc.Driver</li>
-</ul>
-<p>不一定要在application.yaml里显式指定，只添加对应依赖spring也能识别</p>
-<h1 id="4-建立HTTPS安全通道"><a href="#4-建立HTTPS安全通道" class="headerlink" title="4. 建立HTTPS安全通道"></a>4. 建立HTTPS安全通道</h1><ul>
-<li>解决客户端和服务端传输数据时的加密问题<ul>
-<li>HTTP明文传输数据，不安全</li>
-<li>TLS/SSL具有身份认证、信息加密和完整性校验</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F609986015a78cfd18e72b154942d8f25_20231026200319.png" alt="image.png"></p>
-<p><strong>SSL(Secure Sockets Layer 安全套接字协议 )<strong>，及其继任者</strong>传输层安全（Transport Layer Security ， TLS）</strong> 是为网络通信提供安全及数据完整性的一种安全协议。TLS 与SSL在传输层与应用层之间对网 络连接进行加密。</p>
-<h2 id="4-1-单向认证"><a href="#4-1-单向认证" class="headerlink" title="4.1. 单向认证"></a>4.1. 单向认证</h2><ul>
-<li>客户端校验服务端证书的合法性，服务端不需要校验客户端</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fb843eb927502da6e44df35255de08531_20231026200909.png" alt="image.png"></p>
-<h2 id="4-2-双向认证"><a href="#4-2-双向认证" class="headerlink" title="4.2. 双向认证"></a>4.2. 双向认证</h2><ul>
-<li>客户端要校验服务端，服务端要校验客户端的证书</li>
-</ul>
-<p>相对复杂</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fc877b90370c978ce90e18d403f7c8f2f_20231026201330.png" alt="image.png"></p>
-<h1 id="5-keytool"><a href="#5-keytool" class="headerlink" title="5. keytool"></a>5. keytool</h1><ul>
-<li>是JDK自带的一个密钥库管理工具，我们可以用它生产密钥库、管理证书</li>
-</ul>
-<h1 id="6-从配置属性获取值-自定义属性"><a href="#6-从配置属性获取值-自定义属性" class="headerlink" title="6. 从配置属性获取值/自定义属性"></a>6. 从配置属性获取值/自定义属性</h1><p><code>@ConfigurationProperties(prefix=&lt;&gt;)</code>从<code>yaml</code>中加载属性值</p>
-<p>通过application.yml文件提供值<br>环境变量：taco_orders_pageSize=12<br>程序参数：–taco.orders.pageSize=13<br>访问：<a class="link" href="http://localhost:8080/orders">http://localhost:8080/orders <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="7-多个Profile文件"><a href="#7-多个Profile文件" class="headerlink" title="7. 多个Profile文件"></a>7. 多个Profile文件</h1><h2 id="7-1-命名规则"><a href="#7-1-命名规则" class="headerlink" title="7.1. 命名规则"></a>7.1. 命名规则</h2><p>Profile文件命名有固定规则</p>
-<ul>
-<li>定义特定profile的属性，通过使用不同的YAML或属性文件  <ul>
-<li>application-{profile名}.properties  </li>
-<li>application-{profile名}.yml</li>
-</ul>
-</li>
-<li>也可以将不同profile属性放到同一个YAML文件中，使用3个短线进行分隔，并且使用spring.profiles属性来命名profile</li>
-</ul>
-<h2 id="7-2-激活Profile"><a href="#7-2-激活Profile" class="headerlink" title="7.2. 激活Profile"></a>7.2. 激活Profile</h2><ul>
-<li>环境变量：spring_profiles_active=prod</li>
-<li>命令行参数：java -jar &lt;&gt;.jar –spring.profiles.active=prod</li>
-<li>JVM系统属性：java -Dspring.profiles.active=prod -jar &lt;&gt;.jar</li>
-<li>使用注解<code>@Profile</code>条<strong>件化地创建Bean</strong>，可以加到<code>@Configuration</code>或<code>@Bean</code>上<ul>
-<li>场景：测试环境下初始化数据库填充测试数据，但是在生产环境下不能乱初始化</li>
-</ul>
-</li>
-</ul>
-<h1 id="8-配置日志"><a href="#8-配置日志" class="headerlink" title="8. 配置日志"></a>8. 配置日志</h1><ul>
-<li>默认Logback,配置文件logback.xml</li>
-<li>默认日志级别: INFO</li>
-<li>日志配置(application.yml)<ul>
-<li>可以根据不同包路径设置不同日志级别</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">root:</span> <span class="string">WARN</span></span><br><span class="line">    <span class="attr">org:</span></span><br><span class="line">      <span class="attr">Springframework:</span></span><br><span class="line">	    <span class="attr">security:</span> <span class="string">DEBUG</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="9-👍Actuator"><a href="#9-👍Actuator" class="headerlink" title="9. 👍Actuator"></a>9. 👍Actuator</h1><ul>
-<li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
-<li>/actuator，查询所有暴露端点</li>
-<li><strong>/actuator/configprops</strong>，查询配置属性</li>
-<li>/actuator/health，健康检查</li>
-<li>/actuator/beans，包含bean依赖关系</li>
-</ul>
-</li>
-<li>想要获得更多端点如何配置：<code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">"*"</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="10-分布式系统配置数据的获取"><a href="#10-分布式系统配置数据的获取" class="headerlink" title="10. 分布式系统配置数据的获取"></a>10. 分布式系统配置数据的获取</h1><ul>
-<li>配置服务： Config Server<ul>
-<li>给所有微服务提供配置数据</li>
-<li>配置可能来自文件系统，git仓库等</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F16-29-03-ac42f08cd7916e48e1cfabe5ef89772e-20231231162903-1ef9fd.png" alt="image.png"></p>
-]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
       </categories>
@@ -11416,70 +11416,6 @@
       </tags>
   </entry>
   <entry>
-    <title>期末组成</title>
-    <url>/posts/eb28109d/</url>
-    <content><![CDATA[<h1 id="商业模式部分期末考核（50分）"><a href="#商业模式部分期末考核（50分）" class="headerlink" title="商业模式部分期末考核（50分）"></a>商业模式部分期末考核（50分）</h1><ul>
-<li><p>概述：基于给定背景和题目的知识点运用</p>
-</li>
-<li><p>商业模式画布绘制+需求类型 – 20</p>
-</li>
-<li><p>商业模式类型讨论 – 10</p>
-<ul>
-<li>优先考察与互联网最相关的三个</li>
-</ul>
-</li>
-<li><p>商业模式设计 – 10</p>
-<ul>
-<li>六种设计手段选一个考核</li>
-</ul>
-</li>
-<li><p>商业模式评估 – 10</p>
-<ul>
-<li>四种评估手段选一个考核（复杂的手段会被适当地提示和约减）</li>
-</ul>
-</li>
-</ul>
-<h1 id="需求部分"><a href="#需求部分" class="headerlink" title="需求部分"></a>需求部分</h1><ul>
-<li>需求获取（30分）<ul>
-<li>需求获取上半段（20分）<ul>
-<li>确定项目前景与范围（10分） – 目标模型</li>
-<li>涉众分析（10分） – <del>涉众识别之ADM模型</del>、涉众评估之Power-Interest、Power-Attitude模型</li>
-<li>涉众共赢之Stakeholder-Issue模型</li>
-</ul>
-</li>
-<li>需求获取下半段（10分）<ul>
-<li>面谈、原型、观察三大获取手段的联系与区别</li>
-<li>面谈问题的设计</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>需求分析（10分）<ul>
-<li>需求分析根本任务与活动</li>
-<li><del>基于UML软件建模的需求细化 – 概念类图、顺序图、状态图</del></li>
-</ul>
-</li>
-<li>需求规格说明</li>
-<li>需求验证与管理（10分）<ul>
-<li>需求验证基本活动</li>
-<li>需求管理任务与活动</li>
-<li>需求变更控制过程、组织与注意事项</li>
-</ul>
-</li>
-</ul>
-<h1 id="去年需求题目"><a href="#去年需求题目" class="headerlink" title="去年需求题目"></a>去年需求题目</h1><p>以open AI为背景的材料。 </p>
-<p>1 老规矩，画商业模式画布。给出一个相关的业务需求和用户需求，并简述它们之间的区别。 </p>
-<p>2 平台模式，长尾模式，免费模式，任选一个，给出核心资源和关键业务（默写教材），并结合材料分析（特别的，如果选择免费模式的话，要给出免费模式的三个可能子类，并选择其中一个来分析）</p>
-<p>3 考的模型构建。要求给出模型构建的四个规模。另外指定局部材料出现了一些变更，要求将这些变更归类入商业模式画布的某些元素，并指出这些变动对其他商业模式画布中的元素的影响。 </p>
-<p>4 考了SWOT分析，要求给出SWOT的定义，并结合材料对SWOT四个方向任取商业模式画布中的任一个元素进行分析。 </p>
-<p>5 结合指定局部材料，考察目标模型（画图），指出哪些目标冲突？哪些目标支持？</p>
-<p>6 题给材料，考察power interest和power Attitude的模型，先默上教材上的模型，然后结合题给材料分析。</p>
-<p>7 题给材料，根据题给材料设计面谈问卷，逐步对问题，目标，解决问题进行验证。 </p>
-<p>8 题给材料，要求先默写需求变更的五大注意事项，然后结合提给材料和前面的材料，谈谈你对大模型的某一发展方向（具体来说是降本增效，开发规模相对小但针对性更强的模型）的看法（感觉主要是空话，应该是送分的）。</p>
-<p>9 题给材料，内容是关于GPT的按token计费方式，根据题给材料画出系统顺序图</p>
-]]></content>
-  </entry>
-  <entry>
     <title>商业模式部分复习</title>
     <url>/posts/a8a21419/</url>
     <content><![CDATA[<ul>
@@ -11642,6 +11578,70 @@
         <tag>2023_Fall_需求与商业模式创新</tag>
         <tag>ikuang</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>期末组成</title>
+    <url>/posts/eb28109d/</url>
+    <content><![CDATA[<h1 id="商业模式部分期末考核（50分）"><a href="#商业模式部分期末考核（50分）" class="headerlink" title="商业模式部分期末考核（50分）"></a>商业模式部分期末考核（50分）</h1><ul>
+<li><p>概述：基于给定背景和题目的知识点运用</p>
+</li>
+<li><p>商业模式画布绘制+需求类型 – 20</p>
+</li>
+<li><p>商业模式类型讨论 – 10</p>
+<ul>
+<li>优先考察与互联网最相关的三个</li>
+</ul>
+</li>
+<li><p>商业模式设计 – 10</p>
+<ul>
+<li>六种设计手段选一个考核</li>
+</ul>
+</li>
+<li><p>商业模式评估 – 10</p>
+<ul>
+<li>四种评估手段选一个考核（复杂的手段会被适当地提示和约减）</li>
+</ul>
+</li>
+</ul>
+<h1 id="需求部分"><a href="#需求部分" class="headerlink" title="需求部分"></a>需求部分</h1><ul>
+<li>需求获取（30分）<ul>
+<li>需求获取上半段（20分）<ul>
+<li>确定项目前景与范围（10分） – 目标模型</li>
+<li>涉众分析（10分） – <del>涉众识别之ADM模型</del>、涉众评估之Power-Interest、Power-Attitude模型</li>
+<li>涉众共赢之Stakeholder-Issue模型</li>
+</ul>
+</li>
+<li>需求获取下半段（10分）<ul>
+<li>面谈、原型、观察三大获取手段的联系与区别</li>
+<li>面谈问题的设计</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>需求分析（10分）<ul>
+<li>需求分析根本任务与活动</li>
+<li><del>基于UML软件建模的需求细化 – 概念类图、顺序图、状态图</del></li>
+</ul>
+</li>
+<li>需求规格说明</li>
+<li>需求验证与管理（10分）<ul>
+<li>需求验证基本活动</li>
+<li>需求管理任务与活动</li>
+<li>需求变更控制过程、组织与注意事项</li>
+</ul>
+</li>
+</ul>
+<h1 id="去年需求题目"><a href="#去年需求题目" class="headerlink" title="去年需求题目"></a>去年需求题目</h1><p>以open AI为背景的材料。 </p>
+<p>1 老规矩，画商业模式画布。给出一个相关的业务需求和用户需求，并简述它们之间的区别。 </p>
+<p>2 平台模式，长尾模式，免费模式，任选一个，给出核心资源和关键业务（默写教材），并结合材料分析（特别的，如果选择免费模式的话，要给出免费模式的三个可能子类，并选择其中一个来分析）</p>
+<p>3 考的模型构建。要求给出模型构建的四个规模。另外指定局部材料出现了一些变更，要求将这些变更归类入商业模式画布的某些元素，并指出这些变动对其他商业模式画布中的元素的影响。 </p>
+<p>4 考了SWOT分析，要求给出SWOT的定义，并结合材料对SWOT四个方向任取商业模式画布中的任一个元素进行分析。 </p>
+<p>5 结合指定局部材料，考察目标模型（画图），指出哪些目标冲突？哪些目标支持？</p>
+<p>6 题给材料，考察power interest和power Attitude的模型，先默上教材上的模型，然后结合题给材料分析。</p>
+<p>7 题给材料，根据题给材料设计面谈问卷，逐步对问题，目标，解决问题进行验证。 </p>
+<p>8 题给材料，要求先默写需求变更的五大注意事项，然后结合提给材料和前面的材料，谈谈你对大模型的某一发展方向（具体来说是降本增效，开发规模相对小但针对性更强的模型）的看法（感觉主要是空话，应该是送分的）。</p>
+<p>9 题给材料，内容是关于GPT的按token计费方式，根据题给材料画出系统顺序图</p>
+]]></content>
   </entry>
   <entry>
     <title>需求部分复习</title>
@@ -12478,78 +12478,6 @@
       </tags>
   </entry>
   <entry>
-    <title>04_语义分析</title>
-    <url>/posts/f92c8329/</url>
-    <content><![CDATA[<h1 id="1-符号表"><a href="#1-符号表" class="headerlink" title="1. 符号表"></a>1. 符号表</h1><h1 id="2-属性文法"><a href="#2-属性文法" class="headerlink" title="2. 属性文法"></a>2. 属性文法</h1><ul>
-<li>作用：为上下文无关文法赋予<strong>语义</strong>（你关心的东西）。</li>
-</ul>
-<h2 id="2-1-属性-动作"><a href="#2-1-属性-动作" class="headerlink" title="2.1. 属性+动作"></a>2.1. 属性+动作</h2><ul>
-<li><strong>基本思想</strong>：动作嵌入展开式右部，一个动作在它左边的所有文法符号都处理过之后立刻执行</li>
-</ul>
-<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="10.087ex" height="1.57ex" role="img" focusable="false" viewBox="0 -683 4458.6 694"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(1036.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2314.6,0)"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(3166.6,0)"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g><g data-mml-node="mi" transform="translate(3695.6,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g></g></g></svg></mjx-container></p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">B</span><span class="params">()</span> {</span><br><span class="line">	X</span><br><span class="line">	a <span class="comment">// X处理完后执行a</span></span><br><span class="line">	Y</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>Listener无返回值，属性文法可以实现让非终结符有返回值</p>
-<h2 id="2-2-综合属性和继承属性"><a href="#2-2-综合属性和继承属性" class="headerlink" title="2.2. 综合属性和继承属性"></a>2.2. 综合属性和继承属性</h2><ul>
-<li><strong>综合属性</strong>：依赖自己、子节点，依赖自下而上，把动作放在产生式的最后<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="9.856ex" height="1.645ex" role="img" focusable="false" viewBox="0 -716 4356.6 727"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(1027.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2305.6,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(3064.6,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(3827.6,0)"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g></g></g></svg></mjx-container><ul>
-<li>在antlr4中使用返回值传递</li>
-</ul>
-</li>
-<li><strong>继承属性</strong>：依赖父节点、兄弟节点(左，右)、自身的属性来定义<ul>
-<li>在antlr4中使用参数传递</li>
-</ul>
-</li>
-</ul>
-<p>往往在属性结构与树的结构<font color="#ff0000">不匹配</font>时，才会采用继承属性。</p>
-<p>antlr4底层会改写左递归，在属性文法中若有参数会改写失败</p>
-<p><font color="#ff0000">依赖图</font>用于确定一棵给定的语法分析树中各个属性实例之间的依赖关系<br><font color="#ff0000">信息流向</font>: 先从左向右、从上到下传递信息, 再从下到上传递信息</p>
-<h2 id="2-3-语法制导定义"><a href="#2-3-语法制导定义" class="headerlink" title="2.3. 语法制导定义"></a>2.3. 语法制导定义</h2><ul>
-<li><code>Syntax Directed Defination</code>：是一个上下文无关文法和<strong>属性及规则</strong>的结合。<ul>
-<li>唯一确定了语法分析树上每个<strong>非终结符</strong>节点的属性值</li>
-<li>SDD没有规定以什么方式、顺序计算属性</li>
-</ul>
-</li>
-</ul>
-
-
-<h2 id="2-4-S-属性定义"><a href="#2-4-S-属性定义" class="headerlink" title="2.4. S-属性定义"></a>2.4. S-属性定义</h2><ul>
-<li>如果一个 SDD 的每个属性都是综合属性, 则它是 S 属性定义。</li>
-</ul>
-<h2 id="2-5-L-属性定义"><a href="#2-5-L-属性定义" class="headerlink" title="2.5. L-属性定义"></a>2.5. L-属性定义</h2><h2 id="2-6-后缀表示-Postfix-Notation"><a href="#2-6-后缀表示-Postfix-Notation" class="headerlink" title="2.6. 后缀表示 (Postfix Notation)"></a>2.6. 后缀表示 (Postfix Notation)</h2><ol>
-<li>如果E是变量或常量，则E的后缀就是E本身。</li>
-<li>如果E是形如<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="7.55ex" height="1.977ex" role="img" focusable="false" viewBox="0 -680 3337.1 874"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mi" transform="translate(1174.6,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(1659.6,0)"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="msub" transform="translate(2162.6,0)"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container>的表达式，则E的后缀表示是$E_1^<code>  E_2^</code>op<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="6.787ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 3000 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">，</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">其</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">中</text></g></g></g></svg></mjx-container>E_1^<code> E_2^</code><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 1000 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">是</text></g></g></g></svg></mjx-container>E_1 E_2$的后缀表达式。  </li>
-<li>如果E是形如<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.418ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1952.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msub" transform="translate(389,0)"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mo" transform="translate(1563.6,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>的表达式，则E的后缀表示是<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.657ex" height="1.878ex" role="img" focusable="false" viewBox="0 -680 1174.6 830"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></svg></mjx-container>的后缀表示。</li>
-</ol>
-<h1 id="3-类型检查"><a href="#3-类型检查" class="headerlink" title="3. 类型检查"></a>3. 类型检查</h1><p>比较简单</p>
-<p>《编程语言实现模式》第八章：静态类型检查</p>
-<ul>
-<li>Offline：先有完整的语法树，再去遍历<ul>
-<li>ParseTreeWalker</li>
-</ul>
-</li>
-<li>Online：在语法分析树构建的过程中嵌入<ul>
-<li>Attribute Grammar（手动在g4中嵌入）</li>
-<li>addParseListener（把语法文件和java文件分开，antlr4自动嵌入）</li>
-</ul>
-</li>
-</ul>
-<h1 id="4-语法制导的翻译方案SDT"><a href="#4-语法制导的翻译方案SDT" class="headerlink" title="4. 语法制导的翻译方案SDT"></a>4. 语法制导的翻译方案SDT</h1><ul>
-<li>syntax-directed translation scheme</li>
-</ul>
-<p>例：<br>    有小数点的二进制数<code>-101.101</code>，怎么翻译成十进制？</p>
-<p>设定属性</p>
-<p>龙书2.3、5.4</p>
-<p>与SDD的主要区别：显示指定了语义片段执行的顺序</p>
-]]></content>
-      <categories>
-        <category>2023_Spring_编译原理</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Spring编译原理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>03_语法分析</title>
     <url>/posts/83a9eb1d/</url>
     <content><![CDATA[<p>语法分析部分最困难:解析表达式</p>
@@ -13070,6 +12998,78 @@
 <p>注意区分文法和语言。</p>
 <p>语言L，如果能写出LR1文法，一定可以写成SLR1文法（但可能很复杂）</p>
 </p></p>]]></content>
+      <categories>
+        <category>2023_Spring_编译原理</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Spring编译原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>04_语义分析</title>
+    <url>/posts/f92c8329/</url>
+    <content><![CDATA[<h1 id="1-符号表"><a href="#1-符号表" class="headerlink" title="1. 符号表"></a>1. 符号表</h1><h1 id="2-属性文法"><a href="#2-属性文法" class="headerlink" title="2. 属性文法"></a>2. 属性文法</h1><ul>
+<li>作用：为上下文无关文法赋予<strong>语义</strong>（你关心的东西）。</li>
+</ul>
+<h2 id="2-1-属性-动作"><a href="#2-1-属性-动作" class="headerlink" title="2.1. 属性+动作"></a>2.1. 属性+动作</h2><ul>
+<li><strong>基本思想</strong>：动作嵌入展开式右部，一个动作在它左边的所有文法符号都处理过之后立刻执行</li>
+</ul>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="10.087ex" height="1.57ex" role="img" focusable="false" viewBox="0 -683 4458.6 694"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(1036.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2314.6,0)"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(3166.6,0)"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g><g data-mml-node="mi" transform="translate(3695.6,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g></g></g></svg></mjx-container></p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">B</span><span class="params">()</span> {</span><br><span class="line">	X</span><br><span class="line">	a <span class="comment">// X处理完后执行a</span></span><br><span class="line">	Y</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>Listener无返回值，属性文法可以实现让非终结符有返回值</p>
+<h2 id="2-2-综合属性和继承属性"><a href="#2-2-综合属性和继承属性" class="headerlink" title="2.2. 综合属性和继承属性"></a>2.2. 综合属性和继承属性</h2><ul>
+<li><strong>综合属性</strong>：依赖自己、子节点，依赖自下而上，把动作放在产生式的最后<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="9.856ex" height="1.645ex" role="img" focusable="false" viewBox="0 -716 4356.6 727"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(1027.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2305.6,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(3064.6,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(3827.6,0)"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g></g></g></svg></mjx-container><ul>
+<li>在antlr4中使用返回值传递</li>
+</ul>
+</li>
+<li><strong>继承属性</strong>：依赖父节点、兄弟节点(左，右)、自身的属性来定义<ul>
+<li>在antlr4中使用参数传递</li>
+</ul>
+</li>
+</ul>
+<p>往往在属性结构与树的结构<font color="#ff0000">不匹配</font>时，才会采用继承属性。</p>
+<p>antlr4底层会改写左递归，在属性文法中若有参数会改写失败</p>
+<p><font color="#ff0000">依赖图</font>用于确定一棵给定的语法分析树中各个属性实例之间的依赖关系<br><font color="#ff0000">信息流向</font>: 先从左向右、从上到下传递信息, 再从下到上传递信息</p>
+<h2 id="2-3-语法制导定义"><a href="#2-3-语法制导定义" class="headerlink" title="2.3. 语法制导定义"></a>2.3. 语法制导定义</h2><ul>
+<li><code>Syntax Directed Defination</code>：是一个上下文无关文法和<strong>属性及规则</strong>的结合。<ul>
+<li>唯一确定了语法分析树上每个<strong>非终结符</strong>节点的属性值</li>
+<li>SDD没有规定以什么方式、顺序计算属性</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="2-4-S-属性定义"><a href="#2-4-S-属性定义" class="headerlink" title="2.4. S-属性定义"></a>2.4. S-属性定义</h2><ul>
+<li>如果一个 SDD 的每个属性都是综合属性, 则它是 S 属性定义。</li>
+</ul>
+<h2 id="2-5-L-属性定义"><a href="#2-5-L-属性定义" class="headerlink" title="2.5. L-属性定义"></a>2.5. L-属性定义</h2><h2 id="2-6-后缀表示-Postfix-Notation"><a href="#2-6-后缀表示-Postfix-Notation" class="headerlink" title="2.6. 后缀表示 (Postfix Notation)"></a>2.6. 后缀表示 (Postfix Notation)</h2><ol>
+<li>如果E是变量或常量，则E的后缀就是E本身。</li>
+<li>如果E是形如<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="7.55ex" height="1.977ex" role="img" focusable="false" viewBox="0 -680 3337.1 874"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mi" transform="translate(1174.6,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(1659.6,0)"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="msub" transform="translate(2162.6,0)"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container>的表达式，则E的后缀表示是$E_1^<code>  E_2^</code>op<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="6.787ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 3000 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="italic" transform="scale(1,-1)" font-size="884px" font-family="serif" font-style="italic">，</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">其</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">中</text></g></g></g></svg></mjx-container>E_1^<code> E_2^</code><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 1000 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">是</text></g></g></g></svg></mjx-container>E_1 E_2$的后缀表达式。  </li>
+<li>如果E是形如<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.418ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1952.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msub" transform="translate(389,0)"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mo" transform="translate(1563.6,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>的表达式，则E的后缀表示是<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.657ex" height="1.878ex" role="img" focusable="false" viewBox="0 -680 1174.6 830"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mn" transform="translate(771,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></svg></mjx-container>的后缀表示。</li>
+</ol>
+<h1 id="3-类型检查"><a href="#3-类型检查" class="headerlink" title="3. 类型检查"></a>3. 类型检查</h1><p>比较简单</p>
+<p>《编程语言实现模式》第八章：静态类型检查</p>
+<ul>
+<li>Offline：先有完整的语法树，再去遍历<ul>
+<li>ParseTreeWalker</li>
+</ul>
+</li>
+<li>Online：在语法分析树构建的过程中嵌入<ul>
+<li>Attribute Grammar（手动在g4中嵌入）</li>
+<li>addParseListener（把语法文件和java文件分开，antlr4自动嵌入）</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-语法制导的翻译方案SDT"><a href="#4-语法制导的翻译方案SDT" class="headerlink" title="4. 语法制导的翻译方案SDT"></a>4. 语法制导的翻译方案SDT</h1><ul>
+<li>syntax-directed translation scheme</li>
+</ul>
+<p>例：<br>    有小数点的二进制数<code>-101.101</code>，怎么翻译成十进制？</p>
+<p>设定属性</p>
+<p>龙书2.3、5.4</p>
+<p>与SDD的主要区别：显示指定了语义片段执行的顺序</p>
+]]></content>
       <categories>
         <category>2023_Spring_编译原理</category>
       </categories>
@@ -17114,7 +17114,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <p>例：抽象类AbstractButton封装了变化，修改或增加子类，LoginForm都不需要变化。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F02%2F29%2F10-47-42-e81cd84406e6ae65d52091b3dda29c12-20240229104740-3b6e0e.png" alt="image.png"></p>
 <h2 id="2-3-里氏代换原则"><a href="#2-3-里氏代换原则" class="headerlink" title="2.3. 里氏代换原则"></a>2.3. 里氏代换原则</h2><ul>
 <li>父类支持的性质，子类也必须支持。任何地方用到父类，都可以换成子类。<ul>
-<li>扩展行为可以作为私有函数。重现要保证父类稳定性。</li>
+<li>扩展行为可以作为私有函数。重写要保证父类稳定性。</li>
 <li>错误：子类不能重写父类方法</li>
 </ul>
 </li>
@@ -17183,38 +17183,35 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <p>违反里氏代换原则，使用Vector的地方不能替换成Stack。</p>
 <h2 id="2-8-封装可变性原则"><a href="#2-8-封装可变性原则" class="headerlink" title="2.8. 封装可变性原则"></a>2.8. 封装可变性原则</h2><p>识别出变化，把变化的部分和不变的部分分离</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>0-软件质量与管理</title>
-    <url>/posts/5882e132/</url>
-    <content><![CDATA[<h1 id="十个问题"><a href="#十个问题" class="headerlink" title="十个问题"></a>十个问题</h1><ol>
-<li>什么是过程管理和项目管理？</li>
-<li>软件估算过程中，项目经历/历史数据的作用是什么？如何把历史数据转化成估算结果？隔了3个月，能否保证估算结果一致？</li>
-<li>？</li>
-<li>什么叫做XX管理？</li>
-</ol>
-]]></content>
       <categories>
-        <category>2024_Spring_软件质量管理</category>
+        <category>2024_Spring_软件系统设计</category>
       </categories>
-  </entry>
-  <entry>
-    <title>01-概述</title>
-    <url>/posts/58d2b339/</url>
-    <content><![CDATA[<p><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</p>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件质量管理</category>
-      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
   </entry>
   <entry>
     <title>01-设计模式</title>
     <url>/posts/946442dc/</url>
-    <content><![CDATA[<p>现有设计经验的总结</p>
+    <content><![CDATA[<h1 id="1-概括"><a href="#1-概括" class="headerlink" title="1. 概括"></a>1. 概括</h1><p>现有设计经验的总结</p>
 <p><span style="background:rgba(3, 135, 102, 0.2)">模式</span>：问题和约束可以反复使用</p>
-<p>创建型模式<br>结构型模式<br>行为型模式</p>
-<h1 id="1-策略模式"><a href="#1-策略模式" class="headerlink" title="1. 策略模式"></a>1. 策略模式</h1><ul>
-<li><p>Strategy/Policy</p>
+<ul>
+<li>目的<ol>
+<li>创建型：<strong>创建</strong>对象</li>
+<li>结构型：处理类和对象的<strong>组合</strong></li>
+<li>行为型：描述对类或对象怎样交互和怎样<strong>分配职责</strong></li>
+</ol>
+</li>
+<li>范围<ol>
+<li>类模式：式处理类和子类之间的关系，这些关系通过继承建立， 在编译时刻就被确定下来，是属于<strong>静态</strong>的。</li>
+<li>对象模式：处理对象间的关系，这些关系在运行时刻变化，更具<strong>动态</strong>性</li>
+</ol>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F19%2F14-03-56-f7eba1b50144117a2d8052de51950d35-20240619140355-d9b953.png" alt="image.png"></p>
+<h1 id="2-策略模式"><a href="#2-策略模式" class="headerlink" title="2. 策略模式"></a>2. 策略模式</h1><ul>
+<li><p>Strategy/Policy Pattern</p>
 </li>
 <li><p>使用哪些原则</p>
 <ol>
@@ -17230,20 +17227,20 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 <p>delegate: 委托另外一个模块，通过引用调用<br>OOA到OOD：添加辅助类，设计初期会增加复杂性</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F12%2F14-37-37-53dc9f064dcdb11e211ae203d0259599-20240312143736-b6618c.png" alt="image.png"></p>
-<h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><p>完成的任务+实现的方式</p>
+<h2 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1. 定义"></a>2.1. 定义</h2><p>完成的任务+实现的方式</p>
 <ul>
 <li>让算法的变化独立于使用它的客户端</li>
 <li>定义一个可变的算法族，并将它们封装起来</li>
 </ul>
-<h2 id="1-2-适用性"><a href="#1-2-适用性" class="headerlink" title="1.2. 适用性"></a>1.2. 适用性</h2><ol>
+<h2 id="2-2-适用性"><a href="#2-2-适用性" class="headerlink" title="2.2. 适用性"></a>2.2. 适用性</h2><ol>
 <li>相关的类只在某些行为上不同，每个类在这些行为上都有合适的策略（多个类）</li>
 <li>同一个算法需要不同的实现</li>
 <li>算法封装不同数据结构</li>
 <li>一个类定义了有很多行为，使用条件判断觉得使用哪个行为（一个类里有多种行为）</li>
 </ol>
-<h2 id="1-3-影响"><a href="#1-3-影响" class="headerlink" title="1.3. 影响"></a>1.3. 影响</h2><p>原来不需要知道类的细节，但使用策略模式之后<strong>需要暴露细节</strong>，客户必须理解每一种策略的差异和哪些任务适合哪些细节</p>
+<h2 id="2-3-影响"><a href="#2-3-影响" class="headerlink" title="2.3. 影响"></a>2.3. 影响</h2><p>原来不需要知道类的细节，但使用策略模式之后<strong>需要暴露细节</strong>，客户必须理解每一种策略的差异和哪些任务适合哪些细节</p>
 <p>Design Pattern比Framework更高层</p>
-<h1 id="2-简单工厂模式"><a href="#2-简单工厂模式" class="headerlink" title="2. 简单工厂模式"></a>2. 简单工厂模式</h1><h2 id="2-1-👍定义"><a href="#2-1-👍定义" class="headerlink" title="2.1. 👍定义"></a>2.1. 👍定义</h2><ul>
+<h1 id="3-简单工厂模式"><a href="#3-简单工厂模式" class="headerlink" title="3. 简单工厂模式"></a>3. 简单工厂模式</h1><h2 id="3-1-👍定义"><a href="#3-1-👍定义" class="headerlink" title="3.1. 👍定义"></a>3.1. 👍定义</h2><ul>
 <li><p>Simple Factory Pattern/<strong>Static</strong> Factory Pattern</p>
 <ul>
 <li>往往是静态方法</li>
@@ -17260,25 +17257,25 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h2 id="2-2-结构"><a href="#2-2-结构" class="headerlink" title="2.2. 结构"></a>2.2. 结构</h2><ul>
+<h2 id="3-2-结构"><a href="#3-2-结构" class="headerlink" title="3.2. 结构"></a>3.2. 结构</h2><ul>
 <li>Factory: 工厂角色</li>
 <li>Product: 抽象产品角色</li>
 <li>ConcreteProduct: 具体产品角色</li>
 </ul>
 <p>返回的是抽象的产品类，符合依赖倒置原则</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F14%2F10-17-26-a63018931228b260ae9da7f7aeb1dba0-20240314101726-ac4967.png" alt="image.png"></p>
-<h2 id="2-3-分析"><a href="#2-3-分析" class="headerlink" title="2.3. 分析"></a>2.3. 分析</h2><ol>
+<h2 id="3-3-分析"><a href="#3-3-分析" class="headerlink" title="3.3. 分析"></a>3.3. 分析</h2><ol>
 <li><strong>将对象的创建和具体业务处理分离</strong>，降低系统耦合（把具体耦合替换成抽象耦合），使得两者修改起来更容易。</li>
 <li>工厂方法是静态方法，而且只需要传入简单参数，因此可以把调用时需要传入的参数写在配置文件中，无需修改Java源代码。</li>
 <li>工厂类的职责过重，增加新的产品需要修改工厂类判断逻辑，<font color="#c00000">违反开闭原则</font></li>
 <li>当你需要什么，只需要传入一个正确的参数，就可以获取对象，<strong>无需知道其创建的细节</strong>。</li>
 </ol>
-<h2 id="2-4-扩展"><a href="#2-4-扩展" class="headerlink" title="2.4. 扩展"></a>2.4. 扩展</h2><p>有些情况下可以把静态工厂方法放到抽象产品类中</p>
+<h2 id="3-4-扩展"><a href="#3-4-扩展" class="headerlink" title="3.4. 扩展"></a>3.4. 扩展</h2><p>有些情况下可以把静态工厂方法放到抽象产品类中</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F14%2F10-33-17-8e30d001e58b752bbf746d3aef0ec7a9-20240314103317-a0af9d.png" alt="image.png"></p>
-<h1 id="3-工厂方法模式"><a href="#3-工厂方法模式" class="headerlink" title="3. 工厂方法模式"></a>3. 工厂方法模式</h1><h2 id="3-1-动机"><a href="#3-1-动机" class="headerlink" title="3.1. 动机"></a>3.1. 动机</h2><p>简单工厂违反了开闭原则</p>
+<h1 id="4-工厂方法模式"><a href="#4-工厂方法模式" class="headerlink" title="4. 工厂方法模式"></a>4. 工厂方法模式</h1><h2 id="4-1-动机"><a href="#4-1-动机" class="headerlink" title="4.1. 动机"></a>4.1. 动机</h2><p>简单工厂违反了开闭原则</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F14%2F10-42-47-ee6ae83a65865e7aaebcaa147db1d7fb-20240314104246-a53678.png" alt="image.png"></p>
 <p>使用抽象工厂，抽象的工厂方法只负责生产抽象的产品类，把具体的按钮了创建过程嫁给专门的工厂子类来完成。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F14%2F10-45-25-50e1182ffc8e7412de926403cb44dffa-20240314104525-767af3.png" alt="image.png"></p>
-<h2 id="3-2-👍定义"><a href="#3-2-👍定义" class="headerlink" title="3.2. 👍定义"></a>3.2. 👍定义</h2><ul>
+<h2 id="4-2-👍定义"><a href="#4-2-👍定义" class="headerlink" title="4.2. 👍定义"></a>4.2. 👍定义</h2><ul>
 <li>Factory Method Pattern/ Virtual Constructor/ Polymorphic Factory<ul>
 <li><strong>工厂父类负责定义创建产品对象的公共接口，而工厂子类则负责生成具体的产品对象</strong></li>
 <li>目的是将产品类的<strong>实例化</strong>操作<strong>延迟</strong>到工厂子类中完成，即通过工厂子类来确定究竟应该实例化哪一个具体产品类</li>
@@ -17287,7 +17284,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 <li>可以时间不修改原有代码的情况下，增加新的产品</li>
 </ul>
-<h2 id="3-3-结构"><a href="#3-3-结构" class="headerlink" title="3.3. 结构"></a>3.3. 结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F14%2F10-48-20-0f42807ca082ce9b366dc8932c32e92a-20240314104819-bab085.png" alt="image.png"></p>
+<h2 id="4-3-结构"><a href="#4-3-结构" class="headerlink" title="4.3. 结构"></a>4.3. 结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F14%2F10-48-20-0f42807ca082ce9b366dc8932c32e92a-20240314104819-bab085.png" alt="image.png"></p>
 <p>用户代码只使用抽象层，与具体实现解耦</p>
 <p>抽象工厂类：</p>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">PayMethodFactory</span>{</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">abstract</span> AbstractPay <span class="title function_">getPayMethod</span><span class="params">()</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
@@ -17301,14 +17298,14 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <p>使用XML指定抽象工厂具体类型的客户代码：</p>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">PayMethodFactory factory;</span><br><span class="line">AbstractPay payMethod;</span><br><span class="line">factory=(PayMethodFactory)XMLUtil.getBean(); <span class="comment">//getBean()的返回类型为Object，此处需要进行强制类型转换</span></span><br><span class="line">payMethod =factory.getPayMethod();</span><br><span class="line">payMethod.pay();</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="3-4-适用性"><a href="#3-4-适用性" class="headerlink" title="3.4. 适用性"></a>3.4. 适用性</h2><ol>
+<h2 id="4-4-适用性"><a href="#4-4-适用性" class="headerlink" title="4.4. 适用性"></a>4.4. 适用性</h2><ol>
 <li>一个类不需要知道它所需要的对象的类</li>
 <li>一个类通过其子类来指定创建哪个对象</li>
 <li>将创建对象的任务委托给多个工厂子类中的某一个，客户端在使用时可以无需关系是哪一个工厂类创建产品子类，需要时再动态指定</li>
 </ol>
 <p>只能扩展产品类型<br>支持开闭原则</p>
-<h1 id="4-抽象工厂模式"><a href="#4-抽象工厂模式" class="headerlink" title="4. 抽象工厂模式"></a>4. 抽象工厂模式</h1><p><strong>产品等级结构</strong>：即产品的<strong>继承结构</strong> ，如抽象类是电视机，子类是不同具体品牌<br><strong>产品族</strong>：由同一个工厂生产的，位于不同产品等级结构中的一组产品，如海尔电器工厂生产电视机、冰箱，海尔电视机属于电视机等级结构，冰箱属于冰箱等级结构</p>
-<h2 id="4-1-👍定义"><a href="#4-1-👍定义" class="headerlink" title="4.1. 👍定义"></a>4.1. 👍定义</h2><ul>
+<h1 id="5-抽象工厂模式"><a href="#5-抽象工厂模式" class="headerlink" title="5. 抽象工厂模式"></a>5. 抽象工厂模式</h1><p><strong>产品等级结构</strong>：即产品的<strong>继承结构</strong> ，如抽象类是电视机，子类是不同具体品牌<br><strong>产品族</strong>：由同一个工厂生产的，位于不同产品等级结构中的一组产品，如海尔电器工厂生产电视机、冰箱，海尔电视机属于电视机等级结构，冰箱属于冰箱等级结构</p>
+<h2 id="5-1-👍定义"><a href="#5-1-👍定义" class="headerlink" title="5.1. 👍定义"></a>5.1. 👍定义</h2><ul>
 <li><p>区别</p>
 <ol>
 <li>工厂模式：针对一个产品等级结构</li>
@@ -17327,7 +17324,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ConcreteFactory1</span> <span class="keyword">extends</span> <span class="title class_">AbstractFactory</span>{</span><br><span class="line">	<span class="keyword">public</span> AbstractProductA <span class="title function_">createProductA</span><span class="params">()</span>{</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">ConcreteProductA1</span>();</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">public</span> AbstractProductB <span class="title function_">createProductB</span><span class="params">()</span>{</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">ConcreteProductB1</span>();</span><br><span class="line">	} </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="4-2-分析"><a href="#4-2-分析" class="headerlink" title="4.2. 分析"></a>4.2. 分析</h2><p><strong>开闭原则的倾斜性</strong></p>
+<h2 id="5-2-分析"><a href="#5-2-分析" class="headerlink" title="5.2. 分析"></a>5.2. 分析</h2><p><strong>开闭原则的倾斜性</strong></p>
 <ul>
 <li>优点：<strong>增加新的具体工厂和产品族很方便</strong>，符合开闭原则</li>
 <li>缺点：不能完全支持开闭原则，<font color="#c00000">需要增加新的产品等级结构时需要修改抽象类</font><ul>
@@ -17335,8 +17332,8 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h1 id="5-建造者模式"><a href="#5-建造者模式" class="headerlink" title="5. 建造者模式"></a>5. 建造者模式</h1><p>一个复杂对象有许多成员对象</p>
-<h2 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1. 定义"></a>5.1. 定义</h2><ul>
+<h1 id="6-建造者模式"><a href="#6-建造者模式" class="headerlink" title="6. 建造者模式"></a>6. 建造者模式</h1><p>一个复杂对象有许多成员对象</p>
+<h2 id="6-1-定义"><a href="#6-1-定义" class="headerlink" title="6.1. 定义"></a>6.1. 定义</h2><ul>
 <li>**建造者模式(Builder Pattern)**：将一个<font color="#c00000">复杂对象的构建</font>与它的<font color="#c00000">表示</font>分离，使得<font color="#c00000">同样的构建过程可以创建不同的表示</font><ul>
 <li>表示：对象的静态内容</li>
 <li>构建过程可以复用，组件的表示可以分离</li>
@@ -17345,7 +17342,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ul>
 <p>封装变化，复用不变</p>
-<h2 id="5-2-结构"><a href="#5-2-结构" class="headerlink" title="5.2. 结构"></a>5.2. 结构</h2><ol>
+<h2 id="6-2-结构"><a href="#6-2-结构" class="headerlink" title="6.2. 结构"></a>6.2. 结构</h2><ol>
 <li>Product</li>
 <li>Builder：抽象建造者</li>
 <li>ConcreteBuilder：负责A, B, C等对象的创建</li>
@@ -17365,7 +17362,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F19%2F14-43-12-ac7b7e0ba9a7705b31be81bbe5db75b9-20240319144311-cecf0a.png" alt="image.png"></p>
-<h2 id="5-3-分析"><a href="#5-3-分析" class="headerlink" title="5.3. 分析"></a>5.3. 分析</h2><ul>
+<h2 id="6-3-分析"><a href="#6-3-分析" class="headerlink" title="6.3. 分析"></a>6.3. 分析</h2><ul>
 <li><p>Director</p>
 <ol>
 <li>隔离客户与生产过程</li>
@@ -17378,26 +17375,28 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h2 id="5-4-适用性"><a href="#5-4-适用性" class="headerlink" title="5.4. 适用性"></a>5.4. 适用性</h2><ol>
+<h2 id="6-4-适用性"><a href="#6-4-适用性" class="headerlink" title="6.4. 适用性"></a>6.4. 适用性</h2><ol>
 <li>隔离复杂对象的创建和使用，并使得<font color="#c00000">相同的创建过程</font>可以<font color="#c00000">创建不同的产品</font>。</li>
 <li><font color="#c00000">需要生成的产品对象有复杂的内部结构</font>，这些产品对象通常包含多个成员属性。</li>
 <li><font color="#c00000">需要生成的产品对象的属性相互依赖</font>，需要指定其生成顺序。</li>
 <li><font color="#c00000">对象的创建过程独立于创建该对象的类</font>。</li>
 </ol>
 <p>2，3，4是为了分解复杂性；<br>1是为了封装变化</p>
-<h2 id="5-5-化简"><a href="#5-5-化简" class="headerlink" title="5.5. 化简"></a>5.5. 化简</h2><ol>
+<h2 id="6-5-化简"><a href="#6-5-化简" class="headerlink" title="6.5. 化简"></a>6.5. 化简</h2><ol>
 <li><font color="#c00000">省略抽象建造者</font>：如果系统中只需要一个具体建造者的话，可以省略掉抽象建造者。</li>
 <li><font color="#c00000">省略指挥者</font>：在具体建造者只有一个的情况下，如果抽象建造者角色已经被省略掉，那么还可以省略指挥者角色，让Builder角色扮演指挥者与建造者双重角色。</li>
 </ol>
-<h2 id="5-6-建造者模式与抽象工厂模式的比较"><a href="#5-6-建造者模式与抽象工厂模式的比较" class="headerlink" title="5.6. 建造者模式与抽象工厂模式的比较"></a>5.6. 建造者模式与抽象工厂模式的比较</h2><p>• 与抽象工厂模式相比，建造者模式返回一个组装好的完整产品，而抽象工<br>厂模式返回一系列相关的产品，这些产品位于不同的产品等级结构，构成<br>了一个产品族。<br>• 在抽象工厂模式中，客户端实例化工厂类，然后调用工厂方法获取所需产<br>品对象，而在建造者模式中，客户端可以不直接调用建造者的相关方法，<br>而是通过指挥者类来指导如何生成对象，包括对象的组装过程和建造步骤，<br>它侧重于一步步构造一个复杂对象，返回一个完整的对象。<br>• 如果将抽象工厂模式看成汽车配件生产工厂，生产一个产品族的产品，那<br>么建造者模式就是一个汽车组装工厂，通过对部件的组装可以返回一辆完<br>整的汽车。</p>
-<h1 id="6-原型模式"><a href="#6-原型模式" class="headerlink" title="6. 原型模式"></a>6. 原型模式</h1><p>创建型模式<br>在面向对象系统中，使用原型模式来复制一个对象自身， 从而<font color="#c00000">克隆出多个与原型对象一模一样的对象。</font></p>
-<h2 id="6-1-定义"><a href="#6-1-定义" class="headerlink" title="6.1. 定义"></a>6.1. 定义</h2><ul>
+<h2 id="6-6-建造者模式与抽象工厂模式的比较"><a href="#6-6-建造者模式与抽象工厂模式的比较" class="headerlink" title="6.6. 建造者模式与抽象工厂模式的比较"></a>6.6. 建造者模式与抽象工厂模式的比较</h2><ul>
+<li>与抽象工厂模式相比，建造者模式返回一个组装好的完整产品，而抽象工 厂模式返回一系列相关的产品，这些产品位于不同的产品等级结构，构成 了一个产品族。<br>• 在抽象工厂模式中，客户端实例化工厂类，然后调用工厂方法获取所需产<br>品对象，而在建造者模式中，客户端可以不直接调用建造者的相关方法，<br>而是通过指挥者类来指导如何生成对象，包括对象的组装过程和建造步骤，<br>它侧重于一步步构造一个复杂对象，返回一个完整的对象。<br>• 如果将抽象工厂模式看成汽车配件生产工厂，生产一个产品族的产品，那<br>么建造者模式就是一个汽车组装工厂，通过对部件的组装可以返回一辆完<br>整的汽车。</li>
+</ul>
+<h1 id="7-原型模式"><a href="#7-原型模式" class="headerlink" title="7. 原型模式"></a>7. 原型模式</h1><p>创建型模式<br>在面向对象系统中，使用原型模式来复制一个对象自身， 从而<font color="#c00000">克隆出多个与原型对象一模一样的对象。</font></p>
+<h2 id="7-1-定义"><a href="#7-1-定义" class="headerlink" title="7.1. 定义"></a>7.1. 定义</h2><ul>
 <li>原型模式(Prototype Pattern)：<font color="#c00000">用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象</font>。允许一个对象再创建一个可定制的对象，无需知道任何创建的细节。<ul>
 <li>对象创建型模式</li>
 </ul>
 </li>
 </ul>
-<h2 id="6-2-结构"><a href="#6-2-结构" class="headerlink" title="6.2. 结构"></a>6.2. 结构</h2><ol>
+<h2 id="7-2-结构"><a href="#7-2-结构" class="headerlink" title="7.2. 结构"></a>7.2. 结构</h2><ol>
 <li>Prototype：抽象原型类<ul>
 <li>原型类有一个clone接口</li>
 </ul>
@@ -17406,7 +17405,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li>Client：客户类</li>
 </ol>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F19%2F15-08-16-f94443c7fc61699de677266696f588da-20240319150815-35dbb3.png" alt="image.png"></p>
-<h2 id="6-3-分析"><a href="#6-3-分析" class="headerlink" title="6.3. 分析"></a>6.3. 分析</h2><p><font color="#c00000">抽象类：IS A关系，主职责</font><br><font color="#c00000">接口：非功能主职责的职责</font></p>
+<h2 id="7-3-分析"><a href="#7-3-分析" class="headerlink" title="7.3. 分析"></a>7.3. 分析</h2><p><font color="#c00000">抽象类：IS A关系，主职责</font><br><font color="#c00000">接口：非功能主职责的职责</font></p>
 <p>copy需要根据具体类来执行，而且不是IS A关系</p>
 <ul>
 <li>在原型模式结构中定义了一个抽象原型类，所有的Java 类都继承自java.lang.Object，而Object类提供一个 clone()方法，可以将一个Java对象复制一份。因此在 Java中可以直接使用Object提供的clone()方法来实现对象的克隆，Java语言中的原型模式实现很简单。</li>
@@ -17415,38 +17414,38 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h2 id="6-4-适用性"><a href="#6-4-适用性" class="headerlink" title="6.4. 适用性"></a>6.4. 适用性</h2><ol>
+<h2 id="7-4-适用性"><a href="#7-4-适用性" class="headerlink" title="7.4. 适用性"></a>7.4. 适用性</h2><ol>
 <li>创建新对象成本较大</li>
 <li>系统要保存对象的状态</li>
 <li><font color="#c00000">避免使用分层次的工厂类来创建分层次的对象</font>，并且类的实例对象只有一个或很少的几个组合状态，通过复制原型对象得到新实例可能比使用构造函数创建一个新实例更加方便</li>
 </ol>
-<h2 id="6-5-扩展"><a href="#6-5-扩展" class="headerlink" title="6.5. 扩展"></a>6.5. 扩展</h2><ul>
+<h2 id="7-5-扩展"><a href="#7-5-扩展" class="headerlink" title="7.5. 扩展"></a>7.5. 扩展</h2><ul>
 <li><strong>原型管理器</strong>：带管理器的原型模式，系统中有大量相似的对象</li>
 </ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F19%2F15-34-45-9120fbfffca49360fe1e4d6178ba9d39-20240319153444-86ed37.png" alt="image.png"></p>
 <ul>
 <li><strong>相似对象的复制</strong>：通过原型模式获得相同对象后可以再对其属性进行修改，从而获取所需对象。</li>
 </ul>
-<h1 id="7-状态模式"><a href="#7-状态模式" class="headerlink" title="7. 状态模式"></a>7. 状态模式</h1><h2 id="7-1-动机"><a href="#7-1-动机" class="headerlink" title="7.1. 动机"></a>7.1. 动机</h2><ul>
+<h1 id="8-状态模式"><a href="#8-状态模式" class="headerlink" title="8. 状态模式"></a>8. 状态模式</h1><h2 id="8-1-动机"><a href="#8-1-动机" class="headerlink" title="8.1. 动机"></a>8.1. 动机</h2><ul>
 <li>状态：一个或多个变化的属性  </li>
 <li><strong>有状态的对象</strong>：有这样属性的对象，这样的对象状态是从事先定义好的一系列值中取出的。当一个这样的对象与外部事件产生互动时，其内部状态就会改变，从而使得系统的行为也随之发生变化。</li>
 </ul>
 <p>UML中使用<font color="#c00000">状态图</font>来描述有状态对象的变化，<font color="#c00000">一张图只能描述一个对象</font></p>
 <p><del>如果写很多if来判断状态，不符合开闭模式</del></p>
-<h2 id="7-2-结构"><a href="#7-2-结构" class="headerlink" title="7.2. 结构"></a>7.2. 结构</h2><ol>
+<h2 id="8-2-结构"><a href="#8-2-结构" class="headerlink" title="8.2. 结构"></a>8.2. 结构</h2><ol>
 <li>Context: 环境类</li>
 <li>State: 抽象状态类</li>
 <li>ConcreteState: 具体状态类</li>
 </ol>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F19%2F15-49-06-babcc93ad8f241d034c57c9ff7295208-20240319154906-9275be.png" alt="image.png"></p>
-<h2 id="7-3-定义"><a href="#7-3-定义" class="headerlink" title="7.3. 定义"></a>7.3. 定义</h2><ul>
+<h2 id="8-3-定义"><a href="#8-3-定义" class="headerlink" title="8.3. 定义"></a>8.3. 定义</h2><ul>
 <li>允许一个对象在其内部状态改变时改变它的行为，对象看起来似乎修改了它的类<ul>
 <li><strong>通过对象组合来减少类型定</strong>义</li>
 </ul>
 </li>
 <li><strong>行为模式</strong></li>
 </ul>
-<h2 id="7-4-分析"><a href="#7-4-分析" class="headerlink" title="7.4. 分析"></a>7.4. 分析</h2><ol>
+<h2 id="8-4-分析"><a href="#8-4-分析" class="headerlink" title="8.4. 分析"></a>8.4. 分析</h2><ol>
 <li>引入一个抽象类，专门表示对象的状态变化，以及对象如何在每一种状态中表现出的行为</li>
 <li>Context应当尽量承担数据职责，State承担行为职责<ul>
 <li>可能相互持有引用：State类持有Context类的引用是为了访问数据，Context类持有State类是为了执行行为</li>
@@ -17463,11 +17462,11 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 </li>
 </ol>
-<h2 id="7-5-适用性"><a href="#7-5-适用性" class="headerlink" title="7.5. 适用性"></a>7.5. 适用性</h2><ol>
+<h2 id="8-5-适用性"><a href="#8-5-适用性" class="headerlink" title="8.5. 适用性"></a>8.5. 适用性</h2><ol>
 <li>对象的行为依赖于状态属性，并且随着属性改变</li>
 <li>代码中由大量与状态有关的条件判断</li>
 </ol>
-<h2 id="7-6-例子"><a href="#7-6-例子" class="headerlink" title="7.6. 例子"></a>7.6. 例子</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F26%2F14-24-19-4828e272dc663a768946504747954cda-20240326142419-cf50ab.png" alt="image.png"></p>
+<h2 id="8-6-例子"><a href="#8-6-例子" class="headerlink" title="8.6. 例子"></a>8.6. 例子</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F26%2F14-24-19-4828e272dc663a768946504747954cda-20240326142419-cf50ab.png" alt="image.png"></p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F26%2F14-30-36-1d676ecf3e6a6e10c883afff7f6cafd5-20240326143035-12f246.png" alt="image.png"></p>
 <ul>
 <li>不使用状态模式：</li>
@@ -17479,7 +17478,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//重构之后的“空闲状态类”示例代码</span></span><br><span class="line">……</span><br><span class="line"><span class="keyword">if</span>(预订房间)</span><br><span class="line">{</span><br><span class="line">预订操作;</span><br><span class="line">context.setState(<span class="keyword">new</span> 已预订状态类());</span><br><span class="line">}</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(住进房间)</span><br><span class="line">{</span><br><span class="line">入住操作;</span><br><span class="line">context.setState(<span class="keyword">new</span> 已入住状态类());</span><br><span class="line">}</span><br><span class="line">…… </span><br></pre></td></tr></table></figure></div>
 
-<h2 id="7-7-扩展"><a href="#7-7-扩展" class="headerlink" title="7.7. 扩展"></a>7.7. 扩展</h2><ul>
+<h2 id="8-7-扩展"><a href="#8-7-扩展" class="headerlink" title="8.7. 扩展"></a>8.7. 扩展</h2><ul>
 <li><strong>共享状态</strong><ul>
 <li>在有些情况下多个环境对象需要共享同一个状态，如果希望在系统中实现多个环境对象实例共享一个或多个状态对象，那么需要将这些状态对象定义为环境的静态成员对象。</li>
 </ul>
@@ -17490,18 +17489,18 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h1 id="8-命令模式"><a href="#8-命令模式" class="headerlink" title="8. 命令模式"></a>8. 命令模式</h1><h2 id="8-1-动机"><a href="#8-1-动机" class="headerlink" title="8.1. 动机"></a>8.1. 动机</h2><ul>
+<h1 id="9-命令模式"><a href="#9-命令模式" class="headerlink" title="9. 命令模式"></a>9. 命令模式</h1><h2 id="9-1-动机"><a href="#9-1-动机" class="headerlink" title="9.1. 动机"></a>9.1. 动机</h2><ul>
 <li>我们经常<strong>需要向某些对象发送请求</strong>，但是<strong>并不知道请求的接收者是谁</strong>，也<strong>不知道被请求的操作是哪个</strong>，我们只需在程序运行时指定具体的请求接收者即可。</li>
 <li>让发送者和接收者完全解耦，发送者完全不知道接收者是谁<ul>
 <li>如果无法抽象，可以用wrapper</li>
 </ul>
 </li>
 </ul>
-<h2 id="8-2-定义"><a href="#8-2-定义" class="headerlink" title="8.2. 定义"></a>8.2. 定义</h2><ul>
+<h2 id="9-2-定义"><a href="#9-2-定义" class="headerlink" title="9.2. 定义"></a>9.2. 定义</h2><ul>
 <li>命令模式(Command Pattern)：将一个请求封装为一个对象，从而使我们可用不同的请求<strong>对客户进行参数化</strong>；<strong>对请求排队或者记录请求日志(队列)<strong>，以及支持</strong>可撤销的操作</strong>。</li>
 <li>命令模式是一种<strong>对象行为型模式</strong>，其别名为动作(Action)模式或事务(Transaction)模式</li>
 </ul>
-<h2 id="8-3-结构"><a href="#8-3-结构" class="headerlink" title="8.3. 结构"></a>8.3. 结构</h2><ol>
+<h2 id="9-3-结构"><a href="#9-3-结构" class="headerlink" title="9.3. 结构"></a>9.3. 结构</h2><ol>
 <li>Invoker<ul>
 <li><strong>被参数化</strong></li>
 </ul>
@@ -17512,7 +17511,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <p>Invoker只知道Command类，不知道调用的是Receiver，也不知道命令具体怎么执行。<br>execute()是receiver.action()的wrapper方法。</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F26%2F15-35-45-54c47b67dc8ae1d4527f2b3c04c57512-20240326153545-9b30b4.png" alt="image.png"></p>
 <p>线程池：同一个线程对象，传入不同Command，让它执行不同的命令</p>
-<h2 id="8-4-分析"><a href="#8-4-分析" class="headerlink" title="8.4. 分析"></a>8.4. 分析</h2><ol>
+<h2 id="9-4-分析"><a href="#9-4-分析" class="headerlink" title="9.4. 分析"></a>9.4. 分析</h2><ol>
 <li>命令模式使<strong>请求本身成为一个对象</strong>，这个对象和其他对象一样可以被<strong>存储和传递</strong>。<ul>
 <li>行为数据化，同一个行为可以在不同时间/空间执行</li>
 <li>参数化</li>
@@ -17536,59 +17535,61 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 </li>
 </ul>
-<h2 id="8-5-例子"><a href="#8-5-例子" class="headerlink" title="8.5. 例子"></a>8.5. 例子</h2><p>Invoker: Contoller<br>Receiver: Television</p>
+<h2 id="9-5-例子"><a href="#9-5-例子" class="headerlink" title="9.5. 例子"></a>9.5. 例子</h2><p>Invoker: Contoller<br>Receiver: Television</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F10-44-47-7c8cb2fbe709d1cda34b7b5191261fe6-20240328104446-d6362d.png" alt="image.png"></p>
-<h2 id="8-6-适用场景"><a href="#8-6-适用场景" class="headerlink" title="8.6. 适用场景"></a>8.6. 适用场景</h2><ol>
+<h2 id="9-6-适用场景"><a href="#9-6-适用场景" class="headerlink" title="9.6. 适用场景"></a>9.6. 适用场景</h2><ol>
 <li>系统需要将请求调用者和请求接收者解耦，使得调用者和接收者不直接交互</li>
 <li>系统需要在不同的时间指定请求，将请求排队和执行请求</li>
 <li>支持命令的Undo和Redo</li>
 <li>需要将一组操作在一起，即支持<strong>宏命令</strong></li>
+<li>实现**委派事件模型(Delegation Event Model, DEM)**。</li>
 </ol>
-<h2 id="8-7-扩展：宏命令"><a href="#8-7-扩展：宏命令" class="headerlink" title="8.7. 扩展：宏命令"></a>8.7. 扩展：宏命令</h2><ol>
+<h2 id="9-7-扩展：宏命令"><a href="#9-7-扩展：宏命令" class="headerlink" title="9.7. 扩展：宏命令"></a>9.7. 扩展：宏命令</h2><ol>
 <li>宏命令又称为组合命令，它是<font color="#c00000">命令模式和组合模式联用</font>的产物。</li>
 <li>宏命令也是一个具体命令，不过它包含了对其他命令对象的引用，<font color="#c00000">在调用宏命令的execute()方法时，将递归调用它所包含的每个成员命令的execute()方法</font></li>
 <li><strong>宏命令的成员对象</strong>可以是简单命令，还可以继续是宏命令。执行 一个宏命令将执行多个具体命令，从而实现对命令的批处理</li>
 <li>宏命令的undo：从ArrayList的尾到头做undo</li>
 </ol>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-17-04-e41a86e36cd9f4ce35d3b8904055ad9c-20240328111703-b3a33f.png" alt="image.png"></p>
-<h1 id="9-中介者模式"><a href="#9-中介者模式" class="headerlink" title="9. 中介者模式"></a>9. 中介者模式</h1><h2 id="9-1-动机"><a href="#9-1-动机" class="headerlink" title="9.1. 动机"></a>9.1. 动机</h2><ul>
+<h1 id="10-中介者模式"><a href="#10-中介者模式" class="headerlink" title="10. 中介者模式"></a>10. 中介者模式</h1><h2 id="10-1-动机"><a href="#10-1-动机" class="headerlink" title="10.1. 动机"></a>10.1. 动机</h2><ul>
 <li>多个用户之间的群聊，引入中间层，减少对象两两之间复杂的引用关系<ul>
 <li>迪米特法则</li>
 </ul>
 </li>
 </ul>
-<h2 id="9-2-定义"><a href="#9-2-定义" class="headerlink" title="9.2. 定义"></a>9.2. 定义</h2><ul>
+<h2 id="10-2-定义"><a href="#10-2-定义" class="headerlink" title="10.2. 定义"></a>10.2. 定义</h2><ul>
 <li><strong>中介者模式(Mediator Pattern)</strong> 定义：用一个中介对象来封装一系列的对象交互，中介者使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变它们之 间的交互。</li>
 <li>中介者模式又称为调停者模式</li>
 <li>对象行为型模式。</li>
 </ul>
-<h2 id="9-3-结构"><a href="#9-3-结构" class="headerlink" title="9.3. 结构"></a>9.3. 结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-36-53-aeee2e6ab429a908ae3f4c379895461f-20240328113652-4036e3.png" alt="image.png"></p>
+<h2 id="10-3-结构"><a href="#10-3-结构" class="headerlink" title="10.3. 结构"></a>10.3. 结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-36-53-aeee2e6ab429a908ae3f4c379895461f-20240328113652-4036e3.png" alt="image.png"></p>
 <ol>
 <li>Mediator：抽象中介类</li>
 <li>ConcreteMediator: 具体中介类</li>
 <li>Colleague: 抽象同事类</li>
 <li>ConcreteColleague: 具体同事类</li>
 </ol>
-<h2 id="9-4-分析"><a href="#9-4-分析" class="headerlink" title="9.4. 分析"></a>9.4. 分析</h2><ol>
+<h2 id="10-4-分析"><a href="#10-4-分析" class="headerlink" title="10.4. 分析"></a>10.4. 分析</h2><ol>
 <li>中介者模式使得对象之间的关系数量急剧减少<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-38-27-a38dec931517331863e003b8638680d8-20240328113826-c03b00.png" alt="image.png"></li>
 <li>为什么要多个中介者？<ul>
 <li>修改对象交互关系时，不需要修改原来的中介关系，可以新增中介关系替换原有的关系。</li>
 </ul>
 </li>
+<li>如果每个同事都持有数据，中介者数据同步压力大</li>
 </ol>
-<h2 id="9-5-分析"><a href="#9-5-分析" class="headerlink" title="9.5. 分析"></a>9.5. 分析</h2><ul>
+<h2 id="10-5-分析"><a href="#10-5-分析" class="headerlink" title="10.5. 分析"></a>10.5. 分析</h2><ul>
 <li>中介者承担两方面的职责：<ol>
 <li>中转作用（结构）：通过中介的中转作用，各个同时不需要显示引用其他同时</li>
 <li>协调作用（行为）：中介者可以进一步对同事之间的关系进行封装，同事可以一致地与中介者进行交互，而不需要指明中方接着需要具体则么做，中介者根据内部的逻辑对同事的请求进行进一步处理，将同事成员的关系和行为进行分离和封装</li>
 </ol>
 </li>
 </ul>
-<h2 id="9-6-例子"><a href="#9-6-例子" class="headerlink" title="9.6. 例子"></a>9.6. 例子</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-49-19-ec4f28c95fd031c66d08a16c34c297fc-20240328114919-31418a.png" alt="image.png"></p>
-<h2 id="9-7-适用环境"><a href="#9-7-适用环境" class="headerlink" title="9.7. 适用环境"></a>9.7. 适用环境</h2><ol>
+<h2 id="10-6-例子"><a href="#10-6-例子" class="headerlink" title="10.6. 例子"></a>10.6. 例子</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F28%2F11-49-19-ec4f28c95fd031c66d08a16c34c297fc-20240328114919-31418a.png" alt="image.png"></p>
+<h2 id="10-7-适用环境"><a href="#10-7-适用环境" class="headerlink" title="10.7. 适用环境"></a>10.7. 适用环境</h2><ol>
 <li>系统中对象之间的<font color="#c00000">引用关系很复杂</font>，相互依赖关系混乱，难以复用</li>
 <li>对象的交互行为很复杂。<font color="#c00000">想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。可以通过引入中介者类来实现</font>，在中介者中定义对象交互的公共行为，如果需要改变行为则可以增加新的中介者类。</li>
 </ol>
-<h2 id="9-8-扩展"><a href="#9-8-扩展" class="headerlink" title="9.8. 扩展"></a>9.8. 扩展</h2><ol>
+<h2 id="10-8-扩展"><a href="#10-8-扩展" class="headerlink" title="10.8. 扩展"></a>10.8. 扩展</h2><ol>
 <li><p>中介者模式与迪米特法则</p>
 <ul>
 <li>在中介者模式中，通过创造出一个中介者对象，将系统中有关的对象所引用的其他对象数目减少到最少，使得一个对象与其同事之间的相互作用被这个对象与中介者对象之间的相互作用所取代。因此，中介者模式就是迪米特法则的一个典型应用。</li>
@@ -17603,7 +17604,1176 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 </li>
 </ol>
+<h1 id="11-观察者模式"><a href="#11-观察者模式" class="headerlink" title="11. 观察者模式"></a>11. 观察者模式</h1><h2 id="11-1-动机"><a href="#11-1-动机" class="headerlink" title="11.1. 动机"></a>11.1. 动机</h2><ul>
+<li>建立一种对象和对象之间的依赖关系，一个对象改变时将字段通知其他对象，其他对象做出反应。</li>
+<li>发生改变的对象称为目标对象，被通知者称为观察者，<font color="#c00000">一个观察目标对应多个观察者</font>，而且这些观察者直接没有相互联系，可以根据增加和删除观察者，使得系统已于扩展</li>
+</ul>
+<h2 id="11-2-定义"><a href="#11-2-定义" class="headerlink" title="11.2. 定义"></a>11.2. 定义</h2><ul>
+<li>观察者模式（Observer Pattern）：定义了对象间的一种<font color="#c00000">一对多依赖关系</font>，使得<font color="#c00000">每一个对象状态发生变化改变时，相关的依赖对象都得到通知并自动更新</font>。<ul>
+<li>别名：发布-订阅（Publish/Subscribe）模式、模型-视图 （Model/View）模式、源-监听器（Source/Listener） 模式或从属者（Dependents）模式</li>
+</ul>
+</li>
+<li>对象行为模式</li>
+</ul>
+<h2 id="11-3-结构"><a href="#11-3-结构" class="headerlink" title="11.3. 结构"></a>11.3. 结构</h2><ol>
+<li>Subject: 目标<ul>
+<li><strong>抽象类</strong>：notify()方法每个subject实现都一样，使用抽象类，子类可以完全复用。</li>
+<li>折中，虽然希望是接口，但为了复用，抽象类更合适</li>
+</ul>
+</li>
+<li>ConcreteSubject: 具体目标</li>
+<li>Observer: 观察者<ul>
+<li><strong>接口</strong>：观察不能作为类的主要职责/主要类型体系（所以接口比抽象类更好），而只是一个通信行为</li>
+</ul>
+</li>
+<li>ConcreteObserver: 具体观察者<ul>
+<li>只有知道自己<strong>需要哪些数据</strong>，按照单一职责目标不应该知道这些细节</li>
+</ul>
+</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F02%2F14-22-51-abd6c21e1a24956e9b212838c09c57c5-20240402142250-474497.png" alt="image.png"></p>
+<h2 id="11-4-分析"><a href="#11-4-分析" class="headerlink" title="11.4. 分析"></a>11.4. 分析</h2><ol>
+<li>集中管理数据，观察目标可以以<font color="#c00000">单一职责管理数据</font>；观察目标只有<font color="#c00000">行为职责</font>，数据都从观察目标获取。</li>
+<li><font color="#c00000">一对多关系</font>实现类数据同步</li>
+<li>对同一个观察目标而言，观察目标和观察者是一对多的关系，单一个观察者也可以订阅多个订阅目标。</li>
+<li><strong>更新数据方式：</strong><ol>
+<li>推送：实现简单，松耦合。目标去通知观察者。</li>
+<li>拉取：定制化，但是实现复杂。观察者调用目标的getter放法（减少松耦合）</li>
+</ol>
+</li>
+</ol>
+<p><strong>松耦合目标</strong>：体现了最小知识原则</p>
+<h2 id="11-5-适用环境"><a href="#11-5-适用环境" class="headerlink" title="11.5. 适用环境"></a>11.5. 适用环境</h2><ol>
+<li>需要独立双向变化，分隔数据和表示职责</li>
+<li>一个抽象模型有两个方面，一个方面依赖另一个方面，将这些方面封装在独立的对象中使它们可以独立地改变和复用</li>
+<li>系统中需要创建一个触发链</li>
+<li>一个对象变化导致其他对象变化，而不知道具体有多少对象</li>
+<li>一个对象必须通知其他对象，而不知道这些对象是谁</li>
+</ol>
+<h2 id="11-6-扩展"><a href="#11-6-扩展" class="headerlink" title="11.6. 扩展"></a>11.6. 扩展</h2><h3 id="11-6-1-JDK中的观察者模式"><a href="#11-6-1-JDK中的观察者模式" class="headerlink" title="11.6.1. JDK中的观察者模式"></a>11.6.1. JDK中的观察者模式</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F02%2F15-32-28-aad5aa678b3e5d6cd2ff136bbb40fbd7-20240402153228-a498e4.png" alt="image.png"></p>
+<ul>
+<li>Observer接口<ul>
+<li><code>void update(Observable o, Object arg);</code></li>
+</ul>
+</li>
+<li>Observable类<ol>
+<li>Observable()</li>
+<li>addObserver(Observer o) </li>
+<li>deleteObserver (Observer o) </li>
+<li><strong>notifyObservers() 拉取</strong>，<strong>notifyObservers(Object arg) 推送</strong> </li>
+<li>deleteObservers</li>
+<li><strong>setChanged()</strong>: 控制变化的粒度，当变化达到某个程度才更新，notify时会检查是否更新。 <ul>
+<li>Hook function</li>
+</ul>
+</li>
+<li>clearChanged() </li>
+<li>hasChanged() </li>
+<li>countObservers()</li>
+</ol>
+</li>
+</ul>
+<h3 id="11-6-2-谁触发更新"><a href="#11-6-2-谁触发更新" class="headerlink" title="11.6.2. 谁触发更新"></a>11.6.2. 谁触发更新</h3><ol>
+<li>目标对象：状态改变后自动触发更新。简单但是可能会有过多更新，效率差。</li>
+<li>观察者对象：增加观察者的责任，可能忘记更新导致数据不同步。</li>
+</ol>
+<h3 id="11-6-3-更改管理器-Change-Manager"><a href="#11-6-3-更改管理器-Change-Manager" class="headerlink" title="11.6.3. 更改管理器 Change Manager"></a>11.6.3. 更改管理器 Change Manager</h3><p>需要在多个目标中进行协调，一个目标并不知道其他目标i的状态。</p>
+<p>把维持观察队列的职责外部化，<strong>合成复用原则</strong>。</p>
+<p>Change Manager实现类类似中介模式。</p>
+<h3 id="11-6-4-MVC模式"><a href="#11-6-4-MVC模式" class="headerlink" title="11.6.4. MVC模式"></a>11.6.4. MVC模式</h3><p>MVC：可以看作有Change Manager的观察者模式</p>
+<p>观察目标：Model<br>观察者：View<br>中介：Controller</p>
+<h1 id="12-模板方法模式"><a href="#12-模板方法模式" class="headerlink" title="12. 模板方法模式"></a>12. 模板方法模式</h1><h2 id="12-1-动机"><a href="#12-1-动机" class="headerlink" title="12.1. 动机"></a>12.1. 动机</h2><p>很多复杂的事情只需要某个步骤发生变化，就能发生任务的变化</p>
+<h2 id="12-2-定义"><a href="#12-2-定义" class="headerlink" title="12.2. 定义"></a>12.2. 定义</h2><ul>
+<li>模板方法模式(Template Method Pattern)：希望定义一个操作中算法的骨架，而将一些步骤延迟到子类中；在子类不改变算法的结构即可重定义算法的某些特定步骤。<ul>
+<li><strong>类行为模式</strong>，只有类的继承关系，没有对象关联关系</li>
+<li>基于继承的复用，把相同代码放到父类中，不同的方法实现放在不同子类中</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-3-结构"><a href="#12-3-结构" class="headerlink" title="12.3. 结构"></a>12.3. 结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F09%2F14-18-55-b3100954783da8f70fade0715b080052-20240409141854-ab5e18.png" alt="image.png"></p>
+<ol>
+<li>AbstractClass: 模板，抽象</li>
+<li>ConcreteClass： 具体子类</li>
+</ol>
+<h2 id="12-4-分析"><a href="#12-4-分析" class="headerlink" title="12.4. 分析"></a>12.4. 分析</h2><ol>
+<li>模板方法 Template Method：定义在抽象类中的、把基本操作 方法组合在一起形成一个总算法或一个总行为的方法。不能被修改，往往是final。</li>
+<li>基本方法 Primitive Method：实现具体步骤的方法。<ol>
+<li>钩子方法：挂钩方法或空方法，控制算法中某些<strong>可选</strong>的步骤</li>
+<li>抽象方法：提供具体的<strong>必选</strong>行为的变化</li>
+<li>具体方法</li>
+</ol>
+</li>
+</ol>
+<h2 id="12-5-扩展"><a href="#12-5-扩展" class="headerlink" title="12.5. 扩展"></a>12.5. 扩展</h2><ol>
+<li>好莱坞原则：子类不显示调用父类，而是通过覆盖父类的方法实现某些具体的业务逻辑，<strong>父类控制对子类的调用</strong>。</li>
+<li>和工厂方法的联系：都封装了具体的任务，把任务的具体实现延迟到子类中。如果模板中的任务只有对象创建，两者就是一致的。</li>
+</ol>
+<h1 id="13-适配器模式"><a href="#13-适配器模式" class="headerlink" title="13. 适配器模式"></a>13. 适配器模式</h1><h2 id="13-1-动机"><a href="#13-1-动机" class="headerlink" title="13.1. 动机"></a>13.1. 动机</h2><ul>
+<li>在适配器模式中可以定义一个包装类，<strong>包装不兼容接口的对象</strong>，这个包装类指的就是适配器(Adapter)，它所包装的对象就是适配者 (Adaptee)，即被适配的类。</li>
+<li>让接口不兼容的类也能一起工作</li>
+</ul>
+<h2 id="13-2-定义"><a href="#13-2-定义" class="headerlink" title="13.2. 定义"></a>13.2. 定义</h2><ul>
+<li>适配器模式(<strong>Adapter Pattern</strong>) ：<font color="#c00000">将一个接口转换成 客户希望的另一个接口</font>，适配器模式使<font color="#c00000">接口不兼容的那些类可以一起工作</font>，其别名为包装器(<strong>Wrapper</strong>)。 </li>
+<li>适配器模式既可以作为<strong>类结构型模式</strong>，也可以作为<strong>对象结构型模式</strong></li>
+</ul>
+<h2 id="13-3-结构"><a href="#13-3-结构" class="headerlink" title="13.3. 结构"></a>13.3. 结构</h2><p>Adapter复用Target的接口。复用Adaptee的实现</p>
+<h3 id="13-3-1-对象适配器"><a href="#13-3-1-对象适配器" class="headerlink" title="13.3.1. 对象适配器"></a>13.3.1. 对象适配器</h3><ol>
+<li>适配器转发Client对Target的request()请求</li>
+<li>Adater合成封装一个Adaptee</li>
+<li>适配器更灵活，可以适配多个适配者，灵活更改适配者</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F09%2F15-03-47-b149d0dbb0b7c14bfe37704fcf6834f2-20240409150346-4f3e4d.png" alt="image.png"></p>
+<h3 id="13-3-2-类适配器"><a href="#13-3-2-类适配器" class="headerlink" title="13.3.2. 类适配器"></a>13.3.2. 类适配器</h3><p>Java用不了</p>
+<ol>
+<li>Adapter继承Adaptee</li>
+<li>复用Adaptee的实现，可以用继承，也可以用合成。但继承可以修改Adaptee的实现</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F09%2F15-04-43-e22be213ae4a81b1d86ba35bc9af9905-20240409150442-a4fdcf.png" alt="image.png"></p>
+<h2 id="13-4-适用环境"><a href="#13-4-适用环境" class="headerlink" title="13.4. 适用环境"></a>13.4. 适用环境</h2><ol>
+<li>需要使用现有的类，但接口不符合系统的需要。</li>
+<li>想建立一个可以重复使用的类，用于与一些彼此之间没有太大联系的类，包括一些将来可能引进的类一起工作。</li>
+</ol>
+<h2 id="13-5-扩展"><a href="#13-5-扩展" class="headerlink" title="13.5. 扩展"></a>13.5. 扩展</h2><ul>
+<li>默认适配器模式(Default Adapter Pattern)<ul>
+<li>当不需要全部实现接口提供的方法时，可先设计一个<strong>抽象类实现接口</strong>，并<strong>为该接口中每个方法提供一个默认实现（空方法)<strong>， 那么该抽象类的子类可有选择地覆盖父类的某些方法来实现需求，</strong>它适用于一个接口不想使用其所有的方法的情况</strong>。因此也称为<strong>单接口适配器模式</strong>。</li>
+</ul>
+</li>
+</ul>
+<h1 id="14-组合模式"><a href="#14-组合模式" class="headerlink" title="14. 组合模式"></a>14. 组合模式</h1><h2 id="14-1-动机"><a href="#14-1-动机" class="headerlink" title="14.1. 动机"></a>14.1. 动机</h2><p>对于<strong>树形结构</strong>，容器对象（如文件夹）的某个方法被调用时，将遍历整个树型结构，修找也包含这个方法的成员对象(可能是容器对象（文件夹），也可以是叶子对象（文件）)并执行。</p>
+<p>虽然容器对象和叶子对象有区别，但客户端希望统一处理。</p>
+<p>组合模式描述了<strong>如何将容器对象和叶子对象进行递归组合</strong>，使得<strong>用户在使用时无须对它们进行区分</strong>，可以<strong>一致地对待容器对象和叶子对象</strong>，这就是组合模式的模式动机</p>
+<h2 id="14-2-定义"><a href="#14-2-定义" class="headerlink" title="14.2. 定义"></a>14.2. 定义</h2><ul>
+<li>组合模式(Composite Pattern)：组合多个对象形成树形结构以表示“整体-部分”的结构层次。组合模式对单个对象（即叶子对象）和组合对象（即容器对象）的使用具有一致性。<ul>
+<li>可以减少定义新的类型</li>
+</ul>
+</li>
+</ul>
+<h2 id="14-3-结构"><a href="#14-3-结构" class="headerlink" title="14.3. 结构"></a>14.3. 结构</h2><p>叶子对象和容器对象都可能继承到一些不属于自己的方法</p>
+<p>结构与命令模式类似</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F09%2F15-37-46-d7212f56349f337c8747f9bfc20a57fa-20240409153745-d77d94.png" alt="image.png"></p>
+<h2 id="14-4-分析"><a href="#14-4-分析" class="headerlink" title="14.4. 分析"></a>14.4. 分析</h2><ol>
+<li>定义一个抽象的Component类，统一处理leaf和copomsite</li>
+<li>容器对象与抽象构件类之间由聚合关系，实现递归</li>
+</ol>
+<h2 id="14-5-扩展"><a href="#14-5-扩展" class="headerlink" title="14.5. 扩展"></a>14.5. 扩展</h2><ol>
+<li><p><font color="#c00000">安全</font>组合模式<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F09%2F15-46-35-3db8faaa8df3abcc82864627f7fedd7f-20240409154634-40bffc.png" alt="image.png"></p>
+</li>
+<li><p><font color="#c00000">透明</font>组合模式<img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F09%2F15-46-25-ec0e766f6ac7248732b7b49416007287-20240409154624-308aca.png" alt="image.png"></p>
+</li>
+</ol>
+<h1 id="15-桥接模式"><a href="#15-桥接模式" class="headerlink" title="15. 桥接模式"></a>15. 桥接模式</h1><h2 id="15-1-动机"><a href="#15-1-动机" class="headerlink" title="15.1. 动机"></a>15.1. 动机</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F11%2F10-24-45-f52c6d95f0f88429b13d87d4068e7369-20240411102444-cbc291.png" alt="image.png"></p>
+<p>对于有<font color="#c00000">两个变化维度的系统</font>，使用方案二设计系统类更少，而且系统扩展更方便。</p>
+<h2 id="15-2-定义"><a href="#15-2-定义" class="headerlink" title="15.2. 定义"></a>15.2. 定义</h2><ul>
+<li>桥接模式（Bridge Pattern）：将抽象部分和实现部分相分离，使得它们可以独立地变化。<ul>
+<li>柄体模式（Handle and Body）/接口(Interface)模式</li>
+<li>是继承关系的替换</li>
+</ul>
+</li>
+</ul>
+<h2 id="15-3-结构"><a href="#15-3-结构" class="headerlink" title="15.3. 结构"></a>15.3. 结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F11%2F10-29-45-0a1d4aff6b2b04e7252207845bf016dd-20240411102945-6df41e.png" alt="image.png"></p>
+<ol>
+<li>Abstraction：抽象类</li>
+<li>RefinedAbstraction：扩充抽象类</li>
+<li>Implementor：实现类接口</li>
+<li>ConcreteImplementor：具体实现类</li>
+</ol>
+<p>用户不知道对象是合成的还是继承的。</p>
+<h2 id="15-4-分析"><a href="#15-4-分析" class="headerlink" title="15.4. 分析"></a>15.4. 分析</h2><ol>
+<li>抽象化Abstraction：忽略一些信息，把对象共同性质抽取出来形成类</li>
+<li>实现化Implementation：针对抽象化给出的具体实现</li>
+<li>脱耦：<strong>把抽象化和实现化之间的耦合脱开</strong>，强关联改成弱关联，继承关系改成关联关系</li>
+</ol>
+<p>如果只有一端变化，合成和继承产生的类是一样的。<br>两端变化，且可以独立变化适合桥接。<br>如果两端变化且不独立，继承和组合都不合适。</p>
+<h2 id="15-5-扩展"><a href="#15-5-扩展" class="headerlink" title="15.5. 扩展"></a>15.5. 扩展</h2><ul>
+<li>桥接模式和适配器模式联合<ul>
+<li>桥接用于系统的初步设计。当发现系统与已有类无法协同工作时，可以采用适配器模式</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F11%2F10-54-50-fc6001049ab4a0d2b1e1ebf287754dd9-20240411105449-0d96aa.png" alt="image.png"></li>
+</ul>
+</li>
+</ul>
+<h1 id="16-装饰模式"><a href="#16-装饰模式" class="headerlink" title="16. 装饰模式"></a>16. 装饰模式</h1><h2 id="16-1-动机"><a href="#16-1-动机" class="headerlink" title="16.1. 动机"></a>16.1. 动机</h2><p>以<strong>对用户透明的方式动态地给一个对象附加上更多责任</strong>，用户不觉得对象在装饰前后有什么不同。对用户透明的方式动态地给一个对象附加上更多责任<br>装饰模式可以在<strong>不需要创造更多子类的情况下，将对象的功能加以扩展</strong>。</p>
+<p>希望在一个对象上附加数量不定的责任，<strong>需要合成关系可递归</strong>。</p>
+<h2 id="16-2-定义"><a href="#16-2-定义" class="headerlink" title="16.2. 定义"></a>16.2. 定义</h2><p>动态给一个对象增加一些额外的职责</p>
+<h2 id="16-3-结构"><a href="#16-3-结构" class="headerlink" title="16.3. 结构"></a>16.3. 结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F11%2F11-25-10-6b363bacaa2d66465030534d19c26662-20240411112509-9c4336.png" alt="image.png"></p>
+<h2 id="16-4-分析"><a href="#16-4-分析" class="headerlink" title="16.4. 分析"></a>16.4. 分析</h2><p>关联关系不会破坏类的封装性，而且继承时一周耦合较大的静态关系，无法在程序运行时动态扩展。</p>
+<h2 id="16-5-适用环境"><a href="#16-5-适用环境" class="headerlink" title="16.5. 适用环境"></a>16.5. 适用环境</h2><ol>
+<li>动态、透明给对象添加职责</li>
+<li>也可以动态撤销职责</li>
+<li>当不能采取继承的方式对系统进行扩充或者采用继承不利于系统扩展和维护时。</li>
+</ol>
+<h1 id="17-外观模式"><a href="#17-外观模式" class="headerlink" title="17. 外观模式"></a>17. 外观模式</h1><h2 id="17-1-动机"><a href="#17-1-动机" class="headerlink" title="17.1. 动机"></a>17.1. 动机</h2><p>引入外观角色，<strong>用户只需要直接与外观角色交互</strong>，用户与子系统的复杂关系由外观角色来实现，从而降低系统的耦合度。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F14-06-10-d6411e4c7a5cde3c5aea9d0e7aaac310-20240611140610-f7808d.png" alt="image.png"></p>
+<h2 id="17-2-定义"><a href="#17-2-定义" class="headerlink" title="17.2. 定义"></a>17.2. 定义</h2><ul>
+<li><strong>外观模式(Facade Patter</strong>n)：外部与一个子系统的通 信必须通过一个统一的外观对象进行，为子系统中的 一组接口提供一个一致的界面，外观模式定义了一个 高层接口，这个接口使得这一子系统更加容易使用。 外观模式又称为门面模式。</li>
+<li><strong>对象结构型模式</strong></li>
+</ul>
+<h2 id="17-3-结构"><a href="#17-3-结构" class="headerlink" title="17.3. 结构"></a>17.3. 结构</h2><p>迪米特法则，外部内部通信都通过facade，细节被屏蔽，符合最小知识（狭义迪米特）</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F14-10-34-b25a9154b162af021e7298d2f3f2cfe9-20240611141033-ec6164.png" alt="image.png"></p>
+<h2 id="17-4-分析"><a href="#17-4-分析" class="headerlink" title="17.4. 分析"></a>17.4. 分析</h2><p>单一职责，引入外观对象，作为各个子系统的单一入口<br>迪米特法则</p>
+<h2 id="17-5-使用场景"><a href="#17-5-使用场景" class="headerlink" title="17.5. 使用场景"></a>17.5. 使用场景</h2><p>简化接口<br>对用户屏蔽子系统</p>
+<h2 id="17-6-优缺点"><a href="#17-6-优缺点" class="headerlink" title="17.6. 优缺点"></a>17.6. 优缺点</h2><ol>
+<li>无法很好地限制用户使用子系统，如果对用户访问子系统做太多限制则减少了可变性和灵活性</li>
+<li>在不引入抽象类的情况下，增加新的子系统可能需要修改外观类或客户端的源代码，违背开闭原则</li>
+</ol>
+<h1 id="18-享元模式"><a href="#18-享元模式" class="headerlink" title="18. 享元模式"></a>18. 享元模式</h1><h2 id="18-1-动机"><a href="#18-1-动机" class="headerlink" title="18.1. 动机"></a>18.1. 动机</h2><p>对象数量过多，导致运行代价过高。通过共享模式实现相同或相似对象的重用。</p>
+<p>把对象不变的部分和变化的部分分开，用到的时候把两个组合起来。</p>
+<p>外部状态(Intrinsic State)：变化部分<br>内部状态(Extrinsic State)：不变部分，<strong>可以共享的部分</strong></p>
+<p>常常会出现工厂模式，需要创建一个享元工厂来负责维护一个<strong>享元池(Flyweight Pool)</strong> 用于存储具有相同内部状态的享元模式。</p>
+<h2 id="18-2-定义"><a href="#18-2-定义" class="headerlink" title="18.2. 定义"></a>18.2. 定义</h2><p>运用共享技术实现大量细粒度对象的复用</p>
+<p><strong>结构型模式</strong></p>
+<h2 id="18-3-结构"><a href="#18-3-结构" class="headerlink" title="18.3. 结构"></a>18.3. 结构</h2><p>没有完成对象创建，外部状态从外部引入然后组合</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F14-35-49-8c21448b2aaa49e32f0c24fe70096c30-20240611143549-6519f9.png" alt="image.png"></p>
+<h1 id="19-代理模式"><a href="#19-代理模式" class="headerlink" title="19. 代理模式"></a>19. 代理模式</h1><h2 id="19-1-动机"><a href="#19-1-动机" class="headerlink" title="19.1. 动机"></a>19.1. 动机</h2><p>引入新对象来实现对真实对象的操作或将新对象作为真实对象的一个替身<br>用户禁止使用原来的对象</p>
+<h2 id="19-2-定义"><a href="#19-2-定义" class="headerlink" title="19.2. 定义"></a>19.2. 定义</h2><p>proxy pattern：由代理对象控制对源对象的引用</p>
+<p>Surrogate</p>
+<p>Proxy Pattern: Provide a surrogate or placeholder for another object to control access to it.</p>
+<p>虚拟代理：缩略图，不看内部内容的时候只返回一个很小的图、</p>
+<h2 id="19-3-结构"><a href="#19-3-结构" class="headerlink" title="19.3. 结构"></a>19.3. 结构</h2><p>和装饰区别：不需要动态添加职责，不用递归</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F14-47-59-bc03297da10d8f9fded7ac592d15ee6d-20240611144758-c5267e.png" alt="image.png"></p>
+<h1 id="20-其他"><a href="#20-其他" class="headerlink" title="20. 其他"></a>20. 其他</h1><h2 id="20-1-继承和合成的区别？"><a href="#20-1-继承和合成的区别？" class="headerlink" title="20.1. 继承和合成的区别？"></a>20.1. 继承和合成的区别？</h2><ol>
+<li>继承：复用接口、类型定义，不太容易改变；白盒继承，拥有父类所有代码，复用代码时可以部分改变父类代码  </li>
+<li>合成：复用实现，容易改变；黑盒，不易改变对象内部实现，只能完全更换对象</li>
+</ol>
 ]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>02-软件架构intro</title>
+    <url>/posts/46b5218b/</url>
+    <content><![CDATA[<ul>
+<li>软件的四个本质难题<ol>
+<li>复杂度</li>
+<li>一致性 </li>
+<li>可变性 </li>
+<li>不可见性：没有几何结构</li>
+</ol>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F16%2F14-49-29-00d7cb1dc073a5a241fb8794c7cb365d-20240416144928-c3fd7b.png" alt="image.png"></p>
+<h1 id="架构来源"><a href="#架构来源" class="headerlink" title="架构来源"></a>架构来源</h1><ul>
+<li><p>Architecture:</p>
+<ol>
+<li>Component interfaces</li>
+<li>Component communications and dependencies</li>
+<li>Component responibilities<ol>
+<li>性能，可用……</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>communication</p>
+<ol>
+<li>Data passing</li>
+<li>Control flow</li>
+</ol>
+</li>
+</ul>
+<h2 id="NFR"><a href="#NFR" class="headerlink" title="NFR"></a>NFR</h2><ul>
+<li>架构强调非功能需求NFR：how well a system works</li>
+<li>包括<ol>
+<li>技术限制</li>
+<li>商业限制</li>
+<li>质量属性</li>
+</ol>
+</li>
+</ul>
+<h1 id="architecture-views"><a href="#architecture-views" class="headerlink" title="architecture views"></a>architecture views</h1><p>有多个视图<br>解决不可见</p>
+<h2 id="4-1-view-model"><a href="#4-1-view-model" class="headerlink" title="4+1 view model"></a>4+1 view model</h2><p>Logical view ：架构的重要元素和他们之间的关系<br>Process view  ：<br>Physical view<br>Development view</p>
+<p>Architecture use cases: 四个视图是关于某个场景的</p>
+<h2 id="generic-design-strategies"><a href="#generic-design-strategies" class="headerlink" title="generic design strategies"></a>generic design strategies</h2><ol>
+<li>Decomposition</li>
+<li>Abstraction</li>
+<li>Stepwise: Divid and Conquer</li>
+<li>Generate and Test，先生成一个设计，再对它测试</li>
+<li>Iteration: Incremental Refinement</li>
+<li>Reuseable elements，重用现有的设计</li>
+</ol>
+<h1 id="what-does-a-software-architect-do"><a href="#what-does-a-software-architect-do" class="headerlink" title="what does a software architect do?"></a>what does a software architect do?</h1><ol>
+<li>Liaison<ol>
+<li>调和用户、市场、开发等</li>
+</ol>
+</li>
+<li>software engineering</li>
+<li>technology knowledge</li>
+<li>risk management</li>
+</ol>
+<h1 id="架构设计过程"><a href="#架构设计过程" class="headerlink" title="架构设计过程"></a>架构设计过程</h1><ol>
+<li>识别和架构相关的重要需求</li>
+<li>架构设计</li>
+<li>文档化，以视图为中心</li>
+<li>架构评估</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>03-质量属性</title>
+    <url>/posts/7a0fc498/</url>
+    <content><![CDATA[<h1 id="1-需求"><a href="#1-需求" class="headerlink" title="1. 需求"></a>1. 需求</h1><h2 id="1-1-功能需求"><a href="#1-1-功能需求" class="headerlink" title="1.1. 功能需求"></a>1.1. 功能需求</h2><p>约定系统行为</p>
+<p>功能独立于结构</p>
+<h2 id="1-2-质量需求"><a href="#1-2-质量需求" class="headerlink" title="1.2. 质量需求"></a>1.2. 质量需求</h2><p>系统完成功能好坏程度</p>
+<h2 id="1-3-约束"><a href="#1-3-约束" class="headerlink" title="1.3. 约束"></a>1.3. 约束</h2><p>约束是完全没有自由的设计决定，在设计之前就确定下来。</p>
+<h1 id="2-质量属性"><a href="#2-质量属性" class="headerlink" title="2. 质量属性"></a>2. 质量属性</h1><p>质量属性：可以表述成非功能需求或者架构需求</p>
+<h2 id="2-1-要素"><a href="#2-1-要素" class="headerlink" title="2.1. 要素"></a>2.1. 要素</h2><ul>
+<li>六元素：作为架构设计的输入<ol>
+<li>刺激 stimulus：到达系统时需要考虑的<strong>条件</strong><ul>
+<li>外部的变化、输入，发出者可能是人也可能是外部系统</li>
+</ul>
+</li>
+<li>源 source：产生刺激的<strong>实体</strong></li>
+<li>响应 response：刺激到达后采取的<strong>活动</strong></li>
+<li>响应度量 measure: 我们会对响应做可以量化的度量</li>
+<li>工件 artifact：需求适用的<strong>整个</strong>系统或系统的一部分</li>
+<li>环境 environment：发生刺激时系统的状况，例如过载，运行等</li>
+</ol>
+</li>
+<li>设计决定：<ul>
+<li><strong>最小单元</strong>是tactic</li>
+<li>几个tactic可以组合成pattern/strategy</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-可用性-Avaliability"><a href="#2-2-可用性-Avaliability" class="headerlink" title="2.2. 可用性 Avaliability"></a>2.2. 可用性 Avaliability</h2><h3 id="2-2-1-概述"><a href="#2-2-1-概述" class="headerlink" title="2.2.1. 概述"></a>2.2.1. 概述</h3><p>在两次Failure之间：</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F10-22-27-3fa32d7c9b3e50f3244c917f315d27cc-20240425102226-752219.png" alt="image.png"></p>
+<p>Unabaliable(Detect-Repair-Restart)-Avaliable<br>MTTR——MTBT</p>
+<p>MTTR: mean time to repair<br>MTBF: mean time between failures  </p>
+<p>提高可以性：降低MTTR,提高MTBT</p>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -1.738ex;" xmlns="http://www.w3.org/2000/svg" width="25.432ex" height="4.812ex" role="img" focusable="false" viewBox="0 -1359 11241 2127"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mi" transform="translate(750,0)"><path data-c="1D463" d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z"></path></g><g data-mml-node="mi" transform="translate(1235,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(2041.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mfrac" transform="translate(3097.6,0)"><g data-mml-node="mrow" transform="translate(2462.7,676)"><g data-mml-node="mi"><path data-c="1D440" d="M289 629Q289 635 232 637Q208 637 201 638T194 648Q194 649 196 659Q197 662 198 666T199 671T201 676T203 679T207 681T212 683T220 683T232 684Q238 684 262 684T307 683Q386 683 398 683T414 678Q415 674 451 396L487 117L510 154Q534 190 574 254T662 394Q837 673 839 675Q840 676 842 678T846 681L852 683H948Q965 683 988 683T1017 684Q1051 684 1051 673Q1051 668 1048 656T1045 643Q1041 637 1008 637Q968 636 957 634T939 623Q936 618 867 340T797 59Q797 55 798 54T805 50T822 48T855 46H886Q892 37 892 35Q892 19 885 5Q880 0 869 0Q864 0 828 1T736 2Q675 2 644 2T609 1Q592 1 592 11Q592 13 594 25Q598 41 602 43T625 46Q652 46 685 49Q699 52 704 61Q706 65 742 207T813 490T848 631L654 322Q458 10 453 5Q451 4 449 3Q444 0 433 0Q418 0 415 7Q413 11 374 317L335 624L267 354Q200 88 200 79Q206 46 272 46H282Q288 41 289 37T286 19Q282 3 278 1Q274 0 267 0Q265 0 255 0T221 1T157 2Q127 2 95 1T58 0Q43 0 39 2T35 11Q35 13 38 25T43 40Q45 46 65 46Q135 46 154 86Q158 92 223 354T289 629Z"></path></g><g data-mml-node="mi" transform="translate(1051,0)"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g><g data-mml-node="mi" transform="translate(1755,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(2514,0)"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mi"><path data-c="1D440" d="M289 629Q289 635 232 637Q208 637 201 638T194 648Q194 649 196 659Q197 662 198 666T199 671T201 676T203 679T207 681T212 683T220 683T232 684Q238 684 262 684T307 683Q386 683 398 683T414 678Q415 674 451 396L487 117L510 154Q534 190 574 254T662 394Q837 673 839 675Q840 676 842 678T846 681L852 683H948Q965 683 988 683T1017 684Q1051 684 1051 673Q1051 668 1048 656T1045 643Q1041 637 1008 637Q968 636 957 634T939 623Q936 618 867 340T797 59Q797 55 798 54T805 50T822 48T855 46H886Q892 37 892 35Q892 19 885 5Q880 0 869 0Q864 0 828 1T736 2Q675 2 644 2T609 1Q592 1 592 11Q592 13 594 25Q598 41 602 43T625 46Q652 46 685 49Q699 52 704 61Q706 65 742 207T813 490T848 631L654 322Q458 10 453 5Q451 4 449 3Q444 0 433 0Q418 0 415 7Q413 11 374 317L335 624L267 354Q200 88 200 79Q206 46 272 46H282Q288 41 289 37T286 19Q282 3 278 1Q274 0 267 0Q265 0 255 0T221 1T157 2Q127 2 95 1T58 0Q43 0 39 2T35 11Q35 13 38 25T43 40Q45 46 65 46Q135 46 154 86Q158 92 223 354T289 629Z"></path></g><g data-mml-node="mi" transform="translate(1051,0)"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g><g data-mml-node="mi" transform="translate(1755,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(2514,0)"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g><g data-mml-node="mo" transform="translate(3440.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(4440.4,0)"><path data-c="1D440" d="M289 629Q289 635 232 637Q208 637 201 638T194 648Q194 649 196 659Q197 662 198 666T199 671T201 676T203 679T207 681T212 683T220 683T232 684Q238 684 262 684T307 683Q386 683 398 683T414 678Q415 674 451 396L487 117L510 154Q534 190 574 254T662 394Q837 673 839 675Q840 676 842 678T846 681L852 683H948Q965 683 988 683T1017 684Q1051 684 1051 673Q1051 668 1048 656T1045 643Q1041 637 1008 637Q968 636 957 634T939 623Q936 618 867 340T797 59Q797 55 798 54T805 50T822 48T855 46H886Q892 37 892 35Q892 19 885 5Q880 0 869 0Q864 0 828 1T736 2Q675 2 644 2T609 1Q592 1 592 11Q592 13 594 25Q598 41 602 43T625 46Q652 46 685 49Q699 52 704 61Q706 65 742 207T813 490T848 631L654 322Q458 10 453 5Q451 4 449 3Q444 0 433 0Q418 0 415 7Q413 11 374 317L335 624L267 354Q200 88 200 79Q206 46 272 46H282Q288 41 289 37T286 19Q282 3 278 1Q274 0 267 0Q265 0 255 0T221 1T157 2Q127 2 95 1T58 0Q43 0 39 2T35 11Q35 13 38 25T43 40Q45 46 65 46Q135 46 154 86Q158 92 223 354T289 629Z"></path></g><g data-mml-node="mi" transform="translate(5491.4,0)"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g><g data-mml-node="mi" transform="translate(6195.4,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(6954.4,0)"><path data-c="1D439" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"></path></g></g><rect width="7903.4" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F05%2F13-22-19-cc71e1c4e715a1e93f8b217fad590e04-20240505132219-0989a6.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F05%2F13-22-31-eeea4718e2d42049c6bc20bc0c6cc8cd-20240505132230-f91baa.png" alt="image.png"></p>
+<h3 id="2-2-2-可用性策略"><a href="#2-2-2-可用性策略" class="headerlink" title="2.2.2. 可用性策略"></a>2.2.2. 可用性策略</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F10-26-26-4700e0c1f4eeecda5b7b0a03139d2c4e-20240425102625-15d799.png" alt="image.png"></p>
+<h4 id="2-2-2-1-Detect"><a href="#2-2-2-1-Detect" class="headerlink" title="2.2.2.1. Detect"></a>2.2.2.1. Detect</h4><ol>
+<li>Ping/Echo: Monitor主动给Server询问，Server响应。<ol>
+<li>需要应答，带宽利用率更低</li>
+</ol>
+</li>
+<li>Heartbeat: Server按照一定频率主动给Monitor发消息。</li>
+<li>Timestamp:<ul>
+<li>收到一系列的消息应该在时间上有先后顺序</li>
+<li>进行常识的信息的检查，如果和常识不符合那么可能是出现了问题</li>
+</ul>
+</li>
+<li>Santity Checking: 如果数据超出合理范围，认为系统出现问题</li>
+<li>Condition Monitoring: 对运行的环境进行检查，如网络带宽、占用内存等。当环境达到某些阈值时，产生可用性问题的概率较大。</li>
+<li>Voting: Voter之间不一致，认为系统出现问题。基本上使用奇数个Voter。<ol>
+<li>Clone: 多个Voter完全一致，只根据结果投票。</li>
+<li>Voter实现不同，为了防止组件的实现影响可用性。如果没有发生可用性问题，输入一致，输出也一致。</li>
+<li>Voter实现不同，输入也不同，但是输出在合理范围内，也认为系统可用。</li>
+</ol>
+</li>
+<li>Exception Delection: </li>
+<li>Self-Test</li>
+</ol>
+<ul>
+<li>Ping/Echo和Heartbeat区别：<ol>
+<li>始终检测，heartbeat比ping/echo的带宽开销更小  </li>
+<li>偶发请求，不需要时刻保证可用性，请求前ping/echo</li>
+</ol>
+</li>
+</ul>
+<h4 id="2-2-2-2-Recover"><a href="#2-2-2-2-Recover" class="headerlink" title="2.2.2.2. Recover"></a>2.2.2.2. Recover</h4><p>优先级：让系统恢复正常状态&gt;组件恢复</p>
+<ol>
+<li><p>active redundancy</p>
+<ol>
+<li>所有组件都并行提供服务</li>
+</ol>
+</li>
+<li><p>passive redundancy</p>
+<ol>
+<li>主/副组件</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F10-46-24-5d427223ec0ef63efac9ba31a7400ddc-20240425104623-32b5a7.png" alt="image.png"></li>
+</ol>
+</li>
+<li><p>spare</p>
+</li>
+<li><p>Exception Handling: 捕获异常，处理。和redundancy配合，主机发生异常后，启动副本。</p>
+</li>
+<li><p>Rollback：按照一定时间间隔，记录系统的正常状态checkpoint，发生意外时可以回滚。</p>
+</li>
+<li><p>Software Upgrade: 软件提供商已经解决了问题</p>
+</li>
+<li><p>Retry: 问题不是系统造成，而是由于环境问题，如网络不稳定，一段时间后retry可能就可用了。</p>
+<ol>
+<li>会设置最大retry次数</li>
+</ol>
+</li>
+<li><p>Ignore faluts behavior: 把有问题的输入屏蔽掉</p>
+<ol>
+<li>白名单，黑名单</li>
+</ol>
+</li>
+<li><p>degradation: 服务水平降级</p>
+</li>
+<li><p>reconfiguration: 系统重新配置。</p>
+<ol>
+<li>基于微服务的系统，每个微服务有众多实例</li>
+</ol>
+</li>
+<li><p>Shadow：之前发生过错误的组件会有一段时间的shadow mode，如果出现问题立刻恢复。</p>
+<ol>
+<li>组件恢复之后有一段监视期，防止再次出现问题。</li>
+</ol>
+</li>
+<li><p>State re-synchronisation</p>
+<ol>
+<li>被动和主动冗余策略要求要恢复的组件在恢复服务之前对其状态进行升级。</li>
+</ol>
+</li>
+<li><p>Escalating restart：扩大重启范围，但先从最小范围开始。只重启出现错误的组件可能无法解决问题。</p>
+</li>
+<li><p>Non-Stop Forwarding：设备发生主备切换时最大程度地减少中断时间</p>
+</li>
+</ol>
+<h4 id="2-2-2-3-Prevent"><a href="#2-2-2-3-Prevent" class="headerlink" title="2.2.2.3. Prevent"></a>2.2.2.3. Prevent</h4><p>目的：延长系统正常运行的时间MTBF。</p>
+<ol>
+<li>Removal from service：把带病工作的组件尽早替换掉</li>
+<li>Transaction：2pc</li>
+<li>Predictive Model：使用基于以往数据的概率模型预测</li>
+<li>Exception Prevention：在异常捕获上提供更高级的处理能力</li>
+<li>Increase Competence Set：对可能会出现faults的原因进行针对性设计</li>
+</ol>
+<h2 id="2-3-互操作性-Interoperability"><a href="#2-3-互操作性-Interoperability" class="headerlink" title="2.3. 互操作性 Interoperability"></a>2.3. 互操作性 Interoperability</h2><h3 id="2-3-1-概述"><a href="#2-3-1-概述" class="headerlink" title="2.3.1. 概述"></a>2.3.1. 概述</h3><ul>
+<li><p>互操作性：”组件和组件之间相互操作，交换数据，都通过interface完成“的程度</p>
+</li>
+<li><p>要素</p>
+<ol>
+<li>Discovery：服务注册，和哪个对象互操作，怎么查找。<ol>
+<li>location</li>
+<li>identity</li>
+<li>interface of service</li>
+</ol>
+</li>
+<li>Handling of response：<ol>
+<li>reports back to the requester</li>
+<li>sends its response on to another system</li>
+<li>broadcasts</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F11-27-23-e24963fb38ef335e5a0929875103ee2d-20240425112722-1f7428.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F11-28-49-04751e4f3259e6415b58535b09e68d81-20240425112848-9dce66.png" alt="image.png"></p>
+<h3 id="2-3-2-互操作性策略"><a href="#2-3-2-互操作性策略" class="headerlink" title="2.3.2. 互操作性策略"></a>2.3.2. 互操作性策略</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F11-30-18-565bdb570d67ae4e40a0d211c005114a-20240425113017-9a2720.png" alt="image.png"></p>
+<h4 id="2-3-2-1-Locate"><a href="#2-3-2-1-Locate" class="headerlink" title="2.3.2.1. Locate"></a>2.3.2.1. Locate</h4><ol>
+<li>Discover Service：服务要在注册中心注册才能被找到</li>
+</ol>
+<h4 id="2-3-2-2-Manage-Interfaces"><a href="#2-3-2-2-Manage-Interfaces" class="headerlink" title="2.3.2.2. Manage Interfaces"></a>2.3.2.2. Manage Interfaces</h4><ol>
+<li>Orchestrate: 工作流编排，通过编排不同服务提供数据交换能力</li>
+<li>Tailor Interface：在interface上增加和删减一些能力<ol>
+<li>e.g.区分付费用户和免费用户</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-4-可修改性-Modifiability"><a href="#2-4-可修改性-Modifiability" class="headerlink" title="2.4. 可修改性 Modifiability"></a>2.4. 可修改性 Modifiability</h2><h3 id="2-4-1-概述"><a href="#2-4-1-概述" class="headerlink" title="2.4.1. 概述"></a>2.4.1. 概述</h3><p>设计的时候就要考虑未来的变化。</p>
+<p>预先针对变化设计，还是变化发生之后再去修改，取决于成本。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F11-39-58-0264100979bdb60ba4f3c304068a8f63-20240425113957-842a8a.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F11-40-36-bcbb77559343010d9f84807f5c36d81a-20240425114035-2af04a.png" alt="image.png"></p>
+<h3 id="2-4-2-可修改性策略"><a href="#2-4-2-可修改性策略" class="headerlink" title="2.4.2. 可修改性策略"></a>2.4.2. 可修改性策略</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F11-42-54-1659105ca675aaf8586ad10d242eaa00-20240425114253-47bd1d.png" alt="image.png"></p>
+<ol>
+<li>Reduce Size of Moudle：减小模块的规模</li>
+<li>Increase Cohesion：提高内聚<ol>
+<li>语义相近的部分往往需要同时修改</li>
+</ol>
+</li>
+<li>Reduce Coupling<ol>
+<li>Encapsulate：封装可能的变化</li>
+<li>Use an Intermediary：使用中间件</li>
+<li>Restrict Dependencies：<strong>使用分层结构简化依赖关系</strong></li>
+<li>Refactor：不是针对系统内部重构，是架构层面的重构，把责任放到最合适的地方</li>
+<li>Abstract Common Services：把相似的服务放在一起，修改对外参数</li>
+</ol>
+</li>
+<li>Defer Binding：推迟绑定时间<ol>
+<li>有越多的时间确定关系</li>
+<li>但是也会对其他质量属性造成负面影响</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-5-性能-Performance"><a href="#2-5-性能-Performance" class="headerlink" title="2.5. 性能 Performance"></a>2.5. 性能 Performance</h2><p>系统满足时间需求的能力</p>
+<ul>
+<li>决定性能的时间<ol>
+<li>processing time</li>
+<li>blocked time</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-5-1-概述"><a href="#2-5-1-概述" class="headerlink" title="2.5.1. 概述"></a>2.5.1. 概述</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F14-05-49-7c9ec4af005d63037d71db0ab770cd75-20240430140546-cb09ff.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F14-06-01-e431136370746160356a85aa199757e1-20240430140558-cf1dec.png" alt="image.png"></p>
+<h3 id="2-5-2-性能策略"><a href="#2-5-2-性能策略" class="headerlink" title="2.5.2. 性能策略"></a>2.5.2. 性能策略</h3><p>减少任务<br>增加处理能力</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F14-09-32-65db085871dd299a4e9c055fd3bd4a13-20240430140930-acc202.png" alt="image.png"></p>
+<ul>
+<li>demand side<ol>
+<li>降低采样频率</li>
+<li>限制事件响应，如果系统来不及响应，把事件放入等待队列</li>
+<li>优先级</li>
+<li>使用中间层，提高资源利用效率</li>
+</ol>
+</li>
+<li>resource side<ol>
+<li>提升资源</li>
+<li>并发</li>
+<li>复制多个实例，使用负载均衡器把任务分配到实例上</li>
+<li>复制多份数据，缓存、数据冗余</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-6-安全-Security"><a href="#2-6-安全-Security" class="headerlink" title="2.6. 安全 Security"></a>2.6. 安全 Security</h2><h3 id="2-6-1-概述"><a href="#2-6-1-概述" class="headerlink" title="2.6.1. 概述"></a>2.6.1. 概述</h3><p>保护系统不被未授权的访问影响</p>
+<ul>
+<li>特征<ol>
+<li>Confidentiality：数据和服务不能被未授权访问</li>
+<li>Integrity：数据和服务不能被未授权操作</li>
+<li>Availability：系统对合法用户可以正常使用</li>
+</ol>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F14-31-07-341098559fc7f205a8d7d451575fd08f-20240430143105-c26ce4.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F14-31-20-8a217de96bc3f58a32aa3a566258e208-20240430143118-a33992.png" alt="image.png"></p>
+<h3 id="2-6-2-安全性策略"><a href="#2-6-2-安全性策略" class="headerlink" title="2.6.2. 安全性策略"></a>2.6.2. 安全性策略</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F14-41-22-5a25f3505c77c7d8064f7c26e4f317d6-20240430144120-1f1b76.png" alt="image.png"></p>
+<p>与可用性区别：检测到攻击时，还处在攻击状态，系统不一定失效</p>
+<ul>
+<li>Detect<ol>
+<li>根据历史攻击的特征，检测识别攻击</li>
+<li>检测服务拒绝<strong>DoS attack</strong>，白名单/黑名单</li>
+<li>验证消息合法性</li>
+<li>检测消息延迟</li>
+</ol>
+</li>
+<li>Resist<ol>
+<li>用户识别，宣称自己是谁</li>
+<li>用户身份认证，看用户是不是真的那个人<ul>
+<li>e.g.手机号是identity, 验证码是authentication</li>
+</ul>
+</li>
+<li>用户权限认证</li>
+<li>限制访问，过滤从外部到系统内部的访问</li>
+<li>限制对外暴露</li>
+<li>加密数据</li>
+<li>分离数据，把敏感数据和公告访问数据分开</li>
+<li>改变默认设置</li>
+</ol>
+</li>
+<li>React<ol>
+<li>撤回访问，限制攻击能访问的范围</li>
+<li>系统上锁停止服务，攻击和普通用户都不能访问<ul>
+<li>e.g.密码错误超过十次，对设备上锁</li>
+</ul>
+</li>
+<li>通知使用者</li>
+</ol>
+</li>
+<li>Recover</li>
+</ul>
+<h2 id="2-7-可测试性-Testability"><a href="#2-7-可测试性-Testability" class="headerlink" title="2.7. 可测试性 Testability"></a>2.7. 可测试性 Testability</h2><h3 id="2-7-1-概述"><a href="#2-7-1-概述" class="headerlink" title="2.7.1. 概述"></a>2.7.1. 概述</h3><p>系统是不是容易被测试，把问题暴露出来的能力<br>系统内部的质量属性，用户并不会关心</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F15-12-29-7ed103a346d781a0f4deb1e145d71ff9-20240430151226-6f3be5.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F15-12-42-d203be97b5b9d8818765ce660d9b9c86-20240430151240-b84085.png" alt="image.png"></p>
+<h3 id="2-7-2-可测试性策略"><a href="#2-7-2-可测试性策略" class="headerlink" title="2.7.2. 可测试性策略"></a>2.7.2. 可测试性策略</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F30%2F15-16-05-46f1cef5a5879bd7ee25b52984c34204-20240430151602-ac435a.png" alt="image.png"></p>
+<h2 id="2-8-易用性-Usability"><a href="#2-8-易用性-Usability" class="headerlink" title="2.8. 易用性 Usability"></a>2.8. 易用性 Usability</h2><p>外部质量属性</p>
+<p>系统使用学习的难易程度</p>
+<ul>
+<li>层次<ol>
+<li><strong>学习</strong>软件使用</li>
+<li><strong>高效</strong>地使用系统</li>
+<li>最小化<strong>出错</strong>的影响</li>
+<li>让系统<strong>适应</strong>用户的需要</li>
+<li>提升用户使用系统时的<strong>信心和满足感</strong></li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>04-架构模式</title>
+    <url>/posts/12c16a93/</url>
+    <content><![CDATA[<p>解决特定问题的设计决定的集合，但是可以参数化配置。</p>
+<ul>
+<li><p>DSSA 领域特定软件架构</p>
+<ol>
+<li>面向特定任务(task/domain)</li>
+<li>在这个领域里是通用的</li>
+<li>标准结构</li>
+</ol>
+</li>
+<li><p>架构模式</p>
+<ol>
+<li>把设计决定打包在一起</li>
+</ol>
+</li>
+<li><p>设计模式<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-09-51-8b4e00572f757ad428e4008f69aa83da-20240507140950-fa7584.png" alt="image.png"></p>
+</li>
+<li><p>架构模式分类</p>
+<ol>
+<li>Module</li>
+<li>Component-Connector<ol>
+<li>在Runtime动态建立联系</li>
+</ol>
+</li>
+<li>Allocation</li>
+</ol>
+</li>
+</ul>
+<h1 id="Layered-Pattern"><a href="#Layered-Pattern" class="headerlink" title="Layered Pattern"></a>Layered Pattern</h1><ul>
+<li>Module类架构</li>
+</ul>
+<ol>
+<li>一个Layer里包含多个Module，不存在跨层的Module</li>
+<li>限制层与层之间的依赖关系，质量属性的可修改性策略就使用了分层</li>
+<li>各层之间不能跨层调用，只能上面调下面</li>
+</ol>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-16-47-b199ddcbdff99b04e268ba2e7d332b4c-20240507141646-1ef7b2.png" alt="image.png"></p>
+<ul>
+<li>限制<ol>
+<li>每个模块只能被分配到一层</li>
+<li>至少有两层</li>
+<li>allowed-to-use关系不能是环，低层不能调用高层</li>
+</ol>
+</li>
+<li>弱点<ol>
+<li>增加层很复杂</li>
+<li>性能</li>
+</ol>
+</li>
+</ul>
+<h2 id="Pattern"><a href="#Pattern" class="headerlink" title="Pattern"></a>Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-18-30-444d6cbeb1cdbf4fa785de6b61092876-20240507141829-67d177.png" alt="image.png"></p>
+<hr>
+<p>如果D是sidecar，那么也是分层；但如果D也有一定业务，则不是分层<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-25-46-741bf1a29993aa374ab8a6754a9fb3bd-20240507142545-72c020.png" alt="image.png"></p>
+<h1 id="Broker-Pattern"><a href="#Broker-Pattern" class="headerlink" title="Broker Pattern"></a>Broker Pattern</h1><ul>
+<li>Component-Connector类模式</li>
+</ul>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-34-43-2c21c09e9de3e3b8c04404d72a18db01-20240507143442-cee395.png" alt="image.png"></p>
+<ul>
+<li>元素<ol>
+<li>Client</li>
+<li>Server</li>
+<li>Broker：中介，帮助client找到server，传递请求</li>
+</ol>
+</li>
+<li>分析<ol>
+<li>提升了互操作性、可修改性</li>
+<li>现代场景下如果有多个broker实例，可以提高扩展性、安全性、可用性（补充设计）</li>
+<li>可能<strong>单点失效，减低性能、安全性、可用性</strong></li>
+<li>减低可测试性，无法预先确定client和server的状态</li>
+</ol>
+</li>
+</ul>
+<h2 id="Pattern-1"><a href="#Pattern-1" class="headerlink" title="Pattern"></a>Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-36-41-5112182333c844cc84ff216ca67d7c03-20240507143641-9c99b5.png" alt="image.png"></p>
+<h1 id="Model-View-Controller-Pattern"><a href="#Model-View-Controller-Pattern" class="headerlink" title="Model-View-Controller Pattern"></a>Model-View-Controller Pattern</h1><p>从动态看属于Component-Connector<br>从开发态看属于Module</p>
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-54-35-cc6e1787efc5b7097c73cbb1ae914782-20240507145434-fb3e5b.png" alt="image.png"></p>
+<h2 id="Pattern-2"><a href="#Pattern-2" class="headerlink" title="Pattern"></a>Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-54-49-7e40f48489e84a51c5331bf99eb8f877-20240507145448-7baa06.png" alt="image.png"></p>
+<h1 id="Pipe-and-Filter-Pattern"><a href="#Pipe-and-Filter-Pattern" class="headerlink" title="Pipe-and-Filter Pattern"></a>Pipe-and-Filter Pattern</h1><p>Component-Connector</p>
+<h2 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-56-07-9ecaef916b1c000ee9724bf806272c79-20240507145607-deab29.png" alt="image.png"></p>
+<ul>
+<li><p>元素</p>
+<ol>
+<li>pipe<ul>
+<li>必须有数据的输入和输出</li>
+<li>连接一系列的数据处理/计算</li>
+</ul>
+</li>
+<li>filter<ul>
+<li>通过pipe连起来</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>限制</p>
+<ol>
+<li>系统里不可能只有孤立的pipe</li>
+</ol>
+</li>
+</ul>
+<h2 id="Pattern-3"><a href="#Pattern-3" class="headerlink" title="Pattern"></a>Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-57-55-2764955e71cac24cc8a6b8df474c15a6-20240507145754-7b1c94.png" alt="image.png"></p>
+<h1 id="Client-Server-Pattern"><a href="#Client-Server-Pattern" class="headerlink" title="Client-Server Pattern"></a>Client-Server Pattern</h1><h2 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-59-19-36800fe2562f1df5520f11d28f81167d-20240507145918-c888d4.png" alt="image.png"></p>
+<ul>
+<li><p>元素</p>
+<ol>
+<li>Client</li>
+<li>Server</li>
+</ol>
+</li>
+<li><p>不需要broker：在有限的网络中，有哪些服务是预先知道的</p>
+</li>
+</ul>
+<h2 id="Pattern-4"><a href="#Pattern-4" class="headerlink" title="Pattern"></a>Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-03-13-fe3a35814348e258c7bcbf1c77e4d792-20240507150312-39032f.png" alt="image.png"></p>
+<h1 id="Peer-to-Peer-Pattern"><a href="#Peer-to-Peer-Pattern" class="headerlink" title="Peer-to-Peer Pattern"></a>Peer-to-Peer Pattern</h1><p>CC<br>没有明确的地位差距</p>
+<h2 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-04-53-895cb73111b3ab647bb300595b8a7a2a-20240507150452-821875.png" alt="image.png"></p>
+<p>peer即可以发送也可以接受数据</p>
+<p>hops：限制可感知的范围<br>节点可以自由加入退出</p>
+<ul>
+<li>分析<ol>
+<li>提高了系统的可伸缩性</li>
+<li>牺牲移动安全性</li>
+</ol>
+</li>
+</ul>
+<h2 id="Pattern-5"><a href="#Pattern-5" class="headerlink" title="Pattern"></a>Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-07-03-98cf5b4315536a76cde2239249b648c1-20240507150702-8ce395.png" alt="image.png"></p>
+<h1 id="Service-Oriented-SOA-Pattern"><a href="#Service-Oriented-SOA-Pattern" class="headerlink" title="Service-Oriented/SOA Pattern"></a>Service-Oriented/SOA Pattern</h1><p>cc</p>
+<h2 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-15-38-887fee6231c05c8479e0b486f04e1aaf-20240507151537-92c286.png" alt="image.png"></p>
+<ul>
+<li>Component<ol>
+<li>Service Provider</li>
+<li>Service Consumer</li>
+<li>Registry：注册服务</li>
+<li>ESB：client到server的通信路由，类似broker</li>
+<li>Orchestration server：编排组织业务</li>
+</ol>
+</li>
+<li>Connector:<ol>
+<li>SOAP</li>
+<li>REST</li>
+<li>Asynchronous</li>
+</ol>
+</li>
+</ul>
+<p>可以访问到其他组织，不同技术实现的服务</p>
+<p>质量属性：提高互操作性</p>
+<h2 id="Pattern-6"><a href="#Pattern-6" class="headerlink" title="Pattern"></a>Pattern</h2><p>虚线：组织边界，内部可以完全由组织控制</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-20-03-4ccbe77739cadb305da03a2116dd50eb-20240507152003-12bdce.png" alt="image.png"></p>
+<h1 id="Publish-Subscribe-Pattern"><a href="#Publish-Subscribe-Pattern" class="headerlink" title="Publish-Subscribe Pattern"></a>Publish-Subscribe Pattern</h1><h2 id="Solution-7"><a href="#Solution-7" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-25-01-b1aa62975ac9705c2737a903557f5e59-20240507152501-de822f.png" alt="image.png"></p>
+<p>存在多对多的关系<br>不能保证一定会接收到，或即时接收到</p>
+<h2 id="Pattern-7"><a href="#Pattern-7" class="headerlink" title="Pattern"></a>Pattern</h2><p>在OS中事件处理普遍使用</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-25-11-dda2131381aa560a984e411503e4faf0-20240507152510-7f26d2.png" alt="image.png"></p>
+<h1 id="Shared-Data-Pattern"><a href="#Shared-Data-Pattern" class="headerlink" title="Shared-Data Pattern"></a>Shared-Data Pattern</h1><p>CC</p>
+<h2 id="Solution-8"><a href="#Solution-8" class="headerlink" title="Solution"></a>Solution</h2><p>存在中心的被共享的数据</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-27-04-13c8a8d1b5b7924a527dee2dca6ab41c-20240507152703-ca7333.png" alt="image.png"></p>
+<ul>
+<li>分析<ol>
+<li>星型结构，可能单点失效</li>
+<li>想要获取数据高一致性、实时性时的妥协</li>
+</ol>
+</li>
+</ul>
+<h2 id="Pattern-8"><a href="#Pattern-8" class="headerlink" title="Pattern"></a>Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-28-17-8bc18054676d4840b527b2b0f755f94d-20240507152816-a848b3.png" alt="image.png"></p>
+<h1 id="Map-Reduce-Pattern"><a href="#Map-Reduce-Pattern" class="headerlink" title="Map-Reduce Pattern"></a>Map-Reduce Pattern</h1><p>Allocation</p>
+<h2 id="Solution-9"><a href="#Solution-9" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-34-47-8ff14e9d91dc5c25f1491a01e2d84019-20240507153447-99021c.png" alt="image.png"></p>
+<p>Map：任务分割，一组相同的任务并行，每一个任务都在一个Map上处理<br>Reduce：把Map的输出整合在一起，变成单一输出</p>
+<p>要求数据是大量的，否则map-reduce的代价不划算<br>通过并行提高了性能</p>
+<h2 id="Pattern-9"><a href="#Pattern-9" class="headerlink" title="Pattern"></a>Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-35-10-c5969942e099ae089a1227eaf43e1fc7-20240507153509-36694f.png" alt="image.png"></p>
+<h1 id="Multi-Tier-Pattern"><a href="#Multi-Tier-Pattern" class="headerlink" title="Multi-Tier Pattern"></a>Multi-Tier Pattern</h1><h2 id="Solution-10"><a href="#Solution-10" class="headerlink" title="Solution"></a>Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-37-11-613758ec02833ece319fcc0f8b7892df-20240507153710-1a1259.png" alt="image.png"></p>
+<p>Tier：逻辑的分层，不是真实存在的层。软件的每一个计算资源作为一个Tier</p>
+<h2 id="Pattern-10"><a href="#Pattern-10" class="headerlink" title="Pattern"></a>Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-38-03-070c12b3a26b2de121f315cd2e0ca9ce-20240507153803-a48a52.png" alt="image.png"></p>
+<h1 id="Pattern和Tactic"><a href="#Pattern和Tactic" class="headerlink" title="Pattern和Tactic"></a>Pattern和Tactic</h1><p>Pattern：一组设计决定<br>Tactic：最小单元</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-41-41-6ecf53de649ae4edf390216d51159112-20240507154140-dc2113.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>05-架构设计</title>
+    <url>/posts/9e04b6b3/</url>
+    <content><![CDATA[<h1 id="1-ASR"><a href="#1-ASR" class="headerlink" title="1. ASR"></a>1. ASR</h1><p>Architecturally SIgnificant Requirement(ASR)：对架构有重要影响的需求</p>
+<h2 id="1-1-获取"><a href="#1-1-获取" class="headerlink" title="1.1. 获取"></a>1.1. 获取</h2><h3 id="1-1-1-从需求文档"><a href="#1-1-1-从需求文档" class="headerlink" title="1.1.1. 从需求文档"></a>1.1.1. 从需求文档</h3><ul>
+<li>MoSCoW：需求的四个级别，判断优先级和重要性<ol>
+<li>Master</li>
+<li>Should</li>
+<li>Could</li>
+<li>Won’t</li>
+</ol>
+</li>
+</ul>
+<p>仅仅从需求文档无法获得完整、充分、详细的信息</p>
+<h3 id="1-1-2-座谈会-研讨会"><a href="#1-1-2-座谈会-研讨会" class="headerlink" title="1.1.2. 座谈会/研讨会"></a>1.1.2. 座谈会/研讨会</h3><p>Quality Attribute Workshop(QAW)</p>
+<h1 id="2-设计决策👍"><a href="#2-设计决策👍" class="headerlink" title="2. 设计决策👍"></a>2. 设计决策👍</h1><p>七要素：</p>
+<h2 id="2-1-分解"><a href="#2-1-分解" class="headerlink" title="2.1. 分解"></a>2.1. 分解</h2><p>把系统为了实现功能需求和非功能需求的责任进行分解，分配给被分解的元素</p>
+<h2 id="2-2-设计ASR"><a href="#2-2-设计ASR" class="headerlink" title="2.2. 设计ASR"></a>2.2. 设计ASR</h2><ul>
+<li>适用非ASR需求<ol>
+<li>架构设计不影响非ASR的需求</li>
+<li>需要对架构设计做调整，小范围调整</li>
+<li>非ASR需求无法满足，要做一些妥协<ol>
+<li>接近满足需求</li>
+<li>调整需求</li>
+<li>无法满足这些需求</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>是否要一次性设计所有的ASR？<ol>
+<li>从经验判断</li>
+<li>是完全从零开发，还是已经完成一部分，或是有框架</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-3-生成和测试"><a href="#2-3-生成和测试" class="headerlink" title="2.3. 生成和测试"></a>2.3. 生成和测试</h2><p>验证和评估</p>
+<ul>
+<li><p>如何测试</p>
+<ol>
+<li>分析技术：静态建模，动态仿真技术</li>
+<li>设计checklist</li>
+</ol>
+</li>
+<li><p>什么时候完成验证</p>
+<ol>
+<li>设计满足ASR</li>
+<li>预算不够，实现目前为止最佳的设计</li>
+</ol>
+</li>
+</ul>
+<h1 id="3-Attribute-Driven-Design-ADD"><a href="#3-Attribute-Driven-Design-ADD" class="headerlink" title="3. Attribute-Driven Design(ADD)"></a>3. Attribute-Driven Design(ADD)</h1><p>通用场景下的软件系统设计</p>
+<h2 id="3-1-ADD的输入"><a href="#3-1-ADD的输入" class="headerlink" title="3.1. ADD的输入"></a>3.1. ADD的输入</h2><ol>
+<li>是否有足够的需求？</li>
+<li>是否已经筛选出ASR？</li>
+<li>是否已经排序？</li>
+<li>使用基于场景（刺激响应）的描述方式精确描述？</li>
+</ol>
+<h2 id="3-2-选择一个系统元素进行分解"><a href="#3-2-选择一个系统元素进行分解" class="headerlink" title="3.2. 选择一个系统元素进行分解"></a>3.2. 选择一个系统元素进行分解</h2><ul>
+<li>分类<ol>
+<li>greenfield开发：所有需求，整个系统作为设计焦点</li>
+<li>partially designed system：在当前已经设计过的系统里选择一些元素作为设计焦点</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-3-选择和当前迭代相关的ASR"><a href="#3-3-选择和当前迭代相关的ASR" class="headerlink" title="3.3. 选择和当前迭代相关的ASR"></a>3.3. 选择和当前迭代相关的ASR</h2><p>说明对用户的重要程度<br>说明对开发者的难易程度</p>
+<p>排序：<br>(H,H)(H,M)(H,L)(M,H)…</p>
+<h2 id="3-4-生成局部设计"><a href="#3-4-生成局部设计" class="headerlink" title="3.4. 生成局部设计"></a>3.4. 生成局部设计</h2><ol>
+<li><strong>设计焦点</strong>承载的ASR怎么解决</li>
+<li>列出所有patterns和tactics<ol>
+<li>定义可配置的参数。e.g.ping/echo的timeout时间</li>
+<li>估计参数值</li>
+</ol>
+</li>
+<li>选择pattern和tactic<ol>
+<li>对整体（当前设计焦点的各个ASR）的影响</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F09%2F11-08-06-b5b07ddb02853be9baf16f2cac386b1a-20240509110805-cc752b.png" alt="image.png"></li>
+</ol>
+</li>
+<li>决定pattern/tactic和ASR的关系<ol>
+<li>哪些要做调整，结合</li>
+</ol>
+</li>
+<li>设计决定可视化成一个或一组视图</li>
+<li>评估<ol>
+<li>哪些ASR没有被考虑到</li>
+<li>是否需要做额外修正</li>
+<li>所有设计决定会不会不一致</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-5-实例化架构元素，分配职责"><a href="#3-5-实例化架构元素，分配职责" class="headerlink" title="3.5. 实例化架构元素，分配职责"></a>3.5. 实例化架构元素，分配职责</h2><ol>
+<li>实例化每一个架构元素</li>
+<li>把设计焦点承担的责任分配到架构元素</li>
+<li>把实例化和责任记录下来</li>
+</ol>
+<h2 id="3-6-为实例化元素定义接口"><a href="#3-6-为实例化元素定义接口" class="headerlink" title="3.6. 为实例化元素定义接口"></a>3.6. 为实例化元素定义接口</h2><p>交互哪些数据<br>元素之间的交互关系</p>
+<h2 id="3-7-验证和完善需求，并使其成为实例化元素的约束"><a href="#3-7-验证和完善需求，并使其成为实例化元素的约束" class="headerlink" title="3.7. 验证和完善需求，并使其成为实例化元素的约束"></a>3.7. 验证和完善需求，并使其成为实例化元素的约束</h2><ol>
+<li>验证设计需求是不是都分配到元素上</li>
+<li>把每个元素的职责翻译成功能需求</li>
+</ol>
+<h2 id="3-8-重复直到所有ASR都满足"><a href="#3-8-重复直到所有ASR都满足" class="headerlink" title="3.8. 重复直到所有ASR都满足"></a>3.8. 重复直到所有ASR都满足</h2><p>每一次迭代都满足一些ASR，如果还有ASR没有完成回到第二步，选择系统中一个元素作为设计新的焦点</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F09%2F11-18-13-9377fac25e8135c67c87d8dcc3b099a3-20240509111812-df4de9.png" alt="image.png"></p>
+<h2 id="3-9-ADD的输出"><a href="#3-9-ADD的输出" class="headerlink" title="3.9. ADD的输出"></a>3.9. ADD的输出</h2><ol>
+<li>软件元素：履行各种角色和<strong>职责</strong>，具有预定<strong>属性</strong>并与其他软件元素相关以组成系统架构的计算或开发工件</li>
+<li>角色</li>
+<li>职责</li>
+<li>性质</li>
+<li>关系：使用视图表示元素之间的关联</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F09%2F11-22-20-c0b9137fbe7364b63e9e02a1583542ab-20240509112220-2a2a8b.png" alt="image.png"></p>
+<h1 id="ADD例子"><a href="#ADD例子" class="headerlink" title="ADD例子"></a>ADD例子</h1><p><a class="link" href="https://spricoder.github.io/2021/07/15/2021-Software-System-Design/2021-Software-System-Design-Lec15-Design/#3-%E5%9F%BA%E4%BA%8Eadd%E8%BF%9B%E8%A1%8C%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%AE%9E%E4%BE%8B">2021-软件系统设计-Lec15-Design - SpriCoder的博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>06-微服务架构</title>
+    <url>/posts/ab2d67c8/</url>
+    <content><![CDATA[<p>微服务架构：小，自治</p>
+<h1 id="微服务拆分"><a href="#微服务拆分" class="headerlink" title="微服务拆分"></a>微服务拆分</h1><ol>
+<li><p>分析用户故事中和场景中的名词</p>
+</li>
+<li><p>分析用户故事中和场景中的动词，确定系统操作</p>
+<ol>
+<li><font color="#c00000">命令型或查询型</font></li>
+<li>前端给后端发出请求</li>
+<li>后端进行业务逻辑的数据获取和处理</li>
+<li>系统操作规范<ol>
+<li>命令对应的参数、返回值</li>
+<li>领域模型类的行为：<font color="#c00000">前置和后置条件</font></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件系统设计-pmx期末</title>
+    <url>/posts/e8fd03f1/</url>
+    <content><![CDATA[<h1 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h1><ul>
+<li>简答题<ol>
+<li>设计原则之间的关系</li>
+<li>设计模式之间的关系</li>
+<li>设计原则和设计模式之间的关系</li>
+<li>架构分析方法和概念</li>
+</ol>
+</li>
+<li>设计题：<ul>
+<li>给出一个设计问题，回答设计方案</li>
+<li>设计两三个设计模式联合设计</li>
+</ul>
+</li>
+</ul>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="基本要素"><a href="#基本要素" class="headerlink" title="基本要素"></a>基本要素</h2><ol>
+<li>模式名称</li>
+<li>问题</li>
+<li>解决方案</li>
+<li>效果：可以作为约束条件的一部分</li>
+</ol>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul>
+<li><p>目的</p>
+<ol>
+<li>创建型：创建对象</li>
+<li>结构型：处理类和对象的组合</li>
+<li>行为型：描述对类或对象怎样交互和怎样分配职责</li>
+</ol>
+</li>
+<li><p>范围</p>
+<ol>
+<li>类模式：式处理类和子类之间的关系，这些关系通过继承建立， 在编译时刻就被确定下来，是属于<strong>静态</strong>的。</li>
+<li>对象模式：处理对象间的关系，这些关系在运行时刻变化，更具<strong>动态</strong>性</li>
+</ol>
+</li>
+<li><p>模式和模式的变体，不同</p>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F19%2F14-03-56-f7eba1b50144117a2d8052de51950d35-20240619140355-d9b953.png" alt="image.png"></p>
+<h2 id="设计模式与类库框架"><a href="#设计模式与类库框架" class="headerlink" title="设计模式与类库框架"></a>设计模式与类库框架</h2><ul>
+<li>为什么不设计一个设计模式的库？<ul>
+<li>设计模式比库更高层。设计模式告诉我们怎么构建类和对象来解决特定问题，我们需要做的是使用这些原则来适应具体的应用。</li>
+</ul>
+</li>
+<li>库和框架是不是设计模式？<ul>
+<li>框架和类不是设计模式。它们提供了可以连接到代码中的具体实现。但是优势库和框架会在它们的实现中应用设计模式。如果你理解了设计模式，你可以更快理解框架和库的API。</li>
+</ul>
+</li>
+</ul>
+<h1 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h1><p>设计原则之间的关系</p>
+<ul>
+<li>目标：<ol>
+<li>可复用</li>
+<li>可维护</li>
+</ol>
+</li>
+<li>设计原则<ol>
+<li><strong>单一职责原则</strong>要求在软件系统中，一个类只负责一个功能领域中的相应职责。</li>
+<li><strong>开闭原则</strong>要求一个软件实体应当对扩展开放，对修改关闭，即在不修改源代码的基础上扩展一个系统的行为。</li>
+<li><strong>里氏代换原则</strong>可以通俗表述为在软件中如果能够使用基类对象，那么一定能够使用其子类对象。</li>
+<li><strong>依赖倒转原则</strong>要求抽象不应该依赖于细节，细节应该依赖于抽象；要针对接口编程，不要针对实现编程。</li>
+<li><strong>接口隔离原则</strong>要求客户端不应该依赖那些它不需要的接口，即将一些大的接口细化成一些小的接口供客户端使用。</li>
+<li><strong>合成复用原则</strong>要求复用时尽量使用对象组合，而不使用继承。</li>
+<li><strong>迪米特法则</strong>要求一个软件实体应当尽可能少的与其他实体发生相互作用。</li>
+</ol>
+</li>
+<li>目标：开闭原则</li>
+<li>指导：最小知识原则/迪米特</li>
+<li>基础：单一职责原则、封装可变性原则</li>
+<li>实现：依赖倒转原则、合成复用原则、里氏代换原则、接口隔离原则</li>
+</ul>
+<h1 id="表驱动法"><a href="#表驱动法" class="headerlink" title="表驱动法"></a>表驱动法</h1><ul>
+<li>目标</li>
+<li>原理</li>
+<li>如何快速从表中查询条目？<ol>
+<li>直接访问</li>
+<li>索引访问</li>
+<li>阶梯访问</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件系统设计-架构期末</title>
+    <url>/posts/3ff9b627/</url>
+    <content><![CDATA[<h1 id="1-架构概念"><a href="#1-架构概念" class="headerlink" title="1. 架构概念"></a>1. 架构概念</h1><ol>
+<li>架构定义<ul>
+<li>架构定义：软件系统的系统，系统包含元素，元素之间的关系，软件的属性和动态行为</li>
+<li>工业界定义：设计阶段最重要设计决定的集合</li>
+</ul>
+</li>
+<li>软件架构师做什么</li>
+<li>架构来源<ol>
+<li>主要：NFR非功能需求</li>
+<li>ASR</li>
+<li>质量需求</li>
+<li>利益相关者</li>
+<li>技术环境</li>
+</ol>
+</li>
+<li>视图 4+1<ol>
+<li>逻辑视图：架构的静态关系</li>
+<li>过程视图：运行过程种的变化行为</li>
+<li>物理视图：和物理世界元素的对应关系</li>
+<li>开发视图：开发活动</li>
+<li>用例场景user case scenairos</li>
+</ol>
+</li>
+<li>架构活动和演化</li>
+<li>软件架构知识域</li>
+</ol>
+<h1 id="2-架构过程"><a href="#2-架构过程" class="headerlink" title="2. 架构过程"></a>2. 架构过程</h1><p>四个阶段，图<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F16%2F17-08-47-0067f3b14e1c3d3853948c36015a7a1d-20240616170846-967e93.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F16%2F17-08-57-d8d00bc5524d00997b981af5fd1fa8c0-20240616170856-10f18d.png" alt="image.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F16%2F17-09-06-dce21ed5882ec762dc38214bf132fe92-20240616170906-6800ff.png" alt="image.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F16%2F17-09-13-5a8ff42941d1d7d1f678df31e4fa0d02-20240616170913-841a77.png" alt="image.png"></p>
+<h1 id="3-质量属性"><a href="#3-质量属性" class="headerlink" title="3. 质量属性"></a>3. 质量属性</h1><ol>
+<li>软件需求<ol>
+<li>功能需求：系统行为</li>
+<li>质量需求:系统完成工作好坏程度</li>
+<li>约束：需求阶段预设的设计决定，不能妥协</li>
+</ol>
+</li>
+<li>质量属性<ol>
+<li>外部：用户把系统作为黑盒，可以从外部感受的</li>
+<li>内部：可以知道系统内部怎么实现，开发人员，系统是否容易实现和维护</li>
+<li>用刺激相应情景描述</li>
+<li>tatics树和设计决定</li>
+<li>checklist在七个方面评估质量属性</li>
+</ol>
+</li>
+<li>ASR：<ol>
+<li>如何从用户获取ASR？从需求文档（不能提供足够信息，尤其是质量需求），座谈会，商业目标，项目树（Utililty Tree）</li>
+</ol>
+</li>
+</ol>
+<h1 id="4-架构模式"><a href="#4-架构模式" class="headerlink" title="4. 架构模式"></a>4. 架构模式</h1><p>可以被复用的解决方案</p>
+<p>涉及的架构元素<br>相互之间的关系<br>需要施加的设计决定</p>
+<ul>
+<li>分类<ol>
+<li>Module 描述静态关系</li>
+<li>CNC 组件连接器</li>
+<li>系统动态关系</li>
+<li>系统和外部（物理世界，人，组织….）</li>
+</ol>
+</li>
+</ul>
+<p>Tactic是最小粒度的基本设计决定<br>Pattern包含需要解决的问题，问题发生的场景，一系列设计决定</p>
+<h1 id="5-设计架构"><a href="#5-设计架构" class="headerlink" title="5. 设计架构"></a>5. 设计架构</h1><ul>
+<li><p>通用设计策略</p>
+<ol>
+<li>抽象</li>
+<li>分解</li>
+<li>分治</li>
+<li>生成和测试：先根据ASR、质量属性选择一个初始的设计决定组合，然后看是不是能满足ASR要求</li>
+<li>迭代</li>
+<li>重用</li>
+</ol>
+</li>
+<li><p>7个方面</p>
+<ol>
+<li>Responsibilities职责：如何分配，不等于功能<ul>
+<li>还有质量要求，如Monitor是为了可用性而不是实现功能</li>
+</ul>
+</li>
+<li>Coordition</li>
+<li>Data：数据存储，协议，分配</li>
+<li>Resource：计算资源，网络，缓存，时间</li>
+<li>Elements mapping</li>
+<li>Binding time：元素之间的关系什么时候被确定下来<ol>
+<li>绑定事件越往后，越灵活，但是系统的不确定性增加，测试负担增加</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>ADD</p>
+<ol>
+<li>输入：ASR</li>
+<li>输出：在step 4生成的视图</li>
+</ol>
+</li>
+</ul>
+<h1 id="6-文档架构"><a href="#6-文档架构" class="headerlink" title="6. 文档架构"></a>6. 文档架构</h1><ul>
+<li>Views视图<ol>
+<li>style(viewpoints), pattern and views</li>
+<li>Structural views: module views, component and connector views, allocation views</li>
+<li>Quality views</li>
+</ol>
+</li>
+<li>文档化视图：<ol>
+<li>确定stakeholder，保留提供了大部分stakehodler都关心的信息的视图</li>
+<li>合并视图</li>
+<li>排序，把不重要的视图筛选掉</li>
+</ol>
+</li>
+<li>视图补充信息</li>
+</ul>
+<h1 id="7-评估架构"><a href="#7-评估架构" class="headerlink" title="7. 评估架构"></a>7. 评估架构</h1><ul>
+<li>ATAM方法<ol>
+<li>不同阶段参加的stackholder不同<ol>
+<li>phase1 项目评估小组，决策者</li>
+<li>phase2 其他stackholder</li>
+</ol>
+</li>
+<li>输入：架构文档</li>
+<li>输出：设计决定，ASR，效用树，风险</li>
+</ol>
+</li>
+</ul>
+<p>phase1<br>phase2 不能向stackholder透露效用树</p>
+<h1 id="8-微服务架构"><a href="#8-微服务架构" class="headerlink" title="8. 微服务架构"></a>8. 微服务架构</h1><p>更多考虑他们之间的关系</p>
+<p>这里有张图，注意图例</p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0-软件质量与管理</title>
+    <url>/posts/5882e132/</url>
+    <content><![CDATA[<h1 id="十个问题"><a href="#十个问题" class="headerlink" title="十个问题"></a>十个问题</h1><ol>
+<li>什么是过程管理和项目管理？</li>
+<li>软件估算过程中，项目经历/历史数据的作用是什么？如何把历史数据转化成估算结果？隔了3个月，能否保证估算结果一致？</li>
+<li>？</li>
+<li>什么叫做XX管理？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>01-概述</title>
+    <url>/posts/58d2b339/</url>
+    <content><![CDATA[<p><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
   </entry>
   <entry>
     <title>02-历史与演变</title>
