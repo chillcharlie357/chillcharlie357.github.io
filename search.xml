@@ -7471,6 +7471,129 @@
       </tags>
   </entry>
   <entry>
+    <title>7-配置属性</title>
+    <url>/posts/c75c265a/</url>
+    <content><![CDATA[<h1 id="1-👍属性来源"><a href="#1-👍属性来源" class="headerlink" title="1. 👍属性来源"></a>1. 👍属性来源</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
+<ol>
+<li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
+<li><code>server.port = 8090</code></li>
+</ul>
+</li>
+<li><strong>命令行参数</strong><code>commandLineArgs</code>，在程序中直接获取<ul>
+<li><code>java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar -- server.port=8081</code></li>
+</ul>
+</li>
+<li><strong>JVM系统参数</strong> <code>-D</code><ul>
+<li><code>java -Dserver.port=8091 -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
+</ul>
+</li>
+<li><strong>操作系统环境变量</strong><ul>
+<li><code>set SERVER_PORT=8082、java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
+</ul>
+</li>
+</ol>
+<h1 id="2-YAML文件"><a href="#2-YAML文件" class="headerlink" title="2. YAML文件"></a>2. YAML文件</h1><ul>
+<li>使用缩进表示层级关系，不允许使用Tab建，<strong>只能使用空格</strong>(一般2个空格)</li>
+<li># 表示注释</li>
+<li>对象：键值对，使用冒号结构表示<ul>
+<li>冒号后面加空格</li>
+<li><code>animal: pets</code></li>
+<li><code>hash: {name: Steve, foo: bar}</code></li>
+</ul>
+</li>
+<li>一般数组：一组连线开头的行，构成一个数组</li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Cat</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Dog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Goldfish</span></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>行内数组：<code>animal: [Cat, Dog]</code></li>
+</ul>
+<h1 id="3-配置数据源"><a href="#3-配置数据源" class="headerlink" title="3. 配置数据源"></a>3. 配置数据源</h1><ul>
+<li>org.h2.Driver</li>
+<li>com.mysql.cj.jdbc.Driver</li>
+</ul>
+<p>不一定要在application.yaml里显式指定，只添加对应依赖spring也能识别</p>
+<h1 id="4-建立HTTPS安全通道"><a href="#4-建立HTTPS安全通道" class="headerlink" title="4. 建立HTTPS安全通道"></a>4. 建立HTTPS安全通道</h1><ul>
+<li>解决客户端和服务端传输数据时的加密问题<ul>
+<li>HTTP明文传输数据，不安全</li>
+<li>TLS/SSL具有身份认证、信息加密和完整性校验</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F609986015a78cfd18e72b154942d8f25_20231026200319.png" alt="image.png"></p>
+<p><strong>SSL(Secure Sockets Layer 安全套接字协议 )<strong>，及其继任者</strong>传输层安全（Transport Layer Security ， TLS）</strong> 是为网络通信提供安全及数据完整性的一种安全协议。TLS 与SSL在传输层与应用层之间对网 络连接进行加密。</p>
+<h2 id="4-1-单向认证"><a href="#4-1-单向认证" class="headerlink" title="4.1. 单向认证"></a>4.1. 单向认证</h2><ul>
+<li>客户端校验服务端证书的合法性，服务端不需要校验客户端</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fb843eb927502da6e44df35255de08531_20231026200909.png" alt="image.png"></p>
+<h2 id="4-2-双向认证"><a href="#4-2-双向认证" class="headerlink" title="4.2. 双向认证"></a>4.2. 双向认证</h2><ul>
+<li>客户端要校验服务端，服务端要校验客户端的证书</li>
+</ul>
+<p>相对复杂</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fc877b90370c978ce90e18d403f7c8f2f_20231026201330.png" alt="image.png"></p>
+<h1 id="5-keytool"><a href="#5-keytool" class="headerlink" title="5. keytool"></a>5. keytool</h1><ul>
+<li>是JDK自带的一个密钥库管理工具，我们可以用它生产密钥库、管理证书</li>
+</ul>
+<h1 id="6-从配置属性获取值-自定义属性"><a href="#6-从配置属性获取值-自定义属性" class="headerlink" title="6. 从配置属性获取值/自定义属性"></a>6. 从配置属性获取值/自定义属性</h1><p><code>@ConfigurationProperties(prefix=&lt;&gt;)</code>从<code>yaml</code>中加载属性值</p>
+<p>通过application.yml文件提供值<br>环境变量：taco_orders_pageSize=12<br>程序参数：–taco.orders.pageSize=13<br>访问：<a class="link" href="http://localhost:8080/orders">http://localhost:8080/orders <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="7-多个Profile文件"><a href="#7-多个Profile文件" class="headerlink" title="7. 多个Profile文件"></a>7. 多个Profile文件</h1><h2 id="7-1-命名规则"><a href="#7-1-命名规则" class="headerlink" title="7.1. 命名规则"></a>7.1. 命名规则</h2><p>Profile文件命名有固定规则</p>
+<ul>
+<li>定义特定profile的属性，通过使用不同的YAML或属性文件  <ul>
+<li>application-{profile名}.properties  </li>
+<li>application-{profile名}.yml</li>
+</ul>
+</li>
+<li>也可以将不同profile属性放到同一个YAML文件中，使用3个短线进行分隔，并且使用spring.profiles属性来命名profile</li>
+</ul>
+<h2 id="7-2-激活Profile"><a href="#7-2-激活Profile" class="headerlink" title="7.2. 激活Profile"></a>7.2. 激活Profile</h2><ul>
+<li>环境变量：spring_profiles_active=prod</li>
+<li>命令行参数：java -jar &lt;&gt;.jar –spring.profiles.active=prod</li>
+<li>JVM系统属性：java -Dspring.profiles.active=prod -jar &lt;&gt;.jar</li>
+<li>使用注解<code>@Profile</code>条<strong>件化地创建Bean</strong>，可以加到<code>@Configuration</code>或<code>@Bean</code>上<ul>
+<li>场景：测试环境下初始化数据库填充测试数据，但是在生产环境下不能乱初始化</li>
+</ul>
+</li>
+</ul>
+<h1 id="8-配置日志"><a href="#8-配置日志" class="headerlink" title="8. 配置日志"></a>8. 配置日志</h1><ul>
+<li>默认Logback,配置文件logback.xml</li>
+<li>默认日志级别: INFO</li>
+<li>日志配置(application.yml)<ul>
+<li>可以根据不同包路径设置不同日志级别</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">root:</span> <span class="string">WARN</span></span><br><span class="line">    <span class="attr">org:</span></span><br><span class="line">      <span class="attr">Springframework:</span></span><br><span class="line">	    <span class="attr">security:</span> <span class="string">DEBUG</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="9-👍Actuator"><a href="#9-👍Actuator" class="headerlink" title="9. 👍Actuator"></a>9. 👍Actuator</h1><ul>
+<li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
+<li>/actuator，查询所有暴露端点</li>
+<li><strong>/actuator/configprops</strong>，查询配置属性</li>
+<li>/actuator/health，健康检查</li>
+<li>/actuator/beans，包含bean依赖关系</li>
+</ul>
+</li>
+<li>想要获得更多端点如何配置：<code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></li>
+</ul>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">"*"</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="10-分布式系统配置数据的获取"><a href="#10-分布式系统配置数据的获取" class="headerlink" title="10. 分布式系统配置数据的获取"></a>10. 分布式系统配置数据的获取</h1><ul>
+<li>配置服务： Config Server<ul>
+<li>给所有微服务提供配置数据</li>
+<li>配置可能来自文件系统，git仓库等</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F16-29-03-ac42f08cd7916e48e1cfabe5ef89772e-20231231162903-1ef9fd.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>6-Spring Security</title>
     <url>/posts/b9233e24/</url>
     <content><![CDATA[<ul>
@@ -7642,129 +7765,6 @@
 <li>安全上下文获取</li>
 </ol>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">Authentication</span> <span class="variable">authentication</span> <span class="operator">=</span> SecurityContextHolder.getContext().getAuthentication(); <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> (User) authentication.getPrincipal();</span><br></pre></td></tr></table></figure></div>]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>7-配置属性</title>
-    <url>/posts/c75c265a/</url>
-    <content><![CDATA[<h1 id="1-👍属性来源"><a href="#1-👍属性来源" class="headerlink" title="1. 👍属性来源"></a>1. 👍属性来源</h1><p>不仅仅是Spring Boot需要的属性，也包含我们自己定义的属性。</p>
-<ol>
-<li><strong>配置文件</strong><code>application.yml</code>、<code>application.properties</code>，两个文件可以混用<ul>
-<li><code>server.port = 8090</code></li>
-</ul>
-</li>
-<li><strong>命令行参数</strong><code>commandLineArgs</code>，在程序中直接获取<ul>
-<li><code>java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar -- server.port=8081</code></li>
-</ul>
-</li>
-<li><strong>JVM系统参数</strong> <code>-D</code><ul>
-<li><code>java -Dserver.port=8091 -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
-</ul>
-</li>
-<li><strong>操作系统环境变量</strong><ul>
-<li><code>set SERVER_PORT=8082、java -jar taco-cloud-sd-jdbc-0.0.3-SNAPSHOT.jar</code></li>
-</ul>
-</li>
-</ol>
-<h1 id="2-YAML文件"><a href="#2-YAML文件" class="headerlink" title="2. YAML文件"></a>2. YAML文件</h1><ul>
-<li>使用缩进表示层级关系，不允许使用Tab建，<strong>只能使用空格</strong>(一般2个空格)</li>
-<li># 表示注释</li>
-<li>对象：键值对，使用冒号结构表示<ul>
-<li>冒号后面加空格</li>
-<li><code>animal: pets</code></li>
-<li><code>hash: {name: Steve, foo: bar}</code></li>
-</ul>
-</li>
-<li>一般数组：一组连线开头的行，构成一个数组</li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Cat</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Dog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Goldfish</span></span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li>行内数组：<code>animal: [Cat, Dog]</code></li>
-</ul>
-<h1 id="3-配置数据源"><a href="#3-配置数据源" class="headerlink" title="3. 配置数据源"></a>3. 配置数据源</h1><ul>
-<li>org.h2.Driver</li>
-<li>com.mysql.cj.jdbc.Driver</li>
-</ul>
-<p>不一定要在application.yaml里显式指定，只添加对应依赖spring也能识别</p>
-<h1 id="4-建立HTTPS安全通道"><a href="#4-建立HTTPS安全通道" class="headerlink" title="4. 建立HTTPS安全通道"></a>4. 建立HTTPS安全通道</h1><ul>
-<li>解决客户端和服务端传输数据时的加密问题<ul>
-<li>HTTP明文传输数据，不安全</li>
-<li>TLS/SSL具有身份认证、信息加密和完整性校验</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2F609986015a78cfd18e72b154942d8f25_20231026200319.png" alt="image.png"></p>
-<p><strong>SSL(Secure Sockets Layer 安全套接字协议 )<strong>，及其继任者</strong>传输层安全（Transport Layer Security ， TLS）</strong> 是为网络通信提供安全及数据完整性的一种安全协议。TLS 与SSL在传输层与应用层之间对网 络连接进行加密。</p>
-<h2 id="4-1-单向认证"><a href="#4-1-单向认证" class="headerlink" title="4.1. 单向认证"></a>4.1. 单向认证</h2><ul>
-<li>客户端校验服务端证书的合法性，服务端不需要校验客户端</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fb843eb927502da6e44df35255de08531_20231026200909.png" alt="image.png"></p>
-<h2 id="4-2-双向认证"><a href="#4-2-双向认证" class="headerlink" title="4.2. 双向认证"></a>4.2. 双向认证</h2><ul>
-<li>客户端要校验服务端，服务端要校验客户端的证书</li>
-</ul>
-<p>相对复杂</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F10%2F26%2Fc877b90370c978ce90e18d403f7c8f2f_20231026201330.png" alt="image.png"></p>
-<h1 id="5-keytool"><a href="#5-keytool" class="headerlink" title="5. keytool"></a>5. keytool</h1><ul>
-<li>是JDK自带的一个密钥库管理工具，我们可以用它生产密钥库、管理证书</li>
-</ul>
-<h1 id="6-从配置属性获取值-自定义属性"><a href="#6-从配置属性获取值-自定义属性" class="headerlink" title="6. 从配置属性获取值/自定义属性"></a>6. 从配置属性获取值/自定义属性</h1><p><code>@ConfigurationProperties(prefix=&lt;&gt;)</code>从<code>yaml</code>中加载属性值</p>
-<p>通过application.yml文件提供值<br>环境变量：taco_orders_pageSize=12<br>程序参数：–taco.orders.pageSize=13<br>访问：<a class="link" href="http://localhost:8080/orders">http://localhost:8080/orders <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="7-多个Profile文件"><a href="#7-多个Profile文件" class="headerlink" title="7. 多个Profile文件"></a>7. 多个Profile文件</h1><h2 id="7-1-命名规则"><a href="#7-1-命名规则" class="headerlink" title="7.1. 命名规则"></a>7.1. 命名规则</h2><p>Profile文件命名有固定规则</p>
-<ul>
-<li>定义特定profile的属性，通过使用不同的YAML或属性文件  <ul>
-<li>application-{profile名}.properties  </li>
-<li>application-{profile名}.yml</li>
-</ul>
-</li>
-<li>也可以将不同profile属性放到同一个YAML文件中，使用3个短线进行分隔，并且使用spring.profiles属性来命名profile</li>
-</ul>
-<h2 id="7-2-激活Profile"><a href="#7-2-激活Profile" class="headerlink" title="7.2. 激活Profile"></a>7.2. 激活Profile</h2><ul>
-<li>环境变量：spring_profiles_active=prod</li>
-<li>命令行参数：java -jar &lt;&gt;.jar –spring.profiles.active=prod</li>
-<li>JVM系统属性：java -Dspring.profiles.active=prod -jar &lt;&gt;.jar</li>
-<li>使用注解<code>@Profile</code>条<strong>件化地创建Bean</strong>，可以加到<code>@Configuration</code>或<code>@Bean</code>上<ul>
-<li>场景：测试环境下初始化数据库填充测试数据，但是在生产环境下不能乱初始化</li>
-</ul>
-</li>
-</ul>
-<h1 id="8-配置日志"><a href="#8-配置日志" class="headerlink" title="8. 配置日志"></a>8. 配置日志</h1><ul>
-<li>默认Logback,配置文件logback.xml</li>
-<li>默认日志级别: INFO</li>
-<li>日志配置(application.yml)<ul>
-<li>可以根据不同包路径设置不同日志级别</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">root:</span> <span class="string">WARN</span></span><br><span class="line">    <span class="attr">org:</span></span><br><span class="line">      <span class="attr">Springframework:</span></span><br><span class="line">	    <span class="attr">security:</span> <span class="string">DEBUG</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="9-👍Actuator"><a href="#9-👍Actuator" class="headerlink" title="9. 👍Actuator"></a>9. 👍Actuator</h1><ul>
-<li>提供许多<strong>端点(endpoints)</strong>, 监测程序运行情况<ul>
-<li>/actuator，查询所有暴露端点</li>
-<li><strong>/actuator/configprops</strong>，查询配置属性</li>
-<li>/actuator/health，健康检查</li>
-<li>/actuator/beans，包含bean依赖关系</li>
-</ul>
-</li>
-<li>想要获得更多端点如何配置：<code>include: "*"</code>暴露所有端口, 否则只暴露<code>/actuator/health</code></li>
-</ul>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">"*"</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="10-分布式系统配置数据的获取"><a href="#10-分布式系统配置数据的获取" class="headerlink" title="10. 分布式系统配置数据的获取"></a>10. 分布式系统配置数据的获取</h1><ul>
-<li>配置服务： Config Server<ul>
-<li>给所有微服务提供配置数据</li>
-<li>配置可能来自文件系统，git仓库等</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F16-29-03-ac42f08cd7916e48e1cfabe5ef89772e-20231231162903-1ef9fd.png" alt="image.png"></p>
-]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
       </categories>
@@ -15472,6 +15472,338 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       <tags>
         <tag>课程</tag>
         <tag>2024_Spring_Linux系统编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云计算总结</title>
+    <url>/posts/7b9adefe/</url>
+    <content><![CDATA[<p>判断题，20分：基本上都是对的<br>填空题：概念，架构<br>设计与计算<br>问答题</p>
+<p><strong>概览</strong>和<strong>架构</strong>PPT一页一页看，55分左右</p>
+<hr>
+<h1 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h1><p>考试重点在<strong>云计算概念</strong>，技术细节没那么重要</p>
+<p>云计算特点：部署模型，服务模型</p>
+<hr>
+<h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1. 定义"></a>1.1. 定义</h2><p>云计算是一种商业计算模型。它将计算任务分布在大量计算机构成的资源池上，使各种应用系统能够根据需要获取计算力、存储空间和信息服务。  </p>
+<p>云计算是通过网络按需提供可动态伸缩的廉价计算服务。</p>
+<p>核心：按需使用、按量计费；基础设施、平台、软件等所有IT资源均作为服务；</p>
+<h2 id="1-2-本质"><a href="#1-2-本质" class="headerlink" title="1.2. 本质"></a>1.2. 本质</h2><p>本质：架构到资源的全面弹性</p>
+<h2 id="1-3-演化"><a href="#1-3-演化" class="headerlink" title="1.3. 演化"></a>1.3. 演化</h2><ol>
+<li>主机系统与集中计算</li>
+<li><strong>效用计算</strong>：考虑后买主机成本高，将IT资源包装成可以度量的服务提供给用户<ul>
+<li>只规定了计费使用的模式，没有IT资源管理方式的考虑</li>
+</ul>
+</li>
+<li>客户机/服务器模式</li>
+<li>集群计算</li>
+<li><strong>服务计算</strong>：把所有的应用程序都作为服务提供，而不是购买软件<ul>
+<li>不同服务相对独立，松散耦合，随意组合</li>
+<li>重点是服务发现</li>
+</ul>
+</li>
+<li>个人计算机与桌面计算</li>
+<li>分布式计算</li>
+<li>网格计算</li>
+<li>软件即服务</li>
+<li><strong>云计算：效用计算+服务计算</strong><ol>
+<li>增强版的效用计算：不仅考虑计费，还考虑IT管理</li>
+<li>更广泛的服务计算：不仅提供软件，还包括基础设施和平台。</li>
+</ol>
+</li>
+</ol>
+<h2 id="1-4-云计算发展的推动"><a href="#1-4-云计算发展的推动" class="headerlink" title="1.4. 云计算发展的推动"></a>1.4. 云计算发展的推动</h2><ol>
+<li>网络带宽提升</li>
+<li>技术成熟度</li>
+<li>移动互联网的发展</li>
+<li>数据中心的演变</li>
+<li>经济因素：降低成本、节约资源、可持续发展</li>
+<li>大数据：存储和计算大数据的需求</li>
+</ol>
+<h2 id="1-5-云计算特征和分类"><a href="#1-5-云计算特征和分类" class="headerlink" title="1.5. 云计算特征和分类"></a>1.5. 云计算特征和分类</h2><h3 id="1-5-1-概念模型"><a href="#1-5-1-概念模型" class="headerlink" title="1.5.1. 概念模型"></a>1.5.1. <span style="background:rgba(3, 135, 102, 0.2)">概念模型</span></h3><ol>
+<li>各类用户：企业/政府/学术机构/个人</li>
+<li>各种终端</li>
+<li>按量付费的商业模式</li>
+<li>简化的服务接口</li>
+<li>公有云和私有云</li>
+</ol>
+<h3 id="1-5-2-特征"><a href="#1-5-2-特征" class="headerlink" title="1.5.2. 特征"></a>1.5.2. 特征</h3><ol>
+<li>物理特征：超大规模</li>
+<li>技术特征：虚拟化</li>
+<li>商业特征：按需服务</li>
+<li>使用特征：<ol>
+<li>通用</li>
+<li>高可伸缩性</li>
+<li>极其廉价</li>
+</ol>
+</li>
+<li>目标特征：高可靠性</li>
+</ol>
+<h3 id="1-5-3-部署模型"><a href="#1-5-3-部署模型" class="headerlink" title="1.5.3. 部署模型"></a>1.5.3. <span style="background:rgba(3, 135, 102, 0.2)">部署模型</span></h3><ol>
+<li>公有云：由第三方提供者拥有的可公共访问的云环境</li>
+<li>社区云：类似公有云，但访问被限定为特定的云用户社区</li>
+<li>私有云：由一家组织单独拥有，利用云计算技术来访问组织内部的IT资源</li>
+<li>混合云：由两种或多种不同云部署模型组成的云环境</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F19%2F20-44-36-bac6e2d57df8e405719c514469a7efe3-20240619204436-377243.png" alt="image.png"></p>
+<h2 id="1-6-云服务模型"><a href="#1-6-云服务模型" class="headerlink" title="1.6. 云服务模型"></a>1.6. 云服务模型</h2><ol>
+<li>软件作为服务 SaaS (Software as a Service)<ul>
+<li>通过标准的Web浏览器或软件客户端访问云上的应用</li>
+<li>如：Salesforce online CRM</li>
+</ul>
+</li>
+<li>平台作为服务 PaaS (Platform as a Service)<ul>
+<li>提供用户应用程序的开发和运行环境，包括应用编程接口和运行平台等，支持应用从创建到运行整个生命周期需要的各种软硬件资源和工具。</li>
+<li>如：Google App Engine, Microsoft Windows Azure, 数据库、文件系统和应用运行环境</li>
+</ul>
+</li>
+<li>基础设施作为服务 IaaS (Infrastructure as a Service)<ul>
+<li>指通过虚拟机方式对外提供计算、存储和网络能力</li>
+<li>如：Amazon EC2/S3</li>
+</ul>
+</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F19%2F21-00-05-7d1eecf830ddd1f4f1f3445966a08c82-20240619210004-5de36d.png" alt="image.png"></p>
+<h2 id="1-7-云计算三元认知论"><a href="#1-7-云计算三元认知论" class="headerlink" title="1.7. 云计算三元认知论"></a>1.7. 云计算三元认知论</h2><ol>
+<li>商业模式</li>
+<li>计算范式：<ol>
+<li>云体逻辑结构：具体落地的云平台逻辑结构——物理结构就是云数据中心计算+存储+通信</li>
+<li>云栈逻辑结构：面向服务的云平台逻辑结构——物理结构就是管理系统的结构基础设施即服务，平台即服务，软件即服务</li>
+</ol>
+</li>
+<li>实现方式：数据中心+云平台管理系统</li>
+</ol>
+<h1 id="2-架构"><a href="#2-架构" class="headerlink" title="2. 架构"></a>2. 架构</h1><ol>
+<li>云计算架构：如何设计整体的结构，计算架构</li>
+<li><strong>云计算架构的二维视角</strong></li>
+<li>逻辑架构：<ul>
+<li>云体，云数据中心</li>
+<li>云栈，重点讲了openstack，<strong>分层</strong>，<strong>如何从技术角度构建</strong></li>
+</ul>
+</li>
+<li>SOA<ul>
+<li>SOA是什么</li>
+<li>和云的关系</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="2-1-计算架构及演化"><a href="#2-1-计算架构及演化" class="headerlink" title="2.1. 计算架构及演化"></a>2.1. 计算架构及演化</h2><p><strong>架构</strong>(Architecture)是指系统或应用程序的设计和组织方式<br><strong>计算架构</strong>是指描述计算机系统功能、组织和实现的一组规则和方法</p>
+<ol>
+<li>中央集权架构：所有计算资源、业务逻辑集中在一台主机</li>
+<li>客户机/服务器架构（C/S架构）：客户机承担少量计算和全部I/O任务，服务器承担主要计算任务</li>
+<li>中间层架构：把业务逻辑和数据服务放在两台服务器上，本质还是C/S架构</li>
+<li>浏览器/服务器架构（B/S架构）：客户端只显示和运行基于浏览器的脚本程序，Web服务器层屏蔽各中间件的差异，提供通用的用户访问界面</li>
+<li>C/S和B/S混合架构</li>
+<li>**面向服务的架构(SOA)**：将应用程序的不同功能单元（即服务）通过这些服务之间定义良好的接口和契约联系起来</li>
+</ol>
+<h2 id="2-2-SOA"><a href="#2-2-SOA" class="headerlink" title="2.2. SOA"></a>2.2. SOA</h2><ul>
+<li><p><strong>SOA是什么</strong>：面向服务的体系结构SOA是一个组件模型，将应用程序的不同功能单元（即服务）通过这些服务之间定义良好的接口和契约联系起来。接口是采用中立的方式进行定义的，它独立于实现服务的硬件平台、操作系统和编程语言，使得构建在各种这样的系统中的服务可以以一种统一和通用的方式进行交互。</p>
+</li>
+<li><p><strong>SOA和云的关系</strong>：</p>
+<ol>
+<li><strong>服务重用性和灵活性</strong>：SOA让IT系统变得更有弹性，以便更灵活、更快地响应不断改变的需求，解决“重用软件功能”的问题</li>
+<li>云计算采用的是面向服务的计算架构</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-3-云计算架构的二维视角"><a href="#2-3-云计算架构的二维视角" class="headerlink" title="2.3. 云计算架构的二维视角"></a>2.3. 云计算架构的二维视角</h2><p>最易于理解的二维视角：基础架构 + 应用程序； 两者分别视为：后端 （云组件） + 前端（给用户的服务）</p>
+<p>进一步的分层架构：</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F20%2F11-02-04-ff2342b92bac265fafd01af7910a2779-20240620110203-a0192e.png" alt="image.png"></p>
+<ol>
+<li>虚拟化层<ul>
+<li>将硬件转换为统一的IT资源【可灵活拆分、统一计量、统一管理、软件定义的】</li>
+<li>可以在不同的抽象层实现：应用层、操作系统层、体系结构层、硬件层</li>
+</ul>
+</li>
+<li>Web服务层<ul>
+<li>将云资源提供给客户的一种最方便的方式，解决大部分客户无法直接使用虚拟机的问题</li>
+<li>支持面广，对客户端要求低，浏览器就可以访问，<strong>所有服务通过REST API提供</strong></li>
+</ul>
+</li>
+<li>服务总线层<ul>
+<li>中间件层，封装计算服务、数据存储、消息传递</li>
+<li>分离用户与虚拟化层、连接用户与Web服务层</li>
+</ul>
+</li>
+<li>客户机用户界面<ul>
+<li>Web门户，把各种服务混搭集成在一个界面</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-4-云计算的逻辑架构"><a href="#2-4-云计算的逻辑架构" class="headerlink" title="2.4. 云计算的逻辑架构"></a>2.4. 云计算的逻辑架构</h2><p>云体：云计算的物质基础，目前可以认为云体就是数据中心。包括了网络、服务器、交换机、电力等。<br>云栈：云平台，是在云上构建的运行环境。可以管理应用程序。如openstack。</p>
+<h1 id="3-分布式计算"><a href="#3-分布式计算" class="headerlink" title="3. 分布式计算"></a>3. 分布式计算</h1><p>会有一点点涉及，不需要争对复习也能回答出来</p>
+<p>虽然不考，但概念和云计算连接很紧密</p>
+<h1 id="4-分布式存储"><a href="#4-分布式存储" class="headerlink" title="4. 分布式存储"></a>4. 分布式存储</h1><p>同上</p>
+<p>考试几乎不涉及</p>
+<h1 id="5-虚拟化技术"><a href="#5-虚拟化技术" class="headerlink" title="5. 虚拟化技术"></a>5. 虚拟化技术</h1><p>大概知道构建云的时候起到什么作用。</p>
+<p><strong>虚拟化技术和云计算的关系</strong>？</p>
+<p>云计算里面涉及<strong>哪些具体的虚拟化技术</strong>？云计算中需要对哪些资源进行虚拟化？</p>
+<p>对计算资源做虚拟化时<strong>用到哪些具体的虚拟化产品</strong>？VMWare，XEN，docker，KVM<br>VMWare和docker的区别，分别属于哪种类型？</p>
+<p>不需要知道实现，<strong>要知道类型</strong>  </p>
+<p>虚拟化的<strong>角度和层级</strong>，是否依赖宿主操作系统<br>在实现虚拟化的时候是基于软件的完全虚拟化，还是半虚拟化，还是硬件辅助的虚拟化（知道概念）<br>裸机虚拟化，寄宿虚拟化<br>CPU，内存，I/O虚拟化<br>容器属于什么层级的虚拟化？</p>
+<p><strong>云计算中的虚拟机迁移</strong>：迁移方案，对比  </p>
+<hr>
+<h2 id="5-1-云计算和虚拟化的关系？"><a href="#5-1-云计算和虚拟化的关系？" class="headerlink" title="5.1. 云计算和虚拟化的关系？"></a>5.1. 云计算和虚拟化的关系？</h2><ol>
+<li>虚拟化是云计算的核心技术，但不是其专有技术。</li>
+<li>云计算种虚拟化的核心思想利用软件或固件管理程序构成虚拟化层，<strong>把物理资源映射为虚拟资源</strong>。在虚拟资源上可以安装和部署<strong>多个虚拟机</strong>，<strong>实现多用户共享物理资源</strong>。</li>
+</ol>
+<h2 id="5-2-云计算里面涉及哪些具体的虚拟化技术？"><a href="#5-2-云计算里面涉及哪些具体的虚拟化技术？" class="headerlink" title="5.2. 云计算里面涉及哪些具体的虚拟化技术？"></a>5.2. 云计算里面涉及哪些具体的虚拟化技术？</h2><ul>
+<li>硬件虚拟化：<ol>
+<li>CPU虚拟化</li>
+<li>内存虚拟化</li>
+<li>I/O虚拟化</li>
+</ol>
+</li>
+<li>操作系统虚拟化</li>
+<li>网络虚拟化：基于主机，基于网络，基于存储设备</li>
+<li>存储虚拟化：核心网，接入网，虚拟机网络</li>
+</ul>
+<h2 id="5-3-至少说出四个虚拟化产品"><a href="#5-3-至少说出四个虚拟化产品" class="headerlink" title="5.3. 至少说出四个虚拟化产品"></a>5.3. 至少说出四个虚拟化产品</h2><p>VMWare，XEN，docker，KVM，lxc</p>
+<h2 id="5-4-虚拟化层级"><a href="#5-4-虚拟化层级" class="headerlink" title="5.4. 虚拟化层级"></a>5.4. 虚拟化层级</h2><ol>
+<li>ISA级虚拟化</li>
+<li>硬件级虚拟计划</li>
+<li>操作系统级虚拟化</li>
+<li>运行时库虚拟化</li>
+<li>应用程序级虚拟化</li>
+</ol>
+<h2 id="5-5-虚拟化类型"><a href="#5-5-虚拟化类型" class="headerlink" title="5.5. 虚拟化类型"></a>5.5. 虚拟化类型</h2><p><strong>硬件仿真（裸机虚拟化）</strong>：Hypervisor直接对硬件切分和抽象，再安装客户操作系统<br><strong>寄居虚拟化</strong>：需要主机操作系统，再运行VMM（Virtual Machine Monitor，虚拟机监视器） ，再安装操作系统</p>
+<p><strong>全虚拟化</strong>：Hypervisor或VMM负责控制硬件和“传话”<br><strong>类虚拟化（硬件辅助虚拟化）</strong>：不再以普通操作系统的方式访问虚拟硬件资源，需要修改操作系统</p>
+<h2 id="5-6-VMWare和docker的区别，分别属于哪种类型？"><a href="#5-6-VMWare和docker的区别，分别属于哪种类型？" class="headerlink" title="5.6. VMWare和docker的区别，分别属于哪种类型？"></a>5.6. VMWare和docker的区别，分别属于哪种类型？</h2><ul>
+<li><p>区别：虚拟机和容器的区别<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F20%2F12-05-48-ec7cbaf7a78c344fd7a3b05a98f4a832-20240620120547-d6bfc5.png" alt="image.png"></p>
+</li>
+<li><p>类型：都属于寄居虚拟化。</p>
+</li>
+</ul>
+<h2 id="5-7-云计算中的虚拟机迁移"><a href="#5-7-云计算中的虚拟机迁移" class="headerlink" title="5.7. 云计算中的虚拟机迁移"></a>5.7. 云计算中的虚拟机迁移</h2><p>不仅仅是内存的迁移，还有网络，存储设备的迁移</p>
+<ol>
+<li>内存迁移<ul>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F20%2F12-16-55-c643a5f489444a631d43fc30a3fa1f1b-20240620121655-39ff21.png" alt="image.png"></li>
+</ul>
+</li>
+<li>网络迁移<ul>
+<li>虚拟机所有网络设备，包括协议状态（如TCP连接状态）以及IP地址都要随之一起迁移；通过发送并修改相关配置实现</li>
+</ul>
+</li>
+<li>存储设备迁移<ul>
+<li>以共享的方式共享数据和文件系统，而非真正迁移</li>
+<li>目前大多数集群使用NAS（Network Attached Storage，网络连接存储）作为存储设备共享数据</li>
+</ul>
+</li>
+</ol>
+<h1 id="6-容器"><a href="#6-容器" class="headerlink" title="6. 容器"></a>6. 容器</h1><p>考试没什么内容</p>
+<p>属于操作系统的虚拟化，和硬件级的虚拟化有什么区别</p>
+<hr>
+<h2 id="6-1-容器是什么级别的虚拟化？"><a href="#6-1-容器是什么级别的虚拟化？" class="headerlink" title="6.1. 容器是什么级别的虚拟化？"></a>6.1. 容器是什么级别的虚拟化？</h2><p>属于虚拟化层级中的<strong>操作系统虚拟化</strong></p>
+<h2 id="6-2-容器和虚拟机的区别？"><a href="#6-2-容器和虚拟机的区别？" class="headerlink" title="6.2. 容器和虚拟机的区别？"></a>6.2. 容器和虚拟机的区别？</h2><ul>
+<li>虚拟机：抽象并虚拟化计算机物理资源<ol>
+<li>模拟计算机的整个物理基础设施，如磁盘、驱动器和服务器设备</li>
+<li>操作系统级别的资源隔离</li>
+</ol>
+</li>
+<li>容器：更轻量化的虚拟化技术<ol>
+<li>模拟操作系统，而非硬件</li>
+<li>进程级别的资源隔离</li>
+</ol>
+</li>
+</ul>
+<h1 id="7-网络"><a href="#7-网络" class="headerlink" title="7. 网络"></a>7. 网络</h1><p>唯一可以出<strong>计算题</strong>的部分，4种网络，需要计算和设计</p>
+<p>会告诉实现的逻辑，不用背。</p>
+<p>计算每一种类型的网络架构下，需要多少交换机，可以容纳多少台主机<br>要画出来再计算</p>
+<hr>
+<ul>
+<li>改进型树结构：FatTree，VL2</li>
+<li>递归层次结构：DCell，FiConn，BCube</li>
+<li>光交换网络：Helios， OSA</li>
+<li>无线数据中心网络：WDCN</li>
+<li>软件定义网络：Openflow</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F20%2F20-30-04-ef6a52419564c67c49a79e5e1cb20ca4-20240620203004-a71a9e.png" alt="image.png"></p>
+<h2 id="7-1-FatTree"><a href="#7-1-FatTree" class="headerlink" title="7.1. FatTree"></a>7.1. FatTree</h2><ol>
+<li>K叉树，K个Pod(集装器)，每个Pod有K个交换机，其中K/2个接入交换机，K/2个汇聚交换机。</li>
+<li>Pod中每个交换机有K个接口，<strong>K/2个接主机，K/2个接汇聚</strong>；<strong>K/2个接接入，K/2个接核心</strong>。</li>
+<li>有<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="7.022ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 3103.6 1083.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(389,0)"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1278,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mn" transform="translate(1778,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="msup" transform="translate(2278,0)"><g data-mml-node="mo"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mn" transform="translate(422,363) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container>个核心交换机，每个交换机K个端口接K个汇聚交换机。</li>
+<li>一个Pod内的所有交换机相互连接：完全二分图。</li>
+<li>一个Pod内的每个汇聚交换机与一部分核心交换机连接，但是一个Pod和每一个核心交换机都有连接。<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F20%2F20-30-43-f0c545ef1a2baaa841df0807bf036c59-20240620203042-b54c5d.png" alt="image.png"></li>
+</ol>
+<p>但是，FatTree的扩展性受限于核心交换机端口数量，目前比较常用的是48端口10G核心交换机，在3层树结构中能够支持27648台主机。</p>
+<h2 id="7-2-VL2"><a href="#7-2-VL2" class="headerlink" title="7.2. VL2"></a>7.2. VL2</h2><p>若干服务器连接到机架（接入）交换机<br>每台接入交换机与两台汇聚交换机连接<br>每台汇聚交换机与所有核心交换机连接</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F20%2F20-34-16-01cef43d0941e4624764d73332cfc7d1-20240620203416-256ed1.png" alt="image.png"></p>
+<h2 id="7-3-DECell"><a href="#7-3-DECell" class="headerlink" title="7.3. DECell"></a>7.3. DECell</h2><p>构建高层次网络时，需要的低层网络的个数等于每个低层网络中的服务器个数加1。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F20%2F20-54-30-a172241c6c1c22f60b1266923bc726fd-20240620205429-b0ad87.png" alt="image.png"></p>
+<h2 id="7-4-FiConn"><a href="#7-4-FiConn" class="headerlink" title="7.4. FiConn"></a>7.4. FiConn</h2><ul>
+<li>服务器使用两个网卡端口：主用端口连接低层网络，备用端口连接高层网络</li>
+<li>递归结构定义<ol>
+<li>第0层为基本构建单元，n个服务器连接一个具有n个端口的交换机</li>
+<li>每个低层FiConn中备用端口空闲的一半服务器与其他相同层次的FiConn网络中备用端口空闲的服务器连接</li>
+<li><strong>k层服务器、k层端口、k层链路</strong></li>
+</ol>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F20%2F20-48-13-c2bc942a15b9ef404f35f90989072cdf-20240620204812-c4834d.png" alt="image.png"></p>
+<h2 id="7-5-BCube"><a href="#7-5-BCube" class="headerlink" title="7.5. BCube"></a>7.5. BCube</h2><p>主要使用交换机构建层次化网络<br>第0层：n服务器连接1交换机<br>第1层：n个0层连接n个交换机<br>……<br>第k层：n个k-1层连接nk交换机</p>
+<p>交换机n个端口，服务器k+1个端口</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F20%2F20-51-28-35ba4e5e9909e9fe84047e90cb4949af-20240620205127-f9af1c.png" alt="image.png"></p>
+<h1 id="8-云数据中心"><a href="#8-云数据中心" class="headerlink" title="8. 云数据中心"></a>8. 云数据中心</h1><ol>
+<li><strong>绿色节能技术</strong>，有哪些措施？<ol>
+<li>配电系统</li>
+<li>空调系统</li>
+<li>集装箱数据中心</li>
+<li>管理系统节能策略和算法</li>
+<li>新能源应用</li>
+</ol>
+</li>
+<li><strong>容灾备份</strong>：使用哪些技术<ul>
+<li>两个方法：数据容灾备份，应用容灾备份</li>
+<li>核心思想：复制数据</li>
+<li>镜像、快照</li>
+<li>其他：基于IP的san技术，数据库的复制技术</li>
+</ul>
+</li>
+</ol>
+<h1 id="9-OpenStack"><a href="#9-OpenStack" class="headerlink" title="9. OpenStack"></a>9. OpenStack</h1><p>理解组件之间如何协作，不仅仅是理论上，实际部署的时候怎么通过网络协作，作为基础架构的服务</p>
+<p>出题例如，绘制OpenStack上部署服务的概念图</p>
+<hr>
+<p>OpenStack是一个管理云计算中计算、存储和网络，甚至是应用的通用平台，其提供Web界面、命令行工具和应用程序接口（API）等使用接口。</p>
+<h2 id="9-1-节点类型"><a href="#9-1-节点类型" class="headerlink" title="9.1. 节点类型"></a>9.1. 节点类型</h2><ol>
+<li>云控制器<ol>
+<li>Keystone: 提供身份认证和服务目录</li>
+<li>Nova: openstack中提供计算资源服务的项目，负责虚拟机和其他计算资源的生命周期管理</li>
+</ol>
+</li>
+<li>存储节点<ol>
+<li>swift对象存储</li>
+<li>cinder块存储</li>
+</ol>
+</li>
+<li>计算节点<ol>
+<li>nova-compute负责启动和终止虚拟机，通过消息总线监听虚拟机的相关请求</li>
+<li>nova-compute通过api server控制hypervisor</li>
+</ol>
+</li>
+<li>网络节点<ol>
+<li>nerutron组件</li>
+</ol>
+</li>
+</ol>
+<p>四种节点通过网络连接在一起</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F14%2F11-02-20-ec1653518bd49190a90cfcba346a8c81-20240614110218-8e3862.png" alt="image.png"></p>
+<h2 id="9-2-不同类型的节点通过什么网络连接？"><a href="#9-2-不同类型的节点通过什么网络连接？" class="headerlink" title="9.2. 不同类型的节点通过什么网络连接？"></a>9.2. 不同类型的节点通过什么网络连接？</h2><ul>
+<li>四种节点如何通过物理网络连接在一起？<ol>
+<li>管理网络：Openstack服务之间的通信，包括消息队列、数据库和API</li>
+<li>租户数据网络：为租户创建的虚拟网络提供物理路径</li>
+<li>存储网络：虚拟机和存储节点之间的物理连接</li>
+<li>对外的网络：互联网连接+对外的API网络</li>
+</ol>
+</li>
+<li>使用隔离的物理网络处理不同类型的网络流量：同一个节点在不同网络中使用不同接口</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F14%2F11-03-36-5637f682906edaa1f8bfa9892e720df1-20240614110334-902fb1.png" alt="image.png"></p>
+<h1 id="10-云计算安全"><a href="#10-云计算安全" class="headerlink" title="10. 云计算安全"></a>10. 云计算安全</h1><p>这部分不做要求</p>
+]]></content>
+      <categories>
+        <category>2024_Spring_云计算</category>
+      </categories>
+      <tags>
+        <tag>2024_Spring_云计算</tag>
       </tags>
   </entry>
   <entry>
