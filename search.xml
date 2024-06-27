@@ -17869,334 +17869,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
-    <title>04-架构模式</title>
-    <url>/posts/12c16a93/</url>
-    <content><![CDATA[<p>解决特定问题的设计决定的集合，但是可以参数化配置。</p>
-<ul>
-<li><p>DSSA 领域特定软件架构</p>
-<ol>
-<li>面向特定任务(task/domain)</li>
-<li>在这个领域里是通用的</li>
-<li>标准结构</li>
-</ol>
-</li>
-<li><p>架构模式</p>
-<ol>
-<li>背景</li>
-<li>问题</li>
-<li>解决方案（Element + Relations + Constraints）</li>
-</ol>
-</li>
-<li><p>设计模式  </p>
-<ul>
-<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-09-51-8b4e00572f757ad428e4008f69aa83da-20240507140950-fa7584.png" alt="image.png"></li>
-</ul>
-</li>
-<li><p>架构模式分类</p>
-<ol>
-<li>Module</li>
-<li>Component-Connector<ol>
-<li>在Runtime动态建立联系</li>
-</ol>
-</li>
-<li>Allocation</li>
-</ol>
-</li>
-</ul>
-<h1 id="1-Layered-Pattern"><a href="#1-Layered-Pattern" class="headerlink" title="1. Layered Pattern"></a>1. Layered Pattern</h1><ul>
-<li>Module类架构</li>
-<li>解释<ol>
-<li>一个Layer里包含多个Module，不存在跨层的Module</li>
-<li>限制层与层之间的依赖关系，质量属性的可修改性策略就使用了分层</li>
-<li>各层之间不能跨层调用，只能上面调下面，<font color="#ff0000">关注点分离</font></li>
-</ol>
-</li>
-<li>影响的质量属性：可修改性、可模块化、可维护性、可复用性</li>
-</ul>
-<h2 id="1-1-Solution"><a href="#1-1-Solution" class="headerlink" title="1.1. Solution"></a>1.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-16-47-b199ddcbdff99b04e268ba2e7d332b4c-20240507141646-1ef7b2.png" alt="image.png"></p>
-<ul>
-<li>元素：层，包含一些模块</li>
-<li>关系：allowed-to-use</li>
-<li>限制<ol>
-<li>每个模块只能被分配到一层</li>
-<li>至少有两层</li>
-<li>allowed-to-use关系不能是环，低层不能调用高层</li>
-</ol>
-</li>
-<li>弱点<ol>
-<li>增加层很复杂</li>
-<li>性能</li>
-</ol>
-</li>
-</ul>
-<h2 id="1-2-Pattern"><a href="#1-2-Pattern" class="headerlink" title="1.2. Pattern"></a>1.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-18-30-444d6cbeb1cdbf4fa785de6b61092876-20240507141829-67d177.png" alt="image.png"></p>
-<hr>
-<p>如果D是sidecar，那么也是分层；但如果D也有一定业务，则不是分层<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-25-46-741bf1a29993aa374ab8a6754a9fb3bd-20240507142545-72c020.png" alt="image.png"></p>
-<h1 id="2-Broker-Pattern"><a href="#2-Broker-Pattern" class="headerlink" title="2. Broker Pattern"></a>2. Broker Pattern</h1><ul>
-<li>Component-Connector类模式</li>
-</ul>
-<h2 id="2-1-Solution"><a href="#2-1-Solution" class="headerlink" title="2.1. Solution"></a>2.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-34-43-2c21c09e9de3e3b8c04404d72a18db01-20240507143442-cee395.png" alt="image.png"></p>
-<ul>
-<li>元素<ol>
-<li>Client</li>
-<li>Server</li>
-<li>Broker：中介，帮助client找到server，传递请求</li>
-</ol>
-</li>
-<li>约束：一个客户端只能连接一个中介，服务端也是</li>
-<li>分析<ol>
-<li>提升了互操作性、可修改性</li>
-<li>现代场景下如果有多个broker实例，可以提高扩展性、安全性、可用性（补充设计）</li>
-<li>可能<strong>单点失效，减低性能、安全性、可用性</strong></li>
-<li>减低可测试性，无法预先确定client和server的状态</li>
-</ol>
-</li>
-</ul>
-<h2 id="2-2-Pattern"><a href="#2-2-Pattern" class="headerlink" title="2.2. Pattern"></a>2.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-36-41-5112182333c844cc84ff216ca67d7c03-20240507143641-9c99b5.png" alt="image.png"></p>
-<h1 id="3-Model-View-Controller-Pattern"><a href="#3-Model-View-Controller-Pattern" class="headerlink" title="3. Model-View-Controller Pattern"></a>3. Model-View-Controller Pattern</h1><ul>
-<li>类型<ol>
-<li>从动态看属于Component-Connector  </li>
-<li>从开发态看属于Module</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-1-Solution"><a href="#3-1-Solution" class="headerlink" title="3.1. Solution"></a>3.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-54-35-cc6e1787efc5b7097c73cbb1ae914782-20240507145434-fb3e5b.png" alt="image.png"></p>
-<ul>
-<li>元素<ol>
-<li>model：业务逻辑</li>
-<li>view：向用户展示，接受用户操作</li>
-<li>controller：对用户操作进行处理，把消息通知给model</li>
-</ol>
-</li>
-<li>关系：通知</li>
-<li>约束：<ol>
-<li>每个元素至少有一个实例</li>
-<li>model不能直接和controller交互，controller单向操作Model</li>
-</ol>
-</li>
-<li>弱点：对于简单的用户界面过于复杂</li>
-</ul>
-<h2 id="3-2-Pattern"><a href="#3-2-Pattern" class="headerlink" title="3.2. Pattern"></a>3.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-54-49-7e40f48489e84a51c5331bf99eb8f877-20240507145448-7baa06.png" alt="image.png"></p>
-<h1 id="4-Pipe-and-Filter-Pattern"><a href="#4-Pipe-and-Filter-Pattern" class="headerlink" title="4. Pipe-and-Filter Pattern"></a>4. Pipe-and-Filter Pattern</h1><ul>
-<li>类别：Component-Connector</li>
-</ul>
-<h2 id="4-1-Solution"><a href="#4-1-Solution" class="headerlink" title="4.1. Solution"></a>4.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-56-07-9ecaef916b1c000ee9724bf806272c79-20240507145607-deab29.png" alt="image.png"></p>
-<ul>
-<li><p>元素</p>
-<ol>
-<li>pipe<ul>
-<li>相当于Connector</li>
-<li>必须有数据的输入和输出</li>
-<li>连接一系列的数据处理/计算</li>
-</ul>
-</li>
-<li>filter<ul>
-<li>相当于Component，通过pipe连起来</li>
-<li>处理数据，计算</li>
-<li>有input和多个output</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p>限制</p>
-<ol>
-<li>系统里不可能只有孤立的pipe</li>
-</ol>
-</li>
-<li><p>弱点</p>
-<ol>
-<li>不适合交互式系统</li>
-<li>有大量的独立过滤器会增加计算开销</li>
-<li>不适合长时间运行的计算</li>
-</ol>
-</li>
-</ul>
-<h2 id="4-2-Pattern"><a href="#4-2-Pattern" class="headerlink" title="4.2. Pattern"></a>4.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-57-55-2764955e71cac24cc8a6b8df474c15a6-20240507145754-7b1c94.png" alt="image.png"></p>
-<h1 id="5-Client-Server-Pattern"><a href="#5-Client-Server-Pattern" class="headerlink" title="5. Client-Server Pattern"></a>5. Client-Server Pattern</h1><ul>
-<li>类型：CC</li>
-</ul>
-<h2 id="5-1-Solution"><a href="#5-1-Solution" class="headerlink" title="5.1. Solution"></a>5.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-59-19-36800fe2562f1df5520f11d28f81167d-20240507145918-c888d4.png" alt="image.png"></p>
-<ul>
-<li><p>元素</p>
-<ol>
-<li>Client</li>
-<li>Server</li>
-</ol>
-</li>
-<li><p>不需要broker：在有限的网络中，有哪些服务是预先知道的,client和server的关系不需要动态改变</p>
-</li>
-<li><p>分析：</p>
-<ul>
-<li>CS架构导致互操作性降低，没有broker需要，人为连接。</li>
-<li>可能被拦截</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-2-Pattern"><a href="#5-2-Pattern" class="headerlink" title="5.2. Pattern"></a>5.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-03-13-fe3a35814348e258c7bcbf1c77e4d792-20240507150312-39032f.png" alt="image.png"></p>
-<h1 id="6-Peer-to-Peer-Pattern"><a href="#6-Peer-to-Peer-Pattern" class="headerlink" title="6. Peer-to-Peer Pattern"></a>6. Peer-to-Peer Pattern</h1><ul>
-<li>类型：CC</li>
-</ul>
-<p>没有明确的地位差距</p>
-<p>节点可以自由加入退出</p>
-<h2 id="6-1-Solution"><a href="#6-1-Solution" class="headerlink" title="6.1. Solution"></a>6.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-04-53-895cb73111b3ab647bb300595b8a7a2a-20240507150452-821875.png" alt="image.png"></p>
-<ul>
-<li>元素：<ol>
-<li>peer即可以发送也可以接受数据</li>
-<li>request/reply connector</li>
-</ol>
-</li>
-<li>关系：peer之间的连接器</li>
-<li>约束<ol>
-<li>每个节点的最大连接数</li>
-<li>节点的hops(hops：限制可感知的范围)</li>
-<li>哪个节点知道其他节点的信息，有一些p2p网络时星型拓扑</li>
-</ol>
-</li>
-<li>分析<ol>
-<li>提高了系统的可伸缩性</li>
-<li>牺牲安全性：检点既是客户端又是服务端，被攻击可能增加</li>
-<li>可用性：数据分布在不同节点上，可能导致数据不一致，但个别数据有问题不影响整体</li>
-<li>性能：多个节点同时提供服务，新能好</li>
-</ol>
-</li>
-</ul>
-<h2 id="6-2-Pattern"><a href="#6-2-Pattern" class="headerlink" title="6.2. Pattern"></a>6.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-07-03-98cf5b4315536a76cde2239249b648c1-20240507150702-8ce395.png" alt="image.png"></p>
-<h1 id="7-Service-Oriented-SOA-Pattern"><a href="#7-Service-Oriented-SOA-Pattern" class="headerlink" title="7. Service-Oriented/SOA Pattern"></a>7. Service-Oriented/SOA Pattern</h1><ul>
-<li>类型：cc</li>
-<li>计算是使用一组<strong>通过网络提供消费服务的协作组件</strong>实现的。计算通常使用工作流语言进行描述。</li>
-</ul>
-<h2 id="7-1-Solution"><a href="#7-1-Solution" class="headerlink" title="7.1. Solution"></a>7.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-15-38-887fee6231c05c8479e0b486f04e1aaf-20240507151537-92c286.png" alt="image.png"></p>
-<ul>
-<li>Component<ol>
-<li>Service Provider</li>
-<li>Service Consumer</li>
-<li>Registry：注册服务</li>
-<li>ESB：企业服务总线，client到server的通信路由，类似broker</li>
-<li>Orchestration server：编排组织业务</li>
-</ol>
-</li>
-<li>Connector:<ol>
-<li>SOAP（简单对象访问协议）</li>
-<li>REST</li>
-<li>异步消息传递（即忘即发）：参与者不必等待确认。</li>
-</ol>
-</li>
-<li>弱点<ol>
-<li>SOA系统构建很复杂，无法控制独立服务的演变</li>
-<li>中间件存在性能开销，服务可能还曾为性能瓶颈，通常不提供性能开销</li>
-</ol>
-</li>
-</ul>
-<p>可以访问到其他组织，不同技术实现的服务<br>质量属性：提高互操作性</p>
-<h2 id="7-2-Pattern"><a href="#7-2-Pattern" class="headerlink" title="7.2. Pattern"></a>7.2. Pattern</h2><p>虚线：组织边界，内部可以完全由组织控制</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-20-03-4ccbe77739cadb305da03a2116dd50eb-20240507152003-12bdce.png" alt="image.png"></p>
-<h1 id="8-Publish-Subscribe-Pattern"><a href="#8-Publish-Subscribe-Pattern" class="headerlink" title="8. Publish-Subscribe Pattern"></a>8. Publish-Subscribe Pattern</h1><ul>
-<li>类型：CC</li>
-</ul>
-<h2 id="8-1-Solution"><a href="#8-1-Solution" class="headerlink" title="8.1. Solution"></a>8.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-25-01-b1aa62975ac9705c2737a903557f5e59-20240507152501-de822f.png" alt="image.png"></p>
-<ul>
-<li>元素<ol>
-<li>事件分发器：connector/component</li>
-<li>发布者/订阅者：component，存在多对多的关系</li>
-</ol>
-</li>
-<li>弱点：<ol>
-<li>增加延迟</li>
-<li>降低可扩展性</li>
-<li>难以预测消息什么时候收到】</li>
-<li>不能保证一定会接收到，或即时接收到</li>
-</ol>
-</li>
-</ul>
-<h2 id="8-2-Pattern"><a href="#8-2-Pattern" class="headerlink" title="8.2. Pattern"></a>8.2. Pattern</h2><p>在OS中事件处理普遍使用</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-25-11-dda2131381aa560a984e411503e4faf0-20240507152510-7f26d2.png" alt="image.png"></p>
-<h1 id="9-Shared-Data-Pattern"><a href="#9-Shared-Data-Pattern" class="headerlink" title="9. Shared-Data Pattern"></a>9. Shared-Data Pattern</h1><ul>
-<li>类型：CC</li>
-</ul>
-<h2 id="9-1-Solution"><a href="#9-1-Solution" class="headerlink" title="9.1. Solution"></a>9.1. Solution</h2><p>存在中心的被共享的数据</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-27-04-13c8a8d1b5b7924a527dee2dca6ab41c-20240507152703-ca7333.png" alt="image.png"></p>
-<ul>
-<li>元素<ol>
-<li>共享数据存储Shared-data store.</li>
-<li>数据访问组件Data accessor component.</li>
-<li>数据读写连接器Data readin and writin connector.</li>
-</ol>
-</li>
-<li>限制：只能通过数据访问组件和数据交互</li>
-<li>分析<ol>
-<li>星型结构，可能单点失效，性能瓶颈</li>
-<li>想要获取数据高一致性、实时性时的妥协</li>
-</ol>
-</li>
-</ul>
-<h2 id="9-2-Pattern"><a href="#9-2-Pattern" class="headerlink" title="9.2. Pattern"></a>9.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-28-17-8bc18054676d4840b527b2b0f755f94d-20240507152816-a848b3.png" alt="image.png"></p>
-<h1 id="10-Map-Reduce-Pattern"><a href="#10-Map-Reduce-Pattern" class="headerlink" title="10. Map-Reduce Pattern"></a>10. Map-Reduce Pattern</h1><ul>
-<li>类型：Allocation<br>通过并行提高了性能</li>
-</ul>
-<h2 id="10-1-Solution"><a href="#10-1-Solution" class="headerlink" title="10.1. Solution"></a>10.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-34-47-8ff14e9d91dc5c25f1491a01e2d84019-20240507153447-99021c.png" alt="image.png"></p>
-<ul>
-<li>元素<ol>
-<li>Map：任务分割，一组相同的任务并行，每一个任务都在一个Map上处理 。信息抽取，转换。</li>
-<li>Reduce：把Map的输出整合在一起，变成单一输出</li>
-</ol>
-</li>
-<li>关系：<ol>
-<li>Deploy on是 map 或 Reduce 函数实例与安装该函数的处理器之间的关系。</li>
-<li>实例化、监视和控制是基础架构与 map 和 Reduce 实例之间的关系。</li>
-</ol>
-</li>
-<li>约束<ol>
-<li>要分析的数据必须以一组文件的形式存在</li>
-<li>map 函数是无状态的，彼此之间不通信</li>
-<li>map 实例和 Reduce 实例之间的唯一通信是从 map 实例以 &lt;key, value&gt;对形式发出的数据。</li>
-</ol>
-</li>
-<li>弱点<ol>
-<li>要求数据是大量的，否则map-reduce的代价不划算  </li>
-<li>如果不能把数据集划分成多个相似的子集，无法发挥并行的优势</li>
-<li>需要多次reduce的操作协调起来很复杂。</li>
-</ol>
-</li>
-</ul>
-<h2 id="10-2-Pattern"><a href="#10-2-Pattern" class="headerlink" title="10.2. Pattern"></a>10.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-35-10-c5969942e099ae089a1227eaf43e1fc7-20240507153509-36694f.png" alt="image.png"></p>
-<h1 id="11-Multi-Tier-Pattern"><a href="#11-Multi-Tier-Pattern" class="headerlink" title="11. Multi-Tier Pattern"></a>11. Multi-Tier Pattern</h1><ul>
-<li>类型：Allocation</li>
-</ul>
-<h2 id="11-1-Solution"><a href="#11-1-Solution" class="headerlink" title="11.1. Solution"></a>11.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-37-11-613758ec02833ece319fcc0f8b7892df-20240507153710-1a1259.png" alt="image.png"></p>
-<p>Tier：逻辑的分层，不是真实存在的层，没有分层模式的强依赖关系。软件的每一个计算资源作为一个Tier。<br>分层模式中的Layer时真实存在的</p>
-<ul>
-<li>元素<ol>
-<li>Tier</li>
-</ol>
-</li>
-<li>关系：<ul>
-<li>Is part of：把组件组织成层</li>
-<li>Communicates with，层和组件之间通信</li>
-<li>Allocated to：为了把层映射到计算平台</li>
-</ul>
-</li>
-<li>约束<ul>
-<li>一个软件组件只能属于一个层</li>
-</ul>
-</li>
-<li>弱点<ul>
-<li>前期成本高且复杂</li>
-</ul>
-</li>
-</ul>
-<h2 id="11-2-Pattern"><a href="#11-2-Pattern" class="headerlink" title="11.2. Pattern"></a>11.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-38-03-070c12b3a26b2de121f315cd2e0ca9ce-20240507153803-a48a52.png" alt="image.png"></p>
-<h1 id="12-Pattern和Tactic"><a href="#12-Pattern和Tactic" class="headerlink" title="12. Pattern和Tactic"></a>12. Pattern和Tactic</h1><p>Pattern：一组设计决定<br>Tactic：最小单元</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-41-41-6ecf53de649ae4edf390216d51159112-20240507154140-dc2113.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件系统设计</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2024_Spring_软件系统设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>01-设计模式</title>
     <url>/posts/946442dc/</url>
     <content><![CDATA[<h1 id="1-概括"><a href="#1-概括" class="headerlink" title="1. 概括"></a>1. 概括</h1><p>现有设计经验的总结</p>
@@ -19001,6 +18673,334 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
+    <title>04-架构模式</title>
+    <url>/posts/12c16a93/</url>
+    <content><![CDATA[<p>解决特定问题的设计决定的集合，但是可以参数化配置。</p>
+<ul>
+<li><p>DSSA 领域特定软件架构</p>
+<ol>
+<li>面向特定任务(task/domain)</li>
+<li>在这个领域里是通用的</li>
+<li>标准结构</li>
+</ol>
+</li>
+<li><p>架构模式</p>
+<ol>
+<li>背景</li>
+<li>问题</li>
+<li>解决方案（Element + Relations + Constraints）</li>
+</ol>
+</li>
+<li><p>设计模式  </p>
+<ul>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-09-51-8b4e00572f757ad428e4008f69aa83da-20240507140950-fa7584.png" alt="image.png"></li>
+</ul>
+</li>
+<li><p>架构模式分类</p>
+<ol>
+<li>Module</li>
+<li>Component-Connector<ol>
+<li>在Runtime动态建立联系</li>
+</ol>
+</li>
+<li>Allocation</li>
+</ol>
+</li>
+</ul>
+<h1 id="1-Layered-Pattern"><a href="#1-Layered-Pattern" class="headerlink" title="1. Layered Pattern"></a>1. Layered Pattern</h1><ul>
+<li>Module类架构</li>
+<li>解释<ol>
+<li>一个Layer里包含多个Module，不存在跨层的Module</li>
+<li>限制层与层之间的依赖关系，质量属性的可修改性策略就使用了分层</li>
+<li>各层之间不能跨层调用，只能上面调下面，<font color="#ff0000">关注点分离</font></li>
+</ol>
+</li>
+<li>影响的质量属性：可修改性、可模块化、可维护性、可复用性</li>
+</ul>
+<h2 id="1-1-Solution"><a href="#1-1-Solution" class="headerlink" title="1.1. Solution"></a>1.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-16-47-b199ddcbdff99b04e268ba2e7d332b4c-20240507141646-1ef7b2.png" alt="image.png"></p>
+<ul>
+<li>元素：层，包含一些模块</li>
+<li>关系：allowed-to-use</li>
+<li>限制<ol>
+<li>每个模块只能被分配到一层</li>
+<li>至少有两层</li>
+<li>allowed-to-use关系不能是环，低层不能调用高层</li>
+</ol>
+</li>
+<li>弱点<ol>
+<li>增加层很复杂</li>
+<li>性能</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-2-Pattern"><a href="#1-2-Pattern" class="headerlink" title="1.2. Pattern"></a>1.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-18-30-444d6cbeb1cdbf4fa785de6b61092876-20240507141829-67d177.png" alt="image.png"></p>
+<hr>
+<p>如果D是sidecar，那么也是分层；但如果D也有一定业务，则不是分层<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-25-46-741bf1a29993aa374ab8a6754a9fb3bd-20240507142545-72c020.png" alt="image.png"></p>
+<h1 id="2-Broker-Pattern"><a href="#2-Broker-Pattern" class="headerlink" title="2. Broker Pattern"></a>2. Broker Pattern</h1><ul>
+<li>Component-Connector类模式</li>
+</ul>
+<h2 id="2-1-Solution"><a href="#2-1-Solution" class="headerlink" title="2.1. Solution"></a>2.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-34-43-2c21c09e9de3e3b8c04404d72a18db01-20240507143442-cee395.png" alt="image.png"></p>
+<ul>
+<li>元素<ol>
+<li>Client</li>
+<li>Server</li>
+<li>Broker：中介，帮助client找到server，传递请求</li>
+</ol>
+</li>
+<li>约束：一个客户端只能连接一个中介，服务端也是</li>
+<li>分析<ol>
+<li>提升了互操作性、可修改性</li>
+<li>现代场景下如果有多个broker实例，可以提高扩展性、安全性、可用性（补充设计）</li>
+<li>可能<strong>单点失效，减低性能、安全性、可用性</strong></li>
+<li>减低可测试性，无法预先确定client和server的状态</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-2-Pattern"><a href="#2-2-Pattern" class="headerlink" title="2.2. Pattern"></a>2.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-36-41-5112182333c844cc84ff216ca67d7c03-20240507143641-9c99b5.png" alt="image.png"></p>
+<h1 id="3-Model-View-Controller-Pattern"><a href="#3-Model-View-Controller-Pattern" class="headerlink" title="3. Model-View-Controller Pattern"></a>3. Model-View-Controller Pattern</h1><ul>
+<li>类型<ol>
+<li>从动态看属于Component-Connector  </li>
+<li>从开发态看属于Module</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-1-Solution"><a href="#3-1-Solution" class="headerlink" title="3.1. Solution"></a>3.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-54-35-cc6e1787efc5b7097c73cbb1ae914782-20240507145434-fb3e5b.png" alt="image.png"></p>
+<ul>
+<li>元素<ol>
+<li>model：业务逻辑</li>
+<li>view：向用户展示，接受用户操作</li>
+<li>controller：对用户操作进行处理，把消息通知给model</li>
+</ol>
+</li>
+<li>关系：通知</li>
+<li>约束：<ol>
+<li>每个元素至少有一个实例</li>
+<li>model不能直接和controller交互，controller单向操作Model</li>
+</ol>
+</li>
+<li>弱点：对于简单的用户界面过于复杂</li>
+</ul>
+<h2 id="3-2-Pattern"><a href="#3-2-Pattern" class="headerlink" title="3.2. Pattern"></a>3.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-54-49-7e40f48489e84a51c5331bf99eb8f877-20240507145448-7baa06.png" alt="image.png"></p>
+<h1 id="4-Pipe-and-Filter-Pattern"><a href="#4-Pipe-and-Filter-Pattern" class="headerlink" title="4. Pipe-and-Filter Pattern"></a>4. Pipe-and-Filter Pattern</h1><ul>
+<li>类别：Component-Connector</li>
+</ul>
+<h2 id="4-1-Solution"><a href="#4-1-Solution" class="headerlink" title="4.1. Solution"></a>4.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-56-07-9ecaef916b1c000ee9724bf806272c79-20240507145607-deab29.png" alt="image.png"></p>
+<ul>
+<li><p>元素</p>
+<ol>
+<li>pipe<ul>
+<li>相当于Connector</li>
+<li>必须有数据的输入和输出</li>
+<li>连接一系列的数据处理/计算</li>
+</ul>
+</li>
+<li>filter<ul>
+<li>相当于Component，通过pipe连起来</li>
+<li>处理数据，计算</li>
+<li>有input和多个output</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>限制</p>
+<ol>
+<li>系统里不可能只有孤立的pipe</li>
+</ol>
+</li>
+<li><p>弱点</p>
+<ol>
+<li>不适合交互式系统</li>
+<li>有大量的独立过滤器会增加计算开销</li>
+<li>不适合长时间运行的计算</li>
+</ol>
+</li>
+</ul>
+<h2 id="4-2-Pattern"><a href="#4-2-Pattern" class="headerlink" title="4.2. Pattern"></a>4.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-57-55-2764955e71cac24cc8a6b8df474c15a6-20240507145754-7b1c94.png" alt="image.png"></p>
+<h1 id="5-Client-Server-Pattern"><a href="#5-Client-Server-Pattern" class="headerlink" title="5. Client-Server Pattern"></a>5. Client-Server Pattern</h1><ul>
+<li>类型：CC</li>
+</ul>
+<h2 id="5-1-Solution"><a href="#5-1-Solution" class="headerlink" title="5.1. Solution"></a>5.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F14-59-19-36800fe2562f1df5520f11d28f81167d-20240507145918-c888d4.png" alt="image.png"></p>
+<ul>
+<li><p>元素</p>
+<ol>
+<li>Client</li>
+<li>Server</li>
+</ol>
+</li>
+<li><p>不需要broker：在有限的网络中，有哪些服务是预先知道的,client和server的关系不需要动态改变</p>
+</li>
+<li><p>分析：</p>
+<ul>
+<li>CS架构导致互操作性降低，没有broker需要，人为连接。</li>
+<li>可能被拦截</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-Pattern"><a href="#5-2-Pattern" class="headerlink" title="5.2. Pattern"></a>5.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-03-13-fe3a35814348e258c7bcbf1c77e4d792-20240507150312-39032f.png" alt="image.png"></p>
+<h1 id="6-Peer-to-Peer-Pattern"><a href="#6-Peer-to-Peer-Pattern" class="headerlink" title="6. Peer-to-Peer Pattern"></a>6. Peer-to-Peer Pattern</h1><ul>
+<li>类型：CC</li>
+</ul>
+<p>没有明确的地位差距</p>
+<p>节点可以自由加入退出</p>
+<h2 id="6-1-Solution"><a href="#6-1-Solution" class="headerlink" title="6.1. Solution"></a>6.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-04-53-895cb73111b3ab647bb300595b8a7a2a-20240507150452-821875.png" alt="image.png"></p>
+<ul>
+<li>元素：<ol>
+<li>peer即可以发送也可以接受数据</li>
+<li>request/reply connector</li>
+</ol>
+</li>
+<li>关系：peer之间的连接器</li>
+<li>约束<ol>
+<li>每个节点的最大连接数</li>
+<li>节点的hops(hops：限制可感知的范围)</li>
+<li>哪个节点知道其他节点的信息，有一些p2p网络时星型拓扑</li>
+</ol>
+</li>
+<li>分析<ol>
+<li>提高了系统的可伸缩性</li>
+<li>牺牲安全性：检点既是客户端又是服务端，被攻击可能增加</li>
+<li>可用性：数据分布在不同节点上，可能导致数据不一致，但个别数据有问题不影响整体</li>
+<li>性能：多个节点同时提供服务，新能好</li>
+</ol>
+</li>
+</ul>
+<h2 id="6-2-Pattern"><a href="#6-2-Pattern" class="headerlink" title="6.2. Pattern"></a>6.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-07-03-98cf5b4315536a76cde2239249b648c1-20240507150702-8ce395.png" alt="image.png"></p>
+<h1 id="7-Service-Oriented-SOA-Pattern"><a href="#7-Service-Oriented-SOA-Pattern" class="headerlink" title="7. Service-Oriented/SOA Pattern"></a>7. Service-Oriented/SOA Pattern</h1><ul>
+<li>类型：cc</li>
+<li>计算是使用一组<strong>通过网络提供消费服务的协作组件</strong>实现的。计算通常使用工作流语言进行描述。</li>
+</ul>
+<h2 id="7-1-Solution"><a href="#7-1-Solution" class="headerlink" title="7.1. Solution"></a>7.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-15-38-887fee6231c05c8479e0b486f04e1aaf-20240507151537-92c286.png" alt="image.png"></p>
+<ul>
+<li>Component<ol>
+<li>Service Provider</li>
+<li>Service Consumer</li>
+<li>Registry：注册服务</li>
+<li>ESB：企业服务总线，client到server的通信路由，类似broker</li>
+<li>Orchestration server：编排组织业务</li>
+</ol>
+</li>
+<li>Connector:<ol>
+<li>SOAP（简单对象访问协议）</li>
+<li>REST</li>
+<li>异步消息传递（即忘即发）：参与者不必等待确认。</li>
+</ol>
+</li>
+<li>弱点<ol>
+<li>SOA系统构建很复杂，无法控制独立服务的演变</li>
+<li>中间件存在性能开销，服务可能还曾为性能瓶颈，通常不提供性能开销</li>
+</ol>
+</li>
+</ul>
+<p>可以访问到其他组织，不同技术实现的服务<br>质量属性：提高互操作性</p>
+<h2 id="7-2-Pattern"><a href="#7-2-Pattern" class="headerlink" title="7.2. Pattern"></a>7.2. Pattern</h2><p>虚线：组织边界，内部可以完全由组织控制</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-20-03-4ccbe77739cadb305da03a2116dd50eb-20240507152003-12bdce.png" alt="image.png"></p>
+<h1 id="8-Publish-Subscribe-Pattern"><a href="#8-Publish-Subscribe-Pattern" class="headerlink" title="8. Publish-Subscribe Pattern"></a>8. Publish-Subscribe Pattern</h1><ul>
+<li>类型：CC</li>
+</ul>
+<h2 id="8-1-Solution"><a href="#8-1-Solution" class="headerlink" title="8.1. Solution"></a>8.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-25-01-b1aa62975ac9705c2737a903557f5e59-20240507152501-de822f.png" alt="image.png"></p>
+<ul>
+<li>元素<ol>
+<li>事件分发器：connector/component</li>
+<li>发布者/订阅者：component，存在多对多的关系</li>
+</ol>
+</li>
+<li>弱点：<ol>
+<li>增加延迟</li>
+<li>降低可扩展性</li>
+<li>难以预测消息什么时候收到】</li>
+<li>不能保证一定会接收到，或即时接收到</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-2-Pattern"><a href="#8-2-Pattern" class="headerlink" title="8.2. Pattern"></a>8.2. Pattern</h2><p>在OS中事件处理普遍使用</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-25-11-dda2131381aa560a984e411503e4faf0-20240507152510-7f26d2.png" alt="image.png"></p>
+<h1 id="9-Shared-Data-Pattern"><a href="#9-Shared-Data-Pattern" class="headerlink" title="9. Shared-Data Pattern"></a>9. Shared-Data Pattern</h1><ul>
+<li>类型：CC</li>
+</ul>
+<h2 id="9-1-Solution"><a href="#9-1-Solution" class="headerlink" title="9.1. Solution"></a>9.1. Solution</h2><p>存在中心的被共享的数据</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-27-04-13c8a8d1b5b7924a527dee2dca6ab41c-20240507152703-ca7333.png" alt="image.png"></p>
+<ul>
+<li>元素<ol>
+<li>共享数据存储Shared-data store.</li>
+<li>数据访问组件Data accessor component.</li>
+<li>数据读写连接器Data readin and writin connector.</li>
+</ol>
+</li>
+<li>限制：只能通过数据访问组件和数据交互</li>
+<li>分析<ol>
+<li>星型结构，可能单点失效，性能瓶颈</li>
+<li>想要获取数据高一致性、实时性时的妥协</li>
+</ol>
+</li>
+</ul>
+<h2 id="9-2-Pattern"><a href="#9-2-Pattern" class="headerlink" title="9.2. Pattern"></a>9.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-28-17-8bc18054676d4840b527b2b0f755f94d-20240507152816-a848b3.png" alt="image.png"></p>
+<h1 id="10-Map-Reduce-Pattern"><a href="#10-Map-Reduce-Pattern" class="headerlink" title="10. Map-Reduce Pattern"></a>10. Map-Reduce Pattern</h1><ul>
+<li>类型：Allocation<br>通过并行提高了性能</li>
+</ul>
+<h2 id="10-1-Solution"><a href="#10-1-Solution" class="headerlink" title="10.1. Solution"></a>10.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-34-47-8ff14e9d91dc5c25f1491a01e2d84019-20240507153447-99021c.png" alt="image.png"></p>
+<ul>
+<li>元素<ol>
+<li>Map：任务分割，一组相同的任务并行，每一个任务都在一个Map上处理 。信息抽取，转换。</li>
+<li>Reduce：把Map的输出整合在一起，变成单一输出</li>
+</ol>
+</li>
+<li>关系：<ol>
+<li>Deploy on是 map 或 Reduce 函数实例与安装该函数的处理器之间的关系。</li>
+<li>实例化、监视和控制是基础架构与 map 和 Reduce 实例之间的关系。</li>
+</ol>
+</li>
+<li>约束<ol>
+<li>要分析的数据必须以一组文件的形式存在</li>
+<li>map 函数是无状态的，彼此之间不通信</li>
+<li>map 实例和 Reduce 实例之间的唯一通信是从 map 实例以 &lt;key, value&gt;对形式发出的数据。</li>
+</ol>
+</li>
+<li>弱点<ol>
+<li>要求数据是大量的，否则map-reduce的代价不划算  </li>
+<li>如果不能把数据集划分成多个相似的子集，无法发挥并行的优势</li>
+<li>需要多次reduce的操作协调起来很复杂。</li>
+</ol>
+</li>
+</ul>
+<h2 id="10-2-Pattern"><a href="#10-2-Pattern" class="headerlink" title="10.2. Pattern"></a>10.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-35-10-c5969942e099ae089a1227eaf43e1fc7-20240507153509-36694f.png" alt="image.png"></p>
+<h1 id="11-Multi-Tier-Pattern"><a href="#11-Multi-Tier-Pattern" class="headerlink" title="11. Multi-Tier Pattern"></a>11. Multi-Tier Pattern</h1><ul>
+<li>类型：Allocation</li>
+</ul>
+<h2 id="11-1-Solution"><a href="#11-1-Solution" class="headerlink" title="11.1. Solution"></a>11.1. Solution</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-37-11-613758ec02833ece319fcc0f8b7892df-20240507153710-1a1259.png" alt="image.png"></p>
+<p>Tier：逻辑的分层，不是真实存在的层，没有分层模式的强依赖关系。软件的每一个计算资源作为一个Tier。<br>分层模式中的Layer时真实存在的</p>
+<ul>
+<li>元素<ol>
+<li>Tier</li>
+</ol>
+</li>
+<li>关系：<ul>
+<li>Is part of：把组件组织成层</li>
+<li>Communicates with，层和组件之间通信</li>
+<li>Allocated to：为了把层映射到计算平台</li>
+</ul>
+</li>
+<li>约束<ul>
+<li>一个软件组件只能属于一个层</li>
+</ul>
+</li>
+<li>弱点<ul>
+<li>前期成本高且复杂</li>
+</ul>
+</li>
+</ul>
+<h2 id="11-2-Pattern"><a href="#11-2-Pattern" class="headerlink" title="11.2. Pattern"></a>11.2. Pattern</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-38-03-070c12b3a26b2de121f315cd2e0ca9ce-20240507153803-a48a52.png" alt="image.png"></p>
+<h1 id="12-Pattern和Tactic"><a href="#12-Pattern和Tactic" class="headerlink" title="12. Pattern和Tactic"></a>12. Pattern和Tactic</h1><p>Pattern：一组设计决定<br>Tactic：最小单元</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F15-41-41-6ecf53de649ae4edf390216d51159112-20240507154140-dc2113.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>05-架构设计</title>
     <url>/posts/9e04b6b3/</url>
     <content><![CDATA[<h1 id="1-ASR"><a href="#1-ASR" class="headerlink" title="1. ASR"></a>1. ASR</h1><p>Architecturally SIgnificant Requirement(ASR)：对架构有重要影响的需求</p>
@@ -19111,6 +19111,35 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F09%2F11-22-20-c0b9137fbe7364b63e9e02a1583542ab-20240509112220-2a2a8b.png" alt="image.png"></p>
 <h1 id="ADD例子"><a href="#ADD例子" class="headerlink" title="ADD例子"></a>ADD例子</h1><p><a class="link" href="https://spricoder.github.io/2021/07/15/2021-Software-System-Design/2021-Software-System-Design-Lec15-Design/#3-%E5%9F%BA%E4%BA%8Eadd%E8%BF%9B%E8%A1%8C%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%AE%9E%E4%BE%8B">2021-软件系统设计-Lec15-Design - SpriCoder的博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>06-微服务架构</title>
+    <url>/posts/ab2d67c8/</url>
+    <content><![CDATA[<p>微服务架构：小，自治</p>
+<h1 id="微服务拆分"><a href="#微服务拆分" class="headerlink" title="微服务拆分"></a>微服务拆分</h1><ol>
+<li><p>分析用户故事中和场景中的名词</p>
+</li>
+<li><p>分析用户故事中和场景中的动词，确定系统操作</p>
+<ol>
+<li><font color="#c00000">命令型或查询型</font></li>
+<li>前端给后端发出请求</li>
+<li>后端进行业务逻辑的数据获取和处理</li>
+<li>系统操作规范<ol>
+<li>命令对应的参数、返回值</li>
+<li>领域模型类的行为：<font color="#c00000">前置和后置条件</font></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>2024_Spring_软件系统设计</category>
@@ -19342,35 +19371,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li><p>观察者模式: MVC使用了观察者模式</p>
 </li>
 <li><p>组合模式：GUI界面的元素可以嵌套，呈现树状结构</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件系统设计</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2024_Spring_软件系统设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>06-微服务架构</title>
-    <url>/posts/ab2d67c8/</url>
-    <content><![CDATA[<p>微服务架构：小，自治</p>
-<h1 id="微服务拆分"><a href="#微服务拆分" class="headerlink" title="微服务拆分"></a>微服务拆分</h1><ol>
-<li><p>分析用户故事中和场景中的名词</p>
-</li>
-<li><p>分析用户故事中和场景中的动词，确定系统操作</p>
-<ol>
-<li><font color="#c00000">命令型或查询型</font></li>
-<li>前端给后端发出请求</li>
-<li>后端进行业务逻辑的数据获取和处理</li>
-<li>系统操作规范<ol>
-<li>命令对应的参数、返回值</li>
-<li>领域模型类的行为：<font color="#c00000">前置和后置条件</font></li>
-</ol>
-</li>
-</ol>
 </li>
 </ol>
 ]]></content>
@@ -19816,27 +19816,84 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
-    <title>0-软件质量与管理</title>
-    <url>/posts/5882e132/</url>
-    <content><![CDATA[<h1 id="十个问题"><a href="#十个问题" class="headerlink" title="十个问题"></a>十个问题</h1><ol>
-<li>什么是过程管理和项目管理？</li>
-<li>软件估算过程中，项目经历/历史数据的作用是什么？如何把历史数据转化成估算结果？隔了3个月，能否保证估算结果一致？</li>
-<li>？</li>
-<li>什么叫做XX管理？</li>
+    <title>01-软件质量管理概述</title>
+    <url>/posts/5c2f34b3/</url>
+    <content><![CDATA[<h1 id="1-软件危机"><a href="#1-软件危机" class="headerlink" title="1. 软件危机"></a>1. 软件危机</h1><ul>
+<li><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</li>
+<li>软件工厂：用<font color="#ff0000">工程化方法</font>构建和维护有效的、实用的和高质量软件的学科</li>
+<li><font color="#ff0000">本质四大难题</font><ol>
+<li>复杂性</li>
+<li>不可见性</li>
+<li>可变性</li>
+<li>一致性</li>
 </ol>
+</li>
+</ul>
+<h1 id="2-软件项目管理的概念"><a href="#2-软件项目管理的概念" class="headerlink" title="2. 软件项目管理的概念"></a>2. 软件项目管理的概念</h1><ul>
+<li><font color="#ff0000">管理的三大要素</font><ol>
+<li>目标</li>
+<li>状态</li>
+<li>纠偏</li>
+</ol>
+</li>
+<li>软件项目管理的典型三大目标<ol>
+<li>成本</li>
+<li>质量</li>
+<li>工期</li>
+</ol>
+</li>
+</ul>
+<h1 id="3-软件项目的管理视角"><a href="#3-软件项目的管理视角" class="headerlink" title="3. 软件项目的管理视角"></a>3. 软件项目的管理视角</h1><ul>
+<li>管理的软件工程视角：<font color="#ff0000">成功是否可以复制？</font><ul>
+<li><strong>软件过程</strong>：为了实现一个或多个事先定义的目标而建立起来的一组实践的集合。这组实践之间往往有一定的先后顺序，作为一个整体来实现事先定义的一个或多个目标。</li>
+<li><strong>生命周期模型</strong>：对软件过程的一种人为划分</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-广义软件过程"><a href="#4-广义软件过程" class="headerlink" title="4. 广义软件过程"></a>4. 广义软件过程</h1><ul>
+<li><strong>广义软件过程</strong>包括：<font color="#ff0000">技术</font>、<font color="#ff0000">人员</font>以及<font color="#ff0000">狭义过程</font></li>
+<li>同义词：软件开发方法、软件开发过程<ul>
+<li>Cleanroom方法、XP方法、SCRUM方法 、Gate方法；</li>
+<li>更一般的：敏捷软件过程／方法、轻量型过程／方法以及重型过程／方法等描述也是恰当的</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-生命周期模型"><a href="#5-生命周期模型" class="headerlink" title="5. 生命周期模型"></a>5. 生命周期模型</h1><ul>
+<li><p>与软件过程的<strong>区别和联系</strong></p>
+<ol>
+<li>生命周期模型是对软件开发过程的<strong>人为划分</strong></li>
+<li>生命周期模型是软件开发过程的<strong>主框架</strong>，是对软件开发过程的一种<strong>粗粒度划分</strong></li>
+<li>生命周期模型往往不包含技术实践</li>
+</ol>
+</li>
+<li><p>典型生命周期模型</p>
+<ol>
+<li>瀑布模型</li>
+<li>迭代式模型</li>
+<li>增量模型</li>
+<li>螺旋模型</li>
+<li>原型法</li>
+</ol>
+</li>
+</ul>
+<h1 id="6-软件过程管理"><a href="#6-软件过程管理" class="headerlink" title="6. 软件过程管理"></a>6. 软件过程管理</h1><ul>
+<li>管理对象：软件过程</li>
+<li>目的：让软件过程在开发效率、质量等方面有着更好性能</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F24%2F19-09-18-23ad574ff13e9c6543bdc295f0c375af-20240624190917-8282c3.png" alt="image.png"></p>
+<h1 id="7-软件过程管理与软件过程改进"><a href="#7-软件过程管理与软件过程改进" class="headerlink" title="7. 软件过程管理与软件过程改进"></a>7. 软件过程管理与软件过程改进</h1><p>两者意思相近</p>
+<ul>
+<li>软件过程管理参考模型：CMM/CMMI，SPICE等</li>
+<li>软件过程改进参考元模型：PDCA，IDEAL</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F24%2F19-12-50-55d38437589e514ac8688788296a0518-20240624191250-eac2bf.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2024_Spring_软件质量管理</category>
       </categories>
-  </entry>
-  <entry>
-    <title>01-概述</title>
-    <url>/posts/58d2b339/</url>
-    <content><![CDATA[<p><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</p>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件质量管理</category>
-      </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
   </entry>
   <entry>
     <title>02-历史与演变</title>
@@ -19851,7 +19908,21 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li>网络化和服务化（90年代中期迄今）</li>
 </ol>
 <p><font color="#c00000">软件开发方法=软件过程</font></p>
-<h1 id="2-软硬件一体化"><a href="#2-软硬件一体化" class="headerlink" title="2. 软硬件一体化"></a>2. 软硬件一体化</h1><h2 id="2-1-典型特征"><a href="#2-1-典型特征" class="headerlink" title="2.1. 典型特征"></a>2.1. 典型特征</h2><h2 id="2-2-典型的软件过程和实践"><a href="#2-2-典型的软件过程和实践" class="headerlink" title="2.2. 典型的软件过程和实践"></a>2.2. 典型的软件过程和实践</h2><ol>
+<h1 id="2-软硬件一体化"><a href="#2-软硬件一体化" class="headerlink" title="2. 软硬件一体化"></a>2. 软硬件一体化</h1><h2 id="2-1-典型特征"><a href="#2-1-典型特征" class="headerlink" title="2.1. 典型特征"></a>2.1. 典型特征</h2><ul>
+<li>软件应用典型特征<ol>
+<li>软件支持硬件完成计算任务</li>
+<li>功能单一</li>
+<li>复杂度有限</li>
+<li>几乎不需要需求变更</li>
+</ol>
+</li>
+<li>软件开发典型特征<ol>
+<li>硬件太贵</li>
+<li>团队以硬件工程师和数学家为主</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-2-典型的软件过程和实践"><a href="#2-2-典型的软件过程和实践" class="headerlink" title="2.2. 典型的软件过程和实践"></a>2.2. 典型的软件过程和实践</h2><ol>
 <li>“<font color="#c00000">Measure twice, cut once</font>“：对应<span style="background:rgba(3, 135, 102, 0.2)">代码审查</span>，因为早期开发过程中机器很贵/人力资源便宜</li>
 </ol>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F10-31-39-29ca6a8d313198dbe4561784f77f99c5-20240305103137-772dc3.png" alt="image.png"></p>
@@ -19883,42 +19954,40 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 <li>来自市场的压力</li>
 </ol>
-<h2 id="4-2-典型软件过程和实践"><a href="#4-2-典型软件过程和实践" class="headerlink" title="4.2. 典型软件过程和实践"></a>4.2. 典型软件过程和实践</h2><h3 id="4-2-1-瀑布"><a href="#4-2-1-瀑布" class="headerlink" title="4.2.1. 瀑布"></a>4.2.1. 瀑布</h3><ol>
+<h2 id="4-2-典型软件过程和实践"><a href="#4-2-典型软件过程和实践" class="headerlink" title="4.2. 典型软件过程和实践"></a>4.2. 典型软件过程和实践</h2><ol>
 <li>形式化方法</li>
-<li>结构化程序设计和<span style="background:rgba(3, 135, 102, 0.2)">瀑布模型</span><ul>
-<li>最早期的瀑布模型(Royce Waterfall Model)其实可以回溯，有试错过程</li>
-<li>但后来的瀑布模型不能往回</li>
+<li>结构化程序设计和<span style="background:rgba(3, 135, 102, 0.2)">瀑布模型</span></li>
+</ol>
+<h3 id="4-2-1-瀑布模型"><a href="#4-2-1-瀑布模型" class="headerlink" title="4.2.1. 瀑布模型"></a>4.2.1. 瀑布模型</h3><ul>
+<li>最早期的瀑布模型(Royce Waterfall Model)其实可以回溯，有试错过程。瀑布模型是一个家族，由简单的瀑布模型也有复杂的瀑布模型</li>
+<li>问题和不足<ol>
+<li>形式化在扩展和可用性方面存在不足</li>
+<li>瀑布模型重文档、慢节奏</li>
+</ol>
+</li>
+<li><span style="background:rgba(163, 67, 31, 0.2)">左边才是真正的瀑布模型</span><ul>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F11-21-53-71b18599d32010fc1b873fcbbdb93eee-20240305112152-b43dd0.png" alt="image.png"></li>
 </ul>
 </li>
-</ol>
-<p><span style="background:rgba(163, 67, 31, 0.2)">左边才是真正的瀑布模型</span></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F11-21-53-71b18599d32010fc1b873fcbbdb93eee-20240305112152-b43dd0.png" alt="image.png"></p>
+</ul>
 <h3 id="4-2-2-成熟度模型"><a href="#4-2-2-成熟度模型" class="headerlink" title="4.2.2. 成熟度模型"></a>4.2.2. 成熟度模型</h3><ul>
 <li><p><span style="background:rgba(3, 135, 102, 0.2)">成熟度模型</span>：列出很多最佳实践，划分为5个等级，<span style="background:rgba(3, 135, 102, 0.2)">123低等级（眼前），45高等级（未来）</span></p>
 <ul>
 <li>几乎可以描述所有“可以用过程描述”的事情</li>
-<li>level 1 粗放</li>
-<li>level 2 管理：以项目小组为单位，每个小组都有自己的规范</li>
-<li>level 3 裁剪组织的规范</li>
-<li>level 4 要收集很多数据，剔除异常点，使用统计方法，有预测模型</li>
-<li>level 5 发现之前的模型有问题，会做根本性变化（去掉/增加一些过程），重新构建模型</li>
+<li>level 1 开发相对混乱，依赖个人英雄主义，没有过程概念，救火文化盛行</li>
+<li>level 2 项目小组体现出项目管理特征，有项目计划和跟踪、需求管理、配置管理等</li>
+<li>level 3 公司层面有规范，项目小组可裁剪组织的规范</li>
+<li>level 4 <strong>构建预测模型，以统计过程控制的手段来管理过程</strong></li>
+<li>level 5 继续应用统计方法识别过程偏差，找到问题根源并消除，避免未来继续发生类似问题</li>
 </ul>
-</li>
-<li><p><span style="background:rgba(3, 135, 102, 0.2)">管理特征</span></p>
-<ol>
-<li>目标</li>
-<li>状态</li>
-<li>纠偏</li>
-</ol>
 </li>
 <li><p>“项目进度落后20%，就要加班”是 level1/2/3，<span style="background:rgba(3, 135, 102, 0.2)"> 只根据已经发生的事情来决策，没有模型只有数据，属于低等级的管理</span>。</p>
 <ul>
 <li>这里的20%是指团队整体觉得进度整体落后，只是感觉</li>
 </ul>
 </li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F11-38-09-6f1b39d6c60675925d8546cdac256dc4-Characteristics_of_Capability_Maturity_Model-a3bdd5.svg" alt="Characteristics_of_Capability_Maturity_Model.svg"></p>
-<h3 id="4-2-3-讨论"><a href="#4-2-3-讨论" class="headerlink" title="4.2.3. 讨论"></a>4.2.3. 讨论</h3><ol>
+<li><p>分析</p>
+<ol>
 <li>CMMI是<span style="background:rgba(3, 135, 102, 0.2)">过程改进模型</span>而不是软件过程或软件过程模型</li>
 <li><font color="#c00000">CMMI不是过程优劣的标准，也不适合用作公司之间的能力比较。</font>CMMI表示的不是公司的绝对能力，刻画的是公司再满足它自己的业务目标的能力。<ul>
 <li>一线大公司很可能是CMMI一级。而初创公司可能比起大公司更能满足自己的商业目标。</li>
@@ -19927,11 +19996,37 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 <li>为什么CMMI VS. Agile 是个伪命题？<ul>
-<li><a class="link" href="https://www.jianshu.com/p/b7407257eedb">试论CMM/CMMI不适合在当前软件开发当中应用的原因 - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>CMMI是软件过程改进模型，描述一个组织的过程管理从不成熟到成熟的路线图；大部分敏捷方法是软件开发方法，两者是不同性质的事物，说两者对立是不合适的。</li>
 </ul>
 </li>
 </ol>
-<h1 id="5-服务化和网格化"><a href="#5-服务化和网格化" class="headerlink" title="5. 服务化和网格化"></a>5. 服务化和网格化</h1><h2 id="5-1-典型特征"><a href="#5-1-典型特征" class="headerlink" title="5.1. 典型特征"></a>5.1. 典型特征</h2><ol>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F05%2F11-38-09-6f1b39d6c60675925d8546cdac256dc4-Characteristics_of_Capability_Maturity_Model-a3bdd5.svg" alt="Characteristics_of_Capability_Maturity_Model.svg"></p>
+<h2 id="PDCA模型"><a href="#PDCA模型" class="headerlink" title="PDCA模型"></a>PDCA模型</h2><ul>
+<li>步骤<ol>
+<li>分析问题。找出问题</li>
+<li>分析影响质量的原因</li>
+<li>找出措施</li>
+<li>拟定措施计划</li>
+<li>执行措施，执行计划</li>
+<li>检查效果，发现问题</li>
+<li>总结经验，纳入标准</li>
+<li>遗留问题转入下期PDCA循环<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F25%2F16-37-02-6730468524f9002e0d205d389f63f90a-20240625163701-0c01a5.png" alt="image.png"></li>
+</ol>
+</li>
+</ul>
+<h2 id="IDEAL模型"><a href="#IDEAL模型" class="headerlink" title="IDEAL模型"></a>IDEAL模型</h2><p>解决了软件组织在各种质量改进环境下的需要，包括软件过程改进周期中的五个阶段。</p>
+<ol>
+<li>I: Initiating 初始</li>
+<li>D: Diagnosing 诊断</li>
+<li>E: Establishing 建立</li>
+<li>A: Acting 执行</li>
+<li>L: Leveraging 调整</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F25%2F16-39-42-61f876bd3b196f2cd8e3c7c9d95b1b00-20240625163941-4802ca.png" alt="image.png"></p>
+<h1 id="5-服务化和网格化"><a href="#5-服务化和网格化" class="headerlink" title="5. 服务化和网格化"></a>5. 服务化和网格化</h1><h2 id="5-1-典型特征"><a href="#5-1-典型特征" class="headerlink" title="5.1. 典型特征"></a>5.1. 典型特征</h2><ul>
+<li>软件应用特征<ol>
 <li>功能复杂，规模更大</li>
 <li>用户数量急剧增加(这会带来什么问题)</li>
 <li>快速演化和需求不确定</li>
@@ -19940,6 +20035,8 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ol>
+</li>
+</ul>
 <h2 id="5-2-典型软件过程和实践"><a href="#5-2-典型软件过程和实践" class="headerlink" title="5.2. 典型软件过程和实践"></a>5.2. 典型软件过程和实践</h2><h3 id="5-2-1-迭代式开发"><a href="#5-2-1-迭代式开发" class="headerlink" title="5.2.1. 迭代式开发"></a>5.2.1. 迭代式开发</h3><ul>
 <li>迭代式开发：<font color="#c00000">大型软件开发系统的开发过程也是一个逐步学习和交流的过程</font>，软件系统的交付不是一次完成，而是通过多个迭代周期，逐步完成交付。<ul>
 <li>学习和交流：甲方迭代开发的过程中越来越熟悉软件系统，乙方越来越理解甲方的需求</li>
@@ -19949,9 +20046,22 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <p>迭代和增量的区别：迭代重点在学习和交流</p>
 <p>TDD：测试驱动开发</p>
 <h3 id="5-2-2-敏捷开发"><a href="#5-2-2-敏捷开发" class="headerlink" title="5.2.2. 敏捷开发"></a>5.2.2. 敏捷开发</h3><ul>
+<li><p><font color="#ff0000">雪鸟会议和敏捷宣言</font></p>
+<ol>
+<li>个体和互动胜过流程和工具</li>
+<li>可以工作的软件胜过详尽的文档</li>
+<li>客户合作胜过合同谈判</li>
+<li>响应变化胜过遵循计划</li>
+<li><font color="#ff0000">尽管右项有其价值， 我们更重视左项的价值</font><ul>
+<li>没有第五项就是错的</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>代表方法</p>
+<ul>
 <li>XP(eXtreme Programing)<ul>
-<li><a class="link" href="https://zh.wikipedia.org/zh-cn/%E6%9E%81%E9%99%90%E7%BC%96%E7%A8%8B">极限编程 - 维基百科，自由的百科全书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>偏重与一些工程实践的描述</li>
+<li>偏重与一些工程实践的描述，每周工作时间不超过40h，连续加班不超过两周;结对编程；测试驱动开发；持续集成</li>
 </ul>
 </li>
 <li><a class="link" href="https://zh.wikipedia.org/wiki/Scrum">Scrum <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ul>
@@ -19961,8 +20071,18 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 <li>Kanban<ul>
 <li>精益生产的具体体验</li>
-<li>可视化工作流，限定WIP，管理周期时间</li>
+<li>典型实践：可视化工作流，限定WIP，管理周期时间</li>
 </ul>
+</li>
+</ul>
+</li>
+<li><p>敏捷方法具有的特征</p>
+<ol>
+<li>小周期迭代</li>
+<li>快速响应变更</li>
+<li>价值交付</li>
+<li>自动化</li>
+</ol>
 </li>
 </ul>
 <h2 id="5-3-开源软件开发方法"><a href="#5-3-开源软件开发方法" class="headerlink" title="5.3. 开源软件开发方法"></a>5.3. 开源软件开发方法</h2><ul>
@@ -19982,7 +20102,8 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h2 id="5-4-软件应用的典型特征"><a href="#5-4-软件应用的典型特征" class="headerlink" title="5.4. 软件应用的典型特征"></a>5.4. 软件应用的典型特征</h2><ol>
+<h1 id="6-当前软件应用的典型特征"><a href="#6-当前软件应用的典型特征" class="headerlink" title="6. 当前软件应用的典型特征"></a>6. 当前软件应用的典型特征</h1><ul>
+<li>应用特征<ol>
 <li>进一步服务化和网格化（移动是主流）</li>
 <li>用户需求的多样性进一步凸显</li>
 <li>软件产品和服务的地位变化</li>
@@ -19990,8 +20111,17 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li>解决了数量的问题，但是有新的困难如容量预测</li>
 </ul>
 </li>
+<li>近乎苛刻的用户期望</li>
 </ol>
-<h1 id="6-问题"><a href="#6-问题" class="headerlink" title="6. 问题"></a>6. 问题</h1><ol>
+</li>
+<li>开发特征<ol>
+<li>空前强大的开发和部署环境</li>
+<li>盛行分享和开源</li>
+<li>潜在支持获得长足进步（AI，大数据，云计算）</li>
+</ol>
+</li>
+</ul>
+<h1 id="7-问题"><a href="#7-问题" class="headerlink" title="7. 问题"></a>7. 问题</h1><ol>
 <li><p>不属于软件开发的本质难题？</p>
 <ul>
 <li>不可见性、复杂性、一致性、可变性</li>
@@ -20008,12 +20138,100 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       <categories>
         <category>2024_Spring_软件质量管理</category>
       </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
   </entry>
   <entry>
     <title>03-团队动力学</title>
     <url>/posts/9a91727d/</url>
-    <content><![CDATA[<p>软件质量：</p>
-<h1 id="1-TSP"><a href="#1-TSP" class="headerlink" title="1. TSP"></a>1. TSP</h1><p>软件开发方法</p>
+    <content><![CDATA[<h1 id="1-软件开发是知识工作"><a href="#1-软件开发是知识工作" class="headerlink" title="1. 软件开发是知识工作"></a>1. 软件开发是知识工作</h1><h2 id="1-1-知识工作管理"><a href="#1-1-知识工作管理" class="headerlink" title="1.1. 知识工作管理"></a>1.1. 知识工作管理</h2><ul>
+<li><font color="#ff0000">管理知识工作规则</font>：管理者无法管理知识工作者，知识工作者只能自管理</li>
+<li>如何实现自我管理：<ol>
+<li>有积极性</li>
+<li>能做出准确的估算和计划</li>
+<li>懂得协商承诺</li>
+<li>有效跟踪他们的计划</li>
+<li>持续地按计划交付高质量产物</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-2-领导者"><a href="#1-2-领导者" class="headerlink" title="1.2. 领导者"></a>1.2. 领导者</h2><ul>
+<li><p><font color="#ff0000">主要激励方式</font></p>
+<ol>
+<li>威逼</li>
+<li>利诱</li>
+<li>鼓励承诺</li>
+</ol>
+</li>
+<li><p>领导方式</p>
+<ol>
+<li>交易型领导方式<ol>
+<li>承诺奖励激励</li>
+<li>人们通常可以找到新的方式来获得奖励，同时减少工作</li>
+<li><strong>威逼和利诱</strong>属于交易型领导方式</li>
+<li>很少产生成功且有创造性的团队</li>
+</ol>
+</li>
+<li><strong>转变型领导方式</strong><ol>
+<li>用成就激励</li>
+<li><strong>鼓励承诺</strong>属于转变型领导方式</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>维持激励水平：需要及时的绩效反馈</p>
+<ol>
+<li>根据一个详细的计划衡量进度</li>
+<li>当前计划不准确时重做计划</li>
+<li>为漫长且富有挑战性的项目提供中间反馈，即里程碑</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-3-马斯洛需求层次理论"><a href="#1-3-马斯洛需求层次理论" class="headerlink" title="1.3. 马斯洛需求层次理论"></a>1.3. 马斯洛需求层次理论</h2><ul>
+<li>层次：<ol>
+<li>生理需求 (Physiological)</li>
+<li>安全感 (Safety)</li>
+<li>爱和归属感 (social)</li>
+<li>获得尊敬 (Esteem)</li>
+<li>自我实现 (Self-Actualization)</li>
+</ol>
+</li>
+<li>启发<ol>
+<li>自我实现是最高的层次</li>
+<li><strong>激励来自为没有满足的需求而努力奋斗</strong></li>
+<li>低层次的需求必须在高层次需求满足之前得到满足</li>
+<li>满足高层次的需求的途径比满足低层次的途径更为广泛</li>
+</ol>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F24%2F21-27-15-1d18a34bbbf4f3570b620ecd53502c2b-20240624212714-8a1ce6.png" alt="image.png"></p>
+<h2 id="1-4-期望理论"><a href="#1-4-期望理论" class="headerlink" title="1.4. 期望理论"></a>1.4. 期望理论</h2><p>人们在下列情况下能受到激励且做出大量成果</p>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="11.629ex" height="1.731ex" role="img" focusable="false" viewBox="0 -683 5140 765"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D440" d="M289 629Q289 635 232 637Q208 637 201 638T194 648Q194 649 196 659Q197 662 198 666T199 671T201 676T203 679T207 681T212 683T220 683T232 684Q238 684 262 684T307 683Q386 683 398 683T414 678Q415 674 451 396L487 117L510 154Q534 190 574 254T662 394Q837 673 839 675Q840 676 842 678T846 681L852 683H948Q965 683 988 683T1017 684Q1051 684 1051 673Q1051 668 1048 656T1045 643Q1041 637 1008 637Q968 636 957 634T939 623Q936 618 867 340T797 59Q797 55 798 54T805 50T822 48T855 46H886Q892 37 892 35Q892 19 885 5Q880 0 869 0Q864 0 828 1T736 2Q675 2 644 2T609 1Q592 1 592 11Q592 13 594 25Q598 41 602 43T625 46Q652 46 685 49Q699 52 704 61Q706 65 742 207T813 490T848 631L654 322Q458 10 453 5Q451 4 449 3Q444 0 433 0Q418 0 415 7Q413 11 374 317L335 624L267 354Q200 88 200 79Q206 46 272 46H282Q288 41 289 37T286 19Q282 3 278 1Q274 0 267 0Q265 0 255 0T221 1T157 2Q127 2 95 1T58 0Q43 0 39 2T35 11Q35 13 38 25T43 40Q45 46 65 46Q135 46 154 86Q158 92 223 354T289 629Z"></path></g><g data-mml-node="mo" transform="translate(1328.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(2384.6,0)"><path data-c="1D449" d="M52 648Q52 670 65 683H76Q118 680 181 680Q299 680 320 683H330Q336 677 336 674T334 656Q329 641 325 637H304Q282 635 274 635Q245 630 242 620Q242 618 271 369T301 118L374 235Q447 352 520 471T595 594Q599 601 599 609Q599 633 555 637Q537 637 537 648Q537 649 539 661Q542 675 545 679T558 683Q560 683 570 683T604 682T668 681Q737 681 755 683H762Q769 676 769 672Q769 655 760 640Q757 637 743 637Q730 636 719 635T698 630T682 623T670 615T660 608T652 599T645 592L452 282Q272 -9 266 -16Q263 -18 259 -21L241 -22H234Q216 -22 216 -15Q213 -9 177 305Q139 623 138 626Q133 637 76 637H59Q52 642 52 648Z"></path></g><g data-mml-node="mo" transform="translate(3375.8,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mi" transform="translate(4376,0)"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g></g></g></svg></mjx-container></p>
+<ol>
+<li>详细他们的奴隶很可能会产生成功的结果<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="1.74ex" height="1.595ex" role="img" focusable="false" viewBox="0 -683 769 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D449" d="M52 648Q52 670 65 683H76Q118 680 181 680Q299 680 320 683H330Q336 677 336 674T334 656Q329 641 325 637H304Q282 635 274 635Q245 630 242 620Q242 618 271 369T301 118L374 235Q447 352 520 471T595 594Q599 601 599 609Q599 633 555 637Q537 637 537 648Q537 649 539 661Q542 675 545 679T558 683Q560 683 570 683T604 682T668 681Q737 681 755 683H762Q769 676 769 672Q769 655 760 640Q757 637 743 637Q730 636 719 635T698 630T682 623T670 615T660 608T652 599T645 592L452 282Q272 -9 266 -16Q263 -18 259 -21L241 -22H234Q216 -22 216 -15Q213 -9 177 305Q139 623 138 626Q133 637 76 637H59Q52 642 52 648Z"></path></g></g></g></svg></mjx-container></li>
+<li>相信自己会因为成功得到相应的回报<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.729ex" height="1.538ex" role="img" focusable="false" viewBox="0 -680 764 680"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g></g></g></svg></mjx-container></li>
+</ol>
+<h1 id="2-自主团队"><a href="#2-自主团队" class="headerlink" title="2. 自主团队"></a>2. 自主团队</h1><h2 id="2-1-外部环境"><a href="#2-1-外部环境" class="headerlink" title="2.1. 外部环境"></a>2.1. 外部环境</h2><ul>
+<li>项目启动阶段获得管理层的支持<ol>
+<li>体现出已经尽最大可能满足管理层需求的工作态度</li>
+<li>在计划中体现定期需要向管理层报告的内容</li>
+<li>在计划中体现为了追求高质量而展开的工作</li>
+<li>在工作计划中允许必要的项目变更</li>
+<li>向管理层寻求必要的帮助</li>
+</ol>
+</li>
+<li>项目进展过程中获得管理层支持<ol>
+<li>严格遵循定义好的开发过程看展项目的开发工作</li>
+<li>维护和更新项目成员的个人计划和团队计划</li>
+<li>应当对产品的质量进行管理</li>
+<li>应当跟踪项目进展，并定期向管理层报告</li>
+<li>持续地跟踪项目进度，并定期向管理层报告</li>
+<li>持续地向管理层展现优异的项目表现</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-2-TSP"><a href="#2-2-TSP" class="headerlink" title="2.2. TSP"></a>2.2. TSP</h2><h3 id="2-2-1-TSP对自主团队支持"><a href="#2-2-1-TSP对自主团队支持" class="headerlink" title="2.2.1. TSP对自主团队支持"></a>2.2.1. TSP对自主团队支持</h3><p>软件开发方法</p>
 <ol>
 <li>PSP：个人技能培养<ol>
 <li>提出了个人如何培养能力，成为一个优秀的团队成员</li>
@@ -20029,59 +20247,110 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 </li>
 </ol>
-<h2 id="1-1-启动会议"><a href="#1-1-启动会议" class="headerlink" title="1.1. 启动会议"></a>1.1. 启动会议</h2><ol>
-<li>第一次会议：建立产品目标和业务目标<ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F25%2F10-39-23-fa92a5e1435be4b378b0fabe64c88a6e-20240625103922-5a4c69.png" alt="image.png"></p>
+<h3 id="2-2-2-启动会议-九次会议"><a href="#2-2-2-启动会议-九次会议" class="headerlink" title="2.2.2. 启动会议/九次会议"></a>2.2.2. 启动会议/九次会议</h3><ol>
+<li>第一次会议：<strong>建立产品目标和业务目标</strong><ol>
 <li>产品目标：要做什么？</li>
-<li>业务目标：要做得怎么样，更困难</li>
+<li>业务目标：要做得怎么样，<strong>更困难</strong></li>
 </ol>
 </li>
-<li>第二次会议：角色分配和小组目标定义<ol>
+<li>第二次会议：<strong>角色分配和小组目标定义</strong><ol>
 <li>角色对应职责-目标</li>
+<li>小组目标：是否和组织目标冲突？</li>
 </ol>
 </li>
-<li>第三次会议：开发流程定义与策略选择<ol>
+<li>第三次会议：<strong>开发流程定义与策略选择</strong><ol>
 <li>开发流程：迭代式，但是比较自由可以自定义</li>
 <li>开发策略：分为几个迭代，每个迭代做什么，组件如何获取</li>
 </ol>
 </li>
-<li>第四次会议：整体计划<ol>
+<li>第四次会议：<strong>整体计划</strong><ol>
 <li>估算+计划。需要明确做哪些事情？产出物有哪些？产出物规模如何？需要多少资源？团队给出的资源够不够？</li>
 </ol>
 </li>
-<li>第五次会议：质量计划<ol>
+<li>第五次会议：<strong>质量计划</strong><ol>
 <li>有哪些质量实践？做到什么程度？需要投入多少资源</li>
 </ol>
 </li>
-<li>第六次会议：个人计划以及计划平衡<ol>
+<li>第六次会议：<strong>个人计划以及计划平衡</strong><ol>
 <li>个人计划：个人要做哪些事情</li>
 <li>计划平衡：如何寻求一个最早完成项目的时间</li>
 </ol>
 </li>
-<li>第七次会议：风险评估<ol>
+<li>第七次会议：<strong>风险评估</strong><ol>
 <li>风险：有可能发生也可能不会发生</li>
 <li>What if?</li>
 <li>保护团队</li>
 </ol>
 </li>
-<li>第八次会议：准备向管理层计划<ol>
-<li>写给领导看的PPT，表现出方案时经过充分思考的</li>
+<li>第八次会议：<strong>准备向管理层计划</strong><ol>
+<li>写给领导看的PPT，表现出方案时经过充分思考的，不是粗制滥造的</li>
+</ol>
+</li>
+<li>第九次会议：<strong>向管理层汇报计划内容</strong></li>
+<li>Lauch阶段总结：总结得失</li>
+</ol>
+<h3 id="2-2-3-典型的TSP角色和职责"><a href="#2-2-3-典型的TSP角色和职责" class="headerlink" title="2.2.3. 典型的TSP角色和职责"></a>2.2.3. 典型的TSP角色和职责</h3><ol>
+<li>项目组长/TL：<ol>
+<li>建立和维持高效率的团队</li>
+<li>激励团队成员积极工作</li>
+<li>合理处理团队成员的问题</li>
+<li>向管理层提供项目进度相关的完整信息</li>
+<li>充当会议的组织者和协调者</li>
+</ol>
+</li>
+<li>计划经理：<ol>
+<li>保证实际进展与计划一致</li>
+<li>开发完整的、准确的团队计划和个人计划</li>
+<li>每周准确报告项目小组状态</li>
+</ol>
+</li>
+<li>开发经理：技术带头人<ol>
+<li>开发优秀的软件产品</li>
+<li>充分利用团队成员的技能</li>
+</ol>
+</li>
+<li>质量经理<ol>
+<li>团队严格按照质量计划开展工作，开发出高质量的软件产品</li>
+<li>所有小组的评审工作正常开展，并形成评审报告</li>
+</ol>
+</li>
+<li>过程经理：确保项目按照定义好的过程工作<ol>
+<li>所有团队成员准确的记录、报告和跟踪数据</li>
+<li>所有的团队会议都有记录</li>
+</ol>
+</li>
+<li>支持经理<ol>
+<li>项目小组开发过程中有合适的工具和环境</li>
+<li>对于基线产品，不存在非授权的变更</li>
+<li>项目小组的风险和问题得到跟踪</li>
+<li>项目小组在开发过程中满足复用目标</li>
+</ol>
+</li>
+<li>开发人员</li>
+</ol>
+<h2 id="2-3-SCRUM团队"><a href="#2-3-SCRUM团队" class="headerlink" title="2.3. SCRUM团队"></a>2.3. SCRUM团队</h2><ul>
+<li><font color="#ff0000">角色和职责</font>：<ol>
+<li>产品负责人：将开发团队开发的产品价值最大化；管理产品待办列表</li>
+<li>开发团队：每个 Sprint 结束时交付潜在可发布并且“完成”的产品增量。</li>
+<li>SCRUM Master ：<ol>
+<li>支持和促进SCRUM，帮助每个人理解SCRUM理论、实践、规则和价值</li>
+<li>服务于产品负责人</li>
+<li>以各种方式服务于开发团队</li>
+<li>以各种方式服务于组织</li>
 </ol>
 </li>
 </ol>
-<h2 id="1-2-典型的TSP角色"><a href="#1-2-典型的TSP角色" class="headerlink" title="1.2. 典型的TSP角色"></a>1.2. 典型的TSP角色</h2><ol>
-<li>项目组长</li>
-<li>计划经理：保证实际进展与计划一致</li>
-<li>开发经理：技术带头人</li>
-<li>质量经理</li>
-<li>过程经理：确保项目按照定义好的过程工作</li>
-<li>支持经理</li>
-<li>开发人员</li>
-</ol>
-<h3 id="1-2-1-TL"><a href="#1-2-1-TL" class="headerlink" title="1.2.1. TL"></a>1.2.1. TL</h3><h1 id="2-SCRUM团队"><a href="#2-SCRUM团队" class="headerlink" title="2. SCRUM团队"></a>2. SCRUM团队</h1><p>组成：产品负责人，开发团队，SCRUM Master<br>跨职能的自主团队</p>
-<h1 id="3-TSP和SCRUM的团队组成有哪些共性？这些共性对于高效团队有哪些帮助？"><a href="#3-TSP和SCRUM的团队组成有哪些共性？这些共性对于高效团队有哪些帮助？" class="headerlink" title="3. TSP和SCRUM的团队组成有哪些共性？这些共性对于高效团队有哪些帮助？"></a>3. TSP和SCRUM的团队组成有哪些共性？这些共性对于高效团队有哪些帮助？</h1>]]></content>
+</li>
+<li>SCRUM团队跨职能的自组织团队</li>
+</ul>
+]]></content>
       <categories>
         <category>2024_Spring_软件质量管理</category>
       </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
   </entry>
   <entry>
     <title>04-估算、计划和跟踪</title>
@@ -20104,11 +20373,8 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li>没有任何人知道准确的数字是什么</li>
 <li>实验表明，是否使用估算模型，并没有显著提示</li>
 </ol>
-<h2 id="1-3-期望理论"><a href="#1-3-期望理论" class="headerlink" title="1.3. 期望理论"></a>1.3. 期望理论</h2><p>软件开发是知识工作，可重复性不高<br>软件工程师是知识工作者，需要被激励</p>
-<p>激励程度=V*E<br>V: 价值（基本确定）<br><font color="#c00000">E: 期望/把握</font>，<strong>估算结果会影响E</strong></p>
-<h2 id="1-4-PROBE估算方法"><a href="#1-4-PROBE估算方法" class="headerlink" title="1.4. PROBE估算方法"></a>1.4. PROBE估算方法</h2><ul>
-<li><p>规模度量/估算的困境</p>
-<ul>
+<h2 id="1-3-PROBE估算方法"><a href="#1-3-PROBE估算方法" class="headerlink" title="1.3. PROBE估算方法"></a>1.3. PROBE估算方法</h2><ul>
+<li>规模度量/估算的困境<ul>
 <li>以LOC vs. FP为例<ol>
 <li><strong>精确度量</strong>往往不便于<strong>早期规划</strong>的估算</li>
 <li>有助于<strong>早期规划</strong>/估算的度量往往难以产生精确度量结果</li>
@@ -20116,24 +20382,29 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ul>
 </li>
-<li><p>PROBE(PROxy Based)</p>
-<ul>
+<li>PROBE(PROxy Based)<ul>
 <li>可以给出相对精确的估算</li>
+<li><strong>作用：精确度量和早期规划之间的桥梁</strong></li>
 </ul>
 </li>
-<li><p>流程</p>
-<ol>
+<li>原理：<ol>
+<li>设立合理的代理作为精确度量和早期规划需要之间的桥梁</li>
+<li>使用相对大小，而非绝对大小</li>
+</ol>
+</li>
+<li>流程<ol>
 <li>概要设计</li>
-<li>代理识别和代理规模(E)</li>
+<li>代理识别和代理规模(E)-&gt;相对大小矩阵</li>
 </ol>
 </li>
 </ul>
-<h3 id="1-4-1-概要设计"><a href="#1-4-1-概要设计" class="headerlink" title="1.4.1. 概要设计"></a>1.4.1. 概要设计</h3><ol>
-<li>和已有的产品/组件相关联</li>
-<li>定义能够产生期望功能的产品元素</li>
-<li>估算你计划构造之物的规模</li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F25%2F11-54-40-8096040530fc62d599585ed05caab4fc-20240625115439-cbf371.png" alt="image.png"></p>
+<h3 id="1-3-1-概要设计"><a href="#1-3-1-概要设计" class="headerlink" title="1.3.1. 概要设计"></a>1.3.1. 概要设计</h3><ol>
+<li>需要确定产品功能，以及产生这些功能所需的<strong>程序组件/模块</strong></li>
+<li>将这些程序组件/模块<strong>与你以前写的程序相比较</strong>，<strong>估算它们的规模</strong></li>
+<li>将程序组件/模块估算综合给出<strong>总规模</strong></li>
 </ol>
-<h3 id="1-4-2-整合多个估算结果"><a href="#1-4-2-整合多个估算结果" class="headerlink" title="1.4.2. 整合多个估算结果"></a>1.4.2. 整合多个估算结果</h3><ol>
+<h3 id="1-3-2-整合多个估算结果"><a href="#1-3-2-整合多个估算结果" class="headerlink" title="1.3.2. 整合多个估算结果"></a>1.3.2. 整合多个估算结果</h3><ol>
 <li>整合一个开发人员做的多个估算</li>
 <li>多个开发人员可以整合<strong>独立</strong>进行的估算</li>
 </ol>
@@ -20143,19 +20414,24 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h2 id="1-5-SCRUM中的Story-point"><a href="#1-5-SCRUM中的Story-point" class="headerlink" title="1.5. SCRUM中的Story point"></a>1.5. SCRUM中的Story point</h2><ol>
-<li>抽象：混合了对于开发特征所要付出的努力，开发复杂度，个中分享以及类似东西</li>
-<li>相对：设定标准之后，考虑其他特性与标准之间的相对大小关系<ol>
+<h3 id="1-3-3-例子"><a href="#1-3-3-例子" class="headerlink" title="1.3.3. 例子"></a>1.3.3. 例子</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F25%2F14-19-04-11ec601410c6415ed71417b1e8652e76-20240625141903-afc188.png" alt="image.png"></p>
+<h2 id="1-4-SCRUM中的Story-point"><a href="#1-4-SCRUM中的Story-point" class="headerlink" title="1.4. SCRUM中的Story point"></a>1.4. SCRUM中的Story point</h2><ul>
+<li>度量实现一个故事（Story）需要付出的工作量<ol>
+<li>抽象：混合了对于开发特性（feature）所要付出的努力，开发复杂度，各种风险以及类似东西</li>
+<li>相对：设定标准之后，考虑其他特性（feature）与标准之间的相对大小关系<ul>
 <li>拆分</li>
-</ol>
+</ul>
 </li>
 </ol>
+</li>
+</ul>
+<hr>
 <p>团队需要定义<strong>单位故事点</strong>：规模、优先级等，抽象</p>
 <ul>
 <li><font color="#c00000">估算要点2：目标是建立在对结果的信心上的</font></li>
 <li><font color="#c00000">估算要点3：尽量依赖数据</font></li>
 </ul>
-<h2 id="1-6-估算方法的反思"><a href="#1-6-估算方法的反思" class="headerlink" title="1.6. 估算方法的反思"></a>1.6. 估算方法的反思</h2><ol>
+<h2 id="1-5-估算方法的反思"><a href="#1-5-估算方法的反思" class="headerlink" title="1.5. 估算方法的反思"></a>1.5. 估算方法的反思</h2><ol>
 <li>估算目标<ul>
 <li>规模估算S比较稳定，时间估算T=S/P。但生产力P可能有1<del>26倍的偏差。1</del>26倍的P算出来的时间都可以接受。</li>
 <li><strong>实际生产中让大家认可估算结果</strong>，<strong>反过来提高生产效率P</strong></li>
@@ -20175,7 +20451,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <ul>
 <li><font color="#c00000">估算要点4：估算要的是过程，而非结果；估算的过程是相关干系人达成一致共识的过程。</font></li>
 </ul>
-<h2 id="1-7-估算要点"><a href="#1-7-估算要点" class="headerlink" title="1.7. 估算要点"></a>1.7. 估算要点</h2><ul>
+<h2 id="1-6-估算要点"><a href="#1-6-估算要点" class="headerlink" title="1.6. 估算要点"></a>1.6. 估算要点</h2><ul>
 <li><font color="#c00000">估算要点1：估算时尽可能划分详细一些</font><ul>
 <li>当估算多个部件时，总的误差会比各个部件误差的综合要小</li>
 </ul>
@@ -20188,27 +20464,140 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h2 id="1-8-度量"><a href="#1-8-度量" class="headerlink" title="1.8. 度量"></a>1.8. 度量</h2><ul>
-<li><p>关于度量的争议：需否需要度量取决于是否在意结果</p>
+<h2 id="1-7-度量–历史数据的获取"><a href="#1-7-度量–历史数据的获取" class="headerlink" title="1.7. 度量–历史数据的获取"></a>1.7. 度量–历史数据的获取</h2><ul>
+<li>关于度量的争议：度量体现着决策者对试图要实现的目标的关切程度<ul>
+<li>是否需要度量取决于是否在意结果</li>
+</ul>
 </li>
-<li><p>GQM(Goal Question Metric)：数据治理</p>
-<ul>
+<li>度量体系<ul>
+<li>GQM(Goal Question Metric)：数据治理<ul>
 <li>从目标出发，只关心单个项目组</li>
 </ul>
 </li>
-<li><p>GQM+：关心整个组织，</p>
+<li>GQM+：关心整个组织，</li>
+</ul>
 </li>
 </ul>
 <p>实际上估算可能要在项目启动之前就开始，而不是等到需求完成</p>
-<h2 id="1-9-过程框架-生命周期模型"><a href="#1-9-过程框架-生命周期模型" class="headerlink" title="1.9. 过程框架-生命周期模型"></a>1.9. 过程框架-生命周期模型</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F14-09-03-e5bc1f40f94fceeb64028a442f84d704-20240425140903-a0ecd0.png" alt="image.png"></p>
+<h2 id="1-8-PSP基本度量项"><a href="#1-8-PSP基本度量项" class="headerlink" title="1.8. PSP基本度量项"></a>1.8. PSP基本度量项</h2><ol>
+<li>规模</li>
+<li>时间</li>
+<li>缺陷</li>
+<li>日程TSP</li>
+</ol>
+<h3 id="1-8-1-时间度量（时间日志）"><a href="#1-8-1-时间度量（时间日志）" class="headerlink" title="1.8.1. 时间度量（时间日志）"></a>1.8.1. 时间度量（时间日志）</h3><table>
+<thead>
+<tr>
+<th>日志内容</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>序号</td>
+<td>记录序号</td>
+</tr>
+<tr>
+<td>所属阶段</td>
+<td>记录所属的PSP阶段，如策划、设计、编码、编译、单元测试、总结等</td>
+</tr>
+<tr>
+<td>开始时间</td>
+<td>精确到分钟</td>
+</tr>
+<tr>
+<td>结束时间</td>
+<td>精确到分钟</td>
+</tr>
+<tr>
+<td>中断时间</td>
+<td>记录的计时过程中，需要中断的时间，精确到分钟，如中断打电话</td>
+</tr>
+<tr>
+<td>净时间</td>
+<td>结束-开始-中断，表示该阶段纯工作时间</td>
+</tr>
+<tr>
+<td>备注信息</td>
+<td>记录中断事件</td>
+</tr>
+</tbody></table>
+<h3 id="1-8-2-缺陷度量（缺陷日志）"><a href="#1-8-2-缺陷度量（缺陷日志）" class="headerlink" title="1.8.2. 缺陷度量（缺陷日志）"></a>1.8.2. 缺陷度量（缺陷日志）</h3><table>
+<thead>
+<tr>
+<th>日志内容</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>序号</td>
+<td>-</td>
+</tr>
+<tr>
+<td>发现日期</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>注入阶段</strong></td>
+<td>经过分析，确定该缺陷被引入的阶段，典型引入阶段如涉及、编码、编译、单元测试等</td>
+</tr>
+<tr>
+<td><strong>消除缺陷</strong></td>
+<td>该缺陷被消除的阶段，<strong>在引入阶段之后</strong></td>
+</tr>
+<tr>
+<td>消除时间</td>
+<td>为修正该缺陷所消耗的时间</td>
+</tr>
+<tr>
+<td>关联缺陷</td>
+<td>如果缺陷的引入阶段是编译或者单元测试等通常用以消除缺陷的节点，那往往意味着该缺陷是在消除其他缺陷时被引入的，需要建立关联</td>
+</tr>
+<tr>
+<td><strong>简要描述</strong></td>
+<td>产生的<strong>根本原因</strong></td>
+</tr>
+</tbody></table>
+<h1 id="2-计划和跟踪"><a href="#2-计划和跟踪" class="headerlink" title="2. 计划和跟踪"></a>2. 计划和跟踪</h1><p>为什么要跟踪：跟踪的目的在于了解项目的进度，以便在项目实际进度与计划产生严重偏离时，可采取适当的纠正措施；</p>
+<p>项目进度滞后与否需要参照物，即项目计划</p>
+<p>项目跟踪需要管理针对偏差而采取的纠偏措施</p>
+<h2 id="2-1-工作分解结构（WBS）"><a href="#2-1-工作分解结构（WBS）" class="headerlink" title="2.1. 工作分解结构（WBS）"></a>2.1. 工作分解结构（WBS）</h2><p>将复杂的项目逐步分解为一系列明确定义的工作任务并作为随后计划活动的指导文档。<br>最底层的元素不能重复。</p>
+<h3 id="2-1-1-创建WBS方法"><a href="#2-1-1-创建WBS方法" class="headerlink" title="2.1.1. 创建WBS方法"></a>2.1.1. 创建WBS方法</h3><ol>
+<li>识别和分析可交付成果及相关工作；</li>
+<li>确定工作分解结构的结构与编排方法；</li>
+<li>自上而下逐层细化分解；</li>
+<li>为工作分解结构组成部分制定和分配标志编码；</li>
+<li>核实工作分解的程度是必要且充分的</li>
+</ol>
+<p>WBS提供范围基线（确保项目做且只成功完成项目所需的全部工作），不遗漏可交付物，明确各个角色的责任，作出工作包定义，是估算和计划的基础，有助于理解工作，分析风险</p>
+<h3 id="2-1-2-WBS范围管理"><a href="#2-1-2-WBS范围管理" class="headerlink" title="2.1.2. WBS范围管理"></a>2.1.2. WBS范围管理</h3><ol>
+<li>收集需求</li>
+<li>定义范围</li>
+<li>创建WBS</li>
+<li>核实范围</li>
+<li>控制范围变更</li>
+</ol>
+<h2 id="2-2-过程框架-生命周期模型"><a href="#2-2-过程框架-生命周期模型" class="headerlink" title="2.2. 过程框架-生命周期模型"></a>2.2. 过程框架-生命周期模型</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F14-09-03-e5bc1f40f94fceeb64028a442f84d704-20240425140903-a0ecd0.png" alt="image.png"></p>
 <p>指导开发的是软件过程，而不是生命周期模型，所以至少要把里面一些部分展开</p>
-<h2 id="1-10-通用计算框架"><a href="#1-10-通用计算框架" class="headerlink" title="1.10. 通用计算框架"></a>1.10. 通用计算框架</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F14-13-41-1319d1449b44d195fd7f9d9b0c6e28ba-20240425141340-aa6558.png" alt="image.png"></p>
+<h2 id="2-3-通用计划框架"><a href="#2-3-通用计划框架" class="headerlink" title="2.3. 通用计划框架"></a>2.3. 通用计划框架</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F25%2F14-13-41-1319d1449b44d195fd7f9d9b0c6e28ba-20240425141340-aa6558.png" alt="image.png"></p>
 <p>倒推式估算不准确</p>
 <p>要先做估算，然后正推<br>管理层和估算值都知道“估算不准确”这一前提</p>
-<p>攻击点：规模估算代码行数太多，资源估算不需要那没多资源<br>反驳：PROBE<strong>只讨论需求</strong>不讨论具体数字，而需求到具体数字是自动计算的过程（基于相对大小矩阵和历史数据）</p>
-<h2 id="1-11-风险识别"><a href="#1-11-风险识别" class="headerlink" title="1.11. 风险识别"></a>1.11. 风险识别</h2><p>头脑风暴是因为无法系统识别风险</p>
+<ul>
+<li>上述框架中哪些步骤是<strong>人为</strong>的：<ol>
+<li>定义需求</li>
+<li>概要设计：规模划分好之后，估算可以自动进行</li>
+<li>日程计划</li>
+</ol>
+</li>
+<li><strong>PROBE在框架中充当的角色</strong>：用来完成规模和资源的评估</li>
+<li>这样做的好处：反驳别人对估算的质疑。<ul>
+<li>攻击点：规模估算代码行数太多，资源估算不需要那没多资源  </li>
+<li>反驳：PROBE<strong>只讨论需求</strong>不讨论具体数字，而需求到具体数字是自动计算的过程（基于相对大小矩阵和历史数据）</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-4-风险识别"><a href="#2-4-风险识别" class="headerlink" title="2.4. 风险识别"></a>2.4. 风险识别</h2><p>头脑风暴是因为无法系统识别风险</p>
 <p>风险是可能性还未发生，问题是已经发生的。但如果风险超过某些阈值，也可以认为变成了问题。</p>
-<h2 id="1-12-风险应对"><a href="#1-12-风险应对" class="headerlink" title="1.12. 风险应对"></a>1.12. 风险应对</h2><ul>
+<h2 id="2-5-风险应对"><a href="#2-5-风险应对" class="headerlink" title="2.5. 风险应对"></a>2.5. 风险应对</h2><ul>
 <li>识别风险之后，就应当制定响应的风险管理策略，以及应对各类风险</li>
 <li>策略<ol>
 <li>风险转嫁：付费给另一个团队，让他们帮你解决风险，但是你的收益会降低</li>
@@ -20217,11 +20606,8 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 </li>
 </ul>
-<h1 id="2-计划和跟踪"><a href="#2-计划和跟踪" class="headerlink" title="2. 计划和跟踪"></a>2. 计划和跟踪</h1><p>为什么要跟踪：跟踪的目的在于了解项目的进度，以便在项目实际进度与计划产生严重偏离时，可采取适当的纠正措施；</p>
-<p>项目进度滞后与否需要参照物，即项目计划</p>
-<p>项目跟踪需要管理针对偏差而采取的纠偏措施</p>
-<h2 id="2-1-挣值管理方法"><a href="#2-1-挣值管理方法" class="headerlink" title="2.1. 挣值管理方法"></a>2.1. 挣值管理方法</h2><h3 id="2-1-1-概念"><a href="#2-1-1-概念" class="headerlink" title="2.1.1. 概念"></a>2.1.1. 概念</h3><ul>
-<li><p>挣值管理(Earnd Value Management，EVM)是用来客观度量项目进度的一种项目管理方法。</p>
+<h2 id="2-6-挣值管理方法"><a href="#2-6-挣值管理方法" class="headerlink" title="2.6. 挣值管理方法"></a>2.6. 挣值管理方法</h2><h3 id="2-6-1-概念"><a href="#2-6-1-概念" class="headerlink" title="2.6.1. 概念"></a>2.6.1. 概念</h3><ul>
+<li><p>挣值管理(Earnd Value Management，<font color="#ff0000">EVM</font>)是用来客观度量项目进度的一种项目管理方法。</p>
 <ul>
 <li>每项任务实现附以一定价值(credit)</li>
 <li><strong>100%完成该项任务，才能获取相应价值</strong></li>
@@ -20233,7 +20619,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li><p>采用<strong>进度计划</strong>、<strong>成本预算</strong>和<strong>实际成本</strong>相关联的三个独立变量，进行项目绩效测量</p>
 </li>
 </ul>
-<h3 id="2-1-2-规则"><a href="#2-1-2-规则" class="headerlink" title="2.1.2. 规则"></a>2.1.2. 规则</h3><ul>
+<h3 id="2-6-2-规则"><a href="#2-6-2-规则" class="headerlink" title="2.6.2. 规则"></a>2.6.2. 规则</h3><ul>
 <li><p>获取挣值规则：</p>
 <ol>
 <li>0-100，完成了就是100，差一行代码都是0</li>
@@ -20248,17 +20634,20 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ul>
-<h3 id="2-1-3-图示"><a href="#2-1-3-图示" class="headerlink" title="2.1.3. 图示"></a>2.1.3. 图示</h3><p>PV：激化值<br>EV：挣值，从计划来，与实际投入时间无关<br>SV：进度差异，PV-EV</p>
-<p>AC：实际成本，工时<br>BAC：项目总预算<br>CV：成本差异</p>
+<h3 id="2-6-3-图示"><a href="#2-6-3-图示" class="headerlink" title="2.6.3. 图示"></a>2.6.3. 图示</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F25%2F14-55-14-a5037c251bb763d07ad52fcbb67d8ba1-20240625145514-1cd864.png" alt="image.png"></p>
+<p>PV：计划值<br>EV：挣值，从计划来，与实际投入时间无关<br>SV：进度差异，EV-PV</p>
+<p>AC：实际成本，工时<br>BAC：项目总预算，表示按照PV值的曲线，当项目完成的时候所需预算或者时间<br>CV：成本差异， EV-AC</p>
+<p>成本差异指数CPI = EV/AC<br>日程偏差指数SPI = EV/PV</p>
+<p>预计完成成本EAC = AC+(BAC-EV)/CPI = BAC/CPI</p>
 <p>画延长线可以预测项目进度<br>如果项目进度预期会延期，加人提高未来的EV，或砍功能提高已经完成的EV</p>
-<h3 id="2-1-4-实现等级"><a href="#2-1-4-实现等级" class="headerlink" title="2.1.4. 实现等级"></a>2.1.4. 实现等级</h3><p>初级实现：只分析到现在为止的PV，EV<br>中级实现：根据PV,EV做预测分析<br>高级实现：加入成本线</p>
-<h3 id="2-1-5-变形-燃尽图"><a href="#2-1-5-变形-燃尽图" class="headerlink" title="2.1.5. 变形-燃尽图"></a>2.1.5. 变形-燃尽图</h3><p>Ideal<br>Actual</p>
-<h3 id="2-1-6-局限性"><a href="#2-1-6-局限性" class="headerlink" title="2.1.6. 局限性"></a>2.1.6. 局限性</h3><ol>
-<li>只能跟踪进度、成本，而无法跟踪质量等目标</li>
-<li>需要定量化的管理机制，在探索型项目以及部分敏捷开发方法中的应用收到限制</li>
+<h3 id="2-6-4-实现等级"><a href="#2-6-4-实现等级" class="headerlink" title="2.6.4. 实现等级"></a>2.6.4. 实现等级</h3><p>初级实现：只分析到现在为止的PV，EV<br>中级实现：根据PV,EV做预测分析<br>高级实现：加入成本线</p>
+<h3 id="2-6-5-变形-燃尽图"><a href="#2-6-5-变形-燃尽图" class="headerlink" title="2.6.5. 变形-燃尽图"></a>2.6.5. 变形-燃尽图</h3><p>Ideal<br>Actual<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F25%2F15-00-05-31fb7ecd793e61a767cfba4380a06387-20240625150005-350a51.png" alt="image.png"></p>
+<h3 id="2-6-6-EVM局限性"><a href="#2-6-6-EVM局限性" class="headerlink" title="2.6.6. EVM局限性"></a>2.6.6. EVM局限性</h3><ol>
+<li>只能跟踪进度、成本，而无法跟踪质量等目标，EVM一般不能应用软件项目的质量管理</li>
+<li>需要定量化的管理机制，在探索型项目以及部分敏捷开发方法中的应用受到限制</li>
 <li>完全依赖于项目的准确估算（价值体系），然而在项目早期，很难对项目进行非常准确的估算</li>
 </ol>
-<h2 id="2-2-里程碑评审"><a href="#2-2-里程碑评审" class="headerlink" title="2.2. 里程碑评审"></a>2.2. 里程碑评审</h2><h3 id="2-2-1-概念"><a href="#2-2-1-概念" class="headerlink" title="2.2.1. 概念"></a>2.2.1. 概念</h3><ul>
+<h2 id="2-7-里程碑评审"><a href="#2-7-里程碑评审" class="headerlink" title="2.7. 里程碑评审"></a>2.7. 里程碑评审</h2><h3 id="2-7-1-概念"><a href="#2-7-1-概念" class="headerlink" title="2.7.1. 概念"></a>2.7.1. 概念</h3><ul>
 <li>往往指的是某个时间点，用以标记某项工作的完成或阶段的结束</li>
 <li>内容<ol>
 <li>项目相关的承诺，如日期、规格、质量</li>
@@ -20270,14 +20659,14 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 <p>比周会等进度评审更加正式，需要高层、客户参与</p>
 <p><strong>回答项目能不能进入下一个阶段</strong>，如需求完成但是质量很差被高层否决</p>
-<h2 id="2-3-其他计划跟踪"><a href="#2-3-其他计划跟踪" class="headerlink" title="2.3. 其他计划跟踪"></a>2.3. 其他计划跟踪</h2><ol>
+<h2 id="2-8-其他计划跟踪"><a href="#2-8-其他计划跟踪" class="headerlink" title="2.8. 其他计划跟踪"></a>2.8. 其他计划跟踪</h2><ol>
 <li>日程计划跟踪</li>
 <li>承诺计划跟踪</li>
 <li>风险计划跟踪</li>
 <li>数据收集计划跟踪</li>
 <li>沟通计划跟踪</li>
 </ol>
-<h2 id="2-4-纠偏活动管理"><a href="#2-4-纠偏活动管理" class="headerlink" title="2.4. 纠偏活动管理"></a>2.4. 纠偏活动管理</h2><ul>
+<h2 id="2-9-纠偏活动管理"><a href="#2-9-纠偏活动管理" class="headerlink" title="2.9. 纠偏活动管理"></a>2.9. 纠偏活动管理</h2><ul>
 <li>典型活动<ol>
 <li>偏差原因分析</li>
 <li>纠偏措施定义</li>
@@ -20295,6 +20684,9 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       <categories>
         <category>2024_Spring_软件质量管理</category>
       </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
   </entry>
   <entry>
     <title>05-质量管理</title>
@@ -20308,13 +20700,13 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 <p>内部，外部，主观</p>
 <h2 id="1-2-面向用户的质量观"><a href="#1-2-面向用户的质量观" class="headerlink" title="1.2. 面向用户的质量观"></a>1.2. 面向用户的质量观</h2><ul>
-<li>定义质量为满足用户需求的程度<ol>
+<li>面向用户的质量观：<font color="#ff0000">定义质量为满足用户需求的程度</font><ol>
 <li>用户是谁？<ul>
 <li>客户不一定是用户</li>
 </ul>
 </li>
 <li>用户需求是否有优先级？<ul>
-<li>很用户对软件的期望有关</li>
+<li>和用户对软件的期望有关</li>
 </ul>
 </li>
 <li>这种用户优先级对软件产品的开发过程产生什么样的影响？</li>
@@ -20322,8 +20714,17 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 </li>
 </ul>
-<p>软件可工作，可度量：优先级高</p>
+<p><strong>软件可工作，可度量：优先级高</strong></p>
+<ul>
+<li>典型的用户期望<ol>
+<li>产品必须能工作</li>
+<li>产品最好有比较快的执行速度</li>
+<li>产品在安全性、保密性、可用性、可靠性、兼容性、可维护性、可移植性等方面表现优异</li>
+</ol>
+</li>
+</ul>
 <h2 id="1-3-PSP质量策略"><a href="#1-3-PSP质量策略" class="headerlink" title="1.3. PSP质量策略"></a>1.3. PSP质量策略</h2><ol>
+<li>首先确保基本没有缺陷，在考察其他质量目标</li>
 <li><font color="#c00000">用缺陷管理代替质量管理</font><ol>
 <li><strong>缺陷管理的正当性</strong>：如果软件没有缺陷，其他质量属性也会比较好。</li>
 <li>安全，隐私，交互友好等几乎都无法有效管理</li>
@@ -20338,27 +20739,37 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 <p>重视Code Review<br>一旦缺陷到了系统级，消除成本会很高，所以要在早期消除</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F07%2F11-30-25-59455ef6704a5fcaf74d7e6dfb12abdb-20240507113024-e75a5a.png" alt="image.png"></p>
-<h2 id="1-4-测试消除缺陷的典型流程"><a href="#1-4-测试消除缺陷的典型流程" class="headerlink" title="1.4. 测试消除缺陷的典型流程"></a>1.4. 测试消除缺陷的典型流程</h2><ol>
+<h2 id="1-4-消除缺陷的典型流程"><a href="#1-4-消除缺陷的典型流程" class="headerlink" title="1.4. 消除缺陷的典型流程"></a>1.4. 消除缺陷的典型流程</h2><h3 id="1-4-1-测试消除缺陷的典型流程"><a href="#1-4-1-测试消除缺陷的典型流程" class="headerlink" title="1.4.1. 测试消除缺陷的典型流程"></a>1.4.1. 测试消除缺陷的典型流程</h3><ol>
 <li>发现待测程序的一个异常行为</li>
 <li>理解程序的工作方式<ul>
 <li>Measure twice, cut once</li>
 </ul>
 </li>
-<li>调试程序，找出出错的位置，确定出错原因</li>
+<li>调试程序，找出出错的位置，确定出错原因<ul>
+<li>耗时</li>
+</ul>
+</li>
 <li>确定修改方案，修改缺陷</li>
 <li>回归测试，以确认修改有效</li>
 </ol>
+<h3 id="1-4-2-评审消除缺陷典型流程"><a href="#1-4-2-评审消除缺陷典型流程" class="headerlink" title="1.4.2. 评审消除缺陷典型流程"></a>1.4.2. 评审消除缺陷典型流程</h3><p>经过适当培训和基类，有经验的评审者可以发现80%左右的缺陷</p>
+<ol>
+<li>遵循评审者的逻辑来理解程序流程</li>
+<li>发现缺陷，知道缺陷的位置和原因</li>
+<li>修正缺陷</li>
+</ol>
+<p>评审时机：先评审，再编译</p>
 <h2 id="1-5-质量指标"><a href="#1-5-质量指标" class="headerlink" title="1.5. 质量指标"></a>1.5. 质量指标</h2><p>过程度量：在过程中度量出来数值，根据这个数值还有机会在过程中修正<br>结果度量：算出来就没法修改</p>
-<h3 id="1-5-1-Yield"><a href="#1-5-1-Yield" class="headerlink" title="1.5.1. Yield"></a>1.5.1. Yield</h3><p>缺陷消除的效率，度量每个阶段在消除缺陷方面的效率，<strong>结果度量</strong></p>
-<p>Phase Yield = 100 * 某阶段发现的缺陷个数 / （某阶段注入缺陷个数 + 进入该阶段前遗留的缺陷个数）<br>Process Yield = 100 * 第一次编译前发现的缺陷个数 / 第一次编译前注入的缺陷个数</p>
+<h3 id="1-5-1-Yield"><a href="#1-5-1-Yield" class="headerlink" title="1.5.1. Yield"></a>1.5.1. Yield</h3><p><strong>结果度量</strong><br><strong>缺陷消除的效率</strong>，度量每个阶段在消除缺陷方面的效率，Yield 指标越高越好，Process Yield 我们期望在 80 以上</p>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -2.059ex;" xmlns="http://www.w3.org/2000/svg" width="74.438ex" height="5.285ex" role="img" focusable="false" viewBox="0 -1426 32901.4 2336"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(751,0)"><path data-c="210E" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path></g><g data-mml-node="mi" transform="translate(1327,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mi" transform="translate(1856,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g><g data-mml-node="mi" transform="translate(2325,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(2791,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="mi" transform="translate(3554,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(3899,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(4365,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></g><g data-mml-node="mi" transform="translate(4663,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mo" transform="translate(5460.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(6516.6,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1000,0)"></path></g><g data-mml-node="mo" transform="translate(8238.8,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mfrac" transform="translate(9239,0)"><g data-mml-node="mrow" transform="translate(6831.2,676)"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">某</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">阶</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">段</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">发</text></g><g data-mml-node="mi" transform="translate(4000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">现</text></g><g data-mml-node="mi" transform="translate(5000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">的</text></g><g data-mml-node="mi" transform="translate(6000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">缺</text></g><g data-mml-node="mi" transform="translate(7000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">陷</text></g><g data-mml-node="mi" transform="translate(8000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">个</text></g><g data-mml-node="mi" transform="translate(9000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g></g><g data-mml-node="mrow" transform="translate(220,-710)"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">某</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">阶</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">段</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">注</text></g><g data-mml-node="mi" transform="translate(4000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">入</text></g><g data-mml-node="mi" transform="translate(5000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">缺</text></g><g data-mml-node="mi" transform="translate(6000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">陷</text></g><g data-mml-node="mi" transform="translate(7000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">个</text></g><g data-mml-node="mi" transform="translate(8000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g><g data-mml-node="mo" transform="translate(9222.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(10222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">进</text></g><g data-mml-node="mi" transform="translate(11222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">入</text></g><g data-mml-node="mi" transform="translate(12222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">该</text></g><g data-mml-node="mi" transform="translate(13222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">阶</text></g><g data-mml-node="mi" transform="translate(14222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">段</text></g><g data-mml-node="mi" transform="translate(15222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">前</text></g><g data-mml-node="mi" transform="translate(16222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">遗</text></g><g data-mml-node="mi" transform="translate(17222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">留</text></g><g data-mml-node="mi" transform="translate(18222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">的</text></g><g data-mml-node="mi" transform="translate(19222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">缺</text></g><g data-mml-node="mi" transform="translate(20222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">陷</text></g><g data-mml-node="mi" transform="translate(21222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">个</text></g><g data-mml-node="mi" transform="translate(22222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g></g><rect width="23422.4" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container></p>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -2.059ex;" xmlns="http://www.w3.org/2000/svg" width="52.968ex" height="5.285ex" role="img" focusable="false" viewBox="0 -1426 23412 2336"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(751,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(1202,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(1687,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mi" transform="translate(2120,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(2586,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g><g data-mml-node="mi" transform="translate(3055,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g><g data-mml-node="mi" transform="translate(3524,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="mi" transform="translate(4287,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(4632,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(5098,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></g><g data-mml-node="mi" transform="translate(5396,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mo" transform="translate(6193.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(7249.6,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1000,0)"></path></g><g data-mml-node="mo" transform="translate(8971.8,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mfrac" transform="translate(9972,0)"><g data-mml-node="mrow" transform="translate(220,676)"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">第</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">一</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">次</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">编</text></g><g data-mml-node="mi" transform="translate(4000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">译</text></g><g data-mml-node="mi" transform="translate(5000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">前</text></g><g data-mml-node="mi" transform="translate(6000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">发</text></g><g data-mml-node="mi" transform="translate(7000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">现</text></g><g data-mml-node="mi" transform="translate(8000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">的</text></g><g data-mml-node="mi" transform="translate(9000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">缺</text></g><g data-mml-node="mi" transform="translate(10000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">陷</text></g><g data-mml-node="mi" transform="translate(11000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">个</text></g><g data-mml-node="mi" transform="translate(12000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g></g><g data-mml-node="mrow" transform="translate(220,-710)"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">第</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">一</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">次</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">编</text></g><g data-mml-node="mi" transform="translate(4000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">译</text></g><g data-mml-node="mi" transform="translate(5000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">前</text></g><g data-mml-node="mi" transform="translate(6000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">注</text></g><g data-mml-node="mi" transform="translate(7000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">入</text></g><g data-mml-node="mi" transform="translate(8000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">的</text></g><g data-mml-node="mi" transform="translate(9000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">缺</text></g><g data-mml-node="mi" transform="translate(10000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">陷</text></g><g data-mml-node="mi" transform="translate(11000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">个</text></g><g data-mml-node="mi" transform="translate(12000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g></g><rect width="13200" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container></p>
 <p>问题：知道分子，但是不知道分母</p>
 <p>设计、编码注入缺陷<br>评审、测试消除缺陷</p>
-<h3 id="1-5-2-A-FR"><a href="#1-5-2-A-FR" class="headerlink" title="1.5.2. A/FR"></a>1.5.2. A/FR</h3><p><strong>质检失效时间比</strong>，过程度量</p>
-<p>A/FR = PSP质检成本/PSP失效成本<br>设计评审时间 / 测试时间</p>
-<p>理论上 A/FR越大，意味着质量越高，说明评审越充分<br>2.0是比较理想的值</p>
-<h3 id="1-5-3-PQI"><a href="#1-5-3-PQI" class="headerlink" title="1.5.3. PQI"></a>1.5.3. PQI</h3><p><font color="#c00000">最全面</font></p>
+<h3 id="1-5-2-A-FR"><a href="#1-5-2-A-FR" class="headerlink" title="1.5.2. A/FR"></a>1.5.2. A/FR</h3><p><strong>过程度量</strong><br><strong>质检失效时间比</strong>:理论上 A/FR越大，意味着质量越高，说明评审越充分<br>2.0是比较理想的值，ASR过大说明开发效率低下</p>
+<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -2.059ex;" xmlns="http://www.w3.org/2000/svg" width="58.087ex" height="5.285ex" role="img" focusable="false" viewBox="0 -1426 25674.6 2336"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(750,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mi" transform="translate(1250,0)"><path data-c="1D439" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"></path></g><g data-mml-node="mi" transform="translate(1999,0)"><path data-c="1D445" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"></path></g><g data-mml-node="mo" transform="translate(3035.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mfrac" transform="translate(4091.6,0)"><g data-mml-node="mrow" transform="translate(220,676)"><g data-mml-node="mi"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(751,0)"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mi" transform="translate(1396,0)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(2147,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">质</text></g><g data-mml-node="mi" transform="translate(3147,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">检</text></g><g data-mml-node="mi" transform="translate(4147,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">成</text></g><g data-mml-node="mi" transform="translate(5147,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">本</text></g></g><g data-mml-node="mrow" transform="translate(220,-710)"><g data-mml-node="mi"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(751,0)"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mi" transform="translate(1396,0)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(2147,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">失</text></g><g data-mml-node="mi" transform="translate(3147,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">效</text></g><g data-mml-node="mi" transform="translate(4147,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">成</text></g><g data-mml-node="mi" transform="translate(5147,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">本</text></g></g><rect width="6347" height="60" x="120" y="220"></rect></g><g data-mml-node="mo" transform="translate(10956.3,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mfrac" transform="translate(12012.1,0)"><g data-mml-node="mrow" transform="translate(220,676)"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">设</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">计</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">评</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">审</text></g><g data-mml-node="mi" transform="translate(4000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">时</text></g><g data-mml-node="mi" transform="translate(5000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">间</text></g><g data-mml-node="mo" transform="translate(6222.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(7222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">代</text></g><g data-mml-node="mi" transform="translate(8222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">码</text></g><g data-mml-node="mi" transform="translate(9222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">评</text></g><g data-mml-node="mi" transform="translate(10222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">审</text></g><g data-mml-node="mi" transform="translate(11222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">时</text></g><g data-mml-node="mi" transform="translate(12222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">间</text></g></g><g data-mml-node="mrow" transform="translate(1220,-710)"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">编</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">译</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">时</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">间</text></g><g data-mml-node="mo" transform="translate(4222.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(5222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">单</text></g><g data-mml-node="mi" transform="translate(6222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">元</text></g><g data-mml-node="mi" transform="translate(7222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">测</text></g><g data-mml-node="mi" transform="translate(8222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">试</text></g><g data-mml-node="mi" transform="translate(9222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">时</text></g><g data-mml-node="mi" transform="translate(10222.4,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">间</text></g></g><rect width="13422.4" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container></p>
+<h3 id="1-5-3-PQI"><a href="#1-5-3-PQI" class="headerlink" title="1.5.3. PQI"></a>1.5.3. PQI</h3><p><font color="#c00000">最全面</font>，123过程，45结果，在一个指标里<strong>包含了过程和结果</strong></p>
 <ul>
-<li>5个数据的<strong>乘积</strong>，每个分量都在[0,1]内<ol>
+<li>组成：5个数据的<strong>乘积</strong>，每个分量都在[0,1]内，结果越接近1说明质量越高<ol>
 <li>设计质量：设计时间应该大于编码时间<ul>
 <li>min{设计时间/编码时间, 1}</li>
 </ul>
@@ -20381,20 +20792,26 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </li>
 </ol>
 </li>
+<li>用途<ol>
+<li>判断模块开发质量</li>
+<li>规划质量活动计划</li>
+<li>过程改进</li>
+</ol>
+</li>
 </ul>
-<p>123过程，45结果，在一个指标里<strong>包含了过程和结果</strong></p>
 <p>PQI达到0.4，说明模块很不错<br>大部分人的PQI都是0</p>
-<h3 id="1-5-4-Review-Rate"><a href="#1-5-4-Review-Rate" class="headerlink" title="1.5.4. Review Rate"></a>1.5.4. Review Rate</h3><p>评审速度：一个用于指导软件工程师有效评审的指标，<strong>过程度量</strong></p>
+<h3 id="1-5-4-Review-Rate"><a href="#1-5-4-Review-Rate" class="headerlink" title="1.5.4. Review Rate"></a>1.5.4. Review Rate</h3><p><strong>过程度量</strong><br><strong>评审速度</strong>：一个用于指导软件工程师有效评审的指标，高质量的评审需要软件工 程师投入足够的时间进行评审</p>
 <p>高质量的评审需要软件工程师投入足够的时间进行评审</p>
 <p>在PSP的实践中，代码评审速度小于200LOC/H，文档评审速度小于4 Page/H</p>
-<h3 id="1-5-5-DRL"><a href="#1-5-5-DRL" class="headerlink" title="1.5.5. DRL"></a>1.5.5. DRL</h3><p>缺陷消除效率比值：不同缺陷消除手段消除缺陷的效率，<strong>结果度量</strong></p>
+<h3 id="1-5-5-DRL"><a href="#1-5-5-DRL" class="headerlink" title="1.5.5. DRL"></a>1.5.5. DRL</h3><p><strong>结果度量</strong><br><strong>缺陷消除效率比值</strong>：不同缺陷消除手段消除缺陷的效率</p>
 <p>计算：某个阶段每小时消除缺陷个数 / 单元测试每小时消除个数</p>
 <p>期望：所有DRL都大于1，即单元测试缺陷个数最少</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F25%2F22-48-48-38d05f278b1db4b244a5214db77d2627-20240625224847-9f535c.png" alt="image.png"></p>
 <h3 id="1-5-6-其他质量"><a href="#1-5-6-其他质量" class="headerlink" title="1.5.6. 其他质量"></a>1.5.6. 其他质量</h3><p>个人评审和小组评审（标志重捕法）</p>
 <p>Z：总缺陷<br>a 评审者1独立发现的缺陷<br>b 评审者2发现缺陷<br>c 评审者2发现的1发现的缺陷</p>
 <p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -1.738ex;" xmlns="http://www.w3.org/2000/svg" width="15.322ex" height="4.267ex" role="img" focusable="false" viewBox="0 -1118 6772.4 1886"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mi" transform="translate(1192.7,676)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mi"><path data-c="1D44D" d="M58 8Q58 23 64 35Q64 36 329 334T596 635L586 637Q575 637 512 637H500H476Q442 637 420 635T365 624T311 598T266 548T228 469Q227 466 226 463T224 458T223 453T222 450L221 448Q218 443 202 443Q185 443 182 453L214 561Q228 606 241 651Q249 679 253 681Q256 683 487 683H718Q723 678 723 675Q723 673 717 649Q189 54 188 52L185 49H274Q369 50 377 51Q452 60 500 100T579 247Q587 272 590 277T603 282H607Q628 282 628 271Q547 5 541 2Q538 0 300 0H124Q58 0 58 8Z"></path></g><g data-mml-node="mo" transform="translate(945.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(1945.4,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g></g><rect width="2674.4" height="60" x="120" y="220"></rect></g><g data-mml-node="mo" transform="translate(3192.2,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mfrac" transform="translate(4248,0)"><g data-mml-node="mi" transform="translate(1045.7,676)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mi"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(651.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(1651.4,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g></g><rect width="2284.4" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container></p>
-<p>先评审再单元测试：先评审解决一些问题，测试时需要修复的问题少一些，需要的时间也少</p>
-<h3 id="1-5-7-质量路径"><a href="#1-5-7-质量路径" class="headerlink" title="1.5.7. 质量路径"></a>1.5.7. 质量路径</h3><p>为了追求高质量的手段：</p>
+<p><font color="#c00000">先评审再单元测试</font>：先评审解决一些问题，测试时需要修复的问题少一些，需要的时间也少</p>
+<h2 id="1-6-质量路径"><a href="#1-6-质量路径" class="headerlink" title="1.6. 质量路径"></a>1.6. 质量路径</h2><p><strong>为了追求高质量的手段</strong>：</p>
 <ol>
 <li>各种测试</li>
 <li>进入测试之前的产物质量提升<ul>
@@ -20421,7 +20838,8 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ol>
-<h1 id="2-设计与质量的关系"><a href="#2-设计与质量的关系" class="headerlink" title="2. 设计与质量的关系"></a>2. 设计与质量的关系</h1><h2 id="2-1-设计的内容"><a href="#2-1-设计的内容" class="headerlink" title="2.1. 设计的内容"></a>2.1. 设计的内容</h2><p>完整设计（可评审设计）包含以下4个方面</p>
+<h1 id="2-设计与质量的关系"><a href="#2-设计与质量的关系" class="headerlink" title="2. 设计与质量的关系"></a>2. 设计与质量的关系</h1><h2 id="2-1-设计的过程"><a href="#2-1-设计的过程" class="headerlink" title="2.1. 设计的过程"></a>2.1. 设计的过程</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F26%2F10-48-08-cacd445fa281a755cebbe96e72460daa-20240626104807-1c6fda.png" alt="image.png"></p>
+<h2 id="2-2-设计的内容"><a href="#2-2-设计的内容" class="headerlink" title="2.2. 设计的内容"></a>2.2. 设计的内容</h2><p><strong>完整设计</strong>（可评审设计）包含以下4个方面:</p>
 <table>
 <thead>
 <tr>
@@ -20441,7 +20859,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <td>结构信息（属性、业务逻辑等）</td>
 </tr>
 </tbody></table>
-<h2 id="2-2-UML常用图"><a href="#2-2-UML常用图" class="headerlink" title="2.2. UML常用图"></a>2.2. UML常用图</h2><table>
+<h2 id="2-3-UML常用图"><a href="#2-3-UML常用图" class="headerlink" title="2.3. UML常用图"></a>2.3. UML常用图</h2><table>
 <thead>
 <tr>
 <th></th>
@@ -20460,15 +20878,57 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <td><strong>缺失</strong></td>
 </tr>
 </tbody></table>
-<h2 id="2-3-设计的层次：PSP模板"><a href="#2-3-设计的层次：PSP模板" class="headerlink" title="2.3. 设计的层次：PSP模板"></a>2.3. 设计的层次：PSP模板</h2><ol>
-<li>操作规格模板</li>
-<li>功能规则模板</li>
-<li>状态规则模板</li>
-<li>逻辑规则模板</li>
+<h2 id="2-4-PSP设计模板"><a href="#2-4-PSP设计模板" class="headerlink" title="2.4. PSP设计模板"></a>2.4. PSP设计模板</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>动态信息</th>
+<th>静态信息</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>外部信息</td>
+<td>操作，功能</td>
+<td>功能</td>
+</tr>
+<tr>
+<td>内部信息</td>
+<td>状态</td>
+<td>逻辑</td>
+</tr>
+</tbody></table>
+<ol>
+<li>操作规格模板<ol>
+<li>描述系统与外界交互，用于场景描述：也就是用户与待设计系统的正常情况和异常情况下的交互</li>
+<li>定义测试场景和测试用例，用来与用户讨论需求的基础，特别是操作相关的需求描述</li>
+<li>与UML比较：用例图、时序图</li>
 </ol>
-<h2 id="2-4-设计验证方法"><a href="#2-4-设计验证方法" class="headerlink" title="2.4. 设计验证方法"></a>2.4. 设计验证方法</h2><ul>
+</li>
+<li>功能规格模板<ol>
+<li>描述系统的对外接口，是一种静态信息的展现</li>
+<li>提供的典型信息有类和继承关系、外部可见的属性和方法等</li>
+<li>用形式化符号描述方法等行为，消除二义性</li>
+<li>与UML比较：UML类图，<strong>但类图的方法行为没有描述</strong></li>
+</ol>
+</li>
+<li>状态规格模板<ol>
+<li>精确定义程序的所有状态、状态之间的转换以及伴随着每次状态转换的动作</li>
+<li>包含信息：状态名称、状态描述、参数和方法的名称与描述、状态转换条件、状态转换发生的动作</li>
+<li>UML：状态图</li>
+</ol>
+</li>
+<li>逻辑规格模板<ol>
+<li>可以精确描述系统中的静态逻辑。</li>
+<li>为了消除描述的二义性，一般用伪代码配合形式化符号来描述设计结果</li>
+<li>包含信息：关键方法静态逻辑、方法调用、外部引用、关键数据的类型和定义</li>
+<li>UML没有对应图</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-5-设计的层次"><a href="#2-5-设计的层次" class="headerlink" title="2.5. 设计的层次"></a>2.5. 设计的层次</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F26%2F20-06-54-82f8bc5162ce4786e4924764d95dd8c2-d7ad30e6ebf7fcaa8139b10b7691263-d01992.png" alt="d7ad30e6ebf7fcaa8139b10b7691263.png"></p>
+<h2 id="2-6-设计验证方法"><a href="#2-6-设计验证方法" class="headerlink" title="2.6. 设计验证方法"></a>2.6. 设计验证方法</h2><ul>
 <li>意义<ul>
-<li>简单评审不足以发现复杂缺陷</li>
+<li><strong>简单评审不足以发现复杂缺陷</strong></li>
 </ul>
 </li>
 <li>方法<ol>
@@ -20480,11 +20940,35 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 </li>
 </ul>
-<h3 id="2-4-1-状态机验证"><a href="#2-4-1-状态机验证" class="headerlink" title="2.4.1. 状态机验证"></a>2.4.1. 状态机验证</h3><p>PSP的状态机用文本描述</p>
-<h2 id="2-5-符号化执行"><a href="#2-5-符号化执行" class="headerlink" title="2.5. 符号化执行"></a>2.5. 符号化执行</h2><p>用符号替换关键的变量</p>
-<p>可以用来验证复杂算法，但不适合有复杂逻辑的场景</p>
+<h3 id="2-6-1-状态机验证"><a href="#2-6-1-状态机验证" class="headerlink" title="2.6.1. 状态机验证"></a>2.6.1. 状态机验证</h3><p>PSP的状态机用文本描述</p>
+<ul>
+<li>检查状态机的完整性和正交性<ol>
+<li>完整性：对于状态机中任何一个状态，对应的所有条件组合，下一个状态的转换都有定义</li>
+<li>正交性：对于状态机中任何一个状态，所有下一个状态的转换条件不能相同</li>
+</ol>
+</li>
+<li>验证步骤<ol>
+<li>检查状态机，消除死循环和陷阱状态</li>
+<li>检查状态转换，验证完整性和正交性</li>
+<li>评价状态机，检验是否体现设计意图</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-6-2-符号化执行"><a href="#2-6-2-符号化执行" class="headerlink" title="2.6.2. 符号化执行"></a>2.6.2. 符号化执行</h3><ul>
+<li>用符号替换关键的变量，带入伪码程序，分析行为</li>
+<li>优点：<ol>
+<li>实施简单，可以给出一般化结果</li>
+<li>适合不复杂的算法，特别是遗漏系统改造中，应用这种方法世界和理解原有的设计</li>
+</ol>
+</li>
+<li>缺点<ol>
+<li>不适合复杂逻辑的场景</li>
+<li>纯手工验证容易出错</li>
+</ol>
+</li>
+</ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F23%2F15-38-07-974e78db785a3ca75c18e9f637815699-20240523153806-fe65a9.png" alt="image.png"></p>
-<h2 id="2-6-执行表验证"><a href="#2-6-执行表验证" class="headerlink" title="2.6. 执行表验证"></a>2.6. 执行表验证</h2><ul>
+<h3 id="2-6-3-执行表验证"><a href="#2-6-3-执行表验证" class="headerlink" title="2.6.3. 执行表验证"></a>2.6.3. 执行表验证</h3><ul>
 <li>主要争对伪代码：<ol>
 <li>识别伪码程序的关键变量；</li>
 <li>构建表格，表格左侧填入主要程序步骤，右侧填入关键变量；</li>
@@ -20493,8 +20977,12 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ol>
 </li>
 </ul>
-<p>伪代码+关键变量<br><strong>问题：只能检验一个样例</strong><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F23%2F15-41-05-d96a2bf74aac7c649fddb16cf2d896a8-20240523154105-9e1e9c.png" alt="image.png"></p>
-<h2 id="2-7-跟踪表"><a href="#2-7-跟踪表" class="headerlink" title="2.7. 跟踪表"></a>2.7. 跟踪表</h2><p>伪代码+关键变量</p>
+<p>伪代码+关键变量<br><strong>问题：只能检验一个样例</strong>  </p>
+<ul>
+<li>优点：实施简单；结果可靠，可用于验证复杂逻辑</li>
+<li>缺点：每次只能验证一个用例；手工验证比较耗时，容易引入错误<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F05%2F23%2F15-41-05-d96a2bf74aac7c649fddb16cf2d896a8-20240523154105-9e1e9c.png" alt="image.png"></li>
+</ul>
+<h3 id="2-6-4-跟踪表"><a href="#2-6-4-跟踪表" class="headerlink" title="2.6.4. 跟踪表"></a>2.6.4. 跟踪表</h3><p>伪代码+关键变量</p>
 <ol>
 <li>识别伪码程序的关键变量；</li>
 <li>构建表格，表格左侧填入主要程序步骤（伪代码），右侧填入关键变量；</li>
@@ -20503,7 +20991,7 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li><strong>定义并且优化用例组合</strong>；</li>
 <li>跟踪被选择的关键变量的变化情况，从而判断程序行为。</li>
 </ol>
-<h2 id="2-8-正确性检验"><a href="#2-8-正确性检验" class="headerlink" title="2.8. 正确性检验"></a>2.8. 正确性检验</h2><ul>
+<h3 id="2-6-5-正确性检验"><a href="#2-6-5-正确性检验" class="headerlink" title="2.6.5. 正确性检验"></a>2.6.5. 正确性检验</h3><ul>
 <li>用形式化语言描述程序，加以验证和推理<ol>
 <li>分析和识别用例；</li>
 <li>对于复杂伪码程序的结构，应用正确性检验的标准问题逐项加以验证；</li>
@@ -20515,5 +21003,668 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       <categories>
         <category>2024_Spring_软件质量管理</category>
       </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>06-团队工程开发</title>
+    <url>/posts/ba7b6d37/</url>
+    <content><![CDATA[<h1 id="1-需求开发"><a href="#1-需求开发" class="headerlink" title="1. 需求开发"></a>1. 需求开发</h1><h2 id="1-1-为什么“需求是一切工程活动的基础”"><a href="#1-1-为什么“需求是一切工程活动的基础”" class="headerlink" title="1.1. 为什么“需求是一切工程活动的基础”"></a>1.1. 为什么“需求是一切工程活动的基础”</h2><ol>
+<li>设计活动一定是依据需求而开展的</li>
+<li>产品集成活动中，各个组件之间的接口也必须事先满足接口需求，否则会造成接口不匹配<ol>
+<li>验证活动是检验产品和产品组件是否满足事先定义的需求规格</li>
+<li>确认活动是确保产品可以满足用户需求和实际场景的要求</li>
+</ol>
+</li>
+<li>需求也是项目计划活动的关键输入，如规模估算、成本估算等必须参考需求</li>
+</ol>
+<h2 id="1-2-需求分类"><a href="#1-2-需求分类" class="headerlink" title="1.2. 需求分类"></a>1.2. 需求分类</h2><ol>
+<li>客户需求：问题，描述的是客户的期望，是客户解决问题的愿望</li>
+<li>产品需求：答案，描述的是开发团队所提供的解决方案</li>
+</ol>
+<h2 id="1-3-需求开发过程"><a href="#1-3-需求开发过程" class="headerlink" title="1.3. 需求开发过程"></a>1.3. 需求开发过程</h2><ol>
+<li>需求获取：采用诱导方式获取客户的隐式需求和显式需求，尽可能识别客户的期望与受到的限制</li>
+<li>需求汇总：整理各个来源的信息，识别缺失的信息，解决冲突的信息<ol>
+<li>需求转化和整理：客户需求-&gt;产品需求，产品组件需求</li>
+<li>推导未显式描述的需求内容，例如使用某项技术的附属需求</li>
+</ol>
+</li>
+<li>需求验证：对需求进行分析和确认，保证符合使用者的预期<ol>
+<li>建立相关场景</li>
+<li>分析需求，保证必要性、充分性和正确性</li>
+<li>确认需求，在客户环境正常运行</li>
+</ol>
+</li>
+<li>制作需求文档<ol>
+<li>需求规格文档目的：用户和开发者对软件的初始规定有一个共同理解，使之成为整个开发工作的基础</li>
+</ol>
+</li>
+</ol>
+<h1 id="2-团队智慧-设计"><a href="#2-团队智慧-设计" class="headerlink" title="2. 团队智慧/设计"></a>2. 团队智慧/设计</h1><h2 id="2-1-团队智慧挑战"><a href="#2-1-团队智慧挑战" class="headerlink" title="2.1. 团队智慧挑战"></a>2.1. 团队智慧挑战</h2><ul>
+<li>挑战<ul>
+<li>确定整体架构之前很难进行分工</li>
+<li>鼓励团队成员在讨论和评审会议中的参与程度</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-设计考虑点"><a href="#2-2-设计考虑点" class="headerlink" title="2.2. 设计考虑点"></a>2.2. 设计考虑点</h2><h3 id="2-2-1-设计标准"><a href="#2-2-1-设计标准" class="headerlink" title="2.2.1. 设计标准"></a>2.2.1. 设计标准</h3><ul>
+<li>命名规范：项目小组应当设计一个统一的命名规范来命令各个模块并建立系统词典</li>
+<li>接口标准：组件之间的接口标准和格式也需要作为设计标准的内容之一加以定义</li>
+<li>系统出错信息：标准化</li>
+<li>设计表示标准：定义设计工作产物应当满足的标准</li>
+</ul>
+<h3 id="2-2-2-复用性考虑"><a href="#2-2-2-复用性考虑" class="headerlink" title="2.2.2. 复用性考虑"></a>2.2.2. 复用性考虑</h3><ul>
+<li>复用接口标准  </li>
+<li>复用文档标准  </li>
+<li>复用质量保证机制</li>
+</ul>
+<h3 id="2-2-3-可测试性的考虑"><a href="#2-2-3-可测试性的考虑" class="headerlink" title="2.2.3. 可测试性的考虑"></a>2.2.3. 可测试性的考虑</h3><p>TDD提高的是设计。先写测试脚本再写代码让开发人员对测试脚本更认真。</p>
+<ul>
+<li>尽可能减少测试代码的数量</li>
+<li>制定合理的测试计划</li>
+</ul>
+<h3 id="2-2-4-可用性的考虑"><a href="#2-2-4-可用性的考虑" class="headerlink" title="2.2.4. 可用性的考虑"></a>2.2.4. 可用性的考虑</h3><ul>
+<li>设计阶段就开始考虑，而不是推迟到实现阶段</li>
+<li>针对每一个关键功能都定义关键概念和操作场景</li>
+<li>分析操作场景以确保软件系统开发完成之后，系统使用者会满意</li>
+<li>必要时，要求最终用户参与场景的评审，使用模拟、原型等技术，更好把握用户真实意图</li>
+</ul>
+<h2 id="2-3-实现策略"><a href="#2-3-实现策略" class="headerlink" title="2.3. 实现策略"></a>2.3. 实现策略</h2><h3 id="2-3-1-评审的考虑"><a href="#2-3-1-评审的考虑" class="headerlink" title="2.3.1. 评审的考虑"></a>2.3.1. 评审的考虑</h3><ol>
+<li><strong>设计</strong>时采用的策略是<strong>自顶向下</strong>，逐层精化，有利于建立系统的整体观</li>
+<li><strong>实现</strong>的时候为了方便实现对结果的评审，建议<strong>自底向上</strong>，首先实现底层的内容，然后对底层模块评审，有利于复用策略的应用</li>
+</ol>
+<h3 id="2-3-2-复用策略"><a href="#2-3-2-复用策略" class="headerlink" title="2.3.2. 复用策略"></a>2.3.2. 复用策略</h3><p>采用自底向上的开发策略利于复用。</p>
+<ul>
+<li>经典复用策略<ol>
+<li><strong>编码注释</strong>： 注释使用统一格式，标明功能、调用方式、异常信息等，利于复用</li>
+<li><strong>站立式会议</strong>：团队讨论实现计划，识别可复用组件，了解现有的复用组件库内容</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-3-3-可测试性考虑"><a href="#2-3-3-可测试性考虑" class="headerlink" title="2.3.3. 可测试性考虑"></a>2.3.3. 可测试性考虑</h3><p>实现计划必须与测试计划一致，不能出现集体测试时还有模块未实现的情况</p>
+<h1 id="3-集成的策略选择"><a href="#3-集成的策略选择" class="headerlink" title="3. 集成的策略选择"></a>3. 集成的策略选择</h1><p>经典定义：把各种组件拼装到一起，测试，一直管到交付</p>
+<p><font color="#c00000">CICD属于逐一添加</font><br>鼓励开发人员频繁提交代码，每次提交后都进行自动化测试，有助于发现和修复问题</p>
+<h2 id="3-1-大爆炸集成策略"><a href="#3-1-大爆炸集成策略" class="headerlink" title="3.1. 大爆炸集成策略"></a>3.1. 大爆炸集成策略</h2><ul>
+<li>把一堆待继承的组件放在一起，进行一次集成</li>
+<li>优点：如果组件质量很高，一次集成代价低，需要的测试用例少</li>
+<li>缺点：如果质量不高，定位问题困难</li>
+</ul>
+<h2 id="3-2-逐一添加策略"><a href="#3-2-逐一添加策略" class="headerlink" title="3.2. 逐一添加策略"></a>3.2. 逐一添加策略</h2><ul>
+<li>一次添加一个组件进行集成</li>
+<li>优点：容易定位问题</li>
+<li>缺点：测试代价高，需要的测试用例最多</li>
+</ul>
+<h2 id="3-3-集簇集成策略"><a href="#3-3-集簇集成策略" class="headerlink" title="3.3. 集簇集成策略"></a>3.3. 集簇集成策略</h2><ul>
+<li>把有相似功能或者有关联的模块优先进行集成，形成可以工作的组件。然后以组件为单位继续较高层次的集成</li>
+<li>优点：可以尽早获得一些可以工作的组件，有利于其他组件测试工作的开展。</li>
+<li>缺点：过于关注个别组件，而缺乏系统的整体观，不能尽早发现系统层面的缺陷。</li>
+</ul>
+<h2 id="3-4-扁平化集成策略"><a href="#3-4-扁平化集成策略" class="headerlink" title="3.4. 扁平化集成策略"></a>3.4. 扁平化集成策略</h2><ul>
+<li>优先集成高层组件的部件，其他先打桩，然后逐步将各个组件、模块真正的是实现加入系统。打“桩”（stub），即提供一些直接提供返回值的伪实现</li>
+<li>优点：提前暴露系统级错误，快速把系统跑起来  </li>
+<li>缺点：需要大量打桩；对系统行为的描述很有限，发现错误能力有限</li>
+</ul>
+<h1 id="4-验证和确认-V-V"><a href="#4-验证和确认-V-V" class="headerlink" title="4. 验证和确认(V & V)"></a>4. 验证和确认(V &amp; V)</h1><h2 id="4-1-定义"><a href="#4-1-定义" class="headerlink" title="4.1. 定义"></a>4.1. 定义</h2><ul>
+<li>验证（Verification）：<strong>产品需求</strong>有没有被满足，<strong>解决方案</strong>有没有被正确地做出来  </li>
+<li>确认（Validation）：<strong>客户需求</strong>有没有得到解决，<strong>问题</strong>有没有解决</li>
+</ul>
+<p>普遍认为<strong>需求评审、验收测试是Validation</strong>，<strong>单元测试、集成、系统测试是Verification</strong><br>但是ver和val贯穿始终，都是提高最终产品策略的措施</p>
+<h2 id="4-2-活动"><a href="#4-2-活动" class="headerlink" title="4.2. 活动"></a>4.2. 活动</h2><p>评审<br>测试</p>
+<ol>
+<li>环境准备</li>
+<li>对象选择  </li>
+<li>活动实施  </li>
+<li>结果分析</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F26%2F16-41-19-efa542057b11a04cbec92c847e2d996e-20240626164118-e5f7ec.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>07-项目支持活动</title>
+    <url>/posts/3d73f14e/</url>
+    <content><![CDATA[<h1 id="1-配置管理"><a href="#1-配置管理" class="headerlink" title="1. 配置管理"></a>1. 配置管理</h1><h2 id="1-1-配置管理介绍"><a href="#1-1-配置管理介绍" class="headerlink" title="1.1. 配置管理介绍"></a>1.1. 配置管理介绍</h2><ul>
+<li><p>配置管理目的：保证最终产品的完整性和一致性</p>
+</li>
+<li><p><strong>配置项</strong>：在配置管理当中作为<strong>单独实体进行管理和控制的工作产品集合</strong></p>
+<ul>
+<li>为了缩小需要管理的对象的范围，同时保证完整性</li>
+<li><strong>配置项典型产物</strong>，需要保证完全一致：代码，测试用例，用户文档  <ul>
+<li>代码整体是配置项还是每个模块是配置项？<strong>代码每个模块都是一个配置项</strong></li>
+</ul>
+</li>
+<li><strong>不属于配置项典型产物</strong>，不需要保证一致：周会记录，开发计划</li>
+</ul>
+</li>
+<li><p><strong>基线</strong>：基线是一个或多个配置项及相关的标识符的代表，是一组经正式审查同意的规格或工作产品集合， 是未来开发工作或交付的基础，而且只能经由严格的变更控制程序才能改变</p>
+<ul>
+<li>例子：需求结束会发布需求的基线，后续都以这个需求为准；设计结束会发布设计的基线，这时的基线包含了需求和设计的配置项</li>
+<li>是配置持续演进的稳定基础</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-配置管理活动"><a href="#1-2-配置管理活动" class="headerlink" title="1.2. 配置管理活动"></a>1.2. 配置管理活动</h2><p><strong>版本控制+变更控制</strong>，并不是有了版本控制系统可以了</p>
+<ol>
+<li>识别配置项</li>
+<li>建立配置管理系统</li>
+<li>创建和发布基线</li>
+<li>跟踪变更请求</li>
+<li>控制配置项变更</li>
+<li>建立配置管理记录</li>
+<li>配置审计</li>
+</ol>
+<p>第三方审计：有没有未授权的配置变更</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F10-31-35-2d40c04432e3f8cd35e43be8100ddd42-20240611103134-5e402c.png" alt="image.png"></p>
+<h2 id="1-3-代码配置管理"><a href="#1-3-代码配置管理" class="headerlink" title="1.3. 代码配置管理"></a>1.3. 代码配置管理</h2><ul>
+<li>代码配置管理的三库：<ol>
+<li>工作库：可以<strong>随意读写</strong>，就算只写了一半也可以提交</li>
+<li>配置库：<strong>经过单元测试</strong>的稳定版本代码，类比零部件仓库<ul>
+<li><strong>修改只能串行</strong></li>
+</ul>
+</li>
+<li>产品库：挑选出一些零部件组装成产品，可以<strong>支持回滚</strong><ul>
+<li><strong>串行修改</strong></li>
+<li>回滚：回到以前的实践证明可以有效工作的代码</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="2-度量与分析"><a href="#2-度量与分析" class="headerlink" title="2. 度量与分析"></a>2. 度量与分析</h1><p><strong>意义</strong>：基于客观的数据，可以显著消除错误决策的风险，度量和分析可以获取这些客观数据<br><strong>目的</strong>：建立与维持度量能力，以支持管理的信息需要。</p>
+<h2 id="2-1-度量分析活动"><a href="#2-1-度量分析活动" class="headerlink" title="2.1. 度量分析活动"></a>2.1. 度量分析活动</h2><ol>
+<li>建立度量目标</li>
+<li>指定度量方式</li>
+<li>指定数据收集和保存的流程</li>
+<li>指定分析流程</li>
+<li>收集度量数据</li>
+<li>分析度量数据</li>
+<li>保存数据和结果</li>
+<li>交流度量结果</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F10-31-44-d4581a20f6fbbc38485a604a8191a30c-20240611103143-22d2a8.png" alt="image.png"></p>
+<h2 id="2-2-GQM方法"><a href="#2-2-GQM方法" class="headerlink" title="2.2. GQM方法"></a>2.2. GQM方法</h2><p>从管理的目标出发，将目标归纳、分解为度量的指标，并把这些指标提炼成可以测量的值，是一种科学的、系统的思考问题的方式</p>
+<ul>
+<li>GQM(Goal Question Metric)方法<ol>
+<li>概念层(目标)<ul>
+<li>目标是为某个特定的对象而定义的。这里的对象是指软件产品、软件过程以及相关的资源等。定义的目标基于不同原因和不同质量模型,也要参考不同的角色视图与特定的环境。</li>
+</ul>
+</li>
+<li>操作层(问题)<ul>
+<li>基于一定的刻画上述目标是否达成或者目标达成的进展情况的模型，使用一系列的问题来定义所研究的对象, 然后得出评价或评估特定目标达成进展情况。所选择的问题应当尽量体现质量相关的话题。</li>
+</ul>
+</li>
+<li>量化层( 度量)<ul>
+<li>试图以量化的方式回答上述操作层识别出来的问题。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F10-39-06-b84e36ce7bdff64e4c091fcd071d8aba-20240611103905-d43152.png" alt="image.png"></p>
+<ul>
+<li>GQM示例<ol>
+<li>PM<ul>
+<li>G：保持稳定性、可预测性的开发过程来满足计划的里程碑</li>
+<li>Q：我的项目是否按照计划的轨迹前进，计划的里程碑都能实现吗？</li>
+<li>M：软件项目开发工作的挥发性（分支、流、变更管理（UCM）活动）</li>
+</ul>
+</li>
+<li>DM<ul>
+<li>G：最大化所有团队贡献者的生产力</li>
+<li>Q：开发人员能完成分配给他们的任务吗？里程碑能实现吗？</li>
+<li>M：由个体或工作组产生的项目工件数量</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="3-决策分析"><a href="#3-决策分析" class="headerlink" title="3. 决策分析"></a>3. 决策分析</h1><ul>
+<li><strong>意义</strong>：错误的决策会带来灾难性的后果，为了降低错误决策的风险，需要<strong>基于客观事实和正确的流程</strong>来展开决策与分析活动</li>
+<li><strong>正式评估过程</strong>往往包含下列的活动：<ol>
+<li>建立评估备选方案的准则</li>
+<li>识别备选解决方案</li>
+<li>选择评估备选方案的方法</li>
+<li>使用已建立的准则与方法，评估备选解决方案</li>
+<li>依据评估准则，从备选方案中选择建议方案</li>
+</ol>
+</li>
+<li><strong>决策分析活动</strong>：<ol>
+<li>建立决策分析指南</li>
+<li>建立评价标准</li>
+<li>识别候选方案</li>
+<li>选择评价方法</li>
+<li>评价候选方案</li>
+<li>选择解决方案</li>
+</ol>
+</li>
+</ul>
+<p>一般商业环境中，招投标的过程</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F10-40-10-d12d50dc539b3b37fa87d18ff690f3c7-20240611104009-66c2a4.png" alt="image.png"></p>
+<h1 id="4-根因分析与解决方案"><a href="#4-根因分析与解决方案" class="headerlink" title="4. 根因分析与解决方案"></a>4. 根因分析与解决方案</h1><ul>
+<li>根因分析活动<ol>
+<li>识别和选定问题</li>
+<li>根因分析</li>
+<li>建立改进的行动方案</li>
+<li>实施改进，评估效果</li>
+</ol>
+</li>
+</ul>
+<p>分析到有明确的解决方案，或无法解决为止</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F10-47-18-5683e2ccdeb28e9f446d2b0199daa6fd-20240611104718-e2b7e8.png" alt="image.png"></p>
+<ul>
+<li>归因分析示例：技术角度、人员角度、培训角度、过程角度<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F11%2F10-52-29-8b5b41af11064b39a75a8a1a4ea94877-20240611105228-eac953.png" alt="image.png"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>08-定量管理与仿真建模</title>
+    <url>/posts/b20937f7/</url>
+    <content><![CDATA[<p><font color="#c00000">不是有数据就叫定量管理</font></p>
+<p>定量管理：有预测模型，根据最终结果判断</p>
+<p>CMMI的4、5级都有预测模型，属于定量管理，1、2、3级只能算一般项目管理</p>
+<ul>
+<li>过程模型</li>
+<li>过程能力基线</li>
+<li>过程组合<ul>
+<li>关键子过程性能目标</li>
+<li>整体过程性能目标</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-定量管理范式"><a href="#1-定量管理范式" class="headerlink" title="1. 定量管理范式"></a>1. 定量管理范式</h1><ul>
+<li>构建定量模型<ol>
+<li>子过程能力基线</li>
+<li>过程模型</li>
+</ol>
+</li>
+<li>应用模型<ol>
+<li>监控影响子过程的关键因素</li>
+</ol>
+</li>
+</ul>
+<h1 id="2-基本概念"><a href="#2-基本概念" class="headerlink" title="2. 基本概念"></a>2. 基本概念</h1><h2 id="2-1-子过程性能"><a href="#2-1-子过程性能" class="headerlink" title="2.1. 子过程性能"></a>2.1. 子过程性能</h2><ul>
+<li><strong>(子)过程性能</strong>：遵循某个特定（子）过程之后产生结果的量化描述，既包括（子）过程度量<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="2.613ex" height="1.902ex" role="img" focusable="false" viewBox="0 -683 1155 840.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="mi" transform="translate(861,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>（例如，时间、缺陷消除效率、工时等），也包括产物度量<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="2.054ex" height="1.902ex" role="img" focusable="false" viewBox="0 -683 908 840.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="mi" transform="translate(614,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>（例如，缺陷密度，相应时间等）。</li>
+</ul>
+<h2 id="2-2-子过程性能基线"><a href="#2-2-子过程性能基线" class="headerlink" title="2.2. 子过程性能基线"></a>2.2. 子过程性能基线</h2><ul>
+<li><strong>子过程性能基线</strong>：上述过程性能的一个定量化的刻画，一般包括均值和范围。通常用作过程性能的benchmark。</li>
+</ul>
+<h2 id="2-3-过程或子过程性能模型"><a href="#2-3-过程或子过程性能模型" class="headerlink" title="2.3. 过程或子过程性能模型"></a>2.3. 过程或子过程性能模型</h2><ul>
+<li><strong>过程或子过程性能模型</strong>：依据子过程的逻辑关系构建相应的数学模型，描述子过程性能基线和整体过程的性能输出（例如，质量、生产效率、成本等）之间的关系<ul>
+<li>例如，Process Yield和Phase Yield</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-定量模型构建的关键实践"><a href="#3-定量模型构建的关键实践" class="headerlink" title="3. 定量模型构建的关键实践"></a>3. 定量模型构建的关键实践</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F27%2F10-51-19-7b8f624c41ccbb6792f78d4d27b552cc-20240627105119-f31373.png" alt="image.png"></p>
+<h1 id="4-定量模型应用（定量管理）的关键实践"><a href="#4-定量模型应用（定量管理）的关键实践" class="headerlink" title="4. 定量模型应用（定量管理）的关键实践"></a>4. 定量模型应用（定量管理）的关键实践</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F27%2F10-55-50-b8fc29c55ec659657ce950454361dc68-20240627105549-247234.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件质量管理-期末</title>
+    <url>/posts/ac2f1649/</url>
+    <content><![CDATA[<h1 id="1-过程线"><a href="#1-过程线" class="headerlink" title="1. 过程线"></a>1. 过程线</h1><h2 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1. 概念"></a>1.1. 概念</h2><p>[[01-软件质量管理概述]]</p>
+<ul>
+<li>管理是什么？  <ul>
+<li>复现别人的成功</li>
+</ul>
+</li>
+<li>管理的三要素<ol>
+<li>目标：典型三大目标，成本、质量、工期</li>
+<li>状态：在接近目标还是远离目标</li>
+<li>纠偏</li>
+</ol>
+</li>
+<li>管理的软件工程视角：<font color="#ff0000">成功是否可以复制？</font><ul>
+<li>软件过程：为了实现一个或多个事先定义的目标而建立起来的一组实践的集合。这组实践之间往往有一定的先后顺序，作为一个整体来实现事先定义的一个或多个目标。</li>
+<li>生命周期模型：对软件过程的一种人为划分</li>
+</ul>
+</li>
+<li>软件过程vs软件生命周期模型<ol>
+<li>迭代式<ul>
+<li>![[02-历史与演变#5.2.1. 迭代式开发]]</li>
+</ul>
+</li>
+<li>瀑布模型<ul>
+<li>![[02-历史与演变#4.2.1. 瀑布模型]]</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-2-软件过程管理"><a href="#1-2-软件过程管理" class="headerlink" title="1.2. 软件过程管理"></a>1.2. 软件过程管理</h2><ul>
+<li><p>PDCA和IDEAL：元模型</p>
+<ul>
+<li>![[02-历史与演变#PDCA模型]]</li>
+<li>![[02-历史与演变#IDEAL模型]]</li>
+</ul>
+</li>
+<li><p>CMM/CMMI  </p>
+<ul>
+<li>![[02-历史与演变#4.2.2. 成熟度模型]]</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-3-软件工程演变的历史视角"><a href="#1-3-软件工程演变的历史视角" class="headerlink" title="1.3. 软件工程演变的历史视角"></a>1.3. 软件工程演变的历史视角</h2><p>[[02-历史与演变]]</p>
+<ul>
+<li>软件危机和软件工程</li>
+<li>三大阶段<ul>
+<li>敏捷宣言</li>
+<li>![[02-历史与演变#5.2.2. 敏捷开发]]</li>
+</ul>
+</li>
+<li>驱动力：本质难题</li>
+</ul>
+<h1 id="2-项目管理线"><a href="#2-项目管理线" class="headerlink" title="2. 项目管理线"></a>2. 项目管理线</h1><h2 id="2-1-概念"><a href="#2-1-概念" class="headerlink" title="2.1. 概念"></a>2.1. 概念</h2><p><strong>三大目标</strong>：成本、时间、质量</p>
+<h2 id="2-2-团队动力学"><a href="#2-2-团队动力学" class="headerlink" title="2.2. 团队动力学"></a>2.2. 团队动力学</h2><p>[[03-团队动力学]]</p>
+<ul>
+<li>知识工作的特点<ul>
+<li>知识工作管理：不能被管理，而是自管理</li>
+<li>领导者和特点</li>
+<li>不同激励方式<ul>
+<li>马斯洛需求层次理论</li>
+<li>期望理论</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>自主团队<ul>
+<li>内外部环境</li>
+<li>TSP角色和职责<ul>
+<li>![[03-团队动力学#2.2.3. 典型的TSP角色和职责]]</li>
+</ul>
+</li>
+<li>TSP启动过程<ul>
+<li>![[03-团队动力学#2.2.2. 启动会议/九次会议]]</li>
+</ul>
+</li>
+<li>SCRUM角色和职责<ul>
+<li>![[03-团队动力学#2.3. SCRUM团队]]]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-估算和计划"><a href="#2-3-估算和计划" class="headerlink" title="2.3. 估算和计划"></a>2.3. 估算和计划</h2><ul>
+<li><strong>估算要点</strong><ul>
+<li>估算目的是什么：<strong>团队达成一致</strong></li>
+<li>抽象、相对的估算</li>
+</ul>
+</li>
+<li>PROBE估算方法，相对大小矩阵<ul>
+<li>![[04-估算、计划和跟踪#1.3. PROBE估算方法]]</li>
+</ul>
+</li>
+<li>SCRUM故事点<ul>
+<li>![[04-估算、计划和跟踪#1.4. SCRUM中的Story point]]</li>
+</ul>
+</li>
+<li>通用计划框架：正推<ul>
+<li>![[04-估算、计划和跟踪#2.3. 通用计划框架]]</li>
+</ul>
+</li>
+<li>各类计划<ul>
+<li>质量管理</li>
+<li>风险</li>
+</ul>
+</li>
+<li>定量管理计划：自顶向下<ul>
+<li>过程模型 </li>
+<li>过程能力基线</li>
+<li>过程组合<ul>
+<li>关键子过程性能目标</li>
+<li>整体过程性能目标</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>![[08-定量管理与仿真建模]]</p>
+<h2 id="2-4-跟踪"><a href="#2-4-跟踪" class="headerlink" title="2.4. 跟踪"></a>2.4. 跟踪</h2><ul>
+<li>挣值管理：相对保守，完成才能拿到  <ul>
+<li>简单，中级和高级</li>
+<li>变形：燃尽图</li>
+<li>为何适应软件项目</li>
+</ul>
+</li>
+<li>定量管理的跟踪：自底向上<ul>
+<li>关键子过程性能控制</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-1-挣值管理"><a href="#2-4-1-挣值管理" class="headerlink" title="2.4.1. 挣值管理"></a>2.4.1. 挣值管理</h3><p>![[04-估算、计划和跟踪#2.6. 挣值管理方法]]</p>
+<h3 id="2-4-2-定量管理跟踪"><a href="#2-4-2-定量管理跟踪" class="headerlink" title="2.4.2. 定量管理跟踪"></a>2.4.2. 定量管理跟踪</h3><p>关键子过程性能控制</p>
+<h1 id="3-质量管理线"><a href="#3-质量管理线" class="headerlink" title="3. 质量管理线"></a>3. 质量管理线</h1><h2 id="3-1-概念"><a href="#3-1-概念" class="headerlink" title="3.1. 概念"></a>3.1. 概念</h2><ul>
+<li>关键质量管理的挑战：从管理三要素看，质量管理很困难</li>
+<li>面向用户的质量观 <ul>
+<li>![[05-质量管理#1.2. 面向用户的质量观]]</li>
+</ul>
+</li>
+<li>质量管理策略和背后逻辑<ul>
+<li>![[05-质量管理#1.3. PSP质量策略]]</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-评审"><a href="#3-2-评审" class="headerlink" title="3.2. 评审"></a>3.2. 评审</h2><ul>
+<li>个人评审<ul>
+<li>关键控制因素</li>
+<li>时机选择</li>
+</ul>
+</li>
+<li>小组<ul>
+<li>过程质量控制方式</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-质量评审指标"><a href="#3-3-质量评审指标" class="headerlink" title="3.3. 质量评审指标"></a>3.3. 质量评审指标</h2><ol>
+<li>Yield</li>
+<li>A/FR</li>
+<li>PQI</li>
+<li>DRL</li>
+<li><strong>特点和用途</strong></li>
+</ol>
+<p>![[05-质量管理#1.5. 质量指标]]</p>
+<h2 id="3-4-质量路线图"><a href="#3-4-质量路线图" class="headerlink" title="3.4. 质量路线图"></a>3.4. 质量路线图</h2><ul>
+<li>Journey:顺序：<ul>
+<li>![[05-质量管理#1.6. 质量路径]]</li>
+</ul>
+</li>
+<li>设计：<ul>
+<li>模板:要哪些信息<ul>
+<li>![[05-质量管理#2.4. PSP设计模板]]</li>
+</ul>
+</li>
+<li>设计的层次</li>
+</ul>
+</li>
+<li>设计评审 [[05-质量管理#2.6. 设计验证方法]]<ul>
+<li><strong>状态机</strong>：检查状态机的完整性和正交性</li>
+<li>符号化执行：用符号替换关键的变量，带入伪码程序，分析行为<ul>
+<li>优点：<ol>
+<li>实施简单，可以给出一般化结果</li>
+<li>适合不复杂的算法，特别是遗漏系统改造中，应用这种方法世界和理解原有的设计</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>不适合复杂逻辑的场景</li>
+<li>纯手工验证容易出错</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>执行表</strong><ul>
+<li>优点：实施简单；结果可靠，可用于验证复杂逻辑</li>
+<li>缺点：每次只能验证一个用例；手工验证比较耗时，容易引入错误</li>
+</ul>
+</li>
+<li><strong>跟踪表</strong><ul>
+<li>使用符号或以及用例识别等方式对程序进行一般化验证，<strong>是对执行表的补充</strong>，一次可以验证多个样例</li>
+</ul>
+</li>
+<li><strong>正确性证明</strong><ul>
+<li>将伪码当作数学定理，用形式化方法加以推理和验证</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-工程技术线"><a href="#4-工程技术线" class="headerlink" title="4. 工程技术线"></a>4. 工程技术线</h1><h2 id="4-1-需求"><a href="#4-1-需求" class="headerlink" title="4.1. 需求"></a>4.1. 需求</h2><p>客户需求<br>产品需求<br>![[06-团队工程开发#1.2. 需求分类]]</p>
+<p>产品经理</p>
+<h2 id="4-2-设计"><a href="#4-2-设计" class="headerlink" title="4.2. 设计"></a>4.2. 设计</h2><ul>
+<li>自顶向下<ul>
+<li><strong>自顶向下</strong>，逐层精化，有利于建立系统的整体观；利于评审</li>
+</ul>
+</li>
+<li>考虑点<ul>
+<li>团队智慧的运用</li>
+<li>设计标准</li>
+<li>Design for reuse</li>
+<li>可测试性支持</li>
+<li>可用性支持</li>
+<li>![[06-团队工程开发#2.2. 设计考虑点]]</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-3-实现"><a href="#4-3-实现" class="headerlink" title="4.3. 实现"></a>4.3. 实现</h2><ul>
+<li>考虑点<ol>
+<li>为了实现评审</li>
+<li>复用，自底向上实现</li>
+<li>可测试性考虑<br>![[06-团队工程开发#2.3. 实现策略]]</li>
+</ol>
+</li>
+</ul>
+<h2 id="4-4-基础"><a href="#4-4-基础" class="headerlink" title="4.4. 基础"></a>4.4. 基础</h2><ul>
+<li>覆盖范围</li>
+<li>基本策略：每一种策略的优缺点、<ol>
+<li>大爆炸</li>
+<li>逐一添加</li>
+<li>集族式</li>
+<li>扁平化</li>
+</ol>
+</li>
+</ul>
+<p>![[06-团队工程开发#3. 集成的策略选择]]</p>
+<h2 id="4-5-V-V"><a href="#4-5-V-V" class="headerlink" title="4.5. V&V"></a>4.5. V&amp;V</h2><ul>
+<li>概念和区别<ul>
+<li>verification验证：产品需求<ul>
+<li>检验获得的产品和产品组件能不能满足各自事先定义好的需求规格</li>
+</ul>
+</li>
+<li>validtion确认：客户需求<ul>
+<li>确保产品可以满足客户需求以及实际操作场景的要求</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>![[06-团队工程开发#4. 验证和确认(V &amp; V)]]</p>
+<h1 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h1><h2 id="5-1-配置管理"><a href="#5-1-配置管理" class="headerlink" title="5.1. 配置管理"></a>5.1. 配置管理</h2><p>配置项<br>基线</p>
+<p>![[07-项目支持活动#1.1. 配置管理介绍]]</p>
+<h2 id="5-2-度量和分析"><a href="#5-2-度量和分析" class="headerlink" title="5.2. 度量和分析"></a>5.2. 度量和分析</h2><p>GQM度量体系</p>
+<p>![[07-项目支持活动#2.2. GQM方法]]</p>
+<h2 id="5-3-决策分析与解决方案"><a href="#5-3-决策分析与解决方案" class="headerlink" title="5.3. 决策分析与解决方案"></a>5.3. 决策分析与解决方案</h2><p>招投标<br>![[07-项目支持活动#3. 决策分析]]</p>
+<h2 id="5-4-根因分析与解决方案"><a href="#5-4-根因分析与解决方案" class="headerlink" title="5.4. 根因分析与解决方案"></a>5.4. 根因分析与解决方案</h2><p>2-8发展，用来选择问题，选出分析项<br>鱼骨图，归因</p>
+<p>![[07-项目支持活动#4. 根因分析与解决方案]]</p>
+<h1 id="6-往年题"><a href="#6-往年题" class="headerlink" title="6. 往年题"></a>6. 往年题</h1><p><a class="link" href="https://blog.csdn.net/weixin_45916384/article/details/129141112">2022软件质量与管理-考题复习_软件管理中的phase yield例题-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="6-1-软件项目管理和软件过程管理"><a href="#6-1-软件项目管理和软件过程管理" class="headerlink" title="6.1. 软件项目管理和软件过程管理"></a>6.1. 软件项目管理和软件过程管理</h2><ul>
+<li>软件项目管理是应用方法、工具、技术以及人员能力来完成软件项目，实现项目目标的过程</li>
+<li>软件过程管理是为了让软件过程在开发效率、质量等方面有着更好性能绩效</li>
+</ul>
+<h2 id="6-2-生命周期模型与软件过程的区别和联系"><a href="#6-2-生命周期模型与软件过程的区别和联系" class="headerlink" title="6.2. 生命周期模型与软件过程的区别和联系"></a>6.2. 生命周期模型与软件过程的区别和联系</h2><ol>
+<li>生命周期模型是对一个软件开发过程的人为划分</li>
+<li>生命周期模型是软件开发过程的框架，是对软件开发过程的一种粗粒度划分</li>
+<li>生命周期模型往往不包括技术实践</li>
+</ol>
+<h2 id="6-3-2020-结合软件发展的三大阶段，描述不同阶段的典型软件开发方法和实践"><a href="#6-3-2020-结合软件发展的三大阶段，描述不同阶段的典型软件开发方法和实践" class="headerlink" title="6.3. [2020]结合软件发展的三大阶段，描述不同阶段的典型软件开发方法和实践"></a>6.3. [2020]结合软件发展的三大阶段，描述不同阶段的典型软件开发方法和实践</h2><ol>
+<li>软硬件一体化：线性顺序过程，实质上是硬件开发流程；measure twice, cut once；code anf fix</li>
+<li>软件成为独立产品：结构化程序设计，瀑布模型，成熟度模型</li>
+<li>网络化和服务化：迭代式开发，敏捷运动，开源软件开发，devops</li>
+</ol>
+<h2 id="6-4-2018-软件项目管理和软件过程管理"><a href="#6-4-2018-软件项目管理和软件过程管理" class="headerlink" title="6.4. [2018]软件项目管理和软件过程管理"></a>6.4. [2018]软件项目管理和软件过程管理</h2><ul>
+<li>软件项目管理是使用方法、工具、技术以及人员能力等完成软件项目，实现项目目标的过程</li>
+<li>软件过程管理是为了让软件过程在开发效率、质量等方面有着更好的性能绩效</li>
+</ul>
+<h2 id="6-5-生命周期模型与软件过程的区别和联系"><a href="#6-5-生命周期模型与软件过程的区别和联系" class="headerlink" title="6.5. 生命周期模型与软件过程的区别和联系"></a>6.5. 生命周期模型与软件过程的区别和联系</h2><ol>
+<li>软件生命周期模型是对软件过程的人为划分</li>
+<li>生命周期模型是软件开发过程的框架，是对软件过程的一种粗粒度划分</li>
+<li>生命周期模型往往不包含技术实践</li>
+</ol>
+<h2 id="6-6-如何理解瀑布模型"><a href="#6-6-如何理解瀑布模型" class="headerlink" title="6.6. 如何理解瀑布模型"></a>6.6. 如何理解瀑布模型</h2><ol>
+<li>瀑布模型不是单一模型，而是一些列模型，覆盖最简单的场景到最复杂的场景</li>
+<li>软件项目应该结合实际情况选择合适过程元素的瀑布模型，基本原则是，项目面临的困难越多选择的模型越复杂</li>
+<li>软件项目团队往往低估挑战，选择过于简单而不适应的瀑布模型</li>
+</ol>
+<h2 id="6-7-Schedule-plan"><a href="#6-7-Schedule-plan" class="headerlink" title="6.7. Schedule plan"></a>6.7. Schedule plan</h2><ol>
+<li>Task Order</li>
+<li>Schedule Hour</li>
+<li>Task List</li>
+<li>Task hour for each task</li>
+</ol>
+<p>不包含Task Size</p>
+<h2 id="6-8-谈谈你对项目估算的认识，并简要解释应用-PROBE-方法估算的优缺点"><a href="#6-8-谈谈你对项目估算的认识，并简要解释应用-PROBE-方法估算的优缺点" class="headerlink" title="6.8. 谈谈你对项目估算的认识，并简要解释应用 PROBE 方法估算的优缺点"></a>6.8. 谈谈你对项目估算的认识，并简要解释应用 PROBE 方法估算的优缺点</h2><ul>
+<li>对估算的认识：<ol>
+<li>规模估算往往可以根据历史数据来完成，其原因在于规模估算结果的偏差产生原因相对客观，历史数据偏差可以用以修正新的估算结果</li>
+<li>时间估算的偏差产生原因更加复杂，一方面和规模有关，另一方面和人的主观能动性有关，因此，时间估算偏差的原因可能在于估算结果本身，这是的历史数据中的时间偏差参考价值不大</li>
+<li>估算本身是一种猜测，追求的目标应该是一致性以及估算结果的使用者对估算结果的信心</li>
+</ol>
+</li>
+<li>PROBE优缺点：<ul>
+<li>PROBE估算方法通过定义的估算过程和数据收集以及使用框架，使得估算结果可以尽可能一致，从而使得一些统计方法可以用来调整估算结果，增强用户对估算结果的信心</li>
+<li>但是这种估算方法非常依赖高质量的历史数据，一旦数据不完整或缺失，就可能导致估算结果有显著的偏差</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-9-PROBE方法估算时间的时候，为什么不使用历史数据中的生产效率数据？"><a href="#6-9-PROBE方法估算时间的时候，为什么不使用历史数据中的生产效率数据？" class="headerlink" title="6.9. PROBE方法估算时间的时候，为什么不使用历史数据中的生产效率数据？"></a>6.9. PROBE方法估算时间的时候，为什么不使用历史数据中的生产效率数据？</h2><p>在估算资源（如人时）时候，生产效率一般在分母上，考虑到个体软件工程师生产效率的波动，易导致估算的偏差范围变大。</p>
+<h2 id="6-10-请结合软件开发的特点介绍软件项目管理中自主型团队的必要性以及自主团队应该具备的特征？"><a href="#6-10-请结合软件开发的特点介绍软件项目管理中自主型团队的必要性以及自主团队应该具备的特征？" class="headerlink" title="6.10. 请结合软件开发的特点介绍软件项目管理中自主型团队的必要性以及自主团队应该具备的特征？"></a>6.10. 请结合软件开发的特点介绍软件项目管理中自主型团队的必要性以及自主团队应该具备的特征？</h2><ul>
+<li>软件开发是一项非常复杂又具有创造力的知识工作。</li>
+<li>软件开发是一种智力活动，开发者是智力劳动者，对智力劳动者不能被管理，只能自我管理。<ol>
+<li>处理和讨论非常抽象的概念</li>
+<li>把不同部分整合成一个可以工作的正确的系统</li>
+<li>全身心地参与</li>
+<li>努力做出卓越的工作</li>
+</ol>
+</li>
+<li>自主团队的特点<ol>
+<li>自行定义项目的目标</li>
+<li>自行决定团队组成形式和成员角色</li>
+<li>自行决定项目的开发策略</li>
+<li>自行定义项目的开发过程</li>
+<li>自行制定项目的开发计划</li>
+<li>自行度量、管理和控制项目工作</li>
+</ol>
+</li>
+</ul>
+<h2 id="6-11-知识工作者的领导的特点"><a href="#6-11-知识工作者的领导的特点" class="headerlink" title="6.11. 知识工作者的领导的特点"></a>6.11. 知识工作者的领导的特点</h2><ol>
+<li>善于倾听团队成员的想法，并加以分析和改进</li>
+<li>善于通过询问诱导团队成员向着正确的方向前进</li>
+<li>善于通过激励以及设定挑战目标等方式吸引团队成员努力表现</li>
+<li>当出现不一致的意见时，领导者善于提供各种沟通方式，促使团队达成一致意见</li>
+<li>培养团队成员技能</li>
+<li>鼓励建立合理的授权机制</li>
+<li>通过挑战建立目标，确定团队努力方向</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
   </entry>
 </search>
