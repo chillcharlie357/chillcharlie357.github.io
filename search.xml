@@ -2574,6 +2574,224 @@
       </tags>
   </entry>
   <entry>
+    <title>17_输入输出</title>
+    <url>/posts/5f35f2c1/</url>
+    <content><![CDATA[<h1 id="1-外围设备"><a href="#1-外围设备" class="headerlink" title="1. 外围设备"></a>1. 外围设备</h1><p>输入/输出操作通过连接到输入输出模块的各种外部设备完成， 这些外部设备提供了在外部环境和计算机系统之间的数据交 换，通常被称为<strong>外围设备（peripheral device</strong>），简称为外设 （peripheral）</p>
+<ul>
+<li>为什么<strong>不能</strong>把外设直接连接到系统总线上？<ul>
+<li>外设种类繁多，操作方法多种多样</li>
+<li>外设的数据传送速度一般比存储器或处理器的慢得多</li>
+<li>某些外设的数据传送速度比存储器或处理器要快</li>
+<li>外设使用的数据格式和字长度通常与处理器不同</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-I-O模块"><a href="#2-I-O模块" class="headerlink" title="2. I/O模块"></a>2. I/O模块</h1><ul>
+<li>通过系统总线或中央交换器和存储器连接</li>
+<li>通过<strong>专用数据线</strong>与一个或多个外设连接</li>
+<li>I/O模块是计算机内部系统和外设之间的桥梁<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/32be486ac10d89d09eda4666959010da_NVIDIA_Share_469_469.png" alt="NVIDIA_Share_469_469.png"></li>
+</ul>
+<h2 id="2-1-外围设备的接口"><a href="#2-1-外围设备的接口" class="headerlink" title="2.1. 外围设备的接口"></a>2.1. 外围设备的接口</h2><ul>
+<li>输入/输出模块的接口以<strong>控制、状态和数据信号</strong>的形式出现</li>
+<li>与设备相关的控制逻辑控制外设的操作，以响应来自输入/输出模块的命令</li>
+<li><strong>缓冲器</strong>用于缓存输入/输出模块和外设之间传送的数据<ul>
+<li>缓冲器的大小一般为8位或16位</li>
+<li>速率不一致，缓冲</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/081fda1a8645a3ea97fc9e823d6d30f7_NVIDIA_Share_473_447.png" alt="NVIDIA_Share_473_447.png"></p>
+<h2 id="2-2-I-O模块的功能"><a href="#2-2-I-O模块的功能" class="headerlink" title="2.2. I/O模块的功能"></a>2.2. I/O模块的功能</h2><h3 id="2-2-1-处理器通信"><a href="#2-2-1-处理器通信" class="headerlink" title="2.2.1. 处理器通信"></a>2.2.1. 处理器通信</h3><ul>
+<li>命令译码：输入/输出模块接收来自处理器的命令，这些命令一般 作为信号发送到控制总线</li>
+<li>数据：数据是在处理器和输入/输出模块之间经由数据总线来交换的</li>
+<li>状态报告：由于外设速度很慢, 所以知道输入/输出模块的状态很重要</li>
+<li>地址识别：输入/输出模块必须能识别它所控制的每个外设的唯一 地址</li>
+</ul>
+<h3 id="2-2-2-设备通信"><a href="#2-2-2-设备通信" class="headerlink" title="2.2.2. 设备通信"></a>2.2.2. 设备通信</h3><p>通信内容包含命令、状态信息和数据</p>
+<h3 id="2-2-3-数据缓冲"><a href="#2-2-3-数据缓冲" class="headerlink" title="2.2.3. 数据缓冲"></a>2.2.3. 数据缓冲</h3><ul>
+<li>外设的数据传送速度一般比存储器或处理器的慢得多</li>
+<li>某些外设的数据传送速度比存储器或处理器要快</li>
+</ul>
+<h3 id="2-2-4-控制和定时"><a href="#2-2-4-控制和定时" class="headerlink" title="2.2.4. 控制和定时"></a>2.2.4. 控制和定时</h3><ul>
+<li>处理器会<strong>非预期的</strong>与一个或几个外设进行通信</li>
+<li>一些内部资源，如<strong>主存和系统总线，是被共享的</strong></li>
+<li>例子：控制从外设到处理器的数据传送包括以下几个步骤<ul>
+<li>处理器查询输入/输出模块以检验所连接设备的状态</li>
+<li>输入输出模块返回设备状态</li>
+<li>如果设备运转并准备就绪，则处理器通过向输入/输出模块发出一条命令,请求数据传送</li>
+<li>数据从输入/输出模块来到处理器</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-5-检错"><a href="#2-2-5-检错" class="headerlink" title="2.2.5. 检错"></a>2.2.5. 检错</h3><ul>
+<li>检错并把差错信息报告给处理器</li>
+<li>差错类型<ul>
+<li>设备报告的机械和电路故障</li>
+<li>传输过程中数据位的变化</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-I-O模块结构"><a href="#2-3-I-O模块结构" class="headerlink" title="2.3. I/O模块结构"></a>2.3. I/O模块结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/3f9f5419e48c74183cd40192275587c9_NVIDIA_Share_1180_886.png" alt="NVIDIA_Share_1180_886.png"></p>
+<ul>
+<li>USB：通用串行总线（Universal Serial Bus）</li>
+<li>FireWire：IEEE标准1394串行总线</li>
+</ul>
+<h1 id="3-I-O操作技术"><a href="#3-I-O操作技术" class="headerlink" title="3. I/O操作技术"></a>3. I/O操作技术</h1><ul>
+<li>编程式 I/O：处理器通过执行程序<strong>来直接控制I/O操作</strong>，当处理器发送一条命令到I/O模块时，它必须等待，直到I/O操作完成</li>
+<li>中断驱动式 I/O：处理器发送一条I/O命令后，继续执行其他指令； 并且当I/O模块完成其工作后，才去中断处理器工作</li>
+<li>直接存储器读取（Direct Memory Access，DMA）：I/O模块与主存直接交换数据，而不需要处理器的干涉</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>I/O与存储器传递方式</th>
+<th>无中断</th>
+<th>使用中断</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>通过处理器</td>
+<td>编程式I/O</td>
+<td>中断驱动式I/O</td>
+</tr>
+<tr>
+<td>直接传递</td>
+<td></td>
+<td>直接存储器存取（DMA）</td>
+</tr>
+</tbody></table>
+<h2 id="3-1-编程式I-O"><a href="#3-1-编程式I-O" class="headerlink" title="3.1. 编程式I/O"></a>3.1. 编程式I/O</h2><ul>
+<li>当<strong>处理器</strong>在执行过程中遇到一条与I/O操作有关的指令时，它通过发送指令到适当 的I/O模块来执行这条指令</li>
+<li>I/O模块将执行所要求的动作，然后在I/O 状态寄存器中设置一些适当的位</li>
+<li>I/O不会中断处理器，因此处理器需要周期性地检查I/O模块的状态，直到发现该操作完成</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/84962f8ad92f7ad35dedf3424797d7e9_NVIDIA_Share_292_626.png" alt="NVIDIA_Share_292_626.png"></p>
+<h3 id="3-1-1-I-O命令"><a href="#3-1-1-I-O命令" class="headerlink" title="3.1.1. I/O命令"></a>3.1.1. I/O命令</h3><ul>
+<li>为了执行I/O操作，<strong>处理器</strong>发送一个指定具体I/O模块和外设的地址，并发送一条<strong>I/O命令</strong></li>
+<li>类型<ul>
+<li>控制命令：激活外设并告诉它要做什么</li>
+<li>测试命令：测试I/O模块及其外设相关的各种状态条件</li>
+<li>读命令：使I/O模块从外设获得一个数据，把它存入内部缓冲区</li>
+<li>写命令：使I/O模块从数据总线获得一个数据，把它传入外设</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-2-I-O指令"><a href="#3-1-2-I-O指令" class="headerlink" title="3.1.2. I/O指令"></a>3.1.2. I/O指令</h3><ul>
+<li>I/O指令很容易映射为I/O命令, 并且两者之间通常是简单的一 一对应关系<ul>
+<li>指令的形式取决于外设寻址的方式</li>
+</ul>
+</li>
+<li>编址方式<ul>
+<li>存储器映射式I/O：存储单元和I/O设备有统一的地址空间<ul>
+<li>能使用大的指令系统，可进行更有效的编程</li>
+</ul>
+</li>
+<li>分离式I/O：让总线既有存储器的读线和写线，同时也有输入和输出命令线</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-中断驱动式I-O"><a href="#3-2-中断驱动式I-O" class="headerlink" title="3.2. 中断驱动式I/O"></a>3.2. 中断驱动式I/O</h2><ul>
+<li>处理器发送一个I/O命令到模块，然后去处理其它有用的工作</li>
+<li>当I/O模块准备好和处理器交换数据时，它<strong>中断处理器</strong>以请求服务</li>
+<li>处理器执行数据传送，最后恢复它原先的处理工作</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/36fa86caa632a2ede1a3574b7a4ee00a_36fa86caa632a2ede1a3574b7a4ee00a_NVIDIA_Share_344_681.png" alt="NVIDIA_Share_344_681.png"></p>
+<h3 id="3-2-1-从处理器视角和IO视角看中断"><a href="#3-2-1-从处理器视角和IO视角看中断" class="headerlink" title="3.2.1. 从处理器视角和IO视角看中断"></a>3.2.1. 从处理器视角和IO视角看中断</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/2bcb2629f54195d02ec4c9302d2dd724_NVIDIA_Share_1090_455.png" alt="NVIDIA_Share_1090_455.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/9986d19d4a666411964d7a81abaf6473_NVIDIA_Share_1070_370.png" alt="NVIDIA_Share_1070_370.png"></p>
+<h3 id="3-2-2-中断允许和中断禁止"><a href="#3-2-2-中断允许和中断禁止" class="headerlink" title="3.2.2. 中断允许和中断禁止"></a>3.2.2. 中断允许和中断禁止</h3><ul>
+<li>保存上下文和恢复上下文过程中<strong>禁止中断</strong></li>
+<li>处理中断和恢复完上下文后<strong>允许中断</strong><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/c70d88515715d4e2975bbc1ade1e222d_NVIDIA_Share_1186_875.png" alt="NVIDIA_Share_1186_875.png"></li>
+</ul>
+<h3 id="3-2-3-响应优先级和处理优先级"><a href="#3-2-3-响应优先级和处理优先级" class="headerlink" title="3.2.3. 响应优先级和处理优先级"></a>3.2.3. 响应优先级和处理优先级</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/37c2b9436672122529f80b9562191ae8_NVIDIA_Share_1162_619.png" alt="NVIDIA_Share_1162_619.png"></p>
+<h3 id="3-2-4-设备识别"><a href="#3-2-4-设备识别" class="headerlink" title="3.2.4. 设备识别"></a>3.2.4. 设备识别</h3><ul>
+<li>多条中断线<ul>
+<li>即使有多条中断线可用，每条线上也需要采用其它三种技术中的一种</li>
+</ul>
+</li>
+<li>软件轮询<ul>
+<li>轮询每一个I/O模块来确定是哪个模块发生的中断</li>
+</ul>
+</li>
+<li>菊花链<ul>
+<li>所有的I/O模块共享一条中断请求线，中断应答线采用菊花链穿过这些中断模块</li>
+</ul>
+</li>
+<li>独立请求<ul>
+<li>特定的中断控制器用于解码和分析优先级</li>
+</ul>
+</li>
+</ul>
+<p>类似：[[16_总线#3.2. 仲裁]]</p>
+<h3 id="3-2-5-分配优先级"><a href="#3-2-5-分配优先级" class="headerlink" title="3.2.5. 分配优先级"></a>3.2.5. 分配优先级</h3><ul>
+<li>多条中断线：处理器仅仅挑选具有最高优先级的中断线</li>
+<li>软件轮询：模块的轮询次序就决定了模块的优先级</li>
+<li>菊花链：链接模块次序就决定了模块的优先级</li>
+<li>独立请求：中断控制器决定</li>
+</ul>
+<h2 id="3-3-直接存储器存取DMA"><a href="#3-3-直接存储器存取DMA" class="headerlink" title="3.3. 直接存储器存取DMA"></a>3.3. 直接存储器存取DMA</h2><ul>
+<li>不足<ul>
+<li>I/O传送速度受处理器测试和服务设备速度的限制</li>
+<li>处理器负责管理I/O传送，对于每一次I/O传送，处理器必须执行很多指令</li>
+</ul>
+</li>
+<li>直接存储器存取<ul>
+<li>无需经过处理器即可直接访问内存的模块</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/feeb193c5f1f8c3ae30f40f8f23be81d_NVIDIA_Share_364_701.png" alt="NVIDIA_Share_364_701.png"></p>
+<h3 id="3-3-1-处理过程"><a href="#3-3-1-处理过程" class="headerlink" title="3.3.1. 处理过程"></a>3.3.1. 处理过程</h3><ul>
+<li>处理器通过发送以下信息向DMA模块发出命令：读/写、I/O设备地址、内存中的起始位置、字数</li>
+<li>处理器继续进行其他工作</li>
+<li>DMA模块将全部数据块，每次一个字，直接将数据传输到存储器或从存储器读出，而<strong>无需经过处理器</strong></li>
+<li><strong>当传输完成时</strong>，DMA模块向处理器发送一个中断信号</li>
+</ul>
+<h3 id="3-3-2-DMA内存访问"><a href="#3-3-2-DMA内存访问" class="headerlink" title="3.3.2. DMA内存访问"></a>3.3.2. DMA内存访问</h3><h4 id="3-3-2-1-CPU停止法"><a href="#3-3-2-1-CPU停止法" class="headerlink" title="3.3.2.1. CPU停止法"></a>3.3.2.1. CPU停止法</h4><ul>
+<li>优点：控制简单</li>
+<li>缺点：影响CPU，没有充分利用内存</li>
+<li>适用：高速I/O设备的块传输<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/2d7422830f6fb6d52eb4fbca0fd33502_NVIDIA_Share_948_300.png" alt="NVIDIA_Share_948_300.png"></li>
+</ul>
+<h4 id="3-3-2-2-周期窃取"><a href="#3-3-2-2-周期窃取" class="headerlink" title="3.3.2.2. 周期窃取"></a>3.3.2.2. 周期窃取</h4><ul>
+<li>优点：充分利用CPU和内存，及时响应I/O请求</li>
+<li>缺点：DMA每次都请求总线</li>
+<li>适用：I/O周期大于存储周期<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/12047bf6ca615049da2f1567b92981b5_NVIDIA_Share_965_303.png" alt="NVIDIA_Share_965_303.png"></li>
+</ul>
+<h4 id="3-3-2-3-交替分时访问"><a href="#3-3-2-3-交替分时访问" class="headerlink" title="3.3.2.3. 交替分时访问"></a>3.3.2.3. 交替分时访问</h4><ul>
+<li>优点：CPU未停止或等待，DMA不请求总线</li>
+<li>缺点：CPU周期大于存储周期<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/14aaebdf4deee5b894f1c20eb8b3ecd8_NVIDIA_Share_915_326.png" alt="NVIDIA_Share_915_326.png"></li>
+</ul>
+<h3 id="3-3-3-DMA配置机制"><a href="#3-3-3-DMA配置机制" class="headerlink" title="3.3.3. DMA配置机制"></a>3.3.3. DMA配置机制</h3><h4 id="3-3-3-1-单总线分离DMA"><a href="#3-3-3-1-单总线分离DMA" class="headerlink" title="3.3.3.1. 单总线分离DMA"></a>3.3.3.1. 单总线分离DMA</h4><ul>
+<li>所有模块共享相同的系统总线</li>
+<li>DMA模块使用<strong>编程式I/O</strong>，通过DMA模块在存储器和I/O模块之间交换数据</li>
+<li>便宜但低效<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/33ccba4c17f39248a793a9242b9dd7c9_NVIDIA_Share_847_213.png" alt="NVIDIA_Share_847_213.png"></li>
+</ul>
+<h4 id="3-3-3-2-单总线集合的DMA-I-O"><a href="#3-3-3-2-单总线集合的DMA-I-O" class="headerlink" title="3.3.3.2. 单总线集合的DMA-I/O"></a>3.3.3.2. 单总线集合的DMA-I/O</h4><ul>
+<li>DMA逻辑实际上可能是I/O模块的一部分，也可能是控制一个或多个I/O模块的单独模块</li>
+<li>减少总线周期数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/79750831cb015a614092b246efabac28_NVIDIA_Share_775_230.png" alt="NVIDIA_Share_775_230.png"></li>
+</ul>
+<h4 id="3-3-3-3-I-O-总线"><a href="#3-3-3-3-I-O-总线" class="headerlink" title="3.3.3.3. I/O 总线"></a>3.3.3.3. I/O 总线</h4><ul>
+<li>使用I/O总线将I/O模块连接到DMA模块</li>
+<li>多个I/O模块共享DMA，且易于扩展<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/92aa65b994db7f43b1bbc284c75db767_NVIDIA_Share_771_283.png" alt="NVIDIA_Share_771_283.png"></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/e3906e7db3ced54a1f17b29c1974f70f_NVIDIA_Share_610_729.png" alt="NVIDIA_Share_610_729.png"></p>
+<h1 id="4-I-O模块的演变"><a href="#4-I-O模块的演变" class="headerlink" title="4. I/O模块的演变"></a>4. I/O模块的演变</h1><ul>
+<li>CPU直接控制外设</li>
+<li>增加控制器或I/O模块，CPU使用编程式I/O，将CPU与外围设备的细节分离</li>
+<li>采用中断，CPU无需花费时间等待外围设备就绪</li>
+<li>I/O模块可通过DMA直接存取存储器，无需CPU负责存储器和I/O模块之间的数据传递</li>
+<li>I/O通道（I/O channel）：I/O模块有自己的处理器，带有专门为I/O操作定制的指令集</li>
+<li>CPU指示I/O通道执行存储器中的I/O指令，只有在执行完成后才会中断CPU</li>
+<li>I/O处理器（I/O processor）：I/O模块有一个局部存储器，I/O模块成为一个自治的计算机，常用于与交互式终端进行通信</li>
+<li>只需最少的CPU参与即可控制大量I/O设备</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2022Fall_计算机组织与结构</category>
+      </categories>
+      <tags>
+        <tag>2022Fall_计算机组织与结构 课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>16_总线</title>
     <url>/posts/1badac07/</url>
     <content><![CDATA[<h1 id="1-总线结构"><a href="#1-总线结构" class="headerlink" title="1. 总线结构"></a>1. 总线结构</h1><ul>
@@ -2839,224 +3057,6 @@
 <h3 id="3-6-6-多总线结构III"><a href="#3-6-6-多总线结构III" class="headerlink" title="3.6.6. 多总线结构III"></a>3.6.6. 多总线结构III</h3><ul>
 <li>增加一个 高速 I/O 总线 来连接高速设备</li>
 <li>优点：增加 I/O 交互效率<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/1925f5de97d61216df199455540b18a7_NVIDIA_Share_1032_469.png" alt="NVIDIA_Share_1032_469.png"></li>
-</ul>
-]]></content>
-      <categories>
-        <category>2022Fall_计算机组织与结构</category>
-      </categories>
-      <tags>
-        <tag>2022Fall_计算机组织与结构 课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>17_输入输出</title>
-    <url>/posts/5f35f2c1/</url>
-    <content><![CDATA[<h1 id="1-外围设备"><a href="#1-外围设备" class="headerlink" title="1. 外围设备"></a>1. 外围设备</h1><p>输入/输出操作通过连接到输入输出模块的各种外部设备完成， 这些外部设备提供了在外部环境和计算机系统之间的数据交 换，通常被称为<strong>外围设备（peripheral device</strong>），简称为外设 （peripheral）</p>
-<ul>
-<li>为什么<strong>不能</strong>把外设直接连接到系统总线上？<ul>
-<li>外设种类繁多，操作方法多种多样</li>
-<li>外设的数据传送速度一般比存储器或处理器的慢得多</li>
-<li>某些外设的数据传送速度比存储器或处理器要快</li>
-<li>外设使用的数据格式和字长度通常与处理器不同</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-I-O模块"><a href="#2-I-O模块" class="headerlink" title="2. I/O模块"></a>2. I/O模块</h1><ul>
-<li>通过系统总线或中央交换器和存储器连接</li>
-<li>通过<strong>专用数据线</strong>与一个或多个外设连接</li>
-<li>I/O模块是计算机内部系统和外设之间的桥梁<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/32be486ac10d89d09eda4666959010da_NVIDIA_Share_469_469.png" alt="NVIDIA_Share_469_469.png"></li>
-</ul>
-<h2 id="2-1-外围设备的接口"><a href="#2-1-外围设备的接口" class="headerlink" title="2.1. 外围设备的接口"></a>2.1. 外围设备的接口</h2><ul>
-<li>输入/输出模块的接口以<strong>控制、状态和数据信号</strong>的形式出现</li>
-<li>与设备相关的控制逻辑控制外设的操作，以响应来自输入/输出模块的命令</li>
-<li><strong>缓冲器</strong>用于缓存输入/输出模块和外设之间传送的数据<ul>
-<li>缓冲器的大小一般为8位或16位</li>
-<li>速率不一致，缓冲</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/081fda1a8645a3ea97fc9e823d6d30f7_NVIDIA_Share_473_447.png" alt="NVIDIA_Share_473_447.png"></p>
-<h2 id="2-2-I-O模块的功能"><a href="#2-2-I-O模块的功能" class="headerlink" title="2.2. I/O模块的功能"></a>2.2. I/O模块的功能</h2><h3 id="2-2-1-处理器通信"><a href="#2-2-1-处理器通信" class="headerlink" title="2.2.1. 处理器通信"></a>2.2.1. 处理器通信</h3><ul>
-<li>命令译码：输入/输出模块接收来自处理器的命令，这些命令一般 作为信号发送到控制总线</li>
-<li>数据：数据是在处理器和输入/输出模块之间经由数据总线来交换的</li>
-<li>状态报告：由于外设速度很慢, 所以知道输入/输出模块的状态很重要</li>
-<li>地址识别：输入/输出模块必须能识别它所控制的每个外设的唯一 地址</li>
-</ul>
-<h3 id="2-2-2-设备通信"><a href="#2-2-2-设备通信" class="headerlink" title="2.2.2. 设备通信"></a>2.2.2. 设备通信</h3><p>通信内容包含命令、状态信息和数据</p>
-<h3 id="2-2-3-数据缓冲"><a href="#2-2-3-数据缓冲" class="headerlink" title="2.2.3. 数据缓冲"></a>2.2.3. 数据缓冲</h3><ul>
-<li>外设的数据传送速度一般比存储器或处理器的慢得多</li>
-<li>某些外设的数据传送速度比存储器或处理器要快</li>
-</ul>
-<h3 id="2-2-4-控制和定时"><a href="#2-2-4-控制和定时" class="headerlink" title="2.2.4. 控制和定时"></a>2.2.4. 控制和定时</h3><ul>
-<li>处理器会<strong>非预期的</strong>与一个或几个外设进行通信</li>
-<li>一些内部资源，如<strong>主存和系统总线，是被共享的</strong></li>
-<li>例子：控制从外设到处理器的数据传送包括以下几个步骤<ul>
-<li>处理器查询输入/输出模块以检验所连接设备的状态</li>
-<li>输入输出模块返回设备状态</li>
-<li>如果设备运转并准备就绪，则处理器通过向输入/输出模块发出一条命令,请求数据传送</li>
-<li>数据从输入/输出模块来到处理器</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-2-5-检错"><a href="#2-2-5-检错" class="headerlink" title="2.2.5. 检错"></a>2.2.5. 检错</h3><ul>
-<li>检错并把差错信息报告给处理器</li>
-<li>差错类型<ul>
-<li>设备报告的机械和电路故障</li>
-<li>传输过程中数据位的变化</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-3-I-O模块结构"><a href="#2-3-I-O模块结构" class="headerlink" title="2.3. I/O模块结构"></a>2.3. I/O模块结构</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/3f9f5419e48c74183cd40192275587c9_NVIDIA_Share_1180_886.png" alt="NVIDIA_Share_1180_886.png"></p>
-<ul>
-<li>USB：通用串行总线（Universal Serial Bus）</li>
-<li>FireWire：IEEE标准1394串行总线</li>
-</ul>
-<h1 id="3-I-O操作技术"><a href="#3-I-O操作技术" class="headerlink" title="3. I/O操作技术"></a>3. I/O操作技术</h1><ul>
-<li>编程式 I/O：处理器通过执行程序<strong>来直接控制I/O操作</strong>，当处理器发送一条命令到I/O模块时，它必须等待，直到I/O操作完成</li>
-<li>中断驱动式 I/O：处理器发送一条I/O命令后，继续执行其他指令； 并且当I/O模块完成其工作后，才去中断处理器工作</li>
-<li>直接存储器读取（Direct Memory Access，DMA）：I/O模块与主存直接交换数据，而不需要处理器的干涉</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>I/O与存储器传递方式</th>
-<th>无中断</th>
-<th>使用中断</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>通过处理器</td>
-<td>编程式I/O</td>
-<td>中断驱动式I/O</td>
-</tr>
-<tr>
-<td>直接传递</td>
-<td></td>
-<td>直接存储器存取（DMA）</td>
-</tr>
-</tbody></table>
-<h2 id="3-1-编程式I-O"><a href="#3-1-编程式I-O" class="headerlink" title="3.1. 编程式I/O"></a>3.1. 编程式I/O</h2><ul>
-<li>当<strong>处理器</strong>在执行过程中遇到一条与I/O操作有关的指令时，它通过发送指令到适当 的I/O模块来执行这条指令</li>
-<li>I/O模块将执行所要求的动作，然后在I/O 状态寄存器中设置一些适当的位</li>
-<li>I/O不会中断处理器，因此处理器需要周期性地检查I/O模块的状态，直到发现该操作完成</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/84962f8ad92f7ad35dedf3424797d7e9_NVIDIA_Share_292_626.png" alt="NVIDIA_Share_292_626.png"></p>
-<h3 id="3-1-1-I-O命令"><a href="#3-1-1-I-O命令" class="headerlink" title="3.1.1. I/O命令"></a>3.1.1. I/O命令</h3><ul>
-<li>为了执行I/O操作，<strong>处理器</strong>发送一个指定具体I/O模块和外设的地址，并发送一条<strong>I/O命令</strong></li>
-<li>类型<ul>
-<li>控制命令：激活外设并告诉它要做什么</li>
-<li>测试命令：测试I/O模块及其外设相关的各种状态条件</li>
-<li>读命令：使I/O模块从外设获得一个数据，把它存入内部缓冲区</li>
-<li>写命令：使I/O模块从数据总线获得一个数据，把它传入外设</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-1-2-I-O指令"><a href="#3-1-2-I-O指令" class="headerlink" title="3.1.2. I/O指令"></a>3.1.2. I/O指令</h3><ul>
-<li>I/O指令很容易映射为I/O命令, 并且两者之间通常是简单的一 一对应关系<ul>
-<li>指令的形式取决于外设寻址的方式</li>
-</ul>
-</li>
-<li>编址方式<ul>
-<li>存储器映射式I/O：存储单元和I/O设备有统一的地址空间<ul>
-<li>能使用大的指令系统，可进行更有效的编程</li>
-</ul>
-</li>
-<li>分离式I/O：让总线既有存储器的读线和写线，同时也有输入和输出命令线</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-2-中断驱动式I-O"><a href="#3-2-中断驱动式I-O" class="headerlink" title="3.2. 中断驱动式I/O"></a>3.2. 中断驱动式I/O</h2><ul>
-<li>处理器发送一个I/O命令到模块，然后去处理其它有用的工作</li>
-<li>当I/O模块准备好和处理器交换数据时，它<strong>中断处理器</strong>以请求服务</li>
-<li>处理器执行数据传送，最后恢复它原先的处理工作</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/36fa86caa632a2ede1a3574b7a4ee00a_36fa86caa632a2ede1a3574b7a4ee00a_NVIDIA_Share_344_681.png" alt="NVIDIA_Share_344_681.png"></p>
-<h3 id="3-2-1-从处理器视角和IO视角看中断"><a href="#3-2-1-从处理器视角和IO视角看中断" class="headerlink" title="3.2.1. 从处理器视角和IO视角看中断"></a>3.2.1. 从处理器视角和IO视角看中断</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/2bcb2629f54195d02ec4c9302d2dd724_NVIDIA_Share_1090_455.png" alt="NVIDIA_Share_1090_455.png"><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/9986d19d4a666411964d7a81abaf6473_NVIDIA_Share_1070_370.png" alt="NVIDIA_Share_1070_370.png"></p>
-<h3 id="3-2-2-中断允许和中断禁止"><a href="#3-2-2-中断允许和中断禁止" class="headerlink" title="3.2.2. 中断允许和中断禁止"></a>3.2.2. 中断允许和中断禁止</h3><ul>
-<li>保存上下文和恢复上下文过程中<strong>禁止中断</strong></li>
-<li>处理中断和恢复完上下文后<strong>允许中断</strong><br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/c70d88515715d4e2975bbc1ade1e222d_NVIDIA_Share_1186_875.png" alt="NVIDIA_Share_1186_875.png"></li>
-</ul>
-<h3 id="3-2-3-响应优先级和处理优先级"><a href="#3-2-3-响应优先级和处理优先级" class="headerlink" title="3.2.3. 响应优先级和处理优先级"></a>3.2.3. 响应优先级和处理优先级</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/37c2b9436672122529f80b9562191ae8_NVIDIA_Share_1162_619.png" alt="NVIDIA_Share_1162_619.png"></p>
-<h3 id="3-2-4-设备识别"><a href="#3-2-4-设备识别" class="headerlink" title="3.2.4. 设备识别"></a>3.2.4. 设备识别</h3><ul>
-<li>多条中断线<ul>
-<li>即使有多条中断线可用，每条线上也需要采用其它三种技术中的一种</li>
-</ul>
-</li>
-<li>软件轮询<ul>
-<li>轮询每一个I/O模块来确定是哪个模块发生的中断</li>
-</ul>
-</li>
-<li>菊花链<ul>
-<li>所有的I/O模块共享一条中断请求线，中断应答线采用菊花链穿过这些中断模块</li>
-</ul>
-</li>
-<li>独立请求<ul>
-<li>特定的中断控制器用于解码和分析优先级</li>
-</ul>
-</li>
-</ul>
-<p>类似：[[16_总线#3.2. 仲裁]]</p>
-<h3 id="3-2-5-分配优先级"><a href="#3-2-5-分配优先级" class="headerlink" title="3.2.5. 分配优先级"></a>3.2.5. 分配优先级</h3><ul>
-<li>多条中断线：处理器仅仅挑选具有最高优先级的中断线</li>
-<li>软件轮询：模块的轮询次序就决定了模块的优先级</li>
-<li>菊花链：链接模块次序就决定了模块的优先级</li>
-<li>独立请求：中断控制器决定</li>
-</ul>
-<h2 id="3-3-直接存储器存取DMA"><a href="#3-3-直接存储器存取DMA" class="headerlink" title="3.3. 直接存储器存取DMA"></a>3.3. 直接存储器存取DMA</h2><ul>
-<li>不足<ul>
-<li>I/O传送速度受处理器测试和服务设备速度的限制</li>
-<li>处理器负责管理I/O传送，对于每一次I/O传送，处理器必须执行很多指令</li>
-</ul>
-</li>
-<li>直接存储器存取<ul>
-<li>无需经过处理器即可直接访问内存的模块</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/feeb193c5f1f8c3ae30f40f8f23be81d_NVIDIA_Share_364_701.png" alt="NVIDIA_Share_364_701.png"></p>
-<h3 id="3-3-1-处理过程"><a href="#3-3-1-处理过程" class="headerlink" title="3.3.1. 处理过程"></a>3.3.1. 处理过程</h3><ul>
-<li>处理器通过发送以下信息向DMA模块发出命令：读/写、I/O设备地址、内存中的起始位置、字数</li>
-<li>处理器继续进行其他工作</li>
-<li>DMA模块将全部数据块，每次一个字，直接将数据传输到存储器或从存储器读出，而<strong>无需经过处理器</strong></li>
-<li><strong>当传输完成时</strong>，DMA模块向处理器发送一个中断信号</li>
-</ul>
-<h3 id="3-3-2-DMA内存访问"><a href="#3-3-2-DMA内存访问" class="headerlink" title="3.3.2. DMA内存访问"></a>3.3.2. DMA内存访问</h3><h4 id="3-3-2-1-CPU停止法"><a href="#3-3-2-1-CPU停止法" class="headerlink" title="3.3.2.1. CPU停止法"></a>3.3.2.1. CPU停止法</h4><ul>
-<li>优点：控制简单</li>
-<li>缺点：影响CPU，没有充分利用内存</li>
-<li>适用：高速I/O设备的块传输<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/2d7422830f6fb6d52eb4fbca0fd33502_NVIDIA_Share_948_300.png" alt="NVIDIA_Share_948_300.png"></li>
-</ul>
-<h4 id="3-3-2-2-周期窃取"><a href="#3-3-2-2-周期窃取" class="headerlink" title="3.3.2.2. 周期窃取"></a>3.3.2.2. 周期窃取</h4><ul>
-<li>优点：充分利用CPU和内存，及时响应I/O请求</li>
-<li>缺点：DMA每次都请求总线</li>
-<li>适用：I/O周期大于存储周期<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/12047bf6ca615049da2f1567b92981b5_NVIDIA_Share_965_303.png" alt="NVIDIA_Share_965_303.png"></li>
-</ul>
-<h4 id="3-3-2-3-交替分时访问"><a href="#3-3-2-3-交替分时访问" class="headerlink" title="3.3.2.3. 交替分时访问"></a>3.3.2.3. 交替分时访问</h4><ul>
-<li>优点：CPU未停止或等待，DMA不请求总线</li>
-<li>缺点：CPU周期大于存储周期<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/14aaebdf4deee5b894f1c20eb8b3ecd8_NVIDIA_Share_915_326.png" alt="NVIDIA_Share_915_326.png"></li>
-</ul>
-<h3 id="3-3-3-DMA配置机制"><a href="#3-3-3-DMA配置机制" class="headerlink" title="3.3.3. DMA配置机制"></a>3.3.3. DMA配置机制</h3><h4 id="3-3-3-1-单总线分离DMA"><a href="#3-3-3-1-单总线分离DMA" class="headerlink" title="3.3.3.1. 单总线分离DMA"></a>3.3.3.1. 单总线分离DMA</h4><ul>
-<li>所有模块共享相同的系统总线</li>
-<li>DMA模块使用<strong>编程式I/O</strong>，通过DMA模块在存储器和I/O模块之间交换数据</li>
-<li>便宜但低效<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/33ccba4c17f39248a793a9242b9dd7c9_NVIDIA_Share_847_213.png" alt="NVIDIA_Share_847_213.png"></li>
-</ul>
-<h4 id="3-3-3-2-单总线集合的DMA-I-O"><a href="#3-3-3-2-单总线集合的DMA-I-O" class="headerlink" title="3.3.3.2. 单总线集合的DMA-I/O"></a>3.3.3.2. 单总线集合的DMA-I/O</h4><ul>
-<li>DMA逻辑实际上可能是I/O模块的一部分，也可能是控制一个或多个I/O模块的单独模块</li>
-<li>减少总线周期数<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/79750831cb015a614092b246efabac28_NVIDIA_Share_775_230.png" alt="NVIDIA_Share_775_230.png"></li>
-</ul>
-<h4 id="3-3-3-3-I-O-总线"><a href="#3-3-3-3-I-O-总线" class="headerlink" title="3.3.3.3. I/O 总线"></a>3.3.3.3. I/O 总线</h4><ul>
-<li>使用I/O总线将I/O模块连接到DMA模块</li>
-<li>多个I/O模块共享DMA，且易于扩展<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/92aa65b994db7f43b1bbc284c75db767_NVIDIA_Share_771_283.png" alt="NVIDIA_Share_771_283.png"></li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/24/e3906e7db3ced54a1f17b29c1974f70f_NVIDIA_Share_610_729.png" alt="NVIDIA_Share_610_729.png"></p>
-<h1 id="4-I-O模块的演变"><a href="#4-I-O模块的演变" class="headerlink" title="4. I/O模块的演变"></a>4. I/O模块的演变</h1><ul>
-<li>CPU直接控制外设</li>
-<li>增加控制器或I/O模块，CPU使用编程式I/O，将CPU与外围设备的细节分离</li>
-<li>采用中断，CPU无需花费时间等待外围设备就绪</li>
-<li>I/O模块可通过DMA直接存取存储器，无需CPU负责存储器和I/O模块之间的数据传递</li>
-<li>I/O通道（I/O channel）：I/O模块有自己的处理器，带有专门为I/O操作定制的指令集</li>
-<li>CPU指示I/O通道执行存储器中的I/O指令，只有在执行完成后才会中断CPU</li>
-<li>I/O处理器（I/O processor）：I/O模块有一个局部存储器，I/O模块成为一个自治的计算机，常用于与交互式终端进行通信</li>
-<li>只需最少的CPU参与即可控制大量I/O设备</li>
 </ul>
 ]]></content>
       <categories>
@@ -4704,101 +4704,6 @@
       </tags>
   </entry>
   <entry>
-    <title>6-评估之观察用户</title>
-    <url>/posts/907ea608/</url>
-    <content><![CDATA[<h1 id="1-观察用户"><a href="#1-观察用户" class="headerlink" title="1. 观察用户"></a>1. 观察用户</h1><ul>
-<li>观察用户怎样工作是极其重要的可用性方法<ul>
-<li>用户并不总是客观和完整地描述产品的使用情况</li>
-<li>用户可能忽略一些细节</li>
-</ul>
-</li>
-<li>观察法是所有可用性方法中最简单的方法<br>观察高度依赖经验</li>
-</ul>
-<h1 id="2-不同时期观察"><a href="#2-不同时期观察" class="headerlink" title="2. 不同时期观察"></a>2. 不同时期观察</h1><p>初期：理解用户需求<br>开发期：原型<br>后期：评价</p>
-<h1 id="3-观察方式"><a href="#3-观察方式" class="headerlink" title="3. 观察方式"></a>3. 观察方式</h1><ul>
-<li><strong>方法</strong>：<ol>
-<li>真实环境中的观察<ol>
-<li>观察者既是旁观者也是参与者</li>
-</ol>
-</li>
-<li>可控环境观察<ol>
-<li>观察者不能作为参与者</li>
-<li>重点是研究用户执行任务的细节</li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-1-实验室观察"><a href="#3-1-实验室观察" class="headerlink" title="3.1. 实验室观察"></a>3.1. 实验室观察</h2><p>在专门为可用性测试而安装配置的固定设备的环境下进行的观察。</p>
-<ul>
-<li>优点<ol>
-<li>提供可控且一致的评估环境，易于分析</li>
-</ol>
-</li>
-<li>缺点<ol>
-<li>可控且一致的评估环境，人为环境不自然，可能降低结论都普遍性和一致性</li>
-<li>不利于观察多人之间的协作</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-2-实地观察"><a href="#3-2-实地观察" class="headerlink" title="3.2. 实地观察"></a>3.2. 实地观察</h2><ul>
-<li>指在用户的实际环境中观察用户在使用软件时的情况<ul>
-<li>是发现同使用环境有关的问题的最佳手段</li>
-</ul>
-</li>
-</ul>
-<h1 id="4-观察框架"><a href="#4-观察框架" class="headerlink" title="4. 观察框架"></a>4. 观察框架</h1><p>减少干扰、完成目标。<br>观察过程发生的事件都非常复杂且变化迅速，观察框架用于组织观察活动和明确观察重点。</p>
-<h2 id="4-1-Goetz-and-Lecomfte框架"><a href="#4-1-Goetz-and-Lecomfte框架" class="headerlink" title="4.1. Goetz and Lecomfte框架"></a>4.1. Goetz and Lecomfte框架</h2><p>关注事件的上下文、涉及的人员和技术。</p>
-<ul>
-<li>人员：哪些人员在场，有何特征，承担什么角色</li>
-<li>行为：人们说了什么，做了什么，举止如何，是否存在规律性的行为，语调和肢体语言如何</li>
-<li>时间：行为何时发生，是否与其他行为想关联</li>
-<li>地点：行为发生于何处？是否受物理条件的影响？</li>
-<li>原因：行为为何发生？事件或交互的促成因素是什么？不同的人是否有不同的看法？</li>
-<li>方式：行为是如何组织的？受哪些规则或标准的影响？</li>
-</ul>
-<h2 id="4-2-Robson框架"><a href="#4-2-Robson框架" class="headerlink" title="4.2. Robson框架"></a>4.2. Robson框架</h2><p>有助于组织观察和数据搜集活动</p>
-<ul>
-<li>空间：物理空间及其布局如何？</li>
-<li>行为者：涉及哪些人员？人员详情？</li>
-<li>活动：行为者的活动及其原因？</li>
-<li>物体：存在哪些实际物体？</li>
-<li>举止：具体成员的举止如何？</li>
-<li>事件：所观察的是不是特定事件的一部分？</li>
-<li>目标：行为者希望达成什么目标？</li>
-<li>感觉：用户组及个别成员的情绪如何？</li>
-</ul>
-<h1 id="5-难题"><a href="#5-难题" class="headerlink" title="5. 难题"></a>5. 难题</h1><p>观察多久</p>
-<p>降低存在感</p>
-<ul>
-<li>在观察时不知道用户在干什么？（能看到现象，但不知道原因）<ul>
-<li>边做边说</li>
-<li>合作评估：两位用户共同合作，以便他们互相讨论、相互帮助</li>
-</ul>
-</li>
-</ul>
-<h1 id="6-观察和访谈相结合"><a href="#6-观察和访谈相结合" class="headerlink" title="6. 观察和访谈相结合"></a>6. 观察和访谈相结合</h1><p>观察：减少用户被监视的感觉</p>
-<p>访谈：在做了一些任务后再问用户问题</p>
-<p><strong>集体访谈</strong>：一次抓好几个人访谈，<strong>焦点小组</strong>（不同背景的人都有）</p>
-<h1 id="7-数据记录"><a href="#7-数据记录" class="headerlink" title="7. 数据记录"></a>7. 数据记录</h1><p>记录行为，不要带入研究人员主观推测。<br>根据实验环境实际条件选择记录方式。</p>
-<ul>
-<li>类型<ul>
-<li>纸笔</li>
-<li>音视频</li>
-<li>日志和交互记录</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2023_Fall_人机交互</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_人机交互</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>7-询问专家和用户</title>
     <url>/posts/a17d59f2/</url>
     <content><![CDATA[<h1 id="1-查询用户-访谈"><a href="#1-查询用户-访谈" class="headerlink" title="1. 查询用户-访谈"></a>1. 查询用户-访谈</h1><p>访谈：有目的的对话过程</p>
@@ -4955,6 +4860,101 @@
 </li>
 </ul>
 <h2 id="4-5-提醒"><a href="#4-5-提醒" class="headerlink" title="4.5. 提醒"></a>4.5. 提醒</h2><p>邀请多个专家，推荐3-5<br>使用用户测试代替启发式评估<br>观察人员可以帮助评估专家，但对用户测试不合适</p>
+]]></content>
+      <categories>
+        <category>2023_Fall_人机交互</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_人机交互</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6-评估之观察用户</title>
+    <url>/posts/907ea608/</url>
+    <content><![CDATA[<h1 id="1-观察用户"><a href="#1-观察用户" class="headerlink" title="1. 观察用户"></a>1. 观察用户</h1><ul>
+<li>观察用户怎样工作是极其重要的可用性方法<ul>
+<li>用户并不总是客观和完整地描述产品的使用情况</li>
+<li>用户可能忽略一些细节</li>
+</ul>
+</li>
+<li>观察法是所有可用性方法中最简单的方法<br>观察高度依赖经验</li>
+</ul>
+<h1 id="2-不同时期观察"><a href="#2-不同时期观察" class="headerlink" title="2. 不同时期观察"></a>2. 不同时期观察</h1><p>初期：理解用户需求<br>开发期：原型<br>后期：评价</p>
+<h1 id="3-观察方式"><a href="#3-观察方式" class="headerlink" title="3. 观察方式"></a>3. 观察方式</h1><ul>
+<li><strong>方法</strong>：<ol>
+<li>真实环境中的观察<ol>
+<li>观察者既是旁观者也是参与者</li>
+</ol>
+</li>
+<li>可控环境观察<ol>
+<li>观察者不能作为参与者</li>
+<li>重点是研究用户执行任务的细节</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-1-实验室观察"><a href="#3-1-实验室观察" class="headerlink" title="3.1. 实验室观察"></a>3.1. 实验室观察</h2><p>在专门为可用性测试而安装配置的固定设备的环境下进行的观察。</p>
+<ul>
+<li>优点<ol>
+<li>提供可控且一致的评估环境，易于分析</li>
+</ol>
+</li>
+<li>缺点<ol>
+<li>可控且一致的评估环境，人为环境不自然，可能降低结论都普遍性和一致性</li>
+<li>不利于观察多人之间的协作</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-2-实地观察"><a href="#3-2-实地观察" class="headerlink" title="3.2. 实地观察"></a>3.2. 实地观察</h2><ul>
+<li>指在用户的实际环境中观察用户在使用软件时的情况<ul>
+<li>是发现同使用环境有关的问题的最佳手段</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-观察框架"><a href="#4-观察框架" class="headerlink" title="4. 观察框架"></a>4. 观察框架</h1><p>减少干扰、完成目标。<br>观察过程发生的事件都非常复杂且变化迅速，观察框架用于组织观察活动和明确观察重点。</p>
+<h2 id="4-1-Goetz-and-Lecomfte框架"><a href="#4-1-Goetz-and-Lecomfte框架" class="headerlink" title="4.1. Goetz and Lecomfte框架"></a>4.1. Goetz and Lecomfte框架</h2><p>关注事件的上下文、涉及的人员和技术。</p>
+<ul>
+<li>人员：哪些人员在场，有何特征，承担什么角色</li>
+<li>行为：人们说了什么，做了什么，举止如何，是否存在规律性的行为，语调和肢体语言如何</li>
+<li>时间：行为何时发生，是否与其他行为想关联</li>
+<li>地点：行为发生于何处？是否受物理条件的影响？</li>
+<li>原因：行为为何发生？事件或交互的促成因素是什么？不同的人是否有不同的看法？</li>
+<li>方式：行为是如何组织的？受哪些规则或标准的影响？</li>
+</ul>
+<h2 id="4-2-Robson框架"><a href="#4-2-Robson框架" class="headerlink" title="4.2. Robson框架"></a>4.2. Robson框架</h2><p>有助于组织观察和数据搜集活动</p>
+<ul>
+<li>空间：物理空间及其布局如何？</li>
+<li>行为者：涉及哪些人员？人员详情？</li>
+<li>活动：行为者的活动及其原因？</li>
+<li>物体：存在哪些实际物体？</li>
+<li>举止：具体成员的举止如何？</li>
+<li>事件：所观察的是不是特定事件的一部分？</li>
+<li>目标：行为者希望达成什么目标？</li>
+<li>感觉：用户组及个别成员的情绪如何？</li>
+</ul>
+<h1 id="5-难题"><a href="#5-难题" class="headerlink" title="5. 难题"></a>5. 难题</h1><p>观察多久</p>
+<p>降低存在感</p>
+<ul>
+<li>在观察时不知道用户在干什么？（能看到现象，但不知道原因）<ul>
+<li>边做边说</li>
+<li>合作评估：两位用户共同合作，以便他们互相讨论、相互帮助</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-观察和访谈相结合"><a href="#6-观察和访谈相结合" class="headerlink" title="6. 观察和访谈相结合"></a>6. 观察和访谈相结合</h1><p>观察：减少用户被监视的感觉</p>
+<p>访谈：在做了一些任务后再问用户问题</p>
+<p><strong>集体访谈</strong>：一次抓好几个人访谈，<strong>焦点小组</strong>（不同背景的人都有）</p>
+<h1 id="7-数据记录"><a href="#7-数据记录" class="headerlink" title="7. 数据记录"></a>7. 数据记录</h1><p>记录行为，不要带入研究人员主观推测。<br>根据实验环境实际条件选择记录方式。</p>
+<ul>
+<li>类型<ul>
+<li>纸笔</li>
+<li>音视频</li>
+<li>日志和交互记录</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>2023_Fall_人机交互</category>
@@ -5679,109 +5679,6 @@
       </tags>
   </entry>
   <entry>
-    <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
-    <url>/posts/b48e71af/</url>
-    <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
-<li>提供消息服务的应用程序</li>
-<li>主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然</li>
-</ul>
-<h1 id="2-👍JMS"><a href="#2-👍JMS" class="headerlink" title="2. 👍JMS"></a>2. 👍JMS</h1><ul>
-<li>Java Message Service<ul>
-<li>Jms规定了ConnectionFactory、Connection、Session等接口/类</li>
-</ul>
-</li>
-<li>JMS是一个Java标准，使用消息代理（message broker）的统一API</li>
-<li>JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持</li>
-</ul>
-<p>消息代理 broker：</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png" alt="image.png"></p>
-<h1 id="3-ActiveMQ-Artemis"><a href="#3-ActiveMQ-Artemis" class="headerlink" title="3. ActiveMQ Artemis"></a>3. ActiveMQ Artemis</h1><ul>
-<li>支持协议<ul>
-<li>JMS</li>
-<li>AMQP: Advanced Message Queueing Protocol</li>
-<li>MQTT: Message Queuing Telemetry Transport</li>
-</ul>
-</li>
-<li>支持Native内存模式和JVM内存模式<ul>
-<li>Native可以绕过JVM，加快访问</li>
-</ul>
-</li>
-<li>消息持久化</li>
-</ul>
-<h2 id="3-1-直接使用JMS接口发送与接受消息"><a href="#3-1-直接使用JMS接口发送与接受消息" class="headerlink" title="3.1. 直接使用JMS接口发送与接受消息"></a>3.1. 直接使用JMS接口发送与接受消息</h2><ol>
-<li>JMS规范：jakarta.jms-api-2.0.3.jar</li>
-<li>atemis客户端：artemis-jms-client-2.17.0.jar<ul>
-<li>与Spring无关</li>
-</ul>
-</li>
-</ol>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ConnectionFactory</span> <span class="variable">connectionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ActiveMQConnectionFactory</span>(BROKER_URL, USERNAME, PASSWORD);</span><br><span class="line"><span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> connectionFactory.createConnection();</span><br><span class="line">connection.start();</span><br><span class="line"><span class="type">Session</span> <span class="variable">session</span> <span class="operator">=</span> connection.createSession(<span class="literal">false</span>, Session.AUTO_ACKNOWLEDGE);</span><br><span class="line"><span class="type">Destination</span> <span class="variable">destination</span> <span class="operator">=</span> session.createQueue(<span class="string">"queue.example"</span>);</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="3-2-👍关键概念"><a href="#3-2-👍关键概念" class="headerlink" title="3.2. 👍关键概念"></a>3.2. 👍关键概念</h2><ul>
-<li>Message：类似广播, 生产端</li>
-<li>Destination：队列或主题。消费端<ul>
-<li>三种指定方式：<ol>
-<li>application.yml（default-destination）</li>
-<li>@Bean（Destination对象）</li>
-<li>直接String指定</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-JmsTemplate"><a href="#3-3-JmsTemplate" class="headerlink" title="3.3. JmsTemplate"></a>3.3. JmsTemplate</h2><ul>
-<li>JmsTemplate是Spring对JMS集成支持的核心</li>
-<li>发送的两个方法：send、convertAndSend</li>
-</ul>
-<h2 id="3-4-👍消息转换器-MessageConverter"><a href="#3-4-👍消息转换器-MessageConverter" class="headerlink" title="3.4. 👍消息转换器 MessageConverter"></a>3.4. 👍消息转换器 MessageConverter</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
-<ul>
-<li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
-<li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
-<li>typeId：目的是告诉对方是什么类型，以便于反序列化<ul>
-<li>字符串</li>
-</ul>
-</li>
-<li>Message.setStringProperty，随属性集传输</li>
-<li>消息转换器使用@Configuration定义成Bean</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F17-02-28-148a7c245eb17542de98c2c91efe9929-20231231170228-794f8b.png" alt="image.png"></p>
-<h2 id="3-5-接收模式"><a href="#3-5-接收模式" class="headerlink" title="3.5. 接收模式"></a>3.5. 接收模式</h2><p><strong>拉取和推送都需要消息转换器做反序列化。</strong></p>
-<h3 id="3-5-1-拉取模式-pull-model"><a href="#3-5-1-拉取模式-pull-model" class="headerlink" title="3.5.1. 拉取模式 pull model"></a>3.5.1. 拉取模式 pull model</h3><p>JmsTemplate支持<br>访问URL</p>
-<h3 id="3-5-2-推送模式-push-model"><a href="#3-5-2-推送模式-push-model" class="headerlink" title="3.5.2. 推送模式 push model"></a>3.5.2. 推送模式 push model</h3><p>需要定义消息监听器<br>@JmsListener</p>
-<h1 id="4-RabbitMQ"><a href="#4-RabbitMQ" class="headerlink" title="4. RabbitMQ"></a>4. RabbitMQ</h1><p><strong>实现AMQP协议</strong>。<br>RabbitMQ基础概念详细介绍：<a class="link" href="https://www.cnblogs.com/williamjie/p/9481774.html">RabbitMQ基础概念详细介绍 - 割肉机 - 博客园 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>也需要消息转换器，虽然包路径不一样，但是功能一样。</p>
-<h2 id="4-1-👍概念"><a href="#4-1-👍概念" class="headerlink" title="4.1. 👍概念"></a>4.1. 👍概念</h2><ul>
-<li>ConnectionFactory、Connection、Channel</li>
-<li>Exchange：<ul>
-<li>Default、Direct、Topic、Fanout、Headers、Dead letter</li>
-</ul>
-</li>
-<li>Queue</li>
-<li>Routing key：exchange根据routing key确定消息发往哪个队列<ul>
-<li><strong>JMS里没有这个概念</strong></li>
-</ul>
-</li>
-<li>Binding key</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F20-31-55-d57a847ec3e2d2ed48f59f6b49ec2e0c-20231116203155-0bdbb4.png" alt="image.png"></p>
-<h2 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2. 使用"></a>4.2. 使用</h2><ol>
-<li>添加依赖</li>
-<li>配置文件</li>
-<li>需要到控制台创建exchange，queue，binding</li>
-</ol>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">rabbitmq:</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">template:</span></span><br><span class="line"><span class="attr">exchange:</span> <span class="string">tacocloud.order</span></span><br></pre></td></tr></table></figure></div>
-
-<p>生产放指定exchange、routing key<br>消费方只需关注队列名字</p>
-<p>也有拉取模式和推送模式，也需要消息的转换</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1-依赖注入</title>
     <url>/posts/a22fb360/</url>
     <content><![CDATA[<p>Git：分布式版本控制<br>Beam:java中一个对象，Spring负责对象创建、管理这些对象</p>
@@ -5953,6 +5850,109 @@
 <li><code>T getProperty（String key, Class type, T defaultValue</code>）</li>
 </ul>
 <h2 id="6-2-使用占位符"><a href="#6-2-使用占位符" class="headerlink" title="6.2. 使用占位符"></a>6.2. 使用占位符</h2><p><code>${...}</code></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>10-消息中间件(ActiveMQ、RabbitMQ)</title>
+    <url>/posts/b48e71af/</url>
+    <content><![CDATA[<h1 id="1-消息中间件"><a href="#1-消息中间件" class="headerlink" title="1. 消息中间件"></a>1. 消息中间件</h1><ul>
+<li>提供消息服务的应用程序</li>
+<li>主要用于组件之间的解耦，消息的发送者服务知道消息使用者的存在，反之依然</li>
+</ul>
+<h1 id="2-👍JMS"><a href="#2-👍JMS" class="headerlink" title="2. 👍JMS"></a>2. 👍JMS</h1><ul>
+<li>Java Message Service<ul>
+<li>Jms规定了ConnectionFactory、Connection、Session等接口/类</li>
+</ul>
+</li>
+<li>JMS是一个Java标准，使用消息代理（message broker）的统一API</li>
+<li>JmsTemplate：Spring通过基于模板的抽象为JMS功能提供了支持</li>
+</ul>
+<p>消息代理 broker：</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F18-53-01-0b10509f214aed7690a292bddcc3240f-20231116185259-10be9f.png" alt="image.png"></p>
+<h1 id="3-ActiveMQ-Artemis"><a href="#3-ActiveMQ-Artemis" class="headerlink" title="3. ActiveMQ Artemis"></a>3. ActiveMQ Artemis</h1><ul>
+<li>支持协议<ul>
+<li>JMS</li>
+<li>AMQP: Advanced Message Queueing Protocol</li>
+<li>MQTT: Message Queuing Telemetry Transport</li>
+</ul>
+</li>
+<li>支持Native内存模式和JVM内存模式<ul>
+<li>Native可以绕过JVM，加快访问</li>
+</ul>
+</li>
+<li>消息持久化</li>
+</ul>
+<h2 id="3-1-直接使用JMS接口发送与接受消息"><a href="#3-1-直接使用JMS接口发送与接受消息" class="headerlink" title="3.1. 直接使用JMS接口发送与接受消息"></a>3.1. 直接使用JMS接口发送与接受消息</h2><ol>
+<li>JMS规范：jakarta.jms-api-2.0.3.jar</li>
+<li>atemis客户端：artemis-jms-client-2.17.0.jar<ul>
+<li>与Spring无关</li>
+</ul>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ConnectionFactory</span> <span class="variable">connectionFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ActiveMQConnectionFactory</span>(BROKER_URL, USERNAME, PASSWORD);</span><br><span class="line"><span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> connectionFactory.createConnection();</span><br><span class="line">connection.start();</span><br><span class="line"><span class="type">Session</span> <span class="variable">session</span> <span class="operator">=</span> connection.createSession(<span class="literal">false</span>, Session.AUTO_ACKNOWLEDGE);</span><br><span class="line"><span class="type">Destination</span> <span class="variable">destination</span> <span class="operator">=</span> session.createQueue(<span class="string">"queue.example"</span>);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="3-2-👍关键概念"><a href="#3-2-👍关键概念" class="headerlink" title="3.2. 👍关键概念"></a>3.2. 👍关键概念</h2><ul>
+<li>Message：类似广播, 生产端</li>
+<li>Destination：队列或主题。消费端<ul>
+<li>三种指定方式：<ol>
+<li>application.yml（default-destination）</li>
+<li>@Bean（Destination对象）</li>
+<li>直接String指定</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-JmsTemplate"><a href="#3-3-JmsTemplate" class="headerlink" title="3.3. JmsTemplate"></a>3.3. JmsTemplate</h2><ul>
+<li>JmsTemplate是Spring对JMS集成支持的核心</li>
+<li>发送的两个方法：send、convertAndSend</li>
+</ul>
+<h2 id="3-4-👍消息转换器-MessageConverter"><a href="#3-4-👍消息转换器-MessageConverter" class="headerlink" title="3.4. 👍消息转换器 MessageConverter"></a>3.4. 👍消息转换器 MessageConverter</h2><p>MessageConverter是一个Spring的接口，实现各种<strong>序列化</strong>机制。</p>
+<ul>
+<li>SimpleMessageConverter：实现String与TextMessage的相互转换、字节数组与BytesMessage的相互转换、Map与MapMessage的相互转换，以及Serializable对象与ObjectMessage的相互转换</li>
+<li>MappingJackson2MessageConverter：使用<strong>Jackson 2 JSON</strong>库实现消息与JSON格式的相互转换</li>
+<li>typeId：目的是告诉对方是什么类型，以便于反序列化<ul>
+<li>字符串</li>
+</ul>
+</li>
+<li>Message.setStringProperty，随属性集传输</li>
+<li>消息转换器使用@Configuration定义成Bean</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F31%2F17-02-28-148a7c245eb17542de98c2c91efe9929-20231231170228-794f8b.png" alt="image.png"></p>
+<h2 id="3-5-接收模式"><a href="#3-5-接收模式" class="headerlink" title="3.5. 接收模式"></a>3.5. 接收模式</h2><p><strong>拉取和推送都需要消息转换器做反序列化。</strong></p>
+<h3 id="3-5-1-拉取模式-pull-model"><a href="#3-5-1-拉取模式-pull-model" class="headerlink" title="3.5.1. 拉取模式 pull model"></a>3.5.1. 拉取模式 pull model</h3><p>JmsTemplate支持<br>访问URL</p>
+<h3 id="3-5-2-推送模式-push-model"><a href="#3-5-2-推送模式-push-model" class="headerlink" title="3.5.2. 推送模式 push model"></a>3.5.2. 推送模式 push model</h3><p>需要定义消息监听器<br>@JmsListener</p>
+<h1 id="4-RabbitMQ"><a href="#4-RabbitMQ" class="headerlink" title="4. RabbitMQ"></a>4. RabbitMQ</h1><p><strong>实现AMQP协议</strong>。<br>RabbitMQ基础概念详细介绍：<a class="link" href="https://www.cnblogs.com/williamjie/p/9481774.html">RabbitMQ基础概念详细介绍 - 割肉机 - 博客园 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>也需要消息转换器，虽然包路径不一样，但是功能一样。</p>
+<h2 id="4-1-👍概念"><a href="#4-1-👍概念" class="headerlink" title="4.1. 👍概念"></a>4.1. 👍概念</h2><ul>
+<li>ConnectionFactory、Connection、Channel</li>
+<li>Exchange：<ul>
+<li>Default、Direct、Topic、Fanout、Headers、Dead letter</li>
+</ul>
+</li>
+<li>Queue</li>
+<li>Routing key：exchange根据routing key确定消息发往哪个队列<ul>
+<li><strong>JMS里没有这个概念</strong></li>
+</ul>
+</li>
+<li>Binding key</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F16%2F20-31-55-d57a847ec3e2d2ed48f59f6b49ec2e0c-20231116203155-0bdbb4.png" alt="image.png"></p>
+<h2 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2. 使用"></a>4.2. 使用</h2><ol>
+<li>添加依赖</li>
+<li>配置文件</li>
+<li>需要到控制台创建exchange，queue，binding</li>
+</ol>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">rabbitmq:</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line"><span class="attr">username:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">guest</span></span><br><span class="line"><span class="attr">template:</span></span><br><span class="line"><span class="attr">exchange:</span> <span class="string">tacocloud.order</span></span><br></pre></td></tr></table></figure></div>
+
+<p>生产放指定exchange、routing key<br>消费方只需关注队列名字</p>
+<p>也有拉取模式和推送模式，也需要消息的转换</p>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -6585,6 +6585,220 @@
       </tags>
   </entry>
   <entry>
+    <title>16-k8s使用</title>
+    <url>/posts/9aa54120/</url>
+    <content><![CDATA[<h1 id="1-k8s环境"><a href="#1-k8s环境" class="headerlink" title="1. k8s环境"></a>1. k8s环境</h1><h2 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1. 安装"></a>1.1. 安装</h2><p><a class="link" href="https://github.com/AliyunContainerService/k8s-for-docker-desktop">GitHub - AliyunContainerService/k8s-for-docker-desktop: 为Docker Desktop for Mac/Windows开启Kubernetes和Istio。 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>根据说明安装</p>
+<h2 id="1-2-部署dashboard"><a href="#1-2-部署dashboard" class="headerlink" title="1.2. 部署dashboard"></a>1.2. 部署dashboard</h2><p><code>kubectl apply -f kubernetes-dashboard.yaml</code></p>
+<p>kubectl： 客户端程序与远程k8s server交互<br>kubectl proxy： 把远程k8s server端口代理到本地端口</p>
+<h2 id="1-3-部署ingress-controller"><a href="#1-3-部署ingress-controller" class="headerlink" title="1.3. 部署ingress controller"></a>1.3. 部署ingress controller</h2><p><code>kubectl apply -f ingress-nginx-controller.yaml</code></p>
+<h2 id="1-4-验证-Kubernetes-集群状态"><a href="#1-4-验证-Kubernetes-集群状态" class="headerlink" title="1.4. 验证 Kubernetes 集群状态"></a>1.4. 验证 Kubernetes 集群状态</h2><ul>
+<li>kubectl cluster-info</li>
+<li>kubectl get nodes</li>
+<li>kubectl get nodes –show-labels</li>
+<li>给节点打标签：kubectl label node docker-desktop disktype=ssd<ul>
+<li>查询满足标签的节点：kubectl get nodes -l disktype=ssd</li>
+<li>删除标签：kubectl label node docker-desktop disktype</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-k8s基本架构"><a href="#2-k8s基本架构" class="headerlink" title="2. k8s基本架构"></a>2. k8s基本架构</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F18-55-11-2838e48395432e6ee0c51d6f1cbf08d5-20231228185510-36573e.png" alt="image.png"></p>
+<p>Node: 安装docker的宿主机，提供容器。<br>Master：管理集群的机器，安装k8s的核心模块。也可以与Node部署在同一台宿主机上。</p>
+<p>kubelet：和Master、本地docker交互。<br>flannel：容器网络的第三方实现，给容器提供虚拟网络。<br>etcd：类似reddis的缓存系统。</p>
+<p>k8s目的：通过多个Node节点，获得更多容器。</p>
+<h1 id="3-👍k8s资源"><a href="#3-👍k8s资源" class="headerlink" title="3. 👍k8s资源"></a>3. 👍k8s资源</h1><h2 id="3-1-类型"><a href="#3-1-类型" class="headerlink" title="3.1. 类型"></a>3.1. 类型</h2><ul>
+<li>namespaces<ul>
+<li>类似java中的package</li>
+<li>可以把不同资源放在不同namespace里，不同namespace里面可以有同名资源</li>
+</ul>
+</li>
+<li>ReplicaSet<ul>
+<li>维持Pod实例数</li>
+</ul>
+</li>
+<li>Pods<ul>
+<li>以包含一个或多个容器，内部容器的逻辑宿主机</li>
+<li><font color="#c00000">k8s里管理的最小资源</font></li>
+</ul>
+</li>
+<li>Deployment<ul>
+<li>负责Pod的自动创建</li>
+</ul>
+</li>
+<li>Service<ul>
+<li>类似微服务的“服务”概念，为外界提供一定的业务能力</li>
+<li>部署在Pod中，一个服务可以有多个Pod</li>
+</ul>
+</li>
+<li>Ingress<ul>
+<li>网关，把不同域名/url路由到对应的服务</li>
+<li>k8s对外统一提供Ingress的入口</li>
+</ul>
+</li>
+<li>configmap<ul>
+<li>集群中提供配置信息的地方</li>
+<li>key-value结构</li>
+</ul>
+</li>
+<li>secrets<ul>
+<li>涉及安全的隐私数据，有不同类别</li>
+</ul>
+</li>
+<li>serviceaccounts<ul>
+<li>给容器里的软件用的账户，容器和k8s server交互时用到</li>
+</ul>
+</li>
+<li>DaemonSet<ul>
+<li>常驻在Node上</li>
+<li>例：fluentd，常驻的Node上收集日志</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-Pod"><a href="#3-2-Pod" class="headerlink" title="3.2. Pod"></a>3.2. Pod</h2><ul>
+<li><p><font color="#c00000">Pod是Kubernetes调度的最小单元</font> 👍</p>
+</li>
+<li><p>多个容器在一个Pod中共享网络和文件系统</p>
+<ul>
+<li>PID命名空间：Pod中不同的应用程序可以看到其他应用程序的进程ID</li>
+<li>network命名空间：Pod中多个容器处于<strong>同一个网络命名空间</strong>，因此能够访问的IP和端口范围都是相同的。也可以通过localhost相互访问</li>
+<li>IPC命名空间：Pod中的<strong>多个容器</strong>共享Inner-process Communication命名空间，因此可以通过SystemVIPC或POSIX进行<strong>进程间通信</strong></li>
+<li>UTS命名空间：Pod中的多个容器共享同一个主机名</li>
+<li>Volumes：Pod中各个容器可以共享在Pod中定义分存储卷（Volume）</li>
+</ul>
+</li>
+<li><p>restartPolicy字段</p>
+<ul>
+<li>Always：只要退出就重启</li>
+<li>OnFailure：失败退出时（exit code不为0）才重启<ul>
+<li>也可能是正常的退出</li>
+</ul>
+</li>
+<li>Never：永远不重启</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-1-pod管理命令"><a href="#3-2-1-pod管理命令" class="headerlink" title="3.2.1. pod管理命令"></a>3.2.1. pod管理命令</h3><ul>
+<li><strong>创建pod</strong><ul>
+<li><code>kubectl run</code></li>
+<li><code>kubectl run myspittr --image spittr:1.0-SNAPSHOT</code></li>
+<li>类似docker run</li>
+</ul>
+</li>
+<li><strong>查看pod</strong><ul>
+<li><code>kubectl get pods</code></li>
+<li><code>kubectl logs -f myspittr</code></li>
+</ul>
+</li>
+<li>在pod中<strong>执行命令</strong><ul>
+<li><code>kubectl exec</code></li>
+<li><code>kubectl exec myspittr -- ls /run/secrets/kubernetes.io/serviceaccount</code>，在myspittr中执行<code>--</code>后的命令</li>
+</ul>
+</li>
+<li><strong>删除pod</strong><ul>
+<li><code>kubectl delete pod &lt;pod name&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）"><a href="#3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）" class="headerlink" title="3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）"></a>3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）</h3><ul>
+<li><p><strong>port-forward</strong>: ``kubectl port-forward <name> host_ip:container_ip`</name></p>
+<ul>
+<li>和<code>docker -p</code>一样，左边宿主机右边容器端口</li>
+<li>可以直接映射pod，但更<strong>推荐映射service</strong></li>
+</ul>
+</li>
+<li><p>映射pod：<code>kubectl port-forward pod/myspittr 8081:8080</code></p>
+<ul>
+<li>访问：<a class="link" href="http://localhost:8081/spittr/">http://localhost:8081/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</li>
+<li><p>映射service：<code>kubectl port-forward service/demo 8081:80</code></p>
+</li>
+</ul>
+<h3 id="3-2-3-Pod、Container与Node之间的关系"><a href="#3-2-3-Pod、Container与Node之间的关系" class="headerlink" title="3.2.3. Pod、Container与Node之间的关系"></a>3.2.3. Pod、Container与Node之间的关系</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F19-32-11-f9c84bf9f2d585a4e92d0a7a6a7fe85d-20231228193210-1d543b.png" alt="image.png"></p>
+<h2 id="3-3-👍-Service"><a href="#3-3-👍-Service" class="headerlink" title="3.3.👍 Service"></a>3.3.👍 Service</h2><p>不希望让别人直接访问pod，k8s可能会对pod做更改，ip会改变。但<strong>cluster-ip或服务名不会改变</strong>。</p>
+<h3 id="3-3-1-命令"><a href="#3-3-1-命令" class="headerlink" title="3.3.1. 命令"></a>3.3.1. 命令</h3><ul>
+<li><p>创建：kubectl expose</p>
+<ul>
+<li><code>kubectl expose pod &lt;serveice name&gt; --port &lt;port&gt;</code></li>
+</ul>
+</li>
+<li><p>查看</p>
+<ul>
+<li>kubectl svc</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-2-如何访问Service"><a href="#3-3-2-如何访问Service" class="headerlink" title="3.3.2. 如何访问Service"></a>3.3.2. 如何访问Service</h3><ol>
+<li>expose</li>
+<li>port-forward</li>
+<li>curl容器</li>
+</ol>
+<h2 id="3-4-👍Ingress"><a href="#3-4-👍Ingress" class="headerlink" title="3.4. 👍Ingress"></a>3.4. 👍Ingress</h2><ul>
+<li><font color="#c00000">只能路由到service，不能路由到pod</font><ul>
+<li>service有cluseter-ip，不会改变，而pod的ip可能会改变</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-1-命令"><a href="#3-4-1-命令" class="headerlink" title="3.4.1. 命令"></a>3.4.1. 命令</h3><ul>
+<li>创建：kubectl create ingress myspittr –class=nginx –rule=<a class="link" href="http://www.license.com/*=myspittr:8080">www.license.com/*=myspittr:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ul>
+<li>访问：<a class="link" href="http://www.license.com/spittr/">http://www.license.com/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</li>
+<li>删除：kubectl delete ingress myspittr</li>
+</ul>
+<p>ingress网关默认端口80</p>
+<h2 id="3-5-命令行快捷创建deployment、service、ingress"><a href="#3-5-命令行快捷创建deployment、service、ingress" class="headerlink" title="3.5. 命令行快捷创建deployment、service、ingress"></a>3.5. 命令行快捷创建deployment、service、ingress</h2><ul>
+<li><p>kubectl create deployment myspittr–image=spittr:1.0-SNAPSHOT –port=8080</p>
+</li>
+<li><p>kubectl expose deployment myspittr 把上面的这个pod的8080端口暴露为myspittr服务</p>
+</li>
+<li><p>kubectl create ingress myspittr–class=nginx–rule=<a class="link" href="http://www.license.com/*=myspittr:8080">www.license.com/*=myspittr:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>访问：<a class="link" href="http://www.license.com/spittr/">http://www.license.com/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>删除：</p>
+<ul>
+<li>kubectl delete ingress myspittr</li>
+<li>kubectl delete service myspittr</li>
+<li>kubectl delete deployment myspittr</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-6-Deployment"><a href="#3-6-Deployment" class="headerlink" title="3.6. Deployment"></a>3.6. Deployment</h2><p><a class="link" href="https://www.jianshu.com/p/029661f38674">Kubernetes对象之Deployment - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li>重启：kubectl rollout restart deployment/spittr<ul>
+<li>kubectl rollout restart deployment –selector=app=spittr</li>
+</ul>
+</li>
+<li><strong>更新镜像重部署</strong>：kubectl set image deployment/spittr spittr=spittr:1.0</li>
+<li>扩容：kubectl scale deployment spittr –replicas 2</li>
+<li><strong>自动伸缩</strong>：kubectl autoscale deployment spittr –min=10 –max=15 –cpu-percent=80 👍<ul>
+<li>k8s可以依据CPU使用率动态决定实例数量的选择</li>
+<li><font color="#c00000">记得删除</font>： kubectl delete horizontalpodautoscalers.autoscaling spittr</li>
+</ul>
+</li>
+<li>查看历史版本：kubectl rollout history deployment/spittr</li>
+<li>回滚到前一个版本：kubectl rollout undo deployment/spittr</li>
+</ul>
+<h1 id="4-k8s常用命令"><a href="#4-k8s常用命令" class="headerlink" title="4. k8s常用命令"></a>4. k8s常用命令</h1><ul>
+<li>kubectl get secrets/pods/all [ -n namespace]</li>
+<li>kubectl get secret mysecret-o yaml</li>
+<li>kubectl delete pod pod_name [ -n namespace]</li>
+<li>kubectl apply -f [json文件或yaml文件-路径]</li>
+<li>kubectl delete -f [json文件或yaml文件-路径]</li>
+<li>kubectl describe secret mysecret</li>
+<li>kubectl logs secret1-pod</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2023_Fall_服务端开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_服务端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2-面向切面编程</title>
     <url>/posts/e2853af6/</url>
     <content><![CDATA[<h1 id="1-软件编程方法"><a href="#1-软件编程方法" class="headerlink" title="1. 软件编程方法"></a>1. 软件编程方法</h1><ul>
@@ -6873,220 +7087,6 @@
 </ul>
 </li>
 </ol>
-]]></content>
-      <categories>
-        <category>2023_Fall_服务端开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_服务端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>16-k8s使用</title>
-    <url>/posts/9aa54120/</url>
-    <content><![CDATA[<h1 id="1-k8s环境"><a href="#1-k8s环境" class="headerlink" title="1. k8s环境"></a>1. k8s环境</h1><h2 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1. 安装"></a>1.1. 安装</h2><p><a class="link" href="https://github.com/AliyunContainerService/k8s-for-docker-desktop">GitHub - AliyunContainerService/k8s-for-docker-desktop: 为Docker Desktop for Mac/Windows开启Kubernetes和Istio。 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>根据说明安装</p>
-<h2 id="1-2-部署dashboard"><a href="#1-2-部署dashboard" class="headerlink" title="1.2. 部署dashboard"></a>1.2. 部署dashboard</h2><p><code>kubectl apply -f kubernetes-dashboard.yaml</code></p>
-<p>kubectl： 客户端程序与远程k8s server交互<br>kubectl proxy： 把远程k8s server端口代理到本地端口</p>
-<h2 id="1-3-部署ingress-controller"><a href="#1-3-部署ingress-controller" class="headerlink" title="1.3. 部署ingress controller"></a>1.3. 部署ingress controller</h2><p><code>kubectl apply -f ingress-nginx-controller.yaml</code></p>
-<h2 id="1-4-验证-Kubernetes-集群状态"><a href="#1-4-验证-Kubernetes-集群状态" class="headerlink" title="1.4. 验证 Kubernetes 集群状态"></a>1.4. 验证 Kubernetes 集群状态</h2><ul>
-<li>kubectl cluster-info</li>
-<li>kubectl get nodes</li>
-<li>kubectl get nodes –show-labels</li>
-<li>给节点打标签：kubectl label node docker-desktop disktype=ssd<ul>
-<li>查询满足标签的节点：kubectl get nodes -l disktype=ssd</li>
-<li>删除标签：kubectl label node docker-desktop disktype</li>
-</ul>
-</li>
-</ul>
-<h1 id="2-k8s基本架构"><a href="#2-k8s基本架构" class="headerlink" title="2. k8s基本架构"></a>2. k8s基本架构</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F18-55-11-2838e48395432e6ee0c51d6f1cbf08d5-20231228185510-36573e.png" alt="image.png"></p>
-<p>Node: 安装docker的宿主机，提供容器。<br>Master：管理集群的机器，安装k8s的核心模块。也可以与Node部署在同一台宿主机上。</p>
-<p>kubelet：和Master、本地docker交互。<br>flannel：容器网络的第三方实现，给容器提供虚拟网络。<br>etcd：类似reddis的缓存系统。</p>
-<p>k8s目的：通过多个Node节点，获得更多容器。</p>
-<h1 id="3-👍k8s资源"><a href="#3-👍k8s资源" class="headerlink" title="3. 👍k8s资源"></a>3. 👍k8s资源</h1><h2 id="3-1-类型"><a href="#3-1-类型" class="headerlink" title="3.1. 类型"></a>3.1. 类型</h2><ul>
-<li>namespaces<ul>
-<li>类似java中的package</li>
-<li>可以把不同资源放在不同namespace里，不同namespace里面可以有同名资源</li>
-</ul>
-</li>
-<li>ReplicaSet<ul>
-<li>维持Pod实例数</li>
-</ul>
-</li>
-<li>Pods<ul>
-<li>以包含一个或多个容器，内部容器的逻辑宿主机</li>
-<li><font color="#c00000">k8s里管理的最小资源</font></li>
-</ul>
-</li>
-<li>Deployment<ul>
-<li>负责Pod的自动创建</li>
-</ul>
-</li>
-<li>Service<ul>
-<li>类似微服务的“服务”概念，为外界提供一定的业务能力</li>
-<li>部署在Pod中，一个服务可以有多个Pod</li>
-</ul>
-</li>
-<li>Ingress<ul>
-<li>网关，把不同域名/url路由到对应的服务</li>
-<li>k8s对外统一提供Ingress的入口</li>
-</ul>
-</li>
-<li>configmap<ul>
-<li>集群中提供配置信息的地方</li>
-<li>key-value结构</li>
-</ul>
-</li>
-<li>secrets<ul>
-<li>涉及安全的隐私数据，有不同类别</li>
-</ul>
-</li>
-<li>serviceaccounts<ul>
-<li>给容器里的软件用的账户，容器和k8s server交互时用到</li>
-</ul>
-</li>
-<li>DaemonSet<ul>
-<li>常驻在Node上</li>
-<li>例：fluentd，常驻的Node上收集日志</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-2-Pod"><a href="#3-2-Pod" class="headerlink" title="3.2. Pod"></a>3.2. Pod</h2><ul>
-<li><p><font color="#c00000">Pod是Kubernetes调度的最小单元</font> 👍</p>
-</li>
-<li><p>多个容器在一个Pod中共享网络和文件系统</p>
-<ul>
-<li>PID命名空间：Pod中不同的应用程序可以看到其他应用程序的进程ID</li>
-<li>network命名空间：Pod中多个容器处于<strong>同一个网络命名空间</strong>，因此能够访问的IP和端口范围都是相同的。也可以通过localhost相互访问</li>
-<li>IPC命名空间：Pod中的<strong>多个容器</strong>共享Inner-process Communication命名空间，因此可以通过SystemVIPC或POSIX进行<strong>进程间通信</strong></li>
-<li>UTS命名空间：Pod中的多个容器共享同一个主机名</li>
-<li>Volumes：Pod中各个容器可以共享在Pod中定义分存储卷（Volume）</li>
-</ul>
-</li>
-<li><p>restartPolicy字段</p>
-<ul>
-<li>Always：只要退出就重启</li>
-<li>OnFailure：失败退出时（exit code不为0）才重启<ul>
-<li>也可能是正常的退出</li>
-</ul>
-</li>
-<li>Never：永远不重启</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-2-1-pod管理命令"><a href="#3-2-1-pod管理命令" class="headerlink" title="3.2.1. pod管理命令"></a>3.2.1. pod管理命令</h3><ul>
-<li><strong>创建pod</strong><ul>
-<li><code>kubectl run</code></li>
-<li><code>kubectl run myspittr --image spittr:1.0-SNAPSHOT</code></li>
-<li>类似docker run</li>
-</ul>
-</li>
-<li><strong>查看pod</strong><ul>
-<li><code>kubectl get pods</code></li>
-<li><code>kubectl logs -f myspittr</code></li>
-</ul>
-</li>
-<li>在pod中<strong>执行命令</strong><ul>
-<li><code>kubectl exec</code></li>
-<li><code>kubectl exec myspittr -- ls /run/secrets/kubernetes.io/serviceaccount</code>，在myspittr中执行<code>--</code>后的命令</li>
-</ul>
-</li>
-<li><strong>删除pod</strong><ul>
-<li><code>kubectl delete pod &lt;pod name&gt;</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）"><a href="#3-2-2-如何将pod或service的端口快速映射到本机端口（调试用）" class="headerlink" title="3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）"></a>3.2.2. 如何将pod或service的端口快速映射到本机端口（调试用）</h3><ul>
-<li><p><strong>port-forward</strong>: ``kubectl port-forward <name> host_ip:container_ip`</name></p>
-<ul>
-<li>和<code>docker -p</code>一样，左边宿主机右边容器端口</li>
-<li>可以直接映射pod，但更<strong>推荐映射service</strong></li>
-</ul>
-</li>
-<li><p>映射pod：<code>kubectl port-forward pod/myspittr 8081:8080</code></p>
-<ul>
-<li>访问：<a class="link" href="http://localhost:8081/spittr/">http://localhost:8081/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-</li>
-<li><p>映射service：<code>kubectl port-forward service/demo 8081:80</code></p>
-</li>
-</ul>
-<h3 id="3-2-3-Pod、Container与Node之间的关系"><a href="#3-2-3-Pod、Container与Node之间的关系" class="headerlink" title="3.2.3. Pod、Container与Node之间的关系"></a>3.2.3. Pod、Container与Node之间的关系</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F12%2F28%2F19-32-11-f9c84bf9f2d585a4e92d0a7a6a7fe85d-20231228193210-1d543b.png" alt="image.png"></p>
-<h2 id="3-3-👍-Service"><a href="#3-3-👍-Service" class="headerlink" title="3.3.👍 Service"></a>3.3.👍 Service</h2><p>不希望让别人直接访问pod，k8s可能会对pod做更改，ip会改变。但<strong>cluster-ip或服务名不会改变</strong>。</p>
-<h3 id="3-3-1-命令"><a href="#3-3-1-命令" class="headerlink" title="3.3.1. 命令"></a>3.3.1. 命令</h3><ul>
-<li><p>创建：kubectl expose</p>
-<ul>
-<li><code>kubectl expose pod &lt;serveice name&gt; --port &lt;port&gt;</code></li>
-</ul>
-</li>
-<li><p>查看</p>
-<ul>
-<li>kubectl svc</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-3-2-如何访问Service"><a href="#3-3-2-如何访问Service" class="headerlink" title="3.3.2. 如何访问Service"></a>3.3.2. 如何访问Service</h3><ol>
-<li>expose</li>
-<li>port-forward</li>
-<li>curl容器</li>
-</ol>
-<h2 id="3-4-👍Ingress"><a href="#3-4-👍Ingress" class="headerlink" title="3.4. 👍Ingress"></a>3.4. 👍Ingress</h2><ul>
-<li><font color="#c00000">只能路由到service，不能路由到pod</font><ul>
-<li>service有cluseter-ip，不会改变，而pod的ip可能会改变</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-4-1-命令"><a href="#3-4-1-命令" class="headerlink" title="3.4.1. 命令"></a>3.4.1. 命令</h3><ul>
-<li>创建：kubectl create ingress myspittr –class=nginx –rule=<a class="link" href="http://www.license.com/*=myspittr:8080">www.license.com/*=myspittr:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ul>
-<li>访问：<a class="link" href="http://www.license.com/spittr/">http://www.license.com/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-</li>
-<li>删除：kubectl delete ingress myspittr</li>
-</ul>
-<p>ingress网关默认端口80</p>
-<h2 id="3-5-命令行快捷创建deployment、service、ingress"><a href="#3-5-命令行快捷创建deployment、service、ingress" class="headerlink" title="3.5. 命令行快捷创建deployment、service、ingress"></a>3.5. 命令行快捷创建deployment、service、ingress</h2><ul>
-<li><p>kubectl create deployment myspittr–image=spittr:1.0-SNAPSHOT –port=8080</p>
-</li>
-<li><p>kubectl expose deployment myspittr 把上面的这个pod的8080端口暴露为myspittr服务</p>
-</li>
-<li><p>kubectl create ingress myspittr–class=nginx–rule=<a class="link" href="http://www.license.com/*=myspittr:8080">www.license.com/*=myspittr:8080 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</li>
-<li><p>访问：<a class="link" href="http://www.license.com/spittr/">http://www.license.com/spittr/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</li>
-<li><p>删除：</p>
-<ul>
-<li>kubectl delete ingress myspittr</li>
-<li>kubectl delete service myspittr</li>
-<li>kubectl delete deployment myspittr</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-6-Deployment"><a href="#3-6-Deployment" class="headerlink" title="3.6. Deployment"></a>3.6. Deployment</h2><p><a class="link" href="https://www.jianshu.com/p/029661f38674">Kubernetes对象之Deployment - 简书 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<ul>
-<li>重启：kubectl rollout restart deployment/spittr<ul>
-<li>kubectl rollout restart deployment –selector=app=spittr</li>
-</ul>
-</li>
-<li><strong>更新镜像重部署</strong>：kubectl set image deployment/spittr spittr=spittr:1.0</li>
-<li>扩容：kubectl scale deployment spittr –replicas 2</li>
-<li><strong>自动伸缩</strong>：kubectl autoscale deployment spittr –min=10 –max=15 –cpu-percent=80 👍<ul>
-<li>k8s可以依据CPU使用率动态决定实例数量的选择</li>
-<li><font color="#c00000">记得删除</font>： kubectl delete horizontalpodautoscalers.autoscaling spittr</li>
-</ul>
-</li>
-<li>查看历史版本：kubectl rollout history deployment/spittr</li>
-<li>回滚到前一个版本：kubectl rollout undo deployment/spittr</li>
-</ul>
-<h1 id="4-k8s常用命令"><a href="#4-k8s常用命令" class="headerlink" title="4. k8s常用命令"></a>4. k8s常用命令</h1><ul>
-<li>kubectl get secrets/pods/all [ -n namespace]</li>
-<li>kubectl get secret mysecret-o yaml</li>
-<li>kubectl delete pod pod_name [ -n namespace]</li>
-<li>kubectl apply -f [json文件或yaml文件-路径]</li>
-<li>kubectl delete -f [json文件或yaml文件-路径]</li>
-<li>kubectl describe secret mysecret</li>
-<li>kubectl logs secret1-pod</li>
-</ul>
 ]]></content>
       <categories>
         <category>2023_Fall_服务端开发</category>
@@ -8853,92 +8853,6 @@
       </tags>
   </entry>
   <entry>
-    <title>13-考试复习</title>
-    <url>/posts/6b745d1d/</url>
-    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><ul>
-<li>基本概念<ul>
-<li>分类</li>
-<li>回归</li>
-<li>维数灾难</li>
-<li>欠拟合</li>
-<li>过拟合</li>
-<li>…</li>
-</ul>
-</li>
-</ul>
-<p>评价指标[[2023Fall/机器学习/0-introduction#2.2. 评价指标|0-introduction]]<br>距离度量函数<br>计算度量<br>生成式/判别式模型</p>
-<h1 id="2-👍KNN"><a href="#2-👍KNN" class="headerlink" title="2. 👍KNN"></a>2. 👍KNN</h1><p>KNN思想、概念、算法流程</p>
-<p>降低计算复杂度，大概看一下</p>
-<h1 id="3-👍无监督学习"><a href="#3-👍无监督学习" class="headerlink" title="3. 👍无监督学习"></a>3. 👍无监督学习</h1><p>聚类概念<br>聚类准则：聚类好坏判断，度量</p>
-<p>三类聚类方法</p>
-<p><strong>k-means</strong></p>
-<p>评价指标</p>
-<h1 id="4-树学习"><a href="#4-树学习" class="headerlink" title="4. 树学习"></a>4. 树学习</h1><p>概念</p>
-<ul>
-<li><strong>决策树</strong><ul>
-<li>构造</li>
-<li>构造时如何选择节点<ul>
-<li>熵，信息增益</li>
-<li>ID3：熵</li>
-<li>C4.5：信息增益</li>
-<li>CART: Gini指数</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="5-集成学习"><a href="#5-集成学习" class="headerlink" title="5. 集成学习"></a>5. 集成学习</h1><p>集成学习的原理，怎么不同的弱分类器结合成强分类器</p>
-<p>Bias-Variance tradeoff</p>
-<p>基本的集成学习方法原理：Bagging, Boosting<br>比较难的几个看一看就行</p>
-<h1 id="6-概率学习"><a href="#6-概率学习" class="headerlink" title="6. 概率学习"></a>6. 概率学习</h1><p>概率学习</p>
-<ul>
-<li>高斯混合模型</li>
-<li>基本概念<ul>
-<li>带约束的数学优化问题</li>
-<li>不带约束的最小二乘优化问题</li>
-</ul>
-</li>
-</ul>
-<p>最大似然估计，期望最大化<br>理论推导不要求</p>
-<h1 id="7-svm"><a href="#7-svm" class="headerlink" title="7. svm"></a>7. svm</h1><p>传统机器学习里最代表性的算法<br>不会考推导</p>
-<p>除了二分类、线性，非线性也需要了解</p>
-<h1 id="8-神经元"><a href="#8-神经元" class="headerlink" title="8. 神经元"></a>8. 神经元</h1><p>神经元</p>
-<p>一些基本概念</p>
-<p>感知机</p>
-<h1 id="9-神经网络"><a href="#9-神经网络" class="headerlink" title="9. 神经网络"></a>9. 神经网络</h1><p>神经网络需要深入掌握</p>
-<p>输入，隐藏层，输出层</p>
-<p><strong>前向，反向传播计算</strong></p>
-<h1 id="10-深度学习"><a href="#10-深度学习" class="headerlink" title="10. 深度学习"></a>10. 深度学习</h1><p>近现代的<strong>卷积</strong></p>
-<p>核心概念，关键模块</p>
-<h1 id="11-演化学习"><a href="#11-演化学习" class="headerlink" title="11. 演化学习"></a>11. 演化学习</h1><p>典型的遗传算法，</p>
-<p>遗传的变异、选择</p>
-<p>模式理论大概了解即可</p>
-<h1 id="12-维度约简"><a href="#12-维度约简" class="headerlink" title="12. 维度约简"></a>12. 维度约简</h1><ul>
-<li><strong>降维算法</strong><ul>
-<li>LDA</li>
-<li>PCA</li>
-<li>ICA</li>
-</ul>
-</li>
-</ul>
-<h1 id="13-强化学习"><a href="#13-强化学习" class="headerlink" title="13. 强化学习"></a>13. 强化学习</h1><p>一定会出现</p>
-<p><strong>MDP</strong><br>动态规划</p>
-<p>探索<br>值函数、奖赏、测略</p>
-<p>基于模型，不基于模型</p>
-<p>Morte Carle方法<br>时间差分</p>
-<p>Bootsraps<br>Sampling</p>
-<p>Q-learning<br>TD</p>
-<p>epsiode的概念</p>
-]]></content>
-      <categories>
-        <category>2023_Fall_机器学习</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2-无监督学习</title>
     <url>/posts/18c82724/</url>
     <content><![CDATA[<h1 id="1-聚类学习"><a href="#1-聚类学习" class="headerlink" title="1. 聚类学习"></a>1. 聚类学习</h1><h2 id="1-1-相关概念"><a href="#1-1-相关概念" class="headerlink" title="1.1. 相关概念"></a>1.1. 相关概念</h2><ul>
@@ -9125,6 +9039,92 @@
 <h2 id="6-1-前置任务学习"><a href="#6-1-前置任务学习" class="headerlink" title="6.1. 前置任务学习"></a>6.1. 前置任务学习</h2><h3 id="6-1-1-生成式方法-图像着色"><a href="#6-1-1-生成式方法-图像着色" class="headerlink" title="6.1.1. 生成式方法-图像着色"></a>6.1.1. 生成式方法-图像着色</h3><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F09%2F19%2Fb88a34e9296c5ce5244cb2d9a0684b25_20230919205843.png" alt="image.png"></p>
 <p>$x \rightarrow CNN \rightarrow \overline{x}^<code>$   输入$(x,\overline{x})$ 即(灰度化后的图像，原本的彩色图像)   $lose=||\overline{x}^</code>-\overline{x}||$，对比生产的彩色图像和原本彩色图像</p>
 <p><strong>数据里没有监督信息，构造假的监督信号</strong></p>
+]]></content>
+      <categories>
+        <category>2023_Fall_机器学习</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>13-考试复习</title>
+    <url>/posts/6b745d1d/</url>
+    <content><![CDATA[<h1 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h1><ul>
+<li>基本概念<ul>
+<li>分类</li>
+<li>回归</li>
+<li>维数灾难</li>
+<li>欠拟合</li>
+<li>过拟合</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<p>评价指标[[2023Fall/机器学习/0-introduction#2.2. 评价指标|0-introduction]]<br>距离度量函数<br>计算度量<br>生成式/判别式模型</p>
+<h1 id="2-👍KNN"><a href="#2-👍KNN" class="headerlink" title="2. 👍KNN"></a>2. 👍KNN</h1><p>KNN思想、概念、算法流程</p>
+<p>降低计算复杂度，大概看一下</p>
+<h1 id="3-👍无监督学习"><a href="#3-👍无监督学习" class="headerlink" title="3. 👍无监督学习"></a>3. 👍无监督学习</h1><p>聚类概念<br>聚类准则：聚类好坏判断，度量</p>
+<p>三类聚类方法</p>
+<p><strong>k-means</strong></p>
+<p>评价指标</p>
+<h1 id="4-树学习"><a href="#4-树学习" class="headerlink" title="4. 树学习"></a>4. 树学习</h1><p>概念</p>
+<ul>
+<li><strong>决策树</strong><ul>
+<li>构造</li>
+<li>构造时如何选择节点<ul>
+<li>熵，信息增益</li>
+<li>ID3：熵</li>
+<li>C4.5：信息增益</li>
+<li>CART: Gini指数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-集成学习"><a href="#5-集成学习" class="headerlink" title="5. 集成学习"></a>5. 集成学习</h1><p>集成学习的原理，怎么不同的弱分类器结合成强分类器</p>
+<p>Bias-Variance tradeoff</p>
+<p>基本的集成学习方法原理：Bagging, Boosting<br>比较难的几个看一看就行</p>
+<h1 id="6-概率学习"><a href="#6-概率学习" class="headerlink" title="6. 概率学习"></a>6. 概率学习</h1><p>概率学习</p>
+<ul>
+<li>高斯混合模型</li>
+<li>基本概念<ul>
+<li>带约束的数学优化问题</li>
+<li>不带约束的最小二乘优化问题</li>
+</ul>
+</li>
+</ul>
+<p>最大似然估计，期望最大化<br>理论推导不要求</p>
+<h1 id="7-svm"><a href="#7-svm" class="headerlink" title="7. svm"></a>7. svm</h1><p>传统机器学习里最代表性的算法<br>不会考推导</p>
+<p>除了二分类、线性，非线性也需要了解</p>
+<h1 id="8-神经元"><a href="#8-神经元" class="headerlink" title="8. 神经元"></a>8. 神经元</h1><p>神经元</p>
+<p>一些基本概念</p>
+<p>感知机</p>
+<h1 id="9-神经网络"><a href="#9-神经网络" class="headerlink" title="9. 神经网络"></a>9. 神经网络</h1><p>神经网络需要深入掌握</p>
+<p>输入，隐藏层，输出层</p>
+<p><strong>前向，反向传播计算</strong></p>
+<h1 id="10-深度学习"><a href="#10-深度学习" class="headerlink" title="10. 深度学习"></a>10. 深度学习</h1><p>近现代的<strong>卷积</strong></p>
+<p>核心概念，关键模块</p>
+<h1 id="11-演化学习"><a href="#11-演化学习" class="headerlink" title="11. 演化学习"></a>11. 演化学习</h1><p>典型的遗传算法，</p>
+<p>遗传的变异、选择</p>
+<p>模式理论大概了解即可</p>
+<h1 id="12-维度约简"><a href="#12-维度约简" class="headerlink" title="12. 维度约简"></a>12. 维度约简</h1><ul>
+<li><strong>降维算法</strong><ul>
+<li>LDA</li>
+<li>PCA</li>
+<li>ICA</li>
+</ul>
+</li>
+</ul>
+<h1 id="13-强化学习"><a href="#13-强化学习" class="headerlink" title="13. 强化学习"></a>13. 强化学习</h1><p>一定会出现</p>
+<p><strong>MDP</strong><br>动态规划</p>
+<p>探索<br>值函数、奖赏、测略</p>
+<p>基于模型，不基于模型</p>
+<p>Morte Carle方法<br>时间差分</p>
+<p>Bootsraps<br>Sampling</p>
+<p>Q-learning<br>TD</p>
+<p>epsiode的概念</p>
 ]]></content>
       <categories>
         <category>2023_Fall_机器学习</category>
@@ -9866,6 +9866,79 @@
       </tags>
   </entry>
   <entry>
+    <title>9-深度学习</title>
+    <url>/posts/68ad7582/</url>
+    <content><![CDATA[<p>深度学习网络：学习良好的非线性结构</p>
+<ul>
+<li>从模式识别的角度看<ul>
+<li>手工特征：固定、难以设计、人工、低层特征、需要专业知识、分离的</li>
+<li>深度学习：可学习的、黑盒的、任务相关、学习层次表示和高级特征、端到端的</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1. 基础知识"></a>1. 基础知识</h1><h2 id="1-1-卷积-Convolution"><a href="#1-1-卷积-Convolution" class="headerlink" title="1.1. 卷积 Convolution"></a>1.1. 卷积 Convolution</h2><p>从图像处理中发展出来</p>
+<ul>
+<li>特征提取</li>
+<li>超参数：depth,stride,zero-padding<ul>
+<li>depth: filter的数量</li>
+<li>zero-padding: 输入特征图的周围填充一圈零值像素。填充的目的是为了保持输入和输出特征图的尺寸一致或者控制尺寸的变化。</li>
+<li>stride: 指卷积核在输入特征图上滑动的步长</li>
+</ul>
+</li>
+<li>过滤器: 与输入数据的局部区域进行逐元素相乘，并将结果相加，从而提取输入数据中的特征<ul>
+<li>也被称为卷积核（convolutional kernel）或特征检测器（feature detector），它是一个小的矩阵或张量，用于在输入数据上进行卷积操作。</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F21%2F20-35-48-af72257a870dc0f92d74f9f6ce5ff219-msedge_P45nvi3Q2K-fdaab4.png" alt="msedge_P45nvi3Q2K.png"></p>
+<p><a class="link" href="https://cs231n.github.io/convolutional-networks/">CS231n Convolutional Neural Networks for Visual Recognition <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="1-2-池化Pooling-下采样Subsampling"><a href="#1-2-池化Pooling-下采样Subsampling" class="headerlink" title="1.2. 池化Pooling/下采样Subsampling"></a>1.2. 池化Pooling/下采样Subsampling</h2><ul>
+<li><p>减少参数</p>
+</li>
+<li><p>避免过拟合</p>
+</li>
+<li><p>扩大感受域</p>
+</li>
+<li><p>常用方法</p>
+<ul>
+<li>Max Pooling</li>
+<li>Average Pooling</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F21%2F20-40-50-fccd7cb28f4bfb97f7dc72a72bb1f89b-20231121204049-4abb64.png" alt="image.png"></p>
+<p>max pooling:<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F21%2F20-40-35-e23daf90d7b5dab4cbdac82874b804c9-20231121204034-bd3ed1.png" alt="image.png"></p>
+<h2 id="1-3-全连接层"><a href="#1-3-全连接层" class="headerlink" title="1.3. 全连接层"></a>1.3. 全连接层</h2><p>MLP</p>
+<p>FC Layer：<strong>全局特征提取</strong><br>Softmax Layer：分类层</p>
+<h2 id="1-4-Dropout"><a href="#1-4-Dropout" class="headerlink" title="1.4. Dropout"></a>1.4. Dropout</h2><p>参数过多，但数据又不够时，容易过拟合</p>
+<p>每个神经元以固定概率p被弃用</p>
+<h2 id="1-5-Batch-Normalization"><a href="#1-5-Batch-Normalization" class="headerlink" title="1.5. Batch Normalization"></a>1.5. Batch Normalization</h2><p>为了让神经网络更深，减少网络内部方差偏移或梯度扩散</p>
+<p>对每一层神经网络的输出做归一化</p>
+<h1 id="2-深度学习技巧"><a href="#2-深度学习技巧" class="headerlink" title="2. 深度学习技巧"></a>2. 深度学习技巧</h1><ol>
+<li>数据增广 Data Agumentation</li>
+<li>预处理 Pre-Processing</li>
+<li>初始化 Initilization</li>
+<li>过滤器 Filter<ul>
+<li>Batch size</li>
+<li>Filter、stride</li>
+</ul>
+</li>
+<li>池化大小 Pooling size</li>
+<li>学习率 Learning rate<ul>
+<li>和使用的优化器有关系</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2023_Fall_机器学习</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Fall_机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>8-神经网络</title>
     <url>/posts/c179ff56/</url>
     <content><![CDATA[<h1 id="1-多层感知机MLP"><a href="#1-多层感知机MLP" class="headerlink" title="1. 多层感知机MLP"></a>1. 多层感知机MLP</h1><p>多了hidden layer</p>
@@ -9960,79 +10033,6 @@
 <li>用任意一种方式计算训练输出的权值<ul>
 <li>用感知机</li>
 <li>计算RBF中心化的伪逆</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2023_Fall_机器学习</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Fall_机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>9-深度学习</title>
-    <url>/posts/68ad7582/</url>
-    <content><![CDATA[<p>深度学习网络：学习良好的非线性结构</p>
-<ul>
-<li>从模式识别的角度看<ul>
-<li>手工特征：固定、难以设计、人工、低层特征、需要专业知识、分离的</li>
-<li>深度学习：可学习的、黑盒的、任务相关、学习层次表示和高级特征、端到端的</li>
-</ul>
-</li>
-</ul>
-<h1 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1. 基础知识"></a>1. 基础知识</h1><h2 id="1-1-卷积-Convolution"><a href="#1-1-卷积-Convolution" class="headerlink" title="1.1. 卷积 Convolution"></a>1.1. 卷积 Convolution</h2><p>从图像处理中发展出来</p>
-<ul>
-<li>特征提取</li>
-<li>超参数：depth,stride,zero-padding<ul>
-<li>depth: filter的数量</li>
-<li>zero-padding: 输入特征图的周围填充一圈零值像素。填充的目的是为了保持输入和输出特征图的尺寸一致或者控制尺寸的变化。</li>
-<li>stride: 指卷积核在输入特征图上滑动的步长</li>
-</ul>
-</li>
-<li>过滤器: 与输入数据的局部区域进行逐元素相乘，并将结果相加，从而提取输入数据中的特征<ul>
-<li>也被称为卷积核（convolutional kernel）或特征检测器（feature detector），它是一个小的矩阵或张量，用于在输入数据上进行卷积操作。</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F21%2F20-35-48-af72257a870dc0f92d74f9f6ce5ff219-msedge_P45nvi3Q2K-fdaab4.png" alt="msedge_P45nvi3Q2K.png"></p>
-<p><a class="link" href="https://cs231n.github.io/convolutional-networks/">CS231n Convolutional Neural Networks for Visual Recognition <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="1-2-池化Pooling-下采样Subsampling"><a href="#1-2-池化Pooling-下采样Subsampling" class="headerlink" title="1.2. 池化Pooling/下采样Subsampling"></a>1.2. 池化Pooling/下采样Subsampling</h2><ul>
-<li><p>减少参数</p>
-</li>
-<li><p>避免过拟合</p>
-</li>
-<li><p>扩大感受域</p>
-</li>
-<li><p>常用方法</p>
-<ul>
-<li>Max Pooling</li>
-<li>Average Pooling</li>
-</ul>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F21%2F20-40-50-fccd7cb28f4bfb97f7dc72a72bb1f89b-20231121204049-4abb64.png" alt="image.png"></p>
-<p>max pooling:<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2023%2F11%2F21%2F20-40-35-e23daf90d7b5dab4cbdac82874b804c9-20231121204034-bd3ed1.png" alt="image.png"></p>
-<h2 id="1-3-全连接层"><a href="#1-3-全连接层" class="headerlink" title="1.3. 全连接层"></a>1.3. 全连接层</h2><p>MLP</p>
-<p>FC Layer：<strong>全局特征提取</strong><br>Softmax Layer：分类层</p>
-<h2 id="1-4-Dropout"><a href="#1-4-Dropout" class="headerlink" title="1.4. Dropout"></a>1.4. Dropout</h2><p>参数过多，但数据又不够时，容易过拟合</p>
-<p>每个神经元以固定概率p被弃用</p>
-<h2 id="1-5-Batch-Normalization"><a href="#1-5-Batch-Normalization" class="headerlink" title="1.5. Batch Normalization"></a>1.5. Batch Normalization</h2><p>为了让神经网络更深，减少网络内部方差偏移或梯度扩散</p>
-<p>对每一层神经网络的输出做归一化</p>
-<h1 id="2-深度学习技巧"><a href="#2-深度学习技巧" class="headerlink" title="2. 深度学习技巧"></a>2. 深度学习技巧</h1><ol>
-<li>数据增广 Data Agumentation</li>
-<li>预处理 Pre-Processing</li>
-<li>初始化 Initilization</li>
-<li>过滤器 Filter<ul>
-<li>Batch size</li>
-<li>Filter、stride</li>
-</ul>
-</li>
-<li>池化大小 Pooling size</li>
-<li>学习率 Learning rate<ul>
-<li>和使用的优化器有关系</li>
 </ul>
 </li>
 </ol>
@@ -11644,6 +11644,105 @@
 ]]></content>
   </entry>
   <entry>
+    <title>01_编译原理概述</title>
+    <url>/posts/72bcb781/</url>
+    <content><![CDATA[<h1 id="1-历史"><a href="#1-历史" class="headerlink" title="1. 历史"></a>1. 历史</h1><p>Donald E.Knuth </p>
+<ul>
+<li>算法分析之父</li>
+<li>the Art of Computer Programming</li>
+<li>Tex<ul>
+<li>后来出现LaTex (Lamport Tex)在Tex的基础上增加了宏包的支持</li>
+</ul>
+</li>
+<li>LR Parser语法分析算法</li>
+<li>Attribute Grammer属性文法 语义分析</li>
+</ul>
+<h1 id="2-编译器"><a href="#2-编译器" class="headerlink" title="2. 编译器"></a>2. 编译器</h1><ul>
+<li>工作：高级语言=&gt;低级语言（如，汇编语言）</li>
+<li>注意：汇编语言经过<strong>汇编器</strong>变成机器语言<br>![A][<a class="link" href="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-01%2020-35-54.png]">https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-01%2020-35-54.png] <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>机器语言是如何跑起来的？<br><a class="link" href="https://www.bilibili.com/video/BV1EW411u7th/?spm_id_from=333.337.search-card.all.click">【计算机科学速成课】[40集全/精校] - Crash Course Computer Science_哔哩哔哩_bilibili <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<h2 id="2-1-名词"><a href="#2-1-名词" class="headerlink" title="2.1. 名词"></a>2.1. 名词</h2><ul>
+<li>LR Parser (语法)</li>
+<li>Attribute Grammar (语义)</li>
+<li>IR: Intermediate Representation (中间表示)</li>
+</ul>
+<h1 id="3-语言类的应用程序"><a href="#3-语言类的应用程序" class="headerlink" title="3. 语言类的应用程序"></a>3. 语言类的应用程序</h1><ol>
+<li>配置文件</li>
+<li>CSV</li>
+<li>JSON</li>
+<li>SQL引擎</li>
+<li>TLA+/TLAPS （数学逻辑）</li>
+<li>（java）字节码解释器</li>
+<li>C/C++解释器</li>
+<li>排版工具Latex</li>
+<li>绘图工具TikZ</li>
+<li>L-System</li>
+</ol>
+<h1 id="4-编译系统结构"><a href="#4-编译系统结构" class="headerlink" title="4. 编译系统结构"></a>4. 编译系统结构</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/15/8e7b8c9abd387a8cf5f9abdab33bc3c8_1676446801.png" alt="1676446801.png"></p>
+<ul>
+<li>前端 (分析阶段): 分析源语言程序, 收集所有必要的信息</li>
+<li>中端：<strong>中间表示IR</strong><ul>
+<li>加一层兼容层，减少工作量</li>
+<li>方便前端后端协作</li>
+<li>优化中间语言（与后端优化无关）</li>
+<li><strong>机器无关</strong>的中间表示优化</li>
+</ul>
+</li>
+<li>后端(综合阶段)：和特定的硬件平台有关</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/01/b836e4b293f39d80d66bb3e8bce10ebf_NVIDIA_Share_1152_559.png" alt="NVIDIA_Share_1152_559.png"></p>
+<ul>
+<li>Clang: a C language family frontend for LLVM<ul>
+<li> / klæŋ/</li>
+</ul>
+</li>
+<li>在设计实际生产环境中的编译器时, <strong>优化</strong>通常占用了大多数时间</li>
+<li>代码在编译器视角都是<strong>字符串</strong></li>
+</ul>
+<h2 id="4-1-具体组成"><a href="#4-1-具体组成" class="headerlink" title="4.1. 具体组成"></a>4.1. 具体组成</h2><h3 id="4-1-1-词法分析器-Lexer-Scanner"><a href="#4-1-1-词法分析器-Lexer-Scanner" class="headerlink" title="4.1.1. 词法分析器 (Lexer/Scanner)"></a>4.1.1. 词法分析器 (Lexer/Scanner)</h3><ul>
+<li>词法分析器 (Lexer/Scanner): 将字符流转化为<strong>词法单元 (token) 流</strong></li>
+<li><code>token: &lt;token-class,attribute-value&gt;</code></li>
+</ul>
+<h3 id="4-1-2-语法分析器-Parser"><a href="#4-1-2-语法分析器-Parser" class="headerlink" title="4.1.2. 语法分析器 (Parser)"></a>4.1.2. 语法分析器 (Parser)</h3><ul>
+<li>语法分析器 (Parser): 构建词法单元之间的语法结构, 生成<strong>语法树</strong></li>
+</ul>
+<h3 id="4-1-3-语义分析器"><a href="#4-1-3-语义分析器" class="headerlink" title="4.1.3. 语义分析器"></a>4.1.3. 语义分析器</h3><ul>
+<li>语义分析器: 语义检查, 如类型检查、“先声明后使用” 约束检查<ul>
+<li>通过遍历语法树完成</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-1-4-中间代码生成器"><a href="#4-1-4-中间代码生成器" class="headerlink" title="4.1.4. 中间代码生成器"></a>4.1.4. 中间代码生成器</h3><ul>
+<li>中间代码生成器: 生成中间代码, 如 “三地址代码”<ul>
+<li>与硬件无关</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-1-5-中间代码优化器"><a href="#4-1-5-中间代码优化器" class="headerlink" title="4.1.5. 中间代码优化器"></a>4.1.5. 中间代码优化器</h3><ul>
+<li>中间代码优化器</li>
+</ul>
+<h3 id="4-1-6-代码生成器"><a href="#4-1-6-代码生成器" class="headerlink" title="4.1.6. 代码生成器"></a>4.1.6. 代码生成器</h3><ul>
+<li>代码生成器: 生成目标代码, 主要任务包括<strong>指令选择、寄存器分配</strong></li>
+</ul>
+<h3 id="4-1-7-符号表"><a href="#4-1-7-符号表" class="headerlink" title="4.1.7. 符号表"></a>4.1.7. 符号表</h3><ul>
+<li>符号表: 收集并管理<strong>变量名/函数名</strong>相关的信息<ul>
+<li>变量名：类型、寄存器、内存地址、行号</li>
+<li>函数名：参数个数、参数类型、返回值类型</li>
+</ul>
+</li>
+<li>为了方便表达嵌套结构与作用域, 可能需要维护多个符号表</li>
+</ul>
+<h2 id="4-2-过程"><a href="#4-2-过程" class="headerlink" title="4.2. 过程"></a>4.2. 过程</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/01/d2b65110e3b3d244508f4c30e8e977c7_NVIDIA_Share_548_691.png" alt="NVIDIA_Share_548_691.png"></p>
+]]></content>
+      <categories>
+        <category>2023_Spring_编译原理</category>
+      </categories>
+      <tags>
+        <tag>2023_Spring编译原理  课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>需求部分复习</title>
     <url>/posts/e27123b2/</url>
     <content><![CDATA[<ul>
@@ -11933,105 +12032,6 @@
       <tags>
         <tag>课程</tag>
         <tag>2023_Fall_需求与商业模式创新</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>01_编译原理概述</title>
-    <url>/posts/72bcb781/</url>
-    <content><![CDATA[<h1 id="1-历史"><a href="#1-历史" class="headerlink" title="1. 历史"></a>1. 历史</h1><p>Donald E.Knuth </p>
-<ul>
-<li>算法分析之父</li>
-<li>the Art of Computer Programming</li>
-<li>Tex<ul>
-<li>后来出现LaTex (Lamport Tex)在Tex的基础上增加了宏包的支持</li>
-</ul>
-</li>
-<li>LR Parser语法分析算法</li>
-<li>Attribute Grammer属性文法 语义分析</li>
-</ul>
-<h1 id="2-编译器"><a href="#2-编译器" class="headerlink" title="2. 编译器"></a>2. 编译器</h1><ul>
-<li>工作：高级语言=&gt;低级语言（如，汇编语言）</li>
-<li>注意：汇编语言经过<strong>汇编器</strong>变成机器语言<br>![A][<a class="link" href="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-01%2020-35-54.png]">https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/Screenshot%20from%202023-03-01%2020-35-54.png] <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>机器语言是如何跑起来的？<br><a class="link" href="https://www.bilibili.com/video/BV1EW411u7th/?spm_id_from=333.337.search-card.all.click">【计算机科学速成课】[40集全/精校] - Crash Course Computer Science_哔哩哔哩_bilibili <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-<h2 id="2-1-名词"><a href="#2-1-名词" class="headerlink" title="2.1. 名词"></a>2.1. 名词</h2><ul>
-<li>LR Parser (语法)</li>
-<li>Attribute Grammar (语义)</li>
-<li>IR: Intermediate Representation (中间表示)</li>
-</ul>
-<h1 id="3-语言类的应用程序"><a href="#3-语言类的应用程序" class="headerlink" title="3. 语言类的应用程序"></a>3. 语言类的应用程序</h1><ol>
-<li>配置文件</li>
-<li>CSV</li>
-<li>JSON</li>
-<li>SQL引擎</li>
-<li>TLA+/TLAPS （数学逻辑）</li>
-<li>（java）字节码解释器</li>
-<li>C/C++解释器</li>
-<li>排版工具Latex</li>
-<li>绘图工具TikZ</li>
-<li>L-System</li>
-</ol>
-<h1 id="4-编译系统结构"><a href="#4-编译系统结构" class="headerlink" title="4. 编译系统结构"></a>4. 编译系统结构</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/02/15/8e7b8c9abd387a8cf5f9abdab33bc3c8_1676446801.png" alt="1676446801.png"></p>
-<ul>
-<li>前端 (分析阶段): 分析源语言程序, 收集所有必要的信息</li>
-<li>中端：<strong>中间表示IR</strong><ul>
-<li>加一层兼容层，减少工作量</li>
-<li>方便前端后端协作</li>
-<li>优化中间语言（与后端优化无关）</li>
-<li><strong>机器无关</strong>的中间表示优化</li>
-</ul>
-</li>
-<li>后端(综合阶段)：和特定的硬件平台有关</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/01/b836e4b293f39d80d66bb3e8bce10ebf_NVIDIA_Share_1152_559.png" alt="NVIDIA_Share_1152_559.png"></p>
-<ul>
-<li>Clang: a C language family frontend for LLVM<ul>
-<li> / klæŋ/</li>
-</ul>
-</li>
-<li>在设计实际生产环境中的编译器时, <strong>优化</strong>通常占用了大多数时间</li>
-<li>代码在编译器视角都是<strong>字符串</strong></li>
-</ul>
-<h2 id="4-1-具体组成"><a href="#4-1-具体组成" class="headerlink" title="4.1. 具体组成"></a>4.1. 具体组成</h2><h3 id="4-1-1-词法分析器-Lexer-Scanner"><a href="#4-1-1-词法分析器-Lexer-Scanner" class="headerlink" title="4.1.1. 词法分析器 (Lexer/Scanner)"></a>4.1.1. 词法分析器 (Lexer/Scanner)</h3><ul>
-<li>词法分析器 (Lexer/Scanner): 将字符流转化为<strong>词法单元 (token) 流</strong></li>
-<li><code>token: &lt;token-class,attribute-value&gt;</code></li>
-</ul>
-<h3 id="4-1-2-语法分析器-Parser"><a href="#4-1-2-语法分析器-Parser" class="headerlink" title="4.1.2. 语法分析器 (Parser)"></a>4.1.2. 语法分析器 (Parser)</h3><ul>
-<li>语法分析器 (Parser): 构建词法单元之间的语法结构, 生成<strong>语法树</strong></li>
-</ul>
-<h3 id="4-1-3-语义分析器"><a href="#4-1-3-语义分析器" class="headerlink" title="4.1.3. 语义分析器"></a>4.1.3. 语义分析器</h3><ul>
-<li>语义分析器: 语义检查, 如类型检查、“先声明后使用” 约束检查<ul>
-<li>通过遍历语法树完成</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-1-4-中间代码生成器"><a href="#4-1-4-中间代码生成器" class="headerlink" title="4.1.4. 中间代码生成器"></a>4.1.4. 中间代码生成器</h3><ul>
-<li>中间代码生成器: 生成中间代码, 如 “三地址代码”<ul>
-<li>与硬件无关</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-1-5-中间代码优化器"><a href="#4-1-5-中间代码优化器" class="headerlink" title="4.1.5. 中间代码优化器"></a>4.1.5. 中间代码优化器</h3><ul>
-<li>中间代码优化器</li>
-</ul>
-<h3 id="4-1-6-代码生成器"><a href="#4-1-6-代码生成器" class="headerlink" title="4.1.6. 代码生成器"></a>4.1.6. 代码生成器</h3><ul>
-<li>代码生成器: 生成目标代码, 主要任务包括<strong>指令选择、寄存器分配</strong></li>
-</ul>
-<h3 id="4-1-7-符号表"><a href="#4-1-7-符号表" class="headerlink" title="4.1.7. 符号表"></a>4.1.7. 符号表</h3><ul>
-<li>符号表: 收集并管理<strong>变量名/函数名</strong>相关的信息<ul>
-<li>变量名：类型、寄存器、内存地址、行号</li>
-<li>函数名：参数个数、参数类型、返回值类型</li>
-</ul>
-</li>
-<li>为了方便表达嵌套结构与作用域, 可能需要维护多个符号表</li>
-</ul>
-<h2 id="4-2-过程"><a href="#4-2-过程" class="headerlink" title="4.2. 过程"></a>4.2. 过程</h2><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/01/d2b65110e3b3d244508f4c30e8e977c7_NVIDIA_Share_548_691.png" alt="NVIDIA_Share_548_691.png"></p>
-]]></content>
-      <categories>
-        <category>2023_Spring_编译原理</category>
-      </categories>
-      <tags>
-        <tag>2023_Spring编译原理  课程</tag>
       </tags>
   </entry>
   <entry>
@@ -12475,29 +12475,6 @@
       </categories>
       <tags>
         <tag>2023_Spring编译原理  课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>05_中间代码生成</title>
-    <url>/posts/623d0f24/</url>
-    <content><![CDATA[<p><strong>静态单赋值</strong>（Static Single Assignment, <strong>SSA</strong>）是编译器中间表示中非常重要的一个概念，它是一种变量的命名约定。当程序中的每个变量都有且只有一个赋值语句时，称一个程序是 SSA 形式的。LLVM IR采用静态单赋值。</p>
-<h1 id="控制流语句翻译"><a href="#控制流语句翻译" class="headerlink" title="控制流语句翻译"></a>控制流语句翻译</h1><p>控制流语句有多种翻译方法</p>
-<p>break -&gt;无条件跳转,可以维护一个栈告诉break语句要去哪里</p>
-<h2 id="地址回填技术"><a href="#地址回填技术" class="headerlink" title="地址回填技术"></a>地址回填技术</h2><ul>
-<li>回填 (Backpatching) 技术: 子节点挖坑、祖先节点填坑<ul>
-<li>子节点暂时不指定跳转指令的目标地址 </li>
-<li>待祖先节点能够确定目标地址时回头填充</li>
-<li>父节点通过综合属性收集子节点中具有相同目标的跳转指令</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2023_Spring_编译原理</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2023_Spring编译原理</tag>
       </tags>
   </entry>
   <entry>
@@ -13102,6 +13079,29 @@
       </tags>
   </entry>
   <entry>
+    <title>05_中间代码生成</title>
+    <url>/posts/623d0f24/</url>
+    <content><![CDATA[<p><strong>静态单赋值</strong>（Static Single Assignment, <strong>SSA</strong>）是编译器中间表示中非常重要的一个概念，它是一种变量的命名约定。当程序中的每个变量都有且只有一个赋值语句时，称一个程序是 SSA 形式的。LLVM IR采用静态单赋值。</p>
+<h1 id="控制流语句翻译"><a href="#控制流语句翻译" class="headerlink" title="控制流语句翻译"></a>控制流语句翻译</h1><p>控制流语句有多种翻译方法</p>
+<p>break -&gt;无条件跳转,可以维护一个栈告诉break语句要去哪里</p>
+<h2 id="地址回填技术"><a href="#地址回填技术" class="headerlink" title="地址回填技术"></a>地址回填技术</h2><ul>
+<li>回填 (Backpatching) 技术: 子节点挖坑、祖先节点填坑<ul>
+<li>子节点暂时不指定跳转指令的目标地址 </li>
+<li>待祖先节点能够确定目标地址时回头填充</li>
+<li>父节点通过综合属性收集子节点中具有相同目标的跳转指令</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2023_Spring_编译原理</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2023_Spring编译原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>06_目标代码</title>
     <url>/posts/94e93df4/</url>
     <content><![CDATA[  
@@ -13160,6 +13160,135 @@ static data放全局变量
       <tags>
         <tag>课程</tag>
         <tag>2023_Spring编译原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lab02_Visitor模式</title>
+    <url>/posts/5a39ddc7/</url>
+    <content><![CDATA[<h1 id="SysYParser和ParseTree"><a href="#SysYParser和ParseTree" class="headerlink" title="SysYParser和ParseTree"></a>SysYParser和ParseTree</h1><p>ParseTree、ProgramContext、RuleNode都是从同一个类继承下来的，所以下面这行代码可以正确运行。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ParseTree</span> <span class="variable">tree</span> <span class="operator">=</span> sysYParser.program();</span><br></pre></td></tr></table></figure></div>
+
+<p>其中<code>sysYParser.program()</code>返回了一个<code>ProgramContext</code>对象，也就是语法分析器得到的抽象语法树的<code>Program</code>节点，与我们所写的词法规则对应。</p>
+<p><code>ParseTree</code>是抽象语法树的节点，<code>sysYParser</code>是词法分析器，两个并不具备包含关系。</p>
+<div style="page-break-after: always;"></div>
+
+<p>调用图如下：</p>
+<ul>
+<li>ProgramContext</li>
+</ul>
+<pre class="mermaid">classDiagram
+direction BT
+class ParseTree {
+&lt;<interface>&gt;
+
+}
+class ParserRuleContext
+class ProgramContext
+class RuleContext
+class RuleNode {
+&lt;<interface>&gt;
+
+}
+class SyntaxTree {
+&lt;<interface>&gt;
+
+}
+class Tree {
+&lt;<interface>&gt;
+
+}
+
+ParseTree  --&gt;  SyntaxTree 
+ParserRuleContext  --&gt;  RuleContext 
+ProgramContext  --&gt;  ParserRuleContext 
+RuleContext  ..&gt;  RuleNode 
+RuleNode  --&gt;  ParseTree 
+SyntaxTree  --&gt;  Tree</interface></interface></interface></interface></pre>
+
+<div style="page-break-after: always;"></div>
+
+<ul>
+<li>CompUnitContext</li>
+</ul>
+<pre class="mermaid">classDiagram
+direction BT
+class CompUnitContext
+class ParseTree {
+&lt;<interface>&gt;
+
+}
+class ParserRuleContext
+class RuleContext
+class RuleNode {
+&lt;<interface>&gt;
+
+}
+class SyntaxTree {
+&lt;<interface>&gt;
+
+}
+class Tree {
+&lt;<interface>&gt;
+
+}
+
+CompUnitContext  --&gt;  ParserRuleContext 
+ParseTree  --&gt;  SyntaxTree 
+ParserRuleContext  --&gt;  RuleContext 
+RuleContext  ..&gt;  RuleNode 
+RuleNode  --&gt;  ParseTree 
+SyntaxTree  --&gt;  Tree</interface></interface></interface></interface></pre>
+
+<div style="page-break-after: always;"></div>
+
+<h1 id="Visitor的运行机制"><a href="#Visitor的运行机制" class="headerlink" title="Visitor的运行机制"></a>Visitor的运行机制</h1><ul>
+<li>SysYParserVisitor</li>
+</ul>
+<pre class="mermaid">classDiagram
+direction BT
+class ParseTreeVisitor~T~ {
+&lt;<interface>&gt;
+
+}
+class SysYParserVisitor~T~ {
+&lt;<interface>&gt;
+
+}
+
+SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
+
+<ul>
+<li>Visitor模式需要定义两个类层次<ul>
+<li>Node层次：接受操作的元素（即第一部分的<code>Parsertree</code>）</li>
+<li>Visitor层次：定义对元素的操作</li>
+</ul>
+</li>
+</ul>
+<p>在<code>Main</code>中我们通过这行命令调用<code>Visitor</code>遍历抽象语法树，<code>visitor</code>确实只是一个入口。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">visitor.visit(tree);</span><br></pre></td></tr></table></figure></div>
+
+<p>这个<code>tree</code>的声明类型是<code>ParseTree</code>，但显然它的实际类型是<code>ProgramContext</code>，所以这个语句会调用<code>SysyParser.ProgramContext</code>类中的<code>accept</code>。</p>
+<p>注意：<code>ProgramContext</code>、<code>CompUnitContext</code>等类都是<code>SysyParser</code>内部的<code>static</code>类，因此<code>accept</code>方法并不能是<code>SysyParser</code>中的，而是每个抽象语法树的节点里的。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span>  </span><br><span class="line"><span class="keyword">public</span> &lt;T&gt; T <span class="title function_">accept</span><span class="params">(ParseTreeVisitor&lt;? extends T&gt; visitor)</span> {  </span><br><span class="line">	<span class="keyword">if</span> ( visitor <span class="keyword">instanceof</span> SysYParserVisitor ) </span><br><span class="line">		<span class="keyword">return</span> ((SysYParserVisitor&lt;? <span class="keyword">extends</span> <span class="title class_">T</span>&gt;)visitor).visitProgram(<span class="built_in">this</span>);  </span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		<span class="keyword">return</span> visitor.visitChildren(<span class="built_in">this</span>);  </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+
+<p>这里的<code>if</code>判断<code>visitor</code>是否是<code>SysYParserVisitor</code>的实例，若是则进行类型转换，然后调用对应的<code>visit</code>方法。这里的<code>this</code>是<code>ProgramContext</code>，也就是抽象语法树的节点。这符合Visitor设计模式：accept以visitor为参数，节点内部实现accept时会回调visitor的的成员函数（以this为参数）。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/30/b2f707ed3df21a402d5dd1b2dbe9630d_202303302123676.png"></p>
+<p><code>visitProgram</code>的原始定义在接口<code>SysYParserVisitor</code>中，<code>Antlr4</code>自动生成的类<code>SysYParserBaseVisitor</code>对其给出了默认实现。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SysYParserBaseVisitor</span>&lt;T&gt; <span class="keyword">extends</span> <span class="title class_">AbstractParseTreeVisitor</span>&lt;T&gt; <span class="keyword">implements</span> <span class="title class_">SysYParserVisitor</span>&lt;T&gt;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> T <span class="title function_">visitProgram</span><span class="params">(SysYParser.ProgramContext ctx)</span> { <span class="keyword">return</span> visitChildren(ctx); }</span><br></pre></td></tr></table></figure></div>
+
+<p><code>SysYParserBaseVisitor</code>中每个节点的<code>visitXXX</code>函数默认实现都是<code>visitChildren(ctx)</code>。</p>
+<p>如果我们在本次Lab中使用Visitor模式，我们需要继承<code>SysYParserBaseVisitor</code>，所有这些方法都可以修改。因为本次Lab不需要对每个节点做特定处理，所以我们不需要修改每个节点的默认实现，只需要修改<code>visitChildren</code>就可以实现抽象语法树的打印。</p>
+<p><code>visitChildren</code>方法的存在只是为了具体实现时更方便，与Visitor设计模式关系不大。Visitor模式的核心应该是accept和visit的多分派，根据实际类型而不是声明类型来选择调用的方法（和C++中的虚函数类似）。</p>
+<p>至于怎么打印语法树，也就是如何深度优先遍历，只要在我们自己的<code>visitChildren</code>中实现递归即可。其实可以参考<code>AbstractParseTreeVisitor</code>中的<code>visitChildren</code>，其中的<code>for</code>循环就实现了深度优先遍历，这里的<code>accept</code>也会根据<code>c</code>的实际类型动态选择实现，由于没有修改默认实现，最后一定会调用到<code>visitChildren</code>方法。<br>我们只需要做一些修改，在适当的位置打印节点的相关信息就可以了。</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> T <span class="title function_">visitChildren</span><span class="params">(RuleNode node)</span> {  </span><br><span class="line">	<span class="type">T</span> <span class="variable">result</span> <span class="operator">=</span> <span class="built_in">this</span>.defaultResult();  </span><br><span class="line">	<span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> node.getChildCount();  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n &amp;&amp; <span class="built_in">this</span>.shouldVisitNextChild(node, result); ++i) {  </span><br><span class="line">	<span class="type">ParseTree</span> <span class="variable">c</span> <span class="operator">=</span> node.getChild(i);  </span><br><span class="line">	<span class="type">T</span> <span class="variable">childResult</span> <span class="operator">=</span> c.accept(<span class="built_in">this</span>);  </span><br><span class="line">	result = <span class="built_in">this</span>.aggregateResult(result, childResult);  </span><br><span class="line">}  </span><br><span class="line">  </span><br><span class="line">	<span class="keyword">return</span> result;  </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>2023_Spring_编译原理</category>
+      </categories>
+      <tags>
+        <tag>2023_Spring编译原理  课程</tag>
       </tags>
   </entry>
   <entry>
@@ -13447,135 +13576,6 @@ static data放全局变量
       <tags>
         <tag>课程</tag>
         <tag>2024_Spring_Linux系统编程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Lab02_Visitor模式</title>
-    <url>/posts/5a39ddc7/</url>
-    <content><![CDATA[<h1 id="SysYParser和ParseTree"><a href="#SysYParser和ParseTree" class="headerlink" title="SysYParser和ParseTree"></a>SysYParser和ParseTree</h1><p>ParseTree、ProgramContext、RuleNode都是从同一个类继承下来的，所以下面这行代码可以正确运行。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ParseTree</span> <span class="variable">tree</span> <span class="operator">=</span> sysYParser.program();</span><br></pre></td></tr></table></figure></div>
-
-<p>其中<code>sysYParser.program()</code>返回了一个<code>ProgramContext</code>对象，也就是语法分析器得到的抽象语法树的<code>Program</code>节点，与我们所写的词法规则对应。</p>
-<p><code>ParseTree</code>是抽象语法树的节点，<code>sysYParser</code>是词法分析器，两个并不具备包含关系。</p>
-<div style="page-break-after: always;"></div>
-
-<p>调用图如下：</p>
-<ul>
-<li>ProgramContext</li>
-</ul>
-<pre class="mermaid">classDiagram
-direction BT
-class ParseTree {
-&lt;<interface>&gt;
-
-}
-class ParserRuleContext
-class ProgramContext
-class RuleContext
-class RuleNode {
-&lt;<interface>&gt;
-
-}
-class SyntaxTree {
-&lt;<interface>&gt;
-
-}
-class Tree {
-&lt;<interface>&gt;
-
-}
-
-ParseTree  --&gt;  SyntaxTree 
-ParserRuleContext  --&gt;  RuleContext 
-ProgramContext  --&gt;  ParserRuleContext 
-RuleContext  ..&gt;  RuleNode 
-RuleNode  --&gt;  ParseTree 
-SyntaxTree  --&gt;  Tree</interface></interface></interface></interface></pre>
-
-<div style="page-break-after: always;"></div>
-
-<ul>
-<li>CompUnitContext</li>
-</ul>
-<pre class="mermaid">classDiagram
-direction BT
-class CompUnitContext
-class ParseTree {
-&lt;<interface>&gt;
-
-}
-class ParserRuleContext
-class RuleContext
-class RuleNode {
-&lt;<interface>&gt;
-
-}
-class SyntaxTree {
-&lt;<interface>&gt;
-
-}
-class Tree {
-&lt;<interface>&gt;
-
-}
-
-CompUnitContext  --&gt;  ParserRuleContext 
-ParseTree  --&gt;  SyntaxTree 
-ParserRuleContext  --&gt;  RuleContext 
-RuleContext  ..&gt;  RuleNode 
-RuleNode  --&gt;  ParseTree 
-SyntaxTree  --&gt;  Tree</interface></interface></interface></interface></pre>
-
-<div style="page-break-after: always;"></div>
-
-<h1 id="Visitor的运行机制"><a href="#Visitor的运行机制" class="headerlink" title="Visitor的运行机制"></a>Visitor的运行机制</h1><ul>
-<li>SysYParserVisitor</li>
-</ul>
-<pre class="mermaid">classDiagram
-direction BT
-class ParseTreeVisitor~T~ {
-&lt;<interface>&gt;
-
-}
-class SysYParserVisitor~T~ {
-&lt;<interface>&gt;
-
-}
-
-SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
-
-<ul>
-<li>Visitor模式需要定义两个类层次<ul>
-<li>Node层次：接受操作的元素（即第一部分的<code>Parsertree</code>）</li>
-<li>Visitor层次：定义对元素的操作</li>
-</ul>
-</li>
-</ul>
-<p>在<code>Main</code>中我们通过这行命令调用<code>Visitor</code>遍历抽象语法树，<code>visitor</code>确实只是一个入口。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">visitor.visit(tree);</span><br></pre></td></tr></table></figure></div>
-
-<p>这个<code>tree</code>的声明类型是<code>ParseTree</code>，但显然它的实际类型是<code>ProgramContext</code>，所以这个语句会调用<code>SysyParser.ProgramContext</code>类中的<code>accept</code>。</p>
-<p>注意：<code>ProgramContext</code>、<code>CompUnitContext</code>等类都是<code>SysyParser</code>内部的<code>static</code>类，因此<code>accept</code>方法并不能是<code>SysyParser</code>中的，而是每个抽象语法树的节点里的。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span>  </span><br><span class="line"><span class="keyword">public</span> &lt;T&gt; T <span class="title function_">accept</span><span class="params">(ParseTreeVisitor&lt;? extends T&gt; visitor)</span> {  </span><br><span class="line">	<span class="keyword">if</span> ( visitor <span class="keyword">instanceof</span> SysYParserVisitor ) </span><br><span class="line">		<span class="keyword">return</span> ((SysYParserVisitor&lt;? <span class="keyword">extends</span> <span class="title class_">T</span>&gt;)visitor).visitProgram(<span class="built_in">this</span>);  </span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		<span class="keyword">return</span> visitor.visitChildren(<span class="built_in">this</span>);  </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-
-<p>这里的<code>if</code>判断<code>visitor</code>是否是<code>SysYParserVisitor</code>的实例，若是则进行类型转换，然后调用对应的<code>visit</code>方法。这里的<code>this</code>是<code>ProgramContext</code>，也就是抽象语法树的节点。这符合Visitor设计模式：accept以visitor为参数，节点内部实现accept时会回调visitor的的成员函数（以this为参数）。</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/imgae/2023/03/30/b2f707ed3df21a402d5dd1b2dbe9630d_202303302123676.png"></p>
-<p><code>visitProgram</code>的原始定义在接口<code>SysYParserVisitor</code>中，<code>Antlr4</code>自动生成的类<code>SysYParserBaseVisitor</code>对其给出了默认实现。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SysYParserBaseVisitor</span>&lt;T&gt; <span class="keyword">extends</span> <span class="title class_">AbstractParseTreeVisitor</span>&lt;T&gt; <span class="keyword">implements</span> <span class="title class_">SysYParserVisitor</span>&lt;T&gt;</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> T <span class="title function_">visitProgram</span><span class="params">(SysYParser.ProgramContext ctx)</span> { <span class="keyword">return</span> visitChildren(ctx); }</span><br></pre></td></tr></table></figure></div>
-
-<p><code>SysYParserBaseVisitor</code>中每个节点的<code>visitXXX</code>函数默认实现都是<code>visitChildren(ctx)</code>。</p>
-<p>如果我们在本次Lab中使用Visitor模式，我们需要继承<code>SysYParserBaseVisitor</code>，所有这些方法都可以修改。因为本次Lab不需要对每个节点做特定处理，所以我们不需要修改每个节点的默认实现，只需要修改<code>visitChildren</code>就可以实现抽象语法树的打印。</p>
-<p><code>visitChildren</code>方法的存在只是为了具体实现时更方便，与Visitor设计模式关系不大。Visitor模式的核心应该是accept和visit的多分派，根据实际类型而不是声明类型来选择调用的方法（和C++中的虚函数类似）。</p>
-<p>至于怎么打印语法树，也就是如何深度优先遍历，只要在我们自己的<code>visitChildren</code>中实现递归即可。其实可以参考<code>AbstractParseTreeVisitor</code>中的<code>visitChildren</code>，其中的<code>for</code>循环就实现了深度优先遍历，这里的<code>accept</code>也会根据<code>c</code>的实际类型动态选择实现，由于没有修改默认实现，最后一定会调用到<code>visitChildren</code>方法。<br>我们只需要做一些修改，在适当的位置打印节点的相关信息就可以了。</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> T <span class="title function_">visitChildren</span><span class="params">(RuleNode node)</span> {  </span><br><span class="line">	<span class="type">T</span> <span class="variable">result</span> <span class="operator">=</span> <span class="built_in">this</span>.defaultResult();  </span><br><span class="line">	<span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> node.getChildCount();  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n &amp;&amp; <span class="built_in">this</span>.shouldVisitNextChild(node, result); ++i) {  </span><br><span class="line">	<span class="type">ParseTree</span> <span class="variable">c</span> <span class="operator">=</span> node.getChild(i);  </span><br><span class="line">	<span class="type">T</span> <span class="variable">childResult</span> <span class="operator">=</span> c.accept(<span class="built_in">this</span>);  </span><br><span class="line">	result = <span class="built_in">this</span>.aggregateResult(result, childResult);  </span><br><span class="line">}  </span><br><span class="line">  </span><br><span class="line">	<span class="keyword">return</span> result;  </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>2023_Spring_编译原理</category>
-      </categories>
-      <tags>
-        <tag>2023_Spring编译原理  课程</tag>
       </tags>
   </entry>
   <entry>
@@ -15807,37 +15807,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
-    <title>0-数据库开发</title>
-    <url>/posts/a97c1df5/</url>
-    <content><![CDATA[<h1 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h1><ol>
-<li>高性能数据库开发原则</li>
-<li>SQL优化</li>
-<li>其它<ul>
-<li>并发</li>
-<li>大数据</li>
-<li>分布式</li>
-</ul>
-</li>
-<li>数据库实现</li>
-</ol>
-<p>分数：作业40%，分数60%，期末可能会改</p>
-<ul>
-<li>视图：<ul>
-<li>数据库重构后兼容原来的系统</li>
-<li>不同应用使用同一个数据源，权限控制</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2024_Spring_数据库开发</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2024_Spring_数据库开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>01-开发成功数据库要点</title>
     <url>/posts/66d265b9/</url>
     <content><![CDATA[<h1 id="开发成功数据库的要点"><a href="#开发成功数据库的要点" class="headerlink" title="开发成功数据库的要点"></a>开发成功数据库的要点</h1><ol>
@@ -15936,6 +15905,37 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 <li><p>宽表<br><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F03%2F04%2F15-43-51-2b2308c449009cfc5f35805521960618-20240304154350-89707b.png" alt="image.png"></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2024_Spring_数据库开发</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_数据库开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0-数据库开发</title>
+    <url>/posts/a97c1df5/</url>
+    <content><![CDATA[<h1 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h1><ol>
+<li>高性能数据库开发原则</li>
+<li>SQL优化</li>
+<li>其它<ul>
+<li>并发</li>
+<li>大数据</li>
+<li>分布式</li>
+</ul>
+</li>
+<li>数据库实现</li>
+</ol>
+<p>分数：作业40%，分数60%，期末可能会改</p>
+<ul>
+<li>视图：<ul>
+<li>数据库重构后兼容原来的系统</li>
+<li>不同应用使用同一个数据源，权限控制</li>
+</ul>
 </li>
 </ul>
 ]]></content>
@@ -17524,6 +17524,81 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
+    <title>02-软件架构intro</title>
+    <url>/posts/46b5218b/</url>
+    <content><![CDATA[<ul>
+<li>软件的四个本质难题<ol>
+<li>复杂度</li>
+<li>一致性 </li>
+<li>可变性 </li>
+<li>不可见性：没有几何结构</li>
+</ol>
+</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F16%2F14-49-29-00d7cb1dc073a5a241fb8794c7cb365d-20240416144928-c3fd7b.png" alt="image.png"></p>
+<h1 id="架构来源"><a href="#架构来源" class="headerlink" title="架构来源"></a>架构来源</h1><ul>
+<li><p>Architecture:</p>
+<ol>
+<li>Component interfaces</li>
+<li>Component communications and dependencies</li>
+<li>Component responibilities<ol>
+<li>性能，可用……</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>communication</p>
+<ol>
+<li>Data passing</li>
+<li>Control flow</li>
+</ol>
+</li>
+</ul>
+<h2 id="NFR"><a href="#NFR" class="headerlink" title="NFR"></a>NFR</h2><ul>
+<li>架构强调非功能需求NFR：how well a system works</li>
+<li>包括<ol>
+<li>技术限制</li>
+<li>商业限制</li>
+<li>质量属性</li>
+</ol>
+</li>
+</ul>
+<h1 id="architecture-views"><a href="#architecture-views" class="headerlink" title="architecture views"></a>architecture views</h1><p>有多个视图<br>解决不可见</p>
+<h2 id="4-1-view-model"><a href="#4-1-view-model" class="headerlink" title="4+1 view model"></a>4+1 view model</h2><p>Logical view ：架构的重要元素和他们之间的关系<br>Process view  ：<br>Physical view<br>Development view</p>
+<p>Architecture use cases: 四个视图是关于某个场景的</p>
+<h2 id="generic-design-strategies"><a href="#generic-design-strategies" class="headerlink" title="generic design strategies"></a>generic design strategies</h2><ol>
+<li>Decomposition</li>
+<li>Abstraction</li>
+<li>Stepwise: Divid and Conquer</li>
+<li>Generate and Test，先生成一个设计，再对它测试</li>
+<li>Iteration: Incremental Refinement</li>
+<li>Reuseable elements，重用现有的设计</li>
+</ol>
+<h1 id="what-does-a-software-architect-do"><a href="#what-does-a-software-architect-do" class="headerlink" title="what does a software architect do?"></a>what does a software architect do?</h1><ol>
+<li>Liaison<ol>
+<li>调和用户、市场、开发等</li>
+</ol>
+</li>
+<li>software engineering</li>
+<li>technology knowledge</li>
+<li>risk management</li>
+</ol>
+<h1 id="架构设计过程"><a href="#架构设计过程" class="headerlink" title="架构设计过程"></a>架构设计过程</h1><ol>
+<li>识别和架构相关的重要需求</li>
+<li>架构设计</li>
+<li>文档化，以视图为中心</li>
+<li>架构评估</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件系统设计</category>
+      </categories>
+      <tags>
+        <tag>课程</tag>
+        <tag>2024_Spring_软件系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>01-设计模式</title>
     <url>/posts/946442dc/</url>
     <content><![CDATA[<h1 id="1-概括"><a href="#1-概括" class="headerlink" title="1. 概括"></a>1. 概括</h1><p>现有设计经验的总结</p>
@@ -18317,81 +18392,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <h1 id="20-其他"><a href="#20-其他" class="headerlink" title="20. 其他"></a>20. 其他</h1><h2 id="20-1-继承和合成的区别？"><a href="#20-1-继承和合成的区别？" class="headerlink" title="20.1. 继承和合成的区别？"></a>20.1. 继承和合成的区别？</h2><ol>
 <li>继承：复用接口、类型定义，不太容易改变；白盒继承，拥有父类所有代码，复用代码时可以部分改变父类代码  </li>
 <li>合成：复用实现，容易改变；黑盒，不易改变对象内部实现，只能完全更换对象</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件系统设计</category>
-      </categories>
-      <tags>
-        <tag>课程</tag>
-        <tag>2024_Spring_软件系统设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>02-软件架构intro</title>
-    <url>/posts/46b5218b/</url>
-    <content><![CDATA[<ul>
-<li>软件的四个本质难题<ol>
-<li>复杂度</li>
-<li>一致性 </li>
-<li>可变性 </li>
-<li>不可见性：没有几何结构</li>
-</ol>
-</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F04%2F16%2F14-49-29-00d7cb1dc073a5a241fb8794c7cb365d-20240416144928-c3fd7b.png" alt="image.png"></p>
-<h1 id="架构来源"><a href="#架构来源" class="headerlink" title="架构来源"></a>架构来源</h1><ul>
-<li><p>Architecture:</p>
-<ol>
-<li>Component interfaces</li>
-<li>Component communications and dependencies</li>
-<li>Component responibilities<ol>
-<li>性能，可用……</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>communication</p>
-<ol>
-<li>Data passing</li>
-<li>Control flow</li>
-</ol>
-</li>
-</ul>
-<h2 id="NFR"><a href="#NFR" class="headerlink" title="NFR"></a>NFR</h2><ul>
-<li>架构强调非功能需求NFR：how well a system works</li>
-<li>包括<ol>
-<li>技术限制</li>
-<li>商业限制</li>
-<li>质量属性</li>
-</ol>
-</li>
-</ul>
-<h1 id="architecture-views"><a href="#architecture-views" class="headerlink" title="architecture views"></a>architecture views</h1><p>有多个视图<br>解决不可见</p>
-<h2 id="4-1-view-model"><a href="#4-1-view-model" class="headerlink" title="4+1 view model"></a>4+1 view model</h2><p>Logical view ：架构的重要元素和他们之间的关系<br>Process view  ：<br>Physical view<br>Development view</p>
-<p>Architecture use cases: 四个视图是关于某个场景的</p>
-<h2 id="generic-design-strategies"><a href="#generic-design-strategies" class="headerlink" title="generic design strategies"></a>generic design strategies</h2><ol>
-<li>Decomposition</li>
-<li>Abstraction</li>
-<li>Stepwise: Divid and Conquer</li>
-<li>Generate and Test，先生成一个设计，再对它测试</li>
-<li>Iteration: Incremental Refinement</li>
-<li>Reuseable elements，重用现有的设计</li>
-</ol>
-<h1 id="what-does-a-software-architect-do"><a href="#what-does-a-software-architect-do" class="headerlink" title="what does a software architect do?"></a>what does a software architect do?</h1><ol>
-<li>Liaison<ol>
-<li>调和用户、市场、开发等</li>
-</ol>
-</li>
-<li>software engineering</li>
-<li>technology knowledge</li>
-<li>risk management</li>
-</ol>
-<h1 id="架构设计过程"><a href="#架构设计过程" class="headerlink" title="架构设计过程"></a>架构设计过程</h1><ol>
-<li>识别和架构相关的重要需求</li>
-<li>架构设计</li>
-<li>文档化，以视图为中心</li>
-<li>架构评估</li>
 </ol>
 ]]></content>
       <categories>
@@ -19383,86 +19383,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
-    <title>01-软件质量管理概述</title>
-    <url>/posts/5c2f34b3/</url>
-    <content><![CDATA[<h1 id="1-软件危机"><a href="#1-软件危机" class="headerlink" title="1. 软件危机"></a>1. 软件危机</h1><ul>
-<li><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</li>
-<li>软件工厂：用<font color="#ff0000">工程化方法</font>构建和维护有效的、实用的和高质量软件的学科</li>
-<li><font color="#ff0000">本质四大难题</font><ol>
-<li>复杂性</li>
-<li>不可见性</li>
-<li>可变性</li>
-<li>一致性</li>
-</ol>
-</li>
-</ul>
-<h1 id="2-软件项目管理的概念"><a href="#2-软件项目管理的概念" class="headerlink" title="2. 软件项目管理的概念"></a>2. 软件项目管理的概念</h1><ul>
-<li><font color="#ff0000">管理的三大要素</font><ol>
-<li>目标</li>
-<li>状态</li>
-<li>纠偏</li>
-</ol>
-</li>
-<li>软件项目管理的典型三大目标<ol>
-<li>成本</li>
-<li>质量</li>
-<li>工期</li>
-</ol>
-</li>
-</ul>
-<h1 id="3-软件项目的管理视角"><a href="#3-软件项目的管理视角" class="headerlink" title="3. 软件项目的管理视角"></a>3. 软件项目的管理视角</h1><ul>
-<li>管理的软件工程视角：<font color="#ff0000">成功是否可以复制？</font><ul>
-<li><strong>软件过程</strong>：为了实现一个或多个事先定义的目标而建立起来的一组实践的集合。这组实践之间往往有一定的先后顺序，作为一个整体来实现事先定义的一个或多个目标。</li>
-<li><strong>生命周期模型</strong>：对软件过程的一种人为划分</li>
-</ul>
-</li>
-</ul>
-<h1 id="4-广义软件过程"><a href="#4-广义软件过程" class="headerlink" title="4. 广义软件过程"></a>4. 广义软件过程</h1><ul>
-<li><strong>广义软件过程</strong>包括：<font color="#ff0000">技术</font>、<font color="#ff0000">人员</font>以及<font color="#ff0000">狭义过程</font></li>
-<li>同义词：软件开发方法、软件开发过程<ul>
-<li>Cleanroom方法、XP方法、SCRUM方法 、Gate方法；</li>
-<li>更一般的：敏捷软件过程／方法、轻量型过程／方法以及重型过程／方法等描述也是恰当的</li>
-</ul>
-</li>
-</ul>
-<h1 id="5-生命周期模型"><a href="#5-生命周期模型" class="headerlink" title="5. 生命周期模型"></a>5. 生命周期模型</h1><ul>
-<li><p>与软件过程的<strong>区别和联系</strong></p>
-<ol>
-<li>生命周期模型是对软件开发过程的<strong>人为划分</strong></li>
-<li>生命周期模型是软件开发过程的<strong>主框架</strong>，是对软件开发过程的一种<strong>粗粒度划分</strong></li>
-<li>生命周期模型往往不包含技术实践</li>
-</ol>
-</li>
-<li><p>典型生命周期模型</p>
-<ol>
-<li>瀑布模型</li>
-<li>迭代式模型</li>
-<li>增量模型</li>
-<li>螺旋模型</li>
-<li>原型法</li>
-</ol>
-</li>
-</ul>
-<h1 id="6-软件过程管理"><a href="#6-软件过程管理" class="headerlink" title="6. 软件过程管理"></a>6. 软件过程管理</h1><ul>
-<li>管理对象：软件过程</li>
-<li>目的：让软件过程在开发效率、质量等方面有着更好性能</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F24%2F19-09-18-23ad574ff13e9c6543bdc295f0c375af-20240624190917-8282c3.png" alt="image.png"></p>
-<h1 id="7-软件过程管理与软件过程改进"><a href="#7-软件过程管理与软件过程改进" class="headerlink" title="7. 软件过程管理与软件过程改进"></a>7. 软件过程管理与软件过程改进</h1><p>两者意思相近</p>
-<ul>
-<li>软件过程管理参考模型：CMM/CMMI，SPICE等</li>
-<li>软件过程改进参考元模型：PDCA，IDEAL</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F24%2F19-12-50-55d38437589e514ac8688788296a0518-20240624191250-eac2bf.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件质量管理</category>
-      </categories>
-      <tags>
-        <tag>2024_Spring_软件质量管理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>软件系统设计-架构期末</title>
     <url>/posts/3ff9b627/</url>
     <content><![CDATA[<h1 id="1-架构概念"><a href="#1-架构概念" class="headerlink" title="1. 架构概念"></a>1. 架构概念</h1><ol>
@@ -20134,6 +20054,86 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 </ul>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01-软件质量管理概述</title>
+    <url>/posts/5c2f34b3/</url>
+    <content><![CDATA[<h1 id="1-软件危机"><a href="#1-软件危机" class="headerlink" title="1. 软件危机"></a>1. 软件危机</h1><ul>
+<li><span style="background:rgba(3, 135, 102, 0.2)">软件危机</span>：落后的软件生产方式无法满足快速增长的计算机软件需求，从而导致软件开发和维护过程中出现一系列严重的问题</li>
+<li>软件工厂：用<font color="#ff0000">工程化方法</font>构建和维护有效的、实用的和高质量软件的学科</li>
+<li><font color="#ff0000">本质四大难题</font><ol>
+<li>复杂性</li>
+<li>不可见性</li>
+<li>可变性</li>
+<li>一致性</li>
+</ol>
+</li>
+</ul>
+<h1 id="2-软件项目管理的概念"><a href="#2-软件项目管理的概念" class="headerlink" title="2. 软件项目管理的概念"></a>2. 软件项目管理的概念</h1><ul>
+<li><font color="#ff0000">管理的三大要素</font><ol>
+<li>目标</li>
+<li>状态</li>
+<li>纠偏</li>
+</ol>
+</li>
+<li>软件项目管理的典型三大目标<ol>
+<li>成本</li>
+<li>质量</li>
+<li>工期</li>
+</ol>
+</li>
+</ul>
+<h1 id="3-软件项目的管理视角"><a href="#3-软件项目的管理视角" class="headerlink" title="3. 软件项目的管理视角"></a>3. 软件项目的管理视角</h1><ul>
+<li>管理的软件工程视角：<font color="#ff0000">成功是否可以复制？</font><ul>
+<li><strong>软件过程</strong>：为了实现一个或多个事先定义的目标而建立起来的一组实践的集合。这组实践之间往往有一定的先后顺序，作为一个整体来实现事先定义的一个或多个目标。</li>
+<li><strong>生命周期模型</strong>：对软件过程的一种人为划分</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-广义软件过程"><a href="#4-广义软件过程" class="headerlink" title="4. 广义软件过程"></a>4. 广义软件过程</h1><ul>
+<li><strong>广义软件过程</strong>包括：<font color="#ff0000">技术</font>、<font color="#ff0000">人员</font>以及<font color="#ff0000">狭义过程</font></li>
+<li>同义词：软件开发方法、软件开发过程<ul>
+<li>Cleanroom方法、XP方法、SCRUM方法 、Gate方法；</li>
+<li>更一般的：敏捷软件过程／方法、轻量型过程／方法以及重型过程／方法等描述也是恰当的</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-生命周期模型"><a href="#5-生命周期模型" class="headerlink" title="5. 生命周期模型"></a>5. 生命周期模型</h1><ul>
+<li><p>与软件过程的<strong>区别和联系</strong></p>
+<ol>
+<li>生命周期模型是对软件开发过程的<strong>人为划分</strong></li>
+<li>生命周期模型是软件开发过程的<strong>主框架</strong>，是对软件开发过程的一种<strong>粗粒度划分</strong></li>
+<li>生命周期模型往往不包含技术实践</li>
+</ol>
+</li>
+<li><p>典型生命周期模型</p>
+<ol>
+<li>瀑布模型</li>
+<li>迭代式模型</li>
+<li>增量模型</li>
+<li>螺旋模型</li>
+<li>原型法</li>
+</ol>
+</li>
+</ul>
+<h1 id="6-软件过程管理"><a href="#6-软件过程管理" class="headerlink" title="6. 软件过程管理"></a>6. 软件过程管理</h1><ul>
+<li>管理对象：软件过程</li>
+<li>目的：让软件过程在开发效率、质量等方面有着更好性能</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F24%2F19-09-18-23ad574ff13e9c6543bdc295f0c375af-20240624190917-8282c3.png" alt="image.png"></p>
+<h1 id="7-软件过程管理与软件过程改进"><a href="#7-软件过程管理与软件过程改进" class="headerlink" title="7. 软件过程管理与软件过程改进"></a>7. 软件过程管理与软件过程改进</h1><p>两者意思相近</p>
+<ul>
+<li>软件过程管理参考模型：CMM/CMMI，SPICE等</li>
+<li>软件过程改进参考元模型：PDCA，IDEAL</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F24%2F19-12-50-55d38437589e514ac8688788296a0518-20240624191250-eac2bf.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2024_Spring_软件质量管理</category>
@@ -21269,6 +21269,54 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
       </tags>
   </entry>
   <entry>
+    <title>08-定量管理与仿真建模</title>
+    <url>/posts/b20937f7/</url>
+    <content><![CDATA[<p><font color="#c00000">不是有数据就叫定量管理</font></p>
+<p>定量管理：有预测模型，根据最终结果判断</p>
+<p>CMMI的4、5级都有预测模型，属于定量管理，1、2、3级只能算一般项目管理</p>
+<ul>
+<li>过程模型</li>
+<li>过程能力基线</li>
+<li>过程组合<ul>
+<li>关键子过程性能目标</li>
+<li>整体过程性能目标</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-定量管理范式"><a href="#1-定量管理范式" class="headerlink" title="1. 定量管理范式"></a>1. 定量管理范式</h1><ul>
+<li>构建定量模型<ol>
+<li>子过程能力基线</li>
+<li>过程模型</li>
+</ol>
+</li>
+<li>应用模型<ol>
+<li>监控影响子过程的关键因素</li>
+</ol>
+</li>
+</ul>
+<h1 id="2-基本概念"><a href="#2-基本概念" class="headerlink" title="2. 基本概念"></a>2. 基本概念</h1><h2 id="2-1-子过程性能"><a href="#2-1-子过程性能" class="headerlink" title="2.1. 子过程性能"></a>2.1. 子过程性能</h2><ul>
+<li><strong>(子)过程性能</strong>：遵循某个特定（子）过程之后产生结果的量化描述，既包括（子）过程度量<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="2.613ex" height="1.902ex" role="img" focusable="false" viewBox="0 -683 1155 840.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="mi" transform="translate(861,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>（例如，时间、缺陷消除效率、工时等），也包括产物度量<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="2.054ex" height="1.902ex" role="img" focusable="false" viewBox="0 -683 908 840.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="mi" transform="translate(614,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>（例如，缺陷密度，相应时间等）。</li>
+</ul>
+<h2 id="2-2-子过程性能基线"><a href="#2-2-子过程性能基线" class="headerlink" title="2.2. 子过程性能基线"></a>2.2. 子过程性能基线</h2><ul>
+<li><strong>子过程性能基线</strong>：上述过程性能的一个定量化的刻画，一般包括均值和范围。通常用作过程性能的benchmark。</li>
+</ul>
+<h2 id="2-3-过程或子过程性能模型"><a href="#2-3-过程或子过程性能模型" class="headerlink" title="2.3. 过程或子过程性能模型"></a>2.3. 过程或子过程性能模型</h2><ul>
+<li><strong>过程或子过程性能模型</strong>：依据子过程的逻辑关系构建相应的数学模型，描述子过程性能基线和整体过程的性能输出（例如，质量、生产效率、成本等）之间的关系<ul>
+<li>例如，Process Yield和Phase Yield</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-定量模型构建的关键实践"><a href="#3-定量模型构建的关键实践" class="headerlink" title="3. 定量模型构建的关键实践"></a>3. 定量模型构建的关键实践</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F27%2F10-51-19-7b8f624c41ccbb6792f78d4d27b552cc-20240627105119-f31373.png" alt="image.png"></p>
+<h1 id="4-定量模型应用（定量管理）的关键实践"><a href="#4-定量模型应用（定量管理）的关键实践" class="headerlink" title="4. 定量模型应用（定量管理）的关键实践"></a>4. 定量模型应用（定量管理）的关键实践</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F27%2F10-55-50-b8fc29c55ec659657ce950454361dc68-20240627105549-247234.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>2024_Spring_软件质量管理</category>
+      </categories>
+      <tags>
+        <tag>2024_Spring_软件质量管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>软件质量管理-期末</title>
     <url>/posts/ac2f1649/</url>
     <content><![CDATA[<h1 id="1-过程线"><a href="#1-过程线" class="headerlink" title="1. 过程线"></a>1. 过程线</h1><h2 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1. 概念"></a>1.1. 概念</h2><p>[[01-软件质量管理概述]]</p>
@@ -21611,54 +21659,6 @@ SysYParserVisitor~T~  --&gt;  ParseTreeVisitor~T~</interface></interface></pre>
 <li>鼓励建立合理的授权机制</li>
 <li>通过挑战建立目标，确定团队努力方向</li>
 </ol>
-]]></content>
-      <categories>
-        <category>2024_Spring_软件质量管理</category>
-      </categories>
-      <tags>
-        <tag>2024_Spring_软件质量管理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>08-定量管理与仿真建模</title>
-    <url>/posts/b20937f7/</url>
-    <content><![CDATA[<p><font color="#c00000">不是有数据就叫定量管理</font></p>
-<p>定量管理：有预测模型，根据最终结果判断</p>
-<p>CMMI的4、5级都有预测模型，属于定量管理，1、2、3级只能算一般项目管理</p>
-<ul>
-<li>过程模型</li>
-<li>过程能力基线</li>
-<li>过程组合<ul>
-<li>关键子过程性能目标</li>
-<li>整体过程性能目标</li>
-</ul>
-</li>
-</ul>
-<h1 id="1-定量管理范式"><a href="#1-定量管理范式" class="headerlink" title="1. 定量管理范式"></a>1. 定量管理范式</h1><ul>
-<li>构建定量模型<ol>
-<li>子过程能力基线</li>
-<li>过程模型</li>
-</ol>
-</li>
-<li>应用模型<ol>
-<li>监控影响子过程的关键因素</li>
-</ol>
-</li>
-</ul>
-<h1 id="2-基本概念"><a href="#2-基本概念" class="headerlink" title="2. 基本概念"></a>2. 基本概念</h1><h2 id="2-1-子过程性能"><a href="#2-1-子过程性能" class="headerlink" title="2.1. 子过程性能"></a>2.1. 子过程性能</h2><ul>
-<li><strong>(子)过程性能</strong>：遵循某个特定（子）过程之后产生结果的量化描述，既包括（子）过程度量<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="2.613ex" height="1.902ex" role="img" focusable="false" viewBox="0 -683 1155 840.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="mi" transform="translate(861,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>（例如，时间、缺陷消除效率、工时等），也包括产物度量<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="2.054ex" height="1.902ex" role="img" focusable="false" viewBox="0 -683 908 840.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="mi" transform="translate(614,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>（例如，缺陷密度，相应时间等）。</li>
-</ul>
-<h2 id="2-2-子过程性能基线"><a href="#2-2-子过程性能基线" class="headerlink" title="2.2. 子过程性能基线"></a>2.2. 子过程性能基线</h2><ul>
-<li><strong>子过程性能基线</strong>：上述过程性能的一个定量化的刻画，一般包括均值和范围。通常用作过程性能的benchmark。</li>
-</ul>
-<h2 id="2-3-过程或子过程性能模型"><a href="#2-3-过程或子过程性能模型" class="headerlink" title="2.3. 过程或子过程性能模型"></a>2.3. 过程或子过程性能模型</h2><ul>
-<li><strong>过程或子过程性能模型</strong>：依据子过程的逻辑关系构建相应的数学模型，描述子过程性能基线和整体过程的性能输出（例如，质量、生产效率、成本等）之间的关系<ul>
-<li>例如，Process Yield和Phase Yield</li>
-</ul>
-</li>
-</ul>
-<h1 id="3-定量模型构建的关键实践"><a href="#3-定量模型构建的关键实践" class="headerlink" title="3. 定量模型构建的关键实践"></a>3. 定量模型构建的关键实践</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F27%2F10-51-19-7b8f624c41ccbb6792f78d4d27b552cc-20240627105119-f31373.png" alt="image.png"></p>
-<h1 id="4-定量模型应用（定量管理）的关键实践"><a href="#4-定量模型应用（定量管理）的关键实践" class="headerlink" title="4. 定量模型应用（定量管理）的关键实践"></a>4. 定量模型应用（定量管理）的关键实践</h1><p><img lazyload="" src="/images/loading.svg" data-src="https://chillcharlie-img.oss-cn-hangzhou.aliyuncs.com/image%2F2024%2F06%2F27%2F10-55-50-b8fc29c55ec659657ce950454361dc68-20240627105549-247234.png" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>2024_Spring_软件质量管理</category>
